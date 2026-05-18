@@ -63,15 +63,20 @@ export default async function handler(req) {
   }
 
   // Normalize system blocks. Client sends either an array of strings or
-  // an array of {type:"text", text:"..."} blocks. We accept both, output
-  // the array-of-blocks form Anthropic expects.
+  // an array of {type:"text", text:"...", cache_control?:{...}} blocks.
+  // We accept both, output the array-of-blocks form Anthropic expects,
+  // preserving cache_control on stable prompt blocks (the brand strategist
+  // prompt + this week's intel context) so Anthropic skips re-tokenizing
+  // them on subsequent turns — cuts cost ~5x on multi-turn conversations.
   const systemBlocks = [];
   if (Array.isArray(systemExtras)) {
     for (const block of systemExtras) {
       if (typeof block === 'string' && block.trim()) {
         systemBlocks.push({ type: 'text', text: block });
       } else if (block && block.type === 'text' && block.text) {
-        systemBlocks.push({ type: 'text', text: block.text });
+        const out = { type: 'text', text: block.text };
+        if (block.cache_control) out.cache_control = block.cache_control;
+        systemBlocks.push(out);
       }
     }
   }
