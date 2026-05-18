@@ -24,8 +24,57 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Expose-Headers': 'X-Conversation-Id',
   'Access-Control-Max-Age': '86400',
 };
+
+// ─── Phase B: Supabase persistence helpers ──────────────────────
+// We use the Supabase REST API directly (no npm dep) — simpler in Edge
+// runtime, no install/build step. Service-role key bypasses RLS so we
+// don't need any client-facing auth surface.
+const SUPABASE_ENABLED = !!(process.env.SUPABASE_URL && process.env.SUPABASE_SECRET_KEY);
+
+async function supabaseInsert(table, row) {
+  if (!SUPABASE_ENABLED) return null;
+  try {
+    const res = await fetch(`${process.env.SUPABASE_URL}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: {
+        apikey: process.env.SUPABASE_SECRET_KEY,
+        Authorization: `Bearer ${process.env.SUPABASE_SECRET_KEY}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=representation',
+      },
+      body: JSON.stringify(row),
+    });
+    if (!res.ok) {
+      console.error(`Supabase insert ${table} failed:`, res.status, await res.text());
+      return null;
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data[0] : data;
+  } catch (e) {
+    console.error(`Supabase insert ${table} threw:`, e);
+    return null;
+  }
+}
+
+async function supabasePatch(table, id, updates) {
+  if (!SUPABASE_ENABLED) return;
+  try {
+    await fetch(`${process.env.SUPABASE_URL}/rest/v1/${table}?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: {
+        apikey: process.env.SUPABASE_SECRET_KEY,
+        Authorization: `Bearer ${process.env.SUPABASE_SECRET_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updates),
+    });
+  } catch (e) {
+    console.error(`Supabase patch ${table} threw:`, e);
+  }
+}
 
 export default async function handler(req) {
   // CORS preflight
@@ -55,6 +104,12 @@ export default async function handler(req) {
     model = 'claude-sonnet-4-6',
     maxTokens = 2000,
     enableWebSearch = true,
+    // Phase B fields — all optional; if present, the proxy persists turns
+    clientId = 'willas',
+    agentType,            // 'strategist' | 'studio_riff' | 'brief_riff'
+    contextId,            // sticky_id / brief_id / null for global strategist
+    userLabel,            // user's name from getUserName() in the client
+    conversationId,       // null on first turn; server returns new ID via X-Conversation-Id
   } = body || {};
 
   // Validate
@@ -97,6 +152,36 @@ export default async function handler(req) {
     ];
   }
 
+  // ─── Phase B: resolve/create conversation + persist user turn ──
+  // Only runs if Supabase env vars are configured AND the client passed
+  // an agentType (so non-conversation calls — e.g., callClaude one-shots
+  // for sticky brief generation — can opt out by not sending agentType).
+  let resolvedConversationId = conversationId || null;
+  if (SUPABASE_ENABLED && agentType) {
+    if (!resolvedConversationId) {
+      const conv = await supabaseInsert('conversations', {
+        client_id: clientId,
+        agent_type: agentType,
+        context_id: contextId || null,
+        user_label: userLabel || null,
+      });
+      if (conv && conv.id) resolvedConversationId = conv.id;
+    }
+
+    // Persist the LATEST user message (last item in the messages array).
+    // We trust the client to send only the new user turn appended to its
+    // own history; persisting only the latest avoids duplicates on replay.
+    const lastMsg = messages[messages.length - 1];
+    if (resolvedConversationId && lastMsg && lastMsg.role === 'user') {
+      // Fire-and-forget — don't block the response on persistence
+      supabaseInsert('messages', {
+        conversation_id: resolvedConversationId,
+        role: 'user',
+        content: lastMsg.content,  // JSONB: string or array (vision)
+      });
+    }
+  }
+
   // Forward to Anthropic
   let upstream;
   try {
@@ -125,14 +210,76 @@ export default async function handler(req) {
     });
   }
 
-  // Pipe the SSE stream straight back. Anthropic's stream is already in
-  // the SSE format the browser parses today — no transformation needed.
-  return new Response(upstream.body, {
+  // ─── Stream tee: pipe SSE to client + accumulate assistant text ──
+  // Phase B: we capture the assistant's full response as text chunks
+  // stream past, then persist to Supabase after the stream completes.
+  // The client doesn't notice — it gets the same SSE format it always did.
+  const shouldPersistAssistant = SUPABASE_ENABLED && resolvedConversationId;
+
+  let pipedStream = upstream.body;
+
+  if (shouldPersistAssistant) {
+    const reader = upstream.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let accumulated = '';
+
+    pipedStream = new ReadableStream({
+      async start(controller) {
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            controller.enqueue(value);  // pass through to client
+
+            // Tee: extract text deltas for persistence
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop() || '';
+            for (const line of lines) {
+              const l = line.trim();
+              if (!l.startsWith('data:')) continue;
+              const payload = l.slice(5).trim();
+              if (!payload || payload === '[DONE]') continue;
+              try {
+                const evt = JSON.parse(payload);
+                if (evt.type === 'content_block_delta' && evt.delta && evt.delta.type === 'text_delta') {
+                  accumulated += evt.delta.text;
+                }
+              } catch (e) { /* swallow partial frames */ }
+            }
+          }
+        } finally {
+          controller.close();
+
+          // Persist assistant response + update conversation timestamp.
+          // Fire-and-forget; don't await — the client has already received
+          // the stream by this point.
+          if (accumulated) {
+            supabaseInsert('messages', {
+              conversation_id: resolvedConversationId,
+              role: 'assistant',
+              content: accumulated,
+            });
+            supabasePatch('conversations', resolvedConversationId, {
+              last_message_at: new Date().toISOString(),
+            });
+          }
+        }
+      }
+    });
+  }
+
+  // Return the stream + send conversationId back via header so the client
+  // can stash it for subsequent turns. CORS expose-headers list allows it
+  // through the browser's same-origin filter.
+  return new Response(pipedStream, {
     status: 200,
     headers: {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache, no-transform',
       'Connection': 'keep-alive',
+      'X-Conversation-Id': resolvedConversationId || '',
       ...CORS_HEADERS,
     },
   });

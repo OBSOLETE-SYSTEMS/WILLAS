@@ -2238,6 +2238,31 @@ function setUserName(name) {
   try { localStorage.setItem(WILLAS_USER_NAME_STORAGE, (name || "").trim()); } catch(e){}
 }
 
+// ─── Phase B: per-thread conversation IDs (2026-05-18) ──────────
+// Server-side Supabase persistence is the source of truth, but the
+// client caches the conversation ID per thread so subsequent turns
+// in the same thread stay attached to the right conversation. Keyed
+// by "{agentType}:{contextId || 'global'}" — e.g. "studio_riff:st_abc".
+const WILLAS_CONV_IDS_STORAGE = "willas-conversation-ids";
+function loadConvIds() {
+  try { return JSON.parse(localStorage.getItem(WILLAS_CONV_IDS_STORAGE) || "{}"); }
+  catch(e){ return {}; }
+}
+function saveConvIds(map) {
+  try { localStorage.setItem(WILLAS_CONV_IDS_STORAGE, JSON.stringify(map)); } catch(e){}
+}
+function getConversationId(agentType, contextId) {
+  if (!agentType) return null;
+  const map = loadConvIds();
+  return map[`${agentType}:${contextId || 'global'}`] || null;
+}
+function setConversationId(agentType, contextId, id) {
+  if (!agentType || !id) return;
+  const map = loadConvIds();
+  map[`${agentType}:${contextId || 'global'}`] = id;
+  saveConvIds(map);
+}
+
 // Streaming call to Claude — yields text chunks as they arrive. Callers use:
 //   for await (const chunk of streamStrategist({messages})) { append(chunk); }
 //
@@ -2245,20 +2270,36 @@ function setUserName(name) {
 // instead of hitting api.anthropic.com directly. The proxy holds Christina's
 // API key server-side via ANTHROPIC_API_KEY env var. Same SSE shape — only
 // the URL + headers changed.
-async function* streamStrategist({ messages, systemExtras = [], model = "claude-sonnet-4-6", maxTokens = 2000, enableWebSearch = true }) {
+async function* streamStrategist({
+  messages, systemExtras = [], model = "claude-sonnet-4-6", maxTokens = 2000, enableWebSearch = true,
+  // Phase B (2026-05-18): when these are passed, the server persists each
+  // turn to Supabase as a conversation. agentType is the routing key
+  // (which UI surface this chat lives in); contextId optionally pins to
+  // a specific sticky or brief.
+  agentType = null, contextId = null
+}) {
+  // Look up the existing conversation ID for this thread (or null on first turn)
+  const conversationId = agentType ? getConversationId(agentType, contextId) : null;
+
   const body = {
     messages,
     model,
     maxTokens,
     enableWebSearch,
-    // The full system stack: brand strategist prompt + this week's intel
-    // context + any caller-specific extras. cache_control on the stable
-    // blocks lets Anthropic skip re-tokenizing them on subsequent turns.
     systemExtras: [
       { type: "text", text: STRATEGIST_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
       { type: "text", text: buildWeekContext(), cache_control: { type: "ephemeral" } },
       ...systemExtras
-    ]
+    ],
+    // Phase B persistence fields — server uses these to attach turns to
+    // the right conversation row. clientId is hardcoded for now since
+    // this engine is Willa's-specific; multi-tenant routing happens at
+    // the data layer (each client's engine ships its own deployment).
+    clientId: "willas",
+    agentType,
+    contextId,
+    userLabel: getUserName() || null,
+    conversationId
   };
 
   const res = await fetch("/api/strategist", {
@@ -2266,6 +2307,16 @@ async function* streamStrategist({ messages, systemExtras = [], model = "claude-
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body)
   });
+
+  // Capture the conversation ID returned by the server (it generates one
+  // on the first turn of a new thread, then echoes it back on subsequent
+  // turns). Stash it so next turn pins to the same conversation.
+  if (agentType) {
+    const newConvId = res.headers.get("X-Conversation-Id");
+    if (newConvId && newConvId !== conversationId) {
+      setConversationId(agentType, contextId, newConvId);
+    }
+  }
 
   if (!res.ok) {
     let detail = "";
@@ -4037,7 +4088,10 @@ ${intelLines ? "**Why now / intel:** " + intelLines : ""}`;
     try {
       const systemExtras = [{ type: "text", text: buildBriefContext(brief) }];
       const convo = [...messages, userMsg].map(m => ({ role: m.role, content: m.content }));
-      for await (const chunk of streamStrategist({ messages: convo, systemExtras, maxTokens: 1500 })) {
+      for await (const chunk of streamStrategist({
+        messages: convo, systemExtras, maxTokens: 1500,
+        agentType: "brief_riff", contextId: brief && brief.id ? String(brief.id) : null,
+      })) {
         setMessages(m => {
           const copy = [...m];
           const last = copy[copy.length - 1];
@@ -6368,7 +6422,10 @@ When the user is ready to commit to a specific direction, mention they can click
     try {
       const systemExtras = [{ type: "text", text: buildStickyContext(sticky) }];
       const convo = [...messages, userMsg].map(m => ({ role: m.role, content: m.content }));
-      for await (const chunk of streamStrategist({ messages: convo, systemExtras, maxTokens: 1500 })) {
+      for await (const chunk of streamStrategist({
+        messages: convo, systemExtras, maxTokens: 1500,
+        agentType: "studio_riff", contextId: sticky && sticky.id ? String(sticky.id) : null,
+      })) {
         setMessages(m => {
           const copy = [...m];
           const last = copy[copy.length - 1];
@@ -6701,7 +6758,8 @@ function useStrategistChat() {
       for await (const chunk of streamStrategist({
         messages: convo,
         systemExtras: opts.systemExtras || [],
-        maxTokens: opts.maxTokens || 2000
+        maxTokens: opts.maxTokens || 2000,
+        agentType: "strategist", contextId: null
       })) {
         setMessages(m => {
           const copy = [...m];
