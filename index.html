@@ -689,8 +689,15 @@ const BRIEFS = [
     ],
     caption:"the brands that show up every week. 🌾\n\n(not just on the runway.)\n\nthe mother's day editorial cycle landed. the kitchen is forever. the brands worth keeping on the list:\n\n→ willa's original oat milk · mother-founded, named for a grandmother\n→ partake foods · top-9 allergen-free, mother-founded\n→ bobo's oat bars · mother-daughter, boulder kitchen\n→ maazah · mother + three daughters, afghan-style chutneys\n→ omsom · sister-founded asian pantry starters\n→ 2betties · mother-daughter, swizzle\n\nthe brunch ends. the cartons stay. 🌾",
     hashtags:["#willaskitchen","#motherfounded","#WBENC","#peerfoundedbrands","#womenowned","#partakefoods","#bobosoatbars","#oatmilk","#groceryguide"],
-    visual:"6-card IG Feed carousel. Card 1: cover quote serif on cream. Card 2: 6 brand cartons + jars in casual line on a wood counter (Willa's Original leading). Cards 3-6: individual brand cameos with one-line founder credit each. Soft daylight. Editorial composition, generous whitespace.",
-    script:null,
+    visual:"6-card IG Feed carousel. Editorial museum-card aesthetic, soft daylight, generous whitespace. Card 1 covers the thesis line in navy serif. Card 2 lays out the full peer-set in one composition. Cards 3-6 give each peer brand its own cameo. Brand-voice editorial, no founder.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/6",action:"Navy serif on cream cover. Center quote: 'the brands that show up every week.' Lower-right parenthetical: '(not just on the runway.)' Generous whitespace, museum-card aesthetic."},
+      {scene:"CARD 2 · LINEUP",time:"slide 2/6",action:"Overhead wood counter, soft daylight. 6 brand cartons + jars in a casual line — Willa's Original leading, Partake / Bobo's / Maazah / Omsom / 2Betties trailing. Linen napkin underneath."},
+      {scene:"CARD 3 · WILLA'S",time:"slide 3/6",action:"Willa's Original carton centered. Caption: 'mother-founded · named for a grandmother (born 1921, launched 2021).' Cert chips: WBENC + USDA Organic + Detox Project."},
+      {scene:"CARD 4 · PARTAKE",time:"slide 4/6",action:"Partake Foods cookie box centered. Caption: 'top-9 allergen-free · mother-founded by Denise Woodard.' Soft daylight, matching aesthetic."},
+      {scene:"CARD 5 · BOBO'S + MAAZAH",time:"slide 5/6",action:"Two-up composition: Bobo's Oat Bars stack + Maazah chutney jar. Captions: 'mother-daughter, boulder kitchen.' · 'mother + three daughters, afghan-style chutneys.'"},
+      {scene:"CARD 6 · CLOSE",time:"slide 6/6",action:"Final card — Willa's Original + tagline overlay: 'the brunch ends. the cartons stay. 🌾' Sign-off: 'shhh… we keep good company. 💛' (BS-12)"}
+    ],
     audio:null,
     duration:null,
     cta:{soft:"Save the lineup 🌾",medium:"Shop the peer-set",strong:"Find Willa's + the peers at Whole Foods"},
@@ -909,8 +916,19 @@ const BRIEFS = [
     ],
     caption:"the cert wall. 🌾\n\n(8 receipts that read better than the press release.)\n\nevery stamp on the back of willa's carton — and what each one actually means:\n\n→ USDA Organic · grown without synthetic pesticides + GMOs · the federal floor\n→ Detox Project Glyphosate-Free · tested every lot for glyphosate residue · the cert most oat milks don't hold\n→ Non-GMO Project Verified · independent third-party verification\n→ WBENC · women-owned, mother-founded\n→ Kosher · OU-certified\n→ Vegan · plant-only formulation\n→ Yuka 100/100 (Kids) · perfect score on the clean-label app\n→ Good Food Awards (Chocolate) · best beverage of the year\n→ Bobby Approved · pediatric-clean shortlist\n\nthe credentials take ~5 years to earn. the carton's been here the whole time. shhh… 🌾",
     hashtags:["#willaskitchen","#certwall","#USDAorganic","#glyphosatefree","#WBENC","#yuka100","#nonGMO","#goodfoodawards","#cleancertifications"],
-    visual:"10-card IG Feed carousel. Card 1: cover serif on cream — 'the cert wall.' Cards 2-10: one cert per card. Each card: the cert seal/badge centered + the one-line 'what this means' explanation in serif typography. Final card: full Willa's product line lineup (Original + Barista + Kids + Chocolate) on a wood counter. Editorial museum-card aesthetic. Patagonia gravity. Generous whitespace, no clutter.",
-    script:null,
+    visual:"10-card IG Feed carousel. Editorial museum-card aesthetic — cert seal centered on cream with serif typography below, generous whitespace, Patagonia gravity. Each card runs the same template so the wall reads as a wall, not a deck.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/10",action:"Navy serif cover on cream: 'the cert wall.' Subtitle: '8 receipts that read better than the press release.' Generous whitespace."},
+      {scene:"CARD 2 · USDA ORGANIC",time:"slide 2/10",action:"USDA Organic seal centered. Serif caption: 'grown without synthetic pesticides + GMOs. the federal floor.'"},
+      {scene:"CARD 3 · GLYPHOSATE-FREE",time:"slide 3/10",action:"Detox Project Glyphosate-Free seal centered. Caption: 'tested every lot for glyphosate residue. the cert most oat milks don't hold.'"},
+      {scene:"CARD 4 · NON-GMO",time:"slide 4/10",action:"Non-GMO Project Verified seal centered. Caption: 'independent third-party verification. butterfly stamped.'"},
+      {scene:"CARD 5 · WBENC",time:"slide 5/10",action:"WBENC women-owned seal centered. Caption: 'women-owned. mother-founded. named for grandmother Willa (1921).'"},
+      {scene:"CARD 6 · KOSHER",time:"slide 6/10",action:"OU Kosher seal centered. Caption: 'OU-certified. the everyday-table standard.'"},
+      {scene:"CARD 7 · VEGAN",time:"slide 7/10",action:"Vegan seal centered. Caption: 'plant-only formulation. no dairy, no compromise.'"},
+      {scene:"CARD 8 · YUKA 100",time:"slide 8/10",action:"Yuka 100/100 (Kids) screenshot centered. Caption: 'perfect score on the clean-label app. only kids drink to hit it.'"},
+      {scene:"CARD 9 · GOOD FOOD AWARDS",time:"slide 9/10",action:"Good Food Awards medallion (Chocolate, 15th annual) centered. Caption: 'best beverage. judged blind. indulgence with receipts.'"},
+      {scene:"CARD 10 · CLOSE",time:"slide 10/10",action:"Full Willa's product line lineup (Original + Barista + Kids + Chocolate) on a wood counter, soft daylight. Sign-off: 'the credentials take ~5 years to earn. the carton's been here the whole time. 🌾' (BS-12)"}
+    ],
     audio:null,
     duration:null,
     cta:{soft:"Save the cert wall 🌾",medium:"Read all the receipts",strong:"Find Willa's at Target + Whole Foods"},
@@ -1056,8 +1074,15 @@ const BRIEFS = [
     ],
     caption:"clean label is the floor now. 🌾\n\n(organic + glyphosate-free is the bar.)\n\nthe category went clean — most decks finally read like food. your next-level check, whether you're picking up our carton or theirs:\n\n→ whole oat groat (most oat milks process the starch into sugar and filter the fiber + protein out)\n→ certified USDA Organic\n→ certified glyphosate-free, every lot (Detox Project)\n→ real, named ingredients (not 'natural flavors' or stabilizers)\n\nwilla's hits all four. we built the brand against these standards. use the framework on any carton — yours or ours.\n\n(no name-checks. no asterisks. just the checklist.) 🌾",
     hashtags:["#willaskitchen","#cleanlabel","#labelreading","#oatmilk","#USDAorganic","#glyphosatefree","#WBENC","#realfood","#wholeoat","#detoxproject"],
-    visual:"6-card IG Feed carousel · museum-card aesthetic, navy serif typography on cream. Card 1 (cover): 'clean label is the floor now. organic + glyphosate-free is the bar.' Cards 2-5: one check per card with cert seal + one-line gloss. Card 6: Willa's Original lockup on a wood counter, soft daylight. Editorial composition, generous whitespace.",
-    script:null,
+    visual:"6-card IG Feed carousel · museum-card aesthetic, navy serif typography on cream, generous whitespace. Each check gets its own slide so the framework reads as a tool, not a brag. Patagonia gravity throughout. Willa's lockup only on the close.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/6",action:"Navy serif on cream cover: 'clean label is the floor now.' Lower line in italic: '(organic + glyphosate-free is the bar.)' Generous whitespace, museum-card aesthetic."},
+      {scene:"CARD 2 · WHOLE OAT",time:"slide 2/6",action:"Cream card. Centered checkmark + label: 'whole oat groat.' Below in serif: 'most oat milks process the starch into sugar and filter the fiber + protein out. willa's keeps the whole oat.'"},
+      {scene:"CARD 3 · USDA ORGANIC",time:"slide 3/6",action:"USDA Organic seal centered on cream. Serif caption: 'grown without synthetic pesticides or GMOs. the federal floor for clean.'"},
+      {scene:"CARD 4 · GLYPHOSATE-FREE",time:"slide 4/6",action:"Detox Project Glyphosate-Free seal centered. Caption: 'tested every lot for glyphosate residue. a label is a claim — a test is a fact.'"},
+      {scene:"CARD 5 · REAL INGREDIENTS",time:"slide 5/6",action:"Cream card. Centered checkmark + label: 'real, named ingredients.' Below: 'no \"natural flavors,\" no gums, no stabilizers, no engineered fillers. if it's not food, it's not on the panel.'"},
+      {scene:"CARD 6 · CLOSE",time:"slide 6/6",action:"Willa's Original lockup on a wood counter, soft daylight. Sign-off serif: 'use the framework on any carton — yours or ours. 🌾' Lower italic: '(no name-checks. no asterisks. just the checklist.)' (BS-1)"}
+    ],
     audio:null,
     duration:null,
     cta:{soft:"Save the framework 📌",medium:"Read it on the carton",strong:"Find Willa's at Target"},
@@ -3721,7 +3746,7 @@ function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}
   return (
     <aside className="w-[220px] shrink-0 border-r border-[var(--border)] bg-white flex flex-col">
       <div className="px-5 pt-7 pb-5 border-b border-[var(--border)]">
-        <div className="font-serif text-[22px] leading-none tracking-tight">Willa's</div>
+        <img src="https://i.postimg.cc/R0GsStL8/images.png" alt="Willa's" className="block" style={{maxWidth:"140px", height:"auto"}}/>
         <div className="font-mono text-[9px] text-[var(--muted)] tracking-[0.18em] mt-2">SOCIAL CONTENT ENGINE</div>
       </div>
 
