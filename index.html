@@ -2206,6 +2206,23 @@ function clearClaudeApiKey() {
   try { localStorage.removeItem(WILLAS_API_KEY_STORAGE); } catch(e){}
 }
 
+// Extract displayable text from a message.content — which can be either
+// a string (text-only message) OR an array of content blocks (multi-block
+// vision messages, where the first block is an image and a later block
+// holds the text). Without this helper, rendering an image-attached
+// message crashes React (can't render array of {type, source} objects as
+// children) → white-screened the Studio (2026-05-18).
+function messageDisplayText(content) {
+  if (typeof content === "string") return content;
+  if (Array.isArray(content)) {
+    return content
+      .filter(b => b && b.type === "text" && b.text)
+      .map(b => b.text)
+      .join("\n");
+  }
+  return "";
+}
+
 // ─── User attribution (2026-05-18) ──────────────────────────────
 // Studio is a shared whiteboard — multiple team members drop ideas
 // in. Stickies attach the user's name so the team sees who dropped
@@ -3648,29 +3665,27 @@ function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
         )}
         {tab==="comp" && (
           <div className="max-w-[1400px]">
-            {/* Section 1 — WILLA'S PLAYS: advisor-voice lede + per-competitor response cards. Leads with ACTION. */}
+            {/* Section 1 — WILLA'S PLAYS: per-competitor response cards. Leads with ACTION.
+                Removed lede block 2026-05-18 per Christina — too text-heavy, stale fast. */}
             <CompSection
               label="WILLA'S PLAYS"
-              counter={COMPETITORS.length+" BRANDS · "+new Set(Object.values(COMP_BRIEFS).flat()).size+" BRIEFS ON THE TABLE"}
-              lede={COMP_WEEKLY_POV.plays}>
+              counter={COMPETITORS.length+" BRANDS · "+new Set(Object.values(COMP_BRIEFS).flat()).size+" BRIEFS ON THE TABLE"}>
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
                 {COMPETITORS.map(c=><CompetitorCard key={c.id} c={c} focused={focusId===c.id} nav={nav}/>)}
               </div>
             </CompSection>
 
-            {/* Section 2 — WHAT'S COMING: forward-looking calendar, plan against it */}
+            {/* Section 2 — WHAT'S COMING: forward-looking calendar */}
             <CompSection
               label="WHAT'S COMING"
-              counter={COMPETITOR_CALENDAR.length+" EVENTS QUEUED"}
-              lede={COMP_WEEKLY_POV.coming}>
+              counter={COMPETITOR_CALENDAR.length+" EVENTS QUEUED"}>
               <CompetitorCalendar/>
             </CompSection>
 
-            {/* Section 3 — WHAT HAPPENED: recent-moves timeline, full width (Share of Voice moved to the bottom with The Shelf) */}
+            {/* Section 3 — WHAT HAPPENED: recent-moves timeline (Share of Voice moved to the bottom) */}
             <CompSection
               label="WHAT HAPPENED"
-              counter="LAST 60 DAYS"
-              lede={COMP_WEEKLY_POV.happened}>
+              counter="LAST 60 DAYS">
               <RecentMovesTimeline nav={nav}/>
             </CompSection>
 
@@ -6377,7 +6392,7 @@ When the user is ready to commit to a specific direction, mention they can click
       let userMessage = buildStickyUserMessage(sticky);
       if (messages.length > 0) {
         const riff = messages.map(m =>
-          (m.role === "user" ? "ME" : "STRATEGIST") + ": " + m.content
+          (m.role === "user" ? "ME" : "STRATEGIST") + ": " + messageDisplayText(m.content)
         ).join("\n\n");
         userMessage += "\n\n[Riff conversation that shaped this idea — lean into whichever angle the user gravitated toward]:\n" + riff + "\n\nReturn the full brief JSON now.";
       }
@@ -6562,11 +6577,8 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
       <div className="px-8 pt-6 pb-4 border-b border-[var(--border)]">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-3">THE STUDIO · IDEATION CANVAS</div>
-            <div className="mb-4 pr-10">
-              <span className="riff-title">Riff room</span>
-            </div>
-            <p className="text-[14.5px] text-[#334155] mt-2 max-w-[640px] leading-[1.55]">Drop a link, a photo, or a thought. The strategist turns it into a fully-formed brief — on-brand by construction, yours to riff with.</p>
+            <h1 className="font-serif text-[36px] leading-none tracking-tight">The Studio</h1>
+            <p className="text-[14.5px] text-[#334155] mt-3 max-w-[640px] leading-[1.55]">Drop a link, a photo, or a thought. The strategist turns it into a fully-formed brief — on-brand by construction, yours to riff with.</p>
           </div>
           {topRight}
         </div>
@@ -6825,16 +6837,31 @@ function renderStrategistMd(text) {
 }
 
 function StrategistMessage({ m, isLast, streaming }) {
+  const displayText = messageDisplayText(m.content);
+  // Surface attached image (vision content block) above the user's text
+  // bubble — both so the user sees what they sent + visually confirms the
+  // strategist received it. Only applies to user messages.
+  const imageBlock = Array.isArray(m.content)
+    ? m.content.find(b => b && b.type === "image" && b.source && b.source.data)
+    : null;
+
   if (m.role === "user") {
     return (
-      <div className="flex justify-end mb-3">
+      <div className="flex flex-col items-end mb-3 gap-1">
+        {imageBlock && (
+          <img
+            src={`data:${imageBlock.source.media_type};base64,${imageBlock.source.data}`}
+            alt="attached"
+            className="max-w-[60%] max-h-[180px] rounded-md border border-[var(--border)] object-cover"
+          />
+        )}
         <div className="max-w-[85%] px-3.5 py-2.5 rounded-2xl rounded-br-sm text-[13px] leading-relaxed whitespace-pre-wrap" style={{background:"#202A44", color:"#fff"}}>
-          {m.content}
+          {displayText}
         </div>
       </div>
     );
   }
-  const showCursor = streaming && isLast && !m.content;
+  const showCursor = streaming && isLast && !displayText;
   return (
     <div className="flex justify-start mb-3">
       <div className="max-w-[92%] pl-3 pr-3 py-2 text-[13px] text-[#202A44]" style={{borderLeft:"2px solid #FACC15", background:"#FFFEF7", borderRadius:"0 10px 10px 0"}}>
@@ -6846,7 +6873,7 @@ function StrategistMessage({ m, isLast, streaming }) {
           </span>
         ) : (
           <>
-            {renderStrategistMd(m.content)}
+            {renderStrategistMd(displayText)}
             {streaming && isLast && <span className="inline-block ml-0.5 animate-pulse text-[#9E652E]">▊</span>}
           </>
         )}
