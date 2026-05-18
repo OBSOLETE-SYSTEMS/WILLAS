@@ -6033,6 +6033,45 @@ function StudioApiKeyModal({open, current, onSave, onClose}){
   );
 }
 
+// Name prompt — fires AFTER the user submits their first sticky (not
+// before). The sticky is already created with a generic byline; this
+// modal retro-stamps it once the user enters their name. Per Alex's
+// 2026-05-18 ask: don't make name entry a gate to participation, make
+// it a soft prompt that arrives after the user has shown they're engaging.
+function NamePromptModal({open, onSave, onSkip}){
+  const [val,setVal] = useState("");
+  useEffect(()=>{ if(open) setVal(""); },[open]);
+  if(!open) return null;
+  function save(e){
+    e.preventDefault();
+    const v = val.trim();
+    if(!v) return;
+    onSave(v);
+  }
+  return (
+    <div className="fixed inset-0 z-[80] fade-in flex items-center justify-center px-4" style={{background:"rgba(15,23,42,0.45)", backdropFilter:"blur(3px)"}} onClick={onSkip}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[440px]" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+        <form onSubmit={save}>
+          <div className="px-6 pt-6 pb-4 border-b border-[var(--border)]">
+            <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">THE STUDIO</div>
+            <h2 className="font-serif text-[22px] leading-tight tracking-tight mb-2">Nice — first drop in.</h2>
+            <p className="text-[12.5px] text-[var(--muted)] leading-relaxed">Quick — what should we call you on the wall? Stickies get tagged so the team can see who added what.</p>
+          </div>
+          <div className="px-6 py-5">
+            <label className="font-mono text-[9px] tracking-wider text-[var(--muted)]">YOUR NAME</label>
+            <input autoFocus value={val} onChange={e=>setVal(e.target.value)} placeholder="e.g., Christina" maxLength={40}
+              className="w-full mt-2 px-3 py-2.5 rounded-md border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] focus:outline-none focus:border-[#202A44]"/>
+          </div>
+          <div className="px-6 py-4 border-t border-[var(--border)] flex items-center justify-between" style={{background:"var(--bg-warm)"}}>
+            <button type="button" onClick={onSkip} className="font-mono text-[9px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">SKIP FOR NOW</button>
+            <button type="submit" className="font-mono text-[10px] tracking-wider px-5 py-2.5 rounded-md text-white hover:shadow-md transition" style={{background:"var(--ink)"}}>SAVE →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 // "Posting as: NAME" strip above the Studio input bar. Studio is a shared
 // whiteboard so each sticky needs to attribute who dropped it. First-use:
 // the strip auto-focuses + asks for a name. After: the name shows as a
@@ -6684,29 +6723,12 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
 
       <div className="flex-1 overflow-y-auto scrollbar px-8 py-5">
         <div className="max-w-[1400px]">
-          <PostingAsStrip/>
           <div className="mb-3">
             <StudioInputBar onAdd={onAddSticky}/>
           </div>
 
-          {/* Vision preview — the next upgrade to the Studio. Not wired yet;
-              waiting on client validation before flipping the API call to
-              multimodal. Callout teases the capability so Christina knows
-              what's coming and can give a thumbs up. */}
-          <div className="mb-5 rounded-md border flex items-start gap-3 p-3.5" style={{borderColor:"#E8E1C2", background:"#FFFEF7"}}>
-            <span className="inline-flex items-center justify-center w-[34px] h-[34px] rounded-full shrink-0" style={{background:"#202A44"}}>
-              <span style={{color:"#FACC15", fontSize:"16px"}}>👁</span>
-            </span>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-[2px] rounded text-white" style={{background:"#F59E0B"}}>COMING SOON</span>
-                <span className="font-mono text-[9.5px] tracking-[0.18em] text-[#202A44]">A STRATEGIST WITH EYES</span>
-              </div>
-              <p className="text-[12px] text-[#475569] leading-relaxed">
-                Drop a screenshot of a viral TikTok, a photo of a competitor carton, a snapshot of a trending recipe — and the strategist will <em>see</em> what's in frame, not just read your caption. Today, photos need a typed note to guide the riff. Next, the image does the talking.
-              </p>
-            </div>
-          </div>
+          {/* Vision preview callout removed 2026-05-18 — vision is now live;
+              dropping a photo into a sticky and riffing on it works. */}
 
           {stickies.length === 0 && (
             <div className="mb-4 flex items-center gap-3 px-4 py-3 rounded-md border border-[var(--border)] bg-[#FAFAF7]">
@@ -7304,6 +7326,7 @@ function Dashboard(){
   const [engineDrawerOpen,setEngineDrawerOpen] = useState(false);
   const [commandOpen,setCommandOpen] = useState(false);
   const [strategistOpen,setStrategistOpen] = useState(false);
+  const [namePromptStickyId,setNamePromptStickyId] = useState(null);
   const strategistChat = useStrategistChat();
   const topRight = <TabTopRight drawerOpen={engineDrawerOpen} onToggleDrawer={()=>setEngineDrawerOpen(o=>!o)}/>;
   const [welcomeOpen,setWelcomeOpen] = useState(()=>{
@@ -7359,14 +7382,33 @@ function Dashboard(){
   }
 
   function addSticky(partial){
+    const currentName = getUserName();
     const sticky = {
       id: newId("st"),
       createdAt: Date.now(),
-      createdBy: getUserName() || "Someone on the team",
+      createdBy: currentName || "Someone on the team",
       ...partial
     };
     setStudioState(prev => ({...prev, stickies: [sticky, ...prev.stickies]}));
+    // First-time post — prompt for name. Sticky is already created with a
+    // generic byline; modal will retro-stamp it once user enters their name.
+    if (!currentName) setNamePromptStickyId(sticky.id);
     return sticky;
+  }
+
+  function saveNameAndStampSticky(name) {
+    const trimmed = (name || "").trim();
+    if (!trimmed) return;
+    setUserName(trimmed);
+    if (namePromptStickyId) {
+      setStudioState(prev => ({
+        ...prev,
+        stickies: prev.stickies.map(s =>
+          s.id === namePromptStickyId ? {...s, createdBy: trimmed} : s
+        )
+      }));
+    }
+    setNamePromptStickyId(null);
   }
   function deleteSticky(id){
     setStudioState(prev => ({
@@ -7561,6 +7603,7 @@ function Dashboard(){
       <ReferenceGuide open={referenceOpen} onClose={()=>setReferenceOpen(false)}/>
       <WelcomeGuide open={welcomeOpen} onClose={closeWelcome}/>
       <StudioApiKeyModal open={apiKeyModalOpen} current={studioApiKey} onSave={saveApiKey} onClose={()=>setApiKeyModalOpen(false)}/>
+      <NamePromptModal open={!!namePromptStickyId} onSave={saveNameAndStampSticky} onSkip={()=>setNamePromptStickyId(null)}/>
       <EngineDrawer open={engineDrawerOpen} onClose={()=>setEngineDrawerOpen(false)}/>
       <CommandPalette open={commandOpen} onClose={()=>setCommandOpen(false)} index={commandIndex} onSelect={handleCommandSelect}/>
       {/* Ask the Strategist — floating chat, persistent across tabs.
