@@ -5820,6 +5820,10 @@ function useRotatingStep(active, steps, intervalMs){
   return steps[idx];
 }
 
+// Returns either a string (text-only) or an array of content blocks (image +
+// text) — Anthropic's API accepts both shapes for message.content. Photo
+// stickies upgrade to vision mode (2026-05-18) so the strategist actually
+// SEES what was dropped instead of asking the user to describe it.
 function buildStickyUserMessage(sticky){
   const parts = [];
   if(sticky.type === "link"){
@@ -5828,10 +5832,9 @@ function buildStickyUserMessage(sticky){
     if(sticky.content) parts.push("PAGE TITLE / DESCRIPTION:\n"+sticky.content);
     if(sticky.note) parts.push("USER NOTE: "+sticky.note);
   } else if(sticky.type === "photo"){
-    parts.push("TYPE: Photo");
+    parts.push("TYPE: Photo dropped in (image attached below — read the pixels, don't ask the user to describe)");
     parts.push("SOURCE: "+(sticky.source || "uploaded"));
     if(sticky.note) parts.push("CAPTION / CONTEXT: "+sticky.note);
-    parts.push("(Image content is not analyzed in this call — use the caption to guide.)");
   } else {
     parts.push("TYPE: Note");
     parts.push("CONTENT:\n"+(sticky.content || ""));
@@ -5840,7 +5843,27 @@ function buildStickyUserMessage(sticky){
     parts.push("SOURCE CARD: "+sticky.sourceCard);
   }
   parts.push("\nTurn this into a Willa's content brief. Think: what's the cultural/category signal here? What's Willa's earned POV on it? Which DNA format fits? Which flavor is the hero? Respond with ONLY the JSON described in the system prompt — no markdown, no prose.");
-  return parts.join("\n\n");
+
+  const textPart = parts.join("\n\n");
+
+  // For photos, return content-blocks form with the actual image so Claude's
+  // vision parses it. Anthropic supports image/jpeg, image/png, image/gif,
+  // image/webp via base64.
+  if(sticky.type === "photo" && typeof sticky.image === "string"){
+    const m = sticky.image.match(/^data:(image\/(?:jpeg|jpg|png|gif|webp));base64,(.+)$/i);
+    if(m){
+      let mediaType = m[1].toLowerCase();
+      if(mediaType === "image/jpg") mediaType = "image/jpeg";
+      return [
+        { type: "image", source: { type: "base64", media_type: mediaType, data: m[2] } },
+        { type: "text", text: textPart }
+      ];
+    }
+    // Data URL malformed (rare) — fall through to text-only with a note
+    return textPart + "\n\n(NOTE: image data was attached but could not be parsed — proceed with caption/context only.)";
+  }
+
+  return textPart;
 }
 
 // ── Studio UI ──────────────────────────────────────────────────────────
@@ -6209,7 +6232,7 @@ function StudioStickyModal({sticky, brief, apiKey, onRequestApiKey, onGenerate, 
     const content = s.type === "link"
       ? `URL: ${s.url}${s.content ? "\nContext pasted in: " + s.content : ""}`
       : s.type === "photo"
-        ? `Photo: ${s.source || "uploaded image"} (the user can see it, you can't — ask what's in it if you need to reference visual details).`
+        ? `Photo: ${s.source || "uploaded image"} — the image is attached to the user's first message in this riff. Read the pixels directly: what brand / format / aesthetic / mood is visible? Don't ask the user to describe it.`
         : `Note: ${s.content}`;
     return `=== IDEA UNDER RIFF (STUDIO) ===
 The user dropped this into the Studio and wants to SHAPE it into a Willa's post. Your job: help refine the idea — propose hook options, explore angles, suggest visual direction, nail the voice. Be specific. Show rewritten hooks, caption options, concrete visual direction. Don't just describe what to do — DO it.
@@ -6228,7 +6251,25 @@ When the user is ready to commit to a specific direction, mention they can click
     if (!prompt || streaming) return;
     if (!apiKey) { onRequestApiKey(); return; }
     setError(null);
-    const userMsg = { role: "user", content: prompt };
+
+    // For the very first user message of a photo sticky, attach the image
+    // as a vision content block so Claude can SEE it. Subsequent turns are
+    // text-only — Anthropic's context preserves the earlier image across
+    // the conversation so we don't need to re-attach.
+    let userContent = prompt;
+    if (messages.length === 0 && sticky.type === "photo" && typeof sticky.image === "string") {
+      const m = sticky.image.match(/^data:(image\/(?:jpeg|jpg|png|gif|webp));base64,(.+)$/i);
+      if (m) {
+        let mediaType = m[1].toLowerCase();
+        if (mediaType === "image/jpg") mediaType = "image/jpeg";
+        userContent = [
+          { type: "image", source: { type: "base64", media_type: mediaType, data: m[2] } },
+          { type: "text", text: prompt }
+        ];
+      }
+    }
+
+    const userMsg = { role: "user", content: userContent };
     setMessages(m => [...m, userMsg, { role: "assistant", content: "" }]);
     setInput("");
     setStreaming(true);
