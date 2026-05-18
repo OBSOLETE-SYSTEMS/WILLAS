@@ -2173,6 +2173,25 @@ function buildWeekContext() {
   const compLines = (typeof COMPETITORS !== "undefined" ? COMPETITORS : []).slice(0, 5).map(c =>
     `• ${c.name} — ${(c.status || "").slice(0, 140)}${(c.status || "").length > 140 ? "…" : ""}`
   ).join("\n");
+
+  // Phase D — also surface this week's brief slate so the strategist can
+  // answer week-level questions like "which slot is the weakest?" or
+  // "are we over-indexed on parenting?" without needing the user to
+  // re-summarize the calendar manually.
+  const briefLines = (typeof BRIEFS !== "undefined" ? BRIEFS : []).map(b =>
+    `• ${b.id} [${b.platform} · ${b.pillar} · ${b.priority}${b.flavor ? " · " + b.flavor : ""}] — ${b.concept}`
+  ).join("\n");
+
+  // Quick pillar / flavor distribution so the strategist can spot
+  // imbalances at a glance.
+  const pillarCounts = {};
+  const flavorCounts = {};
+  (typeof BRIEFS !== "undefined" ? BRIEFS : []).forEach(b => {
+    if (b.pillar) pillarCounts[b.pillar] = (pillarCounts[b.pillar] || 0) + 1;
+    if (b.flavor) flavorCounts[b.flavor] = (flavorCounts[b.flavor] || 0) + 1;
+  });
+  const distLine = `Pillar mix: ${Object.entries(pillarCounts).map(([k,v])=>`${k}=${v}`).join(", ")}. Flavor mix: ${Object.entries(flavorCounts).map(([k,v])=>`${k}=${v}`).join(", ")}.`;
+
   return `=== THIS WEEK'S SITUATION (${typeof WELCOME_WEEK_RANGE !== "undefined" ? WELCOME_WEEK_RANGE : "current week"}) ===
 
 TRENDS in play:
@@ -2184,7 +2203,12 @@ ${pulseLines}
 COMPETITOR MOVES (internal context — do not name competitors in consumer output):
 ${compLines}
 
-Reference these when they're relevant to the question. If the user asks about something already in play, mention it explicitly and tell them the trend / pulse ID so they can find it on the Intelligence Brief.`;
+CONTENT BRIEFS QUEUED THIS WEEK (${(typeof BRIEFS !== "undefined" ? BRIEFS.length : 0)} total):
+${briefLines}
+
+${distLine}
+
+Reference these when they're relevant. When user asks week-level questions (which is the strongest brief, where's the gap, are we over-indexed on X, swap-X-for-Y), use the brief slate directly. For per-brief questions, use the brief ID + concept to ground specifics. Never name competitors in consumer output even if mentioned in the situational context.`;
 }
 
 // API key handling — Phase C upgrade (2026-05-18):
@@ -5033,12 +5057,29 @@ function WeeklyPlaybook({nav, topRight}){
       <Ticker/>
       <div className="flex-1 overflow-y-auto scrollbar">
         <div className="px-8 py-7">
-          <div className="flex items-end justify-between gap-6 mb-6">
+          <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
             <div>
               <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-2">{WELCOME_WEEK_RANGE} · MISSION BOARD</div>
               <h1 className="font-serif text-[28px] tracking-tight leading-none">Weekly Playbook</h1>
             </div>
-            {topRight}
+            <div className="flex items-center gap-2 flex-wrap">
+              {/* Phase D — week-level strategist entry point. Opens the
+                  global strategist with this week's brief slate already in
+                  its context (buildWeekContext now surfaces all 17 briefs
+                  + pillar / flavor distribution). Per-slot strategist
+                  access lives on the brief detail page (BriefRiffPanel). */}
+              {nav && nav.riffWithStrategist && (
+                <button
+                  onClick={()=> nav.riffWithStrategist()}
+                  className="font-mono text-[10px] tracking-wider px-3 py-1.5 rounded-md text-white transition-all hover:shadow-md flex items-center gap-1.5"
+                  style={{background:"var(--ink)"}}
+                  title="Ask the strategist a week-level question — slate balance, weak briefs, what's missing.">
+                  <span>✦</span>
+                  ASK ABOUT THIS WEEK
+                </button>
+              )}
+              {topRight}
+            </div>
           </div>
 
           {/* POSTING LOGIC — click-to-expand callout explaining why a brief landed
