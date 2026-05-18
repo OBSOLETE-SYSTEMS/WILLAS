@@ -6527,10 +6527,15 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
 // ──────────────────────────────────────────────────────────
 
 const STRATEGIST_HISTORY_STORAGE = "willas-strategist-history";
+// Suggested prompts surfaced on the empty Ask the Strategist panel.
+// These should reflect THIS WEEK's actual cultural moments (CULTURAL_PULSE
+// hooks + Memorial Day-style calendar anchors) — not last-month leftovers.
+// Refreshed weekly. Long-term: generate dynamically from CULTURAL_PULSE
+// during the Sunday refresh, so the prompts always match the live data.
 const STRATEGIST_SUGGESTED_PROMPTS = [
-  "Mother's Day is coming up — what are some ideas?",
-  "We want to sell more Kids product for summer camp season — help me brainstorm.",
-  "We're launching at Target Arizona — how can we tap into local culture or events?",
+  "Memorial Day Weekend is around the corner — what's the strongest play for the family-kitchen lane?",
+  "Cottage cheese oats are eating TikTok — how do we ride it without losing the brand voice?",
+  "Grandfluencers are having their moment — what's our Willa's-original-story angle here?",
   "What's a diet-culture trend in our feed right now that Willa's should push back on?"
 ];
 
@@ -7093,9 +7098,10 @@ function Dashboard(){
 
   // ── Studio state ──
   const [studioState,setStudioState] = useState(loadStudioState);
-  const [studioApiKey,setStudioApiKey] = useState(()=>{
-    try{ return localStorage.getItem(STUDIO_KEY_STORAGE) || null; }catch(e){ return null; }
-  });
+  // Phase C (2026-05-18): Studio uses the /api/strategist proxy; client
+  // doesn't hold the key. Initializing to truthy sentinel so the modal
+  // gates downstream pass — actual auth is server-side.
+  const [studioApiKey,setStudioApiKey] = useState("proxy");
   const [apiKeyModalOpen,setApiKeyModalOpen] = useState(false);
   const [studioFlash,setStudioFlash] = useState(null); // {stickyId, message} — "sent to Studio" confirmation
 
