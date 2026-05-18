@@ -1,0 +1,41 @@
+# ─── Sensitive working docs — NEVER push to public repo ─────────
+# These contain brand intel, competitor analysis, NDA material,
+# infrastructure roadmap, and pre-launch internal docs. Public
+# repo would expose them to anyone — keep strictly local.
+
+CLAUDE.md
+SIGNAL_PIPELINE.md
+PROJECT_TODOS.md
+DEMO_SCRIPT.md
+christina-call-handout.md
+studio-cost-estimate.md
+cost-model.html
+v2-plan.html
+*.pdf
+
+# ─── Internal team artifacts ──────────────────────────────────
+exports/
+scripts/
+
+# ─── OS + editor cruft ────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Node / Vercel build artifacts ─────────────────────────────
+node_modules/
+.vercel/
+.env
+.env.local
+.env.*.local
+.next/
+.turbo/
+
+# ─── Logs ─────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
