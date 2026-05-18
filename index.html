@@ -129,6 +129,30 @@
     0%,100%{opacity:0.7; transform:rotate(8deg) scale(1);}
     50%{opacity:1; transform:rotate(12deg) scale(1.15);}
   }
+  /* Studio headline sparkle — twirls + scales, makes the page feel alive */
+  .studio-sparkle{
+    font-size:0.7em;
+    vertical-align:0.18em;
+    display:inline-block;
+    animation:studio-twirl 3.4s ease-in-out infinite;
+    transform-origin:center;
+  }
+  @keyframes studio-twirl{
+    0%,100%{transform:rotate(-8deg) scale(1); opacity:0.85;}
+    50%{transform:rotate(15deg) scale(1.2); opacity:1;}
+  }
+  /* Studio headline — soft amber underline on hover so it feels alive */
+  .studio-headline{
+    background-image:linear-gradient(to right, transparent 0%, transparent 100%);
+    background-position:0 100%;
+    background-repeat:no-repeat;
+    background-size:0% 4px;
+    transition:background-size 0.6s ease-out;
+  }
+  .studio-headline:hover{
+    background-image:linear-gradient(to right, #FACC15, #FACC15);
+    background-size:100% 4px;
+  }
 </style>
 </head>
 <body>
@@ -4267,12 +4291,12 @@ function VoiceVariant({label, text, mood}){
   return (
     <div className="card p-4" style={{background:"#FFFEF7", borderColor:"#E8E1C2"}}>
       <div className="flex items-center justify-between mb-2">
-        <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{label.toUpperCase()} · {mood.toUpperCase()}</div>
-        <button onClick={copy} className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition">
+        <div className="font-mono text-[10px] tracking-wider text-[var(--muted)]">{label.toUpperCase()} · {mood.toUpperCase()}</div>
+        <button onClick={copy} className="font-mono text-[10px] tracking-wider px-2 py-0.5 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition">
           {copied?"COPIED ✓":"COPY"}
         </button>
       </div>
-      <p className="text-[12.5px] text-[#202A44] leading-relaxed">{text}</p>
+      <p className="text-[14px] text-[#202A44] leading-relaxed">{text}</p>
     </div>
   );
 }
@@ -4580,21 +4604,21 @@ function BriefDetail({b,nav}){
           each card in the grid. */}
       <div className="mb-6">
         <div className="flex items-center justify-between gap-2 mb-2">
-          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">
+          <div className="font-mono text-[11px] tracking-wider text-[var(--muted)]">
             {b.platform.toUpperCase()}
           </div>
           {b.fromStudio && (
-            <span className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded text-white" style={{background:"#9E652E"}}>
+            <span className="font-mono text-[10px] tracking-wider px-2 py-[3px] rounded text-white" style={{background:"#9E652E"}}>
               ✦ FROM THE STUDIO
             </span>
           )}
         </div>
-        <h2 className="font-serif text-[24px] leading-tight tracking-tight mb-3">{b.concept}</h2>
+        <h2 className="font-serif text-[28px] leading-tight tracking-tight mb-3">{b.concept}</h2>
         <div className="flex items-center flex-wrap gap-1.5 justify-between">
           <div className="flex items-center flex-wrap gap-1.5">
-            <span className="font-mono text-[9px] tracking-wider px-1.5 py-[2px] rounded inline-flex items-center gap-1.5"
+            <span className="font-mono text-[10.5px] tracking-wider px-2 py-[3px] rounded inline-flex items-center gap-1.5"
               style={{color:b.pillarColor, background:b.pillarColor+"14", border:"1px solid "+b.pillarColor+"44"}}>
-              <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:b.pillarColor}}></span>
+              <span className="inline-block w-[7px] h-[7px] rounded-full" style={{background:b.pillarColor}}></span>
               {b.pillar}
             </span>
             {b.dnaPattern && <DnaChip patternId={b.dnaPattern}/>}
@@ -4602,7 +4626,7 @@ function BriefDetail({b,nav}){
           <button
             onClick={()=> setRiffOpen(o => !o)}
             title="Iterate on this brief with the Strategist — stays scoped to this brief"
-            className="inline-flex items-center gap-1.5 font-mono text-[9.5px] tracking-wider px-2.5 py-1.5 rounded-md border transition hover:bg-[#FFFEF7]"
+            className="inline-flex items-center gap-1.5 font-mono text-[10.5px] tracking-wider px-3 py-2 rounded-md border transition hover:bg-[#FFFEF7]"
             style={{background: riffOpen ? "#FFFEF7" : "#FFFFFF", color:"#202A44", borderColor:"#E8E1C2"}}>
             <span style={{color:"#9E652E"}}>✦</span>
             {riffOpen ? "HIDE RIFF" : "RIFF WITH STRATEGIST"}
@@ -4620,28 +4644,46 @@ function BriefDetail({b,nav}){
           onRequestApiKey={()=> { if (nav && nav.requestApiKey) nav.requestApiKey(); }}/>
       )}
 
-      {/* Driven by */}
+      {/* Driven by — promoted to hero block per Alex's 2026-05-18 feedback.
+          Full text of each driver renders inline (was a chip-only summary
+          before). The WHY NOW block below got cut — its intel is redundant
+          with the driver text shown here. */}
       {(drivenTrends.length>0 || drivenPulses.length>0 || drivenComps.length>0) && (
-        <div className="mb-7">
-          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">↳ DRIVEN BY</div>
-          <div className="flex flex-wrap gap-1.5">
+        <div className="mb-7 pb-7 border-b border-[var(--border)]">
+          <div className="font-mono text-[11px] tracking-[0.18em] text-[var(--ink)] mb-3">↳ WHY THIS BRIEF EXISTS</div>
+          <div className="grid gap-2">
             {drivenTrends.map(t=>(
-              <ThreadChip key={t.id} sub={"TREND"} label={t.trend} color="#73B2C9" onClick={()=>nav.goToTrend(t.id)}/>
+              <button key={t.id} onClick={()=>nav.goToTrend(t.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:"#73B2C9"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:"#73B2C9"}}>TREND</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{t.trend}</p>
+              </button>
             ))}
             {drivenPulses.map(p=>(
-              <ThreadChip key={p.id} sub={"PULSE"} label={p.hook} color={p.typeColor||"#9E652E"} onClick={()=>nav.goToPulse(p.id)}/>
+              <button key={p.id} onClick={()=>nav.goToPulse(p.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:p.typeColor||"#9E652E"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:p.typeColor||"#9E652E"}}>CULTURAL PULSE · {p.type}</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{p.hook}</p>
+              </button>
             ))}
             {drivenComps.map(c=>(
-              <ThreadChip key={c.id} sub={"COMPETITOR"} label={c.name} color="#DC2626" onClick={()=>nav.goToComp(c.id)}/>
+              <button key={c.id} onClick={()=>nav.goToComp(c.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:"#DC2626"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:"#DC2626"}}>COMPETITOR · {c.name}</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{c.opportunity}</p>
+              </button>
             ))}
           </div>
         </div>
       )}
       {b.fromStudio && b._drivenBy && (
-        <div className="mb-7">
-          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">↳ RIFFED FROM</div>
-          <div className="pl-3 border-l-[3px]" style={{borderColor:"#9E652E"}}>
-            <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{b._drivenBy}</p>
+        <div className="mb-7 pb-7 border-b border-[var(--border)]">
+          <div className="font-mono text-[11px] tracking-[0.18em] text-[var(--muted)] mb-3">↳ RIFFED FROM</div>
+          <div className="pl-4 border-l-[4px]" style={{borderColor:"#9E652E"}}>
+            <p className="text-[14px] italic text-[#202A44] leading-relaxed">{b._drivenBy}</p>
           </div>
         </div>
       )}
@@ -4649,44 +4691,35 @@ function BriefDetail({b,nav}){
       {/* THE IDEA — green RECOMMENDED HOOK chip stands out (restored per 2026-04-17 feedback); body stays editorial */}
       <BriefBlock label="THE IDEA">
         <div className="pl-4 border-l-[3px] border-[#75C596]">
-          <span className="inline-block font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded mb-2.5 text-white" style={{background:"#75C596"}}>
+          <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2.5 text-white" style={{background:"#75C596"}}>
             ✓ RECOMMENDED HOOK
           </span>
-          <p className="font-serif text-[18px] leading-snug text-[#202A44]">"{recommendedHook.text}"</p>
+          <p className="font-serif text-[22px] leading-snug text-[#202A44]">"{recommendedHook.text}"</p>
         </div>
         {altHooks.length>0 && (
           <div className="mt-3">
-            <button onClick={()=>setShowAltHooks(s=>!s)} className="font-mono text-[9px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">
+            <button onClick={()=>setShowAltHooks(s=>!s)} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">
               {showAltHooks?"− HIDE":"+ SHOW"} {altHooks.length} ALT HOOK{altHooks.length>1?"S":""}
             </button>
             {showAltHooks && (
               <div className="grid gap-1.5 mt-2">
                 {altHooks.map((h,k)=>(
-                  <div key={k} className="pl-4 border-l border-[var(--border)] text-[12px] italic text-[#64748B] leading-snug py-1">"{h.text}"</div>
+                  <div key={k} className="pl-4 border-l border-[var(--border)] text-[14px] italic text-[#64748B] leading-snug py-1.5">"{h.text}"</div>
                 ))}
               </div>
             )}
           </div>
         )}
       </BriefBlock>
-
-      {/* WHY NOW */}
-      <BriefBlock label="WHY NOW">
-        <div className="grid gap-2">
-          {b.intel.map((i,k)=>(
-            <div key={k} className="flex gap-2.5 items-start">
-              <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded shrink-0 text-white mt-0.5" style={{background:INTEL_COLOR[i.type]||"#64748B"}}>{i.type}</span>
-              <p className="text-[12px] text-[#334155] leading-relaxed">{i.text}</p>
-            </div>
-          ))}
-        </div>
-      </BriefBlock>
+      {/* WHY NOW block intentionally removed 2026-05-18 — its intel duplicated
+          the driver text now rendered prominently in the WHY THIS BRIEF EXISTS
+          block above. */}
 
       {/* SHOT LIST / VISUAL DIRECTION */}
       <BriefBlock label={b.script ? "SHOT LIST" : "VISUAL DIRECTION"}>
         <div className="flex items-center justify-between mb-3">
           {b.script
-            ? <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{b.script.length} FRAMES · SWIPE TO PREVIEW</span>
+            ? <span className="font-mono text-[10.5px] tracking-wider text-[var(--muted)]">{b.script.length} FRAMES · SWIPE TO PREVIEW</span>
             : <span/>}
           <AgentStamp agentId="visual"/>
         </div>
@@ -4743,8 +4776,8 @@ function BriefDetail({b,nav}){
 
         {(b.audio || b.duration) && (
           <div className="flex flex-wrap gap-x-6 gap-y-1 mt-4 pt-3 border-t border-[var(--border)]">
-            {b.audio && <div className="text-[11.5px]"><span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">AUDIO · </span><span className="text-[#334155]">{b.audio}</span></div>}
-            {b.duration && <div className="text-[11.5px]"><span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">DURATION · </span><span className="text-[#334155]">{b.duration}</span></div>}
+            {b.audio && <div className="text-[13.5px]"><span className="font-mono text-[10px] tracking-wider text-[var(--muted)]">AUDIO · </span><span className="text-[#334155]">{b.audio}</span></div>}
+            {b.duration && <div className="text-[13.5px]"><span className="font-mono text-[10px] tracking-wider text-[var(--muted)]">DURATION · </span><span className="text-[#334155]">{b.duration}</span></div>}
           </div>
         )}
 
@@ -4758,10 +4791,10 @@ function BriefDetail({b,nav}){
             <button onClick={()=>setShowFootage(s=>!s)}
               className="w-full flex items-center justify-between gap-3 text-left hover:opacity-80 transition">
               <div className="flex items-center gap-2 min-w-0">
-                <span className="font-mono text-[9px] tracking-wider px-1.5 py-0.5 rounded" style={{background:"#FEF3C7",color:"#92400E",border:"1px solid #FDE68A"}}>FOOTAGE INSPO</span>
-                <span className="text-[11.5px] text-[var(--ink)]">Where to source every shot — original, found, meme, archive</span>
+                <span className="font-mono text-[10.5px] tracking-wider px-2 py-1 rounded" style={{background:"#FEF3C7",color:"#92400E",border:"1px solid #FDE68A"}}>FOOTAGE INSPO</span>
+                <span className="text-[13px] text-[var(--ink)]">Where to source every shot — original, found, meme, archive</span>
               </div>
-              <span className="font-mono text-[10px] text-[var(--muted)] shrink-0">{showFootage ? "▲ HIDE" : "▼ SHOW"}</span>
+              <span className="font-mono text-[11px] text-[var(--muted)] shrink-0">{showFootage ? "▲ HIDE" : "▼ SHOW"}</span>
             </button>
             {showFootage && (
               <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 fade-in">
@@ -4774,15 +4807,15 @@ function BriefDetail({b,nav}){
                   const items = (b.footageInspo||{})[cat.key];
                   if(!items || items.length === 0) return null;
                   return (
-                    <div key={cat.key} className="rounded-md border border-[var(--border)] bg-[#FAFAF7] p-3">
+                    <div key={cat.key} className="rounded-md border border-[var(--border)] bg-[#FAFAF7] p-4">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:cat.color}}></span>
-                        <span className="font-mono text-[9px] tracking-[0.15em]" style={{color:cat.color}}>{cat.label}</span>
+                        <span className="inline-block w-[7px] h-[7px] rounded-full" style={{background:cat.color}}></span>
+                        <span className="font-mono text-[10.5px] tracking-[0.15em]" style={{color:cat.color}}>{cat.label}</span>
                       </div>
-                      <p className="font-mono text-[8.5px] tracking-wide text-[var(--muted)] mb-2 leading-snug">{cat.hint}</p>
-                      <ul className="space-y-1.5">
+                      <p className="font-mono text-[10px] tracking-wide text-[var(--muted)] mb-2.5 leading-snug">{cat.hint}</p>
+                      <ul className="space-y-2">
                         {items.map((it,i)=>(
-                          <li key={i} className="text-[11.5px] text-[#202A44] leading-snug flex gap-2">
+                          <li key={i} className="text-[13px] text-[#202A44] leading-snug flex gap-2">
                             <span className="text-[var(--muted)] shrink-0">•</span>
                             <span>{it}</span>
                           </li>
@@ -4813,10 +4846,10 @@ function BriefDetail({b,nav}){
         ) : (
           <div>
             <div className="flex items-center justify-between mb-3">
-              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">READY-TO-POST CAPTION</div>
+              <div className="font-mono text-[10.5px] tracking-wider text-[var(--muted)]">READY-TO-POST CAPTION</div>
               <AgentStamp agentId="hook"/>
             </div>
-            <pre className="whitespace-pre-wrap text-[12px] text-[#202A44] leading-relaxed font-sans bg-[#FAFAF7] border border-[var(--border)] rounded-md p-4">{b.caption}</pre>
+            <pre className="whitespace-pre-wrap text-[14px] text-[#202A44] leading-relaxed font-sans bg-[#FAFAF7] border border-[var(--border)] rounded-md p-4">{b.caption}</pre>
           </div>
         )}
       </BriefBlock>
@@ -4905,7 +4938,7 @@ function AmplifyBlock({plan}){
 function BriefBlock({label, children, last}){
   return (
     <div className={last?"":"mb-7 pb-7 border-b border-[var(--border)]"}>
-      <div className="font-mono text-[10px] tracking-[0.18em] text-[var(--ink)] mb-3">{label}</div>
+      <div className="font-mono text-[12px] tracking-[0.18em] text-[var(--ink)] mb-3">{label}</div>
       {children}
     </div>
   );
@@ -7070,8 +7103,16 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
       <div className="px-8 pt-6 pb-4 border-b border-[var(--border)]">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <h1 className="font-serif text-[44px] leading-none tracking-tight">The Studio <span className="text-[28px]" style={{color:"var(--amber)"}}>✦</span></h1>
-            <p className="text-[15px] text-[#334155] mt-3 max-w-[660px] leading-[1.6]">A riff room with a strategist on duty 🌾 — drop a link, a photo, or a half-formed thought. she'll turn it into a brief that's already on-brand. <span className="italic">yours to shape from there.</span></p>
+            <h1 className="font-serif text-[72px] leading-[0.9] tracking-[-0.02em]">
+              the <span className="italic" style={{color:"var(--amber)"}}>studio</span><span style={{color:"var(--amber)"}}>.</span>
+            </h1>
+            <div className="flex items-center gap-2.5 mt-2">
+              <span className="studio-sparkle inline-block" style={{color:"var(--amber)", fontSize:"24px"}}>✦</span>
+              <span className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)]">RIFF ROOM · STRATEGIST ON DUTY</span>
+            </div>
+            <p className="text-[16px] text-[#334155] mt-5 max-w-[680px] leading-[1.65]">
+              drop a link, a photo, or a half-formed thought — she'll turn it into a brief that's already on-brand. <span className="italic">yours to shape, send, or rip up.</span> 🌾
+            </p>
           </div>
           {topRight}
         </div>
