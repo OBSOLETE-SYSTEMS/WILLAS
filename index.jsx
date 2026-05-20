@@ -575,20 +575,20 @@ const BRIEFS = [
     id:"MAY18-PIN-2",
     platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
     timing:"Thu May 21 · anytime", priority:"STANDARD",
-    concept:"\"kefir-soaked overnight oats. (the fermented breakfast that takes 30 seconds.)\" — Pinterest fermentation wave pin",
+    concept:"\"overnight oats — but make it coconut-kefir-soaked. (the dairy-free fermented breakfast that takes 30 seconds.)\" — Pinterest fermentation wave pin",
     intel:[
       {type:"PULSE",text:"Pinterest Predicts 2026 names fermentation + gut health as a breakout food trend (CP-6). Wave compounds through summer recipe-planning windows. Pinterest is where audience plans 7-10 days ahead."},
-      {type:"AUDIENCE",text:"Willa's Original = cleanest fermentation-adjacent pour. 2g+ prebiotic fiber + whole oat groat. Recipe pin with type-led design, screenshot-friendly. Pattern 12 (Carousel / UGC Compilation) on a single-pin format."},
+      {type:"AUDIENCE",text:"Willa's Original = cleanest fermentation-adjacent pour. 2g+ prebiotic fiber + whole oat groat. Recipe pin with type-led design, screenshot-friendly. Dairy-free kefir (Cocoyo coconut kefir) is the on-brand swap — keeps the probiotic story without the dairy. Pattern 12 (Carousel / UGC Compilation) on a single-pin format."},
       {type:"COMPETITOR",text:"Internal only — most chocolate / barista plant milks can't pair cleanly with kefir (gums + stabilizers fight the ferment). Willa's Original's clean panel is the structural advantage."}
     ],
     hooks:[
-      {text:"kefir-soaked overnight oats. (the fermented breakfast that takes 30 seconds.)",recommended:true},
-      {text:"prebiotic + probiotic in one jar. (the gut-health pin that compounds.)",recommended:false},
-      {text:"the easiest fermented breakfast you'll save for july. (3 ingredients, 1 jar.)",recommended:false}
+      {text:"overnight oats — but make it coconut-kefir-soaked. (the dairy-free fermented breakfast that takes 30 seconds.)",recommended:true},
+      {text:"prebiotic + probiotic in one jar. dairy-free. (the gut-health pin that compounds.)",recommended:false},
+      {text:"the easiest fermented breakfast you'll save for july. plant-based. (3 ingredients, 1 jar.)",recommended:false}
     ],
-    caption:"overnight oats — but make it kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup willa's original\n→ ½ cup plain kefir\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the kefir. willa's original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
-    hashtags:["#willaskitchen","#fermentedbreakfast","#kefir","#overnightoats","#guthealth","#willasoriginal","#prebiotic","#probiotic","#oatmilkrecipes"],
-    visual:"Vertical Pinterest pin (2:3). Overhead wood counter, mason jar of kefir overnight oats topped with berries + cinnamon + flaky salt. Willa's Original carton in corner, partly cropped. Soft afternoon daylight. Serif typography header: 'kefir-soaked overnight oats — fermented breakfast in 30 seconds.'",
+    caption:"overnight oats — but make it coconut-kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning. dairy-free, all the probiotics.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup Willa's Original\n→ ½ cup Cocoyo coconut kefir (or your favorite dairy-free kefir)\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the coconut kefir. Willa's Original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
+    hashtags:["#willaskitchen","#fermentedbreakfast","#dairyfreekefir","#overnightoats","#guthealth","#willasoriginal","#prebiotic","#probiotic","#oatmilkrecipes"],
+    visual:"Vertical Pinterest pin (2:3). Overhead wood counter, mason jar of coconut-kefir overnight oats topped with berries + cinnamon + flaky salt. Willa's Original carton + Cocoyo coconut kefir bottle staged in corner, partly cropped. Soft afternoon daylight. Serif typography header: 'coconut-kefir overnight oats — dairy-free fermented breakfast in 30 seconds.'",
     script:null,
     audio:null,
     duration:null,
@@ -871,27 +871,27 @@ const BRIEFS = [
     id:"MAY18-TT-8",
     platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
     timing:"Wed May 20 · 10am", priority:"HIGH", rideNow:true,
-    concept:"\"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.)\" — viral-recipe-remix high-protein overnight oats",
+    concept:"\"cottage cheese oats wanted a cleaner pour. (we swapped to dairy-free + kept the whole oat in the carton.)\" — viral-recipe-remix high-protein overnight oats",
     intel:[
-      {type:"PULSE",text:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Creators stacking 15-20g protein per jar. Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) — same plant-protein-twofer logic, fresh format. Willa's Original is the cleanest base — 4 ingredients, organic, no gums to fight the curds."},
-      {type:"AUDIENCE",text:"Pattern 05 (Format-as-Virality) — ride the cottage cheese oats format with a cleaner-pour payload. Pattern 04 (Taboo-as-Normal) — the curd swirl IS the visual hook. Poppi muse — viral short-form better-for-you. Lead-with-solution: Willa's Original claim (cleanest base) in beat 1, viral-recipe format as backdrop."},
+      {type:"PULSE",text:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Creators stacking 15-20g protein per jar. Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) — same plant-protein-twofer logic, fresh format. Willa's plays the dairy-free swap: Good Plants dairy-free cottage cheese (almond-based, ~8g protein) keeps the curd swirl + protein stack without the dairy panel."},
+      {type:"AUDIENCE",text:"Pattern 05 (Format-as-Virality) — ride the cottage cheese oats format with a dairy-free, cleaner-pour payload. Pattern 04 (Taboo-as-Normal) — the curd swirl IS the visual hook (Good Plants has visible curds). Poppi muse — viral short-form better-for-you. Lead-with-solution: Willa's Original + dairy-free swap claim in beat 1, viral-recipe format as backdrop."},
       {type:"COMPETITOR",text:"Internal only — most oat milks would react to the curd-protein stack with gums or fillers. Willa's Original has no gums, no stabilizers, no rapeseed — pure pour that lets the curds + protein math do the work. Structural advantage on the high-protein-overnight format."}
     ],
     hooks:[
-      {text:"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.)",recommended:true},
-      {text:"18g protein per jar. (the cleanest base does the rest.)",recommended:false},
-      {text:"cottage cheese oats is the may 2026 breakout. willa's is the cleanest pour to base it on.",recommended:false}
+      {text:"cottage cheese oats wanted a cleaner pour. (we swapped to dairy-free + kept the whole oat in the carton.)",recommended:true},
+      {text:"15g+ protein per jar. dairy-free. (the cleanest base does the rest.)",recommended:false},
+      {text:"cottage cheese oats — but make it dairy-free + whole-oat. (the may 2026 breakout, our way.)",recommended:false}
     ],
-    caption:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15-20g protein per jar. the curd-swirl is the visual; the math is the move.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup willa's original\n→ ½ cup whole-milk cottage cheese\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 18g protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nwilla's original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
-    hashtags:["#willaskitchen","#cottagecheeseoats","#overnightoats","#highprotein","#willasoriginal","#fibermaxxing","#wholeoat","#cleanlabel","#mealprep","#oatmilk"],
-    visual:"Overhead on a wood counter, morning daylight. Two clear mason jars side-by-side — layer 1: rolled oats, layer 2: cottage cheese curd swirl, layer 3: Willa's Original poured in (visible cloud-pour as the liquid integrates). Hands shake the jar (POV), then fridge cuts to the morning reveal: berries + flaky salt on top. Cinematic depth-of-field on the curd swirl. No on-camera face.",
+    caption:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we swapped to dairy-free + kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15g+ protein per jar. the curd-swirl is the visual; the dairy-free move is ours.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup Willa's Original\n→ ½ cup Good Plants dairy-free cottage cheese (or your favorite plant version)\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 15g+ protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nWilla's Original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
+    hashtags:["#willaskitchen","#cottagecheeseoats","#dairyfree","#overnightoats","#highprotein","#willasoriginal","#fibermaxxing","#wholeoat","#cleanlabel","#mealprep"],
+    visual:"Overhead on a wood counter, morning daylight. Two clear mason jars side-by-side — layer 1: rolled oats, layer 2: Good Plants dairy-free cottage cheese curd swirl (almond-based, visible curds), layer 3: Willa's Original poured in (visible cloud-pour as the liquid integrates). Hands shake the jar (POV), then fridge cuts to the morning reveal: berries + flaky salt on top. Cinematic depth-of-field on the curd swirl. Good Plants tub + Willa's Original carton staged cleanly in frame. No on-camera face.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"Overhead on the mason jar — layer 1 (oats) + layer 2 (cottage cheese curds). Text overlay: 'cottage cheese oats wanted a cleaner pour.'"},
-      {scene:"POUR",time:"3-8s",action:"Willa's Original pours over the layers — cloud-pour visible. Hands close the jar, shake. Text: '(we kept the whole oat in the carton.)'"},
-      {scene:"OVERNIGHT CUT",time:"8-12s",action:"Cut to morning — same jar, lid off, berries + flaky salt on top. Text reveals on beat: '18g protein. 5g fiber. 4 ingredients in the pour.'"},
+      {scene:"HOOK",time:"0-3s",action:"Overhead on the mason jar — layer 1 (oats) + layer 2 (dairy-free cottage cheese curds, Good Plants tub visible in corner). Text overlay: 'cottage cheese oats wanted a cleaner pour.'"},
+      {scene:"POUR",time:"3-8s",action:"Willa's Original pours over the layers — cloud-pour visible. Hands close the jar, shake. Text: '(we swapped to dairy-free + kept the whole oat in the carton.)'"},
+      {scene:"OVERNIGHT CUT",time:"8-12s",action:"Cut to morning — same jar, lid off, berries + flaky salt on top. Text reveals on beat: '15g+ protein. 5g fiber. 4 ingredients in the pour.'"},
       {scene:"END CARD",time:"12-16s",action:"Spoon dips through to the curd swirl. Sign-off: 'the cleanest base does the rest. 🌾' (BS-4)"}
     ],
-    audio:"Soft instrumental bed (lo-fi morning). Pour + shake ambient. Optional brief brand-voice VO: 'cottage cheese oats — but cleaner.' No first-person.",
+    audio:"Soft instrumental bed (lo-fi morning). Pour + shake ambient. Optional brief brand-voice VO: 'cottage cheese oats — but dairy-free + cleaner.' No first-person.",
     duration:"14-16 seconds",
     cta:{soft:"Save for sunday meal-prep 📌",medium:"Read the recipe",strong:"Find Willa's at Target"},
     benefitShorthandId:"BS-4"
@@ -962,18 +962,18 @@ const BRIEFS = [
     timing:"Fri May 22 · anytime", priority:"STANDARD",
     concept:"\"pinterest's 2026 breakout: fermentation. (your gut said duh.)\" — Pinterest Predicts fermentation-lane pin",
     intel:[
-      {type:"TREND",text:"Pinterest Predicts 2026 names fermentation as one of three breakout food trends (T-8) — kefir, mild miso, in-house kraut. Pinterest is where Willa's audience plans recipes 7-10 days ahead; the spring-to-summer recipe-pin window aligns with the breakout. Willa's Original is the cleanest format match for the fermentation + gut-health lane."},
-      {type:"AUDIENCE",text:"Pattern 10 (Wordplay) — text-overlay punchline as the share engine. Pinterest SEO pin format. Pattern 04 (Taboo-as-Normal) — calmly direct about prebiotic + postbiotic without supplement-speak. Lead-with-solution: Willa's claim (2g+ prebiotic fiber) in beat 1, Pinterest data as backdrop in beat 2. Compounds with PIN-2 (kefir overnight oats) — together they own the fermentation lane."},
-      {type:"COMPETITOR",text:"Internal only — no oat milk has positioned itself in the fermentation lane yet. Willa's prebiotic-fiber receipt (2g+ from whole oat groats) is the structural pre-claim — pair with the audience's existing fermented-food pantry (kefir, miso, kombucha)."}
+      {type:"TREND",text:"Pinterest Predicts 2026 names fermentation as one of three breakout food trends (T-8) — kefir, mild miso, in-house kraut. Pinterest is where Willa's audience plans recipes 7-10 days ahead; the spring-to-summer recipe-pin window aligns with the breakout. Willa's Original is the cleanest format match for the fermentation + gut-health lane (dairy-free swap on the kefir side stays on-brand)."},
+      {type:"AUDIENCE",text:"Pattern 10 (Wordplay) — text-overlay punchline as the share engine. Pinterest SEO pin format. Pattern 04 (Taboo-as-Normal) — calmly direct about prebiotic + postbiotic without supplement-speak. Lead-with-solution: Willa's claim (2g+ prebiotic fiber) in beat 1, Pinterest data as backdrop in beat 2. Compounds with PIN-2 (coconut-kefir overnight oats) — together they own the fermentation lane, dairy-free."},
+      {type:"COMPETITOR",text:"Internal only — no oat milk has positioned itself in the fermentation lane yet. Willa's prebiotic-fiber receipt (2g+ from whole oat groats) is the structural pre-claim — pair with the audience's existing fermented-food pantry (coconut kefir, miso, kombucha, sauerkraut)."}
     ],
     hooks:[
       {text:"pinterest's 2026 breakout: fermentation. (your gut said duh.)",recommended:true},
       {text:"fermentation is the 2026 food breakout. your prebiotic side of the equation is on the carton.",recommended:false},
-      {text:"pre + post = the full gut picture. willa's is the cleanest 'pre' on the shelf.",recommended:false}
+      {text:"pre + post = the full gut picture. Willa's is the cleanest 'pre' on the shelf.",recommended:false}
     ],
-    caption:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nwilla's original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with willa's + plain kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. 🌾\n\nshhh… your microbiome thanks you.",
-    hashtags:["#willaskitchen","#fermentation","#guthealth","#pinterestpredicts","#prebiotic","#willasoriginal","#wholeoat","#kefiroats","#overnightoats","#cleanlabel"],
-    visual:"Vertical Pinterest pin (2:3) · overhead wood counter, golden afternoon daylight. Mason jar of kefir overnight oats with Willa's Original carton in corner (partly cropped). Crock of fermented kraut + small dish of miso paste arranged as cameo cast. Single oat groat + flaky salt sparkle. Serif typography header overlaid: 'pinterest's 2026 breakout: fermentation. (your gut said duh.)' No on-camera face. Pinterest-native composition.",
+    caption:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nWilla's Original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with Willa's + Cocoyo coconut kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. dairy-free, all the probiotics. 🌾\n\nshhh… your microbiome thanks you.",
+    hashtags:["#willaskitchen","#fermentation","#guthealth","#pinterestpredicts","#prebiotic","#willasoriginal","#wholeoat","#dairyfreekefir","#overnightoats","#cleanlabel"],
+    visual:"Vertical Pinterest pin (2:3) · overhead wood counter, golden afternoon daylight. Mason jar of coconut-kefir overnight oats with Willa's Original carton + Cocoyo coconut kefir bottle in corner (partly cropped). Crock of fermented kraut + small dish of miso paste arranged as cameo cast. Single oat groat + flaky salt sparkle. Serif typography header overlaid: 'pinterest's 2026 breakout: fermentation. (your gut said duh.)' No on-camera face. Pinterest-native composition.",
     script:null,
     audio:null,
     duration:null,
@@ -1335,18 +1335,18 @@ const AMPLIFY_PLANS = {
     ]
   },
   "MAY18-TT-8": {
-    headline:"Cottage cheese oats viral-recipe remix — ride the May breakout window",
+    headline:"Dairy-free cottage cheese oats viral-recipe remix — ride the May breakout window",
     totalBudget:240,
     testWindow:"5 days (Wed May 20 → Sun May 24)",
     objective:"Saves + Profile Visits",
     guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
-    why:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Pattern 05 (Format-as-Virality) — ride the curd-swirl visual with Willa's clean-pour payload. Viral-recipe-remix briefs have been the highest reach format in 2026 (MAY 11 TT-5 iced café crème hit 482K views). The 18g protein math + 4-ingredient base is the share engine.",
+    why:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Willa's plays the dairy-free swap (Good Plants + Willa's Original) — same curd-swirl visual, same protein-stack format, zero dairy. Pattern 05 (Format-as-Virality) + Pattern 04 (Taboo-as-Normal). Viral-recipe-remix briefs have been the highest reach format in 2026 (MAY 11 TT-5 iced café crème hit 482K views). The 15g+ protein math + 4-ingredient base + plant-based posture is the share engine.",
     placements:[
       {
         platform:"TikTok",
         format:"Spark Ad",
         budget:240,
-        audience:"Interest: Cottage Cheese, Overnight Oats, High Protein, Fibermaxxing, Meal Prep, Clean Eating, Oat Milk · Age: 24–42 · Behavior: Interacted with Recipe Content (30 days)",
+        audience:"Interest: Cottage Cheese, Overnight Oats, High Protein, Fibermaxxing, Meal Prep, Clean Eating, Oat Milk, Dairy-Free · Age: 24–42 · Behavior: Interacted with Recipe Content (30 days)",
         lookalike:"Willa's engaged-non-follower lookalike + fitness-meal-prep audience lookalike",
         expectedReach:"75K–135K video views",
         note:"Optimize for Saves. If sentiment stays >0.85 through 72 hrs, extend to $360 for full weekend ride. The curd-swirl-pour shot is the share engine — make sure the cloud-pour visual lands."
@@ -1373,7 +1373,7 @@ const AMPLIFY_PLANS = {
     ]
   }
 };
-// No amplify for: MAY18-TT-3 (The Bear-coded prep counter — earned authenticity wins without paid), MAY18-PIN-1 / PIN-2 / PIN-3 / PIN-4 (Pinterest SEO compounds organically — iced coffee, kefir overnight oats, no-bake brownie bites, fermentation breakout all earn share rate on SEO + visual quality), MAY18-TT-5 (read-the-label stress test — Pattern 10 wordplay + format duration carry organic), MAY18-IG-R5 (Saturday multi-generation heritage — earned authenticity; cross-promote from IG-R1 budget if engagement holds), MAY18-TT-6 (road-trip cooler Pattern 03 — Partake-style relatable confession plays better organic; MAY 11 TT-7 hit 6.8× saves without paid), MAY18-IG-F2 (cert-wall carousel — receipt-led editorial wins as earned media), MAY18-IG-R6 (kids crossover split-screen — quiet-posture brief, organic-first), MAY18-TT-7 (grandfluencer heritage stitch — earned authenticity, organic-first), MAY18-IG-F3 (label-literacy framework carousel — receipt-led editorial wins as earned media; pair with IG-R7 amplify cross-promotion), MAY18-IG-R8 (parent-creator pantry stitch — quiet posture; ambassador-track first via Mary Neilis outreach, paid second).
+// No amplify for: MAY18-TT-3 (The Bear-coded prep counter — earned authenticity wins without paid), MAY18-PIN-1 / PIN-2 / PIN-3 / PIN-4 (Pinterest SEO compounds organically — iced coffee, coconut-kefir overnight oats, no-bake brownie bites, fermentation breakout all earn share rate on SEO + visual quality), MAY18-TT-5 (read-the-label stress test — Pattern 10 wordplay + format duration carry organic), MAY18-IG-R5 (Saturday multi-generation heritage — earned authenticity; cross-promote from IG-R1 budget if engagement holds), MAY18-TT-6 (road-trip cooler Pattern 03 — Partake-style relatable confession plays better organic; MAY 11 TT-7 hit 6.8× saves without paid), MAY18-IG-F2 (cert-wall carousel — receipt-led editorial wins as earned media), MAY18-IG-R6 (kids crossover split-screen — quiet-posture brief, organic-first), MAY18-TT-7 (grandfluencer heritage stitch — earned authenticity, organic-first), MAY18-IG-F3 (label-literacy framework carousel — receipt-led editorial wins as earned media; pair with IG-R7 amplify cross-promotion), MAY18-IG-R8 (parent-creator pantry stitch — quiet posture; ambassador-track first via Mary Neilis outreach, paid second).
 // No amplify for: MAY11-TT-2 (Mother's Day retrospective — organic-first), MAY11-TT-3 (meme-payload — test ad only if organic climbs), MAY11-PIN-1 / PIN-2 / PIN-3 (Pinterest SEO compounds organically — autobiography wordplay pin earns its share rate on type alone), MAY11-TT-4 (The Bear-coded — earned authenticity wins without paid), MAY11-TT-5 (iced café crème — recipe SEO compounds), MAY11-IG-R5 (Saturday heritage — earned-authenticity), MAY11-TT-7 (mom-bag relatable confession — Pattern 03 plays better organic; Partake-style content compounds on saves), MAY11-IG-F2 (category data carousel — earned-media), MAY11-IG-R6 (real-food anti-isolate — receipt-led category POV).
 
 
@@ -1481,9 +1481,9 @@ const CAPTION_VARIANTS = {
     punchy:"beans are having a moment. oats keep having a millennium. 🌾"
   },
   "MAY18-PIN-2": {
-    direct:"overnight oats — but make it kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup Willa's original\n→ ½ cup plain kefir\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the kefir. Willa's original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
-    warm:"overnight oats — but make it kefir-soaked. (prebiotic from the oats. probiotic from the kefir. 30-second mason-jar morning.) 💛😊",
-    punchy:"overnight oats — but make it kefir-soaked. 💛😊"
+    direct:"overnight oats — but make it coconut-kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning. dairy-free, all the probiotics.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup Willa's Original\n→ ½ cup Cocoyo coconut kefir (or your favorite dairy-free kefir)\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the coconut kefir. Willa's Original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
+    warm:"overnight oats — but make it coconut-kefir-soaked. (prebiotic from the oats. probiotic from the dairy-free kefir. 30-second mason-jar morning.) 💛😊",
+    punchy:"overnight oats — but make it coconut-kefir-soaked. (dairy-free.) 💛😊"
   },
   "MAY18-IG-R4": {
     direct:"105 years of one kitchen. 🌾\n\n(the oats sequester carbon. the carton tells you so.)\n\nWilla was born 1921. Willa's launched 2021. organic oats. whole oat groat (zero food waste in our process). carbon-sequestering by design — they improve soil health while they grow.\n\nthe cert stack tells the story:\n→ USDA Organic\n→ Detox Project Glyphosate-Free\n→ WBENC mother-founded\n→ Zero Food Waste\n\nthe brands that outlast a category pick a posture and hold it. (clean. organic. climate-positive. four ingredients.) shhh… 💛",
@@ -1532,9 +1532,9 @@ const CAPTION_VARIANTS = {
     punchy:"tiktok finally caught up to my grandmother. 👵"
   },
   "MAY18-TT-8": {
-    direct:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15-20g protein per jar. the curd-swirl is the visual; the math is the move.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup Willa's original\n→ ½ cup whole-milk cottage cheese\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 18g protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nWilla's original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
-    warm:"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.) 18g protein. 5g fiber. 4 ingredients in the pour. 🥣",
-    punchy:"cottage cheese oats — but cleaner. 🥣🌾"
+    direct:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we swapped to dairy-free + kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15g+ protein per jar. the curd-swirl is the visual; the dairy-free move is ours.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup Willa's Original\n→ ½ cup Good Plants dairy-free cottage cheese (or your favorite plant version)\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 15g+ protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nWilla's Original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
+    warm:"cottage cheese oats wanted a cleaner pour. (we swapped to dairy-free + kept the whole oat in the carton.) 15g+ protein. 5g fiber. 🥣",
+    punchy:"cottage cheese oats — but dairy-free + cleaner. 🥣🌾"
   },
   "MAY18-IG-F3": {
     direct:"clean label is the floor now. 🌾\n\n(organic + glyphosate-free is the bar.)\n\nthe category went clean — most decks finally read like food. your next-level check, whether you're picking up our carton or theirs:\n\n→ whole oat groat (most oat milks process the starch into sugar and filter the fiber + protein out)\n→ certified USDA Organic\n→ certified glyphosate-free, every lot (Detox Project)\n→ real, named ingredients (not 'natural flavors' or stabilizers)\n\nWilla's hits all four. we built the brand against these standards. use the framework on any carton — yours or ours.\n\n(no name-checks. no asterisks. just the checklist.) 🌾",
@@ -1547,8 +1547,8 @@ const CAPTION_VARIANTS = {
     punchy:"Colbert signs off thu may 21. (the kitchen's been here since 1921.) 💛"
   },
   "MAY18-PIN-4": {
-    direct:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nWilla's original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with Willa's + plain kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. 🌾\n\nshhh… your microbiome thanks you.",
-    warm:"pinterest's 2026 breakout: fermentation. (your gut said duh.) 2g+ prebiotic fiber from whole oat groats. pre + post = the full picture. 🥒",
+    direct:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nWilla's Original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with Willa's + Cocoyo coconut kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. dairy-free, all the probiotics. 🌾\n\nshhh… your microbiome thanks you.",
+    warm:"pinterest's 2026 breakout: fermentation. (your gut said duh.) 2g+ prebiotic fiber from whole oat groats. pair with Cocoyo coconut kefir — dairy-free, all the probiotics. 🥒",
     punchy:"pinterest's 2026 breakout: fermentation. (your gut said duh.) 🥒"
   },
   "MAY18-IG-R8": {
@@ -1797,7 +1797,7 @@ const TOP_PERFORMER_DNA = [
     tagColor:"#A191B2",
     icon:"🔄",
     description:"Take a recipe that's already viral and remix it dairy-free / cleaner with Willa's. Rides someone else's wave — Willa's gets to be the hero ingredient.",
-    exemplars:["\"overnight oats — but make it kefir-soaked.\" (MAY 18 PIN-2 · fermentation wave)","\"no-bake brownie bites — our new fav summer dessert.\" (MAY 18 PIN-3 · indulgent-clean)","\"the iced coffee that doesn't fight you back.\" (MAY 18 PIN-1 evergreen)"],
+    exemplars:["\"overnight oats — but make it coconut-kefir-soaked.\" (MAY 18 PIN-2 · fermentation wave)","\"no-bake brownie bites — our new fav summer dessert.\" (MAY 18 PIN-3 · indulgent-clean)","\"the iced coffee that doesn't fight you back.\" (MAY 18 PIN-1 evergreen)"],
     when:"1–2 per week. Pulls from Cultural Pulse viral-recipe feed + Pinterest Predicts breakouts.",
     rules:["Name the source trend in caption","Swap cane sugar for honey / maple / date","Indulgent remade as high-protein or high-fiber","Willa's is the hero ingredient — ≥1 cup or equivalent on-camera presence"]
   },
@@ -1924,10 +1924,10 @@ const CULTURAL_PULSE = [
     type:"CULTURAL CONVERSATION",
     typeColor:"#9E652E",
     hook:"Pinterest just called it 🫙 — fermentation is the spring breakout. (the oats have been hosting probiotics for ~10,000 years.)",
-    detail:"Pinterest Predicts 2026 names fermentation + gut health as one of three breakout food trends (alongside Cabbage Crush + sophisticated alcohol-free). In-house ferments — kefir, mild miso, pickles — are the format peak. Wave compounds through summer recipe-planning windows. Willa's Original is the cleanest pour for the lane: 2g+ prebiotic fiber, whole oat groat, no additives. Direct fuel for a kefir-soaked-oats evergreen pin.",
+    detail:"Pinterest Predicts 2026 names fermentation + gut health as one of three breakout food trends (alongside Cabbage Crush + sophisticated alcohol-free). In-house ferments — kefir, mild miso, pickles — are the format peak. Wave compounds through summer recipe-planning windows. Willa's Original is the cleanest pour for the lane: 2g+ prebiotic fiber, whole oat groat, no additives. Direct fuel for a coconut-kefir-soaked-oats evergreen pin (dairy-free swap stays on-brand).",
     velocity:"medium",
     platform:"Pinterest + IG + Trade Press",
-    willasPlay:"Pinterest pin THU MAY 21: 'overnight oats — but make it kefir-soaked.' Type-led layout with the ingredient list. Pattern 12 + clean editorial. (BS-1)",
+    willasPlay:"Pinterest pin THU MAY 21: 'overnight oats — but make it coconut-kefir-soaked.' Type-led layout, dairy-free ingredient list. Pattern 12 + clean editorial. (BS-1)",
     dnaMatch:"viral-recipe-remix",
     sources:[
       {label:"Pinterest Business · 2026 Predicts trend report (fermentation breakout)", url:"https://business.pinterest.com/en-au/blog/pinterest-predicts-2026-turn-trends-into-unlimited-possibilities/"}
@@ -1985,11 +1985,11 @@ const CULTURAL_PULSE = [
     id:"CP-10",
     type:"VIRAL RECIPE",
     typeColor:"#75C596",
-    hook:"Cottage cheese oats are eating TikTok 🥣 — the high-protein overnight version is the summer breakout, and Willa's is the cleanest pour to base it on",
-    detail:"The cottage cheese wave keeps morphing — May 2026's breakout variant is high-protein overnight oats (½ cup oats + ½ cup willa's original + ½ cup cottage cheese + maple + cinnamon, soaked overnight, berries on top). Creators stacking 15–20g protein per jar. Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) and the beans-protein wave (CP-7) — same plant-protein-twofer logic, fresh format. Willa's Original is the cleanest base in the format: 4 ingredients, organic, no gums to fight the curds.",
+    hook:"Cottage cheese oats are eating TikTok 🥣 — Willa's plays the dairy-free swap (Good Plants + Willa's Original) and keeps the protein-stack format",
+    detail:"The cottage cheese wave keeps morphing — May 2026's breakout variant is high-protein overnight oats (creators stacking 15–20g protein per jar with dairy cottage cheese). Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) and the beans-protein wave (CP-7) — same plant-protein-twofer logic, fresh format. Willa's plays the dairy-free version: ½ cup oats + ½ cup Willa's Original + ½ cup Good Plants dairy-free cottage cheese (almond-based, ~8g protein) + maple + cinnamon. Total: 15g+ protein, 5g fiber, zero dairy, the curd swirl visual stays. The cleanest base + the cleanest swap.",
     velocity:"high",
     platform:"TikTok + IG Reels + Pinterest",
-    willasPlay:"Pinterest pin SAT MAY 23: 'cottage cheese overnight oats — 18g protein per jar.' Type-led pin with the recipe + the math of the protein stack. Pattern 12 + clean editorial. (BS-4)",
+    willasPlay:"TikTok WED MAY 20: 'cottage cheese oats wanted a cleaner pour. (we swapped to dairy-free + kept the whole oat in the carton.)' Curd-swirl visual + Good Plants tub in frame. Pattern 05 + 04. (BS-4)",
     dnaMatch:"viral-recipe-remix",
     sources:[
       {label:"TikTok · #cottagecheeseoats hashtag page (permanent reference)", url:"https://www.tiktok.com/tag/cottagecheeseoats"},
