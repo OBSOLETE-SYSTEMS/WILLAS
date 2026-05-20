@@ -25,6 +25,11 @@ scripts/
 *.swo
 *~
 
+# ─── Build tooling — local only, not committed ────────────────
+# esbuild binary used by build.sh to precompile index.jsx → index.js.
+# Each developer fetches their own (~10MB, platform-specific).
+tools/
+
 # ─── Node / Vercel build artifacts ─────────────────────────────
 node_modules/
 .vercel/

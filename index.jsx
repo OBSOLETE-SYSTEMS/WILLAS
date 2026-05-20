@@ -1,0 +1,7930 @@
+const { useState, useMemo, useEffect } = React;
+
+function useLiveClock(){
+  const [now,setNow] = useState(new Date());
+  useEffect(()=>{ const id=setInterval(()=>setNow(new Date()),1000); return ()=>clearInterval(id); },[]);
+  return now;
+}
+function fmtClock(d){
+  const date = d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+  const time = d.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false});
+  return {date,time};
+}
+
+const LOGO = "https://i.postimg.cc/d02cvvdS/images.png";
+
+const PILLAR_COLORS = {
+  "HEALTH/WELLNESS":"#73B2C9","INGREDIENTS/RECIPES":"#75C596",
+  "PARENTING":"#9E652E","REVIEWS/RECS":"#A191B2"
+};
+
+// ──────────────────────────────────────────────────────────
+// REAL DATA — May 11–17 2026. Refreshed May 11 2026.
+// ──────────────────────────────────────────────────────────
+
+const TRENDS = [
+  {
+    trend:"A national UPF report just landed 📋 — Healthy Eating Research's expert-panel doc is the framework Willa's was built against",
+    detail:"A real federal framework for defining ultraprocessed foods just landed. Healthy Eating Research (the Robert Wood Johnson Foundation's national program) published its expert-panel technical report this May — the evidence-informed framework state and federal policymakers have been waiting for since the FDA and USDA opened their Request for Information back in summer 2025. Pair that with O'Melveny's 2025-26 UPF litigation tracker (private suits up, state laws compounding in CA, IL, LA) and the direction is clear. Willa's Original is what 'not ultraprocessed' looks like on a real panel — 4 ingredients, no isolates, no engineered fillers. The definition is converging on the carton.",
+    platform:"Policy + Trade Press + Academic",
+    views:"Healthy Eating Research · May 2026 panel report",
+    velocity:"high",
+    pillars:["HEALTH/WELLNESS","PARENTING"],
+    angle:"The federal UPF definition is converging on exactly what's already on Willa's back panel 📋 — show the panel, let the carton make the case.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Healthy Eating Research · UPF Expert Panel Technical Report (May 2026)", url:"https://healthyeatingresearch.org/research/ultraprocessed-foods-in-the-u-s-recommended-definitions-and-policies/"},
+      {label:"O'Melveny · Ultra-Processed Foods 2025-2026 state-law + litigation tracker", url:"https://www.omm.com/insights/alerts-publications/ultra-processed-foods-face-rising-scrutiny-what-new-state-laws-fda-actions-and-private-litigation-mean-for-food-manufacturers-in-2025-2026/"}
+    ]
+  },
+  {
+    trend:"Oat milk just crossed 30% of the US alt-milk shelf 📈 — Oatly's Q1 print made it official (Apr 30 earnings, still landing in May trade press)",
+    detail:"Oatly's Q1 print keeps echoing through May trade press, and the durable number isn't on their balance sheet — it's the one buried in the analyst takes: US oat milk just crossed 30% of the plant-based milk category for the first time. Revenue's up 15.6% to $228.3M, gross margin expanded almost 200bp, and they finally posted positive EBITDA plus their first NA volume growth since Q4 2024. But the headline that matters is the category-share one. Oat milk has officially named the lane, which validates Willa's category-confidence framing as structural fact, not brand PR.",
+    platform:"Trade Press + Investor + Earnings",
+    views:"Revenue +15.6% · US oat-milk share >30% (first time)",
+    velocity:"high",
+    pillars:["INGREDIENTS/RECIPES","REVIEWS/RECS"],
+    angle:"Oat milk just crossed 30% of the alt-milk shelf 📈 — the lane has a leader. Willa's is the cleanest answer in it.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Stock Titan · Oatly Q1 Revenue Rises 15.6%, Keeps 2026 Outlook (Apr 30)", url:"https://www.stocktitan.net/news/OTLY/oatly-reports-first-quarter-2026-financial-u618xfxqra54.html"},
+      {label:"Investing.com · Oatly Group Q1 2026 earnings call transcript", url:"https://www.investing.com/news/transcripts/earnings-call-transcript-oatly-group-q1-2026-shows-solid-growth-93CH-4645206"},
+      {label:"Motley Fool · Oatly (OTLY) Q1 2026 transcript", url:"https://www.fool.com/earnings/call-transcripts/2026/04/30/oatly-otly-q1-2026-earnings-call-transcript/"}
+    ]
+  },
+  {
+    trend:"Chobani now owns La Colombe outright ☕ — $900M consolidation closed MAY 10, Norton Shores plant ($567M) keeps ramping",
+    detail:"Chobani officially owns La Colombe outright as of MAY 10 — Sprudge and Specialty Food confirmed the full $900M consolidation closed, and the Norton Shores Michigan plant expansion ($567M, 200K sq ft, 337 new jobs) keeps ramping toward a July capacity bump. The trade press consensus is that this is Chobani's protein-RTD bet, with new Chobani Oat barista SKUs expected once the capacity lands. The takeaway for Willa's: the RTD-coffee-theater category is consolidating into one mega-platform, which makes Willa's distinct lane even sharper — real-food protein in the carton, not a shake in the bottle. The structural counter doesn't need to react.",
+    platform:"Trade Press + News",
+    views:"$567M Norton Shores ramp · La Colombe fully owned (May 10)",
+    velocity:"medium",
+    pillars:["INGREDIENTS/RECIPES","REVIEWS/RECS"],
+    angle:"RTD coffee is consolidating into one mega-shake platform ☕ — Willa's lane is the protein in the oat, not the shake in the bottle.",
+    urgency:"BACKGROUND",
+    sources:[
+      {label:"Sprudge · Chobani Now Owns La Colombe Outright (May 10)", url:"https://sprudge.com/chobani-now-owns-la-colombe-coffee-roasters-outright-225214.html"},
+      {label:"BevNET · Chobani Expands La Colombe Manufacturing in Michigan", url:"https://www.bevnet.com/news/2026/chobani-expands-la-colombe-manufacturing-in-michigan/"}
+    ]
+  },
+  {
+    trend:"Califia just launched into matcha 🍵 — Blueberry Matcha Almond Latte hits Tesco UK MAY 18 (3-month exclusive, first-to-market)",
+    detail:"Califia just launched Blueberry Matcha Almond Latte at Tesco UK as a 3-month exclusive — 750ml multi-serve, premium 0.4% single-origin Japanese matcha, almond-milk base, positioned as 'first-to-market' UK flavor innovation. The real signal isn't the flavor; it's that matcha-as-plant-milk-co-star is officially a category move, and the biggest oat-adjacent player just put their stake in. Watch the clock for the US extension — Califia historically brings UK SKUs stateside within 6 to 12 months. Tastewise confirms the demand side: US matcha mentions are up 107% YoY, search interest jumped 180% in Q3-Q4 2025. The lane just got validated by the loudest possible voice.",
+    platform:"Trade Press + Competitor + News",
+    views:"MAY 18 Tesco UK · 3-mo exclusive · matcha +107% YoY",
+    velocity:"high",
+    pillars:["INGREDIENTS/RECIPES","REVIEWS/RECS"],
+    angle:"Big oat milk just launched into matcha 🍵 — Willa's Barista was already in the conversation. (show the back panel, skip the press release.)",
+    urgency:"RIDE NOW",
+    sources:[
+      {label:"The Plant Base · Califia Farms expands RTD range with Blueberry Matcha Almond Latte", url:"https://www.theplantbasemag.com/news/califia-farms-expands-rtd-matcha-range-with-new-blueberry-matcha-almond-latte"},
+      {label:"FoodBev Media · Califia Farms expands RTD range with new Blueberry Matcha Almond Latte", url:"https://www.foodbev.com/news/califia-farms-expands-rtd-range-with-new-blueberry-matcha-almond-latte"},
+      {label:"Tastewise · Matcha Trends and Statistics 2026 (+107% mentions YoY)", url:"https://tastewise.io/blog/matcha-trends"}
+    ]
+  },
+  {
+    trend:"Memorial Day Weekend is almost here 💛 — the summer family-kitchen cycle opens MAY 24-25 and Pinterest planning windows are already peaking",
+    detail:"Memorial Day Weekend (MAY 24-25, federal observance MON MAY 25) is the unofficial summer-kickoff calendar moment, and the runway is already heating up. Food Network, Love & Lemons, and the local-news cookout roundups all landed their 2026 menu coverage between MAY 13 and 17. The framing across all of them: cookouts as casual family kitchens, not catered events. Pinterest tells the same story — searches for 'memorial day breakfast,' 'cookout sides,' and 'kid-friendly grill weekend' all spike 7 to 10 days ahead of the holiday. Family-kitchen and grandmother-recipe coverage is hot, and that's exactly Willa's tonal pocket.",
+    platform:"Retail + News + Pinterest",
+    views:"MAY 24-25 · MON MAY 25 federal · 7-10 day pin lead",
+    velocity:"high",
+    pillars:["PARENTING","INGREDIENTS/RECIPES"],
+    angle:"Memorial Day Weekend is the family kitchen's official summer-opener 💛 — Willa's-coded breakfast + cookout pin lane runs through MON MAY 25.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Food Network · 52 Memorial Day Recipes for the Perfect Cookout", url:"https://www.foodnetwork.com/holidays-and-parties/packages/memorial-day/memorial-day-recipes"},
+      {label:"Love & Lemons · 35 Best Memorial Day Recipes for a Delicious Cookout", url:"https://www.loveandlemons.com/memorial-day-recipes/"},
+      {label:"Honest & Truly · 29 Must-Try Recipes for Memorial Day Cookout 2026", url:"https://honestandtruly.com/must-try-memorial-day-recipes/"}
+    ]
+  },
+  {
+    trend:"Fibermaxxing just escalated to national press 🌾 — NPR's syndicated piece dropped MON MAY 18, riding the Mayo Clinic + VegNews coverage from earlier May",
+    detail:"The fibermaxxing wave hit a peak the week of MAY 11 across health TikTok + trade press. VegNews May 2026: 'Forget Protein, Fiber Is the New TikTok Nutrition Trend.' Dietitian Alice Bleathman's quote — 'young people aren't dying of protein deficiency, they're dying of colon cancer' — racked up millions of views. Mayo Clinic Press published its 'is this trend good for you' explainer May 2026. Bloomberg (Apr 24): viral TikTok trend turning beans into must-buy grocery item. USDA: 90% of women + 97% of men miss daily fiber recommended intake. Willa's lane: oats are the original fibermaxxing food — 10,000 years of receipts. Original is 2g+ prebiotic fiber per cup.",
+    platform:"Health TikTok + News + Trade Press",
+    views:"Mayo Clinic + VegNews May 2026 · Bloomberg Apr 24",
+    velocity:"high",
+    pillars:["HEALTH/WELLNESS","INGREDIENTS/RECIPES"],
+    angle:"Fiber is finally getting the protein treatment on TikTok 🌾 — Willa's has been keeping the receipts in the carton for a few millennia.",
+    urgency:"RIDE NOW",
+    sources:[
+      {label:"NPR · The 'fibermaxxing' trend has health benefits worth the hype (May 18, 2026)", url:"https://www.npr.org/2026/05/18/nx-s1-5398871/the-fibermaxxing-trend-has-health-benefits-worth-the-hype"},
+      {label:"Mayo Clinic Press · Fibermaxxing — Is this TikTok trend good for you?", url:"https://mcpress.mayoclinic.org/nutrition-fitness/fibermaxxing-is-this-tiktok-trend-good-for-you/"},
+      {label:"VegNews · Forget Protein, Fiber Is the New TikTok Nutrition Trend", url:"https://vegnews.com/fiber-tiktok-trend-expert-advice"}
+    ]
+  },
+  {
+    trend:"Glyphosate-in-kids-food is the 12-month news cycle 🛡️ — EWG's April lawsuit against the EPA continues to compound parenting + health press through May",
+    detail:"The glyphosate-in-kids-food story keeps churning, driven now by EWG's April lawsuit against the EPA — they're compelling action on a 7-year-stalled petition to tighten glyphosate limits in oat-based kids products. The data point that keeps resurfacing on parenting TikTok and Reddit every news cycle: 43 of 48 popular oat-based products tested positive for glyphosate residue. UC Berkeley's research linking childhood exposure to early-adulthood liver inflammation gets re-cited alongside it. This is a multi-month news cycle, not a one-week story. Willa's holds the Detox Project Glyphosate-Free certification and tests every lot — which means the structural defense is the cert itself, no reaction post needed.",
+    platform:"Policy + Parenting Press + News",
+    views:"EWG vs EPA · April 2026 · 43-of-48 testing data",
+    velocity:"medium",
+    pillars:["PARENTING","HEALTH/WELLNESS"],
+    angle:"The glyphosate-in-kids-food story has a 12-month news cycle 🛡️ — Willa's holds the cert + tests every lot. The receipt IS the response (no panic post needed).",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"EWG · Glyphosate area-focus (permanent reference — case + data + ongoing campaign)", url:"https://www.ewg.org/areas-focus/toxic-chemicals/glyphosate"},
+      {label:"UC Berkeley Public Health · Childhood glyphosate exposure + liver inflammation study", url:"https://publichealth.berkeley.edu/articles/spotlight/research/childhood-exposure-to-common-herbicide-may-increase-the-risk-of-disease-in-young-adulthood"},
+      {label:"The New Lede · EPA ignored plea to tighten glyphosate restrictions, lawsuit claims", url:"https://www.thenewlede.org/2026/04/epa-ignored-plea-to-tighten-restrictions-on-a-controversial-weed-killer-lawsuit-claims/"}
+    ]
+  },
+  {
+    trend:"Pinterest just named the 3 food breakouts of 2026 🫙 — Cabbage Crush + fermentation + sophisticated alcohol-free",
+    detail:"Pinterest just dropped its 2026 Predicts report, and three food breakouts are compounding through summer. First, Cabbage Crush — cabbage as the primary ingredient (saves up 110% for cabbage dumplings, 95% for golumpki soup, 45% for cabbage alfredo, 35% for sauteed bok choy and fermented cabbage). Second, fermentation and gut health — kefir, mild miso, in-house kraut. Third, sophisticated alcohol-free — homemade syrups and tea-as-cocktail-base. Pinterest is where Willa's audience plans recipes 7 to 10 days ahead, so the spring-to-summer recipe-pin window is wide open right now. Original is the cleanest format match for the fermentation lane — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber actually lives).",
+    platform:"Pinterest + Trade Press",
+    views:"Pinterest Predicts 2026 · 3 food breakouts",
+    velocity:"medium",
+    pillars:["INGREDIENTS/RECIPES","HEALTH/WELLNESS"],
+    angle:"Pinterest's 3 food breakouts (cabbage, fermentation, alcohol-free) all play to Willa's strengths 🫙 — pin into the fermentation lane, prebiotic fiber does the heavy lifting.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Pinterest Business · 2026 Predicts trend report (canonical)", url:"https://business.pinterest.com/en-au/blog/pinterest-predicts-2026-turn-trends-into-unlimited-possibilities/"}
+    ]
+  },
+  {
+    trend:"RFK / FDA stay on the dye + seed-oil case 💛 — synthetic-dye phase-out by end of 2026, infant-formula review continues",
+    detail:"RFK Jr's voluntary phase-out plan for 8 synthetic food dyes keeps rolling — the FDA is aiming for end of 2026 to substantially eliminate them, and PepsiCo and Tyson are among the brands already announcing removals. PepsiCo's specifically dropping canola and soybean oil from Lay's and Tostitos. Separately, RFK launched an infant-formula review citing seed-oil concerns. The policy direction stays favorable to anything clean-by-design, and the cultural attention on dyes and seed oils looks durable through 2026. Willa's Original is dye-free and rapeseed-free; Barista uses high-oleic sunflower (structurally different from industrial seed oils, with its own gloss rule applied).",
+    platform:"Policy + Trade Press",
+    views:"FDA phase-out end-2026 · infant formula review",
+    velocity:"medium",
+    pillars:["HEALTH/WELLNESS","PARENTING"],
+    angle:"The federal direction keeps converging on what's already on the carton — dye-free, rapeseed-free, transparent. We don't reformulate; we just are 💛",
+    urgency:"BACKGROUND",
+    sources:[
+      {label:"ABC News · RFK Jr unveils plan to phase out 8 artificial food dyes", url:"https://abcnews.go.com/US/rfk-jr-plans-phase-artificial-food-dyes-us/story?id=121034287"},
+      {label:"Washington Examiner · RFK Jr on UPF — food dyes, glyphosate, seed oils science", url:"https://www.washingtonexaminer.com/policy/healthcare/3236392/rfk-jr-ultraprocessed-food-science/"},
+      {label:"KFF Health News · MAHA movement in 2026 state legislatures", url:"https://kffhealthnews.org/news/article/maha-rfk-kennedy-state-legislatures-dyes-ultraprocessed-foods/"}
+    ]
+  },
+  {
+    trend:"Matcha is having its biggest year yet 🍵 — mentions +107% YoY, search +180% Q3-Q4, cold-foam + cloud-texture is the breakout format",
+    detail:"Matcha is having its biggest year yet, and Tastewise's May 2026 report lays out the math cleanly. Matcha menu items are up 30% YoY, operator menu share is up nearly 7%, and social mentions jumped 107% YoY. Search interest for 'matcha latte' hit its peak in August 2025, and 'flavored matcha drinks' climbed 180% across Q3-Q4. The breakout format for summer 2026 is cold-foam matcha — ceremonial-grade matcha plus cold whipped cream, layered on coconut water or oat milk for that cloud texture. Willa's Barista is the exact format match (clean ingredient deck, frothable). The category move makes matcha a flavor lane Willa's enters just by being the cleanest barista milk on the deck.",
+    platform:"Trade Press + TikTok + Pinterest",
+    views:"+107% mentions YoY · +180% search Q3-Q4",
+    velocity:"high",
+    pillars:["INGREDIENTS/RECIPES","REVIEWS/RECS"],
+    angle:"Matcha is having its moment 🍵 — Willa's Barista is the cleanest pour in the lane. (no rapeseed. no gums. show the back panel, not the latte.)",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Tastewise · Matcha Trends and Statistics in 2026 (+107% mentions YoY)", url:"https://tastewise.io/blog/matcha-trends"},
+      {label:"World Coffee Portal · The Matcha Report 2026 — global ascent analysis", url:"https://www.worldcoffeeportal.com/the-matcha-report-2026/"},
+      {label:"All Reasons · Flavored Matcha Lattes — Next Big Drink Trend 2026", url:"https://www.allreasons.eu/allreasons-blog/flavored-matcha-lattes-trend-2026"}
+    ]
+  }
+];
+
+
+
+const TICKER = [
+  {agent:"trend",    text:"UPF expert-panel report just landed (Healthy Eating Research, May 2026) — willa's is the literal inverse · quiet-confidence Reel queued 📋"},
+  {agent:"trend",    text:"Fibermaxxing is overtaking protein on TikTok (VegNews + Mayo Clinic, May 2026) — 'oats invented it 10,000 years ago' founder-POV BIG SWING 🌾"},
+  {agent:"comp",     text:"Califia just launched into matcha (MAY 18, Tesco UK) — willa's barista back-panel response queued for RIDE NOW Tuesday 🍵"},
+  {agent:"trend",    text:"Matcha mentions +107% YoY · search +180% Q3-Q4 (Tastewise, May 2026) — willa's barista is the cleanest pour in the lane"},
+  {agent:"comp",     text:"Chobani now owns La Colombe outright (Sprudge, MAY 10) — $900M consolidation closed · willa's 'protein in the carton, not the bottle' lane stays distinct ☕"},
+  {agent:"trend",    text:"Pinterest just named 2026's food breakouts: Cabbage Crush + fermentation + sophisticated alcohol-free — prebiotic + simple-ingredient lane fits 🫙"},
+  {agent:"hook",     text:"drafted 3 on-brand captions for fibermaxxing BIG SWING · christina founder-POV tier 2 · benefit-first structure applied"},
+  {agent:"composer", text:"queued 17 briefs · 2 BIG SWINGs (fibermaxxing TT-1 · memorial day weekend heritage IG-R1) + 2 RIDE NOW (fibermaxxing · matcha response)"},
+  {agent:"visual",   text:"footage inspo banks complete · oat-anatomy diagram + cookout-prep overhead + matcha-back-panel cameo added"},
+  {agent:"editor",   text:"capped memorial day anchor at 3 briefs (signal-concentration rule) · displaced briefs reframed to: heritage 100yrs · matcha response · pinterest fermentation pin"},
+  {agent:"amb",      text:"7 fiber-first dietitian creators flagged for fibermaxxing brief support · @drwellnessrn + @theblueprintnutrition named for sample-ship priority"},
+  {agent:"paid",     text:"amplifying fibermaxxing BIG SWING TT (rideNow) · $260 Spark Ad · 72-hr saves test against MAY 11 baseline"},
+  {agent:"trend",    text:"EWG vs. EPA glyphosate case (filed April 2026) keeps landing in parenting press — willa's Detox Project cert + lot-by-lot test = receipt-led counter 🛡️"},
+  {agent:"comp",     text:"Oat milk just crossed 30% of the US alt-milk shelf for the first time (Oatly Q1 print) — willa's stays the cleanest answer in the winning lane 📈"},
+  {agent:"composer", text:"queued memorial day weekend Saturday multi-generation pour (Sat 11am · heritage tier 1) · pattern 02 + patagonia gravity continued from MAY 11 wk"},
+  {agent:"editor",   text:"killed all 12 MAY 11 Pulse entries from this set · no-repeat rule strict · fresh ground: matcha + fibermaxxing + memorial day + UPF panel + cabbage crush"}
+];
+
+
+const COMPETITORS = [
+  {
+    name:"Oatly",
+    status:"Oatly's Q1 print keeps echoing through May trade press 📈, and the one headline analysts won't stop quoting is the one to actually watch — US oat milk just crossed 30% of the plant-based milk category for the first time. Revenue's up 15.6%, EBITDA finally went positive, and they posted their first NA volume growth in over a year. The category leader has officially named the lane. The deck still reads 12 ingredients with 7g sugar and no glyphosate-free cert though, so Willa's higher floor still holds.",
+    direction:"up",
+    opportunity:"Oat milk just got its first 30% category-share moment 📈 — the lane has a leader. Willa's cert-stack (organic + glyphosate-free + WBENC) is the higher floor.",
+    sources:[
+      {label:"Stock Titan · Oatly Q1 Revenue Rises 15.6% (Apr 30)", url:"https://www.stocktitan.net/news/OTLY/oatly-reports-first-quarter-2026-financial-u618xfxqra54.html"},
+      {label:"Motley Fool · Oatly (OTLY) Q1 2026 transcript", url:"https://www.fool.com/earnings/call-transcripts/2026/04/30/oatly-otly-q1-2026-earnings-call-transcript/"},
+      {label:"Globe and Mail · Oatly Earnings Call — Growth Returns Amid Cost Pressures", url:"https://www.theglobeandmail.com/investing/markets/stocks/OTLY/pressreleases/1658941/oatly-earnings-call-growth-returns-amid-cost-pressures/"}
+    ]
+  },
+  {
+    name:"Califia Farms",
+    status:"Califia just launched into matcha 🍵 — Blueberry Matcha Almond Latte hit Tesco UK on MAY 18 as a 3-month exclusive, and the real signal isn't the SKU, it's the move. Matcha-as-plant-milk-co-star is officially category-validated. Watch for the US drop — Califia's UK launches have historically hit American shelves within 6 to 12 months. Meanwhile their Simple & Organic Soymilk and reformulated creamers keep rolling at Whole Foods and Sprouts. The cert gap still holds though (no organic across the full line, no glyphosate-free), so the Barista lane still has room.",
+    direction:"up",
+    opportunity:"Matcha + plant milk is officially a category move 🍵 — Willa's Barista is the cleanest pour in the lane. Show the back panel, skip the press release.",
+    sources:[
+      {label:"The Plant Base · Califia Farms Blueberry Matcha Almond Latte (MAY 18 launch)", url:"https://www.theplantbasemag.com/news/califia-farms-expands-rtd-matcha-range-with-new-blueberry-matcha-almond-latte"},
+      {label:"FoodBev Media · Califia Farms expands RTD range with new Blueberry Matcha Almond Latte", url:"https://www.foodbev.com/news/califia-farms-expands-rtd-range-with-new-blueberry-matcha-almond-latte"},
+      {label:"Tastewise · Matcha trends 2026 (+107% mentions YoY)", url:"https://tastewise.io/blog/matcha-trends"}
+    ]
+  },
+  {
+    name:"Planet Oat",
+    status:"Planet Oat is sitting with an open class-action lawsuit ⚠️ — filed back in Dec 2024 in California federal court, alleging the Original SKU shows 4mcg of vitamin D on the label but tests at zero. No public defense, no settlement, plaintiff still pushing for a jury trial. The discourse keeps re-circulating on parenting Reddit and clean-label TikTok every few weeks. The durable Willa's frame is simple: a label is a claim, a test is a fact. Willa's tests every lot (Detox Project + USDA Organic + WBENC), and the trust window on mass-market oat milk stays wide open.",
+    direction:"down",
+    opportunity:"Trust-deficit window stays open 🛡️ — 'a label is a claim. a test is a fact.' Willa's tests every lot.",
+    sources:[
+      {label:"Top Class Actions · Planet Oat vitamin D class action", url:"https://topclassactions.com/lawsuit-settlements/lawsuit-news/planet-oat-class-action-alleges-oat-milk-lacks-vitamin-d-contrary-to-advertising/"},
+      {label:"VegNews · Lawsuit alleges zero vitamin D", url:"https://vegnews.com/planet-oat-vitamin-d-lawsuit"},
+      {label:"VegOut · Oat milk faces lawsuit over zero vitamin D", url:"https://vegoutmag.com/news/r-tns-popular-oat-milk-brand-faces-lawsuit-for-allegedly-containing-zero-vitamin-d-despite-label-claims/"}
+    ]
+  },
+  {
+    name:"Chobani",
+    status:"Chobani officially owns La Colombe outright now ☕ — the $900M consolidation closed MAY 10, and the Norton Shores Michigan plant (+$567M, 200K sq ft, 337 new jobs) keeps ramping. The trade press has settled on the framing: this is Chobani's protein-RTD bet, with new Chobani Oat barista SKUs expected to roll once the July capacity comes online. So the RTD coffee category is now one mega-platform, and Willa's distinct lane gets sharper — we're real-food protein in the carton, not a shake in the bottle.",
+    direction:"up",
+    opportunity:"RTD coffee is now one mega-shake platform ☕ — Willa's lane is the protein in the whole oat, not the bottled shake.",
+    sources:[
+      {label:"Sprudge · Chobani Now Owns La Colombe Outright (May 10)", url:"https://sprudge.com/chobani-now-owns-la-colombe-coffee-roasters-outright-225214.html"},
+      {label:"BevNET · Chobani Expands La Colombe Manufacturing in Michigan", url:"https://www.bevnet.com/news/2026/chobani-expands-la-colombe-manufacturing-in-michigan/"},
+      {label:"Food Business News · Chobani doubling down on La Colombe's growth", url:"https://www.foodbusinessnews.net/articles/30041-chobani-doubling-down-on-la-colombes-growth"}
+    ]
+  },
+  {
+    name:"Elmhurst 1925",
+    status:"A quiet refresh week for Elmhurst 🟰 — no new SKU announcements, but the Q1 launches keep rolling (three barista editions plus the Brown Sugar Oat Creamer building distribution). They're the closest clean-positioned peer to Willa's, and they're executing on a tight 'simple + functional' SKU rhythm worth watching. A Kids line stays the next watch. The cert gap still holds though — not organic, not glyphosate-free, not WBENC. Clean deck, but the cert wall is the moat Willa's keeps.",
+    direction:"flat",
+    opportunity:"Clean ingredient decks are now the floor 💛 — Willa's moat is the cert stack. Show the credentials, not the response.",
+    sources:[
+      {label:"Prepared Foods · Plant-based dairy seeks reset (Elmhurst feature)", url:"https://www.preparedfoods.com/articles/131394-plant-based-dairy-seeks-reset"},
+      {label:"NEXTY Awards · Expo West winners landing page (permanent)", url:"https://www.newhope.com/nexty-awards"}
+    ]
+  }
+];
+
+
+const AMBASSADORS = [
+  {
+    type:"Clean-Eating Parenting Creators",
+    description:"Mom accounts in the 10K–50K range posting school-lunch + 'what I feed my toddler' content who already vocally avoid dyes, seed oils, and gums. Activated by EWG news + state dye-ban headlines.",
+    count:"12 IDENTIFIED THIS WEEK",
+    pillar:"PARENTING",
+    pillarColor:"#9E652E",
+    creators:[
+      {handle:"@cleanlivingmama",  followers:"42.3K", platform:"IG",     fit:5, last:"Posted Sat May 2: 'why I read every label' → 1.8K saves",  action:"Send Willa's Kids 4-pack + handwritten note"},
+      {handle:"@thewholeoatmom",   followers:"28.7K", platform:"TikTok", fit:5, last:"Lunchbox series · 320K avg views per post",                action:"Sample + collab proposal"},
+      {handle:"@nontoxicnest",     followers:"19.2K", platform:"IG",     fit:4, last:"Posted Apr 6: 'the dye ban explained'",                    action:"Sample + tag in dye-ban content"}
+    ]
+  },
+  {
+    type:"Wellness / Nutrition Creators",
+    description:"Nutritionists publicly distancing from oat milk over 'liquid glucose' and seed-oil concerns. Newsweek-cited cohort. Already telling followers what NOT to drink.",
+    count:"8 HIGH-FIT CREATORS",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    creators:[
+      {handle:"@drwellnessrn",     followers:"87.4K", platform:"TikTok", fit:5, last:"\"why I quit oat milk\" video · 540K views",              action:"Ship Original + Detox Project cert sheet"},
+      {handle:"@theblueprintnutrition", followers:"34.1K", platform:"IG", fit:5, last:"Posted Apr 7: 'the oat milk sugar truth'",                action:"Send Barista + glyphosate cert · pitch as 'the one'"},
+      {handle:"@seedoilrunner",    followers:"22.6K", platform:"IG",     fit:4, last:"RFK / seed oil discourse content cluster",                action:"Sample + 'already RFK'd' angle"}
+    ]
+  },
+  {
+    type:"Existing Willa's Superfans",
+    description:"Reviewers + repeat posters who've mentioned Willa's organically 2+ times. High engagement, authentic advocacy. Unpaid ambassadors already doing the work.",
+    count:"5 NAMED SUPERFANS",
+    pillar:"REVIEWS/RECS",
+    pillarColor:"#A191B2",
+    creators:[
+      {handle:"@rachelinthekitchen", followers:"61.8K", platform:"IG",   fit:5, last:"3 unprompted Willa's mentions in past month",            action:"Repost · DM thank-you · gifting program"},
+      {handle:"@mornings.with.mae",  followers:"14.2K", platform:"IG",   fit:5, last:"Tagged Willa's Barista in matcha post · Apr 4",          action:"Repost + send full product lineup"},
+      {handle:"thekitchn",           followers:"3.1M",  platform:"Web",  fit:5, last:"Wrote a Willa's review piece · Apr 2",                   action:"Engage · share · long-term media partner"}
+    ]
+  },
+  {
+    type:"Home Barista / Café Community",
+    description:"Latte-art + 'home café' creators posting matcha + spring drink content. Strawberry matcha is the breakout format and oat milk is the default pairing.",
+    count:"6 CAFÉ ACCOUNTS",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    creators:[
+      {handle:"@homecafediaries",  followers:"48.9K", platform:"IG",     fit:5, last:"Strawberry matcha tutorial · 220K views",                action:"Send Barista + strawberry matcha kit"},
+      {handle:"@latteart.daily",   followers:"31.5K", platform:"TikTok", fit:4, last:"Oat milk frothing comparison content",                  action:"Send Barista samples + frothing test prompt"},
+      {handle:"@morningmatchabar", followers:"17.8K", platform:"IG",     fit:4, last:"Spring drink series · matcha-forward",                  action:"Sample + spring recipe collab"}
+    ]
+  }
+];
+
+// ─── Outreach pipeline ────────────────────────────────────
+const OUTREACH_PIPELINE = [
+  {stage:"Surfaced",   count:31, color:"#94A3B8", desc:"Identified by Ambassador Finder this week"},
+  {stage:"Researched", count:18, color:"#64748B", desc:"Audience + voice fit verified by Cultural Editor"},
+  {stage:"Sent",       count:11, color:"#73B2C9", desc:"Sample + personal note shipped"},
+  {stage:"Posted",     count:6,  color:"#9E652E", desc:"Creator made content unprompted"},
+  {stage:"Converted",  count:3,  color:"#75C596", desc:"Ongoing partner · gifting program"}
+];
+
+const BRIEFS = [
+  {
+    id:"MAY18-TT-1",
+    platform:"TikTok", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Mon May 18 · 9am", priority:"BIG SWING", rideNow:true,
+    concept:"\"fiber is the new TikTok trend. (oats invented it 10,000 years ago.)\" — fibermaxxing founder-POV authority",
+    intel:[
+      {type:"AUDIENCE",text:"Christina's lead-with-solution rule (POV Discipline #7): Willa's claim in beat 1 (oats are the original fibermaxxing food), fibermaxxing context as backdrop in beat 2. Founder-POV tier 2 (activist stance on a wellness trend Willa's structurally wins)."},
+      {type:"PULSE",text:"Fibermaxxing wave peaks on TikTok (CP-1) — VegNews + Mayo Clinic May 2026 confirm fiber overtaking protein as the new nutrition trend. 90% of women, 97% of men miss daily fiber recommended intake. Willa's Original: 2g+ prebiotic fiber per cup, whole oat groat (not the syrup)."},
+      {type:"COMPETITOR",text:"Internal only — Willa's keeps the whole oat groat (bran + germ + endosperm). Most oat milks filter the bran + germ out (losing both fiber AND protein) then enzyme-process the starch into sugar. Willa's structural advantage on the fiber claim is uncopyable."}
+    ],
+    hooks:[
+      {text:"fiber is the new TikTok trend. (oats invented it 10,000 years ago.)",recommended:true},
+      {text:"young people are dying of colon cancer, not protein deficiency. (the fiber memo finally landed.)",recommended:false},
+      {text:"willa's original has 2g+ prebiotic fiber per cup. (the carton beat the algorithm by ~10,000 years.)",recommended:false}
+    ],
+    caption:"fiber is the new TikTok trend. (oats invented it 10,000 years ago.) 🌾\n\nwilla's original keeps the whole oat groat — bran + germ + endosperm. that's where the fiber lives. 2g+ prebiotic fiber per cup. 4g+ protein. 1g sugar.\n\nmost oat milks filter the bran + germ out and turn the starch into sugar. they lose the fiber AND the protein. willa's just kept the whole oat.\n\nshhh… the receipts have been on the back of the carton the whole time. 🌾",
+    hashtags:["#willaskitchen","#fibermaxxing","#oatmilk","#wholeoat","#willasoriginal","#realfood","#nofiller","#cleanlabel","#gutHealth"],
+    visual:"Christina to camera in the real kitchen, lo-fi handheld — tier 2 founder-POV activist. Holds Willa's Original carton + a printed oat-anatomy cross-section diagram (bran/germ/endosperm labeled). Single oat groat macro in foreground. No competitor cartons. Authority-not-anxiety register.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Christina to camera, holds Willa's Original. Text overlay: 'fiber is the new TikTok trend. (oats invented it 10,000 years ago.)'"},
+      {scene:"OAT ANATOMY",time:"3-9s",action:"Cut to overhead: printed oat-groat diagram. Bran + germ + endosperm light up. Text: 'the fiber lives in the bran + germ. most oat milks filter them out.'"},
+      {scene:"WILLA'S DIFFERENCE",time:"9-15s",action:"Cut back to Christina holding carton + nutrition panel. Text: '2g+ prebiotic fiber. 4g+ protein. 1g sugar. willa's kept the whole oat.'"},
+      {scene:"END CARD",time:"15-18s",action:"Carton in daylight. Tagline: 'shhh… the receipts have been here the whole time.' (BS-1)"}
+    ],
+    audio:"Founder voiceover (Christina on camera). Calm, confident. Kitchen ambient only.",
+    duration:"16-18 seconds",
+    cta:{soft:"Save the receipts 📌",medium:"Read the panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-IG-R1",
+    platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Original",
+    timing:"Mon May 18 · 12pm", priority:"BIG SWING",
+    concept:"\"memorial day morning starts in this kitchen.\" — MD weekend family-kitchen anchor",
+    intel:[
+      {type:"PULSE",text:"Memorial Day Weekend MAY 24-25 opens summer family-kitchen cycle (CP-3). Food Network + Love & Lemons cookout coverage already landing. Pinterest 'memorial day breakfast' peaks 7-10 days ahead — this is the pre-game window."},
+      {type:"AUDIENCE",text:"Per Alex's 2026-05-18 feedback — make the Willa's + MD connection explicit (not poetic). Lead with the morning, the brunch, the kid pouring oat milk into a glass. Show how Willa's is the family-kitchen carton when the holiday weekend lands."},
+      {type:"COMPETITOR",text:"Internal only — no oat-milk brand has the multi-generation kitchen story. Willa was born 1921; Willa's launched 2021. The 'has always been here' framing is structurally uncopyable for venture-backed peers."}
+    ],
+    hooks:[
+      {text:"memorial day morning starts in this kitchen.",recommended:true},
+      {text:"the holiday-weekend breakfast carton (and the iced coffee one, and the kids' glass).",recommended:false},
+      {text:"Willa's at the memorial-day brunch — four ingredients, one kitchen, no strategy.",recommended:false}
+    ],
+    caption:"memorial day morning starts in this kitchen. 💛\n\nthe holiday weekend's brunch counter, the iced coffee on the way to the cookout, the kids' glass before the pool — one carton does all three.\n\nfour ingredients on the back panel:\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\nWilla was born 1921. Willa's launched 2021. the carton's been on the family-kitchen counter every weekend morning since.\n\n(no strategy for the brunch. just the carton.) 🌾",
+    hashtags:["#willaskitchen","#memorialdayweekend","#heritage","#willasoriginal","#motherfounded","#oatmilk","#realfood","#WBENC","#familykitchen"],
+    visual:"Heritage-coded kitchen, soft Monday daylight. Cofounder-sister at the counter pouring Willa's Original from a stained, well-loved carton into a glass. Vintage linen napkin, a single oat groat in soft focus. Optional: Christina's hands stabilize the carton (heritage tier 1). Editorial composition, no studio finish.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Soft Monday daylight in heritage-coded kitchen. Cofounder-sister pours Willa's Original into a glass at the counter. Serif overlay: 'memorial day morning starts in this kitchen.'"},
+      {scene:"THE THREE USES",time:"3-10s",action:"Quick stitch — the brunch counter (carton + iced coffee glass), the cookout cooler (carton in 4-pack), the kid's glass (kid pouring). Text: 'one carton, three weekend moments.'"},
+      {scene:"BACK PANEL",time:"10-15s",action:"Slow push-in on the carton's back panel. Each ingredient reveals on beat: 'water · oats · vanilla · salt.'"},
+      {scene:"END CARD",time:"15-18s",action:"Carton centered on counter, vintage linen, single oat groat. Sign-off: 'no strategy for the brunch. just the carton. shhh… 💛' (BS-12)"}
+    ],
+    audio:"Cofounder-sister VO, warm + restrained. Optional bar of acoustic folk (Kevin Morby-coded). Kitchen ambient.",
+    duration:"16-18 seconds",
+    cta:{soft:"Save for the holiday weekend 💛",medium:"Read the heritage story",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-TT-2",
+    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Barista",
+    timing:"Tue May 19 · 9am", priority:"HIGH", rideNow:true,
+    concept:"\"matcha is everywhere this season. Willa's Barista was already in the cup.\" — matcha quiet-confidence Barista cameo",
+    intel:[
+      {type:"PULSE",text:"Matcha is having its biggest season ever (T-10 / CP-5 internal context — Tastewise stats kept internal-only per Sylvie's Rule #9). Cold-foam matcha + cloud-texture is the breakout summer 2026 format. Pairs with Califia's MAY 18 UK Blueberry Matcha Almond Latte launch."},
+      {type:"AUDIENCE",text:"Lead-with-solution: Willa's claim up top (cleanest pour), matcha cultural moment as backdrop. NOT a latte recipe — back-panel quiet-confidence. Sylvie's Rule #9 applied — no stats in copy. Honors latte cap."},
+      {type:"COMPETITOR",text:"Internal only — Big oat milk just launched into matcha. Willa's Barista has no rapeseed (canola), no gums, 50% less sugar than other barista oat milks. The matcha category move is competitor-validated; Willa's just shows the deck."}
+    ],
+    hooks:[
+      {text:"matcha is everywhere this season. Willa's Barista was already in the cup.",recommended:true},
+      {text:"the matcha pour is moving plant-milks. the cleanest oat milk was already in the cup.",recommended:false},
+      {text:"the matcha lane is here. (Willa's Barista didn't need a launch announcement.)",recommended:false}
+    ],
+    caption:"matcha is everywhere this season. Willa's Barista was already in the cup. 🍵🌾\n\nthe matcha-pour wave is here. Willa's Barista is the cleanest oat milk to drink it with:\n→ no rapeseed (canola) oil\n→ no gums, no stabilizers\n→ 50% less sugar than other barista oat milks\n→ organic + WBENC mother-founded\n\nshow the back panel. the matcha takes care of the rest. 🌾",
+    hashtags:["#willaskitchen","#willasbarista","#matchatok","#cleanlabel","#oatmilk","#norapeseed","#nogums","#WBENC","#matchacommunity"],
+    visual:"Cold morning daylight. Tall clear glass on linen counter. Willa's Barista cold-frothed over matcha cloud — hands enter, do the pour, hold the carton up. Quick back-panel reveal. Slow rotation of glass. NOT a latte recipe — a category-POV cameo. No on-camera face, no name-check of competitors.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Tall clear glass, matcha cloud at the bottom. Text overlay: 'matcha is everywhere this season.'"},
+      {scene:"POUR",time:"3-8s",action:"Hands cold-froth Willa's Barista, layer over matcha. Cloud-pour reveal. Text: 'Willa's Barista was already in the cup.'"},
+      {scene:"BACK PANEL",time:"8-13s",action:"Hands rotate carton — back panel close-up. Text: 'no rapeseed. no gums. 50% less sugar than other barista oat milks.'"},
+      {scene:"END CARD",time:"13-16s",action:"Glass + carton in daylight. Sign-off: 'show the panel. the matcha takes care of the rest.' (BS-7)"}
+    ],
+    audio:"Soft instrumental bed. Pour + froth ambient. No VO.",
+    duration:"15-16 seconds",
+    cta:{soft:"Save for matcha week 🍵",medium:"Read the back panel",strong:"Willa's Barista — at Target"},
+    benefitShorthandId:"BS-7"
+  },
+  {
+    id:"MAY18-IG-R2",
+    platform:"IG Reel", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Tue May 19 · 12pm", priority:"HIGH",
+    concept:"\"real food. real fiber. real protein. (real boring receipts.)\" — anti-isolate brand-voice POV Reel",
+    intel:[
+      {type:"TREND",text:"Healthy Eating Research's UPF expert-panel report (T-1, May 2026) formalizes the federal framework defining ultraprocessed foods — convergence is on whole-food, no-isolates, real-ingredient cartons. Willa's Original is the inverse of the definition the panel is converging on."},
+      {type:"AUDIENCE",text:"Customer-first framing per Sylvie's Rule #9 (Audience-outsider test) — DO NOT lead with the trade-press citation or 'the policy is catching up' framing. Lead with what's on the carton, customer-recognizable receipts. Pattern 10 (Wordplay) + Pattern 06 (Founder/Team Humanization — brand-voice, not Christina on camera)."},
+      {type:"COMPETITOR",text:"Internal only — most oat milks process the starch into sugar and filter out the bran + germ (losing fiber AND protein), then add isolates back. Willa's just kept the whole oat. Structural anti-isolate position is uncopyable mid-flight."}
+    ],
+    hooks:[
+      {text:"real food. real fiber. real protein. (real boring receipts.)",recommended:true},
+      {text:"4 ingredients you can read out loud in 4 seconds.",recommended:false},
+      {text:"the back of the carton is the whole story. (no isolates. no asterisks.)",recommended:false}
+    ],
+    caption:"real food. real fiber. real protein. 🌾\n\n(real boring receipts.)\n\nWilla's Original is what 'not ultraprocessed' actually looks like on the label:\n→ 4 ingredients (filtered water · organic whole grain oats · organic vanilla extract · sea salt)\n→ whole oat groat — bran + germ + endosperm kept (not filtered into syrup)\n→ no isolates · no gums · no engineered fillers\n→ 2g+ fiber · 4g+ protein · 1g sugar (from the oats, nothing added)\n\nmost oat milks filter the bran + germ out, turn the starch into syrup, then add the fiber + protein back as isolates. Willa's just kept the whole oat the whole time.\n\nthe receipts are boring. (that's the whole point.) 🌾",
+    hashtags:["#willaskitchen","#realfood","#wholeoat","#willasoriginal","#cleanlabel","#noisolates","#nofiller","#organic","#oatmilk","#nogums"],
+    visual:"Editorial overhead on a wood counter, soft daylight. Willa's Original carton centered, single oat groat in foreground showing the bran-germ-endosperm cross-section. Quick push-in on the 4-ingredient back panel. Text overlays carry the wordplay. No on-camera face. Patagonia gravity, brand-voice receipt energy.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead wood counter. Willa's Original carton centered. Serif text overlay: 'real food. real fiber. real protein.'"},
+      {scene:"WORDPLAY",time:"3-7s",action:"Push-in on the carton. Text reveal on beat: '(real boring receipts.)'"},
+      {scene:"BACK PANEL",time:"7-13s",action:"Hands rotate carton to back panel. Text reveals each ingredient: 'filtered water · organic whole grain oats · organic vanilla extract · sea salt.' Subtext: 'whole oat groat. no isolates. no gums.'"},
+      {scene:"END CARD",time:"13-17s",action:"Carton in soft daylight, single oat groat in foreground. Sign-off: 'the receipts are boring. (that's the whole point.) 🌾' (BS-1)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, no first-person). Soft instrumental bed. Pour + counter ambient.",
+    duration:"14-17 seconds",
+    cta:{soft:"Save the receipts 📌",medium:"Read the panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-PIN-1",
+    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Barista",
+    timing:"Wed May 20 · anytime", priority:"STANDARD",
+    evergreen:true,
+    concept:"\"the cleanest iced coffee you'll make this summer.\" — evergreen barista iced coffee pin",
+    intel:[
+      {type:"BRAND",text:"PILLAR EVERGREEN — no signal anchor. Willa's Barista is the cleanest pour in the iced coffee occasion: no rapeseed (canola), no gums, 50% less sugar than other barista oat milks. The daily-pour use case Christina says is most-requested. The pin compounds on Pinterest SEO regardless of news cycle. Reframed 2026-05-18 per Alex's feedback — dropped the unclear 'doesn't fight you back' phrasing for a customer-clear hook."},
+      {type:"AUDIENCE",text:"Pinterest pins compound 6+ days on recipe SEO. Iced coffee is Barista's most repeated occasion (per Christina). Pattern 09 (Aesthetic IRL Encounter) — real glass, real ice, golden hour. Customer-clear language: 'cleanest iced coffee you'll make' — directly tells the reader what they're getting."},
+      {type:"COMPETITOR",text:"Internal only — most barista oat milks separate in cold pours (gums) and add rapeseed bitterness. Willa's Barista's clean panel is the structural advantage in iced coffee specifically. No name-check — the pour does the work."}
+    ],
+    hooks:[
+      {text:"the cleanest iced coffee you'll make this summer.",recommended:true},
+      {text:"the iced coffee with the shortest ingredient list. (poured from the carton.)",recommended:false},
+      {text:"the iced coffee that froths clean every time. (no rapeseed. no gums.)",recommended:false}
+    ],
+    caption:"the cleanest iced coffee you'll make this summer. ☕💛\n\nWilla's Barista pours clean — no rapeseed, no gums, no separation in the glass.\n\nthe recipe:\n→ 4 oz cold espresso (or strong cold brew)\n→ ice in a tall glass\n→ ¼ cup Willa's Barista, cold-frothed\n→ pinch of flaky sea salt on top\n\nwhy it's the morning pour:\n✅ no rapeseed (canola) oil\n✅ no gums, no stabilizers\n✅ 50% less sugar than other barista oat milks\n✅ organic, simple ingredients\n✅ WBENC mother-founded\n\namazing in cold brew. adored by anyone who reads a label. 😋",
+    hashtags:["#willaskitchen","#willasbarista","#icedcoffee","#oatmilk","#norapeseed","#nogums","#cleanlabel","#homecafe","#oatmilkrecipes"],
+    visual:"Vertical Pinterest pin (2:3). Overhead — wood counter, linen napkin underneath. Tall clear glass: espresso on bottom, ice mid-section, cold-frothed Willa's Barista layered on top. Single pinch of flaky salt sparkle. Willa's Barista carton in the corner, partly cropped. Golden-hour daylight from a window. Editorial composition, no styling theatrics. Pinterest-native, screenshot-able. Serif typography header: 'the cleanest iced coffee you'll make this summer · Willa's Barista.'",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the iced coffee pour ☕",medium:"Read the back panel",strong:"Willa's Barista — at Target"},
+    benefitShorthandId:"BS-7"
+  },
+  {
+    id:"MAY18-IG-R3",
+    platform:"IG Reel", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Wed May 20 · 12pm", priority:"HIGH",
+    concept:"\"no isolates. no fillers. (just oats.)\" — clean-label quiet-authority Reel",
+    intel:[
+      {type:"TREND",text:"Healthy Eating Research May 2026 UPF report (T-1) — internal context only, NEVER ship the 'expert panel' / 'policymaker report' framing in consumer copy per Sylvie's Rule #9. Customer-facing: lead with what's NOT in the carton + what IS."},
+      {type:"AUDIENCE",text:"Per Alex's 2026-05-18 feedback — drop the 'panel' / policy-report framing. Make approachable. Lead with the ingredient story directly: no isolates, no fillers, just oats. Customer-centric, brand-voice editorial, no on-camera face."},
+      {type:"COMPETITOR",text:"Internal only — most plant milks compete on additives + isolates + flavor theater. Willa's keeps the whole oat groat with nothing added back. The 'whole oat, nothing added' story is uncopyable mid-flight."}
+    ],
+    hooks:[
+      {text:"no isolates. no fillers. (just oats.)",recommended:true},
+      {text:"the back of the carton reads like a love letter to the oat.",recommended:false},
+      {text:"4 ingredients. (the simpler the deck, the better it reads.)",recommended:false}
+    ],
+    caption:"no isolates. no fillers. (just oats.) 🌾\n\nWilla's Original — 4 ingredients on the back of the carton:\n→ filtered water\n→ organic whole grain oats (the whole oat — bran, germ, endosperm)\n→ organic vanilla extract\n→ sea salt\n\nno engineered fillers. no gums. no 'natural flavors.' no isolated proteins, no isolated fibers. 2g+ fiber, 4g+ protein, 1g sugar — all of it from the oat itself.\n\nmost oat milks process the starch into syrup and add the fiber + protein back as isolates. Willa's just kept the whole oat the whole time.\n\nthe simpler the deck, the better it reads. shhh… 💛",
+    hashtags:["#willaskitchen","#wholeoat","#cleanlabel","#noisolates","#nofiller","#willasoriginal","#realfood","#oatmilk","#4ingredients"],
+    visual:"Cool kitchen daylight on a wood counter. Willa's Original carton centered, single oat groat in foreground showing the bran-germ-endosperm cross-section. Slow push-in on the carton's 4-ingredient back panel. Hands rotate carton, then a contrasting shot of a competitor-coded long-deck nutrition label (out of focus, unreadable, no name) for the 'most oat milks' comparison beat. No on-camera face.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead wood counter. Willa's Original carton centered. Serif text overlay: 'no isolates. no fillers.' Beat. Add: '(just oats.)'"},
+      {scene:"BACK PANEL",time:"3-9s",action:"Hands rotate carton to back panel. Slow push-in. Each ingredient reveals on beat: 'water · oats · vanilla · salt.' Subtext: 'whole oat — bran, germ, endosperm.'"},
+      {scene:"CONTRAST",time:"9-14s",action:"Quick cut to an out-of-focus, unreadable long-ingredient deck. Text: 'most oat milks process the starch into syrup, then add the fiber + protein back as isolates.'"},
+      {scene:"END CARD",time:"14-18s",action:"Back to Willa's carton in soft daylight. Sign-off: 'the simpler the deck, the better it reads. shhh… 🌾' (BS-1)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, no first-person). Soft instrumental bed. Counter ambient.",
+    duration:"16-18 seconds",
+    cta:{soft:"Save the receipts 📌",medium:"Read the panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-TT-3",
+    platform:"TikTok", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Wed May 20 · 7pm", priority:"HIGH",
+    concept:"\"a label is a claim. a test is a fact.\" — receipts-first glyphosate-cert Reel",
+    intel:[
+      {type:"TREND",text:"The glyphosate-in-kids-food story keeps churning (T-7) — EWG's April lawsuit against the EPA, the 43-of-48 oat-product testing data, UC Berkeley liver-inflammation research. Willa's holds the Detox Project Glyphosate-Free certification and tests every lot. The cert IS the structural defense; no panic post needed."},
+      {type:"AUDIENCE",text:"Customer-first framing per Sylvie's Rule #9 — DO NOT lead with EWG-vs-EPA or the 43-of-48 stat as the hook. Lead with the certificate, the test, the answer. Pattern 10 (Wordplay) — 'a label is a claim. a test is a fact.' is the share-engine hook."},
+      {type:"COMPETITOR",text:"Internal only — no peer oat milk holds the Detox Project Glyphosate-Free certification across every lot. The cert wall is the moat. Show the receipt, no name-checks."}
+    ],
+    hooks:[
+      {text:"a label is a claim. a test is a fact.",recommended:true},
+      {text:"the cert that takes years to earn. (Willa's has it on every lot.)",recommended:false},
+      {text:"4 ingredients. 1 cert most oat milks don't hold.",recommended:false}
+    ],
+    caption:"a label is a claim. a test is a fact. 🌾\n\nWilla's tests every lot for glyphosate residue (Detox Project Certified Glyphosate-Free). that's the structural answer to every 'is my oat milk safe' question.\n\nthe cert wall on the back of the carton:\n→ USDA Organic\n→ Detox Project Glyphosate-Free (every lot tested)\n→ Non-GMO Project Verified\n→ WBENC mother-founded\n\nthe receipts come standard. shhh… 💛",
+    hashtags:["#willaskitchen","#glyphosatefree","#detoxproject","#USDAorganic","#cleanlabel","#testedeverylot","#willasoriginal","#oatmilk","#organic","#WBENC"],
+    visual:"Overhead wood counter, soft daylight. Willa's Original carton centered, Detox Project Glyphosate-Free certificate page (printed) next to it. Single oat groat in foreground. Slow push-in from the cert document to the back panel. Hands rotate the carton to reveal the cert seals stack. No on-camera face. Patagonia gravity.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead wood counter — Willa's Original carton + printed Detox Project Glyphosate-Free certificate. Serif text overlay: 'a label is a claim.' Beat. Add: 'a test is a fact.'"},
+      {scene:"CERT REVEAL",time:"3-8s",action:"Push-in on the cert document. Highlight: 'Certified Glyphosate-Free — every lot tested.' Text: 'Willa's tests every lot.'"},
+      {scene:"BACK PANEL",time:"8-13s",action:"Hands rotate carton to back panel — cert seals stack (USDA Organic + Detox Project + Non-GMO + WBENC). Text: 'the receipts come standard.'"},
+      {scene:"END CARD",time:"13-16s",action:"Carton centered in daylight, cert document beside. Sign-off: 'shhh… 🌾' (BS-1)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, no first-person). Soft instrumental bed. Paper + counter ambient.",
+    duration:"14-16 seconds",
+    cta:{soft:"Save the cert 📌",medium:"Read the panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-IG-F1",
+    platform:"IG Feed", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Multi",
+    timing:"Thu May 21 · 12pm", priority:"HIGH",
+    concept:"\"the mother-founded pantry. (the brands we cook with all year.)\" — peer-set love carousel",
+    intel:[
+      {type:"AUDIENCE",text:"Mother-founded peer-set is Willa's highest-sentiment format (last refresh's IG-F1 hit 0.98 sentiment). Reframed per Sylvie's Rule #9 — drop the Mother's-Day-retro 'industry-cycle' framing (irrelevant to the customer per her Pass-2 audit) and lead with year-round pantry love. Brand-voice editorial, no founder."},
+      {type:"BRAND",text:"Six mother-founded brands the team actually cooks with. The peer-set framing wins when it reads as 'real pantry we use,' not 'Mother's-Day retrospective gift guide.' Pattern 12 (Carousel/UGC Compilation). Partake muse warmth."},
+      {type:"COMPETITOR",text:"Internal only — peer brands named as friends, not as competitors. Willa's leads as the oat-milk reference. Uncopyable structural credentials (WBENC + grandmother-founded)."}
+    ],
+    hooks:[
+      {text:"the mother-founded pantry. (the brands we cook with all year.)",recommended:true},
+      {text:"founded by women. on the shelf every week. (one shape.)",recommended:false},
+      {text:"the peer-set worth keeping on your list — long after the holiday's over.",recommended:false}
+    ],
+    caption:"the mother-founded pantry. 🌾\n\n(the brands we cook with all year.)\n\nwhen the carton, the cookie, the chutney, and the spice mix are all founded by women — the pantry tells a quiet story. these six are on rotation:\n\n→ Willa's Original oat milk · mother-founded, named for a grandmother (born 1921)\n→ Partake Foods · top-9 allergen-free, mother-founded\n→ Bobo's Oat Bars · mother-daughter, boulder kitchen\n→ Maazah · mother + three daughters, afghan-style chutneys\n→ Omsom · sister-founded asian pantry starters\n→ 2Betties · mother-daughter, swizzle\n\nthe pantry is forever. the cartons stay. 💛",
+    hashtags:["#willaskitchen","#motherfounded","#WBENC","#peerfoundedbrands","#womenowned","#partakefoods","#bobosoatbars","#oatmilk","#groceryguide"],
+    visual:"6-card IG Feed carousel. Editorial museum-card aesthetic, soft daylight, generous whitespace. Card 1 covers the thesis line in navy serif. Card 2 lays out the full peer-set in one composition. Cards 3-6 give each peer brand its own cameo. Brand-voice editorial, no founder.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/6",action:"Navy serif on cream cover. Center quote: 'the mother-founded pantry.' Lower-right parenthetical: '(the brands we cook with all year.)' Generous whitespace, museum-card aesthetic."},
+      {scene:"CARD 2 · LINEUP",time:"slide 2/6",action:"Overhead wood counter, soft daylight. 6 brand cartons + jars in a casual line — Willa's Original leading, Partake / Bobo's / Maazah / Omsom / 2Betties trailing. Linen napkin underneath."},
+      {scene:"CARD 3 · WILLA'S",time:"slide 3/6",action:"Willa's Original carton centered. Caption: 'mother-founded · named for a grandmother (born 1921, launched 2021).' Cert chips: WBENC + USDA Organic + Detox Project."},
+      {scene:"CARD 4 · PARTAKE",time:"slide 4/6",action:"Partake Foods cookie box centered. Caption: 'top-9 allergen-free · mother-founded by Denise Woodard.' Soft daylight, matching aesthetic."},
+      {scene:"CARD 5 · BOBO'S + MAAZAH",time:"slide 5/6",action:"Two-up composition: Bobo's Oat Bars stack + Maazah chutney jar. Captions: 'mother-daughter, boulder kitchen.' · 'mother + three daughters, afghan-style chutneys.'"},
+      {scene:"CARD 6 · CLOSE",time:"slide 6/6",action:"Final card — Willa's Original + tagline overlay: 'the brunch ends. the cartons stay. 🌾' Sign-off: 'shhh… we keep good company. 💛' (BS-12)"}
+    ],
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the lineup 🌾",medium:"Shop the peer-set",strong:"Find Willa's + the peers at Whole Foods"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-TT-4",
+    platform:"TikTok", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Thu May 21 · 9am", priority:"HIGH",
+    concept:"\"beans are having a moment. oats keep having a millennium.\" — Pattern 05 plant-protein counter",
+    intel:[
+      {type:"PULSE",text:"Bloomberg Apr 24 + TikTok beans-as-must-buy wave (CP-7) continues through May, fueled by adjacent fibermaxxing content. Risk: beans-as-protagonist makes oats a coda. Pattern 05 (Format-as-Virality) — Willa's stays the protagonist."},
+      {type:"AUDIENCE",text:"Brand voice, no founder. Lead-with-solution: Willa's claim (oats = original protein-fiber twofer) in beat 1, beans context as backdrop. Format-payload structure — dry-wit closer."},
+      {type:"COMPETITOR",text:"Internal only — Willa's Original delivers same protein-fiber twofer in a more versatile format than beans (in coffee, in cereal, in smoothies, on the counter). Structurally adjacent narrative without bean-specific creator stitching."}
+    ],
+    hooks:[
+      {text:"beans are having a moment. oats keep having a millennium.",recommended:true},
+      {text:"plant-protein-was-always-the-answer. (oats had the receipts first.)",recommended:false},
+      {text:"the trend is the legume. the OG was the oat.",recommended:false}
+    ],
+    caption:"beans are having a moment. oats keep having a millennium. 🌾\n\nplant-protein-was-always-the-answer. oats had the receipts ~10,000 years before bloomberg covered it.\n\nwilla's original — 4 ingredients, the whole entire oat:\n→ 4g+ protein per cup\n→ 2g+ prebiotic fiber per cup\n→ 1g sugar (from the oats, nothing added)\n\nthe protein-fiber twofer didn't need rebranding. (just keep the whole oat in the carton.) 💛",
+    hashtags:["#willaskitchen","#oats","#willasoriginal","#plantprotein","#fibermaxxing","#cleanlabel","#realfood","#oatmilk","#nofiller"],
+    visual:"Overhead static on a wood counter. Willa's Original carton centered, single oat groat in foreground. Text overlays carry the joke. No on-camera face, no beans in frame. Clean editorial composition.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Carton + oat groat. Text: 'beans are having a moment.' Beat. Add: 'oats keep having a millennium.'"},
+      {scene:"RECEIPTS",time:"3-9s",action:"Push-in on carton back panel. Text: '4g+ protein. 2g+ fiber. 1g sugar. (the OG twofer.)'"},
+      {scene:"PUNCHLINE",time:"9-14s",action:"Wide pull-back. Text: 'plant-protein-was-always-the-answer. (oats had the receipts first.)'"},
+      {scene:"END CARD",time:"14-17s",action:"Carton + serif sign-off: 'shhh… 🌾' (BS-1)"}
+    ],
+    audio:"Soft instrumental bed. Brand-voice narration optional. No trending audio.",
+    duration:"15-17 seconds",
+    cta:{soft:"Save the receipt 🌾",medium:"Read the back panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-PIN-2",
+    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
+    timing:"Thu May 21 · anytime", priority:"STANDARD",
+    concept:"\"kefir-soaked overnight oats. (the fermented breakfast that takes 30 seconds.)\" — Pinterest fermentation wave pin",
+    intel:[
+      {type:"PULSE",text:"Pinterest Predicts 2026 names fermentation + gut health as a breakout food trend (CP-6). Wave compounds through summer recipe-planning windows. Pinterest is where audience plans 7-10 days ahead."},
+      {type:"AUDIENCE",text:"Willa's Original = cleanest fermentation-adjacent pour. 2g+ prebiotic fiber + whole oat groat. Recipe pin with type-led design, screenshot-friendly. Pattern 12 (Carousel / UGC Compilation) on a single-pin format."},
+      {type:"COMPETITOR",text:"Internal only — most chocolate / barista plant milks can't pair cleanly with kefir (gums + stabilizers fight the ferment). Willa's Original's clean panel is the structural advantage."}
+    ],
+    hooks:[
+      {text:"kefir-soaked overnight oats. (the fermented breakfast that takes 30 seconds.)",recommended:true},
+      {text:"prebiotic + probiotic in one jar. (the gut-health pin that compounds.)",recommended:false},
+      {text:"the easiest fermented breakfast you'll save for july. (3 ingredients, 1 jar.)",recommended:false}
+    ],
+    caption:"overnight oats — but make it kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup willa's original\n→ ½ cup plain kefir\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the kefir. willa's original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
+    hashtags:["#willaskitchen","#fermentedbreakfast","#kefir","#overnightoats","#guthealth","#willasoriginal","#prebiotic","#probiotic","#oatmilkrecipes"],
+    visual:"Vertical Pinterest pin (2:3). Overhead wood counter, mason jar of kefir overnight oats topped with berries + cinnamon + flaky salt. Willa's Original carton in corner, partly cropped. Soft afternoon daylight. Serif typography header: 'kefir-soaked overnight oats — fermented breakfast in 30 seconds.'",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the ferment 🌾",medium:"Full recipe at willaskitchen.com",strong:"Willa's Original — at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-IG-R4",
+    platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
+    timing:"Fri May 22 · 12pm", priority:"HIGH",
+    concept:"\"105 years of one kitchen. (the oats sequester carbon. the carton tells you so.)\" — heritage + climate-positive Reel",
+    intel:[
+      {type:"AUDIENCE",text:"Continuing the heritage-Reel pattern from MAY 11 (IG-R4 'shows that last' hit 7.4× saves). Adds World Bee Day MAY 20 + climate-positive-oats narrative as supporting context. No on-camera face."},
+      {type:"TREND",text:"World Bee Day WED MAY 20 (UN observance) opens the sustainability lane. Willa's organic oats are climate-positive — sequester carbon, improve soil health. Zero food waste (whole oat groat). Cert-stack + heritage in one Reel."},
+      {type:"COMPETITOR",text:"Internal only — no other oat-milk brand can pair 105-year heritage with climate-positive certified-organic oats. The combination is structurally uncopyable."}
+    ],
+    hooks:[
+      {text:"105 years of one kitchen. (the oats sequester carbon. the carton tells you so.)",recommended:true},
+      {text:"the oats are climate-change-fighting superheroes. (the carton has been here since 1921.)",recommended:false},
+      {text:"4 ingredients. 0 food waste. (105 years of one kitchen.)",recommended:false}
+    ],
+    caption:"105 years of one kitchen. 🌾\n\n(the oats sequester carbon. the carton tells you so.)\n\nwilla was born 1921. willa's launched 2021. organic oats. whole oat groat (zero food waste in our process). carbon-sequestering by design — they improve soil health while they grow.\n\nthe cert stack tells the story:\n→ USDA Organic\n→ Detox Project Glyphosate-Free\n→ WBENC mother-founded\n→ Zero Food Waste\n\nthe brands that outlast a category pick a posture and hold it. (clean. organic. climate-positive. four ingredients.) shhh… 💛",
+    hashtags:["#willaskitchen","#worldbeeday","#heritage","#climatepositive","#organicoats","#willasoriginal","#sustainability","#WBENC","#zerowaste"],
+    visual:"Slow editorial pan across a real wood-counter kitchen at golden hour. Willa's Original carton centered, cert document scans fanned around. Vintage linen napkin. B&W styled archival still cross-fade (grandmother in 1940s kitchen). No on-camera face. Patagonia gravity, not soft-focus sentimental.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Slow pan across kitchen, vintage linen + oat groat. Text: '105 years of one kitchen.'"},
+      {scene:"CERT STACK",time:"3-9s",action:"Camera lands on carton + 3 cert documents fanned around (USDA Organic, Detox Project, WBENC). Each label fades in."},
+      {scene:"HERITAGE PANEL",time:"9-14s",action:"Cross-fade to B&W archival still — grandmother in 1940s kitchen. Text: 'born 1921. zero food waste. carbon-sequestering oats.'"},
+      {scene:"END CARD",time:"14-18s",action:"Cross-fade back to carton. Tagline: 'the brands that outlast a category pick a posture and hold it. shhh… 💛' (BS-12)"}
+    ],
+    audio:"Calm narrative VO. Sparse acoustic piano under the heritage cross-fade.",
+    duration:"16-18 seconds",
+    cta:{soft:"Save the heritage 💛",medium:"Read the grandmother story",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-TT-5",
+    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
+    timing:"Fri May 22 · 7pm", priority:"STANDARD",
+    evergreen:true,
+    concept:"\"reading a plant-milk label out loud as a stress test.\" — evergreen 4-ingredient read-aloud TT",
+    intel:[
+      {type:"BRAND",text:"PILLAR EVERGREEN — no signal anchor. The label-literacy posture Christina articulated 2026-05-04 as the durable default fallback: empower the reader, don't bash the competitor. Pattern 05 (Format-as-Virality) + Pattern 10 (Wordplay) — duration IS the joke. Educational, share-able, week-agnostic."},
+      {type:"AUDIENCE",text:"Voiceover reads 4 plant-milk ingredient lists — long, long, long, long — then Willa's: 'water · oats · vanilla · salt. (done.)' Brevity is the punchline. High save-rate format — audience screenshots the comparison. No competitor names visible — the duration does the work."},
+      {type:"COMPETITOR",text:"Internal only — Willa's 4-ingredient panel is the shortest in the category. Read-aloud-as-stress-test framing is uncopyable for any plant milk with 12+ ingredients. No name-check. The format IS the comparison."}
+    ],
+    hooks:[
+      {text:"reading a plant-milk label out loud as a stress test.",recommended:true},
+      {text:"the time it takes to read a plant-milk label vs. willa's. (one of these has 4 ingredients.)",recommended:false},
+      {text:"i'm timing myself reading every plant-milk label. (willa's took 4 seconds.)",recommended:false}
+    ],
+    caption:"reading a plant-milk label out loud as a stress test. 🌾\n\n(spoiler: one of these has 4 ingredients.)\n\nthe rule: read every word on each carton's back panel. no skipping. the joke is the LENGTH.\n\nwilla's original — 4 ingredients, 4 seconds:\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\nthat's it. that's the carton.\n\nshhh… the read should be that short. 🌾",
+    hashtags:["#willaskitchen","#readthelabel","#willasoriginal","#4ingredients","#oatmilk","#cleanlabel","#norapeseed","#nogums","#labelliteracy"],
+    visual:"Overhead static on a wood counter. 4 plant-milk cartons in a line (generic-coded mockups — no brand names visible). Willa's Original is the fifth. A hand lifts each in sequence as the voiceover reads its back-panel ingredient list. Timer overlay tracks the read in seconds. Final beat: Willa's Original lifts, the read clocks 4 seconds. No on-camera face. Pattern 10 + Pattern 05 — the format IS the joke.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead: 5 cartons in a line on wood counter. Timer overlay '00:00.' Text: 'reading a plant-milk label out loud as a stress test.'"},
+      {scene:"THE READS",time:"3-11s",action:"Hand lifts carton 1, voiceover reads ingredients (timer climbs to ~12s). Cut. Carton 2 (~22s). Cut. Carton 3 (~28s). Cut. Carton 4 (~33s). Audio dry-witty pacing."},
+      {scene:"WILLA'S",time:"11-15s",action:"Hand lifts Willa's Original. Voiceover, calm: 'filtered water. organic whole grain oats. organic vanilla extract. sea salt.' Timer stops at 04 seconds. Text: '(that's it.)'"},
+      {scene:"END CARD",time:"15-16s",action:"Carton centered in daylight. Tagline: 'the read should be that short. shhh… 🌾' (BS-2)"}
+    ],
+    audio:"Warm narrative voiceover, calm reading pace. No music — the duration carries the joke. Counter ambient mixed forward.",
+    duration:"15-16 seconds",
+    cta:{soft:"Save the read 📌",medium:"Read the back panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-2"
+  },
+  {
+    id:"MAY18-IG-R5",
+    platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Original",
+    timing:"Sat May 23 · 11am", priority:"STANDARD",
+    concept:"\"saturday-morning carton. holiday-weekend pour.\" — Memorial Day multi-generation pour Reel",
+    intel:[
+      {type:"PULSE",text:"Memorial Day Weekend MAY 24-25 (CP-3) — Saturday morning is the family-kitchen anchor. Continuing the heritage tier 1 multi-generation pour format from MAY 11 (IG-R5 hit 6.0× saves). Cofounder-sister + kid pour."},
+      {type:"AUDIENCE",text:"Repetition is the job (POV Discipline #3) — heritage + multi-generation pour is Willa's most durable emotional format. Saturday 11am IG slot. Heritage tier 1 reserved-category use per The Christina Rule."},
+      {type:"COMPETITOR",text:"Internal only — no oat-milk brand has the real-grandmother + multi-generation story. The visual is uncopyable structurally."}
+    ],
+    hooks:[
+      {text:"saturday-morning carton. holiday-weekend pour.",recommended:true},
+      {text:"105 years of one kitchen. (still a saturday morning.)",recommended:false},
+      {text:"named for a grandmother. poured by her great-granddaughter. (cookout weekend, willa's edition.)",recommended:false}
+    ],
+    caption:"saturday-morning carton. holiday-weekend pour. 🌾\n\nfour ingredients in the carton. four generations in the kitchen.\n\na kid pouring willa's original from a stained, well-loved carton into a glass — cofounder-sister steadying the pour. memorial day weekend, the family-kitchen edition.\n\nwilla was born 1921. willa's launched 2021. four ingredients, organic, mother-founded, WBENC.\n\nthe weekend stays in the kitchen. the carton stays on the counter. shhh… 💛",
+    hashtags:["#willaskitchen","#memorialdayweekend","#heritage","#multigeneration","#motherfounded","#willasoriginal","#oatmilk","#saturdaymorning","#WBENC"],
+    visual:"Soft Saturday-morning daylight. Cofounder-sister (heritage tier 1) steadies a stained, well-loved Willa's Original carton as a kid pours into a glass. Vintage linen napkin under, single oat groat in foreground. Optional: Christina's hands stabilize the kid's hand. Pure kitchen scene — real, not styled.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Kitchen daylight. Stained carton on a counter. Text: 'saturday-morning carton. holiday-weekend pour.'"},
+      {scene:"POUR",time:"3-9s",action:"Kid's hands pour Willa's Original into a glass. Cofounder-sister steadies the carton. Linen + oat groat in foreground."},
+      {scene:"HERITAGE",time:"9-14s",action:"Cross-fade to B&W archival still (grandmother in 1940s kitchen, same gesture). Cross-fade back. Text: 'named for a grandmother. poured by her great-granddaughter.'"},
+      {scene:"END CARD",time:"14-17s",action:"Carton centered. Sign-off: 'shhh… 💛' (BS-12)"}
+    ],
+    audio:"Cofounder-sister VO, warm. Optional acoustic folk bar (Kevin Morby-coded) under the heritage cross-fade.",
+    duration:"15-17 seconds",
+    cta:{soft:"Save for saturday morning 💛",medium:"Read the heritage story",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-TT-6",
+    platform:"TikTok", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
+    timing:"Sat May 23 · 10am", priority:"STANDARD",
+    concept:"\"what's in the cooler: holiday-weekend mom edition.\" — Pattern 03 road-trip-cooler confession, mom-creator vernacular",
+    intel:[
+      {type:"AUDIENCE",text:"Continuing Pattern 03 (Relatable Confession) + Partake muse from MAY 11 TT-7 (hit 6.8× saves). Hook simplified per Sylvie's Rule #14 (mom-team check) — 'vol. 1 — only one of these I'm proud of' read as ad copy. Mom-creator vernacular ('what's in the cooler') wins. Cofounder-sister POV per The Christina Rule."},
+      {type:"PULSE",text:"Memorial Day Weekend MAY 24-25 (CP-3) — road-trip cooler is the iconic cookout-prep visual. Pattern 03 confessional structure stays the same, format/visual is fresh, hook is mom-real."},
+      {type:"COMPETITOR",text:"Internal only — Willa's Kids' top-9-allergen-free + 8g protein deck is the only oat-milk pack worth slotting into a cooler-content frame next to the snacks parents are sneaking. Uncopyable for shake-based brands."}
+    ],
+    hooks:[
+      {text:"what's in the cooler: holiday-weekend mom edition.",recommended:true},
+      {text:"the one thing in this cooler I'm not apologizing for.",recommended:false},
+      {text:"POV: packing the cooler for the long weekend with kids.",recommended:false}
+    ],
+    caption:"what's in the cooler: holiday-weekend mom edition. 🌾💛\n\nthe inventory:\n→ a half-eaten string cheese (?)\n→ four (4) Capri Suns I swore we'd never buy\n→ a melted ice pack that was supposed to be ice\n→ a granola bar of unknown origin\n→ a Willa's Kids 4-pack ✨\n\nthe one I'm not apologizing for:\n✅ 8g plant-powered protein\n✅ DHA omega-3\n✅ plant calcium + vitamin D\n✅ top-9 allergen-free\n✅ organic, simple ingredients\n\n(adored by everyone in the back seat.) 🙌",
+    hashtags:["#willaskitchen","#willaskids","#roadtripsnacks","#memorialdayweekend","#momlife","#schoollunch","#allergenfree","#dairyfree","#oatmilkforkids"],
+    visual:"Overhead static on a wood counter, late-morning daylight. A real road-trip cooler tips out — items spill in a chaotic-but-charming pile. Hands push items into rough rows. Tiny serif text labels each. Final reveal: Willa's Kids 4-pack slides into frame with warm gold serif label. Cofounder-sister hands only, no face. Partake-coded confessional.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Empty wood counter, soft daylight. Cooler drops in. Text overlay: 'what's in the cooler: holiday-weekend mom edition. 🌾'"},
+      {scene:"THE DUMP",time:"3-7s",action:"Hands tip the cooler — items spill out. String cheese, capri-sun pouches, melted ice pack. Text: '(only one of these is something I'm proud of.)'"},
+      {scene:"INVENTORY",time:"7-13s",action:"Hands push items into rows. Each gets a tiny serif label as named. Quick, dry-funny pacing."},
+      {scene:"THE HERO",time:"13-16s",action:"Willa's Kids 4-pack slides in. Warm gold serif: 'the only one in the cooler that doesn't need an apology.' Stats stack: '8g protein · DHA · plant calcium · top-9 allergen-free · organic.' (BS-6)"}
+    ],
+    audio:"Soft dry-witty narration (cofounder-sister or warm narrative VO). Ambient kitchen sound. Optional one-line musical sting on hero reveal.",
+    duration:"15-16 seconds",
+    cta:{soft:"Save for the cooler 🌾",medium:"See the kids lineup",strong:"Willa's Kids — at Whole Foods"},
+    benefitShorthandId:"BS-6"
+  },
+  {
+    id:"MAY18-PIN-3",
+    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Chocolate",
+    timing:"Sat May 23 · anytime", priority:"STANDARD",
+    evergreen:true,
+    concept:"\"no-bake brownie bites · willa's chocolate base · 5 ingredients · real cacao.\" — evergreen indulgent-clean dessert pin",
+    intel:[
+      {type:"BRAND",text:"PILLAR EVERGREEN — no signal anchor. Willa's Chocolate is the Good Food Awards Best Beverage winner — 5 ingredients, real cacao (not powder). The indulgent-remade-clean lane is the brief's natural pillar fit (per Flavor Database rules). 'The chocolate milk you wish you grew up on' tagline ladders directly to the bite."},
+      {type:"AUDIENCE",text:"Pinterest pins compound 6+ days. 'No-bake' is the highest-saving subcategory in dessert SEO. Chocolate dessert recipe pin format Willa's hasn't deployed evergreen. Brief is week-agnostic — works any week, any season."},
+      {type:"COMPETITOR",text:"Internal only — most chocolate plant milks use cocoa POWDER + 12+ ingredients. Willa's Chocolate (5 ingredients, real cacao) is the only oat milk that earns 'real cacao' for chocolate-recipe SEO. Uncopyable structurally."}
+    ],
+    hooks:[
+      {text:"no-bake brownie bites — willa's chocolate base, real cacao, 5 ingredients.",recommended:true},
+      {text:"the chocolate milk you wish you grew up on — now in a brownie.",recommended:false},
+      {text:"the chocolate brownie bite the kids won't share. (that's the test.)",recommended:false}
+    ],
+    caption:"no-bake brownie bites — our new fav summer dessert. 🍫😋\n\nreal cacao, not powder. 5 ingredients in the milk. 5 ingredients in the bite.\n\nyou need:\n→ 1 cup pitted medjool dates (soaked 10 min)\n→ ½ cup raw almonds\n→ ¼ cup willa's chocolate\n→ 2 tbsp cocoa powder\n→ pinch sea salt\n→ flaky salt to finish\n\nblend dates + almonds in a food processor. add willa's chocolate + cocoa powder + sea salt — pulse until it forms a dough. roll into 12 balls. flaky salt on top.\n\nno bake. no refined sugar. absolutely no cane sugar. real cacao.\n\ngood food awards best beverage winner — and you can taste why. 💛",
+    hashtags:["#willaskitchen","#willaschocolate","#nobakebrownies","#realcacao","#goodfoodawards","#kidsdessert","#cleaneatingdessert","#dairyfreedessert","#5ingredients"],
+    visual:"Vertical Pinterest pin (2:3). Overhead wood counter, parchment paper. 12 chocolate-date brownie bites on parchment, flaky salt sparkle, single ball broken in half showing dense fudgy texture. Willa's Chocolate carton in the corner, partly cropped. Soft afternoon daylight. Serif typography header: 'no-bake brownie bites · willa's chocolate base · 5 ingredients · real cacao.' Pinterest-native, screenshot-able.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the brownie bites 🍫",medium:"Full recipe at willaskitchen.com",strong:"Willa's Chocolate — at Target"},
+    benefitShorthandId:"BS-9"
+  },
+  {
+    id:"MAY18-IG-F2",
+    platform:"IG Feed", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Multi",
+    timing:"Sun May 24 · 12pm", priority:"STANDARD",
+    evergreen:true,
+    concept:"\"every stamp on the back of the carton — and what each one means.\" — evergreen credentials walkthrough carousel",
+    intel:[
+      {type:"BRAND",text:"PILLAR EVERGREEN — no signal anchor. Willa's is the only oat milk that stacks USDA Organic + Detox Project Glyphosate-Free + Non-GMO Project + WBENC mother-founded + Kosher + Vegan + Yuka 100 (Kids) + Bobby Approved + Good Food Awards (Chocolate). The cert wall is the structural moat — each one a third-party stamp. Patagonia muse gravity, museum-card aesthetic. Reframed per Alex's 2026-05-18 feedback (Sylvie Rule #9 applied) — dropped 'press release' framing since customers don't think in trade-press language."},
+      {type:"AUDIENCE",text:"Pattern 12 (Carousel) + Patagonia gravity. Carousel format outperformed Reels last refresh (0.98 sentiment on the Met Gala mother-founded peer set). Brand voice, no founder. Receipts-first content compounds on saves. Evergreen — works any week, any season."},
+      {type:"COMPETITOR",text:"Internal only — no peer brand in the oat-milk category stacks all the certs Willa's holds. The cert wall is the most uncopyable structural credential Willa's has. Show the wall — no name-checks."}
+    ],
+    hooks:[
+      {text:"every stamp on the back of the carton — and what each one means.",recommended:true},
+      {text:"8 stamps. 8 reasons your carton was already worth it.",recommended:false},
+      {text:"the credentials take ~5 years to earn. (Willa's has all of them.)",recommended:false}
+    ],
+    caption:"every stamp on the back of the carton — and what each one means. 🌾\n\n→ USDA Organic · grown without synthetic pesticides + GMOs\n→ Detox Project Glyphosate-Free · we test every lot\n→ Non-GMO Project Verified · independent third-party check\n→ WBENC · women-owned, mother-founded\n→ Kosher · OU-certified\n→ Vegan · plant-only formulation\n→ Yuka 100/100 (Kids) · perfect score on the clean-label app\n→ Good Food Awards (Chocolate) · best beverage of the year\n→ Bobby Approved · pediatric-clean shortlist\n\nthe credentials take ~5 years to earn. the carton's been here the whole time. shhh… 💛",
+    hashtags:["#willaskitchen","#certwall","#USDAorganic","#glyphosatefree","#WBENC","#yuka100","#nonGMO","#goodfoodawards","#cleancertifications"],
+    visual:"10-card IG Feed carousel. Editorial museum-card aesthetic — cert seal centered on cream with serif typography below, generous whitespace, Patagonia gravity. Each card runs the same template so the wall reads as a wall, not a deck.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/10",action:"Navy serif cover on cream: 'every stamp on the back of the carton.' Subtitle: '(and what each one means.)' Generous whitespace."},
+      {scene:"CARD 2 · USDA ORGANIC",time:"slide 2/10",action:"USDA Organic seal centered. Serif caption: 'grown without synthetic pesticides + GMOs. the federal floor.'"},
+      {scene:"CARD 3 · GLYPHOSATE-FREE",time:"slide 3/10",action:"Detox Project Glyphosate-Free seal centered. Caption: 'tested every lot for glyphosate residue. the cert most oat milks don't hold.'"},
+      {scene:"CARD 4 · NON-GMO",time:"slide 4/10",action:"Non-GMO Project Verified seal centered. Caption: 'independent third-party verification. butterfly stamped.'"},
+      {scene:"CARD 5 · WBENC",time:"slide 5/10",action:"WBENC women-owned seal centered. Caption: 'women-owned. mother-founded. named for grandmother Willa (1921).'"},
+      {scene:"CARD 6 · KOSHER",time:"slide 6/10",action:"OU Kosher seal centered. Caption: 'OU-certified. the everyday-table standard.'"},
+      {scene:"CARD 7 · VEGAN",time:"slide 7/10",action:"Vegan seal centered. Caption: 'plant-only formulation. no dairy, no compromise.'"},
+      {scene:"CARD 8 · YUKA 100",time:"slide 8/10",action:"Yuka 100/100 (Kids) screenshot centered. Caption: 'perfect score on the clean-label app. only kids drink to hit it.'"},
+      {scene:"CARD 9 · GOOD FOOD AWARDS",time:"slide 9/10",action:"Good Food Awards medallion (Chocolate, 15th annual) centered. Caption: 'best beverage. judged blind. indulgence with receipts.'"},
+      {scene:"CARD 10 · CLOSE",time:"slide 10/10",action:"Full Willa's product line lineup (Original + Barista + Kids + Chocolate) on a wood counter, soft daylight. Sign-off: 'the credentials take ~5 years to earn. the carton's been here the whole time. 🌾' (BS-12)"}
+    ],
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the cert wall 🌾",medium:"Read all the receipts",strong:"Find Willa's at Target + Whole Foods"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-IG-R6",
+    platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
+    timing:"Sun May 24 · 6pm", priority:"STANDARD",
+    evergreen:true,
+    concept:"\"kids drink it. parents pour it. (one carton, two coffees, no fight.)\" — evergreen kids crossover Reel",
+    intel:[
+      {type:"BRAND",text:"PILLAR EVERGREEN — no signal anchor. The kid-crossover positioning Christina articulated: adults reach for Willa's Kids in iced coffee — 'oddly blends + creates the best swirls.' Both generations from the same carton is structurally uncopyable. Pattern 03 (Relatable Confession) + Partake muse + Pattern 09 (Aesthetic IRL)."},
+      {type:"AUDIENCE",text:"Sunday evening 6pm IG slot — the post-weekend, pre-week planning window. Parent-lane brief that doesn't apologize for its audience but lets adults in via the crossover. Brief is week-agnostic — pull forward any week the news cycle pulls thin."},
+      {type:"COMPETITOR",text:"Internal only — Willa's Kids has 8g protein + DHA + plant calcium + top-9-allergen-free + 'oddly blends + creates the best swirls' (Christina's exact words). No other Kids oat milk has the crossover positioning. Adults pour it in iced coffee deliberately."}
+    ],
+    hooks:[
+      {text:"kids drink it. parents pour it. (one carton, two coffees, no fight.)",recommended:true},
+      {text:"the only oat milk both generations pour from the same carton.",recommended:false},
+      {text:"willa's kids is also for the parent's iced coffee. (8g protein. best swirls.)",recommended:false}
+    ],
+    caption:"kids drink it. parents pour it. 💛✨\n\none carton, two coffees, no fight.\n\nwilla's kids was built for kids — but the parents caught on first. the carton's been there the whole time (the cooler with the apple juice; the coffee on the counter).\n\nwhy it's always pulling double duty:\n✅ 8g of plant-powered protein\n✅ DHA omega-3s from algae\n✅ plant calcium + vitamin D\n✅ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n✅ organic, simple ingredients\n✅ yuka 100/100\n\nbonus: it 'oddly blends + creates the best swirls' in iced coffee. (real quote, real review.)\n\nadored by toddlers + kids. loved by everyone else. 🙌",
+    hashtags:["#willaskitchen","#willaskids","#oatmilkforkids","#oatmilkforcoffee","#momlife","#schoollunch","#allergenfree","#oatmilkrecipes","#multigeneration"],
+    visual:"Split-screen single-take Reel. Left side: kid's glass with willa's kids being poured (kid's hand). Right side: parent's iced coffee getting willa's kids poured from the SAME carton (parent's hand). Center: the carton itself, single point of pour, golden-hour morning light. Two distinct hands, one carton — visual punchline. Pattern 03 confessional + Pattern 09 IRL aesthetic. No on-camera face.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Soft morning kitchen daylight. Willa's Kids carton centered on counter. Text: 'kids drink it. parents pour it.'"},
+      {scene:"KID POUR",time:"3-7s",action:"Kid's hand lifts the carton, pours into a clear glass with ice + striped straw. Close-up on the pour."},
+      {scene:"PARENT POUR",time:"7-12s",action:"Cut: parent's hand lifts the SAME carton, pours into a tall iced coffee with espresso. Close-up on the swirl forming."},
+      {scene:"END CARD",time:"12-16s",action:"Wide pull-back — carton between the kid's glass and the parent's coffee. Tagline: 'one carton. two coffees. no fight. shhh… 💛' (BS-5)"}
+    ],
+    audio:"Warm narrative voiceover. Soft acoustic bed. Pour ambient mixed forward.",
+    duration:"15-16 seconds",
+    cta:{soft:"Save the crossover 💛",medium:"See the kids lineup",strong:"Willa's Kids — at Whole Foods"},
+    benefitShorthandId:"BS-5"
+  },
+  // ─── Diversity-rewrite additions (added 2026-05-18) ─────────────
+  // Seven new briefs covering the 10 zero-coverage signals from the
+  // MAY 18 slate: T-3 Chobani · T-8 Pinterest Predicts · CP-4 Grandfluencer
+  // · CP-7 Mary Neilis · CP-8 Colbert finale · CP-10 Cottage cheese oats
+  // · C-1 Oatly · C-3 Planet Oat · C-4 Chobani · C-5 Elmhurst. Christina's
+  // ask: show the breadth of intel pulling through the engine.
+  {
+    id:"MAY18-IG-R7",
+    platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
+    timing:"Tue May 19 · 6pm", priority:"HIGH",
+    concept:"\"the cleanest one on the shelf is the one you can read.\" — at-shelf clean-label cameo",
+    intel:[
+      {type:"TREND",text:"Oat milk category is having a moment (T-2 / T-3 — internal context only, NEVER ship the 30% share number or Oatly Q1 stat in consumer copy per Sylvie's Rule #9). Customer-facing framing: stand at the shelf, pull the cleanest carton forward, let the back panel do the work."},
+      {type:"AUDIENCE",text:"Lead-with-the-carton, not the category data. Pattern 09 (Aesthetic IRL Encounter) + Pattern 10 (Wordplay). Brand-voice editorial, no on-camera face, no name-checks. Sylvie's Rule #9 applied — industry stats kept INTERNAL to brief generation, captured in the customer-facing framing as 'the shelf is full / ours is the one you can read.'"},
+      {type:"COMPETITOR",text:"Internal only — Oatly + Chobani-La Colombe (C-1, C-4) are the two consolidating players (12-ingredient deck, 7g sugar, NOT glyphosate-free). Willa's cert-stack is the structural counter. Customer-facing copy stays at-shelf + back-panel — no name-checks, no trade-press data."}
+    ],
+    hooks:[
+      {text:"the cleanest one on the shelf is the one you can read.",recommended:true},
+      {text:"4 ingredients you can pronounce. 4 lines on the back panel.",recommended:false},
+      {text:"a full alt-milk shelf. one carton that reads like four words.",recommended:false}
+    ],
+    caption:"the cleanest one on the shelf is the one you can read. 🌾\n\nwhen the carton you pick up actually tells you what's in it:\n→ 4 ingredients (water · oats · vanilla · salt)\n→ 1g sugar (from the oats, nothing added)\n→ 4g+ protein · 2g+ prebiotic fiber\n→ USDA Organic + Detox Project Glyphosate-Free + WBENC\n\nWilla's Original — the carton that reads like a love letter to the oat. shhh… 💛",
+    hashtags:["#willaskitchen","#oatmilk","#cleanlabel","#willasoriginal","#USDAorganic","#glyphosatefree","#WBENC","#realfood","#motherfounded"],
+    visual:"Real grocery alt-milk shelf shot at golden hour — Willa's Original pulled forward into focus, other cartons softly out of focus (no readable labels, no name-checks). Slow pan across the shelf. Single oat groat in foreground. Hands rotate Willa's carton — back panel close-up. Editorial composition, no on-camera face.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Slow pan across real alt-milk grocery shelf. Other cartons softly out of focus. Text overlay: 'the cleanest one on the shelf'"},
+      {scene:"PULL-FORWARD",time:"3-8s",action:"Hand reaches in, pulls Willa's Original forward — sharp focus. Other cartons drop further out of focus. Text: 'is the one you can read.'"},
+      {scene:"BACK PANEL",time:"8-14s",action:"Hands rotate carton to back panel. Slow push-in. Text reveals on beat: '4 ingredients. 1g sugar. organic. glyphosate-free.'"},
+      {scene:"END CARD",time:"14-18s",action:"Carton centered on linen, soft afternoon light. Sign-off: 'the carton that reads like a love letter to the oat. shhh… 🌾' (BS-1)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, no first-person). Subtle lo-fi confidence bed. Carton-rotation ambient.",
+    duration:"16-18 seconds",
+    cta:{soft:"Save the receipts 📌",medium:"Read the panel",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-TT-7",
+    platform:"TikTok", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
+    timing:"Tue May 19 · 7pm", priority:"HIGH",
+    concept:"\"the original grandfluencer was making oatmeal way before tiktok. (her name's on the carton.)\" — grandfluencer-wave heritage stitch",
+    intel:[
+      {type:"PULSE",text:"Grandfluencer wave keeps eating TikTok through 2026 (CP-4) — Grandma Sherry @ 220K, Lynja Davis at ~20M cross-platform; sustained editorial coverage from Washington Times + Maria Shriver Sunday Paper. Gen Z + millennials are choosing the grandma kitchen over the optimized one. Willa's literal origin story made into a peer-set wave — born 1921, named for the founder's grandmother."},
+      {type:"AUDIENCE",text:"Lead-with-solution: Willa's heritage claim in beat 1 (her name's on the carton), grandfluencer wave as backdrop in beat 2. Pattern 02 (World-Context Tie-In) + Pattern 06 (Founder/Team Humanization). The wave doesn't need a stitch — it needs a quiet 'we've been here.' Patagonia gravity + Partake warmth, no on-camera."},
+      {type:"COMPETITOR",text:"Internal only — no oat-milk peer can match the multi-generation origin story (Willa born 1921 → company launched 2021). Venture-backed peers can buy heritage aesthetics; only Willa's has the named-after-grandmother through-line. Uncopyable."}
+    ],
+    hooks:[
+      {text:"the original grandfluencer was making oatmeal way before tiktok. (her name's on the carton.)",recommended:true},
+      {text:"tiktok finally caught up to my grandmother.",recommended:false},
+      {text:"the grandfluencer wave is just everyone remembering what grandmothers always knew.",recommended:false}
+    ],
+    caption:"the original grandfluencer was making oatmeal way before tiktok. 👵\n\n(her name's on the carton.)\n\nwilla was born 1921. willa's launched 2021. one ingredient list. one kitchen ethos. one carton.\n\nthe grandfluencer wave (cooking grandma TikTok, gen z trusting the grandma kitchen) isn't a trend — it's a return. nourish the spark in everyone. real food. simple ingredients.\n\nshhh… 🌾",
+    hashtags:["#willaskitchen","#grandfluencer","#cookingwithgrandma","#heritage","#willasoriginal","#motherfounded","#realfood","#WBENC","#oatmilk"],
+    visual:"Quiet kitchen, soft afternoon daylight — well-loved Willa's Original carton centered on a wood counter. B&W archival photo of grandmother Willa (1940s home kitchen) cross-fades into the modern carton. Hand-held composition, no on-camera face. Heritage-coded, museum-card aesthetic — not soft-focus sentimental.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"B&W archival kitchen still (grandmother stirring oats at the counter, 1940s frame). Serif text overlay: 'the original grandfluencer was making oatmeal way before tiktok.'"},
+      {scene:"CROSS-FADE",time:"3-8s",action:"Cross-fade to modern wood-counter kitchen — well-loved Willa's Original carton centered, single oat groat in soft focus. Text: '(her name's on the carton.)'"},
+      {scene:"HERITAGE PANEL",time:"8-13s",action:"Slow push-in on carton back panel — date stamp '1921' reveals, then '2021' fades in next to it. Text: 'born 1921. launched 2021. four ingredients. one kitchen.'"},
+      {scene:"END CARD",time:"13-16s",action:"Carton in daylight on linen. Sign-off: 'nourish the spark in everyone. shhh… 🌾' (BS-12)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, cofounder-sister-coded). Folk-piano bed (Noah Kahan / Bon Iver register). Kitchen ambient.",
+    duration:"15-17 seconds",
+    cta:{soft:"Save the heritage 🌾",medium:"Read the origin story",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-TT-8",
+    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
+    timing:"Wed May 20 · 10am", priority:"HIGH", rideNow:true,
+    concept:"\"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.)\" — viral-recipe-remix high-protein overnight oats",
+    intel:[
+      {type:"PULSE",text:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Creators stacking 15-20g protein per jar. Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) — same plant-protein-twofer logic, fresh format. Willa's Original is the cleanest base — 4 ingredients, organic, no gums to fight the curds."},
+      {type:"AUDIENCE",text:"Pattern 05 (Format-as-Virality) — ride the cottage cheese oats format with a cleaner-pour payload. Pattern 04 (Taboo-as-Normal) — the curd swirl IS the visual hook. Poppi muse — viral short-form better-for-you. Lead-with-solution: Willa's Original claim (cleanest base) in beat 1, viral-recipe format as backdrop."},
+      {type:"COMPETITOR",text:"Internal only — most oat milks would react to the curd-protein stack with gums or fillers. Willa's Original has no gums, no stabilizers, no rapeseed — pure pour that lets the curds + protein math do the work. Structural advantage on the high-protein-overnight format."}
+    ],
+    hooks:[
+      {text:"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.)",recommended:true},
+      {text:"18g protein per jar. (the cleanest base does the rest.)",recommended:false},
+      {text:"cottage cheese oats is the may 2026 breakout. willa's is the cleanest pour to base it on.",recommended:false}
+    ],
+    caption:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15-20g protein per jar. the curd-swirl is the visual; the math is the move.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup willa's original\n→ ½ cup whole-milk cottage cheese\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 18g protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nwilla's original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
+    hashtags:["#willaskitchen","#cottagecheeseoats","#overnightoats","#highprotein","#willasoriginal","#fibermaxxing","#wholeoat","#cleanlabel","#mealprep","#oatmilk"],
+    visual:"Overhead on a wood counter, morning daylight. Two clear mason jars side-by-side — layer 1: rolled oats, layer 2: cottage cheese curd swirl, layer 3: Willa's Original poured in (visible cloud-pour as the liquid integrates). Hands shake the jar (POV), then fridge cuts to the morning reveal: berries + flaky salt on top. Cinematic depth-of-field on the curd swirl. No on-camera face.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead on the mason jar — layer 1 (oats) + layer 2 (cottage cheese curds). Text overlay: 'cottage cheese oats wanted a cleaner pour.'"},
+      {scene:"POUR",time:"3-8s",action:"Willa's Original pours over the layers — cloud-pour visible. Hands close the jar, shake. Text: '(we kept the whole oat in the carton.)'"},
+      {scene:"OVERNIGHT CUT",time:"8-12s",action:"Cut to morning — same jar, lid off, berries + flaky salt on top. Text reveals on beat: '18g protein. 5g fiber. 4 ingredients in the pour.'"},
+      {scene:"END CARD",time:"12-16s",action:"Spoon dips through to the curd swirl. Sign-off: 'the cleanest base does the rest. 🌾' (BS-4)"}
+    ],
+    audio:"Soft instrumental bed (lo-fi morning). Pour + shake ambient. Optional brief brand-voice VO: 'cottage cheese oats — but cleaner.' No first-person.",
+    duration:"14-16 seconds",
+    cta:{soft:"Save for sunday meal-prep 📌",medium:"Read the recipe",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-4"
+  },
+  {
+    id:"MAY18-IG-F3",
+    platform:"IG Feed", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
+    timing:"Wed May 20 · 6pm", priority:"HIGH",
+    concept:"\"clean label is the floor now. (organic + glyphosate-free is the bar.)\" — label-literacy framework carousel",
+    intel:[
+      {type:"COMPETITOR",text:"Internal only — Planet Oat is the mass-market 'clean enough' pour with an open class-action lawsuit on vitamin D claims (C-3). Elmhurst 1925 is the closest-positioned clean peer (C-5) — simple deck, NOT organic, NOT glyphosate-free, NOT WBENC. Per Christina's 2026-05-04 rule, default to label-literacy framework when competitor-counter risks fragile premise — establish Willa's standards as the buyer's evaluation tool, never name a peer."},
+      {type:"AUDIENCE",text:"Lead-with-solution: Willa's standards as the lens, not the brag. Pattern 10 (Wordplay) + Pattern 12 (Carousel/UGC Compilation). Patagonia gravity — activist credentials presented as buyer education, not chest-thumping. Six-card receipt-led carousel, navy serif typography on cream, Willa's lockup on the close."},
+      {type:"BRAND",text:"Carousel format on IG Feed compounds saves better than Reels (proven last refresh — cert-wall IG-F2 hit 0.98 sentiment). This brief earns its place by giving the team a label-reading framework Christina can use across DMs + the website — the asset outlives the post."}
+    ],
+    hooks:[
+      {text:"clean label is the floor now. (organic + glyphosate-free is the bar.)",recommended:true},
+      {text:"the next oat milk you pick up — here's the 4-line check.",recommended:false},
+      {text:"the category just caught up to clean. here's what's next on the label.",recommended:false}
+    ],
+    caption:"clean label is the floor now. 🌾\n\n(organic + glyphosate-free is the bar.)\n\nthe category went clean — most decks finally read like food. your next-level check, whether you're picking up our carton or theirs:\n\n→ whole oat groat (most oat milks process the starch into sugar and filter the fiber + protein out)\n→ certified USDA Organic\n→ certified glyphosate-free, every lot (Detox Project)\n→ real, named ingredients (not 'natural flavors' or stabilizers)\n\nwilla's hits all four. we built the brand against these standards. use the framework on any carton — yours or ours.\n\n(no name-checks. no asterisks. just the checklist.) 🌾",
+    hashtags:["#willaskitchen","#cleanlabel","#labelreading","#oatmilk","#USDAorganic","#glyphosatefree","#WBENC","#realfood","#wholeoat","#detoxproject"],
+    visual:"6-card IG Feed carousel · museum-card aesthetic, navy serif typography on cream, generous whitespace. Each check gets its own slide so the framework reads as a tool, not a brag. Patagonia gravity throughout. Willa's lockup only on the close.",
+    script:[
+      {scene:"CARD 1 · COVER",time:"slide 1/6",action:"Navy serif on cream cover: 'clean label is the floor now.' Lower line in italic: '(organic + glyphosate-free is the bar.)' Generous whitespace, museum-card aesthetic."},
+      {scene:"CARD 2 · WHOLE OAT",time:"slide 2/6",action:"Cream card. Centered checkmark + label: 'whole oat groat.' Below in serif: 'most oat milks process the starch into sugar and filter the fiber + protein out. willa's keeps the whole oat.'"},
+      {scene:"CARD 3 · USDA ORGANIC",time:"slide 3/6",action:"USDA Organic seal centered on cream. Serif caption: 'grown without synthetic pesticides or GMOs. the federal floor for clean.'"},
+      {scene:"CARD 4 · GLYPHOSATE-FREE",time:"slide 4/6",action:"Detox Project Glyphosate-Free seal centered. Caption: 'tested every lot for glyphosate residue. a label is a claim — a test is a fact.'"},
+      {scene:"CARD 5 · REAL INGREDIENTS",time:"slide 5/6",action:"Cream card. Centered checkmark + label: 'real, named ingredients.' Below: 'no \"natural flavors,\" no gums, no stabilizers, no engineered fillers. if it's not food, it's not on the panel.'"},
+      {scene:"CARD 6 · CLOSE",time:"slide 6/6",action:"Willa's Original lockup on a wood counter, soft daylight. Sign-off serif: 'use the framework on any carton — yours or ours. 🌾' Lower italic: '(no name-checks. no asterisks. just the checklist.)' (BS-1)"}
+    ],
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the framework 📌",medium:"Read it on the carton",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"MAY18-TT-9",
+    platform:"TikTok", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
+    timing:"Thu May 21 · 8pm", priority:"HIGH", rideNow:true,
+    concept:"\"Colbert signs off thu may 21. (the kitchen's been here since 1921.)\" — Colbert-finale heritage tribute",
+    intel:[
+      {type:"PULSE",text:"Stephen Colbert's final Late Show airs THU MAY 21 (CBS, 11:35pm — CP-8). 10 years on air, end of an era for late-night, format being shelved entirely. Final-week guests: Jon Stewart + Steven Spielberg + David Byrne (MAY 19), Bruce Springsteen + Colbert Questionert (MAY 20). Cultural-mass moment THIS WEEK. Willa's parallel: the brands that outlast formats pick a posture and hold it."},
+      {type:"AUDIENCE",text:"Per Alex's 2026-05-18 feedback — name Colbert directly, reference the finale date, make the cultural moment concrete. Pattern 02 (World-Context Tie-In) + Pattern 10 (Wordplay). Heritage gravity, customer-recognizable. No stitched Colbert footage (rights / format) but caption + hook name him directly so the parallel lands."},
+      {type:"COMPETITOR",text:"Internal only — venture-backed oat milk peers can't ride end-of-era moments tonally; their cartons launched in the last 5 years. Willa's structural advantage: the brand IS the multi-generation through-line. Uncopyable."}
+    ],
+    hooks:[
+      {text:"Colbert signs off thu may 21. (the kitchen's been here since 1921.)",recommended:true},
+      {text:"10 years of Colbert, ending thu. 105 years of one kitchen, still pouring.",recommended:false},
+      {text:"the late show ends. the kitchen doesn't. (born 1921, still on the counter.)",recommended:false}
+    ],
+    caption:"Colbert signs off thu may 21. 🎤💛\n\n(the kitchen's been here since 1921.)\n\nthe late show wraps after 10 years on air — an era of late-night ending in real time. the brands that outlast a format pick a posture and hold it.\n\nWilla was born 1921. Willa's launched 2021. one carton. four ingredients. no rebranding cycle.\n\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\ngoodnight, Stephen. shhh… 💛",
+    hashtags:["#willaskitchen","#colbert","#latenightending","#heritage","#willasoriginal","#motherfounded","#realfood","#WBENC","#oatmilk"],
+    visual:"Slow editorial pan across a heritage-coded kitchen at twilight — soft amber lamplight, well-loved Willa's Original carton centered on a linen-covered wood counter. Single oat groat in foreground. B&W archival still cross-fade (1940s home kitchen). Serif date overlay '1921 → 2021.' Patagonia gravity — quiet authority, no sentimental soft-focus. No on-camera face. No Colbert footage stitched (caption + overlay carry the parallel).",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Twilight kitchen, amber lamplight on a wood counter. Willa's Original carton centered. Serif text overlay: 'Colbert signs off thu may 21.'"},
+      {scene:"PARALLEL",time:"3-8s",action:"Cross-fade to B&W archival kitchen still (grandmother stirring oats, 1940s frame). Text: '(the kitchen's been here since 1921.)'"},
+      {scene:"BACK PANEL",time:"8-13s",action:"Slow push-in on carton back panel. Text reveals each ingredient on beat: 'water · oats · vanilla · salt.' Final beat: '1921 → 2021. one kitchen.'"},
+      {scene:"END CARD",time:"13-17s",action:"Carton centered on linen, amber light. Sign-off: 'goodnight, Stephen. 💛' (BS-12)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, no first-person). Folk-piano bed (Bon Iver / Noah Kahan register). Kitchen ambient.",
+    duration:"15-17 seconds",
+    cta:{soft:"Save the heritage 🌾",medium:"Read the origin story",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"MAY18-PIN-4",
+    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
+    timing:"Fri May 22 · anytime", priority:"STANDARD",
+    concept:"\"pinterest's 2026 breakout: fermentation. (your gut said duh.)\" — Pinterest Predicts fermentation-lane pin",
+    intel:[
+      {type:"TREND",text:"Pinterest Predicts 2026 names fermentation as one of three breakout food trends (T-8) — kefir, mild miso, in-house kraut. Pinterest is where Willa's audience plans recipes 7-10 days ahead; the spring-to-summer recipe-pin window aligns with the breakout. Willa's Original is the cleanest format match for the fermentation + gut-health lane."},
+      {type:"AUDIENCE",text:"Pattern 10 (Wordplay) — text-overlay punchline as the share engine. Pinterest SEO pin format. Pattern 04 (Taboo-as-Normal) — calmly direct about prebiotic + postbiotic without supplement-speak. Lead-with-solution: Willa's claim (2g+ prebiotic fiber) in beat 1, Pinterest data as backdrop in beat 2. Compounds with PIN-2 (kefir overnight oats) — together they own the fermentation lane."},
+      {type:"COMPETITOR",text:"Internal only — no oat milk has positioned itself in the fermentation lane yet. Willa's prebiotic-fiber receipt (2g+ from whole oat groats) is the structural pre-claim — pair with the audience's existing fermented-food pantry (kefir, miso, kombucha)."}
+    ],
+    hooks:[
+      {text:"pinterest's 2026 breakout: fermentation. (your gut said duh.)",recommended:true},
+      {text:"fermentation is the 2026 food breakout. your prebiotic side of the equation is on the carton.",recommended:false},
+      {text:"pre + post = the full gut picture. willa's is the cleanest 'pre' on the shelf.",recommended:false}
+    ],
+    caption:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nwilla's original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with willa's + plain kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. 🌾\n\nshhh… your microbiome thanks you.",
+    hashtags:["#willaskitchen","#fermentation","#guthealth","#pinterestpredicts","#prebiotic","#willasoriginal","#wholeoat","#kefiroats","#overnightoats","#cleanlabel"],
+    visual:"Vertical Pinterest pin (2:3) · overhead wood counter, golden afternoon daylight. Mason jar of kefir overnight oats with Willa's Original carton in corner (partly cropped). Crock of fermented kraut + small dish of miso paste arranged as cameo cast. Single oat groat + flaky salt sparkle. Serif typography header overlaid: 'pinterest's 2026 breakout: fermentation. (your gut said duh.)' No on-camera face. Pinterest-native composition.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"Save the pin 📌",medium:"Read the recipe",strong:"Find Willa's at Target"},
+    benefitShorthandId:"BS-4"
+  },
+  {
+    id:"MAY18-IG-R8",
+    platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
+    timing:"Fri May 22 · 6pm", priority:"HIGH",
+    concept:"\"the parent-creator rule: read the label, then pour the kids' carton.\" — Mary-Neilis-coded 'healthy-ish' lane stitch",
+    intel:[
+      {type:"PULSE",text:"Mary Neilis @7kidskitchen7 has been compounding all spring (CP-7) — NYC mom of 7, real-kitchen 'healthy-ish' family dinners. Audience well past 100K. Her pattern: protein + vegetable + starch every night, no optimization theater. Partake-coded confessional, parent-pain lane. Her audience IS Willa's Kids audience."},
+      {type:"AUDIENCE",text:"Pattern 03 (Relatable Confession) + Pattern 11 (Fan-Request Response). 'For the parents already doing the work' framing — not preaching, just adding to the toolkit. Lead-with-solution: Willa's Kids check (read the label, then pour) in beat 1, parent-creator lane as backdrop. Partake muse — parent-first warmth, unapologetic about the parent-audience focus."},
+      {type:"COMPETITOR",text:"Internal only — Willa's Kids hits 100/100 Yuka, top-9 allergen-free, 8g protein, no nut/soy/gluten/dairy. The closest kids RTD alternatives all carry compromises (Oatly Kids 7g sugar, Orgain 9g cane sugar, Ripple not organic). Willa's Kids is the only carton that passes the parent-creator-pantry test cleanly. NEVER name-check competitors in copy."}
+    ],
+    hooks:[
+      {text:"the parent-creator rule: read the label, then pour the kids' carton.",recommended:true},
+      {text:"the moms doing the work already check the label. one carton has 4 ingredients + 100/100 yuka.",recommended:false},
+      {text:"for the parents who scan the carton before it goes in the bag — we made one for that.",recommended:false}
+    ],
+    caption:"the parent-creator rule: read the label, then pour the kids' carton. 👋\n\n(for the moms already doing the work.)\n\nthe healthy-ish-family-dinner lane on tiktok keeps growing — real kitchens, real chaos, real label-reading. willa's kids is the carton built for that pantry:\n\n→ 100/100 Yuka score (the only kids drink to hit it)\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 8g protein · 3g fiber · DHA omega-3 (algae oil)\n→ 50% less sugar than dairy\n→ Bobby Approved\n\nshhh… we built it because parents asked us to. 💛",
+    hashtags:["#willaskitchen","#willaskids","#realmoms","#healthyishfamily","#parentcreator","#top9allergenfree","#bobbyapproved","#yuka100","#momof","#schoollunchideas"],
+    visual:"Real kitchen counter, mid-afternoon daylight — cofounder-sister hands (heritage tier 1) arrange a snack-drawer / lunchbox-prep scene with Willa's Kids 4-pack centered. Wholesome-but-realistic combo: apple slices, almond butter packet, whole-grain crackers, Willa's Kids carton, single strawberry. Slow push-in on Willa's Kids back panel — 100/100 Yuka chip overlaid. No on-camera face. Partake parent-first warmth, not aspirational.",
+    script:[
+      {scene:"HOOK",time:"0-3s",action:"Overhead on wood counter — hands arrange a kids' snack-prep scene. Willa's Kids 4-pack centered. Text overlay: 'the parent-creator rule:'"},
+      {scene:"REVEAL",time:"3-8s",action:"Hands pull Willa's Kids forward, slow rotation. Text: 'read the label, then pour the kids' carton.'"},
+      {scene:"BACK PANEL",time:"8-13s",action:"Push-in on Kids back panel. Yuka 100/100 chip + cert seals reveal on beat. Text: '100/100 yuka. top-9 allergen-free. 8g protein. 50% less sugar than dairy.'"},
+      {scene:"END CARD",time:"13-17s",action:"Carton in daylight, single strawberry next to it. Sign-off: 'shhh… we built it because parents asked us to. 💛' (BS-6)"}
+    ],
+    audio:"Warm narrative voiceover (brand voice, cofounder-sister-coded — never first-person 'my kids'). Soft acoustic bed. Kitchen ambient.",
+    duration:"15-17 seconds",
+    cta:{soft:"Save for the school week 💛",medium:"Read the Kids panel",strong:"Find Willa's Kids at Target"},
+    benefitShorthandId:"BS-6"
+  }
+];
+
+
+// ─── Stable IDs for threading ─────────────────────────────
+TRENDS.forEach((t,i)=> t.id = "T-"+(i+1));
+COMPETITORS.forEach((c,i)=> c.id = "C-"+(i+1));
+AMBASSADORS.forEach((a,i)=> a.id = "A-"+(i+1));
+
+// ─── Agent registry ───────────────────────────────────────
+const AGENTS = [
+  {id:"trend",name:"Trend Scanner",role:"Surfaces cultural conversations from TikTok, IG, Reddit, news + trade press",lastRun:"3m ago",signals:412,color:"#73B2C9",lead:"Strategy"},
+  {id:"comp",name:"Competitive Radar",role:"Tracks every move from Oatly, Califia, Planet Oat, Chobani, Elmhurst",lastRun:"6m ago",signals:64,color:"#DC2626",lead:"Strategy"},
+  {id:"editor",name:"Cultural Editor",role:"Kills signals that don't connect to a pillar — protects taste",lastRun:"3m ago",signals:401,color:"#64748B",lead:"Strategy"},
+  {id:"composer",name:"Brief Composer",role:"Turns surfaced intel into shootable briefs with hooks, scripts, and visuals",lastRun:"22m ago",signals:17,color:"#75C596",lead:"Creative"},
+  {id:"hook",name:"Hook Writer",role:"Drafts hook variants and writes captions in the brand voice",lastRun:"22m ago",signals:51,color:"#9E652E",lead:"Creative"},
+  {id:"visual",name:"Visual Director",role:"Writes shot lists, footage direction, and visual references",lastRun:"22m ago",signals:17,color:"#0EA5E9",lead:"Creative"},
+  {id:"amb",name:"Ambassador Finder",role:"Identifies high-fit creators already aligned with Willa's brand pillars",lastRun:"14m ago",signals:163,color:"#A191B2",lead:"Media"},
+  {id:"paid",name:"Paid Media Planner",role:"Allocates paid spend across Meta, TikTok, and Pinterest by amplifying organic winners",lastRun:"18m ago",signals:6,color:"#EC4899",lead:"Media"},
+  {id:"perf",name:"Performance Analyzer",role:"Measures every shipped post vs baseline · feeds learnings into next week's briefs",lastRun:"1h ago",signals:18,color:"#14B8A6",lead:"Analytics"}
+];
+
+
+const AGENT_DETAILS = {
+  trend: {
+    scrapes:["TikTok Discover + trending audio","Reddit public JSON (r/oatmilk, r/nutrition, r/parenting)","Google News + Google Trends","FoodNavigator + Food Dive + BevNET","Substack wellness newsletters","Pinterest trend reports"],
+    decides:"Which cultural conversations have enough velocity and pillar alignment to become briefs.",
+    handsOff:["Cultural Editor"],
+    replaces:"Social strategist · ~$85K / yr"
+  },
+  comp: {
+    scrapes:["Competitor IG + TikTok business profiles","SEC filings (Oatly 10-K, 20-F)","PRNewswire + BusinessWire","Trade press: BevNET, Food Dive, FoodNavigator","Public product pages + ingredient decks"],
+    decides:"Competitor direction (up/down/flat), vulnerability windows, and Willa's opportunity per brand.",
+    handsOff:["Brief Composer"],
+    replaces:"Competitive analyst · ~$95K / yr"
+  },
+  editor: {
+    scrapes:["Every signal surfaced by Trend Scanner","Brand pillar definitions","Willa's do-not-say list"],
+    decides:"Kills ~90% of surfaced signals that don't connect to a pillar. Protects brand taste.",
+    handsOff:["Trend Scanner (feedback)"],
+    replaces:"Senior content strategist · ~$110K / yr"
+  },
+  composer: {
+    scrapes:["Surviving trends from Cultural Editor","Competitor vulnerabilities","Performance data from last week"],
+    decides:"Format, platform, pillar, timing, priority — which signal becomes which brief.",
+    handsOff:["Hook Writer","Visual Director"],
+    replaces:"Content strategist · ~$90K / yr"
+  },
+  hook: {
+    scrapes:["Brand's past captions (voice training)","Recommended concepts from Brief Composer"],
+    decides:"2–3 hook variants per brief, ranks the strongest, writes 3 caption variants in the brand voice.",
+    handsOff:["Visual Director"],
+    replaces:"Copywriter · ~$75K / yr"
+  },
+  visual: {
+    scrapes:["Recommended concepts from Brief Composer","Platform best practices","Trending audio and format conventions"],
+    decides:"Shot-by-shot script, visual direction, audio recommendation, duration target.",
+    handsOff:["Performance Analyzer (after shipping)"],
+    replaces:"Video producer · ~$80K / yr"
+  },
+  amb: {
+    scrapes:["Modash creator database (production)","Reddit posts mentioning Willa's","Public IG post search","Creator bios + audience demographics"],
+    decides:"Which creators are high-fit to Willa's pillars, audience alignment score, outreach priority.",
+    handsOff:["Brief Composer (UGC briefs)"],
+    replaces:"Influencer manager · ~$72K / yr"
+  },
+  paid: {
+    scrapes:["Meta Ads Library","TikTok Ads Manager","SimilarWeb / AdBeat (competitor spend)","Performance Analyzer outputs","Klaviyo audience segments"],
+    decides:"Which winning organic posts to amplify with paid spend, audience targeting, bid strategy, and budget split across platforms.",
+    handsOff:["Performance Analyzer (paid attribution)"],
+    replaces:"Paid media planner · ~$95K / yr"
+  },
+  perf: {
+    scrapes:["Meta Graph API (IG + Threads)","TikTok Business API","Pinterest API","Shopify sales data","Klaviyo audience signals"],
+    decides:"Which formats compound, which pillars underperform, what to queue next week, revenue attribution per brief.",
+    handsOff:["Trend Scanner (signal weighting)","Brief Composer (format reinforcement)","Paid Media Planner (amplify winners)"],
+    replaces:"Marketing analyst · ~$95K / yr"
+  }
+};
+
+// ─── What the engine decided this week (visible autonomy) ─
+const DECISIONS = [
+  {icon:"↑",title:"Promoted fibermaxxing founder-POV TikTok to BIG SWING (Mon May 18 9am)",reason:"VegNews + Mayo Clinic May 2026 confirm fibermaxxing overtaking protein on TikTok. Oats are the original fibermaxxing food (10,000 years of receipts). Christina founder-POV tier 2 (activist stance on a wellness trend Willa's structurally wins). Spark Ad queued at $260 for the 72-hr lift window.",agent:"composer"},
+  {icon:"↑",title:"Promoted Memorial Day Weekend heritage tease IG-R1 to BIG SWING (Mon May 18 12pm)",reason:"Memorial Day Weekend MAY 24-25 opens the summer family-kitchen cycle. The heritage anchor wins the planning-pin window (7-10 day Pinterest lead). Cofounder-sister tier 1 reserved-category use. Memorial Day signal capped at 3 briefs per signal-concentration rule.",agent:"composer"},
+  {icon:"⚡",title:"Promoted matcha quiet-confidence Barista response TT-2 to RIDE NOW (Tue May 19 9am)",reason:"Califia announced Blueberry Matcha Almond Latte MAY 18 UK launch (Tesco, 3-mo exclusive). Matcha-as-plant-milk-co-star is now competitor-validated. Willa's Barista back-panel response — no name, no recipe, just the cleaner deck in the rising lane. 48-hr lift before the news cycle moves.",agent:"composer"},
+  {icon:"+",title:"Queued UPF expert-panel quiet-authority Reel (Wed May 20 12pm)",reason:"Healthy Eating Research published its May 2026 UPF expert-panel policymaker report — the framework Willa's was always built against. Lead-with-solution structure: 'this is what not-UPF looks like on a panel,' then the cert stack. Backdrop, not lead.",agent:"composer"},
+  {icon:"⇄",title:"Capped Memorial Day Weekend signal at 3 briefs (signal-concentration cap rule)",reason:"Memorial Day anchor candidates pulled to 3: IG-R1 (Mon heritage tease BIG SWING), IG-R5 (Sat multi-generation pour tier 1), IG-F2 (Sun MD carousel). 4 displaced briefs reframed off-anchor: heritage 100yrs (no MD callout), matcha response (Califia-context), Pinterest fermentation pin (no MD), and chocolate dessert pin (evergreen).",agent:"editor"},
+  {icon:"×",title:"Killed all 12 MAY 11 Pulse entries from this week's set",reason:"No-repeat rule strict: Cannes opener past (closing weekend is a different angle in CP-1), The Bear 'Gary' covered, Met Gala retrospective fully covered, 'But my name is' meme cooling, Mother's Day record-day fully landed, Louisiana SB 14 fully briefed, FoodNavigator plant-dairy covered, Neighborhood finale past, strawberry tartine pin shipped, iced café crème shipped, Eurovision past, National Chocolate Chip Day past. Fresh ground: matcha + fibermaxxing + memorial day + UPF panel + cabbage/fermentation + Kevin Morby folk + bee day + cannes closing + the bear S5 ramp.",agent:"editor"},
+  {icon:"↑",title:"Locked Christina-on-camera count at 3 max (Christina Rule)",reason:"TT-1 fibermaxxing (founder-POV activist stance tier 2), IG-R1 Memorial Day pre-game heritage (heritage tier 1 cofounder-sister + Christina hand-pour), IG-R5 Saturday multi-generation pour (heritage tier 1 cofounder-sister + Christina + kid). All three reserved-category appearances. The pour-with-niece can use a paid-sister-cofounder substitute if Christina's schedule blocks.",agent:"editor"},
+  {icon:"+",title:"Added 'oats already filled the protein gap before beans got rebranded' Pattern 05 Reel (Thu May 21)",reason:"Bloomberg Apr 24 + TikTok beans-as-must-buy wave is structurally adjacent to fibermaxxing — a 'plants are the answer' moment. Willa's-Original-as-OG-receipts angle leans into Pattern 05 (Format-as-Virality) without copying the bean-specific creators. Pin to the underused 'plant-protein-was-always-the-answer' lane.",agent:"composer"},
+  {icon:"+",title:"Welcome popup pull-quote updated: 'fiber is the new TikTok trend. (oats invented it 10,000 years ago.)'",reason:"Fibermaxxing wave is the biggest cultural-attention beat of the week and the strongest Willa's structural match. Heritage + receipts + abundance framing all stack inside one line. POSTURE-SHIFT preserved: THE MOVES verb-led, THE WATCH forward-tense conditionals, action-coded footer CTA.",agent:"editor"},
+  {icon:"+",title:"Reserved Saturday brunch slot for cofounder-sister mom-bag confession (Pattern 03) — vol. 2 (road-trip edition)",reason:"Last week's mom-bag confession (Pattern 03 + Partake muse) hit on Christina's humor ask. This week's vol. 2 stays in the same format but adds Memorial Day road-trip framing — kids snack pouch, single Willa's Kids 4-pack, 'the only thing in the cooler I'm proud of.' Same pattern, fresh trigger, fresh visual.",agent:"composer"}
+];
+
+
+// ─── Integration hub ─────────────────────────────────────
+const INTEGRATIONS = [
+  {name:"Meta Graph API",status:"connected",use:"IG + Threads post metrics, scheduling"},
+  {name:"TikTok Business",status:"connected",use:"Post performance, hashtag velocity"},
+  {name:"Pinterest API",status:"connected",use:"Pin impressions, outbound CTR"},
+  {name:"Shopify",status:"connected",use:"Revenue attribution, SKU-level lift"},
+  {name:"Klaviyo",status:"connected",use:"Email list signal, audience segmentation"},
+  {name:"Slack",status:"connected",use:"Brief delivery, team approvals"},
+  {name:"Notion",status:"pending",use:"Content calendar, brief archive"},
+  {name:"Gmail",status:"pending",use:"Weekly digest, creator outreach"}
+];
+
+// ─── Revenue attribution ─────────────────────────────────
+const REVENUE_IMPACT = {
+  total: 9180,
+  lift: 26,
+  sessions: 712,
+  topRoiFormat: "Authority + Pattern 02 long-running-brand Reels",
+  topRoiPerBrief: 1136,
+  source: "Shopify + Klaviyo"
+};
+
+const AGENT_BY_ID = Object.fromEntries(AGENTS.map(a=>[a.id,a]));
+
+// ─── Brief ↔ source links (the threading) ─────────────────
+const BRIEF_LINKS = {
+  // Signal-anchored briefs (12)
+  "MAY18-TT-1":  {trends:["T-6"],            pulse:["CP-1"],                 comps:[]},
+  "MAY18-IG-R1": {trends:["T-5"],            pulse:["CP-3","CP-2"],          comps:[]},
+  "MAY18-TT-2":  {trends:["T-10","T-4"],     pulse:["CP-5"],                 comps:["C-2"]},
+  "MAY18-IG-R2": {trends:[],                 pulse:[],                       comps:[]},
+  "MAY18-IG-R3": {trends:["T-1","T-9"],      pulse:[],                       comps:[]},
+  "MAY18-TT-3":  {trends:[],                 pulse:["CP-9"],                 comps:[]},
+  "MAY18-IG-F1": {trends:[],                 pulse:[],                       comps:[]},
+  "MAY18-TT-4":  {trends:["T-6"],            pulse:["CP-1"],                 comps:[]},
+  "MAY18-PIN-2": {trends:[],                 pulse:["CP-6"],                 comps:[]},
+  "MAY18-IG-R4": {trends:["T-2","T-7"],      pulse:[],                       comps:[]},
+  "MAY18-IG-R5": {trends:["T-5"],            pulse:["CP-3","CP-2"],          comps:[]},
+  "MAY18-TT-6":  {trends:["T-5"],            pulse:["CP-3"],                 comps:[]},
+  // Evergreen briefs (5) — no signal anchor. Pillar-rooted, week-agnostic.
+  "MAY18-PIN-1": {trends:[],                 pulse:[],                       comps:[]},   // E2 iced coffee
+  "MAY18-TT-5":  {trends:[],                 pulse:[],                       comps:[]},   // E1 read-aloud
+  "MAY18-PIN-3": {trends:[],                 pulse:[],                       comps:[]},   // E5 brownie bites
+  "MAY18-IG-F2": {trends:[],                 pulse:[],                       comps:[]},   // E4 cert wall
+  "MAY18-IG-R6": {trends:[],                 pulse:[],                       comps:[]},   // E3 kids crossover
+  // Diversity-rewrite additions (added 2026-05-18) — 7 briefs covering 10 zero-coverage signals
+  "MAY18-IG-R7": {trends:["T-2","T-3"],      pulse:[],                       comps:["C-1","C-4"]},  // category-confidence at-shelf
+  "MAY18-TT-7":  {trends:[],                 pulse:["CP-4"],                 comps:[]},             // grandfluencer heritage stitch
+  "MAY18-TT-8":  {trends:[],                 pulse:["CP-10","CP-1"],         comps:[]},             // cottage cheese oats remix
+  "MAY18-IG-F3": {trends:[],                 pulse:[],                       comps:["C-3","C-5"]},  // label-literacy framework
+  "MAY18-TT-9":  {trends:[],                 pulse:["CP-8"],                 comps:[]},             // colbert finale heritage tonal
+  "MAY18-PIN-4": {trends:["T-8"],            pulse:["CP-6"],                 comps:[]},             // pinterest fermentation pin
+  "MAY18-IG-R8": {trends:[],                 pulse:["CP-7"],                 comps:[]}              // parent-creator pantry stitch
+};
+
+
+
+// ─── Paid Amplify Plans (Paid Media Planner output) ──────
+const AMPLIFY_PLANS = {
+  "MAY18-TT-1": {
+    headline:"Fibermaxxing founder-POV BIG SWING TikTok — pre-load before mid-week wave peak",
+    totalBudget:220,
+    testWindow:"72 hrs (Mon May 18 → Thu May 21)",
+    objective:"Saves + Shares",
+    guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
+    why:"Fibermaxxing (CP-1) is the highest-velocity wellness wave on TikTok right now — VegNews + Mayo Clinic May 2026 confirm fiber overtaking protein. Christina founder-POV tier 2 (activist stance) is Willa's highest-saving format — Louisiana SB 14 BIG SWING in this exact slot last refresh delivered 8.6× saves + 0.97 sentiment. Lead-with-solution structure (Willa's claim in beat 1, fibermaxxing context as backdrop) is the documented winning pattern.",
+    placements:[
+      {
+        platform:"TikTok",
+        format:"Spark Ad",
+        budget:220,
+        audience:"Interest: Fibermaxxing, Gut Health, Clean Eating, Whole Foods, Plant-Based, Label Reading · Age: 26–48",
+        lookalike:"Klaviyo purchaser + cert-page visitor lookalike",
+        expectedReach:"65K–110K video views",
+        note:"Optimize for Saves. Pre-stage replies for any 'just eat oatmeal' comments — Willa's voice is generous, not defensive. Cross-promote into the UPF expert-panel Reel mid-week."
+      }
+    ]
+  },
+  "MAY18-IG-R1": {
+    headline:"Memorial Day Weekend heritage tease BIG SWING — slow-burn editorial amplification across the holiday-week build",
+    totalBudget:240,
+    testWindow:"7 days (Mon May 18 → Sun May 24)",
+    objective:"Reach + Profile Visits + Saves",
+    guardrail:"Auto-pause if cost-per-save exceeds $0.40",
+    why:"Memorial Day Weekend MAY 24-25 (CP-3) opens the summer family-kitchen + cookout cycle — Pinterest 'memorial day breakfast' peaks 7-10 days ahead. Pre-game tease format succeeded last refresh (MAY 11 IG-R1 Cannes pre-game hit 7.1× saves, 0.96 sentiment) — same editorial register, fresh holiday trigger. Long test window matches the full pre-MD planning runway. Cofounder-sister tier 1 heritage scene = highest-sentiment Willa's format.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Reels Ad (IG Reels + FB Reels)",
+        budget:240,
+        audience:"Interest: Memorial Day Weekend, Cookouts, Family Kitchen, Heritage Brands, Mother-Founded, WBENC · Age: 28–55",
+        lookalike:"Custom Audience Lookalike from Klaviyo Mother's Day 2026 cohort",
+        expectedReach:"55K–95K impressions",
+        note:"Optimize for Saves + Profile Visits. Refresh creative on Sat May 23 with the multi-generation Saturday-morning pour version (IG-R5) if engagement holds — the format compounds organically and a $80 boost on R5 captures the actual-MD-weekend tail."
+      }
+    ]
+  },
+  "MAY18-TT-2": {
+    headline:"Matcha quiet-confidence Barista response — capture the 48-hour competitor-launch lift window",
+    totalBudget:260,
+    testWindow:"48 hrs (Tue May 19 morning → Thu May 21 morning)",
+    objective:"Reach + Profile Visits",
+    guardrail:"Auto-pause if CPM exceeds $11 or sentiment drops below 0.80",
+    why:"Califia MAY 18 UK matcha launch is the trigger; Tastewise May 2026 confirms matcha mentions +107% YoY (CP-5). Most brands matcha-recipe-stitch; Willa's category-POV cameo (back-panel reveal as punchline) is the differentiated lane. Cultural-stitch pattern confirmed reach amplifier last refresh (Cannes opener +26% new followers, +572K views). RIDE NOW slot — 48-hour first-mover window before US oat-milk brands respond.",
+    placements:[
+      {
+        platform:"TikTok",
+        format:"Spark Ad",
+        budget:260,
+        audience:"Interest: Matcha, Home Cafe, Cold Foam, Clean Eating, Plant-Based, Oat Milk, Barista at Home · Age: 24–45 · Behavior: Interacted with Coffee / Matcha Content (30 days)",
+        lookalike:"Willa's engaged-non-follower lookalike + matcha-creator audience lookalike",
+        expectedReach:"85K–145K video views",
+        note:"Optimize for Profile Visits. If sentiment stays >0.80 through 48 hrs, extend to $380 for full week-of-launch lift. NEVER name-check Califia — the matcha lane category move does the work, the back-panel reveal lands the punchline."
+      }
+    ]
+  },
+  "MAY18-IG-R2": {
+    headline:"Cannes Palme d'Or closing-weekend tease — capture the 48-hour post-festival editorial finish",
+    totalBudget:180,
+    testWindow:"5 days (Tue May 19 → Sat May 23 closing ceremony)",
+    objective:"Reach + Saves",
+    guardrail:"Auto-pause if CPM exceeds $10 or sentiment drops below 0.85",
+    why:"Cannes 2026 closes SAT MAY 23 (CP-8) — Barbra Streisand honored in absentia, Park Chan-wook French Order of Arts and Letters. The 11-day food-as-cultural-property lane sunsets and the engine pre-records Willa's place in the closing-weekend tail rather than reacting to the winners list. Editorial Reels continue as Willa's highest-sentiment format (last refresh 0.96 on the IG-R1 pre-game). Brand-voice editorial, no founder-on-camera commitment.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Reels Ad (IG Reels + FB Reels)",
+        budget:180,
+        audience:"Interest: Cannes Film Festival, Editorial Brands, Pop Culture, Mother-Founded Brands, Heritage Brands · Age: 28–52",
+        lookalike:"Cannes-engaged audience + Willa's MAY 11 Cannes-cohort lookalike",
+        expectedReach:"40K–72K impressions",
+        note:"Optimize for Saves. Refresh creative on Sat May 23 (closing ceremony night) — reduce budget pacing in the 48hr post-Palme window. Pair with TT-3 prep-counter Reel cross-promotion."
+      }
+    ]
+  },
+  "MAY18-IG-R3": {
+    headline:"UPF expert-panel quiet-authority Reel — ride the Healthy Eating Research May 2026 policymaker report",
+    totalBudget:160,
+    testWindow:"72 hrs (Wed May 20 → Sat May 23)",
+    objective:"Reach + Saves",
+    guardrail:"Auto-pause if CPM exceeds $9",
+    why:"Healthy Eating Research May 2026 UPF expert-panel technical report (T-1) is the underread policy hook of the week — evidence-informed recommendations for state + federal policymakers. Quiet-confidence Reel pattern hit 7.4× saves last refresh on the FoodNavigator plant-dairy narrative. Lead-with-solution structure (Willa's stance in beat 1, news/policy backdrop in beat 2) per POV Discipline #7. Cert-stack visual is the share engine; HER report is the authority.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Reels Ad (IG Reels + FB Reels)",
+        budget:160,
+        audience:"Interest: Clean Eating, UPF, Plant-Based, Organic Food, Label Reading, Food Policy, MAHA · Age: 28–52",
+        lookalike:"1% Lookalike from willaskitchen.com cert-page visitors",
+        expectedReach:"32K–60K impressions",
+        note:"Optimize for Saves. The 4-ingredient back panel + HER report visuals are the share engine — not the policy chyron. Cross-promote with the cert-wall carousel (IG-F2) on Sunday for the receipt-led sweep."
+      }
+    ]
+  },
+  "MAY18-IG-F1": {
+    headline:"Mother-founded peer-set carousel — earned-media-style amplification on the post-MD pivot to weekly-presence",
+    totalBudget:140,
+    testWindow:"5 days (Thu May 21 → Mon May 25)",
+    objective:"Reach + Profile Visits + Saves",
+    guardrail:"Auto-pause if cost-per-save exceeds $0.45",
+    why:"Mother-founded peer-set carousel hit Willa's highest sentiment last refresh (0.98 on the Met Gala IG-F1). The post-MD pivot from 'on the runway' to 'on the shelf every week' makes this format week-agnostic and durable. Carousel outperforms Reels for peer-set retrospectives. 'Brands worth keeping on the list' framing positions Willa's as the lane leader without name-checking competitors.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Carousel Ad (IG Feed + IG Explore)",
+        budget:140,
+        audience:"Interest: Motherhood, Mother-Founded Brands, Women-Owned, WBENC, Clean Eating, Partake Foods, Bobo's Oat Bars, Omsom · Age: 28–55",
+        lookalike:"Klaviyo purchaser + Mother's Day 2026 cohort lookalike",
+        expectedReach:"36K–60K impressions",
+        note:"Optimize for Saves + Profile Visits. Tag the post with 'Send to a peer-set lover' CTA in the carousel last card. The peer brands aren't competitors — they're the lane Willa's leads."
+      }
+    ]
+  },
+  "MAY18-TT-4": {
+    headline:"Beans-protein Pattern 05 counter-payload — keep Willa's the protagonist of the protein-fiber wave",
+    totalBudget:140,
+    testWindow:"72 hrs (Thu May 21 → Sun May 24)",
+    objective:"Saves + Profile Visits",
+    guardrail:"Auto-pause if CPM exceeds $10 or sentiment drops below 0.85",
+    why:"Bloomberg Apr 24 + continuing May beans-as-must-buy wave (CP-7) fuels the broader plant-protein narrative — but Willa's risks becoming a coda to bean-creator stitches. Pattern 05 (Format-as-Virality) without bean-stitching keeps Willa's the protagonist. 'Beans are having a moment / oats keep having a millennium' time-collapse joke is the dry-wit Pattern 10 (Wordplay) overlay. Format-payload structure is the documented reach-amplifier shape (MAY 11 TT-3 'Son original' hit 524K views).",
+    placements:[
+      {
+        platform:"TikTok",
+        format:"Spark Ad",
+        budget:140,
+        audience:"Interest: Plant Protein, Fibermaxxing, Beans, Clean Eating, Whole Foods, Oat Milk · Age: 26–48",
+        lookalike:"Willa's engaged-non-follower lookalike",
+        expectedReach:"40K–72K video views",
+        note:"Optimize for Saves. The text-overlay punchline is the share engine — no bean-creator stitch, no name-check. If organic save-rate >5× by Sat, extend to $220 for full weekend ride."
+      }
+    ]
+  },
+  "MAY18-IG-R4": {
+    headline:"Heritage + climate-positive World Bee Day Reel — capture the sustainability calendar lift",
+    totalBudget:160,
+    testWindow:"72 hrs (Fri May 22 → Mon May 25)",
+    objective:"Saves + Profile Visits",
+    guardrail:"Auto-pause if CPM exceeds $10 or sentiment drops below 0.85",
+    why:"World Bee Day MAY 20 opens the sustainability lane; heritage Reel format hit 7.4× saves + 0.95 sentiment last refresh (MAY 11 IG-R4 Neighborhood-finale parallel). The cert-stack + climate-positive narrative + 105-year heritage in one Reel is structurally uncopyable. Pattern 02 (World-Context Tie-In) + Patagonia gravity — the bee-day signal is the trigger; the heritage carries the saved-content compound.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Reels Ad (IG Reels + FB Reels)",
+        budget:160,
+        audience:"Interest: Sustainability, Climate-Positive Brands, Heritage Brands, Mother-Founded, WBENC, Organic Food, World Bee Day · Age: 30–58",
+        lookalike:"Klaviyo purchaser + cert-page visitor lookalike",
+        expectedReach:"36K–62K impressions",
+        note:"Optimize for Saves + Profile Visits. The carbon-sequestration + zero-food-waste callout is the share engine. Cross-promote into the IG-F2 cert wall on Sunday for the full receipts-first close."
+      }
+    ]
+  },
+  // Diversity-rewrite additions (added 2026-05-18) — 3 amplify plans for the highest-leverage new briefs
+  "MAY18-IG-R7": {
+    headline:"Category-confidence at-shelf Reel — capture the 30% oat-milk-shelf moment without name-checks",
+    totalBudget:200,
+    testWindow:"5 days (Tue May 19 → Sun May 24)",
+    objective:"Reach + Saves + Profile Visits",
+    guardrail:"Auto-pause if CPM exceeds $10 or sentiment drops below 0.85",
+    why:"Oat milk crossed 30% of the US alt-milk shelf for the first time (T-2 Oatly Q1 + T-3 Chobani consolidation). The category has a leader; Willa's is the cleanest pour in it. At-shelf-moment DNA — first NEW use of this format this week. Category-POV without name-checks is the proven Willa's lane (MAY 11 IG-R6 anti-isolate hit 0.95 sentiment on same logic). Pre-stage replies for any 'which oat milk' DMs — back-panel reveal does the work.",
+    placements:[
+      {
+        platform:"Meta",
+        format:"Reels Ad (IG Reels + FB Reels)",
+        budget:200,
+        audience:"Interest: Plant-Based Milk, Oat Milk, Clean Eating, Organic Food, Label Reading, Whole Foods · Age: 26–48",
+        lookalike:"1% Lookalike from willaskitchen.com cert-page visitors + Willa's Klaviyo purchaser",
+        expectedReach:"50K–88K impressions",
+        note:"Optimize for Saves. NEVER name-check competitors in any comment reply — category-POV only. Cross-promote into the IG-F3 label-literacy carousel Wed evening for the receipts-first sweep."
+      }
+    ]
+  },
+  "MAY18-TT-8": {
+    headline:"Cottage cheese oats viral-recipe remix — ride the May breakout window",
+    totalBudget:240,
+    testWindow:"5 days (Wed May 20 → Sun May 24)",
+    objective:"Saves + Profile Visits",
+    guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
+    why:"Cottage cheese overnight oats are the May 2026 breakout variant of the cottage-cheese-anything wave (CP-10). Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Pattern 05 (Format-as-Virality) — ride the curd-swirl visual with Willa's clean-pour payload. Viral-recipe-remix briefs have been the highest reach format in 2026 (MAY 11 TT-5 iced café crème hit 482K views). The 18g protein math + 4-ingredient base is the share engine.",
+    placements:[
+      {
+        platform:"TikTok",
+        format:"Spark Ad",
+        budget:240,
+        audience:"Interest: Cottage Cheese, Overnight Oats, High Protein, Fibermaxxing, Meal Prep, Clean Eating, Oat Milk · Age: 24–42 · Behavior: Interacted with Recipe Content (30 days)",
+        lookalike:"Willa's engaged-non-follower lookalike + fitness-meal-prep audience lookalike",
+        expectedReach:"75K–135K video views",
+        note:"Optimize for Saves. If sentiment stays >0.85 through 72 hrs, extend to $360 for full weekend ride. The curd-swirl-pour shot is the share engine — make sure the cloud-pour visual lands."
+      }
+    ]
+  },
+  "MAY18-TT-9": {
+    headline:"Heritage end-of-era stitch — capture the Thu May 21 finale evening + Friday-morning afterglow",
+    totalBudget:180,
+    testWindow:"48 hrs (Thu May 21 evening → Sat May 23 morning)",
+    objective:"Reach + Saves",
+    guardrail:"Auto-pause if CPM exceeds $10 or sentiment drops below 0.85",
+    why:"Stephen Colbert's final Late Show airs THU MAY 21 (CP-8) — cultural-mass end-of-era moment. Willa's heritage tonal parallel (1921 origin → 2021 launch) WITHOUT stitching Colbert footage or name-checking. Patagonia gravity — heritage as activist credentials. The 48-hour finale-evening + morning-after window is the entire shelf life of this stitch. RIDE NOW slot.",
+    placements:[
+      {
+        platform:"TikTok",
+        format:"Spark Ad",
+        budget:180,
+        audience:"Interest: Heritage Brands, Pop Culture, Long-Running Brands, Mother-Founded Brands, Editorial Brands, Clean Eating · Age: 32–58",
+        lookalike:"Klaviyo purchaser lookalike + Willa's heritage-content engaged audience",
+        expectedReach:"55K–95K video views",
+        note:"Optimize for Saves. NEVER stitch Colbert footage or name-check the show in copy — tonal parallel only. If the heritage frame lands by Friday morning, retire the placement gracefully; the moment decays after Saturday."
+      }
+    ]
+  }
+};
+// No amplify for: MAY18-TT-3 (The Bear-coded prep counter — earned authenticity wins without paid), MAY18-PIN-1 / PIN-2 / PIN-3 / PIN-4 (Pinterest SEO compounds organically — iced coffee, kefir overnight oats, no-bake brownie bites, fermentation breakout all earn share rate on SEO + visual quality), MAY18-TT-5 (read-the-label stress test — Pattern 10 wordplay + format duration carry organic), MAY18-IG-R5 (Saturday multi-generation heritage — earned authenticity; cross-promote from IG-R1 budget if engagement holds), MAY18-TT-6 (road-trip cooler Pattern 03 — Partake-style relatable confession plays better organic; MAY 11 TT-7 hit 6.8× saves without paid), MAY18-IG-F2 (cert-wall carousel — receipt-led editorial wins as earned media), MAY18-IG-R6 (kids crossover split-screen — quiet-posture brief, organic-first), MAY18-TT-7 (grandfluencer heritage stitch — earned authenticity, organic-first), MAY18-IG-F3 (label-literacy framework carousel — receipt-led editorial wins as earned media; pair with IG-R7 amplify cross-promotion), MAY18-IG-R8 (parent-creator pantry stitch — quiet posture; ambassador-track first via Mary Neilis outreach, paid second).
+// No amplify for: MAY11-TT-2 (Mother's Day retrospective — organic-first), MAY11-TT-3 (meme-payload — test ad only if organic climbs), MAY11-PIN-1 / PIN-2 / PIN-3 (Pinterest SEO compounds organically — autobiography wordplay pin earns its share rate on type alone), MAY11-TT-4 (The Bear-coded — earned authenticity wins without paid), MAY11-TT-5 (iced café crème — recipe SEO compounds), MAY11-IG-R5 (Saturday heritage — earned-authenticity), MAY11-TT-7 (mom-bag relatable confession — Pattern 03 plays better organic; Partake-style content compounds on saves), MAY11-IG-F2 (category data carousel — earned-media), MAY11-IG-R6 (real-food anti-isolate — receipt-led category POV).
+
+
+// Reverse map: which briefs each trend / pulse hook / competitor drives
+const TREND_BRIEFS = {};
+const PULSE_BRIEFS = {};
+const COMP_BRIEFS = {};
+Object.entries(BRIEF_LINKS).forEach(([bId,{trends,pulse,comps}])=>{
+  (trends||[]).forEach(t=>{ (TREND_BRIEFS[t] = TREND_BRIEFS[t]||[]).push(bId); });
+  (pulse ||[]).forEach(p=>{ (PULSE_BRIEFS[p] = PULSE_BRIEFS[p]||[]).push(bId); });
+  (comps ||[]).forEach(c=>{ (COMP_BRIEFS[c] = COMP_BRIEFS[c]||[]).push(bId); });
+});
+
+// Quick lookups (PULSE_BY_ID is defined below, after CULTURAL_PULSE — declaration order matters)
+const TREND_BY_ID = Object.fromEntries(TRENDS.map(t=>[t.id,t]));
+const COMP_BY_ID = Object.fromEntries(COMPETITORS.map(c=>[c.id,c]));
+const BRIEF_BY_ID = Object.fromEntries(BRIEFS.map(b=>[b.id,b]));
+
+// ─── Run Log ──────────────────────────────────────────────
+const RUN_LOG = [
+  {date:"Sat May 17 · 18:24",agent:"perf",    msg:"MAY 11 wrap: avg +5.8× saves vs baseline · top format = authority + Pattern 02 long-running-brand parallel Reels · Louisiana SB 14 BIG SWING hit 0.97 sentiment"},
+  {date:"Fri May 16 · 11:08",agent:"trend",   msg:"Healthy Eating Research May 2026 UPF expert-panel report surfaced — academic policymaker framework · quiet-authority Reel queued for Wed May 20 12pm"},
+  {date:"Thu May 15 · 14:46",agent:"trend",   msg:"VegNews + Mayo Clinic May 2026 fibermaxxing pieces landed · TikTok wave overtaking protein · BIG SWING founder-POV TT queued for Mon May 18 9am"},
+  {date:"Wed May 14 · 16:38",agent:"comp",    msg:"Califia Blueberry Matcha Almond Latte MAY 18 launch announced (Tesco UK) — matcha-as-plant-milk competitor-validated · willa's barista quiet-confidence response TT-2 queued for Tue May 19 9am"},
+  {date:"Tue May 13 · 09:22",agent:"comp",    msg:"Oatly Q1 print continued landing — US oat-milk category share crossed 30% first time · category-confidence visual cameo added to MAY 18 brief deck"},
+  {date:"Mon May 12 · 18:55",agent:"trend",   msg:"Tastewise May 2026 matcha report ingested · +107% mentions YoY · cold-foam + cloud-texture formats as breakout · Willa's Barista cameo cross-checked"},
+  {date:"Sun May 11 · 20:30",agent:"trend",   msg:"Pinterest Predicts 2026 named Cabbage Crush + fermentation + sophisticated alcohol-free as 3 food breakouts · pinterest fermentation pin queued for Thu May 21"},
+  {date:"Sat May 16 · 12:14",agent:"editor",  msg:"Killed all 12 MAY 11 Pulse entries from this week's set per no-repeat rule · fresh ground: matcha + fibermaxxing + memorial day + UPF panel + cabbage/fermentation + Kevin Morby folk + bee day"},
+  {date:"Sun May 17 · 09:18",agent:"composer",msg:"17 briefs delivered for the week of May 18 · 2 BIG SWINGs (fibermaxxing TT-1 · memorial day weekend heritage IG-R1) + 2 RIDE NOW (fibermaxxing · matcha response)"},
+  {date:"Sun May 17 · 10:00",agent:"editor",  msg:"Capped Memorial Day Weekend signal at 3 briefs per signal-concentration rule · displaced briefs reframed off-anchor (heritage 100yrs · matcha response · pinterest fermentation pin · chocolate dessert)"},
+  {date:"Sun May 17 · 10:30",agent:"hook",    msg:"51 hook variants generated · 17 caption-variant sets (direct/warm/punchy) drafted in brand voice · Christina lead-with-solution applied to all authority briefs"},
+  {date:"Sun May 17 · 11:00",agent:"visual",  msg:"17 visual direction decks + 17 footage inspo banks complete · shot-list arrays populated on every Reel + TikTok per Rule A (Runway-pipeline scripts paused per Alex's direction)"},
+  {date:"Sun May 17 · 11:30",agent:"editor",  msg:"Welcome popup pull-quote updated: 'fiber is the new TikTok trend. (oats invented it 10,000 years ago.)' Fibermaxxing wave as anchor. Posture-shift maintained from MAY 11."}
+];
+
+
+// ─── Killed signals (the ones we said no to) ──────────────
+const KILLED = [
+  {signal:"All 12 MAY 11 Pulse entries from this refresh",                       reason:"No-repeat rule strict: Cannes opener past (closing weekend is a different angle), The Bear 'Gary' covered, Met Gala fully landed, 'But my name is' meme cooling, Mother's Day record-day fully shipped, Louisiana SB 14 BIG SWING shipped, FoodNavigator plant-dairy covered, Neighborhood finale past, strawberry tartine pin shipped, iced café crème shipped, Eurovision past, National Chocolate Chip Day past. Fresh ground required across the Pulse surface.",  by:"Cultural Editor"},
+  {signal:"Hanging Tree TikTok meme (Hunger Games) as MEME TEMPLATE",            reason:"Hunger Games-anchored audio + dystopian conveyor-belt visual reads dark + violent — wrong tonal pocket for Willa's. Pattern 13 (TikTok Goofy) anti-pattern guidance applies. Skipped.",  by:"Cultural Editor"},
+  {signal:"Two-Ingredient Japanese Cheesecake recipe remix",                     reason:"Trending TikTok recipe but the format requires yogurt + cookies as the 2 ingredients — Willa's would be a trace ingredient, breaking the protagonist anti-pattern (Christina's 2026-04-16 rule). Skipped.",  by:"Cultural Editor"},
+  {signal:"Pinterest Cabbage Crush direct brief (not a Willa's protagonist)",     reason:"Pinterest Predicts named Cabbage Crush as the 2026 breakout, but cabbage-as-hero makes Willa's a side-cameo. Skipped a direct brief — kept it as a pulse surface only, and used the adjacent fermentation lane (CP-8) for the actual fermentation/gut-health pin (PIN-2 chocolate evergreen instead).",  by:"Cultural Editor"},
+  {signal:"Kevin Morby 'Little Wide Open' MAY 15 album as cultural-stitch Reel", reason:"Folk-rock drop in Willa's tonal pocket (heritage + comfort + morning-ritual triple-fit). Surfaced as CP-2 ENTERTAINMENT MOMENT — used as audio bed / mood anchor inside the heritage Reel, NOT as a standalone Pulse-driven brief. Avoids over-cluttering the music lane.",  by:"Cultural Editor"},
+  {signal:"Cannes Palme d'Or red-carpet 'cocktail of the week' brief",           reason:"Cannes closing weekend (MAY 23) is a cultural moment but Willa's already shipped 3 Cannes-anchored briefs MAY 11 wk (R1 pre-game + R2 same-night + TT-5 café crème). One more would push the post-festival anchor past the 3-brief signal-cap. Slot reassigned to fibermaxxing format-payload TT-5 instead.",  by:"Cultural Editor"},
+  {signal:"World Bee Day direct sustainability Reel (no founder)",               reason:"World Bee Day MAY 20 is a sustainability calendar moment but the angle is climate-positive-oats (existing Willa's narrative). Surfaced in THE WINDOWS callout. No standalone brief generated this week — heritage Reel R4 absorbs the climate-positive frame as supporting context.",  by:"Cultural Editor"},
+  {signal:"Direct Califia name-check in matcha response brief",                  reason:"Internal/Consumer rule — never name competitors in consumer copy. Matcha quiet-confidence Barista response references the category move (matcha + plant milk crossover) without name-checking Califia. 'Big oat milk just launched' → reframed as 'matcha is the lane; willa's barista was already in it.'",  by:"Cultural Editor"},
+  {signal:"Beans-as-protein 'switch to beans' UGC stitch",                       reason:"Bloomberg Apr 24 beans wave is a TikTok story but the brief direction was riding the bean creators directly. Risk: Willa's becomes plant-milk-coda to a bean post. Slot reframed as 'oats already filled the protein gap before beans got rebranded' Pattern 05 Reel — Willa's stays the protagonist (TT-4 BIG version of the angle).",  by:"Cultural Editor"},
+  {signal:"Memorial Day 'mocktail of the week' brief (Pinterest Predicts crossover)", reason:"Pinterest's Sophisticated Alcohol-Free trend is real, but Willa's mocktail brief in MD-weekend slot stretched the latte cap rule (Barista is already at TT-2 matcha response). Slot reframed as overnight-oats Memorial Day brunch pin (PIN-1) — keeps the family-kitchen anchor without a Barista doubling.",  by:"Cultural Editor"},
+  {signal:"Tori Amos / Father John Misty May releases as Pulse",                 reason:"Tori Amos 'In Times of Dragons' too political; Father John Misty 'The Payoff' too psychedelic / prog-touch. Both miss Willa's warm-grandmother-kitchen tonal pocket. Kevin Morby May 15 cleared the Resonance Test instead.",  by:"Cultural Editor"}
+];
+
+
+// ─── Brand voice — caption variants by tone ────
+// CAPTION_VARIANTS — renamed from FOUNDER_VOICE 2026-04-21 per Christina's
+// ask: captions default to Willa's brand voice, not a founder first-person
+// POV that only works for one person. Each brief carries 3 tone variants
+// (direct / warm / punchy) — same labels, different voicing. First-person
+// "i/my/me" is reserved for briefs where Christina is literally on camera
+// (mom-activist + family-moment DNA); even then, captions lean third-person
+// so the post could be written by anyone on the team.
+const CAPTION_VARIANTS = {
+  "MAY18-TT-1": {
+    direct:"fiber is the new TikTok trend. (oats invented it 10,000 years ago.) 🌾\n\nWilla's original keeps the whole oat groat — bran + germ + endosperm. that's where the fiber lives. 2g+ prebiotic fiber per cup. 4g+ protein. 1g sugar.\n\nmost oat milks filter the bran + germ out and turn the starch into sugar. they lose the fiber AND the protein. Willa's just kept the whole oat.\n\nshhh… the receipts have been on the back of the carton the whole time. 🌾",
+    warm:"fiber is the new TikTok trend. (oats invented it 10,000 years ago.) Willa's original — 2g+ prebiotic fiber per cup, whole oat groat, 4g+ protein. shhh… the receipts have been on the back of the carton. 🌾",
+    punchy:"fiber is the new TikTok trend. (oats invented it 10,000 years ago.) 🌾"
+  },
+  "MAY18-IG-R1": {
+    direct:"memorial day morning starts in this kitchen. 💛\n\nthe holiday weekend's brunch counter, the iced coffee on the way to the cookout, the kids' glass before the pool — one carton does all three.\n\nfour ingredients on the back panel:\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\nWilla was born 1921. Willa's launched 2021. the carton's been on the family-kitchen counter every weekend morning since.\n\n(no strategy for the brunch. just the carton.) 🌾",
+    warm:"memorial day morning starts in this kitchen. (one carton: the brunch, the iced coffee, the kids' glass.) 💛",
+    punchy:"memorial day morning starts in this kitchen. 💛"
+  },
+  "MAY18-TT-2": {
+    direct:"matcha is everywhere this season. Willa's Barista was already in the cup. 🍵🌾\n\nthe matcha-pour wave is here. Willa's Barista is the cleanest oat milk to drink it with:\n→ no rapeseed (canola) oil\n→ no gums, no stabilizers\n→ 50% less sugar than other barista oat milks\n→ organic + WBENC mother-founded\n\nshow the back panel. the matcha takes care of the rest. 🌾",
+    warm:"matcha is everywhere this season. Willa's Barista was already in the cup. (no rapeseed. no gums. 50% less sugar than other barista oat milks.) 🍵",
+    punchy:"matcha is everywhere. Willa's Barista was already in the cup. 🍵"
+  },
+  "MAY18-IG-R2": {
+    direct:"real food. real fiber. real protein. 🌾\n\n(real boring receipts.)\n\nWilla's Original is what 'not ultraprocessed' actually looks like on the label:\n→ 4 ingredients (filtered water · organic whole grain oats · organic vanilla extract · sea salt)\n→ whole oat groat — bran + germ + endosperm kept (not filtered into syrup)\n→ no isolates · no gums · no engineered fillers\n→ 2g+ fiber · 4g+ protein · 1g sugar (from the oats, nothing added)\n\nmost oat milks filter the bran + germ out, turn the starch into syrup, then add the fiber + protein back as isolates. Willa's just kept the whole oat the whole time.\n\nthe receipts are boring. (that's the whole point.) 🌾",
+    warm:"real food. real fiber. real protein. (real boring receipts.) Willa's Original — 4 ingredients, whole oat groat, no isolates. 🌾",
+    punchy:"real food. real fiber. real protein. (real boring receipts.) 🌾"
+  },
+  "MAY18-PIN-1": {
+    direct:"the cleanest iced coffee you'll make this summer. ☕💛\n\nWilla's Barista pours clean — no rapeseed, no gums, no separation in the glass.\n\nthe recipe:\n→ 4 oz cold espresso (or strong cold brew)\n→ ice in a tall glass\n→ ¼ cup Willa's Barista, cold-frothed\n→ pinch of flaky sea salt on top\n\nwhy it's the morning pour:\n✅ no rapeseed (canola) oil\n✅ no gums, no stabilizers\n✅ 50% less sugar than other barista oat milks\n✅ organic, simple ingredients\n✅ WBENC mother-founded\n\namazing in cold brew. adored by anyone who reads a label. 😋",
+    warm:"the cleanest iced coffee you'll make this summer. ☕ (no rapeseed. no gums. 50% less sugar than other barista oat milks.) 💛",
+    punchy:"the cleanest iced coffee you'll make this summer. ☕💛"
+  },
+  "MAY18-IG-R3": {
+    direct:"no isolates. no fillers. (just oats.) 🌾\n\nWilla's Original — 4 ingredients on the back of the carton:\n→ filtered water\n→ organic whole grain oats (the whole oat — bran, germ, endosperm)\n→ organic vanilla extract\n→ sea salt\n\nno engineered fillers. no gums. no 'natural flavors.' no isolated proteins, no isolated fibers. 2g+ fiber, 4g+ protein, 1g sugar — all of it from the oat itself.\n\nmost oat milks process the starch into syrup and add the fiber + protein back as isolates. Willa's just kept the whole oat the whole time.\n\nthe simpler the deck, the better it reads. shhh… 💛",
+    warm:"no isolates. no fillers. (just oats.) Willa's Original — 4 ingredients, whole oat groat, no gums. 🌾",
+    punchy:"no isolates. no fillers. (just oats.) 🌾"
+  },
+  "MAY18-TT-3": {
+    direct:"a label is a claim. a test is a fact. 🌾\n\nWilla's tests every lot for glyphosate residue (Detox Project Certified Glyphosate-Free). that's the structural answer to every 'is my oat milk safe' question.\n\nthe cert wall on the back of the carton:\n→ USDA Organic\n→ Detox Project Glyphosate-Free (every lot tested)\n→ Non-GMO Project Verified\n→ WBENC mother-founded\n\nthe receipts come standard. shhh… 💛",
+    warm:"a label is a claim. a test is a fact. (Willa's tests every lot — Detox Project Glyphosate-Free.) 💛",
+    punchy:"a label is a claim. a test is a fact. 💛"
+  },
+  "MAY18-IG-F1": {
+    direct:"the mother-founded pantry. 🌾\n\n(the brands we cook with all year.)\n\nwhen the carton, the cookie, the chutney, and the spice mix are all founded by women — the pantry tells a quiet story. these six are on rotation:\n\n→ Willa's Original oat milk · mother-founded, named for a grandmother (born 1921)\n→ Partake Foods · top-9 allergen-free, mother-founded\n→ Bobo's Oat Bars · mother-daughter, boulder kitchen\n→ Maazah · mother + three daughters, afghan-style chutneys\n→ Omsom · sister-founded asian pantry starters\n→ 2Betties · mother-daughter, swizzle\n\nthe pantry is forever. the cartons stay. 💛",
+    warm:"the mother-founded pantry. (the brands we cook with all year.) Willa's, Partake, Bobo's, Maazah, Omsom, 2Betties. 💛",
+    punchy:"the mother-founded pantry. (forever.) 💛"
+  },
+  "MAY18-TT-4": {
+    direct:"beans are having a moment. oats keep having a millennium. 🌾\n\nplant-protein-was-always-the-answer. oats had the receipts ~10,000 years before bloomberg covered it.\n\nWilla's original — 4 ingredients, the whole entire oat:\n→ 4g+ protein per cup\n→ 2g+ prebiotic fiber per cup\n→ 1g sugar (from the oats, nothing added)\n\nthe protein-fiber twofer didn't need rebranding. (just keep the whole oat in the carton.) 💛",
+    warm:"beans are having a moment. oats keep having a millennium. (4g+ protein. 2g+ fiber. 1g sugar.) 💛",
+    punchy:"beans are having a moment. oats keep having a millennium. 🌾"
+  },
+  "MAY18-PIN-2": {
+    direct:"overnight oats — but make it kefir-soaked. 💛😊\n\nthe pinterest fermentation wave meets a 30-second mason-jar morning.\n\nyou need:\n→ ½ cup rolled oats\n→ ½ cup Willa's original\n→ ½ cup plain kefir\n→ drizzle of maple syrup\n→ a pinch of cinnamon\n\nshake in a mason jar. fridge overnight. morning: top with berries + flaky salt.\n\nprebiotic fiber from the oats. probiotics from the kefir. Willa's original is the cleanest pour to combine them — 4 ingredients, organic, the whole entire oat. 🌾\n\namazing on a slow morning. adored by kids + parents.",
+    warm:"overnight oats — but make it kefir-soaked. (prebiotic from the oats. probiotic from the kefir. 30-second mason-jar morning.) 💛😊",
+    punchy:"overnight oats — but make it kefir-soaked. 💛😊"
+  },
+  "MAY18-IG-R4": {
+    direct:"105 years of one kitchen. 🌾\n\n(the oats sequester carbon. the carton tells you so.)\n\nWilla was born 1921. Willa's launched 2021. organic oats. whole oat groat (zero food waste in our process). carbon-sequestering by design — they improve soil health while they grow.\n\nthe cert stack tells the story:\n→ USDA Organic\n→ Detox Project Glyphosate-Free\n→ WBENC mother-founded\n→ Zero Food Waste\n\nthe brands that outlast a category pick a posture and hold it. (clean. organic. climate-positive. four ingredients.) shhh… 💛",
+    warm:"105 years of one kitchen. (the oats sequester carbon. the carton tells you so.) USDA Organic + Detox Project + WBENC + Zero Food Waste. 💛",
+    punchy:"105 years of one kitchen. (carbon sequestered, on purpose.) 💛"
+  },
+  "MAY18-TT-5": {
+    direct:"reading a plant-milk label out loud as a stress test. 🌾\n\n(spoiler: one of these has 4 ingredients.)\n\nthe rule: read every word on each carton's back panel. no skipping. the joke is the LENGTH.\n\nWilla's original — 4 ingredients, 4 seconds:\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\nthat's it. that's the carton.\n\nshhh… the read should be that short. 🌾",
+    warm:"reading a plant-milk label out loud as a stress test. (spoiler: one of these has 4 ingredients.) Willa's took 4 seconds. shhh… 🌾",
+    punchy:"reading a plant-milk label out loud as a stress test. (Willa's took 4 seconds.) 🌾"
+  },
+  "MAY18-IG-R5": {
+    direct:"saturday-morning carton. holiday-weekend pour. 🌾\n\nfour ingredients in the carton. four generations in the kitchen.\n\na kid pouring Willa's original from a stained, well-loved carton into a glass — cofounder-sister steadying the pour. memorial day weekend, the family-kitchen edition.\n\nWilla was born 1921. Willa's launched 2021. four ingredients, organic, mother-founded, WBENC.\n\nthe weekend stays in the kitchen. the carton stays on the counter. shhh… 💛",
+    warm:"saturday-morning carton. holiday-weekend pour. (named for a grandmother. poured by her great-granddaughter.) 💛",
+    punchy:"saturday-morning carton. holiday-weekend pour. 💛"
+  },
+  "MAY18-TT-6": {
+    direct:"what's in the cooler: holiday-weekend mom edition. 🌾💛\n\nthe inventory:\n→ a half-eaten string cheese (?)\n→ four (4) Capri Suns I swore we'd never buy\n→ a melted ice pack that was supposed to be ice\n→ a granola bar of unknown origin\n→ a Willa's Kids 4-pack ✨\n\nthe one I'm not apologizing for:\n✅ 8g plant-powered protein\n✅ DHA omega-3\n✅ plant calcium + vitamin D\n✅ top-9 allergen-free\n✅ organic, simple ingredients\n\n(adored by everyone in the back seat.) 🙌",
+    warm:"what's in the cooler: holiday-weekend mom edition. (Willa's Kids — 8g protein, DHA, allergen-free.) adored by everyone in the back seat. 🙌",
+    punchy:"what's in the cooler: holiday-weekend mom edition. 🙌"
+  },
+  "MAY18-PIN-3": {
+    direct:"no-bake brownie bites — our new fav summer dessert. 🍫😋\n\nreal cacao, not powder. 5 ingredients in the milk. 5 ingredients in the bite.\n\nyou need:\n→ 1 cup pitted medjool dates (soaked 10 min)\n→ ½ cup raw almonds\n→ ¼ cup Willa's chocolate\n→ 2 tbsp cocoa powder\n→ pinch sea salt\n→ flaky salt to finish\n\nblend dates + almonds in a food processor. add Willa's chocolate + cocoa powder + sea salt — pulse until it forms a dough. roll into 12 balls. flaky salt on top.\n\nno bake. no refined sugar. absolutely no cane sugar. real cacao.\n\ngood food awards best beverage winner — and you can taste why. 💛",
+    warm:"no-bake brownie bites with Willa's chocolate — our new fav summer dessert. (real cacao, not powder. 5 ingredients in the milk. 5 in the bite.) 🍫😋",
+    punchy:"no-bake brownie bites · Willa's chocolate · real cacao. our new fav. 🍫😋"
+  },
+  "MAY18-IG-F2": {
+    direct:"every stamp on the back of the carton — and what each one means. 🌾\n\n→ USDA Organic · grown without synthetic pesticides + GMOs\n→ Detox Project Glyphosate-Free · we test every lot\n→ Non-GMO Project Verified · independent third-party check\n→ WBENC · women-owned, mother-founded\n→ Kosher · OU-certified\n→ Vegan · plant-only formulation\n→ Yuka 100/100 (Kids) · perfect score on the clean-label app\n→ Good Food Awards (Chocolate) · best beverage of the year\n→ Bobby Approved · pediatric-clean shortlist\n\nthe credentials take ~5 years to earn. the carton's been here the whole time. shhh… 💛",
+    warm:"every stamp on the back of the carton — and what each one means. (USDA Organic + Detox Project + WBENC + Yuka 100 + Good Food Awards + Bobby Approved + Non-GMO + Kosher.) 💛",
+    punchy:"every stamp on the back of the carton — and what each one means. 💛"
+  },
+  "MAY18-IG-R6": {
+    direct:"kids drink it. parents pour it. 💛✨\n\none carton, two coffees, no fight.\n\nWilla's kids was built for kids — but the parents caught on first. the carton's been there the whole time (the cooler with the apple juice; the coffee on the counter).\n\nwhy it's always pulling double duty:\n✅ 8g of plant-powered protein\n✅ DHA omega-3s from algae\n✅ plant calcium + vitamin D\n✅ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n✅ organic, simple ingredients\n✅ yuka 100/100\n\nbonus: it 'oddly blends + creates the best swirls' in iced coffee. (real quote, real review.)\n\nadored by toddlers + kids. loved by everyone else. 🙌",
+    warm:"kids drink it. parents pour it. (one carton, two coffees, no fight.) 8g protein. DHA. allergen-free. 'oddly blends + creates the best swirls.' 💛",
+    punchy:"kids drink it. parents pour it. one carton, two coffees, no fight. 💛"
+  },
+  // Diversity-rewrite additions (added 2026-05-18) — 7 new briefs covering 10 zero-coverage signals
+  "MAY18-IG-R7": {
+    direct:"the cleanest one on the shelf is the one you can read. 🌾\n\nwhen the carton you pick up actually tells you what's in it:\n→ 4 ingredients (water · oats · vanilla · salt)\n→ 1g sugar (from the oats, nothing added)\n→ 4g+ protein · 2g+ prebiotic fiber\n→ USDA Organic + Detox Project Glyphosate-Free + WBENC\n\nWilla's Original — the carton that reads like a love letter to the oat. shhh… 💛",
+    warm:"the cleanest one on the shelf is the one you can read. (4 ingredients · 1g sugar · organic · glyphosate-free.) 💛",
+    punchy:"the cleanest one on the shelf is the one you can read. 💛"
+  },
+  "MAY18-TT-7": {
+    direct:"the original grandfluencer was making oatmeal way before tiktok. 👵\n\n(her name's on the carton.)\n\nWilla was born 1921. Willa's launched 2021. one ingredient list. one kitchen ethos. one carton.\n\nthe grandfluencer wave (cooking grandma TikTok, gen z trusting the grandma kitchen) isn't a trend — it's a return. nourish the spark in everyone. real food. simple ingredients.\n\nshhh… 🌾",
+    warm:"the original grandfluencer was making oatmeal way before tiktok. (her name's on the carton.) born 1921. launched 2021. shhh… 👵🌾",
+    punchy:"tiktok finally caught up to my grandmother. 👵"
+  },
+  "MAY18-TT-8": {
+    direct:"cottage cheese oats wanted a cleaner pour. 🥣🌾\n\n(we kept the whole oat in the carton.)\n\nthe may 2026 breakout: high-protein cottage cheese overnight oats. 15-20g protein per jar. the curd-swirl is the visual; the math is the move.\n\nthe recipe:\n→ ½ cup rolled oats\n→ ½ cup Willa's original\n→ ½ cup whole-milk cottage cheese\n→ 1 tbsp maple syrup\n→ pinch of cinnamon\n\nshake in a mason jar. fridge overnight. wake up to 18g protein + 5g fiber + a clean pour with no gums fighting the curds.\n\nWilla's original: whole oat groat, 4 ingredients, organic. (the cleanest base for the format.) 🌾",
+    warm:"cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.) 18g protein. 5g fiber. 4 ingredients in the pour. 🥣",
+    punchy:"cottage cheese oats — but cleaner. 🥣🌾"
+  },
+  "MAY18-IG-F3": {
+    direct:"clean label is the floor now. 🌾\n\n(organic + glyphosate-free is the bar.)\n\nthe category went clean — most decks finally read like food. your next-level check, whether you're picking up our carton or theirs:\n\n→ whole oat groat (most oat milks process the starch into sugar and filter the fiber + protein out)\n→ certified USDA Organic\n→ certified glyphosate-free, every lot (Detox Project)\n→ real, named ingredients (not 'natural flavors' or stabilizers)\n\nWilla's hits all four. we built the brand against these standards. use the framework on any carton — yours or ours.\n\n(no name-checks. no asterisks. just the checklist.) 🌾",
+    warm:"clean label is the floor now. (organic + glyphosate-free is the bar.) 4-line check: whole oat · organic · glyphosate-free · real ingredients. 🌾",
+    punchy:"clean is the floor. (here's the bar.) 🌾"
+  },
+  "MAY18-TT-9": {
+    direct:"Colbert signs off thu may 21. 🎤💛\n\n(the kitchen's been here since 1921.)\n\nthe late show wraps after 10 years on air — an era of late-night ending in real time. the brands that outlast a format pick a posture and hold it.\n\nWilla was born 1921. Willa's launched 2021. one carton. four ingredients. no rebranding cycle.\n\n→ filtered water\n→ organic whole grain oats\n→ organic vanilla extract\n→ sea salt\n\ngoodnight, Stephen. shhh… 💛",
+    warm:"Colbert signs off thu may 21. (the kitchen's been here since 1921.) 10 years of late-night vs. 105 years of one kitchen. 💛",
+    punchy:"Colbert signs off thu may 21. (the kitchen's been here since 1921.) 💛"
+  },
+  "MAY18-PIN-4": {
+    direct:"pinterest's 2026 food breakout: fermentation. 🥒\n\n(your gut said duh.)\n\npinterest just named fermentation one of the three food breakouts of 2026 — kefir, mild miso, in-house kraut. the gut-health lane is officially mainstream.\n\nWilla's original is the cleanest 'prebiotic' pour to pair with your fermented pantry — 2g+ prebiotic fiber per cup, whole oat groat (where the fiber lives). pre + post = the full picture.\n\nrecipe idea (save for sunday meal-prep): overnight oats with Willa's + plain kefir + maple + cinnamon. soak. fridge. wake up to a 30-second mason-jar morning. 🌾\n\nshhh… your microbiome thanks you.",
+    warm:"pinterest's 2026 breakout: fermentation. (your gut said duh.) 2g+ prebiotic fiber from whole oat groats. pre + post = the full picture. 🥒",
+    punchy:"pinterest's 2026 breakout: fermentation. (your gut said duh.) 🥒"
+  },
+  "MAY18-IG-R8": {
+    direct:"the parent-creator rule: read the label, then pour the kids' carton. 👋\n\n(for the moms already doing the work.)\n\nthe healthy-ish-family-dinner lane on tiktok keeps growing — real kitchens, real chaos, real label-reading. Willa's kids is the carton built for that pantry:\n\n→ 100/100 Yuka score (the only kids drink to hit it)\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 8g protein · 3g fiber · DHA omega-3 (algae oil)\n→ 50% less sugar than dairy\n→ Bobby Approved\n\nshhh… we built it because parents asked us to. 💛",
+    warm:"the parent-creator rule: read the label, then pour the kids' carton. (100/100 yuka. top-9 allergen-free. 8g protein.) 💛",
+    punchy:"read the label, then pour the kids' carton. 💛"
+  }
+};
+
+const SCANNED_TOTAL = 312;
+const SURFACED_TOTAL = TRENDS.length;
+const KILLED_TOTAL = SCANNED_TOTAL - SURFACED_TOTAL;
+
+const INTEL_COLOR = {TREND:"#73B2C9", AUDIENCE:"#A191B2", COMPETITOR:"#DC2626", PULSE:"#9E652E"};
+
+// ─── Competitor Watch · expanded data ─────────────────────
+const COMPETITOR_TIMELINE = [
+  {date:"May 18", brand:"Califia",   compId:"C-2", action:"Blueberry Matcha Almond Latte launches at Tesco UK (3-month exclusive) — premium 0.4% single-origin Japanese matcha, almond-milk base, first-to-market UK matcha innovation",  note:"Matcha-as-plant-milk-co-star moment is competitor-validated. US extension watch (Califia's UK SKUs reach US within 6-12 months). Willa's matcha quiet-confidence response TT-2 queued TUE MAY 19 9am — RIDE NOW"},
+  {date:"May 10", brand:"Chobani",   compId:"C-4", action:"Now owns La Colombe outright — full $900M consolidation closed (Sprudge confirmation)",  note:"RTD-coffee category consolidates into one mega-platform. Willa's structural counter: 'real-food protein in the carton' lane stays distinct"},
+  {date:"May 7",  brand:"Category",  compId:"C-1", action:"FoodNavigator-USA continues landing — 'plant-based dairy outperforming plant-based meat'",  note:"Category framing piece still working through trade press. Willa's quiet-confidence Reel pattern from MAY 11 wk validated (6.5× saves)"},
+  {date:"Apr 30", brand:"Oatly",     compId:"C-1", action:"Q1 2026 earnings — US oat-milk category share crossed 30% for the first time. Revenue +15.6%, gross margin 33.4%, adjusted EBITDA positive at SEK 5M",  note:"The 30% category-share number is the durable signal — alt-milk shelf has a leader. Willa's lane: cleanest answer inside the leading lane"}
+];
+
+
+const COMPETITOR_CALENDAR = [
+  {date:"MAY 18",     brand:"Califia",  event:"Blueberry Matcha Almond Latte UK launch (Tesco, 3-mo exclusive)",            impact:"Matcha-as-plant-milk-co-star is now category-validated. Willa's matcha quiet-confidence Barista Reel (no-name response) TUE MAY 19 9am",  confirmed:true},
+  {date:"MAY 20",     brand:"Category", event:"World Bee Day (UN observance) · sustainability + pollinator focus",          impact:"Climate-positive-oats lane opens · Willa's heritage Reel FRI MAY 22 stitches the carbon-sequestration angle",  confirmed:true},
+  {date:"MAY 23",     brand:"Category", event:"Cannes Palme d'Or Closing Ceremony · Barbra Streisand honored in absentia",  impact:"Festival closes — 11-day Croisette food-stitch lane sunsets. Willa's heritage Reel TUE MAY 19 captures the closing-weekend tail",  confirmed:true},
+  {date:"MAY 24-25",  brand:"Category", event:"Memorial Day Weekend · MON MAY 25 federal observance",                       impact:"Summer family-kitchen + cookout cycle opens. 3 briefs anchored: Mon heritage tease + Sat multi-generation pour + Sun MD carousel",  confirmed:true},
+  {date:"JUN 25",     brand:"FX/Hulu",  event:"The Bear S5 premieres (8 episodes, final season)",                            impact:"Kitchen-coded prestige TV peaks. Willa's prep-counter pattern compounds through summer",  confirmed:true},
+  {date:"EARLY JUNE", brand:"Califia",  event:"Simple & Organic Kids line still expected (delayed from early May)",          impact:"Monitor for Kids line entry · cert-stack counter-brief on standby",  confirmed:false},
+  {date:"JUNE",       brand:"Category", event:"National Dairy Month",                                                        impact:"Counter-positioning window for plant-based brands — Willa's lane already proven this quarter",  confirmed:true},
+  {date:"JULY (EST)", brand:"Chobani",  event:"New Chobani Oat barista SKUs (post-Norton Shores capacity ramp)",             impact:"RTD-coffee consolidation now closed. Willa's protein-in-the-carton lane stays distinct",  confirmed:false}
+];
+
+
+const SHARE_OF_VOICE = [
+  {brand:"Oatly",         pct:41, color:"#0EA5E9"},
+  {brand:"Califia Farms", pct:23, color:"#F59E0B"},
+  {brand:"Chobani Oat",   pct:17, color:"#A191B2"},
+  {brand:"Planet Oat",    pct:10, color:"#64748B"},
+  {brand:"Willa's",       pct:7,  color:"#75C596", us:true},
+  {brand:"Elmhurst 1925", pct:2,  color:"#94A3B8"}
+];
+
+
+// Per-section editorial ledes for the Competitor Watch tab. Written during the
+// weekly refresh. Each is a single advisor sentence that frames the section as
+// counsel, not reporting — addresses the "advising, not reporting" rule added
+// 2026-04-17.
+const COMP_WEEKLY_POV = {
+  happened: "Oatly Q1 print continued landing — US oat-milk category share crossed 30% for the first time (Apr 30 earnings, May trade press). Califia announced MAY 18 UK launch of Blueberry Matcha Almond Latte (Tesco exclusive). Chobani fully consolidated La Colombe MAY 10 (Sprudge confirmation). Healthy Eating Research published its May 2026 UPF expert-panel policymaker report. EWG vs EPA glyphosate lawsuit continued into mainstream press; Pinterest Predicts 2026 named Cabbage Crush + fermentation as breakouts.",
+  coming:   "Memorial Day Weekend MAY 24-25 opens the summer family-kitchen + cookout cycle (federal observance MON MAY 25). Cannes closing weekend SAT MAY 23 — Palme d'Or ceremony, Barbra Streisand honored in absentia (knee injury). Eurovision Final SAT MAY 16 already passed but design legacy (Viennese coffee-house heritage) carries into the week. The Bear S5 premieres JUN 25 — kitchen-coded prestige TV ramps marketing. World Bee Day WED MAY 20 (sustainability + pollinator-friendly oats).",
+  plays:    "17 briefs on the table — 2 RIDE NOW (matcha competitor-response TT TUE MAY 19 morning · fibermaxxing BIG SWING TT MON MAY 18 morning). 1 BIG SWING heritage IG-R1 + 1 BIG SWING fibermaxxing TT-1. Memorial Day Weekend is the durable anchor (capped at 3 briefs per cap rule). Pull-quote: 'fiber is the new TikTok trend. (oats invented it 10,000 years ago.)' Strategic moves: fibermaxxing founder-POV (Christina tier 2), matcha quiet-confidence response to Califia's MAY 18 launch (no name), Memorial Day weekend heritage anchor (Saturday multi-generation pour tier 1), UPF expert-panel quiet-authority Reel, and the 'ingredients we already are' anti-isolate stance carrying the Pattern 02 + Patagonia gravity from last week's heritage hero."
+};
+
+
+// ─── Performance · Week of MAY 11 – MAY 17 results ──────────────
+const LAST_WEEK_RESULTS = [
+  {
+    id:"MAY11-TT-1", concept:"\"44 ingredients now need warnings. willa's has 4.\" — Louisiana SB 14 quiet-receipt response", platform:"TikTok", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9",
+    sourceTrend:"Louisiana SB 14 implementation", trendId:null,
+    views:486000, saves:30200, shares:14400, comments:2240,
+    savesDelta:8.6, sentiment:0.97, hero:true,
+    note:"Highest-performing brief of the refresh. Louisiana SB 14 quiet-receipt BIG SWING anchored the week. Christina founder-POV tier 2 (activist stance) — lead-with-solution structure delivered 8.6× saves, 0.97 sentiment. Pattern repeats this week with the fibermaxxing founder-POV BIG SWING."
+  },
+  {
+    id:"MAY11-IG-R4", concept:"\"the shows that last aren't the ones that pivot. they're the ones with a real kitchen at the center.\" — long-running-brand parallel", platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2",
+    sourceTrend:"The Neighborhood series finale MAY 11", trendId:null,
+    views:412000, saves:24400, shares:12200, comments:1820,
+    savesDelta:7.4, sentiment:0.95, hero:true,
+    note:"Pattern 02 (World-Context Tie-In) + Patagonia gravity delivered. No on-camera founder, no show namecheck — the parallel did the work. Wed 7pm rideNow slot captured the 48-hr post-finale lookback window. Validated the Pattern 02 / heritage-gravity combo for future cultural-stitch posts that need authority not opportunism."
+  },
+  {
+    id:"MAY11-IG-R1", concept:"\"the runway moves from the gala to the croisette. (the kitchen stays at home.)\" — Cannes pre-game heritage tease", platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2",
+    sourceTrend:"Cannes Film Festival MAY 12 opening", trendId:null,
+    views:386000, saves:21600, shares:9800, comments:1480,
+    savesDelta:7.1, sentiment:0.96,
+    note:"Heritage tier 1 cofounder-sister at the counter — editorial mood, pure brand voice. Pre-game tease format set up the same-night opener stitch successfully (R2 hit higher reach). Editorial Reels continue as Willa's highest-sentiment format."
+  },
+  {
+    id:"MAY11-IG-R2", concept:"\"fashion-is-art is on tour. ingredient-as-art is on the counter.\" — Cannes same-night opener stitch", platform:"IG Reel", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596",
+    sourceTrend:"Cannes Film Festival opening night MAY 12", trendId:null,
+    views:572000, saves:14600, shares:18200, comments:3140,
+    savesDelta:4.3, sentiment:0.90, hero:true,
+    note:"Highest-reach post of the week (572K views) — cultural-stitch pattern confirmed reach amplifier (+26% new followers, +$0.31 cost-per-save). Spark Ad delivered $240 across 48 hrs as planned. Met-Gala-to-Cannes editorial bridge validated."
+  },
+  {
+    id:"MAY11-TT-7", concept:"\"the contents of a mom-bag, vol. 1 — and only one of these is something I'm proud of.\" — Partake-style relatable confession", platform:"TikTok", pillar:"PARENTING", pillarColor:"#9E652E",
+    sourceTrend:"Mother's Day continuing + Pattern 03 muse", trendId:null,
+    views:298000, saves:19400, shares:10800, comments:1620,
+    savesDelta:6.8, sentiment:0.95,
+    note:"Cofounder-sister POV (per The Christina Rule) + Partake muse landed clean. Pattern 03 (Relatable Confession) became Willa's first true humor-pattern hit. Saturday 10am slot validated. This week's vol. 2 (Memorial Day road-trip edition) continues the format with a fresh trigger."
+  },
+  {
+    id:"MAY11-TT-3", concept:"\"but my name is Original so it's okay.\" — TikTok roast format, brand-payload", platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596",
+    sourceTrend:"NewEngen May 2026 TikTok roast format peak", trendId:null,
+    views:524000, saves:12800, shares:15400, comments:2680,
+    savesDelta:3.9, sentiment:0.88,
+    note:"Format-payload meme-Reel — reach amplifier (524K views) with lower save-rate (3.9×), matches the Met Gala / Devil Wears Prada cultural-stitch pattern. Pure brand voice, no founder. The 'Son original' audio carried the recognition; the back panel landed the punchline."
+  },
+  {
+    id:"MAY11-PIN-3", concept:"\"ingredients we don't use: an autobiography.\" — Pattern 10 wordplay pin", platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596",
+    sourceTrend:"Pattern 10 wordplay + clean-label premium data", trendId:null,
+    views:84200, saves:5840, shares:0, comments:0,
+    savesDelta:4.4, sentiment:0.97,
+    note:"Pattern 10 (Wordplay / Text Joke) Pinterest pin — type-led format that compounds on save-share rate. Pinterest pin compounded for 6+ days (CTR up daily through Sun MAY 17). Olipop / Omsom muse posture validated for Pinterest-first text content."
+  },
+  {
+    id:"MAY11-IG-F1", concept:"\"the brands that did the dressing AND the founding.\" — Met Gala retrospective + Willa's heritage parallel", platform:"IG Feed", pillar:"REVIEWS/RECS", pillarColor:"#A191B2",
+    sourceTrend:"Met Gala best-dressed retrospectives + Beyoncé Cécred", trendId:null,
+    views:286000, saves:18800, shares:9400, comments:1280,
+    savesDelta:6.1, sentiment:0.98,
+    note:"Highest sentiment of the week (0.98) — 'founded by a woman, worn by another' framing landed clean. Carousel format outperformed Reels for the peer-set retrospective. Pattern repeats this week with the Memorial Day brand-that-shows-up-every-weekend IG-F2."
+  }
+];
+
+const PERF_KPIS = {
+  shipped: 18,
+  totalReach: 3186400,
+  avgSavesDelta: 5.8,
+  topFormat: "Authority + heritage + long-running-brand parallel Reels"
+};
+
+const PERF_INSIGHTS = [
+  {
+    title:"Louisiana SB 14 quiet-receipt BIG SWING hit 8.6× saves — authority + lead-with-solution + Christina tier-2 founder POV is the highest-defensibility combo",
+    detail:"The '44 ingredients now need warnings. willa's has 4.' TikTok hit 8.6× saves and 0.97 sentiment — highest combined-metric brief of the refresh. The structural learning: authority briefs with Christina tier-2 founder-POV (activist stance, not heritage) outperform reach-format Reels on save-rate by 2-3×. This week's fibermaxxing TT-1 BIG SWING applies the same combo — Christina tier-2 + lead-with-solution + structural Willa's truth (oats as the original fibermaxxing food).",
+    agent:"composer"
+  },
+  {
+    title:"Pattern 02 (World-Context Tie-In) + Patagonia gravity confirmed as a top heritage format — Neighborhood-finale parallel hit 7.4× saves WITHOUT a name-check",
+    detail:"The 'shows that last have a real kitchen at the center' Reel hit 7.4× saves and 0.95 sentiment — no founder on camera, no show namecheck. The cultural moment carried the resonance; the heritage carton landed the gravity. This week, the same pattern lives in the Memorial Day Weekend heritage tease (IG-R1 BIG SWING) and the heritage 100yrs Reel (IG-R4) — observation, not opportunism.",
+    agent:"editor"
+  },
+  {
+    title:"Cannes same-night stitch confirmed as reach amplifier (572K views, +26% new followers) — Spark Ad budget tuned for cultural-stitch profile-visit conversion",
+    detail:"Cannes opener stitch + Pattern 03 mom-bag both fit the documented cultural-stitch pattern: reach-amplifier formats (high views, lower save-rate, high profile-visit conversion). Spark Ad delivered $240 over 48 hrs as planned. This week's matcha quiet-confidence response (RIDE NOW, $260 Spark Ad) sizes similarly — Califia MAY 18 launch is the cultural-stitch trigger, brand-voice back-panel reveal is the reach amplifier.",
+    agent:"paid"
+  },
+  {
+    title:"Pattern 03 (Relatable Confession) + Partake muse landed first true humor-pattern hit — mom-bag Reel hit 6.8× saves, 0.95 sentiment",
+    detail:"Cofounder-sister POV mom-bag confession became Willa's first true humor-pattern hit (Christina's 2026-04-22 humor ask answered). Saturday 10am slot validated. The 'only thing I'm proud of' tender-confession structure is now a recurring format — this week's vol. 2 (Memorial Day road-trip edition · TT-6) continues the format with a fresh trigger (cooler + kids' snacks + Willa's Kids 4-pack as the 'only proud item').",
+    agent:"composer"
+  }
+];
+
+
+// ─── Emoji + confidence system ────────────────────────────
+const PLATFORM_EMOJI = {
+  "IG Reel":"🎬",
+  "TikTok":"🎵",
+  "Pinterest":"📌",
+  "Threads":"💬",
+  "IG Feed":"📰",
+  "Community Ops":"📣",
+  "IG Story":"📱"
+};
+const PILLAR_EMOJI = {
+  "HEALTH/WELLNESS":"🌿",
+  "INGREDIENTS/RECIPES":"🥣",
+  "PARENTING":"👶",
+  "REVIEWS/RECS":"⭐"
+};
+
+// Confidence score 1-5 per pillar, computed from last week's save-delta history
+const PILLAR_CONFIDENCE = (()=>{
+  const by = {};
+  LAST_WEEK_RESULTS.forEach(r=>{
+    if(!by[r.pillar]) by[r.pillar] = {sum:0, count:0};
+    by[r.pillar].sum += r.savesDelta;
+    by[r.pillar].count += 1;
+  });
+  const out = {};
+  Object.entries(by).forEach(([k,v])=>{
+    const avg = v.sum/v.count;
+    let s = 3;
+    if(avg >= 5) s = 5;
+    else if(avg >= 3.5) s = 4;
+    else if(avg >= 2) s = 3;
+    else if(avg >= 1) s = 2;
+    else s = 1;
+    out[k] = s;
+  });
+  // defaults for pillars without historical data
+  ["HEALTH/WELLNESS","INGREDIENTS/RECIPES","PARENTING","REVIEWS/RECS"].forEach(p=>{ if(!(p in out)) out[p] = 3; });
+  return out;
+})();
+const CONFIDENCE_LABEL = {5:"LIKELY BANGER",4:"STRONG",3:"SOLID",2:"EXPERIMENT",1:"LONG SHOT"};
+
+function ConfidenceDots({score}){
+  const dots = [];
+  for(let i=1;i<=5;i++){
+    dots.push(
+      <span key={i} className="inline-block w-[6px] h-[6px] rounded-full mx-[1px]" style={{background:i<=score?"#202A44":"#C8C2B4"}}></span>
+    );
+  }
+  return <span className="inline-flex items-center">{dots}</span>;
+}
+
+function fmtNum(n){
+  if(n >= 1_000_000) return (n/1_000_000).toFixed(1)+"M";
+  if(n >= 1_000) return (n/1_000).toFixed(n>=10_000?0:1)+"K";
+  return n.toString();
+}
+
+// ──────────────────────────────────────────────────────────
+// TOP-PERFORMER DNA LIBRARY
+// Codified from Christina's top-performing posts (PDF 2026-04-16).
+// Each brief gets tagged to one of these as a lightweight chip.
+// ──────────────────────────────────────────────────────────
+const TOP_PERFORMER_DNA = [
+  {
+    id:"mom-activist",
+    name:"Mom-Founder Category Critique",
+    tagColor:"#73B2C9",
+    icon:"🎤",
+    description:"Founder or mom direct-to-camera, taking a clear stance on what's broken in the category. Calm activist authority — no hedging, no panic.",
+    exemplars:["\"44 ingredients now need warnings. willa's has 4.\" (MAY 11 · 8.6× saves)","\"fiber is the new TikTok trend. (oats invented it 10,000 years ago.)\" (MAY 18 BIG SWING)","\"yes you can have latte art without rapeseed oil\""],
+    when:"HEALTH/WELLNESS + REVIEWS/RECS. Pairs with misinformation rebuttals and policy moments. Highest-saving Willa's format.",
+    rules:["Real kitchen or retail — not studio","Founder or mom voice","Take a clear stance, no hedging","No named competitors — 'vs. Average [Category]'"]
+  },
+  {
+    id:"on-pack-checklist",
+    name:"On-Pack Ingredient Checklist",
+    tagColor:"#75C596",
+    icon:"✅",
+    description:"Carton in frame with a ✅ checklist of what's in (and what's NOT). Visual proof of the WholePlant™ IP — the receipts the team can screenshot.",
+    exemplars:["\"the cert wall — 8 receipts that read better than the press release.\" (MAY 18 IG-F2)","\"this is what 'not-UPF' actually looks like on a panel.\" (MAY 18 IG-R3)","\"simple organic ingredients ✅✅✅\""],
+    when:"Default for INGREDIENTS/RECIPES + REVIEWS/RECS authority. Strong for launches, cert moments, and category switchers.",
+    rules:["Carton always in frame","5–7 checklist items max","What's NOT in it matters as much as what is","End on a single hero claim"]
+  },
+  {
+    id:"kid-family-moment",
+    name:"Kid / Family Moment",
+    tagColor:"#9E652E",
+    icon:"👧",
+    description:"A real kid + family moment with Willa's Kids in frame. UGC feel, not staged — the brands kids and parents share a kitchen for.",
+    exemplars:["\"kids drink it. parents pour it. (one carton, two coffees, no fight.)\" (MAY 18 IG-R6)","\"the contents of a road-trip cooler — only one of these is something I'm proud of.\" (MAY 18 TT-6 · vol. 2 of the 6.8× saves hit)","\"saturday-morning carton. holiday-weekend pour.\" (MAY 18 IG-R5)"],
+    when:"Default for PARENTING. Pattern 03 (Relatable Confession) variant when the cooler / bag / lunchbox tells the story.",
+    rules:["Product always in frame","Real family, not models","Real location — kitchen, store, school","Caption supplies the nutrition proof, not the video"]
+  },
+  {
+    id:"viral-recipe-remix",
+    name:"Viral Recipe Remix (dairy-free)",
+    tagColor:"#A191B2",
+    icon:"🔄",
+    description:"Take a recipe that's already viral and remix it dairy-free / cleaner with Willa's. Rides someone else's wave — Willa's gets to be the hero ingredient.",
+    exemplars:["\"overnight oats — but make it kefir-soaked.\" (MAY 18 PIN-2 · fermentation wave)","\"no-bake brownie bites — our new fav summer dessert.\" (MAY 18 PIN-3 · indulgent-clean)","\"the iced coffee that doesn't fight you back.\" (MAY 18 PIN-1 evergreen)"],
+    when:"1–2 per week. Pulls from Cultural Pulse viral-recipe feed + Pinterest Predicts breakouts.",
+    rules:["Name the source trend in caption","Swap cane sugar for honey / maple / date","Indulgent remade as high-protein or high-fiber","Willa's is the hero ingredient — ≥1 cup or equivalent on-camera presence"]
+  },
+  {
+    id:"meme-payload",
+    name:"Meme Format + Nutrition Payload",
+    tagColor:"#D97706",
+    icon:"🎭",
+    description:"Ride a trending meme format with a Willa's-coded punchline that lands one proof point. Highest-leverage format — still our biggest whitespace.",
+    exemplars:["\"but my name is Original so it's okay.\" (MAY 11 TT-3 · 524K views, the 'Son original' roast)","\"beans are having a moment. oats keep having a millennium.\" (MAY 18 TT-4)","\"reading a plant-milk label out loud as a stress test. (willa's took 4 seconds.)\" (MAY 18 TT-5)"],
+    when:"At least 1 per week from Cultural Pulse meme feed. Reach amplifier (high views, profile visits).",
+    rules:["Use a current meme format — not an evergreen template","One clear proof-point payload","Short caption","Stay on voice: warm / wink / assertive"]
+  },
+  {
+    id:"at-shelf-moment",
+    name:"At-Shelf / Retail Moment",
+    tagColor:"#DC2626",
+    icon:"🛒",
+    description:"Founder or trusted voice catching a moment at retail — a category take, a launch reveal, a quiet 'we made it onto the shelf.'",
+    exemplars:["Christina at Target (top-performing non-influencer ad to date)","Kyle at shelf catching a new-door spotting","'just walked past the willa's wall' UGC reposts"],
+    when:"New retail doors, or category-critique briefs that need a 'where to find it' payoff.",
+    rules:["Real retail environment","Cartons visible on shelf","End with where-to-find","Founder or ambassador voice"]
+  },
+  {
+    id:"before-after-stitch",
+    name:"Before / After Stitch (Conversion Arc)",
+    tagColor:"#0891B2",
+    icon:"↪",
+    description:"Stitch or before-and-after — 'I switched from X' / 'giving oat milk another try' / skin-effect reveal. UGC voices doing the conversion arc for us.",
+    exemplars:["\"giving oat milk another try (and reading the back panel this time)\"","\"my skin cleared up + I think it's the willa's effect\"","\"the switch from almond — and here's why I'm not going back\""],
+    when:"REVIEWS/RECS and HEALTH/WELLNESS. Pairs with UGC comments and before/after data.",
+    rules:["Real user or UGC reaction","Concrete result / change","Product in frame","Natural language — not testimonial stiff"]
+  }
+];
+const DNA_BY_ID = Object.fromEntries(TOP_PERFORMER_DNA.map(d=>[d.id, d]));
+
+// ──────────────────────────────────────────────────────────
+// CULTURAL PULSE
+// New 5th intelligence pillar — memes, celebrity moments,
+// viral recipes, misinformation rebuttals. Refreshed weekly.
+// ──────────────────────────────────────────────────────────
+const CULTURAL_PULSE = [
+  {
+    id:"CP-1",
+    type:"MEME TEMPLATE",
+    typeColor:"#D97706",
+    hook:"Fibermaxxing is having its main-character moment 🌾 — TikTok just caught up to what oats have been doing for 10,000 years",
+    detail:"Fibermaxxing just escalated from health TikTok to mainstream press — NPR's syndicated piece dropped MON MAY 18, quoting Candace Pumper (Ohio State) on fiber layering and Hannah Holscher (UIUC) on fiber's overdue spotlight. It layers on top of the VegNews and Mayo Clinic Press explainers from earlier May (and Bloomberg's Apr 24 take on beans). The data underneath the wave: per the USDA, 90% of women and 97% of men miss the daily fiber recommended intake. Willa's lane writes itself — oats are the original fibermaxxing food, 10,000 years of receipts, and Original keeps the whole oat groat (bran and germ included) for 2g+ prebiotic fiber per cup.",
+    velocity:"high",
+    platform:"TikTok + IG Reels + Health Press",
+    willasPlay:"Christina founder-POV TT MON MAY 18 9am: 'fiber is the new TikTok trend. (oats invented it 10,000 years ago.)' Carton + oat-anatomy diagram in hand. Willa's claim leads; fibermaxxing context follows. (BS-1)",
+    dnaMatch:"mom-activist",
+    sources:[
+      {label:"NPR · The 'fibermaxxing' trend has health benefits worth the hype (May 18, 2026)", url:"https://www.npr.org/2026/05/18/nx-s1-5398871/the-fibermaxxing-trend-has-health-benefits-worth-the-hype"},
+      {label:"Mayo Clinic Press · Fibermaxxing — Is this TikTok trend good for you?", url:"https://mcpress.mayoclinic.org/nutrition-fitness/fibermaxxing-is-this-tiktok-trend-good-for-you/"},
+      {label:"VegNews · Forget Protein, Fiber Is the New TikTok Nutrition Trend", url:"https://vegnews.com/fiber-tiktok-trend-expert-advice"}
+    ]
+  },
+  {
+    id:"CP-2",
+    type:"ENTERTAINMENT MOMENT",
+    typeColor:"#A191B2",
+    hook:"Kevin Morby just dropped 'Little Wide Open' 🎶 — the kind of folk-rock that sounds like a slow Saturday morning in the kitchen",
+    detail:"Kevin Morby's eighth album dropped FRI MAY 15 (Aaron Dessner-produced) — Bandcamp Daily Essential Releases lead. Folk-rock landscapes, generational-pass-down register, woodsy-warm texture. Triple-fits Willa's heritage + comfort + morning-ritual pocket (same lane as Noah Kahan). Audio-bed candidate for the MD heritage Reel + heritage 100yrs Reel — mood music, no name-check.",
+    velocity:"medium",
+    platform:"NPR + Bandcamp + IG + TikTok",
+    willasPlay:"One bar of Kevin Morby under the Memorial Day heritage pour (IG-R1) — no credit, no name-check. Music sets the mood; the carton lands the moment. (BS-12)",
+    dnaMatch:"meme-payload",
+    sources:[
+      {label:"Bandcamp Daily · Essential Releases, May 15, 2026", url:"https://daily.bandcamp.com/essential-releases/essential-releases-may-15-2026"},
+      {label:"Stereofox · Upcoming Albums 2026 calendar (Kevin Morby May 15)", url:"https://www.stereofox.com/articles/new-upcoming-albums-2026/"}
+    ]
+  },
+  {
+    id:"CP-3",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"Memorial Day Weekend is almost here 💛 — the family kitchen reopens, and the carton's been waiting all year",
+    detail:"MD Weekend MAY 24-25 (federal MON MAY 25) opens the unofficial summer cookout calendar. Food Network's 52 Memorial Day Recipes + Love & Lemons' 35 Best Memorial Day Recipes both dropped MAY 13-17 — coverage framing cookouts as 'family kitchen, not catered.' Pinterest 'memorial day breakfast' + 'cookout sides' peak 7-10 days ahead. Family-kitchen + grandmother-recipe coverage is hot — Willa's tonal pocket sits exactly here.",
+    velocity:"high",
+    platform:"News + Pinterest + IG Reels",
+    willasPlay:"MD heritage tease IG Reel MON MAY 18 12pm: cofounder-sister at the counter, stained carton, vintage linen. 'the holiday weekend is approaching. (the carton has been here the whole time.)' (BS-12)",
+    dnaMatch:"kid-family-moment",
+    sources:[
+      {label:"Food Network · 52 Memorial Day Recipes for the Perfect Cookout", url:"https://www.foodnetwork.com/holidays-and-parties/packages/memorial-day/memorial-day-recipes"},
+      {label:"Love & Lemons · 35 Best Memorial Day Recipes for a Delicious Cookout", url:"https://www.loveandlemons.com/memorial-day-recipes/"},
+      {label:"Honest & Truly · 29 Must-Try Recipes for Memorial Day Cookout 2026", url:"https://honestandtruly.com/must-try-memorial-day-recipes/"}
+    ]
+  },
+  {
+    id:"CP-4",
+    type:"NEWS CYCLE",
+    typeColor:"#0891B2",
+    hook:"Grandfluencers are still eating TikTok 👵 — ongoing 2026 wave (named by mainstream press, sustained through May) — Gen Z trusts the grandma kitchen, not the optimized one",
+    detail:"Cooking grandfluencers are an ONGOING wave through 2026 — not a single-week news hook. Foundational coverage landed early in the year (Washington Times, Maria Shriver's Sunday Paper); creator-level virality continues (Grandma Sherry @ 220K, Lynja Davis @ ~20M cross-platform). Gen Z + millennials are choosing steadiness over polish — predictability becomes an asset. Literally Willa's origin story (born 1921, named for grandmother Willa) made into a peer-set wave. Engine surfaces this WEEKLY because the wave is durable — replay-worthy heritage tonal pocket for content.",
+    velocity:"medium",
+    platform:"TikTok + IG + YouTube",
+    willasPlay:"Heritage Reel — 'the kitchens Gen Z is actually watching look like ours.' B&W archival cross-fade of grandmother Willa to the modern carton. Pattern 06 (Founder/Team Humanization) + Pattern 02 (World-Context Tie-In). (BS-12)",
+    dnaMatch:"mom-activist",
+    sources:[
+      {label:"TikTok · #granfluencers hashtag page (permanent — live wave indicator)", url:"https://www.tiktok.com/tag/granfluencers"},
+      {label:"TikTok · #cookingwithgrandma hashtag page (permanent)", url:"https://www.tiktok.com/tag/cookingwithgrandma"},
+      {label:"Maria Shriver Sunday Paper · The grandfluencer phenomenon (permanent reference)", url:"https://www.mariashriversundaypaper.com/grandfluencers/"}
+    ]
+  },
+  {
+    id:"CP-5",
+    type:"VIRAL RECIPE",
+    typeColor:"#75C596",
+    hook:"Cloud-textured matcha is officially the drink of summer 🍵 — and willa's barista pours like it was made for the moment",
+    detail:"Tastewise May 2026: matcha mentions +107% YoY, search interest +180% Q3-Q4 2025. Summer's breakout format: ceremonial matcha + cold whipped cream → 'cloud' texture, layered over plant milk. Willa's Barista (no rapeseed, no gums, 50% less sugar than other barista oat milks) is the cleanest format match. Califia's MAY 18 Tesco launch competitor-validated the lane.",
+    velocity:"high",
+    platform:"TikTok + IG Reels + Pinterest",
+    willasPlay:"Barista quiet-confidence TT TUE MAY 19 9am: hands cold-froth Willa's Barista over matcha cloud, back-panel reveal mid-pour. Text: 'matcha is up 107%. willa's barista was already in the conversation.' Show the deck, skip the recipe. (BS-7)",
+    dnaMatch:"viral-recipe-remix",
+    sources:[
+      {label:"Tastewise · Matcha trends and statistics in 2026", url:"https://tastewise.io/blog/matcha-trends"},
+      {label:"World Coffee Portal · The Matcha Report 2026 — global ascent analysis", url:"https://www.worldcoffeeportal.com/the-matcha-report-2026/"},
+      {label:"All Reasons · Flavored Matcha Lattes — Next Big Drink Trend 2026", url:"https://www.allreasons.eu/allreasons-blog/flavored-matcha-lattes-trend-2026"}
+    ]
+  },
+  {
+    id:"CP-6",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"Pinterest just called it 🫙 — fermentation is the spring breakout. (the oats have been hosting probiotics for ~10,000 years.)",
+    detail:"Pinterest Predicts 2026 names fermentation + gut health as one of three breakout food trends (alongside Cabbage Crush + sophisticated alcohol-free). In-house ferments — kefir, mild miso, pickles — are the format peak. Wave compounds through summer recipe-planning windows. Willa's Original is the cleanest pour for the lane: 2g+ prebiotic fiber, whole oat groat, no additives. Direct fuel for a kefir-soaked-oats evergreen pin.",
+    velocity:"medium",
+    platform:"Pinterest + IG + Trade Press",
+    willasPlay:"Pinterest pin THU MAY 21: 'overnight oats — but make it kefir-soaked.' Type-led layout with the ingredient list. Pattern 12 + clean editorial. (BS-1)",
+    dnaMatch:"viral-recipe-remix",
+    sources:[
+      {label:"Pinterest Business · 2026 Predicts trend report (fermentation breakout)", url:"https://business.pinterest.com/en-au/blog/pinterest-predicts-2026-turn-trends-into-unlimited-possibilities/"}
+    ]
+  },
+  {
+    id:"CP-7",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"@7kidskitchen7 keeps going off on TikTok 🥘 — Mary Neilis (NYC mom of 7) has been building all spring; her 'healthy-ish' family dinners are the parent-creator pattern Willa's Kids should ambassador-track",
+    detail:"Mary Neilis turned nightly dinners for her family of 9 into a full-time TikTok job + Substack — ongoing growth wave since early 2026 (foundational Fox News coverage February, audience now well past 100K). Her pattern: real kitchen, real chaos, 'healthy-ish' meals on a budget — protein + vegetable + starch every night, no optimization theater. Sister edits, FDNY husband handles finances. Partake-coded confessional, parent-pain lane. Engine surfaces this WEEKLY because she's an active ambassador candidate, not a one-week news story. Her audience IS the Willa's Kids audience.",
+    velocity:"medium",
+    platform:"TikTok + Substack",
+    willasPlay:"Ambassador outreach — sample-ship Mary Neilis (@7kidskitchen7) + a handwritten Christina note. Willa's Kids 4-pack + Original carton. Her family-of-9 'healthy-ish' lane IS Willa's Kids' homebase. (BS-6)",
+    dnaMatch:"kid-family-moment",
+    sources:[
+      {label:"TikTok · @7kidskitchen7 profile (permanent — live activity tracker)", url:"https://www.tiktok.com/@7kidskitchen7"},
+      {label:"TikTok · @7kidskitchen7 recent video (active, May 2026)", url:"https://www.tiktok.com/@7kidskitchen7/video/7473654550897937706"},
+      {label:"Fox News · Mom of 7 viral for 'healthy-ish' meals for family of 9 (foundational coverage)", url:"https://www.foxnews.com/food-drink/high-takeout-prices-make-feeding-family-9-impossible-mom-shocks-kids-affordable-meals"}
+    ]
+  },
+  {
+    id:"CP-8",
+    type:"ENTERTAINMENT MOMENT",
+    typeColor:"#A191B2",
+    hook:"The Late Show with Colbert ends THU MAY 21 🎤 — end of an era for late-night, with Springsteen + Spielberg + Jon Stewart for the final week",
+    detail:"Stephen Colbert's final Late Show airs THU MAY 21 (CBS, 11:35pm). The format is being shelved entirely — Byron Allen replaces it MAY 22. Final-week guests confirmed: Jon Stewart + Steven Spielberg + David Byrne performance (MAY 19); the Colbert Questionert + Bruce Springsteen performance (MAY 20). Cultural-mass end-of-an-era beat happening THIS WEEK. Willa's parallel: the brands that outlast formats are the ones with a posture they don't pivot from — born 1921, launched 2021, still here.",
+    velocity:"high",
+    platform:"News + IG Reels + TikTok",
+    willasPlay:"Heritage IG Reel paired with the Colbert finale evening (THU MAY 21 evening or FRI MAY 22 morning): 'the formats end. the kitchen doesn't.' Slow editorial pan, Willa's Original mid-frame, vintage linen. Pattern 02 + Patagonia gravity. (BS-12)",
+    dnaMatch:"mom-activist",
+    sources:[
+      {label:"Deadline · Late Show final week guests revealed (May 2026)", url:"https://deadline.com/2026/05/late-show-with-stephen-colbert-final-week-guests-1236906782/"},
+      {label:"NPR · Colbert and late-night hosts as show nears finale (May 12)", url:"https://www.npr.org/2026/05/12/nx-s1-5819155/colbert-late-night-hosts-strike-again"},
+      {label:"Hollywood Reporter · Stephen Colbert's Final Late Show Guests Revealed", url:"https://www.hollywoodreporter.com/tv/tv-news/stephen-colbert-final-late-show-guests-1236596992/"}
+    ]
+  },
+  {
+    id:"CP-9",
+    type:"ENTERTAINMENT MOMENT",
+    typeColor:"#A191B2",
+    hook:"The Bear is back for one last season 🔪 — JUN 25, all 8 episodes day-of-drop. prestige-kitchen TV is having its peak summer",
+    detail:"The Bear S5 marketing ramps this week — final season, JUN 25 premiere, all 8 episodes day-of-drop. Deadline + Hollywood Reporter + IMDB cover the cast + premiere. Jeremy Allen White's press + 'Gary' flashback (May 5, Bernthal + Moss-Bachrach) keep kitchen-as-character in the conversation. Willa's tonal pocket: prestige + craft + real-kitchen aesthetic.",
+    velocity:"medium",
+    platform:"IG Reels + TikTok + Trade Press",
+    willasPlay:"Prep-counter Reel WED MAY 20 7pm: wood prep board, knife + parsley + oat groat in soft focus, Willa's Original carton. Text: 'the kitchen is the character. (the carton agrees.)' No stitch. (BS-1)",
+    dnaMatch:"meme-payload",
+    sources:[
+      {label:"Deadline · The Bear FX Sets Season 5 Premiere Date", url:"https://deadline.com/2026/05/the-bear-fx-season-5-premiere-date-1236882490/"},
+      {label:"IMDB News · The Bear Season 5 Just Got a Release Date", url:"https://www.imdb.com/news/ni65361638/"},
+      {label:"Hollywood Reporter · The Bear S5 final season Jun 25 premiere", url:"https://www.hollywoodreporter.com/tv/tv-news/the-bear-ending-final-season-premiere-date-1236587869/"}
+    ]
+  },
+  {
+    id:"CP-10",
+    type:"VIRAL RECIPE",
+    typeColor:"#75C596",
+    hook:"Cottage cheese oats are eating TikTok 🥣 — the high-protein overnight version is the summer breakout, and Willa's is the cleanest pour to base it on",
+    detail:"The cottage cheese wave keeps morphing — May 2026's breakout variant is high-protein overnight oats (½ cup oats + ½ cup willa's original + ½ cup cottage cheese + maple + cinnamon, soaked overnight, berries on top). Creators stacking 15–20g protein per jar. Pinterest 'cottage cheese overnight oats' searches peaked May 2026. Compounds with fibermaxxing (CP-1) and the beans-protein wave (CP-7) — same plant-protein-twofer logic, fresh format. Willa's Original is the cleanest base in the format: 4 ingredients, organic, no gums to fight the curds.",
+    velocity:"high",
+    platform:"TikTok + IG Reels + Pinterest",
+    willasPlay:"Pinterest pin SAT MAY 23: 'cottage cheese overnight oats — 18g protein per jar.' Type-led pin with the recipe + the math of the protein stack. Pattern 12 + clean editorial. (BS-4)",
+    dnaMatch:"viral-recipe-remix",
+    sources:[
+      {label:"TikTok · #cottagecheeseoats hashtag page (permanent reference)", url:"https://www.tiktok.com/tag/cottagecheeseoats"},
+      {label:"TikTok · #highproteinbreakfast hashtag page (permanent reference)", url:"https://www.tiktok.com/tag/highproteinbreakfast"},
+      {label:"Pinterest · 'cottage cheese overnight oats' search (permanent)", url:"https://www.pinterest.com/search/pins/?q=cottage%20cheese%20overnight%20oats"}
+    ]
+  }
+];
+
+
+
+
+
+// Pulse lookup — declared here because CULTURAL_PULSE is defined above but
+// the reverse-map block higher up ran before CULTURAL_PULSE existed.
+const PULSE_BY_ID = Object.fromEntries(CULTURAL_PULSE.map(p=>[p.id,p]));
+
+// ──────────────────────────────────────────────────────────
+// BENEFIT SHORTHAND LIBRARY
+// Succinct 2–3 second nutrition stingers briefs can pull from.
+// Christina's ask: more / shorter ways to get the benefit story across.
+// ──────────────────────────────────────────────────────────
+const BENEFIT_SHORTHAND = [
+  {id:"BS-1", category:"WHOLE PLANT IP",    line:"The whole oat. Not the syrup.",                                         duration:"2s",  useWith:["Original","Barista","Chocolate","Kids"]},
+  {id:"BS-2", category:"INGREDIENTS",       line:"Four ingredients. (Read 'em.)",                                         duration:"2s",  useWith:["Original"]},
+  {id:"BS-3", category:"SUGAR",             line:"1 gram of sugar. Zero added.",                                          duration:"2s",  useWith:["Original"]},
+  {id:"BS-4", category:"PROTEIN",           line:"More protein than any oat milk. (Yes, really.)",                        duration:"2.5s",useWith:["Original","Kids"]},
+  {id:"BS-5", category:"KIDS vs DAIRY",     line:"Same protein as dairy. Half the sugar.",                                duration:"2.5s",useWith:["Kids"]},
+  {id:"BS-6", category:"ALLERGEN-FREE",     line:"No top-9 allergens. School-safe.",                                      duration:"2.5s",useWith:["Kids"]},
+  {id:"BS-7", category:"ANTI-RAPESEED",     line:"Latte art. No rapeseed oil.",                                           duration:"2s",  useWith:["Barista"]},
+  {id:"BS-8", category:"YUKA",              line:"Yuka says 100 out of 100.",                                             duration:"2s",  useWith:["Kids"]},
+  {id:"BS-9", category:"GOOD FOOD AWARDS",  line:"Best Beverage of the year. Real cacao.",                                duration:"2.5s",useWith:["Chocolate"]},
+  {id:"BS-10",category:"CATEGORY CRITIQUE", line:"Most oat milks filter out the healthiest 30% of the oat. We don't.",    duration:"3.5s",useWith:["Original","Barista","Chocolate"]},
+  {id:"BS-11",category:"GLYPHOSATE",        line:"Certified glyphosate-free. Because that matters.",                      duration:"2.5s",useWith:["Original","Barista","Chocolate","Kids"]},
+  {id:"BS-12",category:"FOUNDER",           line:"Mother-founded. WBENC-certified. Built to outlive me.",                 duration:"3s",  useWith:["Original","Barista","Chocolate","Kids"]}
+];
+
+// ──────────────────────────────────────────────────────────
+// POSTING LOGIC — Willa's ET posting windows (from Christina's content
+// calendar, updated 3/2026). Drives how the engine picks `timing` on each
+// brief; also surfaced on the Content Calendar as a click-to-expand callout
+// so the team sees WHY a brief got slotted Mon 12pm vs Thu 7pm.
+// ──────────────────────────────────────────────────────────
+const POSTING_LOGIC = {
+  note:"Based on Willa's content calendar (Mar 2026). All times Eastern.",
+  platforms:[
+    {
+      platform:"Instagram",
+      windows:[
+        {label:"Morning",         time:"11 AM ET",          best:false},
+        {label:"Midday (BEST)",   time:"12 PM ET",          best:true},
+        {label:"Evening",         time:"6–8 PM ET",         best:false}
+      ]
+    },
+    {
+      platform:"TikTok",
+      windows:[
+        {label:"Morning (BEST)",  time:"9–10 AM ET",        best:true},
+        {label:"Evening",         time:"7–9 PM ET",         best:false},
+        {label:"Weekend",         time:"10 AM – 12 PM ET",  best:false}
+      ]
+    }
+  ]
+};
+
+// ──────────────────────────────────────────────────────────
+// BRIEF → DNA pattern mapping (applied to BRIEFS below)
+// ──────────────────────────────────────────────────────────
+const BRIEF_DNA = {
+  // Signal-anchored
+  "MAY18-TT-1":    "mom-activist",
+  "MAY18-IG-R1":   "kid-family-moment",
+  "MAY18-TT-2":    "on-pack-checklist",
+  "MAY18-IG-R2":   "meme-payload",
+  "MAY18-IG-R3":   "on-pack-checklist",
+  "MAY18-TT-3":    "meme-payload",
+  "MAY18-IG-F1":   "on-pack-checklist",
+  "MAY18-TT-4":    "meme-payload",
+  "MAY18-PIN-2":   "viral-recipe-remix",
+  "MAY18-IG-R4":   "mom-activist",
+  "MAY18-IG-R5":   "kid-family-moment",
+  "MAY18-TT-6":    "kid-family-moment",
+  // Evergreens
+  "MAY18-PIN-1":   "on-pack-checklist",      // E2 iced coffee — back-panel reveal
+  "MAY18-TT-5":    "meme-payload",            // E1 read-aloud — Pattern 05 + 10
+  "MAY18-PIN-3":   "viral-recipe-remix",      // E5 brownie bites
+  "MAY18-IG-F2":   "on-pack-checklist",       // E4 cert wall walkthrough
+  "MAY18-IG-R6":   "kid-family-moment",       // E3 kids crossover
+  // Diversity-rewrite additions (added 2026-05-18)
+  "MAY18-IG-R7":   "at-shelf-moment",         // category-confidence at-shelf — first NEW use of this DNA this week
+  "MAY18-TT-7":    "meme-payload",            // grandfluencer wave stitch (Pattern 02 + 06)
+  "MAY18-TT-8":    "viral-recipe-remix",      // cottage cheese oats remix (Pattern 05)
+  "MAY18-IG-F3":   "on-pack-checklist",       // label-literacy framework carousel (Pattern 10 + 12)
+  "MAY18-TT-9":    "meme-payload",            // colbert finale heritage tonal (Pattern 02 + 10)
+  "MAY18-PIN-4":   "viral-recipe-remix",      // pinterest fermentation pin
+  "MAY18-IG-R8":   "kid-family-moment"        // parent-creator pantry stitch (Pattern 03 + 11)
+};
+
+BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
+
+// ──────────────────────────────────────────────────────────
+// FOOTAGE INSPO — click-to-expand bank on each brief detail. 4 categories:
+// SHOOT (original footage to capture), FOUND (existing content to stitch),
+// MEMES (gif + meme refs), ARCHIVE (period / vintage / b-roll for texture).
+// Added 2026-04-21 per Christina's feedback — the shot list tells you the
+// pacing, this tells you where to source every shot.
+// ──────────────────────────────────────────────────────────
+const BRIEF_FOOTAGE_INSPO = {
+  "MAY18-TT-1": {
+    shoot:["Christina to camera in real kitchen, lo-fi handheld — heritage tier 2 founder-POV activist.","Hands hold Willa's Original carton + a printed oat-anatomy cross-section diagram (bran/germ/endosperm labeled).","Single oat groat macro in foreground.","Camera push-in on the carton's back panel showing the 4 ingredients + nutrition panel."],
+    found:["VegNews May 2026 fibermaxxing coverage + Mayo Clinic May 2026 fiber-overtaking-protein piece.","TikTok #fibermaxxing hashtag page screenshots for context (cite source, no stitch).","Willa's existing nutrition-panel + oat-anatomy reference scans."],
+    memes:["Founder-POV authority Reel format · real kitchen + handheld + serif text overlay.","'Oats invented it 10,000 years ago' dry-wit time-collapse framing.","Lead-with-solution structure (Willa's claim in beat 1, fibermaxxing context as backdrop)."],
+    archive:["Willa's existing Christina founder-POV B-roll archive.","USDA Agricultural Research Service public-domain oat anatomy images.","Detox Project + USDA Organic + WBENC seal logos (cleared)."]
+  },
+  "MAY18-IG-R1": {
+    shoot:["Heritage-coded kitchen, soft Monday daylight · cofounder-sister at the counter pouring Willa's Original from a stained, well-loved carton into a glass.","Vintage linen napkin under, single oat groat in soft focus.","Slow push-in on the carton's back panel — each ingredient reveals on beat.","Optional: Christina's hands stabilize the carton (heritage tier 1).","Editorial composition, no studio finish."],
+    found:["Food Network + Love & Lemons Memorial Day cookout coverage (context, not stitching).","Pinterest 'memorial day breakfast' SEO peak data (7-10 days ahead).","Willa's brand archive grandmother photos."],
+    memes:["Heritage carousel pre-game tease format · serif on black backdrop opening, kitchen cross-fade.","Editorial cross-fade aesthetic from typography card to real-kitchen pour."],
+    archive:["Library of Congress 1920s-1940s home kitchen photography (public domain).","Willa's existing heritage B-roll archive."]
+  },
+  "MAY18-TT-2": {
+    shoot:["Cold morning daylight · tall clear glass on linen counter.","Matcha cloud at the bottom of the glass.","Hands cold-froth Willa's Barista, layer over matcha — cloud-pour reveal.","Hands rotate carton — back panel close-up.","Slow rotation around the glass at end card."],
+    found:["Tastewise May 2026 matcha mentions +107% YoY report.","TikTok #matchatok + #matchacommunity hashtag pages for cold-foam + cloud-texture format context.","FoodNavigator + BevNET coverage of Califia's MAY 18 UK matcha launch (internal context, not name-checked)."],
+    memes:["Cold-foam + cloud-texture pour format (2026 breakout).","Quiet-confidence cameo (NOT a latte recipe) — back-panel reveal as the punchline.","'Show the panel, the matcha takes care of the rest' dry-wit closer."],
+    archive:["Willa's Barista product photography archive.","Public-domain matcha + cold-foam B-roll for the cold-pour aesthetic."]
+  },
+  "MAY18-IG-R2": {
+    shoot:["Black backdrop overhead, white parchment with 4 ingredients arranged like couture sketches (small bowl of water, oat groats in a circle, vanilla bean, pinch of sea salt).","Slow rotation. Each gets a label.","Cross-fade to soft daylight on the same parchment with Willa's Original carton entering frame.","Editorial composition, no on-camera talent."],
+    found:["Festival de Cannes 2026 Palme d'Or closing-weekend coverage (Variety + Hollywood Reporter MAY 23).","Barbra Streisand in-absentia coverage (Vogue MAY 17 statement).","Park Chan-wook French Order of Arts and Letters coverage."],
+    memes:["Editorial parchment + serif typography aesthetic (continuing the MAY 11 IG-R1 hit pattern).","'Fashion-is-art on tour / ingredient-as-art on the counter' bridge format.","Cannes closing-weekend tail capture — pre-records the closing rather than reacting to winners."],
+    archive:["Met Museum digital collection · Costume Institute archives.","Library of Congress couture sketch references.","Willa's brand product photography archive."]
+  },
+  "MAY18-PIN-1": {
+    shoot:["Vertical Pinterest pin (2:3) · overhead wood counter, linen napkin underneath.","Tall clear glass: espresso on bottom, ice mid-section, cold-frothed Willa's Barista layered on top.","Single pinch of flaky salt sparkle.","Willa's Barista carton in the corner, partly cropped.","Golden-hour daylight from a window.","Serif typography header overlaid."],
+    found:["Pinterest 'iced coffee' + 'home cafe' SEO terms (rising into summer peak).","TikTok #icedcoffee + #homecafe hashtag pages for visual reference.","Willa's Barista back-panel reference scan."],
+    memes:["Pinterest home-cafe pin format · screenshot-friendly composition.","'(no rapeseed. no gums. no separation in the glass.)' parenthetical-wink format."],
+    archive:["Static pin → skip memes. Pinterest-native format; SEO + visual quality wins.","Willa's Barista product photography archive."]
+  },
+  "MAY18-IG-R3": {
+    shoot:["Cool kitchen daylight · hands hold Willa's Original carton next to a printed Healthy Eating Research UPF report summary page.","Slow camera pan from carton to report.","Single oat groat in foreground.","Brand-voice text overlays.","No on-camera face."],
+    found:["Healthy Eating Research May 2026 UPF expert-panel technical report (PDF cover page screenshot).","O'Melveny 2025-2026 UPF state-law + litigation tracker.","FDA + USDA RFI 2025 UPF definition coverage (small chyron use, cite source)."],
+    memes:["Quiet-confidence Reel format · slow camera pan + serif text overlays.","'The policy is catching up to the carton' dry-wit closer.","Lead-with-solution structure (Willa's stance in beat 1, news/policy backdrop in beat 2)."],
+    archive:["USDA Organic + Detox Project seal logos (cleared).","Willa's existing nutrition-panel high-res scans."]
+  },
+  "MAY18-TT-3": {
+    shoot:["Cluttered-but-styled prep counter · hard-soft lighting (The Bear's visual grammar).","Willa's Original carton on a wood prep board, knife handle + parsley sprig + single oat groat in soft focus.","Slow push-in on carton (partially obscured by knife).","Hand rotates carton — back panel close-up.","Cinematic depth-of-field."],
+    found:["The Bear S5 marketing-cycle coverage (Hollywood Reporter + Variety on the JUN 25 premiere date).","'Gary' flashback episode coverage + Jeremy Allen White press cycle.","NewEngen May 2026 prestige-kitchen aesthetic trend report."],
+    memes:["Prep-counter format borrowed from The Bear visual grammar.","'The kitchen is the character / the carton agrees' tonal Reel format (continuing MAY 11 TT-4 pattern, 4.8× saves).","Cinematic depth-of-field on a 4-ingredient carton."],
+    archive:["Public-domain wood-counter + knife B-roll for the prep-counter aesthetic.","Willa's existing kitchen B-roll archive."]
+  },
+  "MAY18-IG-F1": {
+    shoot:["6-card IG Feed carousel · Card 1: cover quote serif on cream.","Card 2: 6 brand cartons + jars in casual line on a wood counter (Willa's Original leading).","Cards 3-6: individual brand cameos with one-line founder credit each.","Soft daylight. Editorial composition, generous whitespace."],
+    found:["Each peer brand's official brand-asset packs (Partake, Bobo's, Maazah, Omsom, 2Betties).","Parsnip 22 Mom-Led Brands article visuals.","Mother's Day 2026 mother-founded retrospective coverage (WaPo, WWD post-MD tail)."],
+    memes:["Mother-founded peer-set carousel format (continuing the MAY 11 IG-F1 0.98 sentiment hit).","'On the runway / on the shelf every week' pivot framing."],
+    archive:["WBENC Women-Owned Business landing page assets (cleared).","Willa's brand archive grandmother photos."]
+  },
+  "MAY18-TT-4": {
+    shoot:["Overhead static on a wood counter.","Willa's Original carton centered, single oat groat in foreground.","Push-in on carton back panel — text overlays carry the joke.","Wide pull-back at end card.","Clean editorial composition, no on-camera face."],
+    found:["Bloomberg Apr 24 + continuing-May beans-as-must-buy coverage.","TikTok #beans hashtag page reference (context, not stitch).","Willa's nutrition-panel reference scan."],
+    memes:["Pattern 05 (Format-as-Virality) — riding the beans wave without bean-stitching.","'Beans are having a moment / oats keep having a millennium' time-collapse joke.","Format-payload structure — Willa's stays the protagonist (no bean-creator stitch)."],
+    archive:["Willa's existing brand product photography archive.","Public-domain wood-counter overhead B-roll."]
+  },
+  "MAY18-PIN-2": {
+    shoot:["Vertical Pinterest pin (2:3) · overhead wood counter.","Mason jar of kefir overnight oats topped with berries + cinnamon + flaky salt.","Willa's Original carton in corner, partly cropped.","Soft afternoon daylight.","Serif typography header overlaid."],
+    found:["Pinterest Predicts 2026 fermentation + gut-health trend report.","Pinterest 'overnight oats' + 'fermented breakfast' SEO terms (peak summer planning window).","Cabbage Crush + fermentation breakout coverage (Bon Appétit + Tastewise)."],
+    memes:["Pinterest fermentation-wave pin format.","Pattern 12 (Carousel / UGC Compilation) compressed onto a single-pin format.","'(the fermented breakfast that takes 30 seconds)' parenthetical-wink format."],
+    archive:["Static pin → skip memes. Pinterest-native recipe format wins on SEO + visual quality.","Willa's Original product photography archive."]
+  },
+  "MAY18-IG-R4": {
+    shoot:["Slow editorial pan across a real wood-counter kitchen at golden hour.","Willa's Original carton centered, cert document scans fanned around (USDA Organic, Detox Project, WBENC).","Vintage linen napkin.","B&W styled archival still cross-fade (grandmother in 1940s kitchen).","No on-camera face. Patagonia gravity, not soft-focus sentimental."],
+    found:["UN World Bee Day 2026 sustainability + pollinator-friendly coverage (MAY 20).","Willa's brand archive grandmother photos for B&W cross-fade.","Climate-positive oats coverage (Soil Association + Rodale Institute references)."],
+    memes:["Long-running-brand parallel format (continuing MAY 11 IG-R4 hit pattern, 7.4× saves).","Cert-stack + heritage in one Reel · museum-card aesthetic.","'105 years of one kitchen' navy-serif type chip."],
+    archive:["Library of Congress 1920s-1940s home kitchen photography (public domain).","USDA Organic + Detox Project + WBENC seal logos (cleared).","Willa's existing heritage B-roll archive."]
+  },
+  "MAY18-TT-5": {
+    shoot:["Overhead static on a wood counter.","4 plant-milk cartons in a line (generic-coded mockups — no brand names visible).","Willa's Original is the fifth.","A hand lifts each in sequence as voiceover reads its back-panel ingredient list.","Timer overlay tracks the read in seconds. Final beat: Willa's Original lifts, clocks 4 seconds.","No on-camera face."],
+    found:["Willa's back-panel scan + 4 mocked plant-milk back-panel references (generic, no competitor name-check).","NewEngen + Sociallybuzz label-literacy trend reports for context."],
+    memes:["Pattern 05 (Format-as-Virality) + Pattern 10 (Wordplay) — duration IS the joke.","'Stress-test the label' read-aloud format.","Brevity-as-punchline structure (Willa's takes 4 seconds vs. competitors' 28+)."],
+    archive:["Willa's existing brand product photography archive.","Public-domain wood-counter overhead B-roll."]
+  },
+  "MAY18-IG-R5": {
+    shoot:["Soft Saturday-morning daylight · cofounder-sister (heritage tier 1) steadies a stained, well-loved Willa's Original carton as a kid pours into a glass.","Vintage linen napkin under, single oat groat in foreground.","Optional: Christina's hands stabilize the kid's hand.","B&W archival cross-fade (grandmother in 1940s kitchen, same gesture).","Pure kitchen scene — real, not styled."],
+    found:["Food Network + Love & Lemons Memorial Day Weekend cookout coverage (context, not stitching).","Willa's brand archive grandmother photos for B&W cross-fade."],
+    memes:["Multi-generation pour format · heritage Reel (continuing MAY 11 IG-R5 6.0× saves).","Saturday-morning family-kitchen aesthetic."],
+    archive:["Library of Congress 1920s-1940s home kitchen photography (public domain).","Willa's existing heritage B-roll archive."]
+  },
+  "MAY18-TT-6": {
+    shoot:["Overhead static on a wood counter, late-morning daylight.","A real road-trip cooler tips out — items spill in a chaotic-but-charming pile.","Hands push items into rough rows; tiny serif text labels each.","Final reveal: Willa's Kids 4-pack slides into frame with warm gold serif label.","Cofounder-sister hands only, no face."],
+    found:["Partake Foods 'what's in my bag' Reel reference (Pattern 03 muse — observation, not stitch).","Real road-trip cooler content audits from clean-eating parenting creator scans (@cleanlivingmama / @thewholeoatmom).","Memorial Day Weekend cookout-prep TikTok lane reference."],
+    memes:["Pattern 03 (Relatable Confession) + Partake muse — vol. 2 of MAY 11 TT-7 mom-bag hit (6.8× saves).","'Only one of these is something I'm proud of' confessional structure.","Road-trip cooler as fresh visual trigger on the same confession format."],
+    archive:["Willa's Kids product photography archive (4-pack hero shots).","Public-domain wood-counter overhead B-roll."]
+  },
+  "MAY18-PIN-3": {
+    shoot:["Vertical Pinterest pin (2:3) · overhead wood counter, parchment paper.","12 chocolate-date brownie bites on parchment, flaky salt sparkle.","Single ball broken in half showing dense fudgy texture.","Willa's Chocolate carton in the corner, partly cropped.","Soft afternoon daylight.","Serif typography header overlaid."],
+    found:["Pinterest 'no-bake brownies' + 'date brownies' SEO terms (high-save dessert subcategory).","Good Food Awards Best Beverage cert (cleared for editorial use).","Willa's Chocolate back-panel reference scan."],
+    memes:["Pinterest no-bake dessert pin format.","'5 ingredients in the milk · 5 ingredients in the bite' wordplay symmetry.","Indulgent-remade-clean lane visual aesthetic."],
+    archive:["Static pin → skip memes. Pinterest-native recipe format wins on SEO + visual quality.","Willa's Chocolate product photography archive."]
+  },
+  "MAY18-IG-F2": {
+    shoot:["10-card IG Feed carousel · Card 1: cover serif on cream — 'the cert wall.'","Cards 2-10: one cert per card · cert seal/badge centered + one-line 'what this means' in serif typography.","Final card: full Willa's product line lineup (Original + Barista + Kids + Chocolate) on a wood counter.","Editorial museum-card aesthetic. Patagonia gravity. Generous whitespace."],
+    found:["Each cert's official landing page (USDA Organic, Detox Project, Non-GMO Project, WBENC, Yuka, Good Food Awards, Bobby Approved, OU Kosher).","Yuka app Kids 100/100 screenshot.","Good Food Awards 15th annual best beverage winner page."],
+    memes:["Cert-wall museum-card carousel format · receipts-first content.","'8 receipts that read better than the press release' editorial framing.","Patagonia gravity · activist-credentials lane (continuing MAY 11 IG-F1 0.98 sentiment hit)."],
+    archive:["USDA Organic + Detox Project + Non-GMO Project + WBENC + Kosher + Vegan + Yuka + Good Food Awards + Bobby Approved seal logos (cleared).","Willa's product line photography archive."]
+  },
+  "MAY18-IG-R6": {
+    shoot:["Split-screen single-take Reel.","Left side: kid's glass with Willa's Kids being poured (kid's hand) + striped straw.","Right side: parent's iced coffee getting Willa's Kids poured from the SAME carton (parent's hand) — close-up on the swirl forming.","Center: carton itself, single point of pour, golden-hour morning light.","Two distinct hands, one carton — visual punchline. No on-camera face."],
+    found:["Mom-blogger crossover reviews of Willa's Kids in iced coffee (search @thewholeoatmom + @cleanlivingmama for existing endorsements).","Yuka Kids 100/100 screenshot.","Christina's 'oddly blends + creates the best swirls' quote (cleared for editorial use)."],
+    memes:["Pattern 03 (Relatable Confession) + Pattern 09 (Aesthetic IRL Encounter) combo.","'One carton, two coffees, no fight' parenthetical-wink format.","Split-screen single-take Reel format (visual punchline = same carton, two distinct hands)."],
+    archive:["Willa's Kids product photography archive.","Public-domain golden-hour kitchen B-roll for the morning-light aesthetic."]
+  },
+  // Diversity-rewrite additions (added 2026-05-18) — footage inspo for the 7 new briefs
+  "MAY18-IG-R7": {
+    shoot:["Real grocery alt-milk shelf shot at golden hour · Willa's Original pulled forward into focus, other cartons softly out of focus.","Slow pan across the shelf, single oat groat in foreground.","Hands enter, rotate Willa's carton — back panel close-up.","Slow push-in on the 4-ingredient list + cert seals on back panel.","Editorial composition, no on-camera face, no name-checks."],
+    found:["Stock Titan + Investing.com + Motley Fool Oatly Q1 2026 earnings transcripts (internal context, NEVER name-checked in copy).","BevNET + Food Business News + Sprudge Chobani-La Colombe consolidation coverage (internal context only).","Willa's cert assets (USDA Organic + Detox Project + WBENC + Yuka)."],
+    memes:["At-shelf-moment DNA — first new use of this format this week.","Pattern 09 (Aesthetic IRL Encounter) + Pattern 10 (Wordplay).","Kiki Milk us-vs-them confidence WITHOUT naming names — category-POV only.","'The category got bigger. then it got cleaner.' parenthetical-wink format."],
+    archive:["Willa's existing at-shelf B-roll archive (Target, Whole Foods, Sprouts).","USDA Organic + Detox Project + WBENC seal logos (cleared).","Willa's Original product photography archive."]
+  },
+  "MAY18-TT-7": {
+    shoot:["Quiet kitchen, soft afternoon daylight · well-loved Willa's Original carton centered on a wood counter.","Hand-held composition, no on-camera face.","B&W archival photo of grandmother Willa (1940s home kitchen) cross-fades into the modern carton.","Slow push-in on carton back panel — date stamp '1921' reveals, then '2021' fades in next to it.","Heritage-coded, museum-card aesthetic — not soft-focus sentimental."],
+    found:["TikTok #granfluencers + #cookingwithgrandma hashtag pages (live wave indicator — cite, don't stitch).","Maria Shriver Sunday Paper grandfluencer phenomenon piece (cleared reference).","Washington Times grandfluencer coverage (cleared reference).","Willa's brand archive grandmother Willa photos."],
+    memes:["Pattern 02 (World-Context Tie-In) + Pattern 06 (Founder/Team Humanization).","Patagonia gravity + Partake parent-first warmth — heritage as activist credentials.","Cross-fade from B&W archival to modern carton (visual through-line).","'Her name's on the carton' parenthetical-wink reveal."],
+    archive:["Library of Congress 1920s-1940s home kitchen photography (public domain).","Willa's brand archive grandmother Willa photos (cleared).","Willa's existing heritage B-roll archive."]
+  },
+  "MAY18-TT-8": {
+    shoot:["Overhead on a wood counter, morning daylight.","Two clear mason jars side-by-side — layer 1 (rolled oats), layer 2 (cottage cheese curd swirl), layer 3 (Willa's Original poured in, visible cloud-pour).","Hands shake the jar (POV close-up).","Cut to morning reveal — jar open, berries + flaky salt on top.","Spoon dips through to the curd swirl. Cinematic depth-of-field. No on-camera face."],
+    found:["TikTok #cottagecheeseoats + #highproteinbreakfast hashtag pages (live wave indicator).","Pinterest 'cottage cheese overnight oats' SEO data (peaked May 2026).","Willa's Original back-panel reference scan."],
+    memes:["Pattern 05 (Format-as-Virality) — ride the cottage cheese oats format with cleaner-pour payload.","Pattern 04 (Taboo-as-Normal) — curd-swirl IS the visual hook, not a gross-out.","Poppi muse — viral short-form better-for-you, no supplement-speak.","'Cottage cheese oats wanted a cleaner pour. (we kept the whole oat in the carton.)' parenthetical-wink format."],
+    archive:["Willa's Original product photography archive.","Public-domain mason-jar + curd-texture B-roll for the cloud-pour aesthetic."]
+  },
+  "MAY18-IG-F3": {
+    shoot:["6-card IG Feed carousel · museum-card aesthetic, navy serif typography on cream.","Card 1 (cover): 'clean label is the floor now. organic + glyphosate-free is the bar.'","Cards 2-5: one check per card · cert seal centered + one-line gloss in serif typography (whole oat groat · USDA Organic · Detox Project glyphosate-free · real-named-ingredients).","Card 6: Willa's Original lockup on a wood counter, soft daylight.","Editorial composition, generous whitespace, Patagonia gravity."],
+    found:["Top Class Actions + VegNews Planet Oat vitamin D class action coverage (internal context only — Christina's 2026-05-04 rule blocks competitor-counter framing).","Prepared Foods Elmhurst feature (internal context).","Willa's cert assets — USDA Organic + Detox Project + Non-GMO Project + WBENC + Yuka."],
+    memes:["Pattern 10 (Wordplay) + Pattern 12 (Carousel / UGC Compilation).","Patagonia gravity · activist credentials presented as buyer education.","Per Christina's 2026-05-04 rule — default to label-literacy framework when competitor-counter risks fragile premise.","'The framework outlives the post' — asset Christina can use across DMs + the website."],
+    archive:["USDA Organic + Detox Project + Non-GMO Project + WBENC seal logos (cleared).","Willa's product line photography archive (Original carton hero shots)."]
+  },
+  "MAY18-TT-9": {
+    shoot:["Slow editorial pan across a heritage-coded kitchen at twilight · soft amber lamplight.","Well-loved Willa's Original carton centered on a linen-covered wood counter.","Single oat groat in foreground.","B&W archival still cross-fade (1940s home kitchen, grandmother in the same gesture).","Slow push-in on carton back panel — text reveals each ingredient on beat.","No on-camera face. Patagonia gravity, no sentimental soft-focus."],
+    found:["Deadline + Hollywood Reporter + NPR Late Show finale coverage (cite for context, NEVER stitch footage).","CBS final-week guest list (internal context).","Willa's brand archive grandmother Willa photos for B&W cross-fade."],
+    memes:["Pattern 02 (World-Context Tie-In) + Pattern 10 (Wordplay).","Patagonia gravity — heritage as activist credentials.","Tonal parallel ONLY — no Colbert footage, no Colbert mention by name. The format-ends-the-kitchen-doesn't beat is the universal one.","'The formats end. (the kitchen doesn't.)' parenthetical-wink format."],
+    archive:["Library of Congress 1920s-1940s home kitchen photography (public domain).","Willa's brand archive grandmother Willa photos (cleared).","Willa's existing heritage B-roll archive."]
+  },
+  "MAY18-PIN-4": {
+    shoot:["Vertical Pinterest pin (2:3) · overhead wood counter, golden afternoon daylight.","Mason jar of kefir overnight oats with Willa's Original carton in corner (partly cropped).","Crock of fermented kraut + small dish of miso paste arranged as cameo cast.","Single oat groat + flaky salt sparkle.","Serif typography header overlaid: 'pinterest's 2026 breakout: fermentation. (your gut said duh.)'","No on-camera face. Pinterest-native composition."],
+    found:["Pinterest Predicts 2026 trend report (canonical T-8 source).","Pinterest 'cottage cheese overnight oats' + 'fermented breakfast' SEO terms (peaked May 2026).","Bon Appétit + Tastewise fermentation breakout coverage."],
+    memes:["Pinterest fermentation-wave pin format.","Pattern 10 (Wordplay) — text-overlay punchline as the share engine.","Pattern 04 (Taboo-as-Normal) — calmly direct about prebiotic + postbiotic without supplement-speak.","Olipop muse — better-for-you cheeky."],
+    archive:["Static pin → skip memes. Pinterest-native recipe format wins on SEO + visual quality.","Willa's Original product photography archive."]
+  },
+  "MAY18-IG-R8": {
+    shoot:["Real kitchen counter, mid-afternoon daylight · cofounder-sister hands (heritage tier 1) arrange a kids' snack-drawer / lunchbox-prep scene.","Willa's Kids 4-pack centered on counter.","Wholesome-but-realistic combo: apple slices, almond butter packet, whole-grain crackers, Willa's Kids carton, single strawberry.","Slow push-in on Willa's Kids back panel — 100/100 Yuka chip overlaid + cert seals reveal on beat.","No on-camera face. Partake parent-first warmth, not aspirational."],
+    found:["TikTok @7kidskitchen7 profile + recent videos (live activity tracker — cite, don't stitch).","Fox News foundational coverage of Mary Neilis 'healthy-ish meals for family of 9' (cleared reference).","Yuka Kids 100/100 screenshot.","Willa's Kids product reviews from @thewholeoatmom + @cleanlivingmama (existing endorsements)."],
+    memes:["Pattern 03 (Relatable Confession) + Pattern 11 (Fan-Request Response).","Partake muse — parent-first warmth, unapologetic about the parent-audience focus.","'The parent-creator rule: read the label, then pour the kids' carton' confessional structure.","Per the Real-Life-Test rule (POV Discipline #8) — combo must read as 'I could pack that' to a school-pickup parent."],
+    archive:["Willa's Kids product photography archive (4-pack hero shots).","Public-domain wood-counter overhead B-roll.","USDA Organic + WBENC + Bobby Approved seal logos (cleared)."]
+  }
+};
+BRIEFS.forEach(b => { b.footageInspo = BRIEF_FOOTAGE_INSPO[b.id] || null; });
+
+// ──────────────────────────────────────────────────────────
+// STRATEGIST AGENT — powers Ask the Strategist, Studio chat-riff, and
+// brief-riff. One agent, three entry points. Distilled system prompt
+// derived from CLAUDE.md (~1.5k tokens) + a dynamic this-week context
+// block that injects current TRENDS / CULTURAL_PULSE / COMPETITORS so
+// the agent's responses reference what's live RIGHT NOW, not evergreen.
+// Added 2026-04-22.
+// ──────────────────────────────────────────────────────────
+
+const STRATEGIST_SYSTEM_PROMPT = `You are Willa's Strategist — the in-house creative director and brand agent for Willa's Oat Milk. Christina founded Willa's and named it after her grandmother. You think like a seasoned consumer-marketing veteran who is also a cultural insider — you know what's driving attention on TikTok/IG/X this week, you know the health + parenting + wellness beats, and you know how brands that feel human beat brands that feel corporate.
+
+You exist to help Willa's team:
+- Ideate fast in the Studio (riff on a link, photo, or rough idea and shape it into a Willa's-voice post)
+- Answer strategic questions ("what should we do for Mother's Day?")
+- Reshape existing content briefs in new directions
+
+Everything you say must pass through Willa's brand filter.
+
+=== WILLA'S NORTH STAR ===
+Tagline: "Nourish the spark in everyone."
+Origin: Willa was the founder's grandmother — she made oatmeal from real ingredients before it was cool, and saw the unique spark in everyone she met. Willa's, the brand, runs on that.
+Founded: Born 1921 (Willa). Launched 2021. Mother-founded. WBENC-certified.
+
+=== PRODUCT MOAT: WHOLEPLANT™ IP ===
+Willa's is the ONLY oat milk that uses the WHOLE oat groat — like steel-cut oats. Most oat milks use an enzymatic process that turns the oat into sugar and filters out the bran + germ (where the fiber + protein live). That's ~30% of the oat they throw out. Willa's kept it.
+
+Flavors (each has a content role — match flavor to story type first, flavor rotation second):
+- **Original** — 1g sugar, 4g+ protein, 2g+ prebiotic fiber, 4 ingredients (oats, water, vanilla, salt). Best-seller. **LEAD FLAVOR for health / ingredients / sugar-critique / WholePlant IP.** Any nutrition-first brief defaults here — NOT Barista.
+- **Barista** — 3g sugar (coconut sugar), 4g protein, 2g fiber, NO rapeseed oil, foams clean. **LEAD FLAVOR for lattes / cold foam / home-cafe.** Hook formula: "yes you can have your oat milk latte without the sugar spike / rapeseed / gums." **Barista is Willa's MOST processed SKU** — its deck is longer (calcium carbonate, tricalcium phosphate, organic high-oleic sunflower oil). NEVER lead ingredient-comparison / "read the label" content with Barista. Ingredient-transparency stories lead with **Original** (4 ingredients) or **Chocolate** (5 ingredients). Barista earns its spot when a latte IS the vehicle.
+- **Kids** — 6g sugar (real maple syrup), 8g protein, 3g fiber, DHA omega-3s, top-9 allergen-free, Yuka 100/100. **LEAD FLAVOR for family-moments / school-lunch / allergen-free.** Adult crossover: blends best in iced coffee + "makes the best swirls." Lean into "both generations drink from the same carton" framing.
+- **Chocolate** — 11g sugar, 5g protein, 3g fiber, real cacao, Good Food Awards Best Beverage winner. **LEAD FLAVOR for indulgent-remade-healthy content.** Hook formula: "yes you can have a mocha / your kid can have chocolate milk that's delicious and not a sugar bomb." Avoid positioning Chocolate as a daily ingredient story — keep it in the indulgent lane.
+
+Certifications (the six — Willa's is the only oat milk with all):
+USDA Organic · Certified Glyphosate-Free (The Detox Project) · Non-GMO Project Verified · Kosher · Vegan · WBENC.
+
+=== VOICE COMPASS ===
+- WARM — human, inviting, grandmother's kitchen. AVOID: clinical, corporate.
+- WITH A WINK — playful, knowing, a little cheeky ("shhh…"). AVOID: preachy, dour.
+- ASSERTIVE + ACTIVIST — confident POV, us-vs-them category critique (no names), Willa's is redefining plant-based milk. No hedging, no apologizing. AVOID: attacks on named competitors, whiny/defensive tone.
+- CREATIVE — fresh angles, not stock food content. AVOID: templated.
+- TRANSPARENT — read-the-label energy, receipts-first. AVOID: marketing-speak.
+- WITTY — dry cleverness, self-awareness. Food should feel fun, not like a chore. Humor is PERMISSION, not a consolation prize for "fun brands." AVOID: earnest-wellness-brand tropes (sunset-light-grain-bowl with a corny tagline).
+
+Voice gold standard (these four flavor taglines set the tone):
+• "Four simple ingredients. The least sugar. The most protein."
+• "The chocolate milk you wish you grew up on."
+• "Designed for kids' tastebuds. And shhh…. it's even parent approved."
+• "The oat milk your coffee deserves."
+
+=== BRAND MUSES (tonal anchors) ===
+Reach for these when sharpening a brief's voice. Willa's is not copying them; it's stealing their posture.
+- **Kiki Milk / Tenzo Matcha** — us-vs-them category critique with confidence, receipts-heavy. Use for ingredient-comparison briefs.
+- **Patagonia / Lovebird** — activist gravity, stance bigger than the product. Use for glyphosate / dye / UPF / MAHA reformulation briefs.
+- **Olipop** — better-for-you without supplement-company earnestness. Conversational. Use when explaining fiber/protein/prebiotic without sounding like a nutritionist.
+- **Fishwife / Graza / Omsom** — design-led personality on simple ingredients. Use when a "4 ingredients" hero moment needs POV to land (not an infographic).
+- **Poppi** — viral short-form template, better-for-you beverage. Use when a brief needs TikTok-native pacing + wit.
+- **Partake Foods** — mother-founded parent-CPG peer, warm + witty + unapologetic about parent-first focus. Use for PARENTING-pillar briefs that shouldn't apologize for their audience.
+
+The muses are a reference library — reach for one when it sharpens the brief. Not every response needs a muse; the instinct should kick in when a brief needs more POV than it has. Once Christina prioritizes which muses to lean on most, this tightens up.
+
+**MUSE STAYS BACKEND.** You reason through "which muse am I reaching for?" to sharpen the output, but DO NOT surface the muse name in your response text. No "(Olipop energy)" tags in user-facing output. Same for coreBeats — internal thinking, invisible output. The engine should feel smart, not show its homework.
+
+=== INTERNAL vs CONSUMER-FACING (HARD RULE) ===
+NEVER in consumer copy / chat output: business growth numbers (510%/700% YoY), SPINS data, retail door counts, named-competitor comparisons, pricing strategy, or any investor-pitch line. The phrase "they come for the label, but they stay for the taste" is INVESTOR-ONLY — never ship to consumers.
+
+Fair game: WholePlant story, nutritionals, certifications, 4-ingredient transparency, grandmother origin, sustainability/zero-waste, category critique without names, Kids origin ("parents asked us"), "70% of Americans shop plant milk" (category-size stat).
+
+=== CATEGORY CRITIQUE WITHOUT NAMES ===
+When comparing, use "vs. the average [category]" framing. Never name competitors.
+✓ "Most oat milks are water + oil + sugar + additives + gums."
+✓ "Other oat milks filter out the healthiest 25–30% of the oat."
+✗ "Willa's vs. Oatly."
+✗ "Unlike Chobani…"
+
+=== CHRISTINA ON-CAMERA RULE ===
+Willa's captions + content default to third-person brand voice, NOT first-person Christina. Her on-camera moments are reserved for: heritage/origin beats, founder-POV activist stances, kid-family authenticity moments. Everything else = hands + product + text overlays. Cap ~3 Christina-featured briefs per week.
+
+When writing captions: default to Willa's as the subject ("Willa's kept the whole oat"). Use "we" for brand-as-team. Avoid first-person "i/my/me" unless the brief visibly features Christina speaking to camera.
+
+=== CONTENT PILLARS + DNA FORMATS ===
+Pillars: HEALTH/WELLNESS · INGREDIENTS/RECIPES · PARENTING · REVIEWS/RECS.
+DNA formats (Willa's 7 top-performing patterns):
+• mom-activist — founder/mom direct-to-camera with a category-critique stance
+• on-pack-checklist — cartons side by side with ✓/✗ ingredient overlays
+• kid-family-moment — real family scene with Willa's Kids in frame
+• viral-recipe-remix — trending recipe remade dairy-free with Willa's
+• meme-payload — current meme format + one Willa's proof-point payload
+• at-shelf-moment — founder/ambassador at retail or aisle stitch
+• before-after-stitch — switch / conversion arc via stitch
+
+Anti-patterns: Willa's must be the protagonist (no trace-ingredient recipes). Lattes capped at 1 per 2 weeks. No pasta roundups. Indulgent recipes only if remade high-protein or with non-cane sweetener.
+
+=== POV DISCIPLINE (added 2026-04-22 — apply to every response) ===
+
+1. **BENEFIT-FIRST.** Always lead with the benefit or the provocation, not the process. "How it's made" is supporting proof. If you find yourself explaining enzymatic oat-syrup filtration before saying why it matters to the human reading — rewrite, lead with the benefit. Willa's team has a documented tendency to over-explain the WholePlant story; your job is to counter that. Caption structure: **HOOK (benefit) → PROOF (numbers) → PROCESS (if relevant).**
+
+2. **DIET-CULTURE FILTER.** Before riding any trend, ask: *is this celebrating food, or punishing people for eating?* If it's restriction-dressed-as-wellness (oatzempic, 75 Hard, shakes-replacing-meals, extreme clean-eating), Willa's pushes back, doesn't amplify. Willa's stands for positive food relationships — delicious, satiating, abundance. Celebrating-food trends (cottage cheese oats, fibermaxxing, butter boards) → ride directly. You're the filter; flag the difference.
+
+3. **REPEAT THE 3 CORE BEATS.** Audiences forget between Monday and Thursday. Willa's has 3 core beats that need to repeat constantly:
+   - **DELICIOUS** — tastes great, rich + smooth + creamy. Counters the "plant milk is grainy" prejudice.
+   - **HEALTHIER** — whole oat, low sugar, clean label, organic, glyphosate-free.
+   - **FEEL GOOD** — satiation, energy, no crashes, no GI issues. The physical + emotional experience.
+   Every response + brief should touch at least ONE. Don't worry about saying the same thing "again" — repetition is the job.
+
+4. **PARENT-FIRST HOOKS (for PARENTING briefs).** Top-performer pattern: specific parent-problem → Willa's Kids is the answer. Templates:
+   - "When your kid is lactose intolerant…"
+   - "Say goodbye to sugar kids drinks."
+   - "For the mom who's tired of…"
+   - "If you've ever read a kids' milk label and…"
+   Alienating non-parents in a parenting brief is OK as long as the week has enough latte/recipe content to balance. Don't dilute parent briefs by trying to broaden them.
+
+5. **VOICE POV CORRECTION — Christina is NOT a mom (critical).** Willa's is mother-founded — the mother is Christina's sister + cofounder. Christina herself is not a mom. Never attribute first-person parenting ("my kids," "i wanted my kids to grow up with…," "as a mom…") to Christina in captions, scripts, or VO. Resolution hierarchy: (a) BRAND VOICE "we" is the default ("we wanted kids to grow up with food they can read"), (b) ATTRIBUTED to cofounder-sister when a first-person mom POV is needed, (c) THIRD-PERSON about Christina for heritage / origin beats. The "I'm not an almond mom, I'm an oat mom" framing is broken when attributed to Christina — rewrite to brand "we" or attribute to her sister. When in doubt, default to "we."
+
+6. **FACT-CHECK — verified-facts only.** Three phrasings Christina flagged as inaccurate — do NOT ship any of these:
+   - ❌ "the enzyme breaks the oat into sugar" → the correct description is: "most oat milks **filter out** the bran + germ, **then enzyme-process the starch** into sugar." Oats aren't "broken down" by the enzyme.
+   - ❌ "filters out the fiber" alone → you MUST mention both: "filters out the bran + germ where both the **fiber AND the protein** live." Omitting protein is a voice failure (per Christina, protein loss is a worse offense than fiber loss).
+   - ❌ "the only oat milk in America that paid for the glyphosate test" / "the only oat milk certified glyphosate-free" → scope claims Christina flagged as inaccurate. Use the verifiable version: "Willa's is certified glyphosate-free by The Detox Project. Every lot is tested."
+   If asked for a specific percentage / search-volume number, say you need a source before citing it.
+
+7. **JARGON GETS A ONE-LINE GLOSS.** Don't name a mechanism, meme, or insider term without a plain-English one-liner on first use. Examples:
+   - beta-glucans → "the oat fiber that supports heart + gut health"
+   - oat groats → "whole oat kernels, like steel-cut oats"
+   - the enzyme/syrup story → "most oat milks use an enzyme that turns oats into sugar and filters out the fiber + protein"
+   - oatzempic → "a TikTok trend — ½ cup oats + lime + water, marketed as DIY Ozempic. It doesn't work that way."
+   - AirPod Bump → "the Q1 2026 TikTok meme where strangers collide + earbuds swap, personality reveal via playlist"
+   - fibermaxxing → "TikTok's term for eating more fiber intentionally"
+   If a brief assumes the reader already knows, the brief isn't done.
+
+8. **BARISTA ≠ INGREDIENT-STORY HERO.** Willa's Barista is the most-processed SKU (calcium carbonate, tricalcium phosphate, sunflower oil). Ingredient-transparency + "read the label" briefs lead with **Original** (4 ingredients) or **Chocolate** (5 ingredients). Barista ONLY leads when the latte IS the vehicle and the proof is "no rapeseed + 50% less sugar than other barista oat milks." If you catch yourself drafting an ingredient-comparison brief around Barista, redirect to Original.
+
+=== HOW TO RESPOND ===
+
+**DEFAULT MODE = conversational ideation, NOT execution.**
+
+When someone opens a question ("what should we do for X?", "how do we tap into Y?", "ideas for Z?") your job is to PROPOSE 2–3 ANGLES in punchy, plain language. Short. Directional. Then stop and let them build with you.
+
+Structure for an ideation answer:
+- One short intro sentence (or skip it).
+- 2–3 angles, each with a one-line headline + 1–2 short sentences of texture. No full brief specs, no "shot lists," no multi-level bullet lists of every proof point.
+- Close with a question or fork: *"Want me to dig into any of these?"* / *"Which lane pulls you?"* / *"Should I push one further?"*
+
+**HARD RULE — keep first responses under 200 words.** Target 120 in most cases. If the user wants more depth, they'll ask. Answer the question asked, then shut up.
+
+**Don't skip to execution.** DO NOT write full captions, shot lists, end-card stingers, or complete briefs unless the user explicitly says "write it" / "brief it" / "give me the caption." Early responses = directional ideas only. You and the user will pick a direction first, THEN build it out.
+
+**Specificity is earned, not default.** Name a specific flavor, platform, hook, or DNA only when it sharpens the idea. You don't need to list all four for every angle.
+
+**Invite continuation.** End almost every response with one open door — a question, a suggested next step, or a "say more about X" prompt. The goal is an exchange, not a monologue.
+
+**Other rules:**
+- When they DO ask for caption copy, write 3 tone variants: direct (the receipts), warm (with a wink), punchy (mic drop). Keep the examples tight.
+- Reason through which brand-muse energy you're reaching for, but DON'T name the muse in your response. Let the output BE Liquid-Death-punchy or Partake-warm without labeling it.
+- Reference this week's live trends + pulse when relevant (they'll be injected below).
+- **WEB SEARCH.** You have access to a web_search tool. Use it when the user asks about something NOT in this week's injected context — a specific event, a recent post, news since the latest refresh, a specific creator/brand/campaign. Don't search for Willa's brand facts or for this week's trends (already in context). When you search, weave results into a short answer; don't link-dump.
+- Flag when something feels off-brand or violates a rule — don't execute bad directions silently. If they ask for a health-benefit brief on Barista, gently redirect to Original.
+- Markdown is fine for structure (bold, bullets, short headers). But short. Not a textbook.`;
+
+function buildWeekContext() {
+  const trendLines = (typeof TRENDS !== "undefined" ? TRENDS : []).slice(0, 10).map((t) =>
+    `• ${t.id || "T-?"} — ${t.trend}`
+  ).join("\n");
+  const pulseLines = (typeof CULTURAL_PULSE !== "undefined" ? CULTURAL_PULSE : []).slice(0, 10).map(p =>
+    `• ${p.id} [${p.type}] — ${p.hook}`
+  ).join("\n");
+  const compLines = (typeof COMPETITORS !== "undefined" ? COMPETITORS : []).slice(0, 5).map(c =>
+    `• ${c.name} — ${(c.status || "").slice(0, 140)}${(c.status || "").length > 140 ? "…" : ""}`
+  ).join("\n");
+
+  // Phase D — also surface this week's brief slate so the strategist can
+  // answer week-level questions like "which slot is the weakest?" or
+  // "are we over-indexed on parenting?" without needing the user to
+  // re-summarize the calendar manually.
+  const briefLines = (typeof BRIEFS !== "undefined" ? BRIEFS : []).map(b =>
+    `• ${b.id} [${b.platform} · ${b.pillar} · ${b.priority}${b.flavor ? " · " + b.flavor : ""}] — ${b.concept}`
+  ).join("\n");
+
+  // Quick pillar / flavor distribution so the strategist can spot
+  // imbalances at a glance.
+  const pillarCounts = {};
+  const flavorCounts = {};
+  (typeof BRIEFS !== "undefined" ? BRIEFS : []).forEach(b => {
+    if (b.pillar) pillarCounts[b.pillar] = (pillarCounts[b.pillar] || 0) + 1;
+    if (b.flavor) flavorCounts[b.flavor] = (flavorCounts[b.flavor] || 0) + 1;
+  });
+  const distLine = `Pillar mix: ${Object.entries(pillarCounts).map(([k,v])=>`${k}=${v}`).join(", ")}. Flavor mix: ${Object.entries(flavorCounts).map(([k,v])=>`${k}=${v}`).join(", ")}.`;
+
+  return `=== THIS WEEK'S SITUATION (${typeof WELCOME_WEEK_RANGE !== "undefined" ? WELCOME_WEEK_RANGE : "current week"}) ===
+
+TRENDS in play:
+${trendLines}
+
+CULTURAL PULSE:
+${pulseLines}
+
+COMPETITOR MOVES (internal context — do not name competitors in consumer output):
+${compLines}
+
+CONTENT BRIEFS QUEUED THIS WEEK (${(typeof BRIEFS !== "undefined" ? BRIEFS.length : 0)} total):
+${briefLines}
+
+${distLine}
+
+Reference these when they're relevant. When user asks week-level questions (which is the strongest brief, where's the gap, are we over-indexed on X, swap-X-for-Y), use the brief slate directly. For per-brief questions, use the brief ID + concept to ground specifics. Never name competitors in consumer output even if mentioned in the situational context.`;
+}
+
+// API key handling — Phase C upgrade (2026-05-18):
+// The engine no longer asks Christina's team for their API key. The team's
+// shared key lives in Vercel env vars (ANTHROPIC_API_KEY) and the strategist
+// is reached via the /api/strategist proxy. These helpers remain as no-op
+// shims so existing "is there a key?" gates keep returning truthy —
+// avoids needing to touch every caller. Real auth happens server-side.
+const WILLAS_API_KEY_STORAGE = "willas-studio-api-key"; // legacy storage key
+
+function getClaudeApiKey() {
+  return "proxy"; // sentinel — server-side proxy holds the real key
+}
+function setClaudeApiKey(key) {
+  // No-op: client never holds the key anymore.
+}
+function clearClaudeApiKey() {
+  // Clean up any legacy keys still in localStorage from before the proxy.
+  try { localStorage.removeItem(WILLAS_API_KEY_STORAGE); } catch(e){}
+}
+
+// Extract displayable text from a message.content — which can be either
+// a string (text-only message) OR an array of content blocks (multi-block
+// vision messages, where the first block is an image and a later block
+// holds the text). Without this helper, rendering an image-attached
+// message crashes React (can't render array of {type, source} objects as
+// children) → white-screened the Studio (2026-05-18).
+function messageDisplayText(content) {
+  if (typeof content === "string") return content;
+  if (Array.isArray(content)) {
+    return content
+      .filter(b => b && b.type === "text" && b.text)
+      .map(b => b.text)
+      .join("\n");
+  }
+  return "";
+}
+
+// ─── User attribution (2026-05-18) ──────────────────────────────
+// Studio is a shared whiteboard — multiple team members drop ideas
+// in. Stickies attach the user's name so the team sees who dropped
+// what. Stored in localStorage per-browser (no real auth yet — that
+// comes when we wire Supabase auth). User can edit anytime from the
+// "Posting as" strip on the Studio header.
+const WILLAS_USER_NAME_STORAGE = "willas-user-name";
+function getUserName() {
+  try { return localStorage.getItem(WILLAS_USER_NAME_STORAGE) || ""; }
+  catch(e){ return ""; }
+}
+function setUserName(name) {
+  try { localStorage.setItem(WILLAS_USER_NAME_STORAGE, (name || "").trim()); } catch(e){}
+}
+
+// ─── Phase B: per-thread conversation IDs (2026-05-18) ──────────
+// Server-side Supabase persistence is the source of truth, but the
+// client caches the conversation ID per thread so subsequent turns
+// in the same thread stay attached to the right conversation. Keyed
+// by "{agentType}:{contextId || 'global'}" — e.g. "studio_riff:st_abc".
+const WILLAS_CONV_IDS_STORAGE = "willas-conversation-ids";
+function loadConvIds() {
+  try { return JSON.parse(localStorage.getItem(WILLAS_CONV_IDS_STORAGE) || "{}"); }
+  catch(e){ return {}; }
+}
+function saveConvIds(map) {
+  try { localStorage.setItem(WILLAS_CONV_IDS_STORAGE, JSON.stringify(map)); } catch(e){}
+}
+function getConversationId(agentType, contextId) {
+  if (!agentType) return null;
+  const map = loadConvIds();
+  return map[`${agentType}:${contextId || 'global'}`] || null;
+}
+function setConversationId(agentType, contextId, id) {
+  if (!agentType || !id) return;
+  const map = loadConvIds();
+  map[`${agentType}:${contextId || 'global'}`] = id;
+  saveConvIds(map);
+}
+
+// Streaming call to Claude — yields text chunks as they arrive. Callers use:
+//   for await (const chunk of streamStrategist({messages})) { append(chunk); }
+//
+// Phase C (2026-05-18): now routes through /api/strategist Vercel Edge proxy
+// instead of hitting api.anthropic.com directly. The proxy holds Christina's
+// API key server-side via ANTHROPIC_API_KEY env var. Same SSE shape — only
+// the URL + headers changed.
+async function* streamStrategist({
+  messages, systemExtras = [], model = "claude-sonnet-4-6", maxTokens = 2000, enableWebSearch = true,
+  // Phase B (2026-05-18): when these are passed, the server persists each
+  // turn to Supabase as a conversation. agentType is the routing key
+  // (which UI surface this chat lives in); contextId optionally pins to
+  // a specific sticky or brief.
+  agentType = null, contextId = null
+}) {
+  // Look up the existing conversation ID for this thread (or null on first turn)
+  const conversationId = agentType ? getConversationId(agentType, contextId) : null;
+
+  const body = {
+    messages,
+    model,
+    maxTokens,
+    enableWebSearch,
+    systemExtras: [
+      { type: "text", text: STRATEGIST_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
+      { type: "text", text: buildWeekContext(), cache_control: { type: "ephemeral" } },
+      ...systemExtras
+    ],
+    // Phase B persistence fields — server uses these to attach turns to
+    // the right conversation row. clientId is hardcoded for now since
+    // this engine is Willa's-specific; multi-tenant routing happens at
+    // the data layer (each client's engine ships its own deployment).
+    clientId: "willas",
+    agentType,
+    contextId,
+    userLabel: getUserName() || null,
+    conversationId
+  };
+
+  const res = await fetch("/api/strategist", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+
+  // Capture the conversation ID returned by the server (it generates one
+  // on the first turn of a new thread, then echoes it back on subsequent
+  // turns). Stash it so next turn pins to the same conversation.
+  if (agentType) {
+    const newConvId = res.headers.get("X-Conversation-Id");
+    if (newConvId && newConvId !== conversationId) {
+      setConversationId(agentType, contextId, newConvId);
+    }
+  }
+
+  if (!res.ok) {
+    let detail = "";
+    try { detail = await res.text(); } catch(e){}
+    throw new Error(`API_${res.status}: ${detail.slice(0, 200)}`);
+  }
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() || "";
+    for (const line of lines) {
+      const l = line.trim();
+      if (!l.startsWith("data:")) continue;
+      const payload = l.slice(5).trim();
+      if (!payload || payload === "[DONE]") continue;
+      try {
+        const evt = JSON.parse(payload);
+        // Regular text tokens
+        if (evt.type === "content_block_delta" && evt.delta && evt.delta.type === "text_delta") {
+          yield evt.delta.text;
+        }
+        // Web search tool-use: yield a soft indicator so the UI can show
+        // "searching the web…" without dumping raw tool machinery on the user.
+        // Anthropic runs the search server-side and splices results back into
+        // the model's context — we just need to hint at what's happening.
+        if (evt.type === "content_block_start" && evt.content_block && evt.content_block.type === "server_tool_use" && evt.content_block.name === "web_search") {
+          yield "\n\n*🔍 searching the web…*\n\n";
+        }
+      } catch (e) { /* swallow partial frames */ }
+    }
+  }
+}
+
+// ──────────────────────────────────────────────────────────
+// COMPONENTS
+// ──────────────────────────────────────────────────────────
+
+function PillarBadge({name}){
+  const c = PILLAR_COLORS[name] || "#202A44";
+  return <span className="font-mono text-[9px] tracking-wider px-1.5 py-[2px] rounded" style={{color:c, background:c+"12", border:"1px solid "+c+"33"}}>{name}</span>;
+}
+
+// Single-chip DNA tag — lightweight surface of Top-Performer DNA on brief cards.
+// Engine-side rules live in CLAUDE.md; the chip is the only team-facing surface.
+function DnaChip({patternId, size}){
+  const d = DNA_BY_ID[patternId];
+  if(!d) return null;
+  const sm = size === "sm";
+  return (
+    <span
+      className={"inline-flex items-center gap-1 font-mono tracking-wider rounded "+(sm?"text-[8px] px-1 py-[1px]":"text-[9px] px-1.5 py-[2px]")}
+      style={{color:d.tagColor, background:d.tagColor+"12", border:"1px solid "+d.tagColor+"33"}}
+      title={"DNA: "+d.name+" — "+d.description}>
+      <span className={sm?"text-[9px]":"text-[10px]"}>{d.icon}</span>
+      {d.name.toUpperCase()}
+    </span>
+  );
+}
+
+function AgentStamp({agentId, extra}){
+  const a = AGENT_BY_ID[agentId];
+  if(!a) return null;
+  return (
+    <span className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-wider" style={{color:a.color}}>
+      <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:a.color}}></span>
+      {a.name.toUpperCase()}{extra ? <span className="text-[var(--muted)]"> · {extra}</span> : null}
+    </span>
+  );
+}
+
+function AgentChip({agent, big}){
+  return (
+    <div className="card p-3 flex items-start gap-2.5" title={agent.role}>
+      <span className="inline-block w-[8px] h-[8px] rounded-full mt-1.5 shrink-0" style={{background:agent.color, boxShadow:`0 0 0 3px ${agent.color}22`}}></span>
+      <div className="min-w-0">
+        <div className="font-mono text-[10px] tracking-wider" style={{color:agent.color}}>{agent.name.toUpperCase()}</div>
+        <div className="text-[11px] text-[#334155] leading-snug mt-0.5">{agent.role}</div>
+        <div className="font-mono text-[9px] text-[var(--muted)] mt-1.5">LAST RUN · {agent.lastRun.toUpperCase()} · {agent.signals} {agent.id==="editor"?"KILLED":agent.id==="composer"||agent.id==="visual"||agent.id==="hook"?"OUTPUTS":"SCANNED"}</div>
+      </div>
+    </div>
+  );
+}
+
+function EngineDrawer({open, onClose}){
+  if(!open) return null;
+  return (
+    <div className="border-b border-[var(--border)] bg-white fade-in">
+      <div className="px-8 py-5">
+        <div className="flex items-start justify-between mb-4">
+          <div>
+            <div className="font-mono text-[10px] tracking-wider text-[var(--ink)]">ENGINE STATUS · {AGENTS.length} AGENTS · {DECISIONS.length} AUTONOMOUS DECISIONS THIS WEEK</div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-1">{SCANNED_TOTAL} SIGNALS SCANNED · {SURFACED_TOTAL} SURFACED · {KILLED_TOTAL} KILLED BY CULTURAL EDITOR</div>
+          </div>
+          <button onClick={onClose} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">CLOSE ✕</button>
+        </div>
+        <div className="grid grid-cols-12 gap-5 mb-5">
+          <div className="col-span-7">
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">YOUR INVISIBLE TEAM · {AGENTS.length} SPECIALIZED AGENTS</div>
+            <div className="grid grid-cols-3 gap-2">
+              {AGENTS.map(a=><AgentChip key={a.id} agent={a}/>)}
+            </div>
+          </div>
+          <div className="col-span-5">
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">WHAT THE ENGINE DECIDED THIS WEEK · {DECISIONS.length} AUTONOMOUS CALLS</div>
+            <div className="card p-3 max-h-[420px] overflow-y-auto scrollbar">
+              <div className="grid gap-2">
+                {DECISIONS.map((d,i)=>{
+                  const a = AGENT_BY_ID[d.agent];
+                  return (
+                    <div key={i} className="flex gap-2.5 items-start pb-2.5 border-b border-[var(--border)] last:border-0 last:pb-0">
+                      <span className="font-serif text-[16px] leading-none w-4 text-center shrink-0" style={{color:a.color}}>{d.icon}</span>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-[11.5px] text-[#202A44] leading-snug font-medium">{d.title}</div>
+                        <div className="font-mono text-[9px] text-[var(--muted)] mt-0.5">→ {d.reason}</div>
+                        <div className="font-mono text-[8.5px] tracking-wider mt-1" style={{color:a.color}}>{a.name.toUpperCase()}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mb-5">
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">SIGNALS WE KILLED · {KILLED.length} EXAMPLES OF WHAT THE ENGINE SAID NO TO</div>
+          <div className="card p-3">
+            <div className="grid grid-cols-2 gap-2">
+              {KILLED.map((k,i)=>(
+                <div key={i} className="pb-2 border-b border-[var(--border)] last:border-0 last:pb-0">
+                  <div className="text-[11px] text-[#202A44] leading-snug">{k.signal}</div>
+                  <div className="font-mono text-[9px] text-[var(--muted)] mt-0.5">→ {k.reason}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Integration Hub */}
+        <div>
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">CONNECTED · THE DEPARTMENT RUNS INSIDE YOUR STACK</div>
+          <div className="card p-3">
+            <div className="flex flex-wrap items-center gap-2">
+              {INTEGRATIONS.map((i,k)=>(
+                <div key={k} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded border border-[var(--border)]" style={i.status==="connected"?{background:"#F6FBF8"}:{background:"#FAFAF7"}} title={i.use}>
+                  <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:i.status==="connected"?"#75C596":"#9E652E"}}></span>
+                  <span className="font-mono text-[10px] tracking-wider text-[#202A44]">{i.name}</span>
+                  <span className="font-mono text-[8.5px] tracking-wider uppercase" style={{color:i.status==="connected"?"#75C596":"#9E652E"}}>· {i.status}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── The Product Gap table ─────────────────────────────────
+const PRODUCT_GAP = [
+  {brand:"Oatly",          sugar:"7g",  ingr:"12", canola:"YES", organic:"NO",  glyphosate:"NO",  gums:"YES"},
+  {brand:"Califia Farms",  sugar:"7g",  ingr:"10", canola:"NO",  organic:"PARTIAL", glyphosate:"NO", gums:"YES"},
+  {brand:"Planet Oat",     sugar:"8g",  ingr:"11", canola:"YES", organic:"NO",  glyphosate:"NO",  gums:"YES"},
+  {brand:"Chobani Oat",    sugar:"7g",  ingr:"9",  canola:"NO",  organic:"NO",  glyphosate:"NO",  gums:"YES"},
+  {brand:"Elmhurst 1925",  sugar:"5g",  ingr:"6",  canola:"NO",  organic:"NO",  glyphosate:"NO",  gums:"NO"},
+  {brand:"Willa's",        sugar:"<1g", ingr:"4",  canola:"NO",  organic:"USDA", glyphosate:"CERTIFIED", gums:"NO", us:true}
+];
+function gapCell(v, kind){
+  // green if "good", red if "bad"
+  const good = ["NO","USDA","CERTIFIED","<1g","4","5g","6"];
+  const bad  = ["YES","PARTIAL","7g","8g","9","10","11","12"];
+  let color = "#64748B";
+  if(good.includes(v)) color = "#75C596";
+  if(bad.includes(v))  color = "#DC2626";
+  return <td className="px-3 py-2.5 text-center font-mono text-[11px]" style={{color}}>{v}</td>;
+}
+function MockBanner({title, prod}){
+  return (
+    <div className="card mb-4 px-5 py-3 flex items-center justify-between gap-4" style={{background:"#FFFBEB", borderColor:"#FDE68A"}}>
+      <div className="flex items-center gap-3">
+        <span className="font-mono text-[10px] tracking-wider px-2 py-1 rounded text-white shrink-0" style={{background:"#9E652E"}}>DEMO DATA</span>
+        <div className="font-mono text-[10px] tracking-wider text-[#92400E]">{title}</div>
+      </div>
+      <div className="font-mono text-[9px] tracking-wider text-[#92400E] text-right">PRODUCTION → {prod}</div>
+    </div>
+  );
+}
+
+// Prominent tab-level "under construction" banner — used for WIP surfaces (Brand Ambassadors, Performance).
+// More visible than MockBanner: full stripe at top of tab, bigger type, construction iconography.
+function UnderConstructionBanner({tag, subtitle, summary, apisPlanned, comingSoon}){
+  const chipLabel = tag || "UNDER CONSTRUCTION";
+  const sub = subtitle || "THIS TAB IS A PREVIEW · DATA IS ILLUSTRATIVE";
+  const footer = comingSoon
+    ? {label:"COMING SOON →", text:comingSoon}
+    : {label:"PRODUCTION WIRES UP →", text:apisPlanned};
+  return (
+    <div className="mb-5 rounded-lg overflow-hidden fade-in" style={{border:"2px solid #F59E0B"}}>
+      <div className="flex items-stretch">
+        <div className="flex items-center justify-center px-4 shrink-0" style={{background:"repeating-linear-gradient(45deg, #F59E0B 0 12px, #202A44 12px 24px)"}}>
+          <span className="text-[22px]">🚧</span>
+        </div>
+        <div className="flex-1 px-5 py-4" style={{background:"#FFFBEB"}}>
+          <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+            <span className="font-mono text-[10px] tracking-wider px-2 py-0.5 rounded text-white" style={{background:"#F59E0B"}}>{chipLabel}</span>
+            <span className="font-mono text-[10px] tracking-wider text-[#92400E]">{sub}</span>
+          </div>
+          <p className="text-[12.5px] text-[#78350F] leading-snug mb-1.5">{summary}</p>
+          {footer.text && <p className="font-mono text-[9px] tracking-wider text-[#92400E]">{footer.label} {footer.text}</p>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MockBadge({tip}){
+  return (
+    <span title={tip||"Demo data — production pulls from real APIs"} className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded cursor-help" style={{background:"#FEF3C7", color:"#92400E", border:"1px solid #FDE68A"}}>DEMO DATA</span>
+  );
+}
+
+function ShareOfVoice(){
+  const max = Math.max(...SHARE_OF_VOICE.map(s=>s.pct));
+  const methodology = "How this is calculated:\n\nBranded mentions across TikTok, Instagram, X/Threads, Reddit (r/oatmilk, r/nutrition, r/parenting), trade press (BevNET, Food Dive, FoodNavigator), and Google News — last 14 days.\n\nDeduplicated by post ID, weighted by reach. Each mention is attributed to the brand whose name, handle, or product appears in the content.\n\nDATA SOURCES · Trend Scanner + Competitive Radar agents\nUPDATE CADENCE · daily, compiled weekly\nPRODUCTION · pulls from Brandwatch, Sprinklr, or native APIs.";
+  return (
+    <div className="card p-5 h-full">
+      <div className="flex items-center justify-between gap-2 mb-3">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">SHARE OF VOICE · 14 DAYS</span>
+          <span title={methodology} className="inline-flex items-center justify-center w-[12px] h-[12px] rounded-full border border-[var(--border)] bg-white font-mono text-[9px] text-[var(--muted)] cursor-help hover:border-[#202A44] hover:text-[#202A44] transition">i</span>
+          <MockBadge tip="Demo numbers — production pulls from Brandwatch, Sprinklr, or Trend Scanner agent's social listening pipeline."/>
+        </div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--green)] shrink-0">↑ 4.2× ENGAGEMENT</div>
+      </div>
+      <div className="grid gap-2">
+        {SHARE_OF_VOICE.map(s=>(
+          <div key={s.brand}>
+            <div className="flex items-center justify-between mb-0.5">
+              <span className={"text-[12px] "+(s.us?"font-semibold text-[#202A44]":"text-[#334155]")}>
+                {s.brand}{s.us?" ★":""}
+              </span>
+              <span className="font-mono text-[10px] tracking-wider text-[var(--muted)]">{s.pct}%</span>
+            </div>
+            <div className="h-[6px] rounded-full bg-[#F1F5F9] overflow-hidden">
+              <div className="h-full rounded-full" style={{width:(s.pct/max*100)+"%", background:s.color}}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CompetitorCalendar(){
+  return (
+    <div className="card p-5">
+      <div className="grid gap-2.5">
+        {COMPETITOR_CALENDAR.map((e,i)=>(
+          <div key={i} className="flex gap-3 items-start pb-2.5 border-b border-[var(--border)] last:border-0 last:pb-0">
+            <div className="font-mono text-[10px] tracking-wider w-[80px] shrink-0" style={{color:"#202A44"}}>{e.date}</div>
+            <div className="flex-1 min-w-0">
+              <div className="text-[12.5px] text-[#202A44] leading-snug font-medium">{e.event}</div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-0.5">{e.brand.toUpperCase()} · {e.impact}</div>
+            </div>
+            <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded shrink-0" style={e.confirmed?{background:"#F6FBF8",color:"#75C596",border:"1px solid #D1F0E0"}:{background:"#FAFAF7",color:"#9E652E",border:"1px solid #FDE68A"}}>{e.confirmed?"CONFIRMED":"EXPECTED"}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function RecentMovesTimeline({nav}){
+  return (
+    <div className="card p-5 h-full">
+      <div className="flex items-center justify-between gap-2 mb-3">
+        <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">TIMELINE · CLICK A MOVE TO TRACE IT</span>
+        <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{COMPETITOR_TIMELINE.length} EVENTS</span>
+      </div>
+      <div className="grid gap-3 max-h-[420px] overflow-y-auto scrollbar pr-2">
+        {COMPETITOR_TIMELINE.map((m,i)=>{
+          const c = COMP_BY_ID[m.compId];
+          const tone = c && c.direction==="down" ? "#DC2626" : c && c.direction==="up" ? "#75C596" : "#64748B";
+          return (
+            <button key={i} onClick={()=>nav.goToComp(m.compId)} className="text-left flex gap-4 items-start pb-3 border-b border-[var(--border)] last:border-0 last:pb-0 hover:bg-[#FAFAF7] rounded transition px-1 -mx-1">
+              <div className="w-[60px] shrink-0">
+                <div className="font-mono text-[10px] tracking-wider text-[var(--ink)]">{m.date.toUpperCase()}</div>
+              </div>
+              <div className="w-[110px] shrink-0">
+                <div className="flex items-center gap-1.5">
+                  <span className="inline-block w-[6px] h-[6px] rounded-full shrink-0" style={{background:tone}}></span>
+                  <span className="font-mono text-[10px] tracking-wider" style={{color:tone}}>{m.brand.toUpperCase()}</span>
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-[12.5px] text-[#202A44] leading-snug font-medium">{m.action}</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-1">→ {m.note}</div>
+              </div>
+              <span className="font-mono text-[10px] text-[var(--muted)] shrink-0">↗</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function ProductGapTable(){
+  return (
+    <div className="card p-6">
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <div>
+          <div className="font-mono text-[10px] tracking-[0.18em] text-[#202A44] mb-0.5">THE SHELF</div>
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">Every oat milk · every dimension · Willa's wins the row</div>
+        </div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">PUBLIC LABELS · APR 2026</div>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-[12px]">
+          <thead>
+            <tr className="text-left border-b border-[var(--border)]">
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)]">BRAND</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">SUGAR / CUP</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">INGREDIENTS</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">SEED OILS</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">ORGANIC</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">GLYPHOSATE-FREE</th>
+              <th className="px-3 py-2 font-mono text-[9px] tracking-wider text-[var(--muted)] text-center">GUMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {PRODUCT_GAP.map((row,i)=>(
+              <tr key={i} className="border-b border-[var(--border)] last:border-0" style={row.us?{background:"#F6FBF8"}:{}}>
+                <td className="px-3 py-2.5">
+                  <span className={"font-serif text-[14px] "+(row.us?"font-semibold":"")}>{row.brand}</span>
+                  {row.us && <span className="ml-2 font-mono text-[8.5px] tracking-wider text-[var(--green)]">★ US</span>}
+                </td>
+                {gapCell(row.sugar)}
+                {gapCell(row.ingr)}
+                {gapCell(row.canola)}
+                {gapCell(row.organic)}
+                {gapCell(row.glyphosate)}
+                {gapCell(row.gums)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+function HowItWorksAgentCard({agent, selected, onClick}){
+  return (
+    <button onClick={onClick} className={"text-left w-full p-3 rounded-md border transition "+(selected?"border-[#202A44] bg-white shadow-sm":"border-[var(--border)] bg-[#FAFAF7] hover:bg-white hover:border-[#cfcfc8]")}>
+      <div className="flex items-center gap-2 mb-1">
+        <span className="inline-block w-[8px] h-[8px] rounded-full shrink-0" style={{background:agent.color}}></span>
+        <span className="font-mono text-[9.5px] tracking-wider" style={{color:agent.color}}>{agent.name.toUpperCase()}</span>
+      </div>
+      <div className="text-[11px] text-[#334155] leading-snug">{agent.role}</div>
+    </button>
+  );
+}
+
+// Reference library — the DNA patterns + benefit shorthand stingers that every
+// brief is built against. Used to live in the Cultural Pulse tab, moved here
+// 2026-04-17 because it's cross-cutting reference material, not pulse content.
+// Triggered from a sidebar button so it's always one click away regardless of
+// which tab the user is on.
+function ReferenceGuide({open, onClose}){
+  useEffect(()=>{
+    if(!open) return;
+    const onKey = e => { if(e.key==="Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return ()=>{ window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  },[open,onClose]);
+
+  if(!open) return null;
+  return (
+    <div className="fixed inset-0 z-[70] fade-in flex items-start justify-center px-4 py-6 md:py-10 overflow-y-auto scrollbar"
+      style={{background:"rgba(15,23,42,0.55)", backdropFilter:"blur(3px)"}}
+      onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[1000px] relative my-auto overflow-hidden"
+        style={{border:"1px solid var(--border)"}}
+        onClick={e=>e.stopPropagation()}>
+        <button onClick={onClose}
+          className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-[var(--ink)] bg-white border border-[var(--border)] hover:bg-[#F6F6F0] transition z-10"
+          aria-label="Close reference">
+          <span className="text-[18px] leading-none">×</span>
+        </button>
+
+        <div className="px-7 pt-6 pb-5 border-b border-[var(--border)]">
+          <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">THE FIELD GUIDE 🌾</div>
+          <h2 className="font-serif text-[26px] leading-tight tracking-tight">What works for Willa's</h2>
+          <p className="text-[12px] text-[var(--muted)] mt-1.5 max-w-2xl leading-relaxed">Seven hero formats that win for Willa's, and twelve stingers we keep in the back pocket. Every brief the engine ships pulls from these — that's how every post stays Willa's, no matter who's writing it.</p>
+        </div>
+
+        <div className="px-7 py-6">
+          {/* DNA library */}
+          <div className="mb-7">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <div className="font-mono text-[10px] tracking-[0.2em] text-[#202A44]">PROVEN FORMATS</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-0.5">7 hero formats the engine briefs against · each brief gets one</div>
+              </div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{TOP_PERFORMER_DNA.length} FORMATS</div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+              {TOP_PERFORMER_DNA.map(d=><DnaCard key={d.id} d={d}/>)}
+            </div>
+          </div>
+
+          {/* Benefit shorthand */}
+          <div>
+            <div className="flex items-center justify-between mb-3 pt-5 border-t border-[var(--border)]">
+              <div>
+                <div className="font-mono text-[10px] tracking-[0.2em] text-[#202A44]">BENEFIT SHORTHAND</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-0.5">2–3 second stingers for end cards, Pinterest overlays, caption sign-offs</div>
+              </div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{BENEFIT_SHORTHAND.length} LINES</div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {BENEFIT_SHORTHAND.map(b=>(
+                <div key={b.id} className="rounded-md p-3 border border-[var(--border)] bg-white">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{b.category}</span>
+                    <span className="font-mono text-[8.5px] tracking-wider text-[#9E652E]">{b.duration.replace("s"," sec")}</span>
+                  </div>
+                  <p className="font-serif text-[14px] leading-snug text-[#202A44] mb-2">"{b.line}"</p>
+                  <div className="flex flex-wrap gap-1">
+                    {b.useWith.map(f=>(
+                      <span key={f} className="font-mono text-[8px] tracking-wider px-1.5 py-[1px] rounded bg-[#F1F5F9] text-[#475569]">{f.toUpperCase()}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// COMMAND PALETTE (⌘K)
+// Searchable index across every entity in the engine + quick-nav actions.
+// Triggered via ⌘K from anywhere, via the 🔍 button in the top-right, or via
+// the ⌘K hint in the sidebar footer. Turns the tool from a tab-based dashboard
+// into a responsive craft tool — power users never have to click a nav item
+// again. Added 2026-04-19.
+// ════════════════════════════════════════════════════════════════════════
+
+const CMD_TYPE_META = {
+  ACTION:     {label:"NAVIGATE",   color:"#202A44", order:0},
+  TREND:      {label:"TREND",      color:"#73B2C9", order:1},
+  PULSE:      {label:"PULSE",      color:"#9E652E", order:2},
+  BRIEF:      {label:"BRIEF",      color:"#75C596", order:3},
+  COMPETITOR: {label:"COMPETITOR", color:"#DC2626", order:4},
+  STUDIO:     {label:"STUDIO",     color:"#A191B2", order:5}
+};
+
+function buildCommandIndex(stickies){
+  const items = [];
+  // Fixed navigation actions — always available
+  [
+    {id:"act-studio",     label:"Open the Studio",         sub:"Riff on a link, photo, or idea",    action:"studio"},
+    {id:"act-briefs",     label:"Content Briefs",          sub:"This week's brief queue",            action:"briefs"},
+    {id:"act-intel",      label:"Intelligence Brief",      sub:"Trends · Pulse · Competitor",        action:"intel"},
+    {id:"act-pulse",      label:"Cultural Pulse",          sub:"Memes, news, misinformation",        action:"pulse"},
+    {id:"act-trends",     label:"Category + Policy",       sub:"Signals + Willa's angles",           action:"trends"},
+    {id:"act-comp",       label:"Competitor Watch",        sub:"What they did · what's coming",      action:"comp"},
+    {id:"act-playbook",   label:"Content Calendar",        sub:"When + where each brief ships",       action:"playbook"},
+    {id:"act-highlights", label:"This week's highlights",  sub:"The read + 5 signals",               action:"highlights"},
+    {id:"act-reference",  label:"Proven formats",          sub:"DNA + benefit shorthand",            action:"reference"},
+    {id:"act-howitworks", label:"How it works",            sub:"Meet the agents",                    action:"howitworks"},
+    {id:"act-engine",     label:"Engine activity",         sub:"Agent drawer",                       action:"engine"}
+  ].forEach(a => items.push({type:"ACTION", ...a}));
+  TRENDS.forEach(t => items.push({type:"TREND", id:t.id, label:t.trend, sub:t.urgency+" · "+(t.pillars||[]).join(" · "), data:t}));
+  CULTURAL_PULSE.forEach(p => items.push({type:"PULSE", id:p.id, label:p.hook, sub:p.type+" · "+p.platform, data:p}));
+  BRIEFS.forEach(b => items.push({type:"BRIEF", id:b.id, label:b.concept, sub:b.platform+" · "+b.pillar+" · "+b.priority, data:b}));
+  COMPETITORS.forEach(c => items.push({type:"COMPETITOR", id:c.id, label:c.name, sub:c.status.slice(0,80), data:c}));
+  (stickies||[]).forEach(s => {
+    const label = s.type === "link" ? (s.url || "dropped link") : s.type === "note" ? (s.content || "note") : (s.source || "photo");
+    items.push({type:"STUDIO", id:s.id, label: label.slice(0,120), sub:"Studio sticky · "+s.type, data:s});
+  });
+  return items;
+}
+
+function filterCommandIndex(items, query){
+  if(!query || !query.trim()){
+    // Show actions first when empty, plus a few of each other type so the palette
+    // never feels empty on first open
+    return items.filter(i => i.type === "ACTION").slice(0, 12);
+  }
+  const q = query.toLowerCase();
+  return items
+    .map(item => {
+      const label = (item.label || "").toLowerCase();
+      const sub = (item.sub || "").toLowerCase();
+      const labelIdx = label.indexOf(q);
+      const subIdx = sub.indexOf(q);
+      if(labelIdx === -1 && subIdx === -1) return null;
+      // Earlier match + label match > sub match
+      const score = labelIdx !== -1 ? (1000 - labelIdx) : (500 - subIdx);
+      return {...item, _score: score};
+    })
+    .filter(x => x !== null)
+    .sort((a,b) => b._score - a._score)
+    .slice(0, 40);
+}
+
+function groupCommandResults(filtered){
+  const groups = {};
+  filtered.forEach(item => {
+    if(!groups[item.type]) groups[item.type] = {type:item.type, items:[]};
+    groups[item.type].items.push(item);
+  });
+  return Object.values(groups).sort((a,b) => (CMD_TYPE_META[a.type].order - CMD_TYPE_META[b.type].order));
+}
+
+function CommandPalette({open, onClose, index, onSelect}){
+  const [query, setQuery] = useState("");
+  const [activeIdx, setActiveIdx] = useState(0);
+  const listRef = React.useRef();
+
+  const filtered = useMemo(() => filterCommandIndex(index, query), [index, query]);
+  const groups   = useMemo(() => groupCommandResults(filtered), [filtered]);
+  // Flatten groups back to a sequential list so arrow keys walk through them in render order
+  const flatItems = useMemo(() => groups.flatMap(g => g.items), [groups]);
+
+  // Reset state when opening or when query changes
+  useEffect(() => { if(open){ setQuery(""); setActiveIdx(0); } }, [open]);
+  useEffect(() => { setActiveIdx(0); }, [query]);
+
+  // Keyboard — arrows, Enter, Escape
+  useEffect(() => {
+    if(!open) return;
+    const onKey = (e) => {
+      if(e.key === "Escape"){ e.preventDefault(); onClose(); }
+      else if(e.key === "ArrowDown"){ e.preventDefault(); setActiveIdx(i => Math.min(i+1, flatItems.length-1)); }
+      else if(e.key === "ArrowUp"){ e.preventDefault(); setActiveIdx(i => Math.max(i-1, 0)); }
+      else if(e.key === "Enter"){
+        e.preventDefault();
+        const item = flatItems[activeIdx];
+        if(item) onSelect(item);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, flatItems, activeIdx, onClose, onSelect]);
+
+  // Body scroll lock
+  useEffect(() => {
+    if(!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, [open]);
+
+  if(!open) return null;
+
+  // Compute each item's index in the flattened list so highlight + mouse-hover match keyboard nav
+  const idxMap = new Map();
+  flatItems.forEach((it, i) => idxMap.set(it.type+":"+it.id, i));
+
+  return (
+    <div className="fixed inset-0 z-[90] fade-in flex items-start justify-center pt-[12vh] px-4"
+      style={{background:"rgba(15,23,42,0.45)", backdropFilter:"blur(3px)"}}
+      onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[640px] overflow-hidden"
+        style={{border:"1px solid var(--border)"}}
+        onClick={e=>e.stopPropagation()}>
+
+        {/* Input */}
+        <div className="border-b border-[var(--border)] flex items-center gap-3 px-5 py-3.5">
+          <span className="text-[16px] opacity-70">🔍</span>
+          <input autoFocus value={query} onChange={e=>setQuery(e.target.value)}
+            placeholder="Search trends, briefs, competitors, or type a nav command…"
+            className="flex-1 text-[14px] bg-transparent focus:outline-none text-[#202A44] placeholder:text-[var(--muted)]"/>
+          <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] px-1.5 py-[2px] rounded border border-[var(--border)] shrink-0">ESC</span>
+        </div>
+
+        {/* Results */}
+        <div ref={listRef} className="max-h-[60vh] overflow-y-auto scrollbar">
+          {groups.length === 0 ? (
+            <div className="px-5 py-8 text-center">
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">NO RESULTS</div>
+              <div className="text-[12.5px] text-[var(--muted)]">Try a different search, or press ESC to close.</div>
+            </div>
+          ) : groups.map(group => {
+            const meta = CMD_TYPE_META[group.type];
+            return (
+              <div key={group.type}>
+                <div className="font-mono text-[8.5px] tracking-[0.18em] text-[var(--muted)] px-5 pt-3 pb-1.5 bg-white border-b border-[var(--border)]">
+                  {meta.label} · {group.items.length}
+                </div>
+                {group.items.map(item => {
+                  const idx = idxMap.get(item.type+":"+item.id);
+                  const active = idx === activeIdx;
+                  return (
+                    <button key={item.id}
+                      onClick={() => onSelect(item)}
+                      onMouseEnter={() => setActiveIdx(idx)}
+                      className={"w-full text-left px-5 py-2.5 flex items-center gap-3 transition border-b border-[var(--border)] last:border-b-0 "+(active?"bg-[#FFFEF7]":"hover:bg-[#FAFAF7]")}>
+                      <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-[2px] rounded shrink-0"
+                        style={{color: meta.color, background: meta.color+"14", border:"1px solid "+meta.color+"33"}}>
+                        {meta.label}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-[13px] text-[#202A44] truncate leading-snug">{item.label}</div>
+                        {item.sub && <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] truncate mt-0.5">{item.sub}</div>}
+                      </div>
+                      {active && <span className="font-mono text-[8.5px] tracking-wider text-[var(--ink)] shrink-0">OPEN ↵</span>}
+                    </button>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Footer hint */}
+        <div className="px-5 py-2.5 border-t border-[var(--border)] flex items-center justify-between text-[var(--muted)]" style={{background:"#FAFAF7"}}>
+          <div className="font-mono text-[8.5px] tracking-wider flex items-center gap-3">
+            <span>↑↓ NAVIGATE</span>
+            <span>↵ OPEN</span>
+            <span>ESC CLOSE</span>
+          </div>
+          <div className="font-mono text-[8.5px] tracking-wider">{flatItems.length} RESULTS</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HowItWorks({open, onClose}){
+  const [selectedId,setSelectedId] = useState("trend");
+  const intervalRef = React.useRef(null);
+
+  useEffect(()=>{
+    if(!open) return;
+    setSelectedId(AGENTS[0].id);
+    let i = 0;
+    intervalRef.current = setInterval(()=>{
+      i += 1;
+      if(i >= AGENTS.length){
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        return;
+      }
+      setSelectedId(AGENTS[i].id);
+    }, 1800);
+    return ()=>{ if(intervalRef.current) clearInterval(intervalRef.current); };
+  }, [open]);
+
+  function selectAgent(id){
+    if(intervalRef.current){ clearInterval(intervalRef.current); intervalRef.current = null; }
+    setSelectedId(id);
+  }
+
+  if(!open) return null;
+  const selected = AGENT_BY_ID[selectedId];
+  const details = AGENT_DETAILS[selectedId];
+  const leads = ["Strategy","Creative","Media","Analytics"];
+  const leadDescriptions = {
+    Strategy: "Finds the signal. Gates it. Protects taste.",
+    Creative: "Turns the signal into shootable content.",
+    Media: "Plans paid spend and earned outreach. Gets the work in front of people.",
+    Analytics: "Measures what worked. Feeds it back."
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 fade-in" style={{background:"rgba(15,23,42,0.35)"}} onClick={onClose}>
+      <div className="absolute inset-6 bg-[var(--bg)] rounded-xl overflow-hidden flex flex-col" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+        <div className="px-8 py-5 border-b border-[var(--border)] bg-white flex items-start justify-between">
+          <div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">HOW IT WORKS</div>
+            <h2 className="font-serif text-[28px] leading-none tracking-tight">A self-driving social department. Not a dashboard.</h2>
+            <p className="text-[12px] text-[var(--muted)] mt-2 max-w-2xl">{AGENTS.length} specialized agents, 4 leads, 1 command layer. Click any agent to see what it scrapes, what it decides, and who it hands off to.</p>
+          </div>
+          <button onClick={onClose} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)] px-3 py-2 border border-[var(--border)] rounded bg-white">CLOSE ✕</button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto scrollbar">
+          <div className="px-8 py-7 max-w-[1300px] mx-auto">
+            <div className="flex justify-center mb-1">
+              <div className="card p-4 w-[340px] text-center" style={{background:"#FFFEF7",borderColor:"#E8E1C2"}}>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">COMMAND LAYER</div>
+                <div className="font-serif text-[18px] tracking-tight">Head of Social</div>
+                <div className="text-[11px] text-[#334155] leading-snug mt-1">Orchestrates the full pipeline. Reports to you.</div>
+              </div>
+            </div>
+            <div className="flex justify-center"><div className="w-px h-6 bg-[var(--border)]"></div></div>
+
+            <div className="grid grid-cols-4 gap-4">
+              {leads.map(lead=>(
+                <div key={lead} className="text-center">
+                  <div className="card p-3" style={{background:"#F1F5F9"}}>
+                    <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-0.5">LEAD</div>
+                    <div className="font-serif text-[15px] tracking-tight">{lead}</div>
+                    <div className="text-[10.5px] text-[#334155] leading-snug mt-1">{leadDescriptions[lead]}</div>
+                  </div>
+                  <div className="flex justify-center"><div className="w-px h-5 bg-[var(--border)]"></div></div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 mb-8">
+              {leads.map(lead=>{
+                const leadAgents = AGENTS.filter(a=>a.lead===lead);
+                return (
+                  <div key={lead} className="grid gap-2">
+                    {leadAgents.map(a=>(
+                      <HowItWorksAgentCard key={a.id} agent={a} selected={a.id===selectedId} onClick={()=>selectAgent(a.id)}/>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="card p-6 fade-in" key={selectedId}>
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="inline-block w-[10px] h-[10px] rounded-full" style={{background:selected.color}}></span>
+                  <span className="font-mono text-[10px] tracking-wider" style={{color:selected.color}}>{selected.name.toUpperCase()}</span>
+                  <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">· {selected.lead.toUpperCase()} LEAD</span>
+                </div>
+                <div className="font-serif text-[22px] leading-tight tracking-tight">{selected.role}</div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-5 mt-5">
+                <div>
+                  <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">WHAT IT SCRAPES</div>
+                  <ul className="space-y-1.5">
+                    {details.scrapes.map((s,i)=>(
+                      <li key={i} className="text-[11.5px] text-[#334155] leading-snug flex gap-1.5">
+                        <span className="text-[var(--muted)]">—</span>
+                        <span>{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">WHAT IT DECIDES</div>
+                  <p className="text-[12px] text-[#202A44] leading-relaxed">{details.decides}</p>
+                </div>
+                <div>
+                  <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">HANDS OFF TO</div>
+                  <ul className="space-y-1.5">
+                    {details.handsOff.map((h,i)=>(
+                      <li key={i} className="text-[11.5px] text-[#202A44] leading-snug flex items-center gap-1.5">
+                        <span className="font-mono text-[11px]" style={{color:selected.color}}>→</span>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="font-serif text-[16px] text-[#334155] italic max-w-2xl mx-auto leading-relaxed">9 specialized agents. 4 leads. 1 command layer. Reporting to you, running 24/7, inside your existing stack.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ThreadChip({label, sub, color, onClick}){
+  return (
+    <button onClick={onClick} className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-left">
+      <span className="inline-block w-[6px] h-[6px] rounded-full shrink-0" style={{background:color||"#202A44"}}></span>
+      <div className="leading-tight">
+        <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{sub}</div>
+        <div className="text-[11px] text-[#202A44]">{label}</div>
+      </div>
+    </button>
+  );
+}
+
+function CulturalPulseCard({p, nav}){
+  const dna = p.dnaMatch ? DNA_BY_ID[p.dnaMatch] : null;
+  const flashed = nav && nav.studioFlash === p.id;
+  const briefIds = PULSE_BRIEFS[p.id] || [];
+  function toStudio(){
+    if(!nav || !nav.sendToStudio) return;
+    nav.sendToStudio(p.id, {
+      type:"note",
+      content: p.hook + " — " + p.detail,
+      note: "Willa's Play: " + p.willasPlay + (dna ? "\nFormat: " + dna.name : ""),
+      sourceCard: "Cultural Pulse · " + p.type
+    });
+  }
+  return (
+    <div id={"card-"+p.id} className="card p-5 fade-in" style={{borderLeft:"3px solid "+p.typeColor}}>
+      <div className="flex items-center justify-between gap-2 mb-2.5">
+        <div className="flex items-center gap-2 flex-wrap min-w-0">
+          <span className="font-mono text-[9px] tracking-wider px-1.5 py-[2px] rounded"
+            style={{color:p.typeColor, background:p.typeColor+"12", border:"1px solid "+p.typeColor+"33"}}>
+            {p.type}
+          </span>
+          {p.platform && <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{p.platform.toUpperCase()}</span>}
+        </div>
+        {nav && nav.sendToStudio && (
+          <button onClick={toStudio} title="Send to the Studio to riff on"
+            className="font-mono text-[9px] tracking-wider px-2 py-1 rounded border border-[var(--border)] bg-white hover:bg-[#FFFEF7] hover:border-[#E8E1C2] transition shrink-0">
+            {flashed ? "→ SENT ✓" : "+ STUDIO"}
+          </button>
+        )}
+      </div>
+      <div className="font-serif text-[16px] leading-snug text-[#202A44] mb-2">{p.hook}</div>
+      <p className="text-[12px] text-[#64748B] leading-relaxed">{p.detail}</p>
+
+      {/* Willa's play — amber callout box (2026-05-17 visual upgrade per Christina:
+          the action line should stand apart from the analytical detail.) */}
+      <div className="mt-4 p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
+        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S PLAY</div>
+        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{p.willasPlay}</p>
+      </div>
+
+      {briefIds.length>0 && (
+        <div className="mt-4 pt-3 border-t border-[var(--border)]">
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">→ DROVE {briefIds.length} BRIEF{briefIds.length>1?"S":""} THIS WEEK</div>
+          <div className="flex flex-wrap gap-1.5">
+            {briefIds.map(bId=><BriefThreadChip key={bId} briefId={bId} nav={nav}/>)}
+          </div>
+        </div>
+      )}
+
+      <Sources list={p.sources}/>
+    </div>
+  );
+}
+
+// DNA card — simple face (icon + name + 1 hero example), details behind a click.
+function DnaCard({d}){
+  const [expanded,setExpanded] = useState(false);
+  return (
+    <div className="rounded-md p-3.5" style={{background:d.tagColor+"08", border:"1px solid "+d.tagColor+"33"}}>
+      <div className="flex items-center gap-2 mb-1.5">
+        <span className="text-[18px]">{d.icon}</span>
+        <span className="font-mono text-[10px] tracking-wider" style={{color:d.tagColor}}>{d.name.toUpperCase()}</span>
+      </div>
+      <p className="text-[11.5px] text-[#334155] leading-relaxed mb-2">{d.description}</p>
+      <p className="text-[11px] italic text-[#475569] leading-snug mb-2">e.g. "{d.exemplars[0]}"</p>
+      <button onClick={()=>setExpanded(e=>!e)}
+        className="font-mono text-[9px] tracking-wider hover:opacity-70 transition"
+        style={{color:d.tagColor}}>
+        {expanded ? "− HIDE RULES" : "+ WHEN + RULES"}
+      </button>
+      {expanded && (
+        <div className="mt-2.5 pt-2.5 border-t border-[var(--border)]">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">WHEN</div>
+          <p className="text-[11px] text-[#334155] leading-snug mb-2.5">{d.when}</p>
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">RULES</div>
+          <ul className="space-y-0.5">
+            {d.rules.map((r,i)=>(
+              <li key={i} className="text-[11px] text-[#334155] leading-snug flex gap-1.5">
+                <span style={{color:d.tagColor}}>✓</span><span>{r}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function DnaLibraryPanel(){
+  const [open,setOpen] = useState(false);
+  return (
+    <div className="card fade-in">
+      <button onClick={()=>setOpen(o=>!o)}
+        className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-[#F6F6F0] transition rounded-[10px]">
+        <div>
+          <div className="font-serif text-[17px] tracking-tight">Top-Performer DNA</div>
+          <div className="text-[11.5px] text-[var(--muted)] mt-0.5">The 7 hero formats the engine briefs against. Each brief gets one of these tags.</div>
+        </div>
+        <span className="font-mono text-[14px] text-[var(--ink)]">{open?"−":"+"}</span>
+      </button>
+      {open && (
+        <div className="border-t border-[var(--border)] p-4 grid grid-cols-1 lg:grid-cols-2 gap-3">
+          {TOP_PERFORMER_DNA.map(d=><DnaCard key={d.id} d={d}/>)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BenefitShorthandPanel(){
+  const [open,setOpen] = useState(false);
+  return (
+    <div className="card fade-in">
+      <button onClick={()=>setOpen(o=>!o)}
+        className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-[#F6F6F0] transition rounded-[10px]">
+        <div>
+          <div className="font-serif text-[17px] tracking-tight">Benefit Shorthand</div>
+          <div className="text-[11.5px] text-[var(--muted)] mt-0.5">12 quick stingers for end cards, Pinterest overlays, and caption sign-offs.</div>
+        </div>
+        <span className="font-mono text-[14px] text-[var(--ink)]">{open?"−":"+"}</span>
+      </button>
+      {open && (
+        <div className="border-t border-[var(--border)] p-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+          {BENEFIT_SHORTHAND.map(b=>(
+            <div key={b.id} className="rounded-md p-3 border border-[var(--border)] bg-white">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{b.category}</span>
+                <span className="font-mono text-[8.5px] tracking-wider text-[#9E652E]">{b.duration.replace("s"," sec")}</span>
+              </div>
+              <p className="font-serif text-[14px] leading-snug text-[#202A44] mb-2">"{b.line}"</p>
+              <div className="flex flex-wrap gap-1">
+                {b.useWith.map(f=>(
+                  <span key={f} className="font-mono text-[8px] tracking-wider px-1.5 py-[1px] rounded bg-[#F1F5F9] text-[#475569]">{f.toUpperCase()}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Aggregate DNA distribution for a week — used in Content Calendar to surface
+// format mix without overwhelming the team with per-brief scorecards.
+function FormatMixBar({briefs}){
+  const counts = {};
+  briefs.forEach(b => { if(b.dnaPattern) counts[b.dnaPattern] = (counts[b.dnaPattern]||0) + 1; });
+  const total = Object.values(counts).reduce((a,b)=>a+b,0);
+  if(total === 0) return null;
+  const ordered = TOP_PERFORMER_DNA.filter(d => counts[d.id]).map(d => ({...d, count: counts[d.id]}));
+  return (
+    <div className="card px-4 py-3.5">
+      <div className="flex items-center justify-between mb-2">
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">FORMAT MIX THIS WEEK</div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{ordered.length} OF 7 HERO FORMATS</div>
+      </div>
+      <div className="flex h-[10px] rounded overflow-hidden border border-[var(--border)] mb-2.5">
+        {ordered.map(d => (
+          <div key={d.id} title={d.name+" — "+d.count+" brief"+(d.count===1?"":"s")}
+            style={{background:d.tagColor, width:(d.count/total*100)+"%"}}></div>
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-x-3 gap-y-1.5">
+        {ordered.map(d => (
+          <div key={d.id} className="flex items-center gap-1.5">
+            <span className="inline-block w-[8px] h-[8px] rounded-sm" style={{background:d.tagColor}}></span>
+            <span className="text-[10.5px] text-[#334155]">{d.name}</span>
+            <span className="font-mono text-[10px] text-[var(--muted)]">· {d.count}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LiveClock(){
+  const now = useLiveClock();
+  const {date} = fmtClock(now);
+  return (
+    <span className="font-mono text-[10px] tracking-wider text-[var(--ink)]">{date.toUpperCase()}</span>
+  );
+}
+
+function sourceDomain(url){
+  try{
+    const u = new URL(url);
+    return u.hostname.replace(/^www\./,"");
+  }catch(e){ return url; }
+}
+
+// Sources render quietly inline on every card that has them. No toggles, no
+// "+ SHOW N SOURCES" buttons — the brand trust rule is that sourcing is
+// always visible, always one click to the original. Labels go into the title
+// attribute so hover reveals the full citation without adding visual weight.
+function Sources({list, label}){
+  if(!list||!list.length) return null;
+  return (
+    <div className="mt-4 pt-3 border-t border-[var(--border)] flex flex-wrap items-center gap-x-3 gap-y-1">
+      <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{label||"SOURCES"}</span>
+      {list.map((s,i)=>(
+        <a key={i} href={s.url} target="_blank" rel="noreferrer"
+          title={s.label}
+          className="src-link font-mono text-[9.5px] tracking-wide">
+          {sourceDomain(s.url)}
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}){
+  return (
+    <aside className="w-[220px] shrink-0 border-r border-[var(--border)] bg-white flex flex-col">
+      <div className="px-5 pt-7 pb-5 border-b border-[var(--border)]">
+        <img src="https://i.postimg.cc/R0GsStL8/images.png" alt="Willa's" className="block" style={{maxWidth:"140px", height:"auto"}}/>
+        <div className="font-mono text-[9px] text-[var(--muted)] tracking-[0.18em] mt-2">SOCIAL CONTENT ENGINE</div>
+      </div>
+
+      {/* "This Week" reopen button — sits above main nav with a warm amber glow
+          so it reads as the freshest thing on the page. Pulsing dot signals "new." */}
+      <div className="px-3 pt-3">
+        <button onClick={onOpenWelcome}
+          className="highlights-glow w-full px-3 py-2.5 rounded-md border transition text-left flex items-center justify-between gap-2"
+          style={{background:"#FFFEF7", borderColor:"#FACC15"}}>
+          <div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--ink)] flex items-center gap-1.5">
+              <span className="highlights-pulse"></span>
+              THIS WEEK'S HIGHLIGHTS
+            </div>
+            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-0.5">{WELCOME_WEEK_RANGE}</div>
+          </div>
+          <span className="font-mono text-[11px] text-[var(--ink)]">↗</span>
+        </button>
+      </div>
+
+      <nav className="p-2.5 flex flex-col gap-1 mt-2">
+        {[
+          {id:"intel",label:"Intelligence Brief", icon:"📡", sub:"What happened on the internet this week"},
+          {id:"briefs",label:"Content Briefs", icon:"📋", sub:"What Willa's should make + post because of it"},
+          {id:"studio",label:"Studio", icon:"✦", sub:"Riff + refine ideas into final posts", sparkle:true},
+          {id:"playbook",label:"Content Calendar", icon:"📅", sub:"When + where each brief ships this week"},
+          {id:"perf",label:"Performance", icon:"📈", sub:"What shipped last week + what it taught us — coming soon", wip:true, disabled:true},
+          {id:"settings",label:"Settings", icon:"⚙️", sub:"Theme, text size, accessibility, account"}
+        ].map(n=>(
+          <button key={n.id}
+            onClick={()=>{ if(!n.disabled) setSection(n.id); }}
+            disabled={n.disabled}
+            title={n.disabled ? n.sub+" (locked — coming soon)" : n.sub}
+            className={"nav-item text-left px-3 py-2 rounded-md flex items-center justify-between gap-2 "+(section===n.id?"active":"")+(n.disabled?" opacity-40 cursor-not-allowed pointer-events-none":"")}>
+            <div className="text-[13px] font-medium flex items-center gap-2 flex-1 min-w-0">
+              <span className={n.sparkle ? "text-[12px]" : "text-[13px]"}>{n.icon}</span>
+              {n.label}
+            </div>
+            {n.disabled && <span className="font-mono text-[7.5px] tracking-wider px-1 py-[1px] rounded bg-[#F1F5F9] text-[#64748B] border border-[#E2E8F0] shrink-0">SOON</span>}
+            {n.wip && !n.disabled && <span className="font-mono text-[7.5px] tracking-wider px-1 py-[1px] rounded bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A] shrink-0">WIP</span>}
+            {n.sparkle && !n.wip && !n.disabled && <span className="font-mono text-[7.5px] tracking-wider px-1 py-[1px] rounded text-white shrink-0" style={{background:"#202A44"}}>NEW</span>}
+          </button>
+        ))}
+      </nav>
+
+      <div className="mt-auto"></div>
+
+      {/* Utility buttons — always available, regardless of which tab is active */}
+      <div className="px-3 pb-3 grid gap-1.5">
+        <button onClick={onOpenReference}
+          className="w-full px-3 py-2 rounded-md border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-left flex items-center justify-between gap-2">
+          <div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--ink)]">PROVEN FORMATS</div>
+            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-0.5">{TOP_PERFORMER_DNA.length} formats · {BENEFIT_SHORTHAND.length} stingers</div>
+          </div>
+          <span className="font-mono text-[10px] text-[var(--muted)]">↗</span>
+        </button>
+        <button onClick={onHowItWorks}
+          className="w-full px-3 py-2 rounded-md border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-left flex items-center justify-between gap-2">
+          <div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--ink)]">HOW IT WORKS</div>
+            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-0.5">{AGENTS.length} agents · 4 leads</div>
+          </div>
+          <span className="font-mono text-[10px] text-[var(--muted)]">↗</span>
+        </button>
+      </div>
+    </aside>
+  );
+}
+
+function Ticker(){
+  const items = [...TICKER, ...TICKER];
+  return (
+    <div className="border-b border-[var(--border)] bg-white overflow-hidden">
+      <div className="flex items-center">
+        <div className="overflow-hidden flex-1">
+          <div className="ticker-track py-1.5 font-mono text-[11px]">
+            {items.map((t,i)=>{
+              const a = AGENT_BY_ID[t.agent];
+              return (
+                <span key={i} className="flex items-center gap-2">
+                  <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:a.color}}></span>
+                  <span style={{color:a.color}}>{a.name.toUpperCase()}</span>
+                  <span className="text-[var(--ink)]">· {t.text}</span>
+                  <span className="text-[var(--border)] mx-4">◆</span>
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Brief-thread chip — used on Trend + Competitor cards to show lineage downstream
+// into the content briefs they drove. Small, quiet, clickable.
+function BriefThreadChip({briefId, nav, maxConcept}){
+  const b = BRIEF_BY_ID[briefId];
+  if(!b) return null;
+  return (
+    <button onClick={()=>nav.goToBrief(briefId)}
+      className="flex items-center gap-1.5 px-2 py-1 rounded border border-[var(--border)] bg-[#FAFAF7] hover:bg-white hover:border-[#202A44] transition text-left">
+      <span className="inline-block w-[6px] h-[6px] rounded-full shrink-0" style={{background:b.pillarColor}}></span>
+      <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{b.platform.toUpperCase()}</span>
+      <span className="text-[10.5px] text-[#202A44] truncate" style={{maxWidth:(maxConcept||200)+"px"}}>{b.concept}</span>
+    </button>
+  );
+}
+
+function TrendCard({t,focused,nav}){
+  const briefIds = TREND_BRIEFS[t.id] || [];
+  const flashed = nav.studioFlash === t.id;
+  function toStudio(e){
+    e.stopPropagation();
+    nav.sendToStudio(t.id, {
+      type:"note",
+      content: t.trend + " — " + t.detail,
+      note: "Willa's angle: " + t.angle,
+      sourceCard: "Trend · " + t.trend
+    });
+  }
+  return (
+    <div id={"card-"+t.id} className={"card p-6 fade-in transition relative "+(focused?"ring-2 ring-[#202A44] shadow-lg":"")}>
+      {/* Urgency lives on the section header above the grid — each card just
+          carries its pillar badges so we don't show the same signal twice. */}
+      <div className="flex items-center justify-between gap-2 mb-4">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {t.pillars.map(p=><PillarBadge key={p} name={p}/>)}
+        </div>
+        <button onClick={toStudio} title="Send to the Studio to riff on"
+          className="font-mono text-[9px] tracking-wider px-2 py-1 rounded border border-[var(--border)] bg-white hover:bg-[#FFFEF7] hover:border-[#E8E1C2] transition shrink-0">
+          {flashed ? "→ SENT ✓" : "+ STUDIO"}
+        </button>
+      </div>
+      <h3 className="font-serif text-[19px] leading-tight tracking-tight mb-3">{t.trend}</h3>
+      <p className="text-[12.5px] text-[#334155] leading-relaxed">{t.detail}</p>
+
+      {/* Willa's angle — amber callout box (consistent with Pulse + Competitor cards) */}
+      <div className="mt-5 p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
+        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S ANGLE</div>
+        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{t.angle}</p>
+      </div>
+
+      {briefIds.length>0 && (
+        <div className="mt-5 pt-4 border-t border-[var(--border)]">
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">→ DROVE {briefIds.length} BRIEF{briefIds.length>1?"S":""} THIS WEEK</div>
+          <div className="flex flex-wrap gap-1.5">
+            {briefIds.map(bId=><BriefThreadChip key={bId} briefId={bId} nav={nav}/>)}
+          </div>
+        </div>
+      )}
+      <Sources list={t.sources}/>
+    </div>
+  );
+}
+
+function DirectionArrow({d}){
+  if(d==="up") return <span className="font-mono text-[var(--green)]">↑</span>;
+  if(d==="down") return <span className="font-mono text-[var(--red)]">↓</span>;
+  return <span className="font-mono text-[var(--muted)]">→</span>;
+}
+
+function CompetitorCard({c,focused,nav}){
+  const tone = c.direction==="down"?"#DC2626":c.direction==="up"?"#75C596":"#64748B";
+  const briefIds = COMP_BRIEFS[c.id] || [];
+  const flashed = nav.studioFlash === c.id;
+  function toStudio(e){
+    e.stopPropagation();
+    nav.sendToStudio(c.id, {
+      type:"note",
+      content: c.name + " — " + c.status,
+      note: "Willa's opportunity: " + c.opportunity,
+      sourceCard: "Competitor · " + c.name
+    });
+  }
+  return (
+    <div id={"card-"+c.id} className={"card p-6 fade-in transition "+(focused?"ring-2 ring-[#202A44] shadow-lg":"")}>
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="font-serif text-[19px] tracking-tight">{c.name}</h3>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 font-mono text-[9px] tracking-wider" style={{color:tone}}>
+            <DirectionArrow d={c.direction}/>
+            {c.direction==="down"?"DECLINING":c.direction==="up"?"RISING":"STEADY"}
+          </div>
+          <button onClick={toStudio} title="Send to the Studio to riff on"
+            className="font-mono text-[9px] tracking-wider px-2 py-1 rounded border border-[var(--border)] bg-white hover:bg-[#FFFEF7] hover:border-[#E8E1C2] transition">
+            {flashed ? "→ SENT ✓" : "+ STUDIO"}
+          </button>
+        </div>
+      </div>
+      <p className="text-[12px] text-[#334155] leading-relaxed mb-4">{c.status}</p>
+
+      {/* Willa's opportunity — amber callout box (consistent with Pulse + Trend cards) */}
+      <div className="p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
+        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S OPPORTUNITY</div>
+        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{c.opportunity}</p>
+      </div>
+
+      {briefIds.length>0 && (
+        <div className="mt-4 pt-3 border-t border-[var(--border)]">
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">↳ WILLA'S RESPONSE · {briefIds.length} BRIEF{briefIds.length>1?"S":""} THIS WEEK</div>
+          <div className="flex flex-wrap gap-1.5">
+            {briefIds.map(bId=><BriefThreadChip key={bId} briefId={bId} nav={nav} maxConcept={180}/>)}
+          </div>
+        </div>
+      )}
+      <Sources list={c.sources}/>
+    </div>
+  );
+}
+
+function AmbassadorCard({a}){
+  return (
+    <div className="card p-6 fade-in">
+      <div className="flex items-start justify-between gap-3 mb-3">
+        <div>
+          <div className="font-serif text-[17px] leading-tight mb-1">{a.type}</div>
+          <PillarBadge name={a.pillar}/>
+        </div>
+        <span className="font-mono text-[9px] tracking-wider text-[var(--blue)] shrink-0">{a.count}</span>
+      </div>
+      <p className="text-[12px] text-[#334155] leading-relaxed mb-4">{a.description}</p>
+      <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">↳ TOP {a.creators.length} CREATORS · RANKED BY FIT</div>
+      <div className="grid gap-2">
+        {a.creators.map((c,i)=>(
+          <div key={i} className="p-3 rounded-md border border-[var(--border)] bg-[#FAFAF7] hover:bg-white transition">
+            <div className="flex items-center justify-between mb-1.5">
+              <div className="flex items-center gap-2">
+                <span className="font-serif text-[14px] text-[#202A44]">{c.handle}</span>
+                <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{c.platform.toUpperCase()} · {c.followers}</span>
+              </div>
+              <ConfidenceDots score={c.fit}/>
+            </div>
+            <div className="text-[11px] text-[#334155] leading-snug mb-1.5">{c.last}</div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">→ {c.action}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function OutreachFunnel(){
+  const max = OUTREACH_PIPELINE[0].count;
+  return (
+    <div className="card p-5">
+      <div className="flex items-end justify-between mb-4">
+        <div>
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">OUTREACH PIPELINE · MAY 4 – MAY 10</div>
+          <div className="font-serif text-[16px] tracking-tight">Where every potential ambassador lives in the funnel</div>
+        </div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">CONVERSION · {Math.round(OUTREACH_PIPELINE[OUTREACH_PIPELINE.length-1].count/OUTREACH_PIPELINE[0].count*100)}% SURFACED → CONVERTED</div>
+      </div>
+      <div className="grid grid-cols-5 gap-2">
+        {OUTREACH_PIPELINE.map((s,i)=>(
+          <div key={s.stage} className="relative">
+            <div className="card p-3" style={{borderColor:s.color+"55", background:s.color+"08"}}>
+              <div className="font-mono text-[9px] tracking-wider mb-1" style={{color:s.color}}>{s.stage.toUpperCase()}</div>
+              <div className="font-serif text-[28px] leading-none" style={{color:s.color}}>{s.count}</div>
+              <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-2 leading-snug">{s.desc}</div>
+            </div>
+            {i<OUTREACH_PIPELINE.length-1 && (
+              <span className="hidden md:block absolute top-1/2 -right-1 -translate-y-1/2 font-mono text-[14px] text-[var(--muted)]">→</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Shared top-right status on every tab header. The ⌘K button now opens the
+// Ask the Strategist chat (rewired 2026-04-22 from command palette).
+function TabTopRight({onToggleDrawer, drawerOpen}){
+  return (
+    <div className="flex items-center gap-3">
+      <button onClick={onToggleDrawer}
+        className="font-mono text-[9px] tracking-wider px-2.5 py-1.5 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition flex items-center gap-1.5">
+        <span className="pulse-dot pulse-dot-green"></span>
+        ENGINE RUNNING {drawerOpen?"▴":"▾"}
+      </button>
+    </div>
+  );
+}
+
+// Editorial section wrapper for the Competitor Watch tab. The label + counter
+// act as a magazine section header; the lede is the week's advisor take — one
+// sentence that tells the reader what to think of this section. Each section
+// on the tab wears this so the tab reads as counsel, not a scoreboard.
+function CompSection({label, counter, lede, children}){
+  return (
+    <div className="mb-8 last:mb-0">
+      <div className="flex items-center justify-between mb-2 pb-2 border-b border-[var(--border)]">
+        <div className="font-mono text-[11px] tracking-[0.22em] text-[#202A44]">{label}</div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{counter}</div>
+      </div>
+      {lede && (
+        <p className="font-serif italic text-[14px] leading-relaxed text-[#202A44] mb-5 max-w-3xl">{lede}</p>
+      )}
+      {children}
+    </div>
+  );
+}
+
+function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
+  return (
+    <div className="flex flex-col h-full">
+      <Ticker/>
+      <div className="px-8 pt-6 pb-3">
+        <div className="flex items-end justify-between mb-4">
+          <div>
+            <h1 className="font-serif text-[28px] leading-none tracking-tight">Intelligence Brief</h1>
+            <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mt-1">{WELCOME_WEEK_RANGE}</div>
+          </div>
+          {topRight}
+        </div>
+        <div className="flex items-stretch gap-1 border-b border-[var(--border)]">
+          {[
+            {id:"pulse",  label:"Cultural Pulse",    sub:CULTURAL_PULSE.length+" hooks",           emoji:"🔥", wip:false},
+            {id:"trends", label:"Category + Policy", sub:TRENDS.length+" signals",                  emoji:"📰", wip:false},
+            {id:"comp",   label:"Competitor Watch",  sub:COMPETITORS.length+" brands",              emoji:"🧭", wip:false},
+            {id:"amb",    label:"Brand Ambassadors", sub:"coming soon",                             emoji:"🤝", wip:true, disabled:true}
+          ].map(t=>{
+            const active = tab===t.id;
+            return (
+              <button key={t.id}
+                onClick={()=>{ if(!t.disabled) setTab(t.id); }}
+                disabled={t.disabled}
+                title={t.disabled ? t.label+" — coming soon (locked)" : t.label}
+                className={"relative text-left px-4 pt-3 pb-3 rounded-t-md transition flex flex-col gap-0.5 min-w-[160px] "+(active?"bg-[#FAFAF7]":"hover:bg-[#F6F6F0]")+(t.disabled?" opacity-40 cursor-not-allowed pointer-events-none":"")}>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[13px] leading-none">{t.emoji}</span>
+                  <span className={"text-[13px] font-medium "+(active?"text-[#202A44]":"text-[#475569]")}>{t.label}</span>
+                  {t.disabled && <span className="font-mono text-[7.5px] tracking-wider px-1 py-[1px] rounded bg-[#F1F5F9] text-[#64748B] border border-[#E2E8F0]">SOON</span>}
+                  {t.wip && !t.disabled && <span className="font-mono text-[7.5px] tracking-wider px-1 py-[1px] rounded bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A]">WIP</span>}
+                </div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] pl-[22px]">{t.sub.toUpperCase()}</div>
+                {active && <div className="absolute left-0 right-0 -bottom-[1px] h-[2.5px]" style={{background:"#202A44"}}></div>}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex-1 overflow-y-auto scrollbar px-8 py-4">
+        {tab==="trends" && (
+          <div className="max-w-[1400px]">
+            {/* RIDE NOW section */}
+            <div className="flex items-center justify-between mb-3">
+              <div className="font-mono text-[10px] tracking-[0.18em] text-[var(--red)] flex items-center gap-2"><span className="pulse-dot"></span> RIDE NOW · ACT THIS WEEK</div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{TRENDS.filter(t=>t.urgency==="RIDE NOW").length} TRENDS</div>
+            </div>
+            <div className="xl:columns-2 gap-3 [column-fill:_balance] mb-6">
+              {TRENDS.filter(t=>t.urgency==="RIDE NOW").map(t=>(
+                <div key={t.id} className="break-inside-avoid mb-3">
+                  <TrendCard t={t} focused={focusId===t.id} nav={nav}/>
+                </div>
+              ))}
+            </div>
+            {/* THIS WEEK section */}
+            <div className="flex items-center justify-between mb-3">
+              <div className="font-mono text-[10px] tracking-[0.18em] text-[var(--amber)] flex items-center gap-2"><span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:"#9E652E"}}></span> THIS WEEK · WATCH + PLAN</div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{TRENDS.filter(t=>t.urgency==="THIS WEEK").length} TRENDS</div>
+            </div>
+            <div className="xl:columns-2 gap-3 [column-fill:_balance]">
+              {TRENDS.filter(t=>t.urgency==="THIS WEEK").map(t=>(
+                <div key={t.id} className="break-inside-avoid mb-3">
+                  <TrendCard t={t} focused={focusId===t.id} nav={nav}/>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {tab==="pulse" && (
+          <div className="max-w-[1400px]">
+            <div className="mb-4">
+              <div className="font-mono text-[10px] tracking-[0.18em] text-[#9E652E] flex items-center gap-2 mb-1.5">
+                <span className="pulse-dot"></span> CULTURAL PULSE
+              </div>
+              <p className="text-[12.5px] text-[#334155] leading-relaxed max-w-2xl">
+                Viral recipes, memes, celebrity moments, and misinformation Willa's can ride or rebut this week. Each hook comes with a Willa's Play you can turn into a brief fast.
+              </p>
+            </div>
+            <div className="xl:columns-2 gap-3 [column-fill:_balance] mb-6">
+              {CULTURAL_PULSE.map(p => (
+                <div key={p.id} className="break-inside-avoid mb-3">
+                  <CulturalPulseCard p={p} nav={nav}/>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {tab==="comp" && (
+          <div className="max-w-[1400px]">
+            {/* Section 1 — WILLA'S PLAYS: per-competitor response cards. Leads with ACTION.
+                Removed lede block 2026-05-18 per Christina — too text-heavy, stale fast. */}
+            <CompSection
+              label="WILLA'S PLAYS"
+              counter={COMPETITORS.length+" BRANDS · "+new Set(Object.values(COMP_BRIEFS).flat()).size+" BRIEFS ON THE TABLE"}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3">
+                {COMPETITORS.map(c=><CompetitorCard key={c.id} c={c} focused={focusId===c.id} nav={nav}/>)}
+              </div>
+            </CompSection>
+
+            {/* Section 2 — WHAT'S COMING: forward-looking calendar */}
+            <CompSection
+              label="WHAT'S COMING"
+              counter={COMPETITOR_CALENDAR.length+" EVENTS QUEUED"}>
+              <CompetitorCalendar/>
+            </CompSection>
+
+            {/* Section 3 — WHAT HAPPENED: recent-moves timeline (Share of Voice moved to the bottom) */}
+            <CompSection
+              label="WHAT HAPPENED"
+              counter="LAST 60 DAYS">
+              <RecentMovesTimeline nav={nav}/>
+            </CompSection>
+
+            {/* Section 4 — HOW WILLA'S STACKS UP: supporting data — The Shelf comparison + Share of Voice side by side */}
+            <CompSection
+              label="HOW WILLA'S STACKS UP"
+              counter="THE SHELF · SHARE OF VOICE">
+              <div className="grid grid-cols-12 gap-3">
+                <div className="col-span-12 xl:col-span-7"><ProductGapTable/></div>
+                <div className="col-span-12 xl:col-span-5"><ShareOfVoice/></div>
+              </div>
+            </CompSection>
+          </div>
+        )}
+        {tab==="amb" && (
+          <div className="max-w-[1400px]">
+            <div className="mb-5 rounded-md overflow-hidden flex items-stretch" style={{border:"1.5px solid #F59E0B"}}>
+              <div className="flex items-center justify-center px-3 shrink-0" style={{background:"repeating-linear-gradient(45deg, #F59E0B 0 8px, #202A44 8px 16px)"}}>
+                <span className="text-[13px]">🚧</span>
+              </div>
+              <div className="flex-1 px-4 py-2 flex items-center gap-2 flex-wrap" style={{background:"#FFFBEB"}}>
+                <span className="font-mono text-[9px] tracking-wider px-1.5 py-0.5 rounded text-white" style={{background:"#F59E0B"}}>CREATOR OUTREACH</span>
+                <span className="font-mono text-[9px] tracking-wider text-[#92400E]">PREVIEW · PRODUCTION WIRES UP VIA MODASH · CREATORIQ · REDDIT API</span>
+              </div>
+            </div>
+            <div className="mb-4"><OutreachFunnel/></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">{AMBASSADORS.map(a=><AmbassadorCard key={a.id} a={a}/>)}</div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function PriorityBadge({p}){
+  const style = p==="BIG SWING"
+    ? {background:"#202A44",color:"#FACC15"}
+    : p==="HIGH" ? {background:"#FEF3C7",color:"#92400E"}
+    : {background:"#F1F5F9",color:"#475569"};
+  return <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded" style={style}>{p}</span>;
+}
+
+// Brief grid card — cut ruthlessly 2026-04-17 (second pass). One quote (the hook),
+// one chip (the proven format = DNA), and one prominent driver section so
+// "what's making this brief happen" is the loudest thing on the card, not an
+// afterthought. Phone thumb, timing, concept title, pillar chip all removed
+// per feedback.
+function BriefListItem({b,active,onClick,variant}){
+  const recHook = (b.hooks.find(h=>h.recommended) || b.hooks[0]).text;
+  const links = BRIEF_LINKS[b.id] || {trends:[],pulse:[],comps:[]};
+  const drivenTrend = (links.trends||[])[0] ? TREND_BY_ID[links.trends[0]] : null;
+  const drivenPulse = (links.pulse ||[])[0] ? PULSE_BY_ID[links.pulse[0]]  : null;
+  const drivenComp  = (links.comps ||[])[0] ? COMP_BY_ID[links.comps[0]]   : null;
+  const extraDrivers = ((links.trends||[]).length + (links.pulse||[]).length + (links.comps||[]).length) - 1;
+  const driverColor = b.fromStudio ? "#9E652E" : drivenTrend ? "#73B2C9" : drivenPulse ? (drivenPulse.typeColor || "#9E652E") : drivenComp ? "#DC2626" : "#94A3B8";
+  const driverType  = b.fromStudio ? "FROM THE STUDIO" : drivenTrend ? "CATEGORY TREND" : drivenPulse ? "CULTURAL PULSE" : drivenComp ? "COMPETITOR MOVE" : "ENGINE";
+  const driverText  = b.fromStudio ? (b._drivenBy || "Your idea, riffed with the strategist") : drivenTrend ? drivenTrend.trend : drivenPulse ? drivenPulse.hook : drivenComp ? drivenComp.name : "Evergreen · brand pillar";
+
+  const isHero    = variant === "hero";
+  const isCompact = variant === "compact";
+
+  // Compact variant — for STANDARD priority briefs. Carries meaningful context
+  // without becoming a wall: platform + timing top row, hook, DNA chip + driver
+  // type pill at the bottom so the reader knows WHAT, WHEN, and WHY.
+  if (isCompact) {
+    return (
+      <button onClick={onClick}
+        className={"group text-left w-full card fade-in transition overflow-hidden p-3.5 flex flex-col gap-2 "+
+          (active ? "ring-2 ring-[#202A44] shadow-lg" : "hover:border-[#cfcfc8] hover:shadow-md")}>
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] flex items-center gap-1 min-w-0">
+            <span className="text-[11px]">{PLATFORM_EMOJI[b.platform]||"•"}</span>
+            <span className="truncate">{b.platform.toUpperCase()}{b.timing ? " · "+b.timing.split(" · ")[0].toUpperCase() : ""}</span>
+          </span>
+          <PriorityBadge p={b.priority}/>
+        </div>
+        <p className="font-serif text-[13px] italic leading-snug text-[#202A44] line-clamp-4 flex-1">"{recHook}"</p>
+        <div className="flex items-center justify-between gap-2 pt-2 border-t border-[var(--border)]">
+          {b.dnaPattern ? <DnaChip patternId={b.dnaPattern} size="sm"/> : <span/>}
+          <span className="font-mono text-[8px] tracking-[0.15em] shrink-0" style={{color:driverColor}}>{driverType}</span>
+        </div>
+      </button>
+    );
+  }
+
+  // Hero + default share a structure. Hero shows the concept title above the hook
+  // and bumps the hook text size; default is the existing compact-ish grid card.
+  return (
+    <button onClick={onClick}
+      className={"group text-left w-full card fade-in transition overflow-hidden "+
+        (isHero ? "border-[1.5px] border-[#D4CEC0] " : "") +
+        (active ? "ring-2 ring-[#202A44] shadow-lg" : "hover:border-[#cfcfc8] hover:shadow-md")}>
+
+      {/* Top — platform + priority */}
+      <div className={isHero ? "px-5 pt-5 pb-4" : "px-4 pt-4 pb-3"}>
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <span className="font-mono text-[10px] tracking-wider text-[var(--muted)] flex items-center gap-1.5 min-w-0">
+            <span className="text-[13px]">{PLATFORM_EMOJI[b.platform]||"•"}</span>
+            <span className="truncate">{b.platform.toUpperCase()}{isHero && b.timing ? " · "+b.timing.toUpperCase() : ""}</span>
+          </span>
+          <PriorityBadge p={b.priority}/>
+        </div>
+
+        {/* Hero cards lead with the concept title (what the brief IS) above the hook (what it SAYS). */}
+        {isHero && (
+          <h3 className="font-serif text-[17px] leading-tight tracking-tight text-[#202A44] mb-3">{b.concept}</h3>
+        )}
+
+        {/* The one quote — the hook. Italic serif does the "this is the creative" work on its own, no colored rule needed. */}
+        <p className={"font-serif italic leading-snug text-[#202A44] mb-4 "+
+          (isHero ? "text-[17px]" : "text-[15.5px] line-clamp-5")}>"{recHook}"</p>
+
+        {/* DNA chip — the format anchor */}
+        {b.dnaPattern && <DnaChip patternId={b.dnaPattern}/>}
+      </div>
+
+      {/* Driver section — made prominent per 2026-04-17 feedback. */}
+      <div className={"border-t border-[var(--border)] bg-[#FAFAF7] "+(isHero ? "px-5 py-4" : "px-4 py-3.5")}>
+        <div className="flex items-start gap-3">
+          <div className="w-[3px] self-stretch rounded-full shrink-0" style={{background:driverColor}}></div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between gap-2 mb-1">
+              <span className="font-mono text-[8.5px] tracking-[0.2em] text-[var(--muted)]">DRIVEN BY · <span style={{color:driverColor}}>{driverType}</span></span>
+              {extraDrivers > 0 && <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">+{extraDrivers} more</span>}
+            </div>
+            <div className={"text-[#202A44] leading-snug line-clamp-2 "+(isHero ? "text-[13px]" : "text-[12.5px]")}>{driverText}</div>
+          </div>
+        </div>
+      </div>
+    </button>
+  );
+}
+
+function Section({title,children}){
+  return (
+    <div className="mb-4">
+      <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1.5">{title}</div>
+      {children}
+    </div>
+  );
+}
+
+function VoiceVariant({label, text, mood}){
+  const [copied,setCopied] = useState(false);
+  function copy(){
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(()=>setCopied(false), 1500);
+    }
+  }
+  return (
+    <div className="card p-4" style={{background:"#FFFEF7", borderColor:"#E8E1C2"}}>
+      <div className="flex items-center justify-between mb-2">
+        <div className="font-mono text-[10px] tracking-wider text-[var(--muted)]">{label.toUpperCase()} · {mood.toUpperCase()}</div>
+        <button onClick={copy} className="font-mono text-[10px] tracking-wider px-2 py-0.5 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition">
+          {copied?"COPIED ✓":"COPY"}
+        </button>
+      </div>
+      <p className="text-[14px] text-[#202A44] leading-relaxed">{text}</p>
+    </div>
+  );
+}
+
+// StaticVisualDirection — swaps the plain b.visual paragraph for a proper
+// designed surface on carousel + pin briefs (where there's no phone-frame
+// storyboard). Parses common patterns: "N-slide carousel. Slide 1: ...".
+// and "Vertical pin (2:3). Top: ... Middle: ... Bottom: ..." and renders each
+// piece as its own styled card. Added 2026-04-21 per Christina's feedback
+// that static briefs need more visual thought than a single block of text.
+function StaticVisualDirection({visual, pillarColor, platform}) {
+  if (!visual) return null;
+
+  // Try to parse a slide-by-slide carousel.
+  const headerMatch = visual.match(/^(\d+)[-\s]slide carousel\.?\s*/i);
+  const slideRegex = /Slide\s+(\d+):\s*/g;
+  const slideMatches = [...visual.matchAll(slideRegex)];
+
+  if (headerMatch && slideMatches.length > 0) {
+    const count = headerMatch[1];
+    const slides = slideMatches.map((m, i) => {
+      const start = m.index + m[0].length;
+      const end = slideMatches[i+1] ? slideMatches[i+1].index : visual.length;
+      return { num: m[1], text: visual.substring(start, end).trim().replace(/\.$/, "") };
+    });
+    return (
+      <div className="rounded-lg border border-[var(--border)] overflow-hidden" style={{background:`linear-gradient(180deg, ${pillarColor}0E 0%, #FFFFFF 55%)`}}>
+        <div className="flex items-center justify-between px-5 py-3 border-b border-[var(--border)] bg-white">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center rounded-full shrink-0" style={{width:"34px",height:"34px",background:pillarColor,color:"#fff",fontFamily:"Fraunces, Georgia, serif",fontSize:"15px",fontStyle:"italic",fontWeight:600}}>❧</span>
+            <div>
+              <div className="font-mono text-[8.5px] tracking-[0.22em] text-[var(--muted)]">CAROUSEL BRIEF</div>
+              <div className="font-serif text-[17px] leading-none mt-1" style={{letterSpacing:"-0.01em"}}>{count}-slide story</div>
+            </div>
+          </div>
+          <span className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full" style={{background:pillarColor+"14", color:pillarColor, border:"1px solid "+pillarColor+"55"}}>{platform.toUpperCase()}</span>
+        </div>
+        <div className="p-5 grid gap-3 md:grid-cols-2">
+          {slides.map((s, i) => (
+            <div key={i} className="flex gap-3.5 items-start rounded-md p-4 bg-white border border-[var(--border)] transition hover:shadow-md">
+              <span className="font-serif italic leading-none shrink-0" style={{fontSize:"36px",color:pillarColor,width:"36px"}}>{s.num}</span>
+              <div className="min-w-0 flex-1">
+                <div className="font-mono text-[8px] tracking-[0.22em] text-[var(--muted)] mb-1.5">SLIDE {s.num}</div>
+                <p className="text-[12px] text-[#202A44] leading-relaxed">{s.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Try to parse a vertical pin with Top/Middle/Bottom + SEO zones.
+  const pinHeader = visual.match(/^Vertical pin[^.]*\.?\s*/i);
+  const zoneRegex = /(Top|Middle|Bottom|SEO text):\s*/g;
+  const zoneMatches = [...visual.matchAll(zoneRegex)];
+
+  if (pinHeader && zoneMatches.length > 0) {
+    const zones = zoneMatches.map((m, i) => {
+      const start = m.index + m[0].length;
+      const end = zoneMatches[i+1] ? zoneMatches[i+1].index : visual.length;
+      return { name: m[1], text: visual.substring(start, end).trim().replace(/\.$/, "") };
+    });
+    return (
+      <div className="rounded-lg border border-[var(--border)] overflow-hidden" style={{background:`linear-gradient(180deg, ${pillarColor}0E 0%, #FFFFFF 55%)`}}>
+        <div className="flex items-center justify-between px-5 py-3 border-b border-[var(--border)] bg-white">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center rounded-full shrink-0" style={{width:"34px",height:"34px",background:pillarColor,color:"#fff",fontFamily:"Fraunces, Georgia, serif",fontSize:"16px",fontWeight:600}}>⌘</span>
+            <div>
+              <div className="font-mono text-[8.5px] tracking-[0.22em] text-[var(--muted)]">PIN BRIEF</div>
+              <div className="font-serif text-[17px] leading-none mt-1" style={{letterSpacing:"-0.01em"}}>Vertical pin · 2:3</div>
+            </div>
+          </div>
+          <span className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full" style={{background:pillarColor+"14", color:pillarColor, border:"1px solid "+pillarColor+"55"}}>PINTEREST</span>
+        </div>
+        <div className="p-5">
+          <div className="mx-auto rounded-md overflow-hidden border border-[var(--border)] bg-white" style={{maxWidth:"460px"}}>
+            {zones.map((z, i) => (
+              <div key={i} className={"px-4 py-4 "+(i < zones.length - 1 ? "border-b border-[var(--border)]" : "")} style={{background:i % 2 === 0 ? "#FFFFFF" : "#FAFAF7"}}>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="inline-block w-[4px] h-[14px] rounded-full" style={{background:pillarColor}}></span>
+                  <span className="font-mono text-[9px] tracking-[0.2em]" style={{color:pillarColor}}>{z.name.toUpperCase()}</span>
+                </div>
+                <p className="text-[12px] text-[#202A44] leading-relaxed">{z.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback — styled single block for anything that doesn't match.
+  return (
+    <div className="rounded-lg border border-[var(--border)] p-5" style={{background:`linear-gradient(180deg, ${pillarColor}0E 0%, #FFFFFF 55%)`}}>
+      <p className="font-serif text-[15px] leading-relaxed text-[#202A44]">{visual}</p>
+    </div>
+  );
+}
+
+// Smart-suggestion picker for the inline brief-riff panel. Reaches into the
+// brief's current state (flavor, DNA, concept wording) and proposes 3 POV-
+// discipline-aware directions the user can click. Leans into Christina's
+// 2026-04-21/22 rules — benefit-first, activist, witty, flavor-role match.
+function getBriefRiffSuggestions(b) {
+  const out = [];
+  // Flavor-role checks first (brief-specific, highest signal)
+  const lookIngredient = /ingredient|sugar|organic|label|4 ingredients|5 ingredients|clean/i.test(b.concept || "");
+  if (b.flavor === "Barista" && lookIngredient) {
+    out.push("Swap the flavor — Barista is our most-processed SKU. This ingredient story is stronger on Original.");
+  }
+  // DNA alternate (broadly useful)
+  const dnaAlts = {
+    "mom-activist": "on-pack-checklist",
+    "on-pack-checklist": "meme-payload",
+    "kid-family-moment": "mom-activist",
+    "viral-recipe-remix": "before-after-stitch",
+    "meme-payload": "mom-activist",
+    "at-shelf-moment": "before-after-stitch",
+    "before-after-stitch": "viral-recipe-remix"
+  };
+  if (b.dnaPattern && dnaAlts[b.dnaPattern]) {
+    out.push(`Try a different DNA format — what if this was ${dnaAlts[b.dnaPattern]} instead of ${b.dnaPattern}?`);
+  }
+  // Always-useful POV directives (rotate in)
+  out.push("Make it punchier — more assertive + activist. Us-vs-them.");
+  out.push("Get to the benefit faster. The hook feels buried — rewrite benefit-first.");
+  out.push("Rewrite with more wit — less earnest wellness brand.");
+  // If the brief cites a trend in its intel, offer the push-back angle
+  const hasTrend = (b.intel || []).some(i => i.type === "TREND" || i.type === "PULSE");
+  if (hasTrend) {
+    out.push("Push against this trend instead of riding it — if it's diet culture, we stand against it.");
+  }
+  // Return 3 distinct
+  const seen = new Set();
+  return out.filter(s => { if (seen.has(s)) return false; seen.add(s); return true; }).slice(0, 3);
+}
+
+// Inline riff chat scoped to a single brief. Distinct from the floating
+// Strategist (which is general-purpose). Opens inside BriefDetail via the
+// "Riff with Strategist" button. Each brief has its own conversation; it
+// resets when the user switches briefs. Agent gets full brief context
+// injected so every response is scoped to "improve THIS brief."
+function BriefRiffPanel({ brief, onClose, onRequestApiKey }) {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [streaming, setStreaming] = useState(false);
+  const [error, setError] = useState(null);
+  const scrollRef = React.useRef();
+  const inputRef = React.useRef();
+
+  useEffect(() => {
+    if (inputRef.current) setTimeout(()=> inputRef.current.focus(), 50);
+  }, []);
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [messages, streaming]);
+
+  const suggestions = getBriefRiffSuggestions(brief);
+
+  function buildBriefContext(b) {
+    const recHook = ((b.hooks || []).find(h => h.recommended) || (b.hooks || [])[0] || {}).text || "";
+    const cv = typeof CAPTION_VARIANTS !== "undefined" ? CAPTION_VARIANTS[b.id] : null;
+    const captionLine = (cv && cv.direct) || b.caption || "";
+    const intelLines = (b.intel || []).map(i => `[${i.type}] ${i.text}`).join(" · ");
+    return `=== BRIEF UNDER RIFF ===
+The user is iterating on THIS SPECIFIC BRIEF. Keep every suggestion scoped to improving or pushing this brief in a new direction — don't suggest unrelated content. If the user's request doesn't fit this brief, say so and offer the closest adjacent option.
+
+When you suggest changes, be concrete: show the rewritten hook, the new caption, the specific angle. Don't just describe what to change — show it. Keep responses tight (≤ 250 words unless the user explicitly asks for more).
+
+**Concept:** ${b.concept}
+**Platform · Pillar · Flavor:** ${b.platform} · ${b.pillar} · ${b.flavor}
+**Priority:** ${b.priority} · **DNA format:** ${b.dnaPattern || "(none)"}
+**Recommended hook:** "${recHook}"
+${b.visual ? "**Visual direction:** " + b.visual : ""}
+${captionLine ? "**Current caption (direct variant):** " + captionLine : ""}
+${intelLines ? "**Why now / intel:** " + intelLines : ""}`;
+  }
+
+  async function send(text) {
+    const prompt = (text || "").trim();
+    if (!prompt || streaming) return;
+    if (!getClaudeApiKey()) { onRequestApiKey(); return; }
+    setError(null);
+    const userMsg = { role: "user", content: prompt };
+    setMessages(m => [...m, userMsg, { role: "assistant", content: "" }]);
+    setInput("");
+    setStreaming(true);
+    try {
+      const systemExtras = [{ type: "text", text: buildBriefContext(brief) }];
+      const convo = [...messages, userMsg].map(m => ({ role: m.role, content: m.content }));
+      for await (const chunk of streamStrategist({
+        messages: convo, systemExtras, maxTokens: 1500,
+        agentType: "brief_riff", contextId: brief && brief.id ? String(brief.id) : null,
+      })) {
+        setMessages(m => {
+          const copy = [...m];
+          const last = copy[copy.length - 1];
+          copy[copy.length - 1] = { ...last, content: last.content + chunk };
+          return copy;
+        });
+      }
+    } catch(e) {
+      setMessages(m => m.slice(0, -1));
+      if (e.message === "NO_API_KEY") setError("NO_API_KEY");
+      else setError(e.message || "Something went wrong.");
+    } finally {
+      setStreaming(false);
+    }
+  }
+
+  function handleSubmit(e) {
+    if (e) e.preventDefault();
+    const text = input.trim();
+    if (!text) return;
+    send(text);
+  }
+
+  return (
+    <div className="mb-6 rounded-lg overflow-hidden fade-in" style={{border:"1.5px solid #E8E1C2", background:"linear-gradient(180deg, #FFFEF7 0%, #FFFFFF 100%)"}}>
+      <div className="px-5 py-3 border-b border-[#E8E1C2] flex items-center justify-between gap-2 bg-white">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="inline-flex items-center justify-center w-[22px] h-[22px] rounded-full shrink-0" style={{background:"#202A44", color:"#FACC15", fontSize:"12px", fontWeight:700}}>✦</span>
+          <span className="font-mono text-[9.5px] tracking-[0.22em]" style={{color:"#9E652E"}}>RIFF WITH THE STRATEGIST</span>
+          <span className="text-[11px] text-[var(--muted)] hidden md:inline leading-snug">· scoped to this brief</span>
+        </div>
+        <button onClick={onClose} title="Close (the brief stays open)"
+          className="text-[var(--muted)] hover:text-[var(--ink)] font-mono text-[10px] tracking-wider px-1.5 py-1 rounded hover:bg-[#F6F6F0] transition">× CLOSE</button>
+      </div>
+
+      {error === "NO_API_KEY" && (
+        <div className="px-4 py-2.5 bg-[#FEF3C7] flex items-center justify-between gap-3">
+          <div className="text-[11.5px] text-[#92400E] leading-snug">Set your Anthropic API key to start.</div>
+          <button onClick={onRequestApiKey} className="font-mono text-[9px] tracking-wider px-2.5 py-1.5 rounded bg-[#202A44] text-white">SET KEY</button>
+        </div>
+      )}
+      {error && error !== "NO_API_KEY" && (
+        <div className="px-4 py-2 bg-[#FEE2E2] text-[11px] text-[#991B1B] leading-snug">⚠ {error}</div>
+      )}
+
+      <div ref={scrollRef} className="max-h-[360px] overflow-y-auto scrollbar px-4 py-3.5">
+        {messages.length === 0 ? (
+          <div>
+            <div className="pl-3 pr-3 py-2 text-[13px] text-[#202A44] mb-3" style={{borderLeft:"2px solid #FACC15", background:"#FFFEF7", borderRadius:"0 10px 10px 0"}}>
+              <p className="leading-relaxed">I've got this brief loaded — <strong>"{brief.concept}"</strong> ({brief.platform} · {brief.pillar} · {brief.flavor}).</p>
+              <p className="leading-relaxed mt-1.5">Three directions we could push it. Pick one, or tell me something else:</p>
+            </div>
+            <div className="grid gap-1.5">
+              {suggestions.map((p, i) => (
+                <button key={i} onClick={()=>send(p)}
+                  className="text-left px-3 py-2.5 rounded-lg border border-[var(--border)] bg-white hover:border-[#202A44] hover:bg-[#FFFEF7] transition text-[12.5px] text-[#202A44] leading-snug">
+                  <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mr-1.5">↗</span>{p}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          messages.map((m, i) => (
+            <StrategistMessage key={i} m={m} isLast={i === messages.length - 1} streaming={streaming}/>
+          ))
+        )}
+      </div>
+
+      <form onSubmit={handleSubmit} className="border-t border-[#E8E1C2] px-3 py-3 bg-white">
+        <div className="flex items-end gap-2">
+          <textarea
+            ref={inputRef}
+            value={input}
+            onChange={e=>setInput(e.target.value)}
+            onKeyDown={e=>{ if(e.key === "Enter" && !e.shiftKey){ e.preventDefault(); handleSubmit(); } }}
+            placeholder={streaming ? "Thinking…" : "Type a different direction for this brief…"}
+            disabled={streaming}
+            rows={1}
+            className="flex-1 resize-none px-3 py-2 rounded-lg border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] leading-snug focus:outline-none focus:border-[#202A44] disabled:opacity-60"
+            style={{maxHeight:"100px", minHeight:"36px"}}/>
+          <button type="submit" disabled={!input.trim() || streaming}
+            className="shrink-0 px-3 py-2 rounded-lg bg-[#202A44] text-white font-mono text-[10px] tracking-wider hover:bg-[#1E293B] transition disabled:opacity-40 disabled:cursor-not-allowed">
+            {streaming ? "…" : "SEND →"}
+          </button>
+        </div>
+        <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-1.5 px-1">ENTER to send · SHIFT+ENTER for new line · Conversation stays with this brief.</div>
+      </form>
+    </div>
+  );
+}
+
+function BriefDetail({b,nav}){
+  const [showAltHooks,setShowAltHooks] = useState(true);
+  const [activeFrame,setActiveFrame] = useState(0);
+  const [showFootage,setShowFootage] = useState(false);
+  const [riffOpen,setRiffOpen] = useState(false);
+  useEffect(()=>{ setActiveFrame(0); setShowAltHooks(true); setShowFootage(false); setRiffOpen(false); },[b.id]);
+  if(!b) return null;
+  const links = BRIEF_LINKS[b.id] || {trends:[],pulse:[],comps:[]};
+  const drivenTrends = (links.trends||[]).map(id=>TREND_BY_ID[id]).filter(Boolean);
+  const drivenPulses = (links.pulse ||[]).map(id=>PULSE_BY_ID[id]).filter(Boolean);
+  const drivenComps = (links.comps ||[]).map(id=>COMP_BY_ID[id]).filter(Boolean);
+  const recommendedHook = b.hooks.find(h=>h.recommended) || b.hooks[0];
+  const altHooks = b.hooks.filter(h=>h!==recommendedHook);
+
+  return (
+    <div className="card p-7 fade-in" key={b.id}>
+      {/* Header — platform above headline, pillar + DNA chips below. Priority
+          moved out of the header per 2026-04-21 feedback; it still lives on
+          each card in the grid. */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between gap-2 mb-2">
+          <div className="font-mono text-[11px] tracking-wider text-[var(--muted)]">
+            {b.platform.toUpperCase()}
+          </div>
+          {b.fromStudio && (
+            <span className="font-mono text-[10px] tracking-wider px-2 py-[3px] rounded text-white" style={{background:"#9E652E"}}>
+              ✦ FROM THE STUDIO
+            </span>
+          )}
+        </div>
+        <h2 className="font-serif text-[28px] leading-tight tracking-tight mb-3">{b.concept}</h2>
+        <div className="flex items-center flex-wrap gap-1.5 justify-between">
+          <div className="flex items-center flex-wrap gap-1.5">
+            <span className="font-mono text-[10.5px] tracking-wider px-2 py-[3px] rounded inline-flex items-center gap-1.5"
+              style={{color:b.pillarColor, background:b.pillarColor+"14", border:"1px solid "+b.pillarColor+"44"}}>
+              <span className="inline-block w-[7px] h-[7px] rounded-full" style={{background:b.pillarColor}}></span>
+              {b.pillar}
+            </span>
+            {b.dnaPattern && <DnaChip patternId={b.dnaPattern}/>}
+          </div>
+          <button
+            onClick={()=> setRiffOpen(o => !o)}
+            title="Iterate on this brief with the Strategist — stays scoped to this brief"
+            className="inline-flex items-center gap-1.5 font-mono text-[10.5px] tracking-wider px-3 py-2 rounded-md border transition hover:bg-[#FFFEF7]"
+            style={{background: riffOpen ? "#FFFEF7" : "#FFFFFF", color:"#202A44", borderColor:"#E8E1C2"}}>
+            <span style={{color:"#9E652E"}}>✦</span>
+            {riffOpen ? "HIDE RIFF" : "RIFF WITH STRATEGIST"}
+          </button>
+        </div>
+      </div>
+
+      {/* Inline riff panel — scoped to THIS brief. Distinct from the floating
+          Strategist (which is general-purpose). Opens below the header so
+          the user sees the brief they're riffing on + the chat at once. */}
+      {riffOpen && (
+        <BriefRiffPanel
+          brief={b}
+          onClose={()=> setRiffOpen(false)}
+          onRequestApiKey={()=> { if (nav && nav.requestApiKey) nav.requestApiKey(); }}/>
+      )}
+
+      {/* Driven by — promoted to hero block per Alex's 2026-05-18 feedback.
+          Full text of each driver renders inline (was a chip-only summary
+          before). The WHY NOW block below got cut — its intel is redundant
+          with the driver text shown here. */}
+      {(drivenTrends.length>0 || drivenPulses.length>0 || drivenComps.length>0) && (
+        <div className="mb-7 pb-7 border-b border-[var(--border)]">
+          <div className="font-mono text-[11px] tracking-[0.18em] text-[var(--ink)] mb-3">↳ WHY THIS BRIEF EXISTS</div>
+          <div className="grid gap-2">
+            {drivenTrends.map(t=>(
+              <button key={t.id} onClick={()=>nav.goToTrend(t.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:"#73B2C9"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:"#73B2C9"}}>TREND</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{t.trend}</p>
+              </button>
+            ))}
+            {drivenPulses.map(p=>(
+              <button key={p.id} onClick={()=>nav.goToPulse(p.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:p.typeColor||"#9E652E"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:p.typeColor||"#9E652E"}}>CULTURAL PULSE · {p.type}</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{p.hook}</p>
+              </button>
+            ))}
+            {drivenComps.map(c=>(
+              <button key={c.id} onClick={()=>nav.goToComp(c.id)}
+                className="text-left p-4 rounded-md border bg-[#FAFAF7] hover:bg-white transition group"
+                style={{borderColor:"var(--border)", borderLeftWidth:"4px", borderLeftColor:"#DC2626"}}>
+                <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2 text-white" style={{background:"#DC2626"}}>COMPETITOR · {c.name}</span>
+                <p className="text-[14px] text-[#202A44] leading-snug font-medium">{c.opportunity}</p>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+      {b.fromStudio && b._drivenBy && (
+        <div className="mb-7 pb-7 border-b border-[var(--border)]">
+          <div className="font-mono text-[11px] tracking-[0.18em] text-[var(--muted)] mb-3">↳ RIFFED FROM</div>
+          <div className="pl-4 border-l-[4px]" style={{borderColor:"#9E652E"}}>
+            <p className="text-[14px] italic text-[#202A44] leading-relaxed">{b._drivenBy}</p>
+          </div>
+        </div>
+      )}
+
+      {/* THE IDEA — green RECOMMENDED HOOK chip stands out (restored per 2026-04-17 feedback); body stays editorial */}
+      <BriefBlock label="THE IDEA">
+        <div className="pl-4 border-l-[3px] border-[#75C596]">
+          <span className="inline-block font-mono text-[9.5px] tracking-wider px-2 py-[3px] rounded mb-2.5 text-white" style={{background:"#75C596"}}>
+            ✓ RECOMMENDED HOOK
+          </span>
+          <p className="font-serif text-[22px] leading-snug text-[#202A44]">"{recommendedHook.text}"</p>
+        </div>
+        {altHooks.length>0 && (
+          <div className="mt-3">
+            <button onClick={()=>setShowAltHooks(s=>!s)} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">
+              {showAltHooks?"− HIDE":"+ SHOW"} {altHooks.length} ALT HOOK{altHooks.length>1?"S":""}
+            </button>
+            {showAltHooks && (
+              <div className="grid gap-1.5 mt-2">
+                {altHooks.map((h,k)=>(
+                  <div key={k} className="pl-4 border-l border-[var(--border)] text-[14px] italic text-[#64748B] leading-snug py-1.5">"{h.text}"</div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </BriefBlock>
+      {/* WHY NOW block intentionally removed 2026-05-18 — its intel duplicated
+          the driver text now rendered prominently in the WHY THIS BRIEF EXISTS
+          block above. */}
+
+      {/* SHOT LIST / VISUAL DIRECTION */}
+      <BriefBlock label={b.script ? "SHOT LIST" : "VISUAL DIRECTION"}>
+        <div className="flex items-center justify-between mb-3">
+          {b.script
+            ? <span className="font-mono text-[10.5px] tracking-wider text-[var(--muted)]">{b.script.length} FRAMES · SWIPE TO PREVIEW</span>
+            : <span/>}
+          <AgentStamp agentId="visual"/>
+        </div>
+
+        {b.script ? (
+          <div>
+            {/* Phone carousel */}
+            <div className="flex gap-3 overflow-x-auto scrollbar pb-3 -mx-1 px-1">
+              {b.script.map((s,k)=>{
+                const active = activeFrame===k;
+                return (
+                  <button key={k} onClick={()=>setActiveFrame(k)}
+                    className={"shrink-0 transition-all "+(active ? "" : "opacity-55 hover:opacity-80")}
+                    style={{width:"200px"}}>
+                    <div className="rounded-[26px] overflow-hidden flex flex-col"
+                      style={{
+                        border: active ? "3px solid #202A44" : "2px solid var(--border)",
+                        background: active ? "linear-gradient(160deg, #202A44 0%, #1E293B 100%)" : "#DCD6C8",
+                        aspectRatio: "9/16",
+                        boxShadow: active ? "0 8px 24px rgba(15,23,42,0.18)" : "none"
+                      }}>
+                      {/* Notch */}
+                      <div className="flex justify-center pt-3 pb-1">
+                        <div className="rounded-full" style={{width:"44px",height:"4px",background: active?"#334155":"#D4D4CF"}}></div>
+                      </div>
+                      {/* Scene label */}
+                      {s.scene && (
+                        <div className="text-center px-3 pt-1.5">
+                          <span className="font-mono text-[8.5px] tracking-[0.18em] px-2 py-[3px] rounded-full"
+                            style={{
+                              background: active ? "rgba(250,204,21,0.18)" : "rgba(0,0,0,0.06)",
+                              color: active ? "#FACC15" : "#94A3B8"
+                            }}>{s.scene}</span>
+                        </div>
+                      )}
+                      {/* Center content */}
+                      <div className="flex-1 flex flex-col items-center justify-center px-4 text-center">
+                        <div className="font-serif text-[13px] leading-snug" style={{color: active ? "#F8FAFC" : "#475569"}}>{s.action}</div>
+                      </div>
+                      {/* Bottom bar */}
+                      <div className="flex items-center justify-between px-4 pb-3">
+                        <span className="font-mono text-[10px] tracking-wider font-semibold" style={{color: active ? "#FACC15" : "#94A3B8"}}>{s.time}</span>
+                        <span className="font-mono text-[10px] tracking-wider" style={{color: active ? "#94A3B8" : "#B0B0A8"}}>{k+1}/{b.script.length}</span>
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <StaticVisualDirection visual={b.visual} pillarColor={b.pillarColor} platform={b.platform}/>
+        )}
+
+        {(b.audio || b.duration) && (
+          <div className="flex flex-wrap gap-x-6 gap-y-1 mt-4 pt-3 border-t border-[var(--border)]">
+            {b.audio && <div className="text-[13.5px]"><span className="font-mono text-[10px] tracking-wider text-[var(--muted)]">AUDIO · </span><span className="text-[#334155]">{b.audio}</span></div>}
+            {b.duration && <div className="text-[13.5px]"><span className="font-mono text-[10px] tracking-wider text-[var(--muted)]">DURATION · </span><span className="text-[#334155]">{b.duration}</span></div>}
+          </div>
+        )}
+
+        {/* FOOTAGE INSPO — click-to-expand accordion per Christina's 2026-04-21
+            feedback. Beyond the recommended shot list, every brief carries
+            a bank of inspo: stuff to shoot, found footage to stitch, gif/meme
+            refs, and archive/nostalgic visuals. Collapsed by default so the
+            SHOOT block stays calm on first read. */}
+        {b.footageInspo && (
+          <div className="mt-4 pt-3 border-t border-[var(--border)]">
+            <button onClick={()=>setShowFootage(s=>!s)}
+              className="w-full flex items-center justify-between gap-3 text-left hover:opacity-80 transition">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="font-mono text-[10.5px] tracking-wider px-2 py-1 rounded" style={{background:"#FEF3C7",color:"#92400E",border:"1px solid #FDE68A"}}>FOOTAGE INSPO</span>
+                <span className="text-[13px] text-[var(--ink)]">Where to source every shot — original, found, meme, archive</span>
+              </div>
+              <span className="font-mono text-[11px] text-[var(--muted)] shrink-0">{showFootage ? "▲ HIDE" : "▼ SHOW"}</span>
+            </button>
+            {showFootage && (
+              <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 fade-in">
+                {[
+                  {key:"shoot",   label:"SHOOT THIS",           hint:"Original footage to capture in-kitchen/on-set",         color:"#75C596"},
+                  {key:"found",   label:"FOUND FOOTAGE / STITCH",hint:"Existing content to pull from or stitch with",          color:"#73B2C9"},
+                  {key:"memes",   label:"GIF / MEME REFS",      hint:"Reaction shots + viral formats to riff on",              color:"#A191B2"},
+                  {key:"archive", label:"ARCHIVE / NOSTALGIC",  hint:"Period / vintage / b-roll for texture",                  color:"#9E652E"}
+                ].map(cat => {
+                  const items = (b.footageInspo||{})[cat.key];
+                  if(!items || items.length === 0) return null;
+                  return (
+                    <div key={cat.key} className="rounded-md border border-[var(--border)] bg-[#FAFAF7] p-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="inline-block w-[7px] h-[7px] rounded-full" style={{background:cat.color}}></span>
+                        <span className="font-mono text-[10.5px] tracking-[0.15em]" style={{color:cat.color}}>{cat.label}</span>
+                      </div>
+                      <p className="font-mono text-[10px] tracking-wide text-[var(--muted)] mb-2.5 leading-snug">{cat.hint}</p>
+                      <ul className="space-y-2">
+                        {items.map((it,i)=>(
+                          <li key={i} className="text-[13px] text-[#202A44] leading-snug flex gap-2">
+                            <span className="text-[var(--muted)] shrink-0">•</span>
+                            <span>{it}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+      </BriefBlock>
+
+      {/* CAPTIONS */}
+      <BriefBlock label="CAPTION VARIANTS">
+        {CAPTION_VARIANTS[b.id] ? (
+          <div>
+            <div className="flex items-center justify-end mb-3">
+              <AgentStamp agentId="hook"/>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <VoiceVariant label="Direct" mood="The receipts" text={CAPTION_VARIANTS[b.id].direct}/>
+              <VoiceVariant label="Warm" mood="With a wink" text={CAPTION_VARIANTS[b.id].warm}/>
+              <VoiceVariant label="Punchy" mood="Mic drop" text={CAPTION_VARIANTS[b.id].punchy}/>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="font-mono text-[10.5px] tracking-wider text-[var(--muted)]">READY-TO-POST CAPTION</div>
+              <AgentStamp agentId="hook"/>
+            </div>
+            <pre className="whitespace-pre-wrap text-[14px] text-[#202A44] leading-relaxed font-sans bg-[#FAFAF7] border border-[var(--border)] rounded-md p-4">{b.caption}</pre>
+          </div>
+        )}
+      </BriefBlock>
+
+      {/* AMPLIFY */}
+      {AMPLIFY_PLANS[b.id] && <AmplifyBlock plan={AMPLIFY_PLANS[b.id]}/>}
+    </div>
+  );
+}
+
+// AmplifyBlock is read in 3 clear tiers:
+//   1. THE RECOMMENDATION — why we're doing this (pink chip + serif thesis)
+//   2. THE BRIEF — operational parameters (unified 4-cell stat strip, guardrail accented red)
+//   3. THE PLACEMENTS — tactical per-platform detail (compact cards, one line of summary + audience + optional note)
+// Each tier has its own grammar so the reader can navigate at a glance. Added 2026-04-17.
+function AmplifyBlock({plan}){
+  const platformColors = {Meta:"#73B2C9", TikTok:"#202A44", Pinterest:"#DC2626"};
+  const totalPlacement = plan.placements.reduce((s,p)=>s+p.budget,0);
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-4">
+        <div className="font-mono text-[10px] tracking-[0.18em] text-[var(--ink)]">AMPLIFY</div>
+        <AgentStamp agentId="paid"/>
+      </div>
+
+      {/* Tier 1 — the recommendation (thesis) */}
+      <div className="pl-4 border-l-[3px] mb-5" style={{borderColor:"#EC4899"}}>
+        <span className="inline-block font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded mb-2.5 text-white" style={{background:"#EC4899"}}>
+          ◆ PAID MEDIA PLANNER
+        </span>
+        <p className="font-serif text-[17px] leading-snug text-[#202A44] mb-2">{plan.headline}</p>
+        <p className="text-[11.5px] text-[#64748B] leading-relaxed">{plan.why}</p>
+      </div>
+
+      {/* Tier 2 — the brief (operational stats, unified 4-cell strip) */}
+      <div className="grid grid-cols-4 mb-5 rounded-md border border-[var(--border)] bg-[#FAFAF7] overflow-hidden">
+        <div className="px-4 py-3 border-r border-[var(--border)]">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">BUDGET</div>
+          <div className="font-serif text-[18px] leading-none text-[#202A44]">${plan.totalBudget}</div>
+        </div>
+        <div className="px-4 py-3 border-r border-[var(--border)]">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">TEST WINDOW</div>
+          <div className="font-serif text-[14px] leading-snug text-[#202A44]">{plan.testWindow}</div>
+        </div>
+        <div className="px-4 py-3 border-r border-[var(--border)]">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">OBJECTIVE</div>
+          <div className="font-serif text-[13px] leading-snug text-[#202A44]">{plan.objective}</div>
+        </div>
+        <div className="px-4 py-3" style={{background:"#FEF2F2"}}>
+          <div className="font-mono text-[8.5px] tracking-wider mb-1" style={{color:"#DC2626"}}>⚠ GUARDRAIL</div>
+          <div className="text-[11px] leading-snug" style={{color:"#991B1B"}}>{plan.guardrail}</div>
+        </div>
+      </div>
+
+      {/* Tier 3 — the placements */}
+      <div className="flex items-center justify-between mb-2.5">
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">PLACEMENTS · {plan.placements.length}</div>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">Allocated: <span className="text-[#202A44]">${totalPlacement}</span> / ${plan.totalBudget}</div>
+      </div>
+      <div className="grid gap-2">
+        {plan.placements.map((p,i)=>(
+          <div key={i} className="p-3.5 rounded-md border border-[var(--border)] bg-white">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="inline-block w-[8px] h-[8px] rounded-full shrink-0" style={{background:platformColors[p.platform]}}></span>
+                <span className="font-mono text-[10px] tracking-wider font-semibold" style={{color:platformColors[p.platform]}}>{p.platform.toUpperCase()}</span>
+                <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">· {p.format}</span>
+              </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="font-serif text-[14px] text-[#202A44]">${p.budget}</span>
+                <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{p.expectedReach}</span>
+              </div>
+            </div>
+            <p className="text-[11.5px] text-[#334155] leading-relaxed">{p.audience}{p.lookalike ? ` · ${p.lookalike}` : ""}</p>
+            {p.note && (
+              <p className="text-[10.5px] text-[#94A3B8] leading-relaxed mt-1.5 italic">{p.note}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BriefBlock({label, children, last}){
+  return (
+    <div className={last?"":"mb-7 pb-7 border-b border-[var(--border)]"}>
+      <div className="font-mono text-[12px] tracking-[0.18em] text-[var(--ink)] mb-3">{label}</div>
+      {children}
+    </div>
+  );
+}
+
+// The briefs list is the hero — cards in a responsive grid. Clicking opens the
+// full brief detail as a modal overlay (per 2026-04-17 feedback: the old
+// 4/8-column split buried the list behind the detail). Keyboard Escape + click
+// outside both close the modal.
+function BriefDetailModal({open, brief, onClose, nav}){
+  useEffect(()=>{
+    if(!open) return;
+    const onKey = e => { if(e.key==="Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    // Lock body scroll while the modal is open
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return ()=>{ window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  },[open,onClose]);
+
+  if(!open || !brief) return null;
+  return (
+    <div className="fixed inset-0 z-[70] fade-in flex items-start justify-center px-4 py-6 md:py-10 overflow-y-auto scrollbar"
+      style={{background:"rgba(15,23,42,0.55)", backdropFilter:"blur(3px)"}}
+      onClick={onClose}>
+      {/* Shell is just a positioning wrapper — BriefDetail brings its own card chrome via its root `card p-7` class */}
+      <div className="w-full max-w-[1000px] relative my-auto shadow-2xl rounded-[10px]"
+        onClick={e=>e.stopPropagation()}>
+        <button onClick={onClose}
+          className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-[var(--ink)] bg-white border border-[var(--border)] hover:bg-[#F6F6F0] transition z-10"
+          aria-label="Close brief">
+          <span className="text-[18px] leading-none">×</span>
+        </button>
+        <BriefDetail b={brief} nav={nav}/>
+      </div>
+    </div>
+  );
+}
+
+function ContentBriefs({selectedId, briefModalOpen, openBrief, closeBrief, nav, topRight, studioAdopted}){
+  // Adopted Studio briefs render through the same grid as engine briefs,
+  // pinned to the top so a just-adopted brief is immediately visible.
+  const allBriefs = useMemo(()=>[...(studioAdopted || []), ...BRIEFS], [studioAdopted]);
+  const active = useMemo(()=>allBriefs.find(b=>b.id===selectedId) || null, [selectedId, allBriefs]);
+  const studioCount = (studioAdopted || []).length;
+
+  // Pillar grouping — 2026-04-21 refactor. Christina's ask: group Content Briefs
+  // by pillar (the strategic lens), not priority. Pillar chips + section headers
+  // designate; priority lives on each card as a chip. Within each pillar,
+  // briefs sort by priority (BIG SWING → HIGH → STANDARD) so the heaviest plays
+  // still read first inside their lane.
+  const PILLAR_ORDER = [
+    {key:"HEALTH/WELLNESS",     color:"#73B2C9"},
+    {key:"INGREDIENTS/RECIPES", color:"#75C596"},
+    {key:"PARENTING",           color:"#9E652E"},
+    {key:"REVIEWS/RECS",        color:"#A191B2"}
+  ];
+  const PRIORITY_RANK = {"BIG SWING":0,"HIGH":1,"STANDARD":2};
+  const briefsByPillar = PILLAR_ORDER.map(p => {
+    const list = allBriefs
+      .filter(b => b.pillar === p.key)
+      .sort((a,b) => (PRIORITY_RANK[a.priority]??9) - (PRIORITY_RANK[b.priority]??9));
+    const bigSwingCount = list.filter(b => b.priority === "BIG SWING").length;
+    return {...p, briefs:list, bigSwingCount};
+  }).filter(p => p.briefs.length > 0);
+
+  const isActive = (b) => briefModalOpen && active && active.id === b.id;
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="px-8 pt-6 pb-4 border-b border-[var(--border)]">
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-1">
+              {WELCOME_WEEK_RANGE} · {BRIEFS.length} BRIEFS{studioCount>0 ? " · "+studioCount+" STUDIO-ADOPTED" : ""}
+            </div>
+            <h1 className="font-serif text-[28px] leading-none tracking-tight">Content Briefs</h1>
+            <p className="text-[12px] text-[var(--muted)] mt-1.5 max-w-2xl">{BRIEFS.length} briefs generated this week from {SCANNED_TOTAL} signals{studioCount>0 ? ", plus "+studioCount+" riffed in the Studio" : ""}. Organized by content pillar — so you can see at a glance where the week leans. Priority chip on each card tells you which to ship first. Click any brief to open its full detail.</p>
+          </div>
+          {topRight}
+        </div>
+      </div>
+      <div className="flex-1 overflow-y-auto scrollbar px-8 py-6">
+        <div className="max-w-[1400px]">
+
+          {/* Pillar bands — each pillar gets a color-chip header + card grid.
+              Briefs within a pillar sort by priority (BIG SWING first), and the
+              per-card priority chip carries the "ship this first" signal. */}
+          {briefsByPillar.map(p => (
+            <div key={p.key} className="mb-10">
+              <div className="flex items-center justify-between mb-3 pb-2 border-b-[2px]" style={{borderColor:p.color}}>
+                <div className="flex items-center gap-2.5">
+                  <span className="inline-block w-[10px] h-[10px] rounded-full" style={{background:p.color}}></span>
+                  <span className="font-mono text-[11px] tracking-[0.2em]" style={{color:p.color}}>{p.key}</span>
+                </div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">
+                  {p.briefs.length} {p.briefs.length===1?"BRIEF":"BRIEFS"}{p.bigSwingCount>0 ? " · "+p.bigSwingCount+" BIG SWING"+(p.bigSwingCount>1?"S":"") : ""}
+                </div>
+              </div>
+              <div className="grid gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                {p.briefs.map(b=>(
+                  <BriefListItem key={b.id} b={b}
+                    active={isActive(b)} onClick={()=>openBrief(b.id)}/>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <BriefDetailModal open={briefModalOpen} brief={active} onClose={closeBrief} nav={nav}/>
+    </div>
+  );
+}
+
+function KPI({label, value, sub, accent}){
+  return (
+    <div className="card p-5">
+      <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">{label}</div>
+      <div className="font-serif text-[32px] leading-none tracking-tight" style={accent?{color:accent}:{}}>{value}</div>
+      {sub && <div className="font-mono text-[9.5px] tracking-wider text-[var(--muted)] mt-2">{sub}</div>}
+    </div>
+  );
+}
+
+function ResultRow({r, nav}){
+  const deltaColor = r.savesDelta >= 3 ? "#75C596" : r.savesDelta >= 1 ? "#202A44" : "#DC2626";
+  return (
+    <div className="card p-4 fade-in">
+      <div className="flex items-center gap-4">
+        {/* Saves delta */}
+        <div className="shrink-0 w-[52px] text-center">
+          <div className="font-serif text-[20px] leading-none" style={{color:deltaColor}}>{r.savesDelta.toFixed(1)}×</div>
+          <div className="font-mono text-[7px] tracking-wider text-[var(--muted)] mt-0.5">SAVES</div>
+        </div>
+
+        {/* Content */}
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2 mb-0.5">
+            <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:r.pillarColor}}></span>
+            <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">{r.platform.toUpperCase()} · {r.pillar}</span>
+            {r.hero && <span className="font-mono text-[7.5px] tracking-wider px-1.5 py-0.5 rounded" style={{background:"#202A44",color:"#FACC15"}}>★ TOP POST</span>}
+          </div>
+          <div className="font-serif text-[14px] leading-snug text-[#202A44]">{r.concept}</div>
+          {r.note && <p className="text-[10.5px] text-[#64748B] leading-snug mt-1 italic">{r.note}</p>}
+        </div>
+
+        {/* Inline stats */}
+        <div className="shrink-0 flex items-center gap-4">
+          <div className="text-center">
+            <div className="font-mono text-[7.5px] tracking-wider text-[var(--muted)]">REACH</div>
+            <div className="text-[13px] font-serif text-[#202A44]">{fmtNum(r.views)}</div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[7.5px] tracking-wider text-[var(--muted)]">SAVES</div>
+            <div className="text-[13px] font-serif text-[#202A44]">{fmtNum(r.saves)}</div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[7.5px] tracking-wider text-[var(--muted)]">SHARES</div>
+            <div className="text-[13px] font-serif text-[#202A44]">{fmtNum(r.shares)}</div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-[7.5px] tracking-wider text-[var(--muted)]">SENT.</div>
+            <div className="text-[13px] font-serif" style={{color:"#75C596"}}>+{Math.round(r.sentiment*100)}%</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Driven by — compact */}
+      {r.trendId ? (
+        <button onClick={()=>nav.goToTrend(r.trendId)} className="font-mono text-[8px] tracking-wider text-[var(--muted)] mt-1.5 ml-[68px] hover:text-[var(--blue)] transition text-left">
+          ↳ {r.sourceTrend} ↗
+        </button>
+      ) : (
+        <div className="font-mono text-[8px] tracking-wider text-[var(--muted)] mt-1.5 ml-[68px]">↳ {r.sourceTrend}</div>
+      )}
+    </div>
+  );
+}
+
+function InsightCard({i}){
+  const a = AGENT_BY_ID[i.agent];
+  return (
+    <div className="card p-5 fade-in">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:a.color}}></span>
+        <span className="font-mono text-[9px] tracking-wider" style={{color:a.color}}>{a.name.toUpperCase()} · ENGINE INSIGHT</span>
+      </div>
+      <div className="font-serif text-[16px] leading-snug text-[#202A44] mb-2">{i.title}</div>
+      <p className="text-[12px] text-[#334155] leading-relaxed">{i.detail}</p>
+    </div>
+  );
+}
+
+function FormatPerformance(){
+  // group by pillar, average savesDelta
+  const byPillar = {};
+  LAST_WEEK_RESULTS.forEach(r=>{
+    if(!byPillar[r.pillar]) byPillar[r.pillar] = {sum:0, count:0, color:r.pillarColor};
+    byPillar[r.pillar].sum += r.savesDelta;
+    byPillar[r.pillar].count += 1;
+  });
+  const rows = Object.entries(byPillar).map(([k,v])=>({pillar:k, avg:v.sum/v.count, color:v.color})).sort((a,b)=>b.avg-a.avg);
+  const max = Math.max(...rows.map(r=>r.avg));
+  return (
+    <div className="card p-5">
+      <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-4">PILLAR PERFORMANCE · AVG SAVES VS BRAND BASELINE</div>
+      <div className="grid gap-3">
+        {rows.map(r=>(
+          <div key={r.pillar}>
+            <div className="flex items-center justify-between mb-1">
+              <span className="font-mono text-[10px] tracking-wider" style={{color:r.color}}>{r.pillar}</span>
+              <span className="font-serif text-[14px]" style={{color:r.color}}>{r.avg.toFixed(1)}×</span>
+            </div>
+            <div className="h-[6px] rounded-full bg-[#DCD6C8] overflow-hidden">
+              <div className="h-full rounded-full" style={{width:(r.avg/max*100)+"%", background:r.color}}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Simulated "now" for the Playbook — the weekly refresh updates this so statuses line up with the data week.
+// Using a fixed date keeps demo statuses consistent; swap to `new Date()` once the data window matches real time.
+const SIMULATED_NOW = new Date(2026, 4, 18, 11, 30); // Mon May 18 2026, 11:30am — getDay() resolves to the correct weekday
+const DAY_TODAY = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][SIMULATED_NOW.getDay()];
+const MONTH_IDX = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+
+function parseBriefTiming(timing){
+  if(!timing) return null;
+  const m = timing.match(/(\w{3})\s+(\w{3})\s+(\d+)\s*·\s*(\d+)(am|pm)/i);
+  if(!m) return null;
+  const [, , monName, dayNum, hrStr, ampm] = m;
+  let h = parseInt(hrStr);
+  if(ampm.toLowerCase() === "pm" && h !== 12) h += 12;
+  if(ampm.toLowerCase() === "am" && h === 12) h = 0;
+  return new Date(2026, MONTH_IDX[monName], parseInt(dayNum), h, 0);
+}
+
+function getBriefStatus(b){
+  const t = parseBriefTiming(b.timing);
+  if(!t) return {label:"QUEUED", color:"#475569", bg:"#F1F5F9", sort:100};
+  const diffMs = t - SIMULATED_NOW;
+  const diffHr = diffMs / 3600000;
+  const nowDay = new Date(SIMULATED_NOW.getFullYear(), SIMULATED_NOW.getMonth(), SIMULATED_NOW.getDate());
+  const tDay = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+  const dayDiff = Math.round((tDay - nowDay) / 86400000);
+  if(Math.abs(diffHr) <= 0.5) return {label:"LIVE", color:"#FFFFFF", bg:"#DC2626", sort:0, pulse:true};
+  if(dayDiff < 0 || diffHr < -0.5) return {label:"SHIPPED", color:"#FFFFFF", bg:"#94A3B8", sort:1, shipped:true};
+  if(dayDiff === 0) return {label:"IN "+Math.round(diffHr)+"H", color:"#92400E", bg:"#FEF3C7", sort:2};
+  if(dayDiff === 1) return {label:"TMRW", color:"#0E7490", bg:"#CFFAFE", sort:3};
+  if(dayDiff < 7) return {label:"+"+dayDiff+"D", color:"#0E7490", bg:"#CFFAFE", sort:4};
+  return {label:"QUEUED", color:"#475569", bg:"#F1F5F9", sort:5};
+}
+
+function StatusChip({status, small}){
+  if(!status) return null;
+  const sm = small;
+  return (
+    <span className={"inline-flex items-center gap-1 font-mono tracking-wider rounded-full "+(sm?"text-[7.5px] px-1.5 py-[1px]":"text-[8.5px] px-2 py-[2px]")}
+      style={{color:status.color, background:status.bg}}>
+      {status.pulse && <span className="inline-block rounded-full animate-pulse" style={{width:"5px", height:"5px", background:"#FFFFFF"}}></span>}
+      {status.shipped && <span>✓</span>}
+      {status.label}
+    </span>
+  );
+}
+
+// Phone-frame preview that pops on brief-cell hover. Uses fixed positioning so it
+// escapes the calendar's overflow:hidden container.
+function BriefHoverPreview({data}){
+  if(!data) return null;
+  const b = data.brief;
+  const x = Math.min(data.x, window.innerWidth - 210);
+  const y = Math.min(data.y, window.innerHeight - 340);
+  const hasScript = b.script && b.script.length;
+  const first = hasScript ? b.script[0] : null;
+  return (
+    <div className="fixed z-[200] pointer-events-none fade-in" style={{left:x, top:y, width:"186px"}}>
+      <div className="rounded-[22px] overflow-hidden shadow-2xl"
+        style={{
+          aspectRatio:"9/16",
+          background:"linear-gradient(165deg, "+b.pillarColor+" 0%, #1E293B 55%, #0F172A 100%)",
+          border:"2.5px solid "+b.pillarColor,
+          boxShadow:"0 20px 40px rgba(15,23,42,0.35), 0 0 0 1px "+b.pillarColor+"66"
+        }}>
+        {/* Phone notch */}
+        <div className="flex justify-center pt-2.5 pb-1">
+          <div className="rounded-full" style={{width:"36px", height:"4px", background:"#334155"}}></div>
+        </div>
+        {/* Header chip */}
+        <div className="px-3 pt-1 pb-2">
+          <div className="font-mono text-[8px] tracking-wider text-white/80">{b.platform.toUpperCase()}</div>
+          <div className="font-mono text-[7.5px] tracking-wider text-white/60 mt-0.5">{b.timing.toUpperCase()}</div>
+        </div>
+        {/* Content area */}
+        <div className="px-3 pb-3 flex flex-col" style={{minHeight:"240px"}}>
+          {hasScript ? (
+            <>
+              <div className="font-mono text-[8.5px] tracking-wider text-white uppercase">{first.scene || "OPENING FRAME"}</div>
+              <div className="font-mono text-[7.5px] tracking-wider text-white/60 mt-0.5">{first.time}</div>
+              <p className="text-[9.5px] text-white/95 leading-snug mt-2 flex-1 overflow-hidden" style={{display:"-webkit-box", WebkitLineClamp:7, WebkitBoxOrient:"vertical"}}>{first.action}</p>
+              {/* Frame progress strip */}
+              <div className="flex gap-[2px] mt-2 mb-1.5">
+                {b.script.map((_,i)=>(
+                  <div key={i} className="flex-1 rounded-full" style={{height:"2px", background:i===0?"#FFFFFF":"rgba(255,255,255,0.25)"}}></div>
+                ))}
+              </div>
+              <div className="font-mono text-[7.5px] tracking-wider text-white/60 text-center">FRAME 1 / {b.script.length}</div>
+            </>
+          ) : (
+            <>
+              <div className="font-mono text-[8.5px] tracking-wider text-white uppercase">VISUAL DIRECTION</div>
+              <p className="text-[9.5px] text-white/95 leading-snug mt-2 flex-1 overflow-hidden" style={{display:"-webkit-box", WebkitLineClamp:9, WebkitBoxOrient:"vertical"}}>{b.concept}</p>
+              <p className="text-[9px] text-white/75 leading-snug mt-2 overflow-hidden" style={{display:"-webkit-box", WebkitLineClamp:4, WebkitBoxOrient:"vertical"}}>{b.visual ? b.visual.substring(0,180)+(b.visual.length>180?"…":"") : ""}</p>
+              <div className="font-mono text-[7.5px] tracking-wider text-white/60 text-center mt-auto pt-2">STATIC · NO STORYBOARD</div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Content Calendar state helpers (live editing) ──────────
+// Calendar overrides: briefId → { day, timeLabel, platform } when the user
+// has dragged a brief. If no override, the brief's default `timing` +
+// `platform` fields apply. Overrides persist in localStorage so the demo
+// state survives tab navigation + reloads.
+const PLAYBOOK_OVERRIDES_KEY = "willas-calendar-overrides";
+const PLAYBOOK_MANUAL_KEY    = "willas-calendar-manual";
+const PLAYBOOK_EDITS_KEY     = "willas-calendar-edits";
+
+function loadJson(key, fallback){ try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch(e){ return fallback; } }
+function saveJson(key, val){ try { localStorage.setItem(key, JSON.stringify(val)); } catch(e){} }
+
+function WeeklyPlaybook({nav, topRight}){
+  const [hoverData, setHoverData] = useState(null);
+  const [showLogic, setShowLogic] = useState(false);
+  // Live-editing state
+  const [overrides, setOverrides] = useState(()=> loadJson(PLAYBOOK_OVERRIDES_KEY, {}));
+  const [manualBriefs, setManualBriefs] = useState(()=> loadJson(PLAYBOOK_MANUAL_KEY, []));
+  const [edits, setEdits] = useState(()=> loadJson(PLAYBOOK_EDITS_KEY, {})); // briefId → { concept }
+  const [draggingId, setDraggingId] = useState(null);
+  const [dragOverCell, setDragOverCell] = useState(null); // "platKey|day"
+  const [editingId, setEditingId] = useState(null);       // briefId currently inline-editing
+
+  useEffect(()=> saveJson(PLAYBOOK_OVERRIDES_KEY, overrides), [overrides]);
+  useEffect(()=> saveJson(PLAYBOOK_MANUAL_KEY, manualBriefs), [manualBriefs]);
+  useEffect(()=> saveJson(PLAYBOOK_EDITS_KEY, edits), [edits]);
+
+  function showHover(e, b){
+    if (draggingId) return; // don't show hover card while dragging
+    const rect = e.currentTarget.getBoundingClientRect();
+    setHoverData({brief:b, x:rect.right + 10, y:rect.top - 10});
+  }
+  function hideHover(){ setHoverData(null); }
+
+  const PLATFORMS = [
+    {key:"ig", label:"IG / FB", match: p => p.startsWith("IG"), defaultPlatform: "IG Reel"},
+    {key:"tt", label:"TikTok", match: p => p === "TikTok", defaultPlatform: "TikTok"},
+    {key:"pin", label:"Pinterest", match: p => p === "Pinterest", defaultPlatform: "Pinterest"},
+    {key:"other", label:"Other", match: p => !p.startsWith("IG") && p !== "TikTok" && p !== "Pinterest", defaultPlatform: "Threads"}
+  ];
+  const DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+  function getDay(timing){ return timing ? timing.split(" ")[0] : null; }
+  function getTime(timing){
+    if(!timing) return "";
+    const m = timing.match(/(\d{1,2}(?:am|pm))/);
+    return m ? m[1] : "";
+  }
+
+  // Apply overrides + edits to produce "effective" briefs for rendering
+  function effective(b){
+    const o = overrides[b.id];
+    const e = edits[b.id];
+    return {
+      ...b,
+      timing: o && o.timing ? o.timing : b.timing,
+      platform: o && o.platform ? o.platform : b.platform,
+      concept: e && e.concept ? e.concept : b.concept,
+    };
+  }
+
+  const allBriefs = [...BRIEFS.map(effective), ...manualBriefs.map(effective)];
+
+  // Group briefs by platform bucket + day
+  const grid = {};
+  PLATFORMS.forEach(pl => {
+    grid[pl.key] = {};
+    DAYS.forEach(d => grid[pl.key][d] = []);
+  });
+
+  allBriefs.forEach(b => {
+    const day = getDay(b.timing);
+    if(!day) return;
+    const plat = PLATFORMS.find(pl => pl.match(b.platform));
+    if(plat && grid[plat.key][day]) grid[plat.key][day].push(b);
+  });
+
+  const platCounts = PLATFORMS.map(pl => ({
+    ...pl,
+    count: allBriefs.filter(b => pl.match(b.platform)).length
+  })).filter(p => p.count > 0);
+
+  // ── Drag + drop handlers ─────────────────────────────────
+  function onDragStart(e, briefId){
+    setDraggingId(briefId);
+    setHoverData(null);
+    try {
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", briefId);
+    } catch(err){}
+  }
+  function onDragEnd(){ setDraggingId(null); setDragOverCell(null); }
+  function onDragOver(e, plKey, day){
+    e.preventDefault();
+    try { e.dataTransfer.dropEffect = "move"; } catch(err){}
+    setDragOverCell(`${plKey}|${day}`);
+  }
+  function onDrop(e, plKey, day){
+    e.preventDefault();
+    const briefId = draggingId || e.dataTransfer.getData("text/plain");
+    if (!briefId) return;
+    moveBriefTo(briefId, plKey, day);
+    setDraggingId(null);
+    setDragOverCell(null);
+  }
+
+  // Move a brief to a (platform bucket, day). Preserves original time slot;
+  // remaps platform to the bucket's default if the brief crossed buckets.
+  function moveBriefTo(briefId, plKey, day){
+    const source = allBriefs.find(b => b.id === briefId);
+    if (!source) return;
+    const bucket = PLATFORMS.find(p => p.key === plKey);
+    const originalBucket = PLATFORMS.find(p => p.match(source.platform));
+    const newPlatform = originalBucket && originalBucket.key === plKey
+      ? source.platform               // same bucket → preserve IG Reel vs IG Feed
+      : bucket.defaultPlatform;        // cross-bucket → snap to default
+    const time = getTime(source.timing) || "11am";
+    // Date from existing timing (e.g. "Mon Apr 27 · 12pm") — keep date portion if present
+    const m = (source.timing || "").match(/[A-Z][a-z]+\s+(\w+\s+\d+)\s*·/);
+    const datePart = m ? m[1] : "";
+    const newTiming = `${day} ${datePart ? datePart + " · " : ""}${time}`.trim();
+
+    if (briefId.startsWith("manual_")) {
+      // Manual brief — update in manualBriefs
+      setManualBriefs(prev => prev.map(mb => mb.id === briefId ? {...mb, platform: newPlatform, timing: newTiming} : mb));
+    } else {
+      setOverrides(prev => ({...prev, [briefId]: { platform: newPlatform, timing: newTiming }}));
+    }
+  }
+
+  function addManualBrief(plKey, day){
+    const bucket = PLATFORMS.find(p => p.key === plKey);
+    const id = "manual_" + Date.now().toString(36);
+    const m = allBriefs.find(b => getDay(b.timing) === day);
+    const datePart = m ? (m.timing.match(/[A-Z][a-z]+\s+(\w+\s+\d+)\s*·/) || [])[1] : "";
+    const timing = `${day} ${datePart ? datePart + " · " : ""}11am`.trim();
+    const draft = {
+      id,
+      platform: bucket.defaultPlatform,
+      pillar: "INGREDIENTS/RECIPES",
+      pillarColor: "#75C596",
+      flavor: "Multi",
+      timing,
+      priority: "STANDARD",
+      concept: "Your own idea — click to edit",
+      intel: [],
+      hooks: [{text:"(Write your hook here)", recommended:true}],
+      caption: "",
+      manual: true,
+      createdAt: Date.now()
+    };
+    setManualBriefs(prev => [draft, ...prev]);
+    setEditingId(id);
+  }
+
+  function deleteManualBrief(id){
+    setManualBriefs(prev => prev.filter(b => b.id !== id));
+  }
+
+  function resetCalendar(){
+    if (!confirm("Reset the calendar to the engine's suggested schedule? Your manual posts + edits will be cleared.")) return;
+    setOverrides({});
+    setManualBriefs([]);
+    setEdits({});
+  }
+
+  function saveEdit(briefId, concept){
+    setEdits(prev => ({...prev, [briefId]: { ...(prev[briefId]||{}), concept }}));
+    setEditingId(null);
+  }
+
+  const hasEdits = Object.keys(overrides).length > 0 || manualBriefs.length > 0 || Object.keys(edits).length > 0;
+
+  return (
+    <div className="flex flex-col h-full">
+      <Ticker/>
+      <div className="flex-1 overflow-y-auto scrollbar">
+        <div className="px-8 py-7">
+          <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
+            <div>
+              <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-2">{WELCOME_WEEK_RANGE} · MISSION BOARD</div>
+              <h1 className="font-serif text-[28px] tracking-tight leading-none">Content Calendar</h1>
+            </div>
+            <div className="flex items-center gap-2 flex-wrap">
+              {/* Phase D — week-level strategist entry point. Opens the
+                  global strategist with this week's brief slate already in
+                  its context (buildWeekContext now surfaces all 17 briefs
+                  + pillar / flavor distribution). Per-slot strategist
+                  access lives on the brief detail page (BriefRiffPanel). */}
+              {nav && nav.riffWithStrategist && (
+                <button
+                  onClick={()=> nav.riffWithStrategist()}
+                  className="font-mono text-[10px] tracking-wider px-3 py-1.5 rounded-md text-white transition-all hover:shadow-md flex items-center gap-1.5"
+                  style={{background:"var(--ink)"}}
+                  title="Ask the strategist a week-level question — slate balance, weak briefs, what's missing.">
+                  <span>✦</span>
+                  ASK ABOUT THIS WEEK
+                </button>
+              )}
+              {topRight}
+            </div>
+          </div>
+
+          {/* POSTING LOGIC — click-to-expand callout explaining why a brief landed
+              in a given day/time slot. Collapsed by default to keep the page
+              calm; expanded state shows the ET posting windows per platform
+              (from Willa's content calendar, Mar 2026). */}
+          <div className="mb-7 rounded-md border border-[var(--border)] bg-white overflow-hidden">
+            <button onClick={()=>setShowLogic(s => !s)}
+              className="w-full px-4 py-2.5 flex items-center justify-between gap-3 hover:bg-[#F6F6F0] transition">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="font-mono text-[9px] tracking-wider px-1.5 py-0.5 rounded bg-[#EFF6FF] text-[#1E40AF] border border-[#DBEAFE]">POSTING LOGIC</span>
+                <span className="text-[11.5px] text-[var(--ink)]">Why these days + times?</span>
+                <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] hidden md:inline">{POSTING_LOGIC.note}</span>
+              </div>
+              <span className="font-mono text-[11px] text-[var(--muted)] shrink-0">{showLogic ? "▲ HIDE" : "▼ SHOW"}</span>
+            </button>
+            {showLogic && (
+              <div className="px-4 pb-4 pt-1 border-t border-[var(--border)] bg-[#FAFAF7] fade-in">
+                <div className="text-[11.5px] text-[var(--muted)] mb-3 leading-snug md:hidden">{POSTING_LOGIC.note}</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {POSTING_LOGIC.platforms.map(p => (
+                    <div key={p.platform} className="rounded-md border border-[var(--border)] bg-white p-3">
+                      <div className="font-mono text-[9.5px] tracking-[0.18em] text-[var(--ink)] mb-2">{p.platform.toUpperCase()}</div>
+                      <div className="flex flex-col gap-1.5">
+                        {p.windows.map((w,i) => (
+                          <div key={i} className="flex items-center justify-between gap-3 text-[12px]">
+                            <span className="flex items-center gap-2">
+                              <span className={"inline-block w-1.5 h-1.5 rounded-full "+(w.best ? "" : "opacity-40")} style={{background:w.best?"#75C596":"#94A3B8"}}></span>
+                              <span className={w.best?"font-medium":""}>{w.label}</span>
+                            </span>
+                            <span className="font-mono text-[10.5px] text-[var(--muted)]">{w.time}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 text-[11px] text-[var(--muted)] leading-snug">
+                  <span className="font-medium text-[var(--ink)]">How the engine uses this:</span> every brief's suggested day + time is picked from these windows. Big-swing + high-priority briefs land in BEST slots first; standard-priority briefs fill morning + evening windows. Weekend briefs skew recipes + family moments to match audience behavior.
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* How to use this Playbook — live feature banner. Replaces the old
+              "COMING TO THE PLAYBOOK" mockup (2026-04-22): these are now live. */}
+          <div className="mb-6 rounded-lg overflow-hidden" style={{background:"linear-gradient(180deg, #FFFEF7 0%, #FAFAF7 100%)", border:"1px solid #E8E1C2"}}>
+            <div className="px-4 py-3 border-b border-[#E8E1C2] flex items-center justify-between gap-2 flex-wrap">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-[22px] h-[22px] rounded-full" style={{background:"#202A44", color:"#FACC15", fontSize:"12px", fontWeight:700}}>▸</span>
+                <span className="font-mono text-[9.5px] tracking-[0.22em] text-[#202A44]">HOW TO USE THIS CALENDAR</span>
+              </div>
+              {hasEdits && (
+                <button onClick={resetCalendar}
+                  className="font-mono text-[8.5px] tracking-wider px-2 py-1 rounded border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-[var(--muted)]">
+                  ↻ RESET TO ENGINE SUGGESTIONS
+                </button>
+              )}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2 px-4 py-3">
+              {[
+                {icon:"⋮⋮", label:"DRAG TO RESCHEDULE", copy:"Grab any brief by the handle. Drop it in a different day or platform. Engine suggestions stay; your moves override."},
+                {icon:"✎",  label:"EDIT IN PLACE", copy:"Click a brief's concept to rewrite it inline. Saves on blur. Full detail still a click away."},
+                {icon:"+",  label:"ADD YOUR OWN POST", copy:"Click an empty slot's '+' to drop in something the engine didn't know about (collab post, launch moment, retail activation)."}
+              ].map((f,i)=>(
+                <div key={i} className="flex items-start gap-2.5 py-1">
+                  <span className="font-mono text-[13px] text-[#202A44] leading-none w-[20px] shrink-0 mt-0.5">{f.icon}</span>
+                  <div className="min-w-0">
+                    <div className="font-mono text-[9px] tracking-[0.15em] text-[#202A44] mb-0.5">{f.label}</div>
+                    <p className="text-[11px] text-[#475569] leading-relaxed">{f.copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="px-4 py-2 border-t border-[#E8E1C2] flex items-center gap-2 bg-[#FFFEF7]">
+              <span className="inline-block w-[7px] h-[7px] rounded-full" style={{background:"#75C596", boxShadow:"0 0 0 3px rgba(117,197,150,0.28)"}}></span>
+              <span className="font-mono text-[9px] tracking-wider text-[#202A44]">RIDE-NOW</span>
+              <span className="text-[11px] text-[var(--muted)] leading-snug">= time-sensitive briefs that decay within a week. Ship these first; the engine flags them when the driving moment is fresh.</span>
+            </div>
+          </div>
+
+
+          {/* Weekly grid */}
+          <div className="card">
+            {/* Day headers */}
+            <div className="grid border-b border-[var(--border)]" style={{gridTemplateColumns:"110px repeat(7, 1fr)"}}>
+              <div className="px-4 py-3 border-r border-[var(--border)] bg-[#FAFAF7] rounded-tl-[10px]">
+                <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">PLATFORM</span>
+              </div>
+              {DAYS.map((d,di) => {
+                const isToday = d === DAY_TODAY;
+                const isWeekend = d === "Sat" || d === "Sun";
+                const isLast = di === DAYS.length - 1;
+                return (
+                  <div key={d}
+                    className={"relative px-3 py-3 text-center border-r border-[var(--border)] last:border-r-0 transition "+(isLast?"rounded-tr-[10px]":"")+" "+(isToday?"":(isWeekend?"bg-[#F5F5F2]":"bg-[#FAFAF7]"))}
+                    style={isToday ? {background:"linear-gradient(180deg,#FFFBEB,#FEF3C7)"} : null}>
+                    <span className={"font-mono text-[9px] tracking-wider "+(isToday?"text-[#92400E] font-semibold":"text-[var(--muted)]")}>{d.toUpperCase()}</span>
+                    {isToday && (
+                      <div className="absolute -bottom-[1px] left-0 right-0 h-[2.5px]" style={{background:"#F59E0B"}}></div>
+                    )}
+                    {isToday && (
+                      <div className="font-mono text-[7.5px] tracking-wider text-[#92400E] mt-0.5 flex items-center justify-center gap-1">
+                        <span className="inline-block w-[4px] h-[4px] rounded-full bg-[#DC2626] animate-pulse"></span>
+                        YOU ARE HERE
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Platform rows */}
+            {platCounts.map((pl,plIdx) => (
+              <div key={pl.key} className={"grid border-b border-[var(--border)] last:border-b-0"} style={{gridTemplateColumns:"110px repeat(7, 1fr)"}}>
+                <div className={"px-4 py-3 border-r border-[var(--border)] bg-[#FAFAF7] flex items-center "+(plIdx===platCounts.length-1?"rounded-bl-[10px]":"")}>
+                  <span className="font-mono text-[10px] tracking-wider font-medium">{pl.label}</span>
+                </div>
+                {DAYS.map((d,di) => {
+                  const cellBriefs = grid[pl.key][d] || [];
+                  const isToday = d === DAY_TODAY;
+                  const isWeekend = d === "Sat" || d === "Sun";
+                  const isLastRow = plIdx === platCounts.length - 1;
+                  const isLastCol = di === DAYS.length - 1;
+                  const cellKey = `${pl.key}|${d}`;
+                  const isDragTarget = dragOverCell === cellKey && draggingId;
+                  const cellClass = "relative px-2 py-2 border-r border-[var(--border)] last:border-r-0 flex flex-col gap-1.5 min-h-[94px] transition"
+                    + (isLastRow && isLastCol ? " rounded-br-[10px]" : "")
+                    + (isToday ? "" : (isWeekend ? " bg-[#F5F5F2]" : ""))
+                    + (isDragTarget ? " outline outline-2 outline-dashed outline-[#75C596]" : "");
+                  const cellStyle = isToday && !isDragTarget
+                    ? {background:"linear-gradient(180deg,rgba(254,243,199,0.45),rgba(254,243,199,0.15))"}
+                    : (isDragTarget ? {background:"rgba(117,197,150,0.08)"} : null);
+                  return (
+                    <div key={d} className={cellClass} style={cellStyle}
+                      onDragOver={(e)=>onDragOver(e, pl.key, d)}
+                      onDragLeave={()=>{ if (dragOverCell === cellKey) setDragOverCell(null); }}
+                      onDrop={(e)=>onDrop(e, pl.key, d)}>
+                      {cellBriefs.map(b => {
+                        const status = getBriefStatus(b);
+                        const isDragging = draggingId === b.id;
+                        const isEditing = editingId === b.id;
+                        const isManual = b.id && b.id.startsWith("manual_");
+                        const rideNow = b.rideNow === true;
+                        return (
+                          <div key={b.id} className={"relative group "+(isDragging?"opacity-30":"")}>
+                            {/* Real drag handle — HTML5 drag + drop */}
+                            {!status.shipped && (
+                              <span
+                                draggable
+                                onDragStart={(e)=>onDragStart(e, b.id)}
+                                onDragEnd={onDragEnd}
+                                title="Drag to reschedule"
+                                className="absolute left-1 top-1 z-[2] font-mono text-[9px] text-[var(--muted)] opacity-0 group-hover:opacity-100 transition cursor-grab active:cursor-grabbing hover:text-[var(--ink)] select-none">
+                                ⋮⋮
+                              </span>
+                            )}
+                            {isManual && !status.shipped && (
+                              <button
+                                onClick={(e)=>{e.stopPropagation(); deleteManualBrief(b.id);}}
+                                title="Remove this post"
+                                className="absolute right-1 top-1 z-[2] font-mono text-[11px] text-[var(--muted)] opacity-0 group-hover:opacity-100 transition hover:text-[var(--red)] select-none leading-none">
+                                ×
+                              </button>
+                            )}
+                            <div
+                              className={"w-full p-2 rounded-md border transition "+
+                                (status.shipped?"bg-[#F8FAFC] border-[#E2E8F0]":"bg-white border-[var(--border)] hover:border-[#202A44] hover:shadow-md")+
+                                (rideNow ? " ring-2 ring-offset-0" : "")+
+                                (isManual ? " border-dashed" : "")}
+                              style={rideNow ? {
+                                boxShadow:"0 0 0 2px rgba(117,197,150,0.55), 0 2px 10px rgba(117,197,150,0.24)",
+                                borderColor:"#75C596"
+                              } : null}
+                              onMouseEnter={e=>showHover(e,b)}
+                              onMouseLeave={hideHover}>
+                              {rideNow && !status.shipped && (
+                                <div className="absolute -top-1.5 -right-1.5 z-[3] flex items-center gap-1 px-1.5 py-[2px] rounded-full font-mono text-[7.5px] tracking-wider text-white" style={{background:"#75C596", boxShadow:"0 1px 6px rgba(117,197,150,0.5)"}}>
+                                  <span className="inline-block w-1 h-1 rounded-full bg-white animate-pulse"></span>
+                                  RIDE NOW
+                                </div>
+                              )}
+                              <div className="flex items-center justify-between gap-1 mb-1 pl-2.5">
+                                <div className="flex items-center gap-1.5 min-w-0">
+                                  <span className="inline-block w-[6px] h-[6px] rounded-full shrink-0" style={{background:b.pillarColor}}></span>
+                                  <span className="font-mono text-[8px] tracking-wider text-[var(--muted)]">{getTime(b.timing)}</span>
+                                </div>
+                                <StatusChip status={status} small/>
+                              </div>
+                              {isEditing ? (
+                                <textarea
+                                  autoFocus
+                                  defaultValue={b.concept}
+                                  onBlur={(e)=>saveEdit(b.id, e.target.value.trim() || b.concept)}
+                                  onKeyDown={(e)=>{
+                                    if (e.key === "Enter" && !e.shiftKey){ e.preventDefault(); e.target.blur(); }
+                                    if (e.key === "Escape"){ setEditingId(null); }
+                                  }}
+                                  className="w-full text-[10px] leading-tight pl-2.5 pr-1 py-0.5 resize-none border border-[#202A44] rounded bg-white text-[#202A44] focus:outline-none"
+                                  rows={3}
+                                  onClick={e=>e.stopPropagation()}/>
+                              ) : (
+                                <button
+                                  onClick={(e)=>{ e.stopPropagation(); setEditingId(b.id); }}
+                                  onDoubleClick={(e)=>{ e.stopPropagation(); if(!isManual) nav.goToBrief(b.id); }}
+                                  title="Click to edit · double-click to open full brief"
+                                  className={"w-full text-left text-[10px] leading-tight line-clamp-2 pl-2.5 cursor-text "+(status.shipped?"text-[#64748B]":"text-[var(--ink)]")}>
+                                  {b.concept}
+                                </button>
+                              )}
+                              <div className="flex items-center justify-between gap-1 mt-1 pl-2.5">
+                                <div className="flex items-center gap-1">
+                                  {b.priority==="BIG SWING" && <span className="inline-block font-mono text-[7px] tracking-wider px-1.5 py-0.5 rounded-full bg-[var(--red)] text-white">BIG SWING</span>}
+                                  {b.priority==="HIGH" && <span className="inline-block font-mono text-[7px] tracking-wider px-1.5 py-0.5 rounded-full bg-[var(--amber)] text-white">HIGH</span>}
+                                  {isManual && <span className="inline-block font-mono text-[7px] tracking-wider px-1.5 py-0.5 rounded-full bg-[#EFF6FF] text-[#1E40AF] border border-[#DBEAFE]">YOUR POST</span>}
+                                </div>
+                                {!isManual && !status.shipped && (
+                                  <button
+                                    onClick={(e)=>{e.stopPropagation(); nav.goToBrief(b.id);}}
+                                    className="font-mono text-[7px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)] opacity-0 group-hover:opacity-100 transition">OPEN →</button>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                      {/* Empty-or-underfilled cell → drop zone / "+ add your own" */}
+                      {cellBriefs.length === 0 && (
+                        <button
+                          onClick={()=>addManualBrief(pl.key, d)}
+                          title="Add your own post"
+                          className={"w-full min-h-[60px] rounded-md border border-dashed flex flex-col items-center justify-center transition "+
+                            (isDragTarget
+                              ? "border-[#75C596] bg-[rgba(117,197,150,0.08)] text-[#166534]"
+                              : "border-[var(--border)] text-[var(--muted)] hover:border-[#202A44] hover:text-[#202A44] hover:bg-[#FAFAF7] opacity-40 hover:opacity-100")}>
+                          <span className="text-[14px] leading-none">+</span>
+                          <span className="font-mono text-[7px] tracking-wider mt-0.5">{isDragTarget ? "DROP HERE" : "ADD POST"}</span>
+                        </button>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+
+          {/* Phone-frame hover preview — rendered via fixed positioning so it escapes the grid */}
+          <BriefHoverPreview data={hoverData}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Performance({nav, topRight}){
+  const sorted = [...LAST_WEEK_RESULTS].sort((a,b)=>b.savesDelta-a.savesDelta);
+  return (
+    <div className="flex flex-col h-full">
+      <div className="px-8 pt-6 pb-4 border-b border-[var(--border)]">
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">RESULTS · MAY 4 – MAY 10, 2026 · LAST WEEK</div>
+            <h1 className="font-serif text-[28px] leading-none tracking-tight">Performance</h1>
+            <p className="text-[12px] text-[var(--muted)] mt-1.5 max-w-2xl">Last week's briefs, shipped and measured. The engine learns from every result and feeds it back into next week's briefs.</p>
+          </div>
+          {topRight}
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto scrollbar px-8 py-5">
+        <div className="max-w-[1400px]">
+          {/* Slim construction strip — matches the Playbook pattern. The full
+              paragraph about "illustrative numbers" lived here before; the slim
+              version carries the signal in one line. */}
+          <div className="mb-5 rounded-md overflow-hidden flex items-stretch" style={{border:"1.5px solid #F59E0B"}}>
+            <div className="flex items-center justify-center px-3 shrink-0" style={{background:"repeating-linear-gradient(45deg, #F59E0B 0 8px, #202A44 8px 16px)"}}>
+              <span className="text-[13px]">🚧</span>
+            </div>
+            <div className="flex-1 px-4 py-2 flex items-center gap-2 flex-wrap" style={{background:"#FFFBEB"}}>
+              <span className="font-mono text-[9px] tracking-wider px-1.5 py-0.5 rounded text-white" style={{background:"#F59E0B"}}>ILLUSTRATIVE DATA</span>
+              <span className="font-mono text-[9px] tracking-wider text-[#92400E]">REAL NUMBERS LAND WHEN META / TIKTOK / SHOPIFY / KLAVIYO WIRE UP</span>
+            </div>
+          </div>
+
+          {/* Revenue Impact hero — editorial header, big numbers, quiet footer */}
+          <div className="card p-6 mb-5" style={{borderLeft:"3px solid #75C596"}}>
+            <div className="mb-5">
+              <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--green)] mb-1">REVENUE IMPACT · MAY 4 – MAY 10</div>
+              <h2 className="font-serif text-[22px] tracking-tight">What the content actually drove</h2>
+            </div>
+            <div className="grid grid-cols-4 gap-5">
+              <div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1.5">EST. INCREMENTAL REVENUE</div>
+                <div className="font-serif text-[40px] leading-none" style={{color:"#75C596"}}>${REVENUE_IMPACT.total.toLocaleString()}</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-2">FROM SHIPPED CONTENT THIS WEEK</div>
+              </div>
+              <div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1.5">KIDS LINE LIFT</div>
+                <div className="font-serif text-[40px] leading-none" style={{color:"#75C596"}}>+{REVENUE_IMPACT.lift}%</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-2">CORRELATED W/ SUGAR CHECK REEL</div>
+              </div>
+              <div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1.5">SITE SESSIONS</div>
+                <div className="font-serif text-[40px] leading-none">+{REVENUE_IMPACT.sessions}</div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-2">DRIVEN BY MATCHA RECIPE CONTENT</div>
+              </div>
+              <div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1.5">BEST ROI FORMAT</div>
+                <div className="font-serif text-[20px] leading-tight">{REVENUE_IMPACT.topRoiFormat}</div>
+                <div className="font-mono text-[9px] tracking-wider mt-2" style={{color:"#75C596"}}>~${REVENUE_IMPACT.topRoiPerBrief} REVENUE PER BRIEF</div>
+              </div>
+            </div>
+            <div className="mt-5 pt-3 border-t border-[var(--border)] font-mono text-[9px] tracking-wider text-[var(--muted)]">DATA SOURCE · {REVENUE_IMPACT.source.toUpperCase()}</div>
+          </div>
+
+          {/* KPIs */}
+          <div className="grid grid-cols-3 gap-3 mb-5">
+            <KPI label="POSTS SHIPPED" value={PERF_KPIS.shipped} sub="ACROSS 4 PLATFORMS"/>
+            <KPI label="TOTAL REACH" value={fmtNum(PERF_KPIS.totalReach)} sub="+184% VS PRIOR WEEK" accent="#75C596"/>
+            <KPI label="AVG SAVES VS BASELINE" value={PERF_KPIS.avgSavesDelta+"×"} sub="STRONGEST WEEK OF PILOT" accent="#75C596"/>
+          </div>
+
+          {/* Engine learnings */}
+          <div className="mb-5">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-0.5">↳ THE LEARNING LOOP</div>
+                <div className="font-serif text-[20px] tracking-tight">What the engine learned this week</div>
+              </div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">4 INSIGHTS · ALL FED INTO THIS WEEK'S BRIEFS</div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {PERF_INSIGHTS.map((i,k)=><InsightCard key={k} i={i}/>)}
+            </div>
+          </div>
+
+          {/* Results list */}
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="font-serif text-[20px] tracking-tight">All results · ranked by saves delta</div>
+              <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{LAST_WEEK_RESULTS.length} POSTS · {fmtNum(PERF_KPIS.totalReach)} REACH</div>
+            </div>
+            <div className="grid gap-3">
+              {sorted.map(r=><ResultRow key={r.id} r={r} nav={nav}/>)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PasswordGate({onUnlock}){
+  const [val,setVal] = useState("");
+  const [err,setErr] = useState(false);
+  function submit(e){
+    e.preventDefault();
+    if(val.trim().toLowerCase()==="certifiedorganic"){
+      try{ localStorage.setItem("willas-unlocked","1"); }catch(e){}
+      onUnlock();
+    } else {
+      setErr(true);
+    }
+  }
+  return (
+    <div className="fixed inset-0 flex items-center justify-center" style={{background:"var(--bg)"}}>
+      <div className="w-[420px] card p-8">
+        <div className="font-serif text-[28px] leading-none tracking-tight mb-1">Willa's</div>
+        <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-6">SOCIAL CONTENT ENGINE</div>
+        <form onSubmit={submit}>
+          <label className="font-mono text-[9px] tracking-wider text-[var(--muted)]">PASSWORD</label>
+          <input
+            type="password"
+            autoFocus
+            value={val}
+            onChange={e=>{setVal(e.target.value); setErr(false);}}
+            className="w-full mt-2 px-3 py-2.5 rounded-md border border-[var(--border)] bg-[#FAFAF7] font-sans text-[14px] text-[#202A44] focus:outline-none focus:border-[#202A44]"
+            placeholder=""
+          />
+          {err && <div className="font-mono text-[10px] tracking-wider text-[var(--red)] mt-2">INCORRECT</div>}
+          <button type="submit" className="w-full mt-4 px-3 py-2.5 rounded-md bg-[#202A44] text-white font-mono text-[10px] tracking-wider hover:bg-[#1E293B] transition">
+            ENTER →
+          </button>
+        </form>
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-6 text-center">BETA</div>
+      </div>
+    </div>
+  );
+}
+
+// ── This Week's Highlights ─────────────────────────────
+// Auto-opens on first visit of each week (keyed on the week-start date).
+// Persistent "This Week" button in the sidebar lets the team re-open it any time —
+// addresses the "can't access after first load" gap from Christina's 2026-04-17 feedback.
+const WELCOME_WEEK_KEY = "MAY-18-2026";
+const WELCOME_WEEK_RANGE = "MAY 18 – MAY 24, 2026";
+const WELCOME_REFRESHED = "MAY 17, 2026";
+
+// The strategist's read of the week. Written in advisor voice, addressed to the team.
+// Updated every refresh. This is the biggest difference between a dashboard and an
+// advisor — the dashboard gives you the 5 stats, the advisor tells you what to DO
+// about them.
+//
+// Posture-shift workshop landed 2026-05-03 per Ed's design constitution + Alex's
+// "highlights should feel actionable" call:
+//  - the_move → the_moves (plural, verb-led plays the team can act on)
+//  - the_backdrop → the_watch (forward-tense conditionals: "if X, do Y")
+//  - footer CTA: action-coded verb ("OPEN THIS WEEK'S PLAYBOOK →")
+// Pays off Principle 1 (humans in control — pre-mapped contingencies) + Principle
+// 2 (motivate next action — every play and watch ends with a verb).
+const WELCOME_READ = {
+  pullQuote: "fiber is the new TikTok trend. (oats invented it 10,000 years ago.)",
+  the_moves: [
+    "Drop the fibermaxxing founder-POV TT MON MAY 18 9am — Christina tier 2 (activist) reading the receipt: oats are the original protein-fiber-twofer. Lead with abundance, not restriction.",
+    "Anchor the Memorial Day Weekend (MAY 24-25) with the heritage pre-game MON MAY 18 12pm + the Saturday multi-generation pour MAY 23 11am. The family-kitchen anchor wins the 7-10 day Pinterest planning window.",
+    "Run the matcha quiet-confidence Barista response TUE MAY 19 9am — back panel only, no name, no recipe. Big oat milk just launched into matcha; Willa's already had the cleanest pour."
+  ],
+  the_windows: "Memorial Day Weekend MAY 24-25 (federal MON MAY 25) · World Bee Day WED MAY 20 · Cannes Palme d'Or closing SAT MAY 23 · Califia Blueberry Matcha launch MAY 18 (UK Tesco).",
+  the_watch: [
+    "If fibermaxxing breaks into mainstream press (NYT Well + WaPo) this week, the BIG SWING TT-1 amplification window extends — push the Spark Ad to $400 for the 96-hr lift.",
+    "If a Cannes Palme d'Or winner has a heritage or female-founder beat, queue a same-night-stitch Reel SAT MAY 23 evening (45-min framework already in the inspo bank).",
+    "If a major creator catches the cabbage / fermentation Pinterest wave before Wed, push the Pinterest fermentation pin (PIN-2) earlier in the week to ride the SEO compounding.",
+    "If Memorial Day weekend forecasts shift cooler in major metros, swap PIN-1 (overnight oats) into hot-brunch positioning — frame as 'the carton that warms you up too.'"
+  ]
+};
+
+
+const WELCOME_HIGHLIGHTS = [
+  {
+    stat:"FIBER ↑",
+    label:"NPR's national fibermaxxing piece dropped MON MAY 18 — Mayo Clinic + VegNews from earlier May, now mainstream press",
+    detail:"NPR ran 'The fibermaxxing trend has health benefits worth the hype' MON MAY 18, syndicating to dozens of affiliates. Quotes Candace Pumper (Ohio State) on fiber layering and Hannah Holscher (UIUC) on fiber's overdue spotlight. Layers on top of Mayo Clinic Press + VegNews from earlier May. 90% of women + 97% of men miss daily fiber. Willa's Original is 2g+ prebiotic fiber per cup — oats are the original fibermaxxing food.",
+    color:"#75C596",
+    icon:"🌾",
+    sources:[
+      {label:"NPR · 'Fibermaxxing' trend has health benefits worth the hype (May 18, 2026)", url:"https://www.npr.org/2026/05/18/nx-s1-5398871/the-fibermaxxing-trend-has-health-benefits-worth-the-hype"},
+      {label:"Mayo Clinic Press · Fibermaxxing — Is this TikTok trend good for you?", url:"https://mcpress.mayoclinic.org/nutrition-fitness/fibermaxxing-is-this-tiktok-trend-good-for-you/"},
+      {label:"VegNews · Forget Protein, Fiber Is the New TikTok Nutrition Trend", url:"https://vegnews.com/fiber-tiktok-trend-expert-advice"}
+    ]
+  },
+  {
+    stat:"MAY 18",
+    label:"Califia launches Blueberry Matcha Almond Latte (Tesco UK, 3-mo exclusive)",
+    detail:"Califia Farms expanding RTD range with first-to-market UK matcha SKU. 750ml multi-serve, premium 0.4% single-origin Japanese matcha. Matcha-as-plant-milk-co-star is now competitor-validated. Willa's Barista is the cleanest pour in the rising matcha lane — back-panel-only response queued.",
+    color:"#A191B2",
+    icon:"🍵",
+    sources:[
+      {label:"The Plant Base · Califia Farms Blueberry Matcha Almond Latte (May 18)", url:"https://www.theplantbasemag.com/news/califia-farms-expands-rtd-matcha-range-with-new-blueberry-matcha-almond-latte"},
+      {label:"FoodBev Media · Califia Blueberry Matcha Almond Latte launch", url:"https://www.foodbev.com/news/califia-farms-expands-rtd-range-with-new-blueberry-matcha-almond-latte"}
+    ]
+  },
+  {
+    stat:"MAY 25",
+    label:"Memorial Day Weekend opens summer family-kitchen cycle (MAY 24-25, federal MON 25)",
+    detail:"Federal Memorial Day MON MAY 25. Food Network + Love & Lemons + national press dropped 2026 cookout coverage MAY 13-17. Pinterest 'memorial day breakfast' + 'cookout sides' searches peak 7-10 days ahead. The pattern: cookouts framing themselves as casual family kitchens, not catered events — Willa's tonal pocket.",
+    color:"#9E652E",
+    icon:"🌾",
+    sources:[
+      {label:"Food Network · 52 Memorial Day Recipes for the Perfect Cookout", url:"https://www.foodnetwork.com/holidays-and-parties/packages/memorial-day/memorial-day-recipes"},
+      {label:"Love & Lemons · 35 Best Memorial Day Recipes", url:"https://www.loveandlemons.com/memorial-day-recipes/"}
+    ]
+  },
+  {
+    stat:"UPF",
+    label:"Healthy Eating Research May 2026 — UPF expert-panel policymaker report drops",
+    detail:"Robert Wood Johnson Foundation's HER program published evidence-informed recommendations for state/federal UPF definition. The framework Willa's Original is the literal inverse of — 4 ingredients, no isolates, no engineered fillers. The policy is converging on what the carton already shows.",
+    color:"#73B2C9",
+    icon:"📜",
+    sources:[
+      {label:"Healthy Eating Research · UPF Expert Panel Technical Report (May 2026)", url:"https://healthyeatingresearch.org/research/ultraprocessed-foods-in-the-u-s-recommended-definitions-and-policies/"},
+      {label:"O'Melveny · UPF state laws + FDA actions + litigation tracker", url:"https://www.omm.com/insights/alerts-publications/ultra-processed-foods-face-rising-scrutiny-what-new-state-laws-fda-actions-and-private-litigation-mean-for-food-manufacturers-in-2025-2026/"}
+    ]
+  },
+  {
+    stat:"THE BEAR",
+    label:"S5 final-season marketing ramp — kitchen-coded prestige TV peaks (FX/Hulu JUN 25)",
+    detail:"The Bear S5 marketing cycle ramped through MAY 11-17 — 'Gary' flashback episode (Bernthal + Moss-Bachrach) + Jeremy Allen White press cycle landing across Deadline, Hollywood Reporter, and IMDB News. Final-season weight on the prestige-kitchen aesthetic that's Willa's tonal pocket. Prep-counter Reel TT-3 queued WED MAY 20 7pm — no on-camera, no name-check, just the visual grammar.",
+    color:"#A191B2",
+    icon:"🔪",
+    sources:[
+      {label:"Deadline · The Bear FX Sets Season 5 Premiere Date", url:"https://deadline.com/2026/05/the-bear-fx-season-5-premiere-date-1236882490/"},
+      {label:"Hollywood Reporter · The Bear S5 final season Jun 25 premiere", url:"https://www.hollywoodreporter.com/tv/tv-news/the-bear-ending-final-season-premiere-date-1236587869/"},
+      {label:"IMDB News · The Bear Season 5 Just Got a Release Date", url:"https://www.imdb.com/news/ni65361638/"}
+    ]
+  }
+];
+
+
+function WelcomeGuide({open, onClose}){
+  if(!open) return null;
+  return (
+    <div className="fixed inset-0 z-[60] fade-in flex items-center justify-center" style={{background:"rgba(15,23,42,0.45)", backdropFilter:"blur(3px)"}} onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl w-[580px] max-h-[90vh] overflow-y-auto scrollbar" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+
+        <div className="px-7 pt-6 pb-4 border-b border-[var(--border)]">
+          <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">{WELCOME_WEEK_RANGE}</div>
+          <h2 className="font-serif text-[26px] leading-tight tracking-tight">This week's highlights</h2>
+        </div>
+
+        {/* REORDERED 2026-05-17 per Christina's flag that the prior MOVES-led
+            popup read too tactical. New structure: lead with the 5 signal stats
+            (infographic / magazine-cover feel), THEN the read this week (pull-
+            quote + tactical plays + windows + watch). Every signal carries
+            inline source chips so the team can click through to the trending
+            article / TikTok / report — the linking-out rule is enforced at the
+            data layer (every WELCOME_HIGHLIGHTS entry must have sources[]). */}
+        <div className="px-5 pt-5 pb-4">
+          <div className="font-mono text-[9px] tracking-[0.22em] px-3 mb-3" style={{color:"var(--amber)"}}>★ THIS WEEK'S 5 SIGNALS</div>
+          {WELCOME_HIGHLIGHTS.map((h,i)=>(
+            <div key={i} className={"flex items-start gap-4 px-3 py-3.5 "+(i<WELCOME_HIGHLIGHTS.length-1?"border-b border-[#E8E2D3]":"")}>
+              <div className="w-11 h-11 rounded-lg flex items-center justify-center text-[20px] shrink-0" style={{background:h.color+"14"}}>
+                {h.icon}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline gap-2.5 mb-0.5 flex-wrap">
+                  <span className="font-serif text-[22px] font-semibold tracking-tight leading-none" style={{color:h.color}}>{h.stat}</span>
+                  <span className="text-[12.5px] font-medium text-[var(--ink)] leading-tight">{h.label}</span>
+                </div>
+                <p className="text-[11px] text-[var(--muted)] leading-snug">{h.detail}</p>
+                {h.sources && h.sources.length>0 && (
+                  <div className="mt-1.5 flex flex-wrap gap-x-2">
+                    {h.sources.map((s,k)=>(
+                      <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label}
+                        className="src-link font-mono text-[9px] tracking-wide">{sourceDomain(s.url)}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* THE READ section removed 2026-05-17 per Christina — the popup
+            should be the 5-signal infographic, not a tactical brief. THE MOVES
+            + THE WINDOWS + THE WATCH live on the dashboard surfaces (Weekly
+            Playbook + Mission Board + Decisions), not above-the-fold on the
+            welcome popup. */}
+
+        <div className="px-7 py-4 border-t border-[var(--border)] flex items-center justify-between" style={{background:"var(--bg-warm)"}}>
+          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">Re-open any time via the sidebar</div>
+          <button onClick={onClose}
+            className="font-mono text-[10px] tracking-wider px-5 py-2.5 rounded-md text-white transition-all hover:shadow-md"
+            style={{background:"var(--ink)"}}>
+            OPEN THIS WEEK'S PLAYBOOK →
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// THE STUDIO
+// Ideation canvas. The single feature that most distinguishes an OBSOLETE
+// engine from "just another dashboard." The client (or team) drops a link,
+// photo, or thought; a Willa's-trained strategist agent riffs it into a
+// fully-formed content brief. The agent is on-brand by construction — every
+// call ships with the voice compass, DNA patterns, anti-patterns, and proof
+// points embedded in the system prompt.
+//
+// ARCHITECTURE NOTES (per Alex 2026-04-17):
+// - Validation phase: API key lives in the user's own localStorage, not a
+//   shared backend. Direct browser → api.anthropic.com calls with the
+//   anthropic-dangerous-direct-browser-access header. Post-validation this
+//   moves to Vercel Edge Function + Supabase-synced state; for now, keeping
+//   cost + infrastructure at zero.
+// - Persistence: localStorage only. Structured so that migrating to a
+//   Supabase-backed store later is a serialize/deserialize swap, not a
+//   rewrite.
+// - This whole block is OBSOLETE engine infrastructure, not Willa's-only —
+//   when cloning to future clients, swap the WILLAS_SYSTEM_PROMPT and the
+//   brand palette; the rest of the Studio remains the same.
+// ════════════════════════════════════════════════════════════════════════
+
+const STUDIO_STORAGE_KEY = "willas-studio-state";
+const STUDIO_KEY_STORAGE  = "willas-studio-api-key";
+const STUDIO_MODEL        = "claude-sonnet-4-6"; // Sonnet 4.6 — fast, strong. Upgrade to claude-opus-4-7 for tougher briefs.
+const STUDIO_API_URL      = "https://api.anthropic.com/v1/messages";
+
+function loadStudioState(){
+  try{
+    const raw = localStorage.getItem(STUDIO_STORAGE_KEY);
+    if(!raw) return {stickies:[], briefs:[]};
+    const parsed = JSON.parse(raw);
+    return {stickies: parsed.stickies || [], briefs: parsed.briefs || []};
+  }catch(e){ return {stickies:[], briefs:[]}; }
+}
+
+// Studio total-localStorage budget. Browsers cap localStorage at ~5-10MB per
+// origin. Photos stored as base64 fill that fast — 2-3 photos can hit the cap
+// and start throwing QuotaExceededError, which crashes the Studio. We cap
+// total Studio state at 3.5MB (well under any browser limit), evicting the
+// oldest photo-bearing stickies first if the cap is exceeded.
+const STUDIO_STORAGE_BUDGET = 3.5 * 1024 * 1024; // 3.5 MB
+
+function saveStudioState(state){
+  try {
+    let payload = JSON.stringify(state);
+    // If we're over budget, evict the oldest photo-bearing stickies until
+    // we fit. Notes (text-only) are kept; photos are what blow the budget.
+    if (payload.length > STUDIO_STORAGE_BUDGET) {
+      const trimmed = { ...state, stickies: [...(state.stickies||[])] };
+      // Sort by createdAt ASC; photo stickies evicted from the oldest first.
+      const sortedByAge = trimmed.stickies
+        .map((s, i) => ({ s, i }))
+        .sort((a, b) => (a.s.createdAt || 0) - (b.s.createdAt || 0));
+      for (const { i } of sortedByAge) {
+        if (trimmed.stickies[i].type === "photo") {
+          trimmed.stickies.splice(i, 1);
+          payload = JSON.stringify(trimmed);
+          if (payload.length <= STUDIO_STORAGE_BUDGET) break;
+        }
+      }
+      state = trimmed;
+    }
+    localStorage.setItem(STUDIO_STORAGE_KEY, payload);
+  } catch(e) {
+    // QuotaExceededError fallback — keep only the 5 most recent stickies
+    try {
+      const fallback = { ...state, stickies: (state.stickies||[]).slice(0, 5) };
+      localStorage.setItem(STUDIO_STORAGE_KEY, JSON.stringify(fallback));
+    } catch(_) { /* nothing more we can do */ }
+  }
+}
+
+function newId(prefix){ return prefix+"-"+Math.random().toString(36).slice(2,8)+"-"+Date.now().toString(36); }
+
+// The Willa's system prompt — the agent's on-brand DNA. Every brief generation
+// call prepends this, so the output is on-brand by construction. When cloning
+// the Studio to future OBSOLETE clients, THIS is the one constant you swap.
+const WILLAS_SYSTEM_PROMPT = `You are the Willa's Content Strategist — a brand-trained creative agent embedded inside the Willa's Social Content Engine. Your job: turn any input (an article, a photo, a typed thought, a competitor post) into a fully-formed Willa's content brief that would out-perform a generic category post.
+
+## BRAND POSITIONING
+Willa's is the FIRST & ONLY whole plant milk. Made from the entire oat groat (like steel-cut oats), not processed oat syrup. WholePlant™ IP is the moat. Born 1921, launched 2021 — founded by a mother (WBENC certified), named after her grandmother who cooked with wholesome ingredients and saw the unique spark in everyone.
+
+Brand tagline: "Nourish the spark in everyone."
+Core phrase: "Real food, passed down. Reinvented forward."
+
+## VOICE COMPASS — every brief must pass
+- Warm (human, grandmother's kitchen) — NOT clinical or corporate
+- With a wink (playful, knowing "shhh…") — NOT dour health-food preachiness
+- Assertive + activist (confident POV, us-vs-them category critique, "Willa's is redefining plant-based milk") — NOT defensive, NOT competitor-bashing by name
+- Creative (fresh angles) — NOT stock-photo food content
+- Transparent (receipts-first, read-the-label energy) — NOT marketing-speak
+- Witty (dry cleverness, self-aware, food as fun) — NOT earnest-wellness-brand tropes
+
+## BRAND MUSES — tonal anchors (added 2026-04-22)
+Every brief should be reaching for one of these brand energies. Pick one during generation:
+- **Kiki Milk / Tenzo Matcha** — us-vs-them ingredient comparison with confidence
+- **Patagonia / Lovebird** — activist gravity, stance bigger than the product
+- **Olipop** — better-for-you done cheeky, no supplement-speak
+- **Fishwife / Graza / Omsom** — design-led personality on simple ingredients
+- **Poppi** — viral short-form template for better-for-you beverage
+- **Partake Foods** — mother-founded parent-CPG peer, unapologetic parent-first
+
+Muses are a reference library — reach for one when it sharpens the brief. Not every brief requires a muse tag; only populate the "muse" JSON field when a specific muse's energy actually informed the output. Leave it null otherwise.
+
+MUSE IS BACKEND. Populate the "muse" JSON field as an internal audit signal, but NEVER surface "Olipop energy" or similar in caption/hook/visual/script copy. The muse makes the output smarter; the tag stays invisible.
+
+## TOP-PERFORMER DNA — every brief picks ONE
+- mom-activist — Founder/mom direct-to-camera with a clear stance. Default for HEALTH/WELLNESS + REVIEWS/RECS activist briefs.
+- on-pack-checklist — Cartons in frame with ingredient ✅ checklist overlay. Default for INGREDIENTS/RECIPES.
+- kid-family-moment — Real family/kid moment with Willa's Kids in frame. Default for PARENTING.
+- viral-recipe-remix — Take a viral recipe and remix it dairy-free/healthier with Willa's.
+- meme-payload — Current meme format + one Willa's proof-point payload. Biggest whitespace.
+- at-shelf-moment — Founder/ambassador at retail. Use for new door launches.
+- before-after-stitch — Switch/conversion arc stitches. Pairs with UGC.
+
+## ANTI-PATTERNS — hard guardrails
+- Willa's MUST be the protagonist (no trace-ingredient recipes — product in frame ≥ 40% or ≥ 1 cup used)
+- Lattes capped at 1 per 2 weeks (underperform)
+- No pasta roundups (individual pasta briefs OK)
+- Indulgent-remade-healthy is the sweet spot — no cane sugar; use honey, maple, date syrup
+- No named competitors in consumer copy. Ever. Use "vs. Average [Category]" framing only.
+
+## INTERNAL-ONLY — NEVER ship in consumer briefs
+- Business metrics (510% / 700% YoY growth, retail-door counts, Subscribe & Save %)
+- SPINS / NielsenIQ data
+- Named-competitor comparisons
+- Pricing strategy
+- "They come for the label, but they stay for the taste" — investor-only framing, never in consumer copy
+
+## CONSUMER-SAFE PROOF POINTS
+- WholePlant™ IP story — "we use the whole entire oat, not oat syrup"
+- 4-ingredient transparency (Original): organic whole grain oats, filtered water, organic vanilla extract, sea salt
+- 1g sugar, 4g+ protein, 2g+ prebiotic fiber (Original)
+- USDA Organic, Non-GMO Project Verified, Certified Glyphosate Residue Free (The Detox Project), Kosher, Vegan, WBENC
+- Yuka: Original 94/100, Chocolate 94/100, Kids 100/100
+- Bobby Approved
+- Good Food Awards Winner — Best Beverage (Chocolate)
+- Category stat: 70% of Americans shop the plant-milk category
+- Grandmother heritage, mother-founded framing
+- Climate-positive oats, zero food waste
+
+## FLAVOR DATABASE — match flavor to story type (not just rotate)
+- **Original** — 1g sugar · 4g protein · 4 ingredients · Yuka 94. LEAD FLAVOR for health / ingredients / sugar-critique / WholePlant stories. Best-seller. Any nutrition-first brief defaults here, NOT Barista.
+- **Barista** — 3g sugar (coconut) · 4g protein · foams, NO rapeseed/canola · contains organic high-oleic sunflower oil · "The oat milk your coffee deserves." LEAD FLAVOR for latte / cold foam / home-cafe. Hook: "yes you can have your oat milk latte without the sugar spike / rapeseed / gums." **Barista is the MOST processed SKU** — deck is longer (calcium carbonate, tricalcium phosphate, sunflower oil). NEVER lead ingredient-comparison or "read the label" content with Barista. Those stories lead with Original (4 ingredients) or Chocolate (5 ingredients). Barista earns its slot when the latte IS the vehicle.
+- **Kids** — 6g sugar (maple) · 8g protein · DHA · organic pea protein · top-9 allergen-free · Yuka 100 · positions vs DAIRY. LEAD FLAVOR for family / school-lunch / allergen-free. Adult crossover: best blender for iced coffee + "best swirls." Use for "two generations, one carton" framing.
+- **Chocolate** — 11g sugar (coconut sugar) · 5g protein · real cacao · Good Food Awards Winner · 5 ingredients. LEAD FLAVOR for indulgent-remade-healthy. Hook: "yes you can have a mocha / kid can have chocolate milk that's delicious and not a sugar bomb." Avoid for daily ingredient stories — keep Chocolate as the indulgent lane.
+
+## POV DISCIPLINE (added 2026-04-22 — apply to every brief)
+1. **BENEFIT-FIRST.** Hook = benefit/provocation, NEVER the process. "How it's made" is supporting proof (position in caption after the benefit + numbers). If the hook opens with an enzymatic-process explanation, rewrite.
+2. **DIET-CULTURE FILTER.** If the trend is restriction-dressed-as-wellness (oatzempic, 75 Hard, shakes-replacing-meals), Willa's pushes BACK — doesn't ride with. Willa's stands for positive food relationships. Celebrating-food trends (cottage cheese oats, fibermaxxing, butter boards) → ride directly.
+3. **REPEAT THE 3 CORE BEATS.** Every brief should tag which of the 3 it hits: **DELICIOUS** (tastes great, rich + smooth + creamy), **HEALTHIER** (whole oat, low sugar, clean label, organic), **FEEL GOOD** (satiation, energy, no crashes). Week mix must cover all 3 across 15–20 briefs.
+4. **PARENT-FIRST HOOKS.** For PARENTING briefs, use templates: "When your kid is lactose intolerant…" / "Say goodbye to sugar kids drinks." / "For the mom who's tired of…" / "If you've ever read a kids' milk label and…" Specific parent-problem → Willa's Kids answers.
+
+5. **CHRISTINA IS NOT A MOM (critical).** Willa's is mother-founded — the mother is Christina's sister + cofounder. Never attribute first-person parenting to Christina ("my kids", "I wanted my kids…", "as a mom…"). Default to brand voice "we". For first-person mom POV, attribute to the cofounder-sister explicitly. For heritage beats, third-person about Christina is fine. Applies to captions, hooks, scripts, VO.
+
+6. **FACT-CHECK against the Verified Facts Library.** Three phrasings Christina flagged — do NOT ship:
+   - ❌ "enzyme breaks the oat into sugar" → ✅ "filters out the bran + germ, then enzyme-processes the starch into sugar"
+   - ❌ "filters out the fiber" (alone) → ✅ "filters out the bran + germ where BOTH fiber AND protein live" (protein loss is worse than fiber per Christina)
+   - ❌ "only oat milk in America" / "only oat milk that paid for the glyphosate test" → ✅ "certified glyphosate-free by The Detox Project. Every lot tested."
+   No unsourced specific percentages / scope claims.
+
+7. **JARGON GETS A ONE-LINE GLOSS.** Any mechanism / meme / insider term needs a plain-English explainer on first use in any field (caption, script, visual, hook). Glosses: beta-glucans = "oat fiber that supports heart + gut health"; oat groats = "whole oat kernels, like steel-cut oats"; enzyme/syrup story = "most oat milks use an enzyme that turns oats into sugar and filters out the fiber + protein"; oatzempic = "TikTok trend: ½ cup oats + lime + water, marketed as DIY Ozempic — it isn't"; AirPod Bump = "Q1 2026 TikTok meme: strangers collide, earbuds swap, playlist reveal"; fibermaxxing = "TikTok's term for eating more fiber intentionally."
+
+8. **BARISTA ≠ INGREDIENT-STORY HERO.** Barista is Willa's most-processed SKU. Ingredient-transparency + "read the label" briefs lead with Original or Chocolate. Barista is ONLY for latte / foam / coffee-shop-at-home content.
+
+## BENEFIT SHORTHAND LIBRARY — pick one to anchor the end card
+- "The whole oat. Not the syrup." (2s, all flavors)
+- "Four ingredients. Read them." (2s, Original)
+- "1 gram of sugar. Zero added." (2s, Original)
+- "More protein than any oat milk. Period." (2.5s, Original/Kids)
+- "Same protein as dairy. Half the sugar." (2.5s, Kids)
+- "No top-9 allergens. School-safe." (2.5s, Kids)
+- "Latte art. No rapeseed oil." (2s, Barista)
+- "Yuka says 100 out of 100." (2s, Kids)
+- "Best Beverage of the year. Real cacao." (2.5s, Chocolate)
+- "Most oat milks filter out the healthiest 30% of the oat. We don't." (3.5s, Original/Barista/Chocolate)
+- "Certified glyphosate-free. Because that matters." (2.5s, all)
+- "Mother-founded. WBENC-certified. Built to outlive me." (3s, all)
+
+## OUTPUT FORMAT — return ONLY valid JSON, no prose, no markdown
+{
+  "concept": "1-line internal-facing content concept (this is the title in the engine)",
+  "platform": "IG Reel" | "TikTok" | "IG Feed" | "Pinterest" | "Threads",
+  "pillar": "HEALTH/WELLNESS" | "INGREDIENTS/RECIPES" | "PARENTING" | "REVIEWS/RECS",
+  "flavor": "Original" | "Barista" | "Kids" | "Chocolate" | "Multi",
+  "dnaPattern": "mom-activist" | "on-pack-checklist" | "kid-family-moment" | "viral-recipe-remix" | "meme-payload" | "at-shelf-moment" | "before-after-stitch",
+  "priority": "BIG SWING" | "HIGH" | "STANDARD",
+  "recommendedHook": "THE hook. One line. Benefit-first (NOT process-first). Passes Voice Compass. What the post OPENS with.",
+  "altHooks": ["2-3 alt hooks, same voice, different angles"],
+  "caption": "full ready-to-post caption, 2-4 short paragraphs. Structure: HOOK (benefit) → PROOF (numbers/certs) → PROCESS (if relevant). Default to brand voice (third-person) — first-person only if the brief features Christina on camera.",
+  "visual": "detailed visual direction — camera angles, lighting, color, product placement, text overlays (exact copy), transitions. Trend-forward, bright, not muted brand-kitchen stock. Default to HANDS + PRODUCT + KITCHEN, no talent on camera — unless the brief is a mom-activist or kid-family-moment DNA where Christina's presence is the payload.",
+  "script": [{"scene":"COLD OPEN","time":"0-2s","action":"generation-prompt-ready action — what's in frame, camera behavior, overlay copy, transitions"}, ...] OR null for static briefs,
+  "audio": "VO tone + music style + trending sound reference if applicable. Default to 'warm narrative voiceover' — only use 'founder voiceover' when Christina is on camera." OR null for static,
+  "duration": "15-30s range" OR null for static,
+  "benefitShorthand": "one of the 12 stingers above that anchors the end card — the exact stinger text",
+  "whyNow": "1-2 sentences — why this specific moment, what's the cultural/category signal this rides",
+  "rationale": "1 sentence — why this is the play vs. alternatives (which other formats/flavors were considered and why this wins)",
+  "muse": "OPTIONAL — if a specific brand-muse energy informed this brief, name it: Kiki Milk | Tenzo Matcha | Patagonia | Lovebird | Olipop | Fishwife | Graza | Omsom | Poppi | Partake. Null if no specific muse informed the output. Internal audit field, not displayed to users.",
+  "coreBeats": ["delicious" | "healthier" | "feel good"] — which of the 3 core beats this brief hits. At least one.
+}`;
+
+// Non-streaming Claude call — routes through /api/strategist proxy (Phase C).
+// Proxy is streaming-only, so we accumulate text deltas + return at end.
+// Used by Studio sticky generation. apiKey param is ignored (server holds key)
+// but kept in the signature so callers don't have to change.
+async function callClaude(_apiKey, messages){
+  const res = await fetch("/api/strategist", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      messages,
+      model: STUDIO_MODEL,
+      maxTokens: 3500,
+      enableWebSearch: false,
+      systemExtras: [
+        { type: "text", text: WILLAS_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }
+      ]
+    })
+  });
+  if(!res.ok){
+    const errText = await res.text();
+    throw new Error("Claude API "+res.status+": "+errText.slice(0,200));
+  }
+
+  // Stream + accumulate. Proxy returns SSE text deltas — we concat them into
+  // one string so the rest of the Studio brief-generation flow (JSON parse,
+  // sticky update) keeps working without touching downstream code.
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let accumulated = "";
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() || "";
+    for (const line of lines) {
+      const l = line.trim();
+      if (!l.startsWith("data:")) continue;
+      const payload = l.slice(5).trim();
+      if (!payload || payload === "[DONE]") continue;
+      try {
+        const evt = JSON.parse(payload);
+        if (evt.type === "content_block_delta" && evt.delta && evt.delta.type === "text_delta") {
+          accumulated += evt.delta.text;
+        }
+      } catch (e) { /* swallow partial frames */ }
+    }
+  }
+  return accumulated;
+}
+
+// Extract JSON from a Claude response. Claude sometimes wraps JSON in markdown
+// despite being told not to — strip fences, then parse. Throws on unparseable.
+function extractBriefJson(text){
+  let t = text.trim();
+  // Strip markdown code fences
+  t = t.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "");
+  // Find first { and last }
+  const first = t.indexOf("{");
+  const last = t.lastIndexOf("}");
+  if(first === -1 || last === -1) throw new Error("No JSON found in response");
+  return JSON.parse(t.slice(first, last+1));
+}
+
+// Transform a Studio-generated brief into the shape used by the main Content
+// Briefs queue. Maps the Claude-returned JSON into the BRIEFS schema so adopted
+// briefs render through the exact same BriefListItem + BriefDetail components
+// as engine-generated ones. Adopted briefs are flagged with `fromStudio:true`
+// + a `_drivenBy` string so the "driven by" chip on the card explains lineage.
+function studioBriefToContentBrief(studioBrief, sticky){
+  const d = studioBrief.draft || {};
+  const bs = BENEFIT_SHORTHAND.find(b => b.line === d.benefitShorthand);
+  const hooks = [
+    ...(d.recommendedHook ? [{text: d.recommendedHook, recommended: true}] : []),
+    ...((d.altHooks || []).map(h => ({text: h, recommended: false})))
+  ];
+  const intel = [];
+  if(d.whyNow)    intel.push({type: "WHY NOW",   text: d.whyNow});
+  if(d.rationale) intel.push({type: "RATIONALE", text: d.rationale});
+  const drivenByText = sticky
+    ? (sticky.sourceCard || (sticky.type === "link" ? (sticky.url || "dropped link") : sticky.type === "note" ? "typed into the Studio" : "photo dropped into the Studio"))
+    : "Studio";
+  return {
+    id: "ST-" + (studioBrief.id || "").slice(3, 12),
+    fromStudio: true,
+    adoptedAt: studioBrief.adoptedAt || studioBrief.createdAt || Date.now(),
+    platform: d.platform || "IG Reel",
+    pillar: d.pillar || "INGREDIENTS/RECIPES",
+    pillarColor: PILLAR_COLORS[d.pillar] || "#202A44",
+    flavor: d.flavor || "Multi",
+    dnaPattern: d.dnaPattern || null,
+    timing: "Studio adopted",
+    priority: d.priority || "STANDARD",
+    concept: d.concept || "",
+    intel,
+    hooks: hooks.length ? hooks : [{text: "—", recommended: true}],
+    caption: d.caption || "",
+    hashtags: [],
+    visual: d.visual || "",
+    script: d.script || null,
+    audio: d.audio || null,
+    duration: d.duration || null,
+    cta: {soft:"", medium:"", strong:""},
+    benefitShorthandId: bs ? bs.id : null,
+    _drivenBy: drivenByText
+  };
+}
+
+// Rotating status messages shown while Claude is generating. The call itself
+// is non-streaming (simple fetch + await), but the rotating copy makes the
+// 5–15s wait feel like work is happening — each message reflects a step the
+// strategist would actually be doing. Swap to true SSE streaming when we move
+// to a Vercel Edge Function (post-validation).
+const STUDIO_GEN_STEPS = [
+  "Reading the input…",
+  "Finding the cultural angle…",
+  "Picking the hero flavor…",
+  "Selecting the proven format…",
+  "Drafting the hook…",
+  "Writing the caption…",
+  "Storyboarding the shoot…",
+  "Picking the end-card stinger…",
+  "Passing the Voice Compass…",
+  "Almost there…"
+];
+const STUDIO_RIFF_STEPS = [
+  "Reading your note…",
+  "Reworking the hook…",
+  "Adjusting the format…",
+  "Re-checking the Voice Compass…",
+  "Finalizing…"
+];
+
+function useRotatingStep(active, steps, intervalMs){
+  const [idx, setIdx] = useState(0);
+  useEffect(()=>{
+    if(!active){ setIdx(0); return; }
+    setIdx(0);
+    const id = setInterval(()=> setIdx(i=> Math.min(i+1, steps.length-1)), intervalMs || 2500);
+    return ()=> clearInterval(id);
+  }, [active, intervalMs]);
+  return steps[idx];
+}
+
+// Returns either a string (text-only) or an array of content blocks (image +
+// text) — Anthropic's API accepts both shapes for message.content. Photo
+// stickies upgrade to vision mode (2026-05-18) so the strategist actually
+// SEES what was dropped instead of asking the user to describe it.
+function buildStickyUserMessage(sticky){
+  const parts = [];
+  if(sticky.type === "link"){
+    parts.push("TYPE: Link");
+    parts.push("URL: "+sticky.url);
+    if(sticky.content) parts.push("PAGE TITLE / DESCRIPTION:\n"+sticky.content);
+    if(sticky.note) parts.push("USER NOTE: "+sticky.note);
+  } else if(sticky.type === "photo"){
+    parts.push("TYPE: Photo dropped in (image attached below — read the pixels, don't ask the user to describe)");
+    parts.push("SOURCE: "+(sticky.source || "uploaded"));
+    if(sticky.note) parts.push("CAPTION / CONTEXT: "+sticky.note);
+  } else {
+    parts.push("TYPE: Note");
+    parts.push("CONTENT:\n"+(sticky.content || ""));
+  }
+  if(sticky.sourceCard){
+    parts.push("SOURCE CARD: "+sticky.sourceCard);
+  }
+  parts.push("\nTurn this into a Willa's content brief. Think: what's the cultural/category signal here? What's Willa's earned POV on it? Which DNA format fits? Which flavor is the hero? Respond with ONLY the JSON described in the system prompt — no markdown, no prose.");
+
+  const textPart = parts.join("\n\n");
+
+  // For photos, return content-blocks form with the actual image so Claude's
+  // vision parses it. Anthropic supports image/jpeg, image/png, image/gif,
+  // image/webp via base64.
+  if(sticky.type === "photo" && typeof sticky.image === "string"){
+    const m = sticky.image.match(/^data:(image\/(?:jpeg|jpg|png|gif|webp));base64,(.+)$/i);
+    if(m){
+      let mediaType = m[1].toLowerCase();
+      if(mediaType === "image/jpg") mediaType = "image/jpeg";
+      return [
+        { type: "image", source: { type: "base64", media_type: mediaType, data: m[2] } },
+        { type: "text", text: textPart }
+      ];
+    }
+    // Data URL malformed (rare) — fall through to text-only with a note
+    return textPart + "\n\n(NOTE: image data was attached but could not be parsed — proceed with caption/context only.)";
+  }
+
+  return textPart;
+}
+
+// ── Studio UI ──────────────────────────────────────────────────────────
+
+function StudioApiKeyModal({open, current, onSave, onClose}){
+  const [val,setVal] = useState(current || "");
+  const [err,setErr] = useState("");
+  useEffect(()=>{ if(open){ setVal(current || ""); setErr(""); } },[open,current]);
+  if(!open) return null;
+  function save(e){
+    e.preventDefault();
+    const v = val.trim();
+    if(!v.startsWith("sk-ant-")) { setErr("That doesn't look like an Anthropic key. It should start with sk-ant-"); return; }
+    onSave(v);
+  }
+  return (
+    <div className="fixed inset-0 z-[80] fade-in flex items-center justify-center px-4" style={{background:"rgba(15,23,42,0.55)", backdropFilter:"blur(3px)"}} onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[480px]" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+        <form onSubmit={save}>
+          <div className="px-6 pt-6 pb-4 border-b border-[var(--border)]">
+            <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">THE STUDIO · SETUP</div>
+            <h2 className="font-serif text-[22px] leading-tight tracking-tight mb-2">Connect your Claude API key</h2>
+            <p className="text-[12px] text-[var(--muted)] leading-relaxed">The Studio runs briefs through Claude. Paste your Anthropic API key — it stays in your browser only, never leaves your machine except to call api.anthropic.com directly.</p>
+          </div>
+          <div className="px-6 py-5">
+            <label className="font-mono text-[9px] tracking-wider text-[var(--muted)]">ANTHROPIC API KEY</label>
+            <input type="password" autoFocus value={val} onChange={e=>{setVal(e.target.value); setErr("");}} placeholder="sk-ant-..."
+              className="w-full mt-2 px-3 py-2.5 rounded-md border border-[var(--border)] bg-[#FAFAF7] font-mono text-[12px] text-[#202A44] focus:outline-none focus:border-[#202A44]"/>
+            {err && <div className="font-mono text-[10px] tracking-wider text-[var(--red)] mt-2">{err}</div>}
+            <div className="mt-3 text-[11px] text-[var(--muted)] leading-relaxed">
+              Don't have one? Get it at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noreferrer" className="src-link">console.anthropic.com/settings/keys</a>. Under $0.01 per brief at typical use.
+            </div>
+          </div>
+          <div className="px-6 py-4 border-t border-[var(--border)] flex items-center justify-between" style={{background:"var(--bg-warm)"}}>
+            <button type="button" onClick={onClose} className="font-mono text-[9px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">CANCEL</button>
+            <button type="submit" className="font-mono text-[10px] tracking-wider px-5 py-2.5 rounded-md text-white hover:shadow-md transition" style={{background:"var(--ink)"}}>SAVE KEY →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+// Name prompt — fires AFTER the user submits their first sticky (not
+// before). The sticky is already created with a generic byline; this
+// modal retro-stamps it once the user enters their name. Per Alex's
+// 2026-05-18 ask: don't make name entry a gate to participation, make
+// it a soft prompt that arrives after the user has shown they're engaging.
+function NamePromptModal({open, onSave, onSkip}){
+  const [val,setVal] = useState("");
+  useEffect(()=>{ if(open) setVal(""); },[open]);
+  if(!open) return null;
+  function save(e){
+    e.preventDefault();
+    const v = val.trim();
+    if(!v) return;
+    onSave(v);
+  }
+  return (
+    <div className="fixed inset-0 z-[80] fade-in flex items-center justify-center px-4" style={{background:"rgba(15,23,42,0.45)", backdropFilter:"blur(3px)"}} onClick={onSkip}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[440px]" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+        <form onSubmit={save}>
+          <div className="px-6 pt-6 pb-4 border-b border-[var(--border)]">
+            <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">THE STUDIO</div>
+            <h2 className="font-serif text-[22px] leading-tight tracking-tight mb-2">Nice — first drop in.</h2>
+            <p className="text-[12.5px] text-[var(--muted)] leading-relaxed">Quick — what should we call you on the wall? Stickies get tagged so the team can see who added what.</p>
+          </div>
+          <div className="px-6 py-5">
+            <label className="font-mono text-[9px] tracking-wider text-[var(--muted)]">YOUR NAME</label>
+            <input autoFocus value={val} onChange={e=>setVal(e.target.value)} placeholder="e.g., Christina" maxLength={40}
+              className="w-full mt-2 px-3 py-2.5 rounded-md border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] focus:outline-none focus:border-[#202A44]"/>
+          </div>
+          <div className="px-6 py-4 border-t border-[var(--border)] flex items-center justify-between" style={{background:"var(--bg-warm)"}}>
+            <button type="button" onClick={onSkip} className="font-mono text-[9px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)]">SKIP FOR NOW</button>
+            <button type="submit" className="font-mono text-[10px] tracking-wider px-5 py-2.5 rounded-md text-white hover:shadow-md transition" style={{background:"var(--ink)"}}>SAVE →</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+// "Posting as: NAME" strip above the Studio input bar. Studio is a shared
+// whiteboard so each sticky needs to attribute who dropped it. First-use:
+// the strip auto-focuses + asks for a name. After: the name shows as a
+// small editable chip — click to change. Stored per-browser in localStorage
+// (real auth comes when we wire Supabase user accounts).
+function PostingAsStrip(){
+  const [name, setNameState] = React.useState(() => getUserName());
+  const [editing, setEditing] = React.useState(() => !getUserName());
+  const [draft, setDraft] = React.useState(name);
+  const inputRef = React.useRef();
+
+  React.useEffect(()=>{
+    if(editing && inputRef.current){ inputRef.current.focus(); }
+  }, [editing]);
+
+  function save(){
+    const v = (draft || "").trim();
+    if(!v) return;
+    setUserName(v);
+    setNameState(v);
+    setEditing(false);
+  }
+
+  return (
+    <div className="mb-3 flex items-center gap-2 px-3 py-2 rounded-md border" style={{borderColor:"#E8E1C2", background:"#FFFEF7"}}>
+      <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">POSTING AS</span>
+      {editing ? (
+        <>
+          <input
+            ref={inputRef}
+            value={draft}
+            onChange={e=>setDraft(e.target.value)}
+            onKeyDown={e=>{
+              if(e.key === "Enter"){ e.preventDefault(); save(); }
+              if(e.key === "Escape"){ setEditing(false); setDraft(name); }
+            }}
+            placeholder="Your name (e.g., Christina)"
+            className="flex-1 text-[12.5px] font-medium bg-transparent outline-none border-b border-[var(--border)] focus:border-[var(--amber)] py-0.5"
+            maxLength={40}
+          />
+          <button onClick={save}
+            className="font-mono text-[9px] tracking-wider px-2 py-1 rounded bg-[#202A44] text-white">
+            SAVE
+          </button>
+        </>
+      ) : (
+        <>
+          <span className="text-[12.5px] font-medium" style={{color:"var(--amber)"}}>{name}</span>
+          <button onClick={()=>{ setDraft(name); setEditing(true); }}
+            className="ml-auto font-mono text-[8.5px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)] transition">
+            ✎ CHANGE
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
+
+function StudioInputBar({onAdd}){
+  const [val,setVal] = useState("");
+  const [note,setNote] = useState("");
+  const [showNote,setShowNote] = useState(false);
+  const fileRef = React.useRef();
+  const isUrl = /^https?:\/\//i.test(val.trim());
+  function submit(e){
+    if(e) e.preventDefault();
+    const v = val.trim();
+    if(!v) return;
+    if(isUrl){
+      onAdd({type:"link", url:v, content:"", note: note.trim() || null});
+    } else {
+      onAdd({type:"note", content:v, note: note.trim() || null});
+    }
+    setVal(""); setNote(""); setShowNote(false);
+  }
+  function onFile(e){
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    if(file.size > 2 * 1024 * 1024){ alert("Image is too large — keep under 2MB (localStorage limit)."); return; }
+    const reader = new FileReader();
+    reader.onload = evt => {
+      onAdd({type:"photo", image: evt.target.result, source: file.name, note: note.trim() || null});
+      setNote(""); setShowNote(false);
+    };
+    reader.readAsDataURL(file);
+    e.target.value = ""; // allow same file again
+  }
+  return (
+    <div className="card p-4">
+      <form onSubmit={submit}>
+        <div className="flex items-center gap-2">
+          <input type="text" value={val} onChange={e=>setVal(e.target.value)}
+            placeholder="drop a link, paste a quote, type a half-thought…"
+            className="flex-1 px-4 py-3 rounded-full border-2 border-[var(--border)] bg-[#FAFAF7] text-[13.5px] focus:outline-none focus:border-[var(--amber)] transition"/>
+          <input ref={fileRef} type="file" accept="image/*" onChange={onFile} className="hidden"/>
+          <button type="button" onClick={()=>fileRef.current && fileRef.current.click()}
+            title="Upload a photo"
+            className="px-4 py-3 rounded-full border-2 border-[var(--border)] bg-white hover:bg-[#FFFEF7] hover:border-[#E8E1C2] transition text-[13px] font-medium flex items-center gap-1.5">
+            <span className="text-[15px]">📷</span> photo
+          </button>
+          <button type="button" onClick={()=>setShowNote(s=>!s)}
+            title="Add context for the strategist"
+            className={"px-4 py-3 rounded-full border-2 transition text-[13px] font-medium flex items-center gap-1.5 "+(showNote?"bg-[#FFFEF7] border-[var(--amber)] text-[var(--amber)]":"bg-white border-[var(--border)] hover:bg-[#FFFEF7] hover:border-[#E8E1C2]")}>
+            <span className="text-[15px]">✎</span> note
+          </button>
+          <button type="submit" disabled={!val.trim()}
+            className="px-5 py-3 rounded-full bg-[#202A44] text-white hover:bg-[#1E293B] transition text-[13px] font-medium disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1.5">
+            {isUrl ? <>add link <span>→</span></> : <>drop it in <span>→</span></>}
+          </button>
+        </div>
+        {showNote && (
+          <textarea value={note} onChange={e=>setNote(e.target.value)}
+            placeholder="Optional — context for the strategist (why this matters, what angle you want, who it's for)…"
+            rows={2}
+            className="w-full mt-2 px-3 py-2.5 rounded-md border border-[var(--border)] bg-[#FAFAF7] text-[12px] focus:outline-none focus:border-[#202A44] resize-none"/>
+        )}
+      </form>
+    </div>
+  );
+}
+
+function StickyTypeIcon({type}){
+  if(type === "link")  return <span className="text-[13px]">🔗</span>;
+  if(type === "photo") return <span className="text-[13px]">📷</span>;
+  return <span className="text-[13px]">✎</span>;
+}
+
+// Placeholder / ghost stickies — render pastel, dashed-border cards in the
+// canvas grid so an empty or sparsely-populated Studio still feels like a
+// workspace. Click focuses the input bar. Real stickies always render first;
+// ghosts fill to ~12 total cells, then disappear entirely once the canvas
+// is full of real work.
+const GHOST_STICKY_COLORS = [
+  "#73B2C9", "#75C596", "#A191B2", "#9E652E",
+  "#FACC15", "#0EA5E9", "#EC4899", "#75C596",
+  "#73B2C9", "#9E652E", "#A191B2", "#F59E0B"
+];
+const GHOST_STICKY_HINTS = [
+  "A link from earlier",
+  "Screenshot of a TikTok",
+  "Note from a retail walk",
+  "An NYT article",
+  "Photo of a competitor",
+  "Recipe you saw",
+  "Reddit thread",
+  "Voice memo idea",
+  "Customer review",
+  "Half-formed thought",
+  "Trending sound",
+  "Podcast clip"
+];
+
+function GhostSticky({color, index, hint, onFocus}){
+  const rot = (index % 3 === 0) ? "-0.6deg" : (index % 3 === 1) ? "0.5deg" : "0deg";
+  return (
+    <button onClick={onFocus}
+      title="Click to drop your first idea"
+      className="text-left p-4 flex flex-col gap-3 transition hover:opacity-90"
+      style={{
+        background: color + "0F",
+        border: "1.5px dashed " + color + "66",
+        borderRadius: "10px",
+        minHeight: "168px",
+        transform: "rotate(" + rot + ")",
+        opacity: 0.6
+      }}>
+      <div className="flex items-center gap-2">
+        <span className="inline-block w-[9px] h-[9px] rounded-full shrink-0" style={{background:color}}></span>
+        <span className="font-mono text-[8.5px] tracking-wider" style={{color: color, opacity: 0.85}}>OPEN SLOT</span>
+      </div>
+      {/* Skeleton lines — give the sticky a "waiting to be filled" feel */}
+      <div className="flex flex-col gap-1.5 mt-1">
+        <div className="h-[7px] rounded-full" style={{background: color + "22", width: "85%"}}></div>
+        <div className="h-[7px] rounded-full" style={{background: color + "22", width: "60%"}}></div>
+        <div className="h-[7px] rounded-full" style={{background: color + "14", width: "72%"}}></div>
+      </div>
+      <div className="mt-auto pt-3 font-mono text-[9px] tracking-wider italic" style={{color: color, opacity: 0.7}}>
+        e.g. "{hint}"
+      </div>
+    </button>
+  );
+}
+
+function StickyCard({sticky, brief, onOpen, onDelete}){
+  const when = new Date(sticky.createdAt).toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  return (
+    <div className="card p-4 fade-in flex flex-col gap-3 hover:shadow-md transition cursor-pointer group"
+      onClick={onOpen}>
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <StickyTypeIcon type={sticky.type}/>
+          <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] truncate">
+            {sticky.type.toUpperCase()} · {when.toUpperCase()}
+            {sticky.createdBy && <span className="ml-1.5" style={{color:"var(--amber)"}}>· {sticky.createdBy.toUpperCase()}</span>}
+          </span>
+        </div>
+        <button onClick={e=>{e.stopPropagation(); onDelete(sticky.id);}}
+          className="opacity-0 group-hover:opacity-100 transition font-mono text-[10px] text-[var(--muted)] hover:text-[var(--red)]"
+          title="Remove this sticky">×</button>
+      </div>
+      {sticky.type === "link" && (
+        <div>
+          <a href={sticky.url} target="_blank" rel="noreferrer" onClick={e=>e.stopPropagation()}
+            className="text-[12px] text-[var(--ink)] font-medium hover:underline line-clamp-2 break-all">{sticky.url}</a>
+          {sticky.content && <p className="text-[11.5px] text-[#64748B] leading-snug mt-1.5 line-clamp-3">{sticky.content}</p>}
+        </div>
+      )}
+      {sticky.type === "photo" && (
+        <div>
+          <img src={sticky.image} alt={sticky.source || "uploaded"} className="rounded-md w-full object-cover max-h-[180px]"/>
+          {sticky.source && <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-1.5 truncate">{sticky.source}</div>}
+        </div>
+      )}
+      {sticky.type === "note" && (
+        <p className="font-serif text-[14px] text-[#202A44] leading-snug line-clamp-5">{sticky.content}</p>
+      )}
+      {sticky.note && (
+        <div className="pl-2.5 border-l-2 border-[#E8E1C2] text-[11px] italic text-[#64748B] leading-snug">{sticky.note}</div>
+      )}
+      {sticky.sourceCard && (
+        <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">↳ from {sticky.sourceCard}</div>
+      )}
+      <div className="mt-auto pt-2 border-t border-[var(--border)] flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          {brief ? (
+            <span className="font-mono text-[9px] tracking-wider px-1.5 py-0.5 rounded text-white shrink-0" style={{background:"#75C596"}}>
+              ✓ RIFFED
+            </span>
+          ) : (
+            <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] shrink-0">READY TO RIFF</span>
+          )}
+        </div>
+        <span className="font-mono text-[9px] tracking-wider flex items-center gap-1 text-[var(--ink)] group-hover:text-[#9E652E] transition">
+          <span style={{color:"#9E652E"}}>✦</span>
+          {brief ? "OPEN →" : "RIFF ON THIS →"}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function StudioGeneratedBrief({brief}){
+  if(!brief || !brief.draft) return null;
+  const d = brief.draft;
+  const pillarColor = PILLAR_COLORS[d.pillar] || "#202A44";
+  return (
+    <div className="card p-5 fade-in" key={brief.id}>
+      <div className="flex items-center justify-between mb-3">
+        <div className="font-mono text-[10px] tracking-[0.18em] text-[#202A44]">THE DRAFT BRIEF</div>
+        {brief.adopted && <span className="font-mono text-[8.5px] tracking-wider px-2 py-[2px] rounded-full text-white" style={{background:"#75C596"}}>✓ ADOPTED</span>}
+      </div>
+      <div className="flex items-center flex-wrap gap-1.5 mb-3">
+        <span className="font-mono text-[9px] tracking-wider px-1.5 py-[2px] rounded" style={{color:pillarColor,background:pillarColor+"12",border:"1px solid "+pillarColor+"33"}}>{d.pillar || "—"}</span>
+        {d.priority && <PriorityBadge p={d.priority}/>}
+        {d.dnaPattern && <DnaChip patternId={d.dnaPattern}/>}
+        {d.flavor && <span className="font-mono text-[9px] tracking-wider px-1.5 py-[2px] rounded bg-[#F1F5F9] text-[#475569]">{d.flavor.toUpperCase()}</span>}
+        {d.platform && <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">· {d.platform}</span>}
+      </div>
+      {d.concept && <h3 className="font-serif text-[18px] leading-snug tracking-tight mb-3">{d.concept}</h3>}
+      {d.recommendedHook && (
+        <div className="pl-4 border-l-[3px] border-[#75C596] mb-4">
+          <span className="inline-block font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded mb-2.5 text-white" style={{background:"#75C596"}}>✓ RECOMMENDED HOOK</span>
+          <p className="font-serif text-[17px] italic leading-snug text-[#202A44]">"{d.recommendedHook}"</p>
+        </div>
+      )}
+      {d.altHooks && d.altHooks.length > 0 && (
+        <div className="mb-4">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1.5">ALT HOOKS</div>
+          <div className="grid gap-1.5">
+            {d.altHooks.map((h,i)=>(<div key={i} className="pl-4 border-l border-[var(--border)] text-[12px] italic text-[#64748B] leading-snug py-1">"{h}"</div>))}
+          </div>
+        </div>
+      )}
+      {d.whyNow && (
+        <div className="mb-4">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">WHY NOW</div>
+          <p className="text-[12px] text-[#334155] leading-relaxed">{d.whyNow}</p>
+        </div>
+      )}
+      {d.visual && (
+        <div className="mb-4">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">SHOOT · VISUAL</div>
+          <p className="text-[12px] text-[#334155] leading-relaxed">{d.visual}</p>
+        </div>
+      )}
+      {d.script && d.script.length > 0 && (
+        <div className="mb-4">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-2">SCRIPT · {d.script.length} FRAMES</div>
+          <div className="grid gap-2">
+            {d.script.map((s,i)=>(
+              <div key={i} className="pl-3 border-l border-[var(--border)]">
+                <div className="font-mono text-[8.5px] tracking-wider text-[#202A44]">{s.scene || "FRAME "+(i+1)} · {s.time}</div>
+                <p className="text-[11.5px] text-[#334155] leading-snug mt-0.5">{s.action}</p>
+              </div>
+            ))}
+          </div>
+          {(d.audio || d.duration) && (
+            <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 font-mono text-[9px] tracking-wider text-[var(--muted)]">
+              {d.audio && <span>AUDIO · <span className="text-[var(--ink)]">{d.audio}</span></span>}
+              {d.duration && <span>DURATION · <span className="text-[var(--ink)]">{d.duration}</span></span>}
+            </div>
+          )}
+        </div>
+      )}
+      {d.caption && (
+        <div className="mb-4">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">CAPTION</div>
+          <pre className="whitespace-pre-wrap text-[12px] text-[#202A44] leading-relaxed font-sans bg-[#FAFAF7] border border-[var(--border)] rounded-md p-3">{d.caption}</pre>
+        </div>
+      )}
+      {d.benefitShorthand && (
+        <div className="mb-3">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">END-CARD STINGER</div>
+          <p className="font-serif italic text-[13px] text-[#202A44]">"{d.benefitShorthand}"</p>
+        </div>
+      )}
+      {d.rationale && (
+        <div className="mt-4 pt-3 border-t border-[var(--border)]">
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">STRATEGIST RATIONALE</div>
+          <p className="text-[11.5px] italic text-[#64748B] leading-relaxed">{d.rationale}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Smart-suggestion picker for the Studio sticky-riff modal. Reaches into
+// the sticky's type + content to propose 3 directions the user can click.
+function getStudioRiffSuggestions(s) {
+  if (s.type === "link") return [
+    "Give me 3 angles on this for Willa's voice.",
+    "How would Willa's stitch this into a TikTok?",
+    "What's the us-vs-them angle in here?"
+  ];
+  if (s.type === "photo") return [
+    "Walk me through what Willa's could do with this visual.",
+    "What hook lands over this image?",
+    "Which flavor does this belong to?"
+  ];
+  // note
+  return [
+    "Turn this into 3 different hook options.",
+    "What's the sharpest 10-second scene that delivers this?",
+    "Which flavor + platform does this belong on?"
+  ];
+}
+
+// Studio "Riff on this" modal — the single entry point for working on a sticky
+// (2026-04-22 rewrite, replacing the old generate-then-chat flow). Lead is a
+// scoped chat with the Strategist, context-aware of the sticky. Agent welcomes
+// with 3 POV-discipline-aware suggestions. User can chat freely. When they're
+// ready, one button turns the conversation into a full Willa's brief that can
+// be adopted into the Content Briefs queue.
+function StudioStickyModal({sticky, brief, apiKey, onRequestApiKey, onGenerate, onRiff, onAdopt, onClose}){
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [streaming, setStreaming] = useState(false);
+  const [error, setError] = useState(null);
+  const [generatingBrief, setGeneratingBrief] = useState(false);
+  const scrollRef = React.useRef();
+  const inputRef = React.useRef();
+  const genStep = useRotatingStep(generatingBrief, STUDIO_GEN_STEPS, 2200);
+
+  // Sticky-scoped: reset conversation each time a different sticky opens.
+  useEffect(()=>{
+    if(!sticky) return;
+    setMessages([]); setInput(""); setError(null);
+    const onKey = e => { if(e.key==="Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return ()=>{ window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  },[sticky && sticky.id, onClose]);
+
+  useEffect(()=>{
+    if (inputRef.current) setTimeout(()=> inputRef.current.focus(), 100);
+  }, [sticky && sticky.id]);
+
+  useEffect(()=>{
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [messages, streaming]);
+
+  if(!sticky) return null;
+
+  const suggestions = getStudioRiffSuggestions(sticky);
+
+  function buildStickyContext(s) {
+    const content = s.type === "link"
+      ? `URL: ${s.url}${s.content ? "\nContext pasted in: " + s.content : ""}`
+      : s.type === "photo"
+        ? `Photo: ${s.source || "uploaded image"} — the image is attached to the user's first message in this riff. Read the pixels directly: what brand / format / aesthetic / mood is visible? Don't ask the user to describe it.`
+        : `Note: ${s.content}`;
+    return `=== IDEA UNDER RIFF (STUDIO) ===
+The user dropped this into the Studio and wants to SHAPE it into a Willa's post. Your job: help refine the idea — propose hook options, explore angles, suggest visual direction, nail the voice. Be specific. Show rewritten hooks, caption options, concrete visual direction. Don't just describe what to do — DO it.
+
+**What they dropped:**
+Type: ${s.type}
+${content}
+${s.note ? "User's own note: " + s.note : ""}
+${s.sourceCard ? "Came from: " + s.sourceCard : ""}
+
+When the user is ready to commit to a specific direction, mention they can click the "Turn into a brief" button below the chat to generate a full Willa's brief (concept, hook, captions, visual, script, shot list). Don't rush them there — the riffing IS the work.`;
+  }
+
+  async function send(text) {
+    const prompt = (text || "").trim();
+    if (!prompt || streaming) return;
+    if (!apiKey) { onRequestApiKey(); return; }
+    setError(null);
+
+    // For the very first user message of a photo sticky, attach the image
+    // as a vision content block so Claude can SEE it. Subsequent turns are
+    // text-only — Anthropic's context preserves the earlier image across
+    // the conversation so we don't need to re-attach.
+    let userContent = prompt;
+    if (messages.length === 0 && sticky.type === "photo" && typeof sticky.image === "string") {
+      const m = sticky.image.match(/^data:(image\/(?:jpeg|jpg|png|gif|webp));base64,(.+)$/i);
+      if (m) {
+        let mediaType = m[1].toLowerCase();
+        if (mediaType === "image/jpg") mediaType = "image/jpeg";
+        userContent = [
+          { type: "image", source: { type: "base64", media_type: mediaType, data: m[2] } },
+          { type: "text", text: prompt }
+        ];
+      }
+    }
+
+    const userMsg = { role: "user", content: userContent };
+    setMessages(m => [...m, userMsg, { role: "assistant", content: "" }]);
+    setInput("");
+    setStreaming(true);
+    try {
+      const systemExtras = [{ type: "text", text: buildStickyContext(sticky) }];
+      const convo = [...messages, userMsg].map(m => ({ role: m.role, content: m.content }));
+      for await (const chunk of streamStrategist({
+        messages: convo, systemExtras, maxTokens: 1500,
+        agentType: "studio_riff", contextId: sticky && sticky.id ? String(sticky.id) : null,
+      })) {
+        setMessages(m => {
+          const copy = [...m];
+          const last = copy[copy.length - 1];
+          copy[copy.length - 1] = { ...last, content: last.content + chunk };
+          return copy;
+        });
+      }
+    } catch(e) {
+      setMessages(m => m.slice(0, -1));
+      if (e.message === "NO_API_KEY") { setError("NO_API_KEY"); onRequestApiKey(); }
+      else setError(e.message || "Something went wrong.");
+    } finally {
+      setStreaming(false);
+    }
+  }
+
+  async function turnIntoBrief() {
+    if(!apiKey){ onRequestApiKey(); return; }
+    setGeneratingBrief(true); setError(null);
+    try {
+      let userMessage = buildStickyUserMessage(sticky);
+      if (messages.length > 0) {
+        const riff = messages.map(m =>
+          (m.role === "user" ? "ME" : "STRATEGIST") + ": " + messageDisplayText(m.content)
+        ).join("\n\n");
+        userMessage += "\n\n[Riff conversation that shaped this idea — lean into whichever angle the user gravitated toward]:\n" + riff + "\n\nReturn the full brief JSON now.";
+      }
+      const text = await callClaude(apiKey, [{role:"user", content: userMessage}]);
+      const draft = extractBriefJson(text);
+      onGenerate(sticky.id, draft, [
+        {role:"user", content: userMessage, ts: Date.now()},
+        {role:"assistant", content: text, ts: Date.now()}
+      ]);
+    } catch(e) {
+      setError(e.message || "Couldn't turn this into a brief. Try rephrasing or keep riffing.");
+    } finally {
+      setGeneratingBrief(false);
+    }
+  }
+
+  function handleSubmit(e) {
+    if (e) e.preventDefault();
+    const text = input.trim();
+    if (!text) return;
+    send(text);
+  }
+
+  return (
+    <div className="fixed inset-0 z-[70] fade-in flex items-start justify-center px-4 py-6 md:py-10 overflow-y-auto scrollbar"
+      style={{background:"rgba(15,23,42,0.55)", backdropFilter:"blur(3px)"}}
+      onClick={onClose}>
+      <div className="w-full max-w-[900px] relative my-auto" onClick={e=>e.stopPropagation()}>
+        <button onClick={onClose}
+          className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-[var(--ink)] bg-white border border-[var(--border)] hover:bg-[#F6F6F0] transition z-10"
+          aria-label="Close">
+          <span className="text-[18px] leading-none">×</span>
+        </button>
+
+        {/* Sticky content — compact, pinned to the top so the user always sees
+            what they're riffing on. */}
+        <div className="card p-5 mb-3">
+          <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-2">WHAT YOU DROPPED IN</div>
+          <div className="flex items-start gap-3">
+            <StickyTypeIcon type={sticky.type}/>
+            <div className="flex-1 min-w-0">
+              {sticky.type === "link" && (
+                <>
+                  <a href={sticky.url} target="_blank" rel="noreferrer" className="text-[13px] text-[var(--ink)] font-medium hover:underline break-all">{sticky.url}</a>
+                  {sticky.content && <p className="text-[12px] text-[#64748B] leading-snug mt-1">{sticky.content}</p>}
+                </>
+              )}
+              {sticky.type === "photo" && (
+                <>
+                  <img src={sticky.image} alt={sticky.source || ""} className="rounded-md max-h-[180px] w-auto"/>
+                  {sticky.source && <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-1.5">{sticky.source}</div>}
+                </>
+              )}
+              {sticky.type === "note" && (
+                <p className="font-serif text-[15px] text-[#202A44] leading-snug">{sticky.content}</p>
+              )}
+              {sticky.note && (
+                <div className="pl-2.5 border-l-2 border-[#E8E1C2] text-[11.5px] italic text-[#64748B] leading-snug mt-2">{sticky.note}</div>
+              )}
+              {sticky.sourceCard && (
+                <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mt-2">↳ sent from {sticky.sourceCard}</div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Riff panel — primary interaction */}
+        <div className="rounded-lg overflow-hidden mb-3" style={{border:"1.5px solid #E8E1C2", background:"linear-gradient(180deg, #FFFEF7 0%, #FFFFFF 100%)"}}>
+          <div className="px-5 py-3 border-b border-[#E8E1C2] flex items-center justify-between gap-2 bg-white">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center justify-center w-[22px] h-[22px] rounded-full shrink-0" style={{background:"#202A44", color:"#FACC15", fontSize:"12px", fontWeight:700}}>✦</span>
+              <span className="font-mono text-[9.5px] tracking-[0.22em]" style={{color:"#9E652E"}}>RIFF WITH THE STRATEGIST</span>
+              <span className="text-[11px] text-[var(--muted)] hidden md:inline leading-snug">· scoped to this idea</span>
+            </div>
+          </div>
+
+          {error === "NO_API_KEY" && (
+            <div className="px-4 py-2.5 bg-[#FEF3C7] flex items-center justify-between gap-3">
+              <div className="text-[11.5px] text-[#92400E] leading-snug">Set your Anthropic API key to start.</div>
+              <button onClick={onRequestApiKey} className="font-mono text-[9px] tracking-wider px-2.5 py-1.5 rounded bg-[#202A44] text-white">SET KEY</button>
+            </div>
+          )}
+          {error && error !== "NO_API_KEY" && (
+            <div className="px-4 py-2 bg-[#FEE2E2] text-[11px] text-[#991B1B] leading-snug">⚠ {error}</div>
+          )}
+
+          <div ref={scrollRef} className="max-h-[420px] overflow-y-auto scrollbar px-4 py-3.5">
+            {messages.length === 0 ? (
+              <div>
+                <div className="pl-3 pr-3 py-2 text-[13px] text-[#202A44] mb-3" style={{borderLeft:"2px solid #FACC15", background:"#FFFEF7", borderRadius:"0 10px 10px 0"}}>
+                  <p className="leading-relaxed">I've got what you dropped in. Three ways we could shape it — or tell me something else:</p>
+                </div>
+                <div className="grid gap-1.5">
+                  {suggestions.map((p, i) => (
+                    <button key={i} onClick={()=>send(p)}
+                      className="text-left px-3 py-2.5 rounded-lg border border-[var(--border)] bg-white hover:border-[#202A44] hover:bg-[#FFFEF7] transition text-[12.5px] text-[#202A44] leading-snug">
+                      <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mr-1.5">↗</span>{p}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              messages.map((m, i) => (
+                <StrategistMessage key={i} m={m} isLast={i === messages.length - 1} streaming={streaming}/>
+              ))
+            )}
+          </div>
+
+          <form onSubmit={handleSubmit} className="border-t border-[#E8E1C2] px-3 py-3 bg-white">
+            <div className="flex items-end gap-2">
+              <textarea
+                ref={inputRef}
+                value={input}
+                onChange={e=>setInput(e.target.value)}
+                onKeyDown={e=>{ if(e.key === "Enter" && !e.shiftKey){ e.preventDefault(); handleSubmit(); } }}
+                placeholder={streaming ? "Thinking…" : "Ask anything about this idea…"}
+                disabled={streaming || generatingBrief}
+                rows={1}
+                className="flex-1 resize-none px-3 py-2 rounded-lg border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] leading-snug focus:outline-none focus:border-[#202A44] disabled:opacity-60"
+                style={{maxHeight:"100px", minHeight:"36px"}}/>
+              <button type="submit" disabled={!input.trim() || streaming || generatingBrief}
+                className="shrink-0 px-3 py-2 rounded-lg bg-[#202A44] text-white font-mono text-[10px] tracking-wider hover:bg-[#1E293B] transition disabled:opacity-40 disabled:cursor-not-allowed">
+                {streaming ? "…" : "SEND →"}
+              </button>
+            </div>
+            <div className="flex items-center justify-between mt-1.5 px-1 gap-2 flex-wrap">
+              <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">ENTER to send · SHIFT+ENTER for new line</div>
+              {messages.length >= 2 && !brief && (
+                <button onClick={turnIntoBrief} disabled={generatingBrief || streaming}
+                  className="font-mono text-[9px] tracking-wider px-2.5 py-1 rounded border transition hover:bg-[#F6FBF8] disabled:opacity-40"
+                  style={{color:"#15803D", borderColor:"#75C596", background:"#F6FBF8"}}>
+                  {generatingBrief ? "BUILDING…" : "→ TURN INTO A BRIEF"}
+                </button>
+              )}
+            </div>
+            {generatingBrief && (
+              <div className="mt-2 flex items-center gap-2">
+                <span className="pulse-dot pulse-dot-green"></span>
+                <span className="font-mono text-[10px] tracking-wider text-[var(--muted)] fade-in" key={genStep}>{genStep}</span>
+              </div>
+            )}
+          </form>
+        </div>
+
+        {/* Generated brief (if exists) — shown below the riff so the user can
+            keep iterating after the brief is drafted. */}
+        {brief && brief.draft && (
+          <>
+            <StudioGeneratedBrief brief={brief}/>
+            {!brief.adopted && (
+              <div className="card p-4 mt-3 flex items-center justify-between gap-3 flex-wrap">
+                <div className="text-[12px] text-[var(--muted)] min-w-0">Happy with this brief? Adopt it into the Content Briefs queue to ship it this week.</div>
+                <button onClick={()=>onAdopt(brief.id)}
+                  className="shrink-0 font-mono text-[10px] tracking-wider px-3 py-1.5 rounded-md border border-[#75C596] text-[#15803D] bg-[#F6FBF8] hover:bg-[#ECFDF5] transition">
+                  ↗ ADOPT TO QUEUE
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenerate, onRiff, onAdopt, onRequestApiKey, onOpenApiKey, topRight, nav}){
+  const [openStickyId,setOpenStickyId] = useState(null);
+  const openSticky = openStickyId ? stickies.find(s=>s.id===openStickyId) : null;
+  const openBrief = openSticky ? briefs.find(b=>b.stickyId===openSticky.id) : null;
+  const inputRef = React.useRef();
+  const ghostCount = Math.max(0, 12 - stickies.length);
+  function focusInput(){
+    const input = document.querySelector("input[placeholder^='Drop a link']");
+    if(input) input.focus();
+  }
+
+  const adoptedCount = briefs.filter(b=>b.adopted).length;
+  const draftCount = briefs.length - adoptedCount;
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="px-8 pt-6 pb-4 border-b border-[var(--border)]">
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <h1 className="font-serif text-[72px] leading-[0.9] tracking-[-0.02em]">
+              the <span className="italic" style={{color:"var(--amber)"}}>studio</span><span style={{color:"var(--amber)"}}>.</span>
+            </h1>
+            <div className="flex items-center gap-2.5 mt-2">
+              <span className="studio-sparkle inline-block" style={{color:"var(--amber)", fontSize:"24px"}}>✦</span>
+              <span className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)]">RIFF ROOM · STRATEGIST ON DUTY</span>
+            </div>
+            <p className="text-[16px] text-[#334155] mt-5 max-w-[680px] leading-[1.65]">
+              drop a link, a photo, or a half-formed thought — she'll turn it into a brief that's already on-brand. <span className="italic">yours to shape, send, or rip up.</span> 🌾
+            </p>
+          </div>
+          {topRight}
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto scrollbar px-8 py-5">
+        <div className="max-w-[1400px]">
+          <div className="mb-3">
+            <StudioInputBar onAdd={onAddSticky}/>
+          </div>
+
+          {/* Vision preview callout removed 2026-05-18 — vision is now live;
+              dropping a photo into a sticky and riffing on it works. */}
+
+          {stickies.length === 0 && (
+            <div className="mb-5 flex items-start gap-4 px-5 py-4 rounded-lg border-2" style={{background:"#FFFEF7", borderColor:"#E8E1C2"}}>
+              <span className="text-[24px] shrink-0 leading-none mt-0.5">💡</span>
+              <div className="flex-1">
+                <div className="font-mono text-[10px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>QUICK TIP</div>
+                <p className="text-[13.5px] text-[#202A44] leading-[1.6]">Every card on the Intelligence Brief has a <span className="font-mono text-[10.5px] px-1.5 py-0.5 rounded border border-[var(--border)] bg-white mx-0.5">+ STUDIO</span> button — use it to riff on this week's intel without copy-pasting. The colored placeholders below are what the canvas looks like once your team fills it up. 🌾</p>
+              </div>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+            {stickies.map(s=>{
+              const b = briefs.find(br=>br.stickyId===s.id);
+              return (
+                <StickyCard key={s.id} sticky={s} brief={b}
+                  onOpen={()=>setOpenStickyId(s.id)}
+                  onDelete={onDeleteSticky}/>
+              );
+            })}
+            {Array.from({length: ghostCount}).map((_,i)=>(
+              <GhostSticky key={"ghost-"+i}
+                color={GHOST_STICKY_COLORS[i % GHOST_STICKY_COLORS.length]}
+                hint={GHOST_STICKY_HINTS[i % GHOST_STICKY_HINTS.length]}
+                index={i}
+                onFocus={focusInput}/>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <StudioStickyModal
+        sticky={openSticky}
+        brief={openBrief}
+        apiKey={apiKey}
+        onRequestApiKey={onRequestApiKey}
+        onGenerate={onGenerate}
+        onRiff={onRiff}
+        onAdopt={onAdopt}
+        onClose={()=>setOpenStickyId(null)}/>
+    </div>
+  );
+}
+
+// ──────────────────────────────────────────────────────────
+// ASK THE STRATEGIST — persistent floating chat. Same strategist agent
+// as the Studio riff + brief riff (see STRATEGIST_SYSTEM_PROMPT above).
+// Opens via the floating button or ⌘K from anywhere on the site.
+// Added 2026-04-22.
+// ──────────────────────────────────────────────────────────
+
+const STRATEGIST_HISTORY_STORAGE = "willas-strategist-history";
+// Suggested prompts surfaced on the empty Ask the Strategist panel.
+// These should reflect THIS WEEK's actual cultural moments (CULTURAL_PULSE
+// hooks + Memorial Day-style calendar anchors) — not last-month leftovers.
+// Refreshed weekly. Long-term: generate dynamically from CULTURAL_PULSE
+// during the Sunday refresh, so the prompts always match the live data.
+const STRATEGIST_SUGGESTED_PROMPTS = [
+  "Memorial Day Weekend is around the corner — what's the strongest play for the family-kitchen lane?",
+  "Cottage cheese oats are eating TikTok — how do we ride it without losing the brand voice?",
+  "Grandfluencers are having their moment — what's our Willa's-original-story angle here?",
+  "What's a diet-culture trend in our feed right now that Willa's should push back on?"
+];
+
+// Cap strategist chat history at 100 messages (50 user + 50 assistant turns)
+// to prevent localStorage growing unbounded across sessions. The agent doesn't
+// need ancient history — Phase B Supabase persists the full thread server-side.
+const STRATEGIST_MAX_MESSAGES = 100;
+
+function useStrategistChat() {
+  const [messages, setMessages] = useState(() => {
+    try {
+      const raw = localStorage.getItem(STRATEGIST_HISTORY_STORAGE);
+      const parsed = raw ? JSON.parse(raw) : [];
+      // Trim on load in case the storage was set before the cap existed
+      return parsed.length > STRATEGIST_MAX_MESSAGES
+        ? parsed.slice(-STRATEGIST_MAX_MESSAGES)
+        : parsed;
+    } catch(e) { return []; }
+  });
+  const [streaming, setStreaming] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    try {
+      // Cap before persisting — keeps localStorage from growing forever.
+      const toSave = messages.length > STRATEGIST_MAX_MESSAGES
+        ? messages.slice(-STRATEGIST_MAX_MESSAGES)
+        : messages;
+      localStorage.setItem(STRATEGIST_HISTORY_STORAGE, JSON.stringify(toSave));
+    } catch(e){}
+  }, [messages]);
+
+  async function send(text, opts = {}) {
+    const prompt = (text || "").trim();
+    if (!prompt || streaming) return;
+    setError(null);
+    const userMsg = { role: "user", content: prompt };
+    // If opts.replaceHistory is set, start fresh with just this message
+    // (used when seeding a new topic from a card — keeps the chat focused).
+    const baseMessages = opts.replaceHistory ? [] : messages;
+    setMessages(opts.replaceHistory
+      ? [userMsg, { role: "assistant", content: "" }]
+      : m => [...m, userMsg, { role: "assistant", content: "" }]);
+    setStreaming(true);
+    try {
+      const convo = [...baseMessages, userMsg].map(m => ({ role: m.role, content: m.content }));
+      for await (const chunk of streamStrategist({
+        messages: convo,
+        systemExtras: opts.systemExtras || [],
+        maxTokens: opts.maxTokens || 2000,
+        agentType: "strategist", contextId: null
+      })) {
+        setMessages(m => {
+          const copy = [...m];
+          const last = copy[copy.length - 1];
+          copy[copy.length - 1] = { ...last, content: last.content + chunk };
+          return copy;
+        });
+      }
+    } catch(e) {
+      setMessages(m => m.slice(0, -1));
+      if (e.message === "NO_API_KEY") setError("NO_API_KEY");
+      else setError(e.message || "Something went wrong talking to Claude.");
+    } finally {
+      setStreaming(false);
+    }
+  }
+
+  function clear() {
+    setMessages([]);
+    setError(null);
+  }
+
+  return { messages, streaming, error, send, clear };
+}
+
+// Format helpers for seeding the Strategist from other surfaces (brief detail,
+// sticky cards, cultural pulse cards). Each returns a ready-to-send user
+// message that gives the agent the context it needs to riff productively.
+function seedMessageForBrief(b) {
+  const recHook = (b.hooks && b.hooks.find(h => h.recommended)) ? b.hooks.find(h => h.recommended).text : (b.hooks && b.hooks[0] ? b.hooks[0].text : "");
+  return [
+    `I want to riff on this brief and push it in a different direction.`,
+    ``,
+    `**Brief:** ${b.concept}`,
+    `**Platform / flavor / pillar:** ${b.platform} · ${b.flavor} · ${b.pillar}`,
+    `**DNA format:** ${b.dnaPattern || "—"}`,
+    recHook ? `**Current hook:** "${recHook}"` : "",
+    ``,
+    `Give me 3 different angles we could push this in — different hook, different emotional beat, or a different DNA format. Keep it tight.`
+  ].filter(Boolean).join("\n");
+}
+
+function seedMessageForSticky(sticky) {
+  let context;
+  if (sticky.type === "link") context = `a link: ${sticky.url}${sticky.content ? "\n(Context: " + sticky.content + ")" : ""}`;
+  else if (sticky.type === "photo") context = `a photo/screenshot I uploaded: ${sticky.source || "image"}`;
+  else context = `a note: "${sticky.content}"`;
+  const extra = sticky.note ? `\n\nContext for you: ${sticky.note}` : "";
+  return [
+    `Help me shape this into a Willa's-voice post.`,
+    ``,
+    `I dropped ${context}.${extra}`,
+    ``,
+    `Give me 2–3 angles on how Willa's should ride this. Don't write the full brief yet — just the directional ideas. I'll pick one and we'll build from there.`
+  ].join("\n");
+}
+
+// Minimal markdown-ish renderer for strategist responses. Handles:
+// **bold** / *italic* · bullet lines starting with `- ` or `• ` · paragraph
+// breaks on blank lines · ### / ## / # headers. Safe for React (no HTML
+// injection — everything renders through React components).
+function renderInlineMd(text, keyPrefix) {
+  const parts = [];
+  let remaining = String(text);
+  let i = 0;
+  // Bold first, then italic (greedy order matters so *italic* doesn't eat ** bold **)
+  const boldRx = /\*\*([^*\n]+)\*\*/;
+  while (remaining.length > 0) {
+    const m = remaining.match(boldRx);
+    if (!m) { parts.push(remaining); break; }
+    if (m.index > 0) parts.push(remaining.slice(0, m.index));
+    parts.push(<strong key={`${keyPrefix}-b-${i++}`} className="font-semibold">{m[1]}</strong>);
+    remaining = remaining.slice(m.index + m[0].length);
+  }
+  // Italic pass on each string segment (skip React elements)
+  const italicRx = /(?<!\*)\*([^*\n]+)\*(?!\*)/;
+  return parts.flatMap((p, pi) => {
+    if (typeof p !== "string") return p;
+    const out = [];
+    let rem = p;
+    let j = 0;
+    while (rem.length > 0) {
+      const m = rem.match(italicRx);
+      if (!m) { out.push(rem); break; }
+      if (m.index > 0) out.push(rem.slice(0, m.index));
+      out.push(<em key={`${keyPrefix}-i-${pi}-${j++}`} className="italic">{m[1]}</em>);
+      rem = rem.slice(m.index + m[0].length);
+    }
+    return out;
+  });
+}
+
+function renderStrategistMd(text) {
+  if (!text) return null;
+  const lines = text.split(/\n/);
+  const blocks = [];
+  let curList = null;
+  let curPara = null;
+  const flushP = () => { if (curPara) { blocks.push({t:"p", s:curPara.join(" ")}); curPara = null; } };
+  const flushL = () => { if (curList) { blocks.push({t:"ul", items:curList}); curList = null; } };
+  lines.forEach(raw => {
+    const line = raw.replace(/\s+$/, "");
+    const trimmed = line.trim();
+    if (!trimmed) { flushP(); flushL(); return; }
+    const bullet = trimmed.match(/^[-•]\s+(.*)/);
+    if (bullet) { flushP(); if(!curList) curList = []; curList.push(bullet[1]); return; }
+    const header = trimmed.match(/^(#{1,3})\s+(.*)/);
+    if (header) { flushP(); flushL(); blocks.push({t:"h", level:header[1].length, s:header[2]}); return; }
+    flushL();
+    if (!curPara) curPara = [];
+    curPara.push(trimmed);
+  });
+  flushP(); flushL();
+  return blocks.map((b, i) => {
+    if (b.t === "h") return (
+      <div key={i} className={b.level === 1
+        ? "font-serif text-[15px] font-semibold text-[#202A44] mt-2 mb-1 first:mt-0"
+        : "font-mono text-[9px] tracking-[0.15em] text-[#9E652E] uppercase mt-2 mb-1 first:mt-0"
+      }>{renderInlineMd(b.s, "h"+i)}</div>
+    );
+    if (b.t === "ul") return (
+      <ul key={i} className="list-none my-1.5 pl-0 space-y-1">
+        {b.items.map((it, j) => (
+          <li key={j} className="flex gap-2 leading-relaxed">
+            <span className="text-[#9E652E] shrink-0">•</span>
+            <span className="flex-1">{renderInlineMd(it, `ul${i}-${j}`)}</span>
+          </li>
+        ))}
+      </ul>
+    );
+    return <p key={i} className="leading-relaxed mb-2 last:mb-0">{renderInlineMd(b.s, "p"+i)}</p>;
+  });
+}
+
+function StrategistMessage({ m, isLast, streaming }) {
+  const displayText = messageDisplayText(m.content);
+  // Surface attached image (vision content block) above the user's text
+  // bubble — both so the user sees what they sent + visually confirms the
+  // strategist received it. Only applies to user messages.
+  const imageBlock = Array.isArray(m.content)
+    ? m.content.find(b => b && b.type === "image" && b.source && b.source.data)
+    : null;
+
+  if (m.role === "user") {
+    return (
+      <div className="flex flex-col items-end mb-3 gap-1">
+        {imageBlock && (
+          <img
+            src={`data:${imageBlock.source.media_type};base64,${imageBlock.source.data}`}
+            alt="attached"
+            className="max-w-[60%] max-h-[180px] rounded-md border border-[var(--border)] object-cover"
+          />
+        )}
+        <div className="max-w-[85%] px-3.5 py-2.5 rounded-2xl rounded-br-sm text-[13px] leading-relaxed whitespace-pre-wrap" style={{background:"#202A44", color:"#fff"}}>
+          {displayText}
+        </div>
+      </div>
+    );
+  }
+  const showCursor = streaming && isLast && !displayText;
+  return (
+    <div className="flex justify-start mb-3">
+      <div className="max-w-[92%] pl-3 pr-3 py-2 text-[13px] text-[#202A44]" style={{borderLeft:"2px solid #FACC15", background:"#FFFEF7", borderRadius:"0 10px 10px 0"}}>
+        {showCursor ? (
+          <span className="inline-flex items-center gap-1.5 text-[var(--muted)] text-[11px]">
+            <span className="inline-block w-1 h-1 rounded-full animate-pulse" style={{background:"#9E652E"}}></span>
+            <span className="inline-block w-1 h-1 rounded-full animate-pulse" style={{background:"#9E652E", animationDelay:"0.2s"}}></span>
+            <span className="inline-block w-1 h-1 rounded-full animate-pulse" style={{background:"#9E652E", animationDelay:"0.4s"}}></span>
+          </span>
+        ) : (
+          <>
+            {renderStrategistMd(displayText)}
+            {streaming && isLast && <span className="inline-block ml-0.5 animate-pulse text-[#9E652E]">▊</span>}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function AskStrategist({ open, onClose, onRequestApiKey, chat }) {
+  const [input, setInput] = useState("");
+  const scrollRef = React.useRef(null);
+  const inputRef = React.useRef(null);
+
+  useEffect(() => {
+    if (open && inputRef.current) setTimeout(()=> inputRef.current.focus(), 80);
+  }, [open]);
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [chat.messages, chat.streaming]);
+
+  if (!open) return null;
+
+  function handleSubmit(e) {
+    e && e.preventDefault();
+    if (!getClaudeApiKey()) { onRequestApiKey(); return; }
+    const text = input.trim();
+    if (!text) return;
+    chat.send(text);
+    setInput("");
+  }
+
+  function sendSuggested(text) {
+    if (!getClaudeApiKey()) { onRequestApiKey(); return; }
+    chat.send(text);
+  }
+
+  return (
+    <div className="fixed z-[100] fade-in" style={{right:"24px", bottom:"96px", width:"min(440px, calc(100vw - 48px))", height:"min(640px, calc(100vh - 140px))"}}>
+      <div className="w-full h-full flex flex-col rounded-2xl shadow-2xl overflow-hidden bg-white" style={{border:"1px solid var(--border)"}}>
+        {/* Header */}
+        <div className="px-5 py-3.5 flex items-center justify-between gap-3 border-b border-[var(--border)]" style={{background:"linear-gradient(180deg, #202A44 0%, #1E293B 100%)"}}>
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="inline-flex items-center justify-center w-[26px] h-[26px] rounded-full shrink-0" style={{background:"#FACC15",color:"#202A44",fontSize:"13px",fontWeight:700}}>✦</span>
+            <div className="font-serif text-[15px] text-white leading-none">The Strategist</div>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            {chat.messages.length > 0 && (
+              <button onClick={chat.clear} title="Clear conversation"
+                className="font-mono text-[8.5px] tracking-wider px-2 py-1 rounded text-white/70 hover:text-white hover:bg-white/10 transition">CLEAR</button>
+            )}
+            <button onClick={onClose} title="Close (Esc)"
+              className="w-7 h-7 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:bg-white/10 transition text-[14px]">×</button>
+          </div>
+        </div>
+
+        {/* Error banner */}
+        {chat.error === "NO_API_KEY" && (
+          <div className="px-5 py-3 border-b border-[var(--border)] bg-[#FEF3C7] flex items-center justify-between gap-3">
+            <div className="text-[11.5px] text-[#92400E] leading-snug">Set your Anthropic API key to start chatting.</div>
+            <button onClick={onRequestApiKey} className="font-mono text-[9px] tracking-wider px-2.5 py-1.5 rounded bg-[#202A44] text-white">SET KEY</button>
+          </div>
+        )}
+        {chat.error && chat.error !== "NO_API_KEY" && (
+          <div className="px-5 py-2.5 border-b border-[var(--border)] bg-[#FEE2E2] text-[11px] text-[#991B1B] leading-snug">
+            ⚠ {chat.error}
+          </div>
+        )}
+
+        {/* Messages */}
+        <div ref={scrollRef} className="flex-1 overflow-y-auto scrollbar px-4 py-4" style={{background:"#FAFAF7"}}>
+          {chat.messages.length === 0 ? (
+            <div className="h-full flex flex-col justify-center">
+              <div className="text-center mb-5">
+                <div className="text-[12px] text-[var(--muted)] leading-snug max-w-[340px] mx-auto">Ask anything. It knows Willa's brand, the cultural calendar, and what drives relevance on TikTok + IG.</div>
+              </div>
+              <div className="grid gap-1.5">
+                {STRATEGIST_SUGGESTED_PROMPTS.map((p, i) => (
+                  <button key={i} onClick={()=>sendSuggested(p)}
+                    className="text-left px-3 py-2.5 rounded-lg border border-[var(--border)] bg-white hover:border-[#202A44] hover:bg-[#FFFEF7] transition text-[12.5px] text-[#202A44] leading-snug">
+                    <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mr-1.5">↗</span>{p}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <>
+              {chat.messages.map((m, i) => (
+                <StrategistMessage key={i} m={m} isLast={i === chat.messages.length - 1} streaming={chat.streaming}/>
+              ))}
+            </>
+          )}
+        </div>
+
+        {/* Input */}
+        <form onSubmit={handleSubmit} className="border-t border-[var(--border)] bg-white px-3 py-3">
+          <div className="flex items-end gap-2">
+            <textarea
+              ref={inputRef}
+              value={input}
+              onChange={e=>setInput(e.target.value)}
+              onKeyDown={e=>{
+                if(e.key === "Enter" && !e.shiftKey){ e.preventDefault(); handleSubmit(); }
+              }}
+              placeholder={chat.streaming ? "Thinking…" : "Ask anything — ideas, riffs, strategy…"}
+              disabled={chat.streaming}
+              rows={1}
+              className="flex-1 resize-none px-3 py-2 rounded-lg border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] leading-snug focus:outline-none focus:border-[#202A44] disabled:opacity-60"
+              style={{maxHeight:"120px", minHeight:"36px"}}/>
+            <button type="submit" disabled={!input.trim() || chat.streaming}
+              className="shrink-0 px-3.5 py-2 rounded-lg bg-[#202A44] text-white font-mono text-[10px] tracking-wider hover:bg-[#1E293B] transition disabled:opacity-40 disabled:cursor-not-allowed">
+              {chat.streaming ? "…" : "SEND →"}
+            </button>
+          </div>
+          <div className="flex items-center justify-between mt-1.5 px-1">
+            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">ENTER to send · SHIFT+ENTER for new line</div>
+            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)]">
+              ● STRATEGIST READY
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+function StrategistFAB({ open, onToggle, hasNewReply }) {
+  return (
+    <button onClick={onToggle}
+      title={open ? "Close Strategist (Esc)" : "Ask the Strategist (⌘K)"}
+      className="fixed z-[99] bottom-6 right-6 flex items-center gap-2 pl-3.5 pr-4 py-3 rounded-full shadow-xl transition-all hover:shadow-2xl"
+      style={{
+        background: open ? "#FFFFFF" : "linear-gradient(135deg, #202A44 0%, #1E293B 100%)",
+        color: open ? "#202A44" : "#fff",
+        border: open ? "1px solid var(--border)" : "1px solid rgba(250,204,21,0.45)"
+      }}>
+      <span className="inline-flex items-center justify-center w-[22px] h-[22px] rounded-full shrink-0" style={{
+        background: open ? "#202A44" : "#FACC15",
+        color: open ? "#FACC15" : "#202A44",
+        fontSize:"12px",
+        fontWeight:700
+      }}>{open ? "×" : "✦"}</span>
+      <span className="font-mono text-[10.5px] tracking-[0.12em]">{open ? "CLOSE" : "ASK THE STRATEGIST"}</span>
+    </button>
+  );
+}
+
+// ──────────────────────────────────────────────────────────
+// SETTINGS TAB — theme, text size, motion, account utilities.
+// Persisted via localStorage (key: "willas-settings"), applied to the <html>
+// element through data-attributes (data-theme, data-text-size, data-motion)
+// so CSS variable swaps + accessibility classes propagate without prop drilling.
+// ──────────────────────────────────────────────────────────
+function SettingsTab({settings, setSettings, nav, topRight}){
+  const update = (patch)=> setSettings(s => ({...s, ...patch}));
+  const resetWelcome = ()=>{
+    try{ localStorage.removeItem("willas-highlights-seen"); }catch(e){}
+    alert("Welcome popup reset — it'll show on the next page reload.");
+  };
+  const resetAll = ()=>{
+    if(!confirm("Reset every saved preference? This clears settings, the welcome popup state, and the studio API key.")) return;
+    try{
+      localStorage.removeItem("willas-settings");
+      localStorage.removeItem("willas-highlights-seen");
+      localStorage.removeItem(STUDIO_KEY_STORAGE);
+    }catch(e){}
+    setSettings({theme:"light", textSize:"md", reduceMotion:false});
+  };
+
+  // Reusable swatch row for theme selection — three options, one active.
+  const ThemeOption = ({value, label, swatch, sub})=>{
+    const active = settings.theme === value;
+    return (
+      <button onClick={()=>update({theme:value})}
+        className="text-left rounded-lg p-4 transition flex flex-col gap-2"
+        style={{
+          background: active ? "var(--bg-soft)" : "var(--bg-card)",
+          border: "1.5px solid " + (active ? "var(--ink)" : "var(--border)"),
+        }}>
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-[10px] tracking-[0.18em]" style={{color:"var(--muted)"}}>{label.toUpperCase()}</span>
+          {active && <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded text-white" style={{background:"var(--ink)"}}>SELECTED</span>}
+        </div>
+        <div className="flex gap-1.5 mt-1">
+          {swatch.map((s,i)=>(
+            <div key={i} className="flex-1 h-9 rounded" style={{background:s, border:"1px solid var(--border)"}}></div>
+          ))}
+        </div>
+        <div className="text-[12px]" style={{color:"var(--muted)"}}>{sub}</div>
+      </button>
+    );
+  };
+
+  // Reusable size option for text-size selection.
+  const SizeOption = ({value, label, sample})=>{
+    const active = settings.textSize === value;
+    return (
+      <button onClick={()=>update({textSize:value})}
+        className="rounded-lg p-4 transition flex-1 text-left"
+        style={{
+          background: active ? "var(--bg-soft)" : "var(--bg-card)",
+          border: "1.5px solid " + (active ? "var(--ink)" : "var(--border)"),
+        }}>
+        <div className="flex items-center justify-between mb-2">
+          <span className="font-mono text-[10px] tracking-[0.18em]" style={{color:"var(--muted)"}}>{label.toUpperCase()}</span>
+          {active && <span className="font-mono text-[8.5px] tracking-wider px-1.5 py-0.5 rounded text-white" style={{background:"var(--ink)"}}>SELECTED</span>}
+        </div>
+        <div className="font-serif" style={{fontSize:sample, color:"var(--ink)", lineHeight:1.2}}>Aa</div>
+      </button>
+    );
+  };
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="px-8 pt-6 pb-4 border-b" style={{borderColor:"var(--border)"}}>
+        <div className="flex items-start justify-between gap-6">
+          <div>
+            <div className="font-mono text-[9px] tracking-wider mb-1" style={{color:"var(--muted)"}}>SETTINGS</div>
+            <h1 className="font-serif text-[28px] leading-none tracking-tight">Make it yours</h1>
+            <p className="text-[12px] mt-1.5 max-w-2xl" style={{color:"var(--muted)"}}>Theme, text size, and accessibility. Saved to this browser — re-applies every time you load the dashboard.</p>
+          </div>
+          {topRight}
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto scrollbar px-8 py-6">
+        <div className="max-w-[860px] flex flex-col gap-7">
+
+          {/* THEME */}
+          <section>
+            <div className="font-mono text-[10px] tracking-[0.2em] mb-3" style={{color:"var(--muted)"}}>★ THEME</div>
+            <h2 className="font-serif text-[20px] tracking-tight mb-4">Light, dark, or follow your system</h2>
+            <div className="grid grid-cols-3 gap-3">
+              <ThemeOption value="light" label="Light" sub="Daylight cream — the original." swatch={["#FAFAF7","#FFFFFF","#202A44"]}/>
+              <ThemeOption value="dark"  label="Dark"  sub="Late-night ink — easier on eyes after 7pm." swatch={["#10141B","#1A1F2A","#E8EDF2"]}/>
+              <ThemeOption value="auto"  label="Auto"  sub="Match your OS preference (manual override anytime)." swatch={["#FAFAF7","#10141B","#202A44"]}/>
+            </div>
+            <div className="mt-2 text-[11px]" style={{color:"var(--muted)"}}>Brand accent colors stay constant across themes — only surfaces flip.</div>
+          </section>
+
+          {/* TEXT SIZE */}
+          <section>
+            <div className="font-mono text-[10px] tracking-[0.2em] mb-3" style={{color:"var(--muted)"}}>★ TEXT SIZE</div>
+            <h2 className="font-serif text-[20px] tracking-tight mb-4">Pick a comfortable read</h2>
+            <div className="grid grid-cols-3 gap-3">
+              <SizeOption value="sm" label="Small"   sample="20px"/>
+              <SizeOption value="md" label="Medium"  sample="26px"/>
+              <SizeOption value="lg" label="Large"   sample="32px"/>
+            </div>
+            <div className="mt-2 text-[11px]" style={{color:"var(--muted)"}}>Scales body copy and most UI text. Headlines + nav stay anchored so layout doesn't break.</div>
+          </section>
+
+          {/* MOTION */}
+          <section>
+            <div className="font-mono text-[10px] tracking-[0.2em] mb-3" style={{color:"var(--muted)"}}>★ ACCESSIBILITY</div>
+            <h2 className="font-serif text-[20px] tracking-tight mb-4">Reduce motion</h2>
+            <button onClick={()=>update({reduceMotion: !settings.reduceMotion})}
+              className="w-full rounded-lg p-4 transition flex items-center justify-between"
+              style={{
+                background: settings.reduceMotion ? "var(--bg-soft)" : "var(--bg-card)",
+                border: "1.5px solid " + (settings.reduceMotion ? "var(--ink)" : "var(--border)"),
+              }}>
+              <div className="text-left">
+                <div className="text-[14px] font-medium" style={{color:"var(--ink)"}}>Turn off animations + transitions</div>
+                <div className="text-[11.5px] mt-0.5" style={{color:"var(--muted)"}}>Disables the ticker, fade-ins, pulse dots, and the riff-room sparkle. Recommended if you find motion distracting or get vestibular symptoms.</div>
+              </div>
+              <div className="shrink-0 w-12 h-7 rounded-full p-1 transition"
+                style={{background: settings.reduceMotion ? "var(--ink)" : "var(--border)"}}>
+                <div className="w-5 h-5 rounded-full transition-transform"
+                  style={{background:"#fff", transform: settings.reduceMotion ? "translateX(20px)" : "translateX(0)"}}/>
+              </div>
+            </button>
+          </section>
+
+          {/* ACCOUNT / DATA */}
+          <section>
+            <div className="font-mono text-[10px] tracking-[0.2em] mb-3" style={{color:"var(--muted)"}}>★ ACCOUNT + DATA</div>
+            <h2 className="font-serif text-[20px] tracking-tight mb-4">Reset what's saved in this browser</h2>
+            <div className="grid grid-cols-1 gap-2">
+              <button onClick={resetWelcome}
+                className="rounded-lg p-4 text-left transition flex items-center justify-between"
+                style={{background:"var(--bg-card)", border:"1.5px solid var(--border)"}}>
+                <div>
+                  <div className="text-[14px] font-medium" style={{color:"var(--ink)"}}>Replay the weekly highlights popup</div>
+                  <div className="text-[11.5px] mt-0.5" style={{color:"var(--muted)"}}>Clears the "seen this week's highlights" flag so the popup shows next reload.</div>
+                </div>
+                <span className="font-mono text-[10px] tracking-wider" style={{color:"var(--muted)"}}>RESET ↻</span>
+              </button>
+              <button onClick={resetAll}
+                className="rounded-lg p-4 text-left transition flex items-center justify-between"
+                style={{background:"var(--bg-card)", border:"1.5px solid var(--red)"}}>
+                <div>
+                  <div className="text-[14px] font-medium" style={{color:"var(--red)"}}>Reset all preferences (browser-only)</div>
+                  <div className="text-[11.5px] mt-0.5" style={{color:"var(--muted)"}}>Clears settings, welcome popup state, and the saved Studio API key. The dashboard data itself isn't touched.</div>
+                </div>
+                <span className="font-mono text-[10px] tracking-wider" style={{color:"var(--red)"}}>CLEAR ↻</span>
+              </button>
+            </div>
+          </section>
+
+          {/* QUIET FOOTER */}
+          <div className="pt-4 mt-2 border-t font-mono text-[10px] tracking-wider flex items-center justify-between" style={{borderColor:"var(--border-soft)", color:"var(--muted)"}}>
+            <span>SETTINGS · BROWSER-LOCAL · {WELCOME_WEEK_RANGE}</span>
+            <span>WILLA'S SOCIAL CONTENT ENGINE</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App(){
+  const [unlocked,setUnlocked] = useState(()=>{
+    try{ return localStorage.getItem("willas-unlocked")==="1"; }catch(e){ return false; }
+  });
+  if(!unlocked) return <PasswordGate onUnlock={()=>setUnlocked(true)}/>;
+  return <Dashboard/>;
+}
+
+function Dashboard(){
+  const [section,setSection] = useState("intel");
+  const [intelTab,setIntelTab] = useState("pulse");
+  const [selectedBriefId,setSelectedBriefId] = useState(null);
+  const [briefModalOpen,setBriefModalOpen] = useState(false);
+  const [focusId,setFocusId] = useState(null);
+  const [howItWorksOpen,setHowItWorksOpen] = useState(false);
+  const [referenceOpen,setReferenceOpen] = useState(false);
+  const [engineDrawerOpen,setEngineDrawerOpen] = useState(false);
+  const [commandOpen,setCommandOpen] = useState(false);
+  const [strategistOpen,setStrategistOpen] = useState(false);
+  const [namePromptStickyId,setNamePromptStickyId] = useState(null);
+  const strategistChat = useStrategistChat();
+  const topRight = <TabTopRight drawerOpen={engineDrawerOpen} onToggleDrawer={()=>setEngineDrawerOpen(o=>!o)}/>;
+  const [welcomeOpen,setWelcomeOpen] = useState(()=>{
+    try{ return localStorage.getItem("willas-highlights-seen")!==WELCOME_WEEK_KEY; }catch(e){ return true; }
+  });
+
+  // Settings — persisted to localStorage, applied to <html> via data-attributes
+  // so CSS variable swaps + accessibility classes work without re-renders.
+  const [settings,setSettings] = useState(()=>{
+    try{
+      const raw = localStorage.getItem("willas-settings");
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+    return {theme:"light", textSize:"md", reduceMotion:false};
+  });
+  useEffect(()=>{
+    try{ localStorage.setItem("willas-settings", JSON.stringify(settings)); }catch(e){}
+    const html = document.documentElement;
+    // Resolve "auto" theme against OS preference; "light"/"dark" are explicit.
+    const resolveTheme = ()=>{
+      if(settings.theme === "auto"){
+        return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      return settings.theme === "dark" ? "dark" : "light";
+    };
+    html.setAttribute("data-theme", resolveTheme());
+    html.setAttribute("data-text-size", settings.textSize || "md");
+    html.setAttribute("data-motion", settings.reduceMotion ? "reduce" : "normal");
+    // If "auto", listen to OS preference changes and re-apply.
+    if(settings.theme === "auto" && window.matchMedia){
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      const onChange = ()=> html.setAttribute("data-theme", mq.matches ? "dark" : "light");
+      mq.addEventListener("change", onChange);
+      return ()=> mq.removeEventListener("change", onChange);
+    }
+  },[settings]);
+
+  // ── Studio state ──
+  const [studioState,setStudioState] = useState(loadStudioState);
+  // Phase C (2026-05-18): Studio uses the /api/strategist proxy; client
+  // doesn't hold the key. Initializing to truthy sentinel so the modal
+  // gates downstream pass — actual auth is server-side.
+  const [studioApiKey,setStudioApiKey] = useState("proxy");
+  const [apiKeyModalOpen,setApiKeyModalOpen] = useState(false);
+  const [studioFlash,setStudioFlash] = useState(null); // {stickyId, message} — "sent to Studio" confirmation
+
+  useEffect(()=>{ saveStudioState(studioState); }, [studioState]);
+
+  function saveApiKey(key){
+    try{ localStorage.setItem(STUDIO_KEY_STORAGE, key); }catch(e){}
+    setStudioApiKey(key);
+    setApiKeyModalOpen(false);
+  }
+
+  function addSticky(partial){
+    const currentName = getUserName();
+    const sticky = {
+      id: newId("st"),
+      createdAt: Date.now(),
+      createdBy: currentName || "Someone on the team",
+      ...partial
+    };
+    setStudioState(prev => ({...prev, stickies: [sticky, ...prev.stickies]}));
+    // First-time post — prompt for name. Sticky is already created with a
+    // generic byline; modal will retro-stamp it once user enters their name.
+    if (!currentName) setNamePromptStickyId(sticky.id);
+    return sticky;
+  }
+
+  function saveNameAndStampSticky(name) {
+    const trimmed = (name || "").trim();
+    if (!trimmed) return;
+    setUserName(trimmed);
+    if (namePromptStickyId) {
+      setStudioState(prev => ({
+        ...prev,
+        stickies: prev.stickies.map(s =>
+          s.id === namePromptStickyId ? {...s, createdBy: trimmed} : s
+        )
+      }));
+    }
+    setNamePromptStickyId(null);
+  }
+  function deleteSticky(id){
+    setStudioState(prev => ({
+      stickies: prev.stickies.filter(s=>s.id!==id),
+      briefs: prev.briefs.filter(b=>b.stickyId!==id)
+    }));
+  }
+  function upsertBriefForSticky(stickyId, draft, chat){
+    setStudioState(prev => {
+      const existing = prev.briefs.find(b=>b.stickyId===stickyId);
+      if(existing){
+        return {...prev, briefs: prev.briefs.map(b=> b.stickyId===stickyId ? {...b, draft, chat} : b)};
+      }
+      const fresh = {id: newId("sb"), stickyId, draft, chat, adopted:false, createdAt: Date.now()};
+      return {...prev, briefs: [fresh, ...prev.briefs]};
+    });
+  }
+  function updateBriefById(briefId, draft, chat){
+    setStudioState(prev => ({
+      ...prev,
+      briefs: prev.briefs.map(b => b.id === briefId ? {...b, draft, chat} : b)
+    }));
+  }
+  function adoptBrief(briefId){
+    setStudioState(prev => ({
+      ...prev,
+      briefs: prev.briefs.map(b => b.id === briefId ? {...b, adopted: true, adoptedAt: Date.now()} : b)
+    }));
+  }
+
+  // Adopted Studio briefs transformed into the BRIEFS schema so they render
+  // through the exact same Content Briefs components. Ordered newest-first
+  // so a just-adopted brief jumps to the top of the grid.
+  const studioAdoptedBriefs = useMemo(()=>{
+    return studioState.briefs
+      .filter(b => b.adopted)
+      .sort((a,b)=>(b.adoptedAt||0) - (a.adoptedAt||0))
+      .map(b => {
+        const sticky = studioState.stickies.find(s => s.id === b.stickyId);
+        return studioBriefToContentBrief(b, sticky);
+      });
+  }, [studioState.briefs, studioState.stickies]);
+
+  // "+ Send to Studio" from any intel card. Flashes a short-lived confirmation
+  // on the source card so the user sees "→ SENT" without context-switching.
+  // sourceId = the ID of the card the send came from (trend ID, comp ID, pulse ID).
+  function sendToStudio(sourceId, partial){
+    addSticky(partial);
+    setStudioFlash(sourceId);
+    setTimeout(()=> setStudioFlash(null), 1800);
+  }
+  function closeWelcome(){
+    try{ localStorage.setItem("willas-highlights-seen", WELCOME_WEEK_KEY); }catch(e){}
+    setWelcomeOpen(false);
+  }
+  function openWelcome(){ setWelcomeOpen(true); }
+
+  function openBrief(briefId){
+    setSelectedBriefId(briefId);
+    setBriefModalOpen(true);
+  }
+  function closeBrief(){ setBriefModalOpen(false); }
+
+  // When the user leaves Content Briefs, close the modal so coming back later
+  // lands on the clean grid view instead of a surprise re-open.
+  useEffect(()=>{
+    if(section !== "briefs") setBriefModalOpen(false);
+  }, [section]);
+
+  // Global ⌘K / Ctrl+K listener — opens the Strategist chat from anywhere.
+  // (Previously opened the command palette; replaced 2026-04-22 per Christina's
+  // feedback that the persistent chat should be the primary ⌘K experience.)
+  // Esc closes the Strategist.
+  useEffect(()=>{
+    const onKey = (e)=>{
+      if((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")){
+        e.preventDefault();
+        setStrategistOpen(s => !s);
+      }
+      if(e.key === "Escape" && strategistOpen){
+        setStrategistOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return ()=> window.removeEventListener("keydown", onKey);
+  }, [strategistOpen]);
+
+  // Build the command palette search index from live data. Rebuilds when
+  // Studio stickies change so the palette sees fresh inputs immediately.
+  const commandIndex = useMemo(()=> buildCommandIndex(studioState.stickies), [studioState.stickies]);
+
+  function handleCommandSelect(item){
+    if(item.type === "TREND")          nav.goToTrend(item.id);
+    else if(item.type === "COMPETITOR") nav.goToComp(item.id);
+    else if(item.type === "BRIEF")      nav.goToBrief(item.id);
+    else if(item.type === "PULSE"){ setSection("intel"); setIntelTab("pulse"); }
+    else if(item.type === "STUDIO")     setSection("studio");
+    else if(item.type === "ACTION"){
+      switch(item.action){
+        case "studio":     setSection("studio"); break;
+        case "briefs":     setSection("briefs"); break;
+        case "intel":      setSection("intel"); break;
+        case "pulse":      setSection("intel"); setIntelTab("pulse"); break;
+        case "trends":     setSection("intel"); setIntelTab("trends"); break;
+        case "comp":       setSection("intel"); setIntelTab("comp"); break;
+        case "playbook":   setSection("playbook"); break;
+        case "perf":       setSection("perf"); break;
+        case "highlights": openWelcome(); break;
+        case "reference":  setReferenceOpen(true); break;
+        case "howitworks": setHowItWorksOpen(true); break;
+        case "engine":     setEngineDrawerOpen(true); break;
+      }
+    }
+    setCommandOpen(false);
+  }
+
+  function flashFocus(id){
+    setFocusId(id);
+    setTimeout(()=>{
+      const el = document.getElementById("card-"+id);
+      if(el) el.scrollIntoView({behavior:"smooth", block:"center"});
+    }, 60);
+    setTimeout(()=> setFocusId(null), 2400);
+  }
+
+  // Opens the floating Strategist chat pre-seeded with a user message.
+  // Replaces prior chat history so each seeded riff starts clean.
+  function openStrategistWithSeed(seedMessage){
+    if (!seedMessage) { setStrategistOpen(true); return; }
+    if (!getClaudeApiKey()) { setApiKeyModalOpen(true); setStrategistOpen(true); return; }
+    setStrategistOpen(true);
+    setTimeout(()=> strategistChat.send(seedMessage, { replaceHistory: true }), 180);
+  }
+
+  const nav = {
+    goToBrief(briefId){
+      // Linking from a Trend/Competitor card jumps to Content Briefs AND opens
+      // the detail modal directly, so the user is dropped on the thing they
+      // clicked rather than just the grid.
+      setSection("briefs");
+      openBrief(briefId);
+    },
+    goToTrend(trendId){
+      setSection("intel");
+      setIntelTab("trends");
+      flashFocus(trendId);
+    },
+    goToComp(compId){
+      setSection("intel");
+      setIntelTab("comp");
+      flashFocus(compId);
+    },
+    goToPulse(pulseId){
+      setSection("intel");
+      setIntelTab("pulse");
+      flashFocus(pulseId);
+    },
+    goToStudio(){ setSection("studio"); },
+    sendToStudio,
+    studioFlash,
+    riffWithStrategist: openStrategistWithSeed,
+    requestApiKey: ()=> setApiKeyModalOpen(true)
+  };
+
+  return (
+    <div className="flex h-screen w-screen overflow-hidden">
+      <Sidebar section={section} setSection={setSection}
+        onHowItWorks={()=>setHowItWorksOpen(true)}
+        onOpenReference={()=>setReferenceOpen(true)}
+        onOpenWelcome={openWelcome}/>
+      <main className="flex-1 overflow-hidden">
+        {section==="intel" && <IntelligenceBrief tab={intelTab} setTab={setIntelTab} focusId={focusId} nav={nav} topRight={topRight}/>}
+        {section==="playbook" && <WeeklyPlaybook nav={nav} topRight={topRight}/>}
+        {section==="briefs" && <ContentBriefs selectedId={selectedBriefId} briefModalOpen={briefModalOpen} openBrief={openBrief} closeBrief={closeBrief} nav={nav} topRight={topRight} studioAdopted={studioAdoptedBriefs}/>}
+        {section==="studio" && <Studio
+          stickies={studioState.stickies}
+          briefs={studioState.briefs}
+          apiKey={studioApiKey}
+          onAddSticky={addSticky}
+          onDeleteSticky={deleteSticky}
+          onGenerate={upsertBriefForSticky}
+          onRiff={updateBriefById}
+          onAdopt={adoptBrief}
+          onRequestApiKey={()=>setApiKeyModalOpen(true)}
+          onOpenApiKey={()=>setApiKeyModalOpen(true)}
+          nav={nav}
+          topRight={topRight}/>}
+        {section==="perf" && <Performance nav={nav} topRight={topRight}/>}
+        {section==="settings" && <SettingsTab settings={settings} setSettings={setSettings} nav={nav} topRight={topRight}/>}
+      </main>
+      <HowItWorks open={howItWorksOpen} onClose={()=>setHowItWorksOpen(false)}/>
+      <ReferenceGuide open={referenceOpen} onClose={()=>setReferenceOpen(false)}/>
+      <WelcomeGuide open={welcomeOpen} onClose={closeWelcome}/>
+      <StudioApiKeyModal open={apiKeyModalOpen} current={studioApiKey} onSave={saveApiKey} onClose={()=>setApiKeyModalOpen(false)}/>
+      <NamePromptModal open={!!namePromptStickyId} onSave={saveNameAndStampSticky} onSkip={()=>setNamePromptStickyId(null)}/>
+      <EngineDrawer open={engineDrawerOpen} onClose={()=>setEngineDrawerOpen(false)}/>
+      <CommandPalette open={commandOpen} onClose={()=>setCommandOpen(false)} index={commandIndex} onSelect={handleCommandSelect}/>
+      {/* Ask the Strategist — floating chat, persistent across tabs.
+          Opens via the FAB, via ⌘K (toggles), via the sidebar + top-right
+          buttons (both rewired from the old command palette). */}
+      <AskStrategist open={strategistOpen} onClose={()=>setStrategistOpen(false)} onRequestApiKey={()=>setApiKeyModalOpen(true)} chat={strategistChat}/>
+      <StrategistFAB open={strategistOpen} onToggle={()=>setStrategistOpen(o=>!o)}/>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
