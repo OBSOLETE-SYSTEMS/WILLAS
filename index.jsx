@@ -7018,6 +7018,7 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
       <div className="flex-1 overflow-y-auto scrollbar px-8 py-5">
         <div className="max-w-[1400px]">
           <div className="mb-3">
+            <PostingAsStrip/>
             <StudioInputBar onAdd={onAddSticky}/>
           </div>
 
