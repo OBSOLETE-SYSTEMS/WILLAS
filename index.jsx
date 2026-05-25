@@ -328,29 +328,29 @@ const BRIEFS = [
     id:"MAY25-IG-R1",
     platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
     timing:"Tue May 26 · 12pm", priority:"BIG SWING", rideNow:true,
-    concept:"\"scanned, sealed, poured. 100/100.\" — Yuka Kids reveal Reel",
+    concept:"\"scanned 12 kids drinks at sprouts. one of them was green.\" — at-shelf mom-creator scan-with-me confession",
     intel:[
-      {type:"PULSE",text:"Yuka app went mainstream-viral MAY 2026 (CP-7) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. App is #1 in US Health & Fitness, 94% of users return a 'bad' scored product. Willa's Kids holds 100/100. Brand-direct receipt moment."},
-      {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal — scan, then pour. Olipop muse (calm authority without supplement-speak). Lead-with-solution: Yuka 100 in beat 1, mass-consumer-norm context as backdrop. Phone-scan POV format universal-readable."},
-      {type:"COMPETITOR",text:"Internal only — no other kids-RTD oat milk holds Yuka 100/100. Orgain Kids 9g cane sugar, Ripple Kids 5g cane sugar + not organic, Oatly Kids 7g oat syrup + 2g fiber. Willa's Kids 6g sugar + 3g fiber + DHA from algae oil is the structural cleanest score in the category."}
+      {type:"PULSE",text:"Yuka app went mainstream-viral MAY 2026 (CP-7) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. App is #1 in US Health & Fitness. Cultural moment is the BEHAVIOR: parents now filming themselves doing 'scan with me' grocery-aisle videos in the kids-drinks section. Yuka-in-the-cart is normal mom behavior."},
+      {type:"AUDIENCE",text:"Pattern 03 Relatable Confession + Pattern 09 Aesthetic IRL Encounter — root in the lived mom-creator behavior (scan-with-me content), not the brand claim. Partake Foods muse (parent-first warmth) + Ghia (aesthetic IRL). The 100/100 score is the PUNCHLINE at the end of the video, NOT the lead. Real-aisle, real-phone, real-find."},
+      {type:"COMPETITOR",text:"Internal only — Orgain Kids 9g cane sugar, Ripple Kids 5g cane sugar + not organic, Oatly Kids 7g oat syrup + 2g fiber, Kate Farms Kids 9g rice syrup/agave. None hit Yuka green. Willa's Kids 6g sugar + 3g fiber + DHA from algae oil + top-9 allergen-free is the structurally clean 100/100 in the category."}
     ],
     hooks:[
-      {text:"scanned, sealed, poured. 100/100.",recommended:true},
-      {text:"the app the audience scans every aisle gave Willa's Kids the highest score it has.",recommended:false},
-      {text:"94% return what scores red. (this scored 100.)",recommended:false}
+      {text:"scanned 12 kids drinks at sprouts. one of them was green.",recommended:true},
+      {text:"the carton at the end of the scan-with-me video. (the one your phone said yes to.)",recommended:false},
+      {text:"i'm the mom in the aisle with the phone out. you know the one.",recommended:false}
     ],
-    caption:"scanned, sealed, poured. 💛\n\n(yuka kids: 100/100.)\n\nthe app that's been everywhere in the grocery aisle this month? it scans the barcode, it grades the carton, and it tells you to put back the ones it doesn't like.\n\nWilla's Kids: 100/100.\n\n8g protein. 3g fiber. DHA omega-3 from algae oil. top-9 allergen-free (no nut, soy, gluten, dairy, sesame). bobby approved. zero artificial colors.\n\nthat's not a marketing line. that's the score on the app the audience is already using.\n\nshhh… 🌾",
-    hashtags:["#willaskids","#yuka100","#cleanlabel","#momsoftiktok","#kidsdrink","#scanthecarton","#allergenfree","#dhakids","#bobbyapproved","#wholeoat"],
-    visual:"Vertical phone-screen POV (9:16). Hand picks up Willa's Kids carton from grocery shelf. Phone scans barcode in Yuka app. Cut to Yuka app screen revealing 100/100 green-score reveal. Cut to morning kitchen: hand pours Willa's Kids into a glass for a toddler-aged kid (face out of frame). Soft morning daylight, real-kitchen aesthetic, no studio finish. NO on-camera face.",
+    caption:"scanned 12 kids drinks at sprouts. one of them was green. 💛\n\n(you know the kind of video this is. the phone in the cart, the yuka app open, the slow walk down the kids-aisle, the carton-by-carton verdict.)\n\nmost of what i scanned came back orange or red. high sugar. synthetic dyes. seed oils. carrageenan in the toddler ones. one carton came back 100/100 green.\n\nWilla's Kids:\n→ 100/100 yuka score (the only kids drink in the aisle that hit it)\n→ 8g protein, 3g fiber, DHA omega-3 from algae oil\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ no synthetic dyes, no rapeseed, no gums\n\nshhh… that's the one in the cart. 🌾",
+    hashtags:["#willaskids","#scanwithme","#yuka","#momtok","#kidsdrink","#cleanlabel","#allergenfree","#dhakids","#bobbyapproved","#grocerytok"],
+    visual:"Vertical phone-screen POV (9:16) at the Sprouts kids-drinks aisle. Phone scans carton after carton — each scan reveals an orange or red Yuka score (real mom-creator video feel, not branded). Quick cuts through 3-4 disappointing scans. Then the phone scans Willa's Kids carton — green 100/100 reveal. Carton goes into the cart. Cut to home kitchen: kid's hand pours from the Willa's Kids carton into a glass. Real-aisle, real-cart, real-kitchen. NO on-camera face.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"POV phone scans Willa's Kids carton barcode in grocery aisle. Text overlay: 'scanned.'"},
-      {scene:"REVEAL",time:"3-7s",action:"Yuka app screen pops the 100/100 score in green. Text: '100/100.'"},
-      {scene:"CUT",time:"7-10s",action:"Morning kitchen. Hand pours Willa's Kids into glass for a kid. Text: 'sealed, poured.'"},
-      {scene:"END CARD",time:"10-14s",action:"Carton sits on counter with kid's hand reaching for the glass. Stinger: 'shhh… 8g protein, 3g fiber, DHA, top-9 allergen-free.' (BS-3)"}
+      {scene:"HOOK",time:"0-3s",action:"At-shelf POV. Phone scans first kids-drink carton — Yuka reveals red/orange score. Text overlay: 'scanned 12 kids drinks at sprouts.'"},
+      {scene:"BUILD",time:"3-9s",action:"Quick cuts through 3-4 more cartons being scanned, each revealing red/orange (no brand names visible — angle so labels are blurred). Text: 'high sugar. dyes. seed oils. carrageenan.'"},
+      {scene:"REVEAL",time:"9-12s",action:"Phone scans Willa's Kids carton. Yuka reveals green 100/100. Carton goes into the cart. Text: 'one of them was green.'"},
+      {scene:"END CARD",time:"12-15s",action:"Home kitchen. Kid's hand pours from the Willa's Kids carton into a glass. Stinger: 'shhh… 100/100. that's the one in the cart. 🌾' (BS-3)"}
     ],
-    audio:"Warm narrative voiceover — brand voice (no founder POV). 'scan it yourself. that's all we ask.' Soft instrumental morning-kitchen bed underneath.",
+    audio:"Soft mom-creator-voice VO (cofounder-sister or ambient narration — NOT Christina per Christina-is-not-a-mom rule): 'scanned 12 kids drinks at sprouts. one of them was green.' Ambient grocery-aisle sound + light morning kitchen bed at the end.",
     duration:"14-16 seconds",
-    cta:{soft:"Scan + share 📱",medium:"Find Willa's Kids at Sprouts + Whole Foods",strong:"Try Willa's Kids — yuka 100/100"},
+    cta:{soft:"scan + share 📱",medium:"find Willa's Kids at Sprouts + Whole Foods",strong:"try Willa's Kids — the green one"},
     benefitShorthandId:"BS-3"
   },
   {
@@ -967,21 +967,21 @@ const BRIEF_LINKS = {
 // ─── Paid Amplify Plans (Paid Media Planner output) ──────
 const AMPLIFY_PLANS = {
   "MAY25-IG-R1": {
-    headline:"Yuka 100/100 Kids brand-direct reveal — capture the Yuka mainstream-viral lift window",
+    headline:"Scan-with-me mom-creator at-shelf Reel — ride the Yuka mainstream-viral cultural moment",
     totalBudget:260,
     testWindow:"5 days (Tue May 26 → Sat May 30)",
     objective:"Saves + Profile Visits",
     guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
-    why:"Yuka app went mainstream-viral in MAY 2026 (CP-7, T-9) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. 94% of users return a 'bad' scored product, 92% buy fewer UPF products. Willa's Kids holds 100/100. Scan-then-pour POV format is universal-readable + brand-direct receipt. Phone-scan reveal sequence is the share engine.",
+    why:"Yuka app went mainstream-viral in MAY 2026 (CP-7, T-9) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. The CULTURAL MOMENT is the behavior: parents are now filming themselves doing scan-with-me grocery-aisle videos. Yuka-in-the-cart is normal mom behavior. This brief joins that content lane as the brand-direct find at the end of the video — 100/100 is the punchline, not the lead. Pattern 03 (Relatable Confession) + Pattern 09 (Aesthetic IRL Encounter) = mom-creator-native format.",
     placements:[
       {
         platform:"Meta",
         format:"Reels Ad (IG Reels + FB Reels)",
         budget:260,
-        audience:"Interest: Yuka App, Clean Label, Kids Nutrition, Allergen-Free, Mom-Founded · Age: 28–48 · Behavior: Has scanned Yuka or shopped Whole Foods Kids aisle (30 days)",
-        lookalike:"Klaviyo Willa's Kids purchaser lookalike + Bobby Approved engaged audience",
-        expectedReach:"70K–120K video views",
-        note:"Optimize for Saves. Phone-scan reveal cuts to morning kitchen pour — make sure the Yuka green-100 screen is visible for ≥2 seconds. If sentiment stays >0.85 through 72hr, extend to $360 for full weekend ride."
+        audience:"Interest: Yuka App, Clean Label, Kids Nutrition, Allergen-Free, Mom-Founded, Grocery Shopping, Sprouts, Whole Foods · Age: 28–48 · Behavior: Has scanned Yuka or shopped Whole Foods/Sprouts Kids aisle (30 days)",
+        lookalike:"Klaviyo Willa's Kids purchaser lookalike + Bobby Approved engaged audience + scan-with-me mom-creator follower lookalike",
+        expectedReach:"75K–135K video views",
+        note:"Optimize for Saves. The aisle scan sequence is the share engine — make sure the disappointing scans (red/orange) feel cinematically real, not branded. The green 100/100 reveal at scan-12 lands the payoff. Carton-into-cart shot then home-kitchen pour. If sentiment stays >0.85 through 72hr, extend to $360 for full weekend ride."
       }
     ]
   },
@@ -1091,9 +1091,9 @@ const KILLED = [
 // so the post could be written by anyone on the team.
 const CAPTION_VARIANTS = {
   "MAY25-IG-R1": {
-    direct:"scanned, sealed, poured. 💛\n\n(yuka kids: 100/100.)\n\nthe app that's been everywhere in the grocery aisle this month? it scans the barcode, it grades the carton, and it tells you to put back the ones it doesn't like.\n\nWilla's Kids: 100/100.\n\n8g protein. 3g fiber. DHA omega-3 from algae oil. top-9 allergen-free (no nut, soy, gluten, dairy, sesame). bobby approved. zero artificial colors.\n\nthat's not a marketing line. that's the score on the app the audience is already using.\n\nshhh… 🌾",
-    warm:"scanned, sealed, poured — yuka kids: 100/100. (the app already in your grocery cart agrees.) 💛",
-    punchy:"yuka kids: 100/100. (scan it yourself.) 💛"
+    direct:"scanned 12 kids drinks at sprouts. one of them was green. 💛\n\n(you know the kind of video this is. the phone in the cart, the yuka app open, the slow walk down the kids-aisle, the carton-by-carton verdict.)\n\nmost of what i scanned came back orange or red. high sugar. synthetic dyes. seed oils. carrageenan in the toddler ones. one carton came back 100/100 green.\n\nWilla's Kids:\n→ 100/100 yuka score (the only kids drink in the aisle that hit it)\n→ 8g protein, 3g fiber, DHA omega-3 from algae oil\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ no synthetic dyes, no rapeseed, no gums\n\nshhh… that's the one in the cart. 🌾",
+    warm:"scanned 12 kids drinks at sprouts. one came back green. (Willa's Kids — 100/100.) 💛",
+    punchy:"scanned 12 kids drinks. one was green. 💛"
   },
   "MAY25-TT-1": {
     direct:"tiktok's viral cinnamon roll — but dairy-free. 🌯\n\n(yes the heavy cream swap still works.)\n\nevery fyp this month: tortilla rolled with butter + cinnamon sugar, baked with heavy cream poured over to get the gooey-roll texture. we swapped the heavy cream for Willa's Barista + a splash of coconut cream.\n\n→ 1 burrito tortilla, room-temp butter, cinnamon sugar inside\n→ roll, slice into 1-inch pieces, place in baking dish\n→ pour ⅓ cup Willa's Barista + 2 tbsp coconut cream over the top\n→ bake 450°F for 8-10 min\n→ powdered sugar icing on top\n\nsame gooey, dairy-free pour. 4-ingredient Willa's Barista does the heavy lifting, no rapeseed, no gums to fight the cinnamon. 🌾\n\nshhh… you'd never know.",
@@ -1658,7 +1658,7 @@ const POSTING_LOGIC = {
 // ──────────────────────────────────────────────────────────
 const BRIEF_DNA = {
   // BIG SWINGS
-  "MAY25-IG-R1":   "on-pack-checklist",      // Yuka Kids 100/100 scan reveal
+  "MAY25-IG-R1":   "at-shelf-moment",        // Yuka scan-with-me mom-creator at-shelf confession
   "MAY25-TT-1":    "viral-recipe-remix",     // Tortilla cinnamon roll dairy-free swap
   "MAY25-PIN-1":   "viral-recipe-remix",     // Sourdough rhubarb snack cake heritage pin
   // HIGH PRIORITY
@@ -1691,10 +1691,10 @@ BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
 // ──────────────────────────────────────────────────────────
 const BRIEF_FOOTAGE_INSPO = {
   "MAY25-IG-R1": {
-    shoot:["POV phone-scanner over Willa's Kids carton in grocery aisle (Sprouts or Whole Foods)","Yuka app screen capture revealing 100/100 score in green","Morning kitchen: hand pours Willa's Kids into glass, kid reaches in","Soft daylight on counter with carton + glass"],
-    found:["Trend reference: Yuka app showcase clips on TikTok #yuka tag","WCCB Charlotte MAY 11 'What the Tech: Yuka' clip if usable for stitch","WaPo MAR 17 + WWD Yuka coverage (engine context only — don't cite in copy)"],
-    memes:["Phone-screen-reveal format ('the moment the app scans X')","Scan-then-pour authority reveal"],
-    archive:["Willa's existing morning-kitchen b-roll for the cut-away","Willa's Kids carton + Yuka 100/100 badge cleared assets"]
+    shoot:["POV at the Sprouts kids-drinks aisle — phone-held shot scanning carton after carton in the kids-RTD section","Yuka app screen captures (multiple scans revealing red/orange scores, then one green 100/100 reveal on the Willa's Kids carton)","Carton-goes-into-the-cart shot","Home kitchen: kid's hand pours Willa's Kids into a glass (face out of frame)","Real-aisle / real-cart / real-kitchen aesthetic — NO studio finish"],
+    found:["Trend reference: TikTok 'scan with me' / #yuka grocery-aisle mom-creator videos (multiple creators May 2026 — rising format as Yuka mainstreams)","WCCB Charlotte MAY 11 'What the Tech: Yuka' coverage (engine context, don't cite in copy)","Mom-creator scan-with-me hashtag landing pages (TikTok #scanwithme + #yukascan)"],
+    memes:["Pattern 03 Relatable Confession ('i'm the mom in the aisle with the phone out')","Pattern 09 Aesthetic IRL Encounter (real grocery aisle, real cart, real find)","'scanned X drinks at the store, only one was green' content lane"],
+    archive:["Willa's existing in-store / Sprouts visit footage if any","Willa's Kids carton + Yuka 100/100 badge cleared assets","Kid-pour b-roll for the end card"]
   },
   "MAY25-TT-1": {
     shoot:["Hands rolling burrito tortilla with butter+cinnamon sugar (overhead)","Willa's Barista pour shot (cloud-pour over the rolls)","Coconut cream small-bowl cameo","Oven-to-plate baked-roll lift","Icing drizzle finale"],
