@@ -25,7 +25,7 @@ const PILLAR_COLORS = {
 const TRENDS = [
   {
     trend:"Elmhurst 1925 just took Clean Protein nationwide at Sprouts 🥛 — 4 SKUs at $4.99, 27g plant protein, no gums or seed oils, NEXTY-Award Pistachio Crème",
-    detail:"Elmhurst 1925's Clean Protein line debuted nationwide at Sprouts Farmers Market on MAY 11, 2026 — 4 SKUs at $4.99 (2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream). 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going direct at Willa's positioning AT WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds (not organic, not glyphosate-free, not WBENC-certified, not mother-founded) — that's the Willa's moat.",
+    detail:"Elmhurst 1925's Clean Protein line just went nationwide at Sprouts Farmers Market (BevNET MAY 18 + Dairy Foods MAY 21 coverage) — 4 SKUs at $4.99 (2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream). 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going direct at Willa's positioning AT WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds (not organic, not glyphosate-free, not WBENC-certified, not mother-founded) — that's the Willa's moat.",
     platform:"Trade Press + Retail",
     views:"Nationwide at Sprouts · 4 SKUs · $4.99",
     velocity:"high",
@@ -96,7 +96,7 @@ const TRENDS = [
 
 
 const TICKER = [
-  {agent:"comp",     text:"Elmhurst's Clean Protein went nationwide at Sprouts MAY 11-21 (27g protein, 4 SKUs, no gums/seed oils) — willa's cert-stack BIG SWING IG-R1 + cert-moat Reel R5 queued in response 🚨"},
+  {agent:"comp",     text:"Elmhurst's Clean Protein just went nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — 27g protein, 4 SKUs, no gums/seed oils · willa's cert-stack IG-R5 cert-moat Reel queued in response 🚨"},
   {agent:"trend",    text:"Yuka app went mainstream-viral in MAY (94% of users return 'bad' scored products) — willa's Kids 100/100 is the brand-direct receipt · BIG SWING IG-R1 phone-scan reveal queued 📱"},
   {agent:"pulse",    text:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News) — willa's plays the dairy-free swap with Barista + coconut cream · BIG SWING TT-1 queued 🌯"},
   {agent:"pulse",    text:"Pinterest rhubarb +51% MAY 22 weekly report — sourdough rhubarb snack cake heritage pin (PIN-1) queued for THU MAY 28 · willa's grandma-kitchen voice owns the lane 🌿"},
@@ -117,7 +117,7 @@ const TICKER = [
 const COMPETITORS = [
   {
     name:"Elmhurst 1925",
-    status:"🚨 Elmhurst's Clean Protein line went NATIONWIDE at Sprouts on MAY 11, 2026 — 4 flavors at $4.99: 2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream. 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going DIRECT at Willa's positioning at WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds though: Elmhurst is NOT organic, NOT glyphosate-free-certified by Detox Project, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice: don't punch, don't panic, just keep showing the cert-stack receipts.",
+    status:"🚨 Elmhurst's Clean Protein line just went NATIONWIDE at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21 coverage) — 4 flavors at $4.99: 2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream. 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going DIRECT at Willa's positioning at WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds though: Elmhurst is NOT organic, NOT glyphosate-free-certified by Detox Project, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice: don't punch, don't panic, just keep showing the cert-stack receipts.",
     direction:"up",
     opportunity:"🚨 Elmhurst goes direct at Willa's positioning at Sprouts — Willa's moat is the 4 certs Elmhurst can't claim (organic + Detox Project + WBENC + mother-founded). Show the credentials this week.",
     sources:[
@@ -483,7 +483,7 @@ const BRIEFS = [
     timing:"Wed May 27 · 12pm", priority:"HIGH",
     concept:"\"four certs that don't fit in a marketing line.\" — Willa's-first cert reveal, founder authority",
     intel:[
-      {type:"COMPETITOR",text:"Engine context only — Elmhurst 1925 Clean Protein nationwide at Sprouts MAY 11-21 (C-5). Closest peer goes direct at Willa's positioning at primary retailer. NEVER name in consumer copy. Drives the 'show the cert moat' play this week."},
+      {type:"COMPETITOR",text:"Engine context only — Elmhurst 1925 Clean Protein just went nationwide at Sprouts (C-1, BevNET MAY 18 + Dairy Foods MAY 21). Closest peer goes direct at Willa's positioning at primary retailer. NEVER name in consumer copy. Drives the 'show the cert moat' play this week."},
       {type:"AUDIENCE",text:"Pattern 06 Founder Humanization + Pattern 04 Taboo-as-Normal. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them confidence). Christina on-camera per reserved category. Calm-authority tone, no preach."},
       {type:"PULSE",text:"Reinforces the 'four certs you can't fake' brand frame as competitive moat narrative — paired with Yuka 100/100 (CP-7) and the state-by-state food chemical regulation framing as proof points landing this same week."}
     ],
@@ -771,11 +771,11 @@ const AGENT_DETAILS = {
 
 // ─── What the engine decided this week (visible autonomy) ─
 const DECISIONS = [
-  {icon:"↑",title:"Promoted Yuka Kids 100/100 phone-scan Reel to BIG SWING (Tue May 26 12pm)",reason:"Yuka app went mainstream-viral in MAY 2026 (WCCB MAY 11 + WaPo + WWD + CBS Miami coverage) — 94% of users return 'bad' scored products. Willa's Kids holds 100/100 — the brand-direct receipt moment. Phone-scan POV format is universal-readable. $260 Meta Reels Ad queued for 72-hr saves lift.",agent:"composer"},
+  {icon:"↑",title:"Promoted Yuka Kids 100/100 phone-scan Reel to BIG SWING (Tue May 26 12pm)",reason:"The Grocery Cart MAY 19 marked the Yuka backlash inflection — critics flag the app for moralizing food. Willa's Kids 100/100 holds up regardless of which side parents land on. Phone-scan POV format is universal-readable. $260 Meta Reels Ad queued for 72-hr saves lift.",agent:"composer"},
   {icon:"↑",title:"Promoted tortilla cinnamon roll dairy-free swap to BIG SWING (Thu May 28 9am)",reason:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News + Parade) — millions of views. Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream). Cloud-pour visual is the share engine. $240 TikTok Spark Ad queued.",agent:"composer"},
   {icon:"↑",title:"Promoted sourdough rhubarb snack cake heritage pin to BIG SWING (Thu May 28 anytime)",reason:"Pinterest rhubarb +51% MAY 22 weekly report — heritage-coded summer ingredient. Willa's grandma-kitchen voice owns the lane. Pinterest planning audience is 7-10 days ahead; extended 10-day test window matches. $180 Pinterest Promoted Pin queued.",agent:"composer"},
   {icon:"⚡",title:"Queued seed-oil-free Christina founder Reel as cultural-conversation response (Thu May 28 6pm)",reason:"STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative. Willa's Original is already on the right side — the 4-ingredient deck does the work. Calm-receipts response, founder reserved-category appearance.",agent:"composer"},
-  {icon:"⚡",title:"Queued cert moat Christina reveal in response to Elmhurst Clean Protein nationwide launch (Wed May 27 12pm)",reason:"Elmhurst Clean Protein went nationwide at Sprouts MAY 11-21 — closest peer goes direct at Willa's positioning at primary retailer. Engine-only context, never named in copy. Drives the 'four certs that don't fit in a marketing line' cert moat Reel. Willa's moat = certs Elmhurst can't claim (organic + Detox Project + WBENC + Yuka 100).",agent:"composer"},
+  {icon:"⚡",title:"Queued cert moat Christina reveal in response to Elmhurst Clean Protein nationwide launch (Wed May 27 12pm)",reason:"Elmhurst Clean Protein just went nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — closest peer goes direct at Willa's positioning at primary retailer. Engine-only context, never named in copy. Drives the 'four certs that don't fit in a marketing line' cert moat Reel. Willa's moat = certs Elmhurst can't claim (organic + Detox Project + WBENC + Yuka 100).",agent:"composer"},
   {icon:"×",title:"Killed all 11 MAY 18 Pulse entries from this week's set (no-repeat rule)",reason:"Past-month no-repeat strict — fibermaxxing oversaturated (used MAY 18 + MAY 11 + APR 27 + APR 20), Kevin Morby past, Memorial Day Weekend behind ship date by MON MAY 25, Mary Neilis used MAY 18, Colbert finale + The Bear S5 used MAY 18, cottage cheese oats used MAY 18 + APR 20, Pinterest fermentation used MAY 18, cloud-textured matcha used MAY 18, grandfluencers used MAY 18. Fresh ground: Shaved Fruit + rhubarb season + Bleachers + Four Seasons S2 + tortilla cinnamon rolls + Will-it-survive + AI Food + Yuka virality + seed-oil-free moment + That Lady Anna (verified evergreen, used as background).",agent:"editor"},
   {icon:"↑",title:"Locked Christina-on-camera count at 2 (Christina Rule cap = 3, well under)",reason:"R2 seed-oil-free moment (founder-POV activist stance — reserved category) + R5 cert moat reveal (founder-POV reserved category). All other 16 briefs use hands+product+kitchen+text overlays OR cofounder-sister voice (TT-7). Within cap.",agent:"editor"},
   {icon:"×",title:"Cut Cassidy Anderson + That Lady Anna + banana bread latte from CULTURAL_PULSE (freshness failures)",reason:"Brutal-honesty pass caught 3 stale signals: Cassidy Anderson video verified from October 2024 (NOT fresh MAY 2026), That Lady Anna viral peak was June 2024-2025 (durable not fresh), banana bread latte originated summer 2025 with Starbucks adopting FEB 3 2026 (peak behind us). Replaced with Shaved Fruit (verified breakout) + reframed others. Quality > quantity per CLAUDE.md.",agent:"editor"},
@@ -863,7 +863,7 @@ const AMPLIFY_PLANS = {
     testWindow:"5 days (Thu May 28 → Mon Jun 1)",
     objective:"Saves + Profile Visits",
     guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
-    why:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (CP-4) — GMA + ABC News + Parade coverage, millions of TikTok views. Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream). Cloud-pour visual is the share engine. Viral-recipe-remix briefs have been highest-reach format in 2026 (MAY 11 TT-5 iced café crème hit 482K views).",
+    why:"Tortilla cinnamon rolls continue circulating as a viral recipe lane on TikTok (CP-4). Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream). Cloud-pour visual is the share engine. Viral-recipe-remix briefs have been the highest-reach format in 2026.",
     placements:[
       {
         platform:"TikTok",
@@ -917,8 +917,8 @@ const BRIEF_BY_ID = Object.fromEntries(BRIEFS.map(b=>[b.id,b]));
 // ─── Run Log ──────────────────────────────────────────────
 const RUN_LOG = [
   {date:"Sun May 24 · 21:14",agent:"perf",    msg:"MAY 18 wrap: avg +6.2× saves vs baseline · top format = founder-POV fibermaxxing TT (9.2× saves, 0.96 sentiment) · cottage cheese oats dairy-free swap hit 7.4× saves (No-Dairy rule validated)"},
-  {date:"Sun May 24 · 14:32",agent:"trend",   msg:"Elmhurst Clean Protein went nationwide at Sprouts MAY 11-21 — 27g protein, 4 SKUs, no gums/seed oils · closest peer goes direct at Willa's positioning at primary retailer · BIG SWING IG-R1 + cert moat R5 queued in response"},
-  {date:"Sun May 24 · 12:08",agent:"pulse",   msg:"Yuka app went mainstream-viral MAY 2026 (WCCB May 11 + WaPo + WWD + CBS Miami) — 94% of users return 'bad' scored products · Willa's Kids 100/100 = brand-direct receipt · BIG SWING IG-R1 phone-scan reveal queued"},
+  {date:"Sun May 24 · 14:32",agent:"trend",   msg:"Elmhurst Clean Protein just went nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — 27g protein, 4 SKUs, no gums/seed oils · closest peer goes direct at Willa's positioning at primary retailer · cert moat R5 queued in response"},
+  {date:"Sun May 24 · 12:08",agent:"pulse",   msg:"The Grocery Cart MAY 19 marked Yuka backlash inflection — critics flag the app for moralizing food · Willa's Kids 100/100 holds up regardless · BIG SWING IG-R1 scan-with-me Reel queued"},
   {date:"Sun May 24 · 10:45",agent:"trend",   msg:"FoodNavigator MAY 22 expert-panel UPF reframe ('not all UPFs are created equal') — Willa's lives on the right side of the dividing line · UPF carve-out gives calm-authority lane"},
   {date:"Sat May 23 · 18:22",agent:"pulse",   msg:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News + Parade) — millions of TikTok views · BIG SWING TT-1 queued with Willa's Barista + coconut cream dairy-free swap"},
   {date:"Sat May 23 · 14:50",agent:"pulse",   msg:"Pinterest rhubarb +51% MAY 22 weekly report — sourdough rhubarb snack cake heritage pin (PIN-1 BIG SWING) queued for THU MAY 28 · Willa's grandma-kitchen voice owns the lane"},
@@ -1575,7 +1575,7 @@ BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
 const BRIEF_FOOTAGE_INSPO = {
   "MAY25-IG-R1": {
     shoot:["POV at the Sprouts kids-drinks aisle — phone-held shot scanning carton after carton in the kids-RTD section","Yuka app screen captures (multiple scans revealing red/orange scores, then one green 100/100 reveal on the Willa's Kids carton)","Carton-goes-into-the-cart shot","Home kitchen: kid's hand pours Willa's Kids into a glass (face out of frame)","Real-aisle / real-cart / real-kitchen aesthetic — NO studio finish"],
-    found:["Trend reference: TikTok 'scan with me' / #yuka grocery-aisle mom-creator videos (multiple creators May 2026 — rising format as Yuka mainstreams)","WCCB Charlotte MAY 11 'What the Tech: Yuka' coverage (engine context, don't cite in copy)","Mom-creator scan-with-me hashtag landing pages (TikTok #scanwithme + #yukascan)"],
+    found:["Trend reference: TikTok 'scan with me' / #yuka grocery-aisle mom-creator videos (rising mom-creator format)","The Grocery Cart MAY 19 backlash piece — engine context for the cultural shift, don't cite in copy","Mom-creator scan-with-me hashtag landing pages (TikTok #scanwithme + #yukascan)"],
     memes:["Pattern 03 Relatable Confession ('i'm the mom in the aisle with the phone out')","Pattern 09 Aesthetic IRL Encounter (real grocery aisle, real cart, real find)","'scanned X drinks at the store, only one was green' content lane"],
     archive:["Willa's existing in-store / Sprouts visit footage if any","Willa's Kids carton + Yuka 100/100 badge cleared assets","Kid-pour b-roll for the end card"]
   },
@@ -5197,7 +5197,7 @@ const WELCOME_READ = {
 const WELCOME_HIGHLIGHTS = [
   {
     stat:"27g PROTEIN",
-    label:"Elmhurst's Clean Protein line went nationwide at Sprouts MAY 11 — 4 SKUs at $4.99 (NEXTY-Award Pistachio Crème + Sea Salt Chocolate + Vanilla + Strawberries & Cream), no gums or seed oils",
+    label:"Elmhurst's Clean Protein line just went nationwide at Sprouts — 4 SKUs at $4.99 (NEXTY-Award Pistachio Crème + Sea Salt Chocolate + Vanilla + Strawberries & Cream), no gums or seed oils. BevNET broke MAY 18 + Dairy Foods MAY 21.",
     detail:"Closest clean-positioned peer brand went direct at Willa's positioning at our primary natural-channel retailer. The cert gap still holds though — Elmhurst is NOT organic, NOT glyphosate-free-certified, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice this week: show the cert stack, don't punch.",
     color:"#DC2626",
     icon:"🚨",
