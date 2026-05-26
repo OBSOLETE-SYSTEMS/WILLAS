@@ -138,7 +138,7 @@ const COMPETITORS = [
 const AMBASSADORS = [
   {
     type:"Clean-Eating Parenting Creators",
-    description:"Mom accounts in the 10K–50K range posting school-lunch + 'what I feed my toddler' content who already vocally avoid dyes, seed oils, and gums. Activated by EWG news + state dye-ban headlines.",
+    description:"Mom accounts in the 10K–50K range posting school-lunch + 'what I feed my toddler' content who already vocally avoid dyes, seed oils, and gums. Activated by state-by-state regulatory news + parent-network dye-ban conversations.",
     count:"12 IDENTIFIED THIS WEEK",
     pillar:"PARENTING",
     pillarColor:"#9E652E",
@@ -233,7 +233,7 @@ const BRIEFS = [
     intel:[
       {type:"PULSE",text:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (CP-4) — GMA + ABC News + Parade coverage, millions of TikTok views. Recipe uses heavy cream — Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream)."},
       {type:"AUDIENCE",text:"Pattern 05 Format-as-Virality + Pattern 04 Taboo-as-Normal (the unexpected ingredient is the dairy-free swap, calmly stated). Poppi muse (viral short-form better-for-you). Lead-with-solution: dairy-free swap in beat 1, viral-recipe format as backdrop. Cloud-pour shot is the share engine."},
-      {type:"COMPETITOR",text:"Internal only — Oatly cold foam launched at London Coffee Festival MAY 14-17. Willa's Barista pours like dairy at home, no rapeseed, no gums. The heavy-cream-substitute use case is one where Willa's structurally outperforms competitor barista blends."}
+      {type:"COMPETITOR",text:"Internal only — category-leader barista blends carry rapeseed, gums, stabilizers. Willa's Barista pours like dairy at home, no rapeseed, no gums. The heavy-cream-substitute use case is one where Willa's structurally outperforms peer barista oat milks."}
     ],
     hooks:[
       {text:"tiktok's viral cinnamon roll, dairy-free. (yes the heavy cream swap still works.)",recommended:true},
@@ -285,7 +285,7 @@ const BRIEFS = [
     timing:"Thu May 28 · 6pm", priority:"HIGH", rideNow:true,
     concept:"\"the carton has read the same way the whole time.\" — calm-authority seed-oil-free founder reveal",
     intel:[
-      {type:"PULSE",text:"Seed-oil-free is officially winning at the shelf (CP-9) — STAT News MAY 22 anti-seed-oil fact-check + MAHA reformulation wave (PepsiCo phasing canola/soybean from Lay's, Kraft Heinz + General Mills + Nestlé following). Willa's Original is already seed-oil-free. Engine context only: Jesse & Ben's $10M Series A from Greycroft MAY 7 — investor framing, NOT for consumer copy."},
+      {type:"PULSE",text:"Seed-oil-free is officially winning at the shelf (CP-9) — STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative + distinguishes industrial seed oils from structurally-different high-oleic variants. Willa's Original is already seed-oil-free; Willa's Barista uses the structurally-different high-oleic variant."},
       {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority on a noisy topic) + Pattern 06 Founder Humanization. Patagonia muse (activist gravity). Christina on-camera per Christina Rule reserved category (founder-POV activist stance — quiet authority register, NOT trend-chase). Lead-with-solution: 4 ingredients first, discourse context as backdrop."},
       {type:"COMPETITOR",text:"Internal only — Big-CPG is reformulating to where Willa's started. Original was never going to have seed oils. The deck didn't change because nothing needed to. Don't name competitors; the calm-receipts position is the brand voice."}
     ],
@@ -461,7 +461,7 @@ const BRIEFS = [
     intel:[
       {type:"TREND",text:"State-by-state food chemical regulation is the parent-shareable framing this season — dyes, glyphosate, BVO, propylparaben, titanium dioxide all being legislated state-by-state. Willa's clean-deck-by-default + Detox Project cert + USDA Organic stack is on the right side of every line."},
       {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority on a noisy topic) + Pattern 12 Carousel. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them posture). 6-card carousel format. Cert stack receipts at the end."},
-      {type:"COMPETITOR",text:"Internal only — EWG state map is consumer-facing watchdog content (not trade press). Safe to reference EWG as shareable authority. Willa's cert stack (Detox Project + USDA Organic + WBENC + Yuka 100) is the structural advantage on the right side of every state's line."}
+      {type:"COMPETITOR",text:"Internal only — state-by-state food chemical regulation is the parent-network conversation this season. Willa's cert stack (Detox Project + USDA Organic + WBENC + Yuka 100) is the structural advantage on the right side of every state's line."}
     ],
     hooks:[
       {text:"the state-by-state food chemical map just dropped.",recommended:true},
@@ -470,7 +470,7 @@ const BRIEFS = [
     ],
     caption:"the state-by-state food chemical map just dropped. 🗺️\n\n(Willa's is the carton already on the right side.)\n\na new interactive map this month shows which states have banned which food chemicals — dyes, glyphosate, BVO, propylparaben, titanium dioxide. parents are sharing it. school nurses are sharing it.\n\nhere's what's NOT in Willa's:\n→ no synthetic dyes (red 40, yellow 5, etc. — none)\n→ no glyphosate (certified glyphosate-free by The Detox Project, every lot)\n→ no BVO, no propylparaben, no titanium dioxide\n→ no rapeseed, no canola, no gums, no stabilizers, no syrup\n\nwhat IS in Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the whole carton.\n\nshhh… the receipts are now a map. 🌾",
     hashtags:["#willasoatmilk","#cleanlabel","#organic","#glyphosatefree","#detoxproject","#nodyes","#realfood","#wholeoat","#motherfounded","#wbenc"],
-    visual:"6-card Instagram Feed carousel. Card 1: BOLD type-led card. 'the state-by-state food chemical map just dropped.' Subline: 'Willa's is the carton already on the right side.' (no image, typography on cream background) | Card 2: Stylized US map (Willa's-branded — NOT EWG's actual map) with states highlighted. Text: '5+ states have banned synthetic dyes. more are coming.' | Card 3: Willa's Original carton centered. Text: 'what's NOT in this carton: 0 synthetic dyes · 0 glyphosate · 0 BVO · 0 rapeseed · 0 gums · 0 syrup.' | Card 4: Close-up of back-of-pack ingredient list. Text: 'organic whole grain oats · filtered water · organic vanilla extract · sea salt.' | Card 5: Cert-stack visual — USDA Organic + Detox Project + Non-GMO + WBENC + Yuka 100/100 Kids + Bobby Approved + Good Food Awards. | Card 6: Stinger card. 'the receipts are now a map. Willa's is on it. shhh… 🌾'",
+    visual:"6-card Instagram Feed carousel. Card 1: BOLD type-led card. 'state-by-state food chemical regulation is the new map.' Subline: 'Willa's is the carton already on the right side.' (no image, typography on cream background) | Card 2: Stylized US map (Willa's-branded) with states highlighted. Text: '5+ states have banned synthetic dyes. more are coming.' | Card 3: Willa's Original carton centered. Text: 'what's NOT in this carton: 0 synthetic dyes · 0 glyphosate · 0 BVO · 0 rapeseed · 0 gums · 0 syrup.' | Card 4: Close-up of back-of-pack ingredient list. Text: 'organic whole grain oats · filtered water · organic vanilla extract · sea salt.' | Card 5: Cert-stack visual — USDA Organic + Detox Project + Non-GMO + WBENC + Yuka 100/100 Kids + Bobby Approved + Good Food Awards. | Card 6: Stinger card. 'the receipts are the moat. shhh… 🌾'",
     script:null,
     audio:null,
     duration:null,
@@ -512,7 +512,7 @@ const BRIEFS = [
     timing:"Thu May 28 · 12pm", priority:"HIGH",
     concept:"\"school lunch just got harder for everyone else. (willa's kids was built for the rules already.)\" — back-to-school parent-prep carousel",
     intel:[
-      {type:"TREND",text:"State-by-state pressure on what kids eat at school is structural now — Arizona's Healthy School Act (UPF-in-schools ban) takes effect AUG 2026, joining California's similar law (effective 2027), Florida bread testing, and WV HB 2354 (synthetic dyes, Jan 2028). Pre-back-to-school content window opens now."},
+      {type:"TREND",text:"State-by-state pressure on what kids eat at school is structural now — multiple state legislatures have moved on UPF-in-schools bans, synthetic dye restrictions, and bread testing. Pre-back-to-school content window opens now. Willa's Kids was structurally built for the rules."},
       {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority) + Pattern 12 Carousel. Partake Foods muse (parent-first warmth) + Lovebird (activist parent-lane). Real toddler lunchbox staging — passes 'would a parent screenshot this and feel yes that's a lunch' real-life test (POV Discipline #8)."},
       {type:"COMPETITOR",text:"Internal only — no other kids RTD oat milk holds top-9 allergen-free + 8g protein + DHA from algae oil + Yuka 100. Willa's Kids was structurally built for the rules states are now writing."}
     ],
@@ -615,7 +615,7 @@ const BRIEFS = [
     intel:[
       {type:"AUDIENCE",text:"EVERGREEN — Sprouts at-shelf-spotting content (Willa's primary natural-channel retailer). Pattern 09 Aesthetic IRL Encounter. Ghia muse (aesthetic at-shelf). Real-shelf, no studio finish. Cinematic phone-pan across the 4 cartons."},
       {type:"COMPETITOR",text:"Internal only — Sprouts is Willa's primary natural-channel retailer. The at-shelf moment plays evergreen — Willa's lives on the wall whether or not Sprouts has a new launch this week."},
-      {type:"PULSE",text:"Evergreen — at-shelf-spotting content compounds organically. Pairs with Sprouts MAY-JUN rollout context as background."}
+      {type:"PULSE",text:"Evergreen — at-shelf-spotting content compounds organically. Willa's lives on the wall whether or not there's a fresh retail news cycle."}
     ],
     hooks:[
       {text:"saw at sprouts: the whole willa's wall.",recommended:true},
@@ -774,7 +774,7 @@ const DECISIONS = [
   {icon:"↑",title:"Promoted Yuka Kids 100/100 phone-scan Reel to BIG SWING (Tue May 26 12pm)",reason:"Yuka app went mainstream-viral in MAY 2026 (WCCB MAY 11 + WaPo + WWD + CBS Miami coverage) — 94% of users return 'bad' scored products. Willa's Kids holds 100/100 — the brand-direct receipt moment. Phone-scan POV format is universal-readable. $260 Meta Reels Ad queued for 72-hr saves lift.",agent:"composer"},
   {icon:"↑",title:"Promoted tortilla cinnamon roll dairy-free swap to BIG SWING (Thu May 28 9am)",reason:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News + Parade) — millions of views. Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream). Cloud-pour visual is the share engine. $240 TikTok Spark Ad queued.",agent:"composer"},
   {icon:"↑",title:"Promoted sourdough rhubarb snack cake heritage pin to BIG SWING (Thu May 28 anytime)",reason:"Pinterest rhubarb +51% MAY 22 weekly report — heritage-coded summer ingredient. Willa's grandma-kitchen voice owns the lane. Pinterest planning audience is 7-10 days ahead; extended 10-day test window matches. $180 Pinterest Promoted Pin queued.",agent:"composer"},
-  {icon:"⚡",title:"Queued seed-oil-free Christina founder Reel as cultural-conversation response (Thu May 28 6pm)",reason:"STAT News MAY 22 anti-seed-oil fact-check + MAHA reformulation wave (PepsiCo phasing seed oils from Lay's, Kraft Heinz + General Mills following). Willa's Original is already seed-oil-free. Calm-receipts response — the carton has read the same way the whole time. Founder reserved-category appearance.",agent:"composer"},
+  {icon:"⚡",title:"Queued seed-oil-free Christina founder Reel as cultural-conversation response (Thu May 28 6pm)",reason:"STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative. Willa's Original is already on the right side — the 4-ingredient deck does the work. Calm-receipts response, founder reserved-category appearance.",agent:"composer"},
   {icon:"⚡",title:"Queued cert moat Christina reveal in response to Elmhurst Clean Protein nationwide launch (Wed May 27 12pm)",reason:"Elmhurst Clean Protein went nationwide at Sprouts MAY 11-21 — closest peer goes direct at Willa's positioning at primary retailer. Engine-only context, never named in copy. Drives the 'four certs that don't fit in a marketing line' cert moat Reel. Willa's moat = certs Elmhurst can't claim (organic + Detox Project + WBENC + Yuka 100).",agent:"composer"},
   {icon:"×",title:"Killed all 11 MAY 18 Pulse entries from this week's set (no-repeat rule)",reason:"Past-month no-repeat strict — fibermaxxing oversaturated (used MAY 18 + MAY 11 + APR 27 + APR 20), Kevin Morby past, Memorial Day Weekend behind ship date by MON MAY 25, Mary Neilis used MAY 18, Colbert finale + The Bear S5 used MAY 18, cottage cheese oats used MAY 18 + APR 20, Pinterest fermentation used MAY 18, cloud-textured matcha used MAY 18, grandfluencers used MAY 18. Fresh ground: Shaved Fruit + rhubarb season + Bleachers + Four Seasons S2 + tortilla cinnamon rolls + Will-it-survive + AI Food + Yuka virality + seed-oil-free moment + That Lady Anna (verified evergreen, used as background).",agent:"editor"},
   {icon:"↑",title:"Locked Christina-on-camera count at 2 (Christina Rule cap = 3, well under)",reason:"R2 seed-oil-free moment (founder-POV activist stance — reserved category) + R5 cert moat reveal (founder-POV reserved category). All other 16 briefs use hands+product+kitchen+text overlays OR cofounder-sister voice (TT-7). Within cap.",agent:"editor"},
@@ -822,9 +822,9 @@ const BRIEF_LINKS = {
   "MAY25-IG-R3": {trends:[],                 pulse:["CP-3"],                 comps:[]},             // Long-weekend pour (Bleachers audio bed)
   "MAY25-IG-R4": {trends:[],                 pulse:["CP-8"],                 comps:[]},             // Four Seasons S2 cultural-stitch
   "MAY25-TT-4":  {trends:[],                 pulse:["CP-6"],                 comps:[]},             // AI Food meme + real-food reveal
-  "MAY25-IG-F1": {trends:[],                 pulse:[],                       comps:[]},             // EWG state map cert-stack carousel (T-5 EWG pulled — stale source; brief evergreen-ifies as cert-stack carousel)
+  "MAY25-IG-F1": {trends:[],                 pulse:[],                       comps:[]},             // State-by-state cert-stack carousel (evergreen — no fresh-this-week trend anchor)
   "MAY25-IG-R5": {trends:["T-1","T-5"],      pulse:[],                       comps:["C-5"]},        // Cert moat Christina reveal (T-1 Elmhurst + T-5 Yuka)
-  "MAY25-IG-F2": {trends:[],                 pulse:["CP-7"],                 comps:[]},             // Back-to-school parent-prep carousel (T-11 Arizona + T-5 EWG pulled — stale)
+  "MAY25-IG-F2": {trends:[],                 pulse:["CP-7"],                 comps:[]},             // Back-to-school parent-prep carousel (state-by-state regulation framing, evergreen)
   // STANDARD / EVERGREEN — no signal anchor
   "MAY25-TT-5":  {trends:[],                 pulse:[],                       comps:[]},             // Chocolate evergreen (Good Food Awards heritage)
   "MAY25-PIN-2": {trends:[],                 pulse:[],                       comps:[]},             // Iced latte without the math (evergreen)
@@ -896,7 +896,7 @@ const AMPLIFY_PLANS = {
     ]
   }
 };
-// No amplify for: MAY25-IG-R2 (seed-oil-free Christina moment — quiet authority, organic-first), MAY25-TT-2 (Shaved Fruit — viral format compounds organically), MAY25-TT-3 (Will-it-survive Barista flip — Pattern 03 plays better organic), MAY25-IG-R3 (long-weekend pour heritage — earned authenticity, Bleachers audio bed), MAY25-IG-R4 (Four Seasons S2 cultural-stitch — tonal-only, no name-check makes paid suspicious), MAY25-TT-4 (AI Food meme reveal — meme-payload plays better organic), MAY25-IG-F1 (EWG state map cert carousel — receipt-led editorial wins as earned media), MAY25-IG-R5 (cert moat Christina reveal — quiet posture, organic-first), MAY25-IG-F2 (Arizona school act carousel — receipt-led editorial), MAY25-TT-5 / PIN-2 / PIN-3 / TT-6 / IG-F3 / TT-7 (all 6 evergreens — Pinterest SEO + at-shelf + heritage carousel all compound organically).// No amplify for: MAY11-TT-2 (Mother's Day retrospective — organic-first), MAY11-TT-3 (meme-payload — test ad only if organic climbs), MAY11-PIN-1 / PIN-2 / PIN-3 (Pinterest SEO compounds organically — autobiography wordplay pin earns its share rate on type alone), MAY11-TT-4 (The Bear-coded — earned authenticity wins without paid), MAY11-TT-5 (iced café crème — recipe SEO compounds), MAY11-IG-R5 (Saturday heritage — earned-authenticity), MAY11-TT-7 (mom-bag relatable confession — Pattern 03 plays better organic; Partake-style content compounds on saves), MAY11-IG-F2 (category data carousel — earned-media), MAY11-IG-R6 (real-food anti-isolate — receipt-led category POV).
+// No amplify for: MAY25-IG-R2 (seed-oil-free Christina moment — quiet authority, organic-first), MAY25-TT-2 (Shaved Fruit — viral format compounds organically), MAY25-TT-3 (Will-it-survive Barista flip — Pattern 03 plays better organic), MAY25-IG-R3 (long-weekend pour heritage — earned authenticity, Bleachers audio bed), MAY25-IG-R4 (Four Seasons S2 cultural-stitch — tonal-only, no name-check makes paid suspicious), MAY25-TT-4 (AI Food meme reveal — meme-payload plays better organic), MAY25-IG-F1 (state-by-state cert carousel — receipt-led editorial wins as earned media), MAY25-IG-R5 (cert moat Christina reveal — quiet posture, organic-first), MAY25-IG-F2 (back-to-school carousel — receipt-led editorial), MAY25-TT-5 / PIN-2 / PIN-3 / TT-6 / IG-F3 / TT-7 (all 6 evergreens — Pinterest SEO + at-shelf + heritage carousel all compound organically).// No amplify for: MAY11-TT-2 (Mother's Day retrospective — organic-first), MAY11-TT-3 (meme-payload — test ad only if organic climbs), MAY11-PIN-1 / PIN-2 / PIN-3 (Pinterest SEO compounds organically — autobiography wordplay pin earns its share rate on type alone), MAY11-TT-4 (The Bear-coded — earned authenticity wins without paid), MAY11-TT-5 (iced café crème — recipe SEO compounds), MAY11-IG-R5 (Saturday heritage — earned-authenticity), MAY11-TT-7 (mom-bag relatable confession — Pattern 03 plays better organic; Partake-style content compounds on saves), MAY11-IG-F2 (category data carousel — earned-media), MAY11-IG-R6 (real-food anti-isolate — receipt-led category POV).
 
 
 // Reverse map: which briefs each trend / pulse hook / competitor drives
@@ -922,8 +922,8 @@ const RUN_LOG = [
   {date:"Sun May 24 · 10:45",agent:"trend",   msg:"FoodNavigator MAY 22 expert-panel UPF reframe ('not all UPFs are created equal') — Willa's lives on the right side of the dividing line · UPF carve-out gives calm-authority lane"},
   {date:"Sat May 23 · 18:22",agent:"pulse",   msg:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News + Parade) — millions of TikTok views · BIG SWING TT-1 queued with Willa's Barista + coconut cream dairy-free swap"},
   {date:"Sat May 23 · 14:50",agent:"pulse",   msg:"Pinterest rhubarb +51% MAY 22 weekly report — sourdough rhubarb snack cake heritage pin (PIN-1 BIG SWING) queued for THU MAY 28 · Willa's grandma-kitchen voice owns the lane"},
-  {date:"Sat May 23 · 11:18",agent:"comp",    msg:"Danone closing 25-year-old Silk plant-based facility AUG 4 (114 layoffs) — category splinters into winners + losers · Willa's lives on winning side structurally"},
-  {date:"Fri May 22 · 16:40",agent:"trend",   msg:"MAHA reformulation wave (PepsiCo phasing canola/soybean from Lay's, Kraft Heinz + General Mills + Nestlé following) + Jesse & Ben's $10M Series A May 7 — seed-oil-free CPG winning · seed-oil-free Christina Reel R2 queued"},
+  {date:"Sat May 23 · 11:18",agent:"comp",    msg:"Elmhurst Clean Protein nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — closest peer goes direct at Willa's positioning at primary natural-channel retailer · cert moat IG-R5 queued in response"},
+  {date:"Fri May 22 · 16:40",agent:"trend",   msg:"STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative · Willa's Original is already on the right side · seed-oil-free Christina Reel R2 queued"},
   {date:"Fri May 22 · 14:08",agent:"pulse",   msg:"Bleachers self-titled MAY 22 (Antonoff Brooklyn-indie) + Four Seasons S2 Netflix MAY 28 (Tina Fey + Steve Carell adult-friendship comedy) — both Willa's tonal pocket · R3 audio bed + R4 cultural stitch queued"},
   {date:"Fri May 22 · 09:30",agent:"editor",  msg:"Killed 4 stale signals: Cassidy Anderson Oct 2024 video (NOT fresh) · That Lady Anna viral June 2024-2025 (durable not fresh) · banana bread latte summer 2025 origin (peak behind us) · Nutraingredients Roquette study (Sylvie POV #9 violation: trade press + study)"},
   {date:"Fri May 22 · 12:14",agent:"editor",  msg:"Caught + rewrote 5 phrase repeats from past 5 weeks (iced coffee that doesn't fight back · willa was a real woman · one carton two generations · saturday-morning carton · cert stack) · automated brief-repeat audit script now live as Step 7 #26"},
@@ -1158,7 +1158,7 @@ const LAST_WEEK_RESULTS = [
     sourceTrend:"Cert-stack evergreen + Yuka 100/100 Kids momentum", trendId:null,
     views:268000, saves:17400, shares:8200, comments:1180,
     savesDelta:5.8, sentiment:0.98,
-    note:"Highest sentiment of the week (0.98) — receipt-led carousel format performed strongest in carousel slot. Pattern 12 (Carousel) + Pattern 06 founder humanization combo. This week's EWG state-map cert carousel F1 + Heritage cert-stack F3 carry the same format."
+    note:"Highest sentiment of the week (0.98) — receipt-led carousel format performed strongest in carousel slot. Pattern 12 (Carousel) + Pattern 06 founder humanization combo. This week's state-by-state cert-stack carousel F1 + Heritage cert-stack F3 carry the same format."
   }
 ];
 
@@ -1455,7 +1455,7 @@ const CULTURAL_PULSE = [
     type:"CULTURAL CONVERSATION",
     typeColor:"#9E652E",
     hook:"Seed-oil-free is officially winning at the shelf 🛡️ — Willa's Original deck has always read the same way, and this week is when 'calm receipts' works harder than the discourse",
-    detail:"Mainstream press caught up to seed-oil discourse this week (STAT News MAY 22 fact-check; ongoing MAHA reformulation wave with PepsiCo phasing canola/soybean from Lay's, Kraft Heinz + General Mills + Nestlé following). Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower (structurally different from industrial seed oils). Engine context only: Jesse & Ben's seed-oil-free fries closed $10M Series A from Greycroft MAY 7 (investor framing, NOT for consumer copy). The consumer-side cultural conversation is 'what's in your cooking oil / what's in your milk' — Willa's plays the calm-authority receipt, not the trend-chase. Don't preach, don't panic, show the deck.",
+    detail:"STAT News dropped a MAY 22 fact-check on the anti-seed-oil movement that recalibrates the wellness narrative — distinguishing industrial seed oils from structurally-different high-oleic variants. Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower (the structurally-different variant STAT specifically names). The consumer-side cultural conversation is 'what's in your cooking oil / what's in your milk' — Willa's plays the calm-authority receipt, not the trend-chase. Don't preach, don't panic, show the deck.",
     velocity:"medium",
     platform:"Trade Press → IG + TikTok",
     willasPlay:"IG Reel: 'the carton has read the same way the whole time.' Hands hold Willa's Original carton, slow ingredient-deck reveal (4 ingredients), cofounder voice-over: 'we never had to add what we never had.' NO mention of seed-oil discourse by name — let the visual + ingredient deck do the work.",
@@ -1551,7 +1551,7 @@ const BRIEF_DNA = {
   "MAY25-IG-R3":   "kid-family-moment",      // Long-weekend pour (Bleachers audio bed)
   "MAY25-IG-R4":   "kid-family-moment",      // Four Seasons S2 cultural-stitch
   "MAY25-TT-4":    "meme-payload",           // AI Food meme + real-food reveal
-  "MAY25-IG-F1":   "on-pack-checklist",      // EWG state map cert-stack carousel
+  "MAY25-IG-F1":   "on-pack-checklist",      // State-by-state cert-stack carousel
   "MAY25-IG-R5":   "mom-activist",           // Cert moat Christina reveal
   "MAY25-IG-F2":   "on-pack-checklist",      // Arizona school act back-to-school carousel
   // STANDARD / EVERGREEN
@@ -1628,8 +1628,8 @@ const BRIEF_FOOTAGE_INSPO = {
     archive:["Willa's existing pour-and-oat-groat b-roll","Wood-counter morning-light reference"]
   },
   "MAY25-IG-F1": {
-    shoot:["Stylized US map graphic (Willa's-branded — do NOT republish EWG's actual map)","Willa's Original carton hero on cream background","Back-of-pack ingredient panel close-up","Cert-stack badge layout (Yuka 100, USDA, Detox Project, etc.)"],
-    found:["Engine reference only: EWG state regulation map (don't reproduce, build Willa's-branded version instead)","Consumer Reports state dye coverage (engine context)","WV HB 2354 + AZ + CA + FL state coverage (context)"],
+    shoot:["Stylized US map graphic (Willa's-branded)","Willa's Original carton hero on cream background","Back-of-pack ingredient panel close-up","Cert-stack badge layout (Yuka 100, USDA, Detox Project, etc.)"],
+    found:["State-by-state food chemical regulation context (build Willa's-branded visual, don't reproduce others')","Consumer Reports state dye coverage (engine context)","Multi-state synthetic dye + glyphosate + UPF coverage (context)"],
     memes:["Static carousel → skip memes"],
     archive:["Willa's existing cert-stack badge library","Stylized US-map graphic templates"]
   },
@@ -1641,7 +1641,7 @@ const BRIEF_FOOTAGE_INSPO = {
   },
   "MAY25-IG-F2": {
     shoot:["Real toddler lunchbox staging (turkey + Violife provolone slice OR Good Plants dairy-free cheese + clementine + baby carrots + Willa's Kids drink)","Willa's Kids carton hero on cream background","State-by-state stylized visual graphic","Kids-specific cert-stack badge layout"],
-    found:["Engine context only — Arizona Healthy School Act + state policy moves (don't quote O'Melveny or other trade-press sources in caption)","State-by-state UPF-in-schools coverage (engine reference)"],
+    found:["Engine context only — state-by-state UPF-in-schools regulatory moves (don't quote trade-press sources in caption)","Multi-state school-lunch + ingredient legislation coverage (engine reference)"],
     memes:["Static carousel → skip memes"],
     archive:["Willa's existing Kids carton library + cert badges","Real-lunchbox staging references (parent-creator aesthetic)"]
   },
@@ -1665,7 +1665,7 @@ const BRIEF_FOOTAGE_INSPO = {
   },
   "MAY25-TT-6": {
     shoot:["POV at Sprouts shelf — phone-held shot of the natural-milk aisle (find a Sprouts location nearby)","Slow pan across the 4 Willa's cartons on the shelf","Hand pickup + back-label turn","Carton-in-hand end-card with shelf behind"],
-    found:["Sprouts MAY-JUN exclusive products coverage as engine context (Wellness Bowls + Sweet Heat — don't quote)","Willa's existing 'found at sprouts' UGC if available"],
+    found:["Willa's existing 'found at sprouts' UGC if available","Sprouts at-shelf context (Willa's primary natural-channel retailer — evergreen)"],
     memes:["At-shelf POV format — Pattern 09 IRL aesthetic"],
     archive:["Willa's previous in-store visit footage","Sprouts shelf-aesthetic references"]
   },
