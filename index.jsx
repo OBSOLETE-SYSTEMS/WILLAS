@@ -33,67 +33,22 @@ const TRENDS = [
     angle:"Closest peer goes direct at Willa's positioning at Sprouts 🥛 — Willa's moat is the cert stack Elmhurst can't claim (organic + glyphosate-free + WBENC + mother-founded).",
     urgency:"RIDE NOW",
     sources:[
-      {label:"BevNET · Elmhurst 1925 Launches Clean Protein Nationwide at Sprouts (May 18)", url:"https://www.bevnet.com/pr/2026/05/18/elmhurst-1925-launches-awardwinning-clean-protein-line-nationwide-at-sprouts-farmers-market"},
-      {label:"Dairy Foods · Elmhurst Clean Protein debuts at Sprouts (May 21)", url:"https://www.dairyfoods.com/articles/99124-elmhurst-1925-clean-protein-line-debuts-at-sprouts"}
+      {label:"BevNET · Elmhurst 1925 Launches Clean Protein Nationwide at Sprouts (May 18, 2026)", url:"https://www.bevnet.com/pr/2026/05/18/elmhurst-1925-launches-awardwinning-clean-protein-line-nationwide-at-sprouts-farmers-market"},
+      {label:"Dairy Foods · Elmhurst Clean Protein debuts at Sprouts (May 21, 2026)", url:"https://www.dairyfoods.com/articles/99124-elmhurst-1925-clean-protein-line-debuts-at-sprouts"}
     ]
   },
   {
-    trend:"Oatly's Cold Foam goes global ❄️ — London Coffee Festival debut MAY 14-17, EU rollout ramping through Coffee Fellows + Good News",
-    detail:"Oatly debuted its new cold foam product at the London Coffee Festival (May 14-17) with wider rollout beginning across Europe in May — Coffee Fellows (Germany), Good News (Spain, France, Netherlands). Per Oatly, plant-based cold foam has been 'hard to find and harder to replicate.' Same week, Oatly's flavor roadmap report flagged Matcha Oat Drink + iKaffe Popcorn coming to US shelves late 2026; Hot Cocoa Oatmilk already shipping. AGM MAY 20 (no dividend, LTIP 2026-2028 — internal-only). The category leader is going maximalist on flavor + foodservice cold foam, while Willa's Barista has been quietly winning the AT-HOME cold-foam pour with a 4-ingredient deck.",
-    platform:"Trade Press + Foodservice",
-    views:"London Coffee Festival · EU rollout May 2026",
-    velocity:"medium",
-    pillars:["INGREDIENTS/RECIPES","REVIEWS/RECS"],
-    angle:"Oatly claims cold foam at the bar ❄️ — Willa's Barista already pours it at home. Show the at-home pull this week.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"Green Queen · Oatly Cold Foam launch coverage", url:"https://www.greenqueen.com.hk/oatly-barista-cold-foam-non-dairy-plant-based-milk-coffee/"},
-      {label:"Oatly Investor Relations · Post-Matchamania world trend report", url:"https://investors.oatly.com/news-releases/news-release-details/decaf-dominance-post-matchamania-world-oatly-spotlights-emerging/"}
-    ]
-  },
-  {
-    trend:"Danone closes its 25-year-old Silk plant-based facility 🛏️ — Bridgeton NJ shuts AUG 4, category splinters into winners + losers",
-    detail:"Danone confirmed on MAY 9 it will close its 25-year-old Bridgeton, New Jersey plant-based beverage facility on AUG 4, 2026 — 114 layoffs, Silk + So Delicious production redistributed to Mt. Crawford VA, Dallas TX, and Jacksonville FL. The framing in trade press: 'the plant-based milk category splinters into winners and losers' as the category competes with higher-protein dairy, cheaper conventional milk, and a broader wellness market obsessed with protein + convenience. Willa's structurally on the winning side: 4 ingredients, no isolates, mother-founded, certified-cert-stack, real-food protein from the whole oat. Don't ship a Danone-name brief; let the framework do the work.",
-    platform:"Trade Press + Industry analysis",
-    views:"114 layoffs · facility closes Aug 4, 2026",
-    velocity:"high",
-    pillars:["REVIEWS/RECS"],
-    angle:"Category splinters into winners + losers — Willa's lives on the winning side, structurally. Don't name Danone; let the framework do the work.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"Food Dive · Danone to close plant-based dairy facility in NJ", url:"https://www.fooddive.com/news/danone-to-close-plant-based-dairy-facility-in-new-jersey/819781/"},
-      {label:"VegOut · Danone shuts 25-year-old Silk plant as category splinters", url:"https://vegoutmag.com/food-and-drink/vo-fd-danone-shuts-25-year-old-silk-plant-as-plant-based-milk-category-splinters-into-winners-and-losers/"}
-    ]
-  },
-  {
-    trend:"MAHA reformulation wave hits Big-CPG 🛡️ — PepsiCo phasing canola + soybean oils from Lay's + Tostitos, Kraft Heinz + General Mills + Nestlé following",
-    detail:"MAHA-driven reformulation continues to ripple through CPG. PepsiCo announced it would phase canola and soybean oils out of Lay's and Tostitos; Kraft Heinz, General Mills, and Nestlé following with their own reformulation pledges. Steak 'n Shake 'RFK'd' its fries. The January 2026 dietary guidelines added butter + beef tallow alongside olive oil as acceptable cooking fats. Jesse & Ben's seed-oil-free fries closed a $10M Series A from Greycroft MAY 7 (1,100% growth in 2025, launching Target/Costco/Kroger). Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower oil (structurally different from industrial seed oils). The reformulation wave benefits Willa's positioning regardless — clean-deck brands are validated as category winners.",
+    trend:"MAHA reformulation wave keeps rippling 🛡️ — STAT MAY 22 fact-check refocuses the seed-oil discourse, Willa's Original already sits on the right side",
+    detail:"STAT News dropped a MAY 22 fact-check on the anti-seed-oil movement that recalibrates the wellness narrative — distinguishing industrial seed oils from structurally-different high-oleic variants. The piece arrives as Big-CPG continues phasing canola + soybean (PepsiCo, Kraft Heinz, General Mills, Nestlé). Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower oil — the structurally-different variant STAT specifically names. The reformulation wave validates clean-deck brands as category winners; the STAT piece is the calm-authority anchor parents can quote when the discourse heats up.",
     platform:"Trade Press + Policy",
-    views:"PepsiCo + Kraft Heinz + General Mills + Nestlé reformulation pledges",
+    views:"STAT MAY 22 fact-check · reformulation wave context",
     velocity:"medium",
     pillars:["HEALTH/WELLNESS","REVIEWS/RECS"],
     healthSubAngle:"HEART",
-    angle:"Big-CPG is reformulating to where Willa's started — Original was never going to have seed oils. Lead-with-solution: the 4-ingredient deck IS the proof.",
+    angle:"Seed-oil discourse just got a calm fact-check 🛡️ — Willa's Original is already on the right side. Lead with the 4-ingredient deck, let it do the work.",
     urgency:"THIS WEEK",
     sources:[
-      {label:"Food Dive · How MAHA transformed the food industry", url:"https://www.fooddive.com/news/maha-food-ingredients-rfk-artificial-dyes/808286/"},
-      {label:"FoodNavigator USA · MAHA push accelerates reformulation", url:"https://www.foodnavigator-usa.com/Article/2026/04/14/maha-push-creates-reformulation-chaos/"},
-      {label:"STAT News (May 22, 2026) · Anti-seed-oil fact-check", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
-    ]
-  },
-  {
-    trend:"EWG dropped its interactive state-food-chemical regulation map 🗺️ — 50 states tracked, Willa's is on the right side of every line",
-    detail:"Environmental Working Group released a new interactive map (MAY 2026) tracking state-by-state food chemical regulation across all 50 states — dyes, glyphosate, BVO, propylparaben, titanium dioxide. The visual is going to be the reference parents share when school + grocery comes up all summer. Willa's clean-deck-by-default + Detox Project cert + USDA Organic stack is the answer parents are already searching for. Pairs with WV HB 2354 enacted (effective Jan 2028, joins CA + AZ + LA).",
-    platform:"Trade Press + Parenting Press",
-    views:"Interactive map · 50 states tracked · MAY 2026 release",
-    velocity:"high",
-    pillars:["HEALTH/WELLNESS","PARENTING"],
-    healthSubAngle:"IMMUNE",
-    angle:"EWG made the receipts visual 🗺️ — Willa's is already on the right side of the map. Run a label-literacy carousel this week.",
-    urgency:"RIDE NOW",
-    sources:[
-      {label:"EWG · Interactive map tracking state food chemical regulation (May 2026)", url:"https://www.ewg.org/news-insights/news/2026/05/interactive-map-tracking-state-food-chemical-regulation-us"},
-      {label:"Salon · Federal inaction on food additives pushes states to act", url:"https://www.salon.com/2026/04/11/federal-inaction-on-food-additives-pushes-states-to-act/"}
+      {label:"STAT News · What the anti-seed-oil movement gets wrong — and right (May 22, 2026)", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
     ]
   },
   {
@@ -124,58 +79,16 @@ const TRENDS = [
     ]
   },
   {
-    trend:"Pistachio is the breakout iced-coffee flavor 🥥 — everywhere this summer, cafe-format custom-built for Willa's Barista",
-    detail:"Pistachio has emerged as the must-have iced-coffee flavor on cafe menus, with consumer interest surging across cafe trend reports (Dilworth + Tampa, MAY 2026). The pistachio iced latte format is custom-built for the cold-foam pour Willa's Barista is engineered for — clean-deck, no rapeseed, no gums to fight the syrup. Adjacent: matcha cold foam wave (matcha now 50% of Blank Street Coffee orders), banana bread latte still circulating. Note convergence: Elmhurst's new NEXTY-Award Pistachio Crème SKU (T-1) IS in this lane. Willa's pivot: don't compete on pistachio AS A FLAVOR, ride pistachio AS A CAFE FORMAT (the iced-latte pour, not the SKU).",
-    platform:"Trade Press + TikTok",
-    views:"Cafe trend reports May 2026",
-    velocity:"high",
-    pillars:["INGREDIENTS/RECIPES"],
-    angle:"Pistachio iced-latte is everywhere this summer 🥥 — Willa's Barista pours like it was made for the format. (Consumer copy says 'everywhere this summer' not stat references.)",
-    urgency:"RIDE NOW",
-    sources:[
-      {label:"Dilworth Coffee · Summer Sips trends 2026", url:"https://pro.dilworthcoffee.com/blogs/news/summer-sips-leveraging-2026-s-biggest-drink-trends-for-coffee-shops"},
-      {label:"Tampa Bay 28 · Iced coffee trends taking over summer 2026", url:"https://www.tampabay28.com/morning-blend/the-iced-coffee-trends-taking-over-summer-2026"}
-    ]
-  },
-  {
-    trend:"Yuka app went mainstream-viral 📱 — #1 in US Health & Fitness, 94% of users return 'bad' scored products. Willa's Kids holds 100/100.",
-    detail:"Yuka app got explicit mainstream-press validation in MAY 2026 (WCCB Charlotte May 11 + WaPo + WWD + CBS Miami). The app is #1 in US Health & Fitness category, ranking #60 overall. Per Yuka's own research: 94% of US users return a product to the shelf if it gets a 'bad' rating, 92% are buying fewer ultra-processed food products since using the app. Since 2024 Yuka has allowed users to message brands asking for additive removal — creating reformulation pressure. The Willa's connection: Willa's Kids holds a perfect 100/100 Yuka score (Original + Chocolate both 94, Barista TBD). This is the brand-direct moment.",
+    trend:"Yuka app's mainstream moment is being tested 📱 — The Grocery Cart MAY 19 questions whether the app moralizes food. Willa's Kids holds 100/100 regardless.",
+    detail:"The Grocery Cart published a MAY 19, 2026 piece on Yuka — celebrated for transparency, now contested for over-simplifying and potentially triggering food restriction. The cultural moment is shifting from 'Yuka is the answer' to 'Yuka is one tool, not a moral verdict.' Willa's Kids holds a perfect 100/100 Yuka score that DOESN'T depend on the debate — it's based on lowest sugar + highest plant protein + no isolates + cert stack. The play this week is to lead with scan-then-pour authority, not enter the debate.",
     platform:"Consumer Tech Press + Trade",
-    views:"Mainstream press cluster May 2026 · 94% bad-score return rate",
+    views:"Grocery Cart MAY 19 reframe · debate enters cultural conversation",
     velocity:"high",
     pillars:["REVIEWS/RECS","PARENTING"],
-    angle:"Yuka virality is mainstream now 📱 — Willa's Kids 100/100 is the brand-direct receipt. Scan-then-pour proof.",
+    angle:"Yuka discourse is shifting from 'verdict' to 'one tool' 📱 — Willa's Kids 100/100 holds up regardless. Scan-then-pour proof, don't enter the debate.",
     urgency:"THIS WEEK",
     sources:[
-      {label:"WCCB Charlotte · What the Tech: App of the day Yuka (May 11, 2026)", url:"https://www.wccbcharlotte.com/2026/05/11/what-the-tech-app-of-the-day-yuka/"},
-      {label:"WWD · Yuka App food beauty viral coverage 2026", url:"https://wwd.com/beauty-industry-news/beauty-features/yuka-app-food-beauty-viral-app-ingredients-clean-1236907300/"}
-    ]
-  },
-  {
-    trend:"Sprouts MAY-JUN 2026 rollout 🌱 — Wellness Bowls daily-fresh + Sweet Heat line + 3 new vegan muffin flavors + Cherry Vegan Protein",
-    detail:"Sprouts Farmers Market announced its MAY-JUN 2026 exclusive product rollout — Wellness Bowls prepared fresh in-store daily, Sweet Heat snacks-and-beverages limited line, three new vegan muffin flavors (whole-ingredient, no artificial colors), Cherry Vegan Protein (20g protein, allergen-friendly, non-GMO). Sprouts is Willa's primary natural-channel retailer — the wellness-bowl format opens a meal-pairing content opportunity (oat-milk-based drinks paired with the bowls). Sweet Heat overlaps the 'swicy' Pinterest wave. Combined with Elmhurst Clean Protein nationwide launch THIS WEEK (T-1), Sprouts is investing heavily in the clean-deck-protein category Willa's already lives in.",
-    platform:"Retail Press + Trade",
-    views:"Sprouts MAY-JUN exclusive products rollout",
-    velocity:"medium",
-    pillars:["REVIEWS/RECS","INGREDIENTS/RECIPES"],
-    angle:"Sprouts goes deeper on wellness + plant + swicy 🌱 — Willa's is the carton already on those carts. Pair Willa's pour with the new bowl format.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"Sprouts Farmers Market · Exclusive products MAY-JUN press release", url:"https://www.sprouts.com/press-release/sprouts-farmers-market-rolling-out-exclusive-products-in-may-and-june/"},
-      {label:"Progressive Grocer · Sprouts adds Sweet Heat + Wellness Bowls", url:"https://progressivegrocer.com/sprouts-adds-sweet-heat-snacks-and-wellness-bowls-private-label-roster"}
-    ]
-  },
-  {
-    trend:"Arizona's UPF-in-schools ban kicks in AUG 2026 📚 — joins CA + WV in state-by-state school-lunch pressure",
-    detail:"Arizona Healthy School Act prohibits any public school from selling UPFs on school campuses during school hours starting in the 2026-2027 school year (begins August/September). Combined with California's similar law (effective 2027), Florida's bread-testing initiative (Feb 2026), and WV HB 2354 (synthetic dyes, effective Jan 2028), the state-by-state pressure on what kids eat at school is accelerating fast. Parents will be asking what's in the carton for school lunch all summer — pre-back-to-school content lane opens NOW. Willa's Kids (top-9 allergen-free, 8g protein, DHA, Bobby Approved, Yuka 100/100) is the answer-already-shipped.",
-    platform:"Policy + Parenting Press",
-    views:"AZ Healthy School Act + CA + WV state cluster",
-    velocity:"medium",
-    pillars:["PARENTING","HEALTH/WELLNESS"],
-    angle:"Back-to-school clean-label pressure is structural now (AZ + CA + FL + WV) 📚 — Willa's Kids was built for this.",
-    urgency:"BACKGROUND",
-    sources:[
-      {label:"O'Melveny · UPFs face rising scrutiny: state laws + FDA + litigation 2025-2026", url:"https://www.omm.com/insights/alerts-publications/ultra-processed-foods-face-rising-scrutiny-what-new-state-laws-fda-actions-and-private-litigation-mean-for-food-manufacturers-in-2025-2026/"}
+      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
     ]
   }
 ];
@@ -187,10 +100,9 @@ const TICKER = [
   {agent:"trend",    text:"Yuka app went mainstream-viral in MAY (94% of users return 'bad' scored products) — willa's Kids 100/100 is the brand-direct receipt · BIG SWING IG-R1 phone-scan reveal queued 📱"},
   {agent:"pulse",    text:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News) — willa's plays the dairy-free swap with Barista + coconut cream · BIG SWING TT-1 queued 🌯"},
   {agent:"pulse",    text:"Pinterest rhubarb +51% MAY 22 weekly report — sourdough rhubarb snack cake heritage pin (PIN-1) queued for THU MAY 28 · willa's grandma-kitchen voice owns the lane 🌿"},
-  {agent:"comp",     text:"Danone closing 25-year-old Silk plant-based facility AUG 4 (114 layoffs) — category splinters into winners + losers · willa's lives on the winning side structurally ⚓"},
-  {agent:"trend",    text:"MAHA reformulation wave hits Big-CPG (PepsiCo phasing canola/soybean from Lay's, Kraft Heinz + General Mills following) — willa's Original was already seed-oil-free 🛡️"},
-  {agent:"comp",     text:"Oatly Cold Foam debuted London Coffee Festival MAY 14-17 → EU rollout — willa's Barista has quietly won at-home cold-foam pour ❄️"},
-  {agent:"trend",    text:"EWG's interactive state-food-chemical regulation map dropped MAY 2026 — willa's is on the right side of every state line · F1 carousel queued for TUE MAY 26 🗺️"},
+  {agent:"trend",    text:"Bobbie + The Breasties lobbied Capitol Hill MAY 20 for Connie's Bill — mother-founded brands building legislative voice · the lane Willa's quietly lives in 💛"},
+  {agent:"trend",    text:"STAT News MAY 22 fact-check refocused the seed-oil discourse — Willa's Original is already on the right side, the 4-ingredient deck does the work 🛡️"},
+  {agent:"pulse",    text:"The Four Seasons S2 premiered in LA MAY 20 (Tina Fey + Steve Carell + Colman Domingo) — Netflix drops THU MAY 28 · Willa's-audience-coded summer-comedy stitch queued R4 🌲"},
   {agent:"pulse",    text:"Bleachers self-titled album dropped MAY 22 (Antonoff Brooklyn-indie) — audio bed for the long-weekend pour R3 Reel SAT MAY 30 11am 🎶"},
   {agent:"pulse",    text:"The Four Seasons S2 (Tina Fey + Steve Carell) drops Netflix THU MAY 28 — tonal-stitch R4 Reel queued for FRI MAY 29 6pm (no name-check) 🌲"},
   {agent:"pulse",    text:"Shaved Fruit (frozen strawberry on microplane) is taking over TikTok this month — willa's pours on top, dairy-free by accident · TT-2 queued WED MAY 27 🍓"},
@@ -204,46 +116,8 @@ const TICKER = [
 
 const COMPETITORS = [
   {
-    name:"Oatly",
-    status:"Oatly's biggest May moment isn't earnings — it's the Cold Foam launch ❄️. London Coffee Festival debut (MAY 14-17), rolling out across Europe through Coffee Fellows (Germany) and Good News (Spain / France / Netherlands). Per Oatly, plant-based cold foam has been 'hard to find and harder to replicate.' Same week the investor flavor-roadmap report flagged Matcha Oat Drink + iKaffe Popcorn coming to US shelves late 2026. Hot Cocoa Oatmilk already shipping. AGM landed MAY 20 (no dividend, LTIP 2026-2028 — internal-only). The category leader is going maximalist on flavor + foodservice cold foam, while Willa's Barista has been quietly winning the AT-HOME cold-foam pour with a 4-ingredient deck.",
-    direction:"up",
-    opportunity:"Oatly claims cold foam at the bar ❄️ — Willa's Barista already pours it at home. Show the at-home pull this week.",
-    sources:[
-      {label:"Green Queen · Oatly Cold Foam launch coverage", url:"https://www.greenqueen.com.hk/oatly-barista-cold-foam-non-dairy-plant-based-milk-coffee/"},
-      {label:"Oatly Investor · Post-Matchamania world trend report", url:"https://investors.oatly.com/news-releases/news-release-details/decaf-dominance-post-matchamania-world-oatly-spotlights-emerging/"}
-    ]
-  },
-  {
-    name:"Califia Farms",
-    status:"Califia's Q1 momentum continues from the Tesco UK matcha launch (still on shelf through summer). The Simple & Organic platform expansion (creamers + soymilk reformulations) keeps rolling at Whole Foods and Sprouts. The Uproot acquisition (dispensers at 150+ college dining + K-12 + hospitals) continues to feed the institutional / foodservice play. Quiet week on net-new SKU — the play this week is to NOT chase their matcha lane and instead lean into the dairy-free fermentation pour (Willa's + Cocoyo coconut kefir) where Califia hasn't positioned.",
-    direction:"flat",
-    opportunity:"Califia owns the matcha lane this quarter 🍵 — Willa's plays adjacent: the dairy-free fermentation pour Califia hasn't claimed.",
-    sources:[
-      {label:"Califia Farms newsroom", url:"https://www.califiafarms.com/press/"},
-      {label:"The Plant Base · Blueberry Matcha Almond Latte Tesco UK", url:"https://www.theplantbasemag.com/news/califia-farms-expands-rtd-matcha-range-with-new-blueberry-matcha-almond-latte"}
-    ]
-  },
-  {
-    name:"Planet Oat",
-    status:"Planet Oat's class-action vitamin D lawsuit is still open, still re-surfacing on parenting subreddits, still no public defense. Meanwhile their early-2026 promo with Emily in Paris and the two Zero Sugar Oatmilk Creamers (Caramel + Vanilla Cinnamon, January launch) keep getting press cycle. The TV-partnership play is the pattern worth noting — they're going pop-culture-association where Willa's plays product-truth-receipts. The trust gap stays wide on the mass-market oat-milk shelf. 'A label is a claim. A test is a fact.'",
-    direction:"down",
-    opportunity:"Trust gap stays open 🛡️ — Willa's tests every lot. Don't name Planet Oat; let the framework do the work.",
-    sources:[
-      {label:"Prepared Foods · Plant-based dairy seeks reset", url:"https://www.preparedfoods.com/articles/131394-plant-based-dairy-seeks-reset"}
-    ]
-  },
-  {
-    name:"Chobani",
-    status:"Quiet May for Chobani Oat — the La Colombe RTD integration keeps building on the MAY 10 close, Norton Shores Michigan plant ramping. No new oat-milk SKUs announced. The dominant frame stays: RTD coffee is consolidating into one mega-platform. Willa's distinct lane sharpens — Willa's is the protein in the whole oat that lives in your fridge carton, not the bottled shake in the checkout cooler. The frame works for cold foam at home (T-2 Oatly trend) just as well.",
-    direction:"flat",
-    opportunity:"RTD coffee is one mega-shake platform now ☕ — Willa's lane is the carton in the fridge, not the bottle in the cooler.",
-    sources:[
-      {label:"Food Dive · Chobani goes all oat with new yogurt and milk", url:"https://www.fooddive.com/news/chobani-goes-all-oat-with-new-yogurt-and-milk-launches/567055/"}
-    ]
-  },
-  {
     name:"Elmhurst 1925",
-    status:"🚨 Elmhurst's Clean Protein line went NATIONWIDE at Sprouts on MAY 11, 2026 — 4 flavors at $4.99: 2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream. 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going DIRECT at Willa's positioning at WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. Adjacent context: Pistachio is the breakout iced-coffee flavor (T-8 trend) — Elmhurst's NEXTY-Award SKU is pointed straight at that wave. The cert gap still holds though: Elmhurst is NOT organic, NOT glyphosate-free-certified by Detox Project, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice: don't punch, don't panic, just keep showing the cert-stack receipts.",
+    status:"🚨 Elmhurst's Clean Protein line went NATIONWIDE at Sprouts on MAY 11, 2026 — 4 flavors at $4.99: 2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream. 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going DIRECT at Willa's positioning at WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds though: Elmhurst is NOT organic, NOT glyphosate-free-certified by Detox Project, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice: don't punch, don't panic, just keep showing the cert-stack receipts.",
     direction:"up",
     opportunity:"🚨 Elmhurst goes direct at Willa's positioning at Sprouts — Willa's moat is the 4 certs Elmhurst can't claim (organic + Detox Project + WBENC + mother-founded). Show the credentials this week.",
     sources:[
@@ -252,13 +126,11 @@ const COMPETITORS = [
     ]
   },
   {
-    name:"Mooala",
-    status:"Mooala completed a line-wide repackaging — cleaner on-pack communication about ingredient sourcing, organic certification, and simple formulations (Prepared Foods coverage, landing in May trade rotation). This is the structural rising-tide: clean-deck is becoming category table stakes. Mooala is going organic-forward without the Detox Project glyphosate-free cert or WBENC mother-founded status that Willa's holds. The moat shifts from 'clean ingredient deck' to 'clean ingredient deck + cert stack you can't fake.'",
-    direction:"up",
-    opportunity:"Clean deck is the floor now — Willa's moat is the cert stack you can't fake (organic + Detox Project + WBENC + Yuka 100).",
-    sources:[
-      {label:"Prepared Foods · Plant-based dairy seeks reset", url:"https://www.preparedfoods.com/articles/131394-plant-based-dairy-seeks-reset"}
-    ]
+    name:"Oatly · Califia · Planet Oat · Chobani · Mooala",
+    status:"Positioning context (no fresh moves to source this week): Oatly remains the category leader pushing foodservice + flavor maximalism. Califia keeps the Simple & Organic platform rolling alongside its UK matcha lane. Planet Oat carries the open vitamin-D class-action that keeps surfacing on parenting subreddits. Chobani Oat is quiet — La Colombe RTD integration keeps building. Mooala's clean-deck repackaging makes 'clean ingredient deck' category table stakes. The Willa's moat shifts accordingly: 'clean deck' is now the floor; the cert stack (organic + Detox Project + WBENC + Yuka 100) is the bar.",
+    direction:"flat",
+    opportunity:"Clean deck is the floor now — show the cert stack the peer set can't claim (organic + Detox Project + WBENC + Yuka 100 Kids). Don't name competitors.",
+    sources:[]
   }
 ];
 
@@ -330,7 +202,7 @@ const BRIEFS = [
     timing:"Tue May 26 · 12pm", priority:"BIG SWING", rideNow:true,
     concept:"\"scanned 12 kids drinks at sprouts. one of them was green.\" — at-shelf mom-creator scan-with-me confession",
     intel:[
-      {type:"PULSE",text:"Yuka app went mainstream-viral MAY 2026 (CP-7) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. App is #1 in US Health & Fitness. Cultural moment is the BEHAVIOR: parents now filming themselves doing 'scan with me' grocery-aisle videos in the kids-drinks section. Yuka-in-the-cart is normal mom behavior."},
+      {type:"PULSE",text:"Yuka's cultural moment shifted MAY 19 (CP-7) — The Grocery Cart questioned whether the app moralizes food. Cultural moment is the BEHAVIOR: parents now filming themselves doing 'scan with me' grocery-aisle videos in the kids-drinks section. Yuka-in-the-cart is normal mom behavior; the 100/100 lands as a calm receipt, not a verdict."},
       {type:"AUDIENCE",text:"Pattern 03 Relatable Confession + Pattern 09 Aesthetic IRL Encounter — root in the lived mom-creator behavior (scan-with-me content), not the brand claim. Partake Foods muse (parent-first warmth) + Ghia (aesthetic IRL). The 100/100 score is the PUNCHLINE at the end of the video, NOT the lead. Real-aisle, real-phone, real-find."},
       {type:"COMPETITOR",text:"Internal only — Orgain Kids 9g cane sugar, Ripple Kids 5g cane sugar + not organic, Oatly Kids 7g oat syrup + 2g fiber, Kate Farms Kids 9g rice syrup/agave. None hit Yuka green. Willa's Kids 6g sugar + 3g fiber + DHA from algae oil + top-9 allergen-free is the structurally clean 100/100 in the category."}
     ],
@@ -587,7 +459,7 @@ const BRIEFS = [
     timing:"Tue May 26 · 6pm", priority:"HIGH",
     concept:"\"the state-by-state food chemical map just dropped. willa's is the carton already on the right side.\" — label-literacy framework carousel",
     intel:[
-      {type:"TREND",text:"EWG dropped its interactive state-food-chemical regulation map MAY 2026 (T-5) — 50 states tracked across dyes, glyphosate, BVO, propylparaben, titanium dioxide. Parent-network shareable. Willa's is on the right side of every line."},
+      {type:"TREND",text:"State-by-state food chemical regulation is the parent-shareable framing this season — dyes, glyphosate, BVO, propylparaben, titanium dioxide all being legislated state-by-state. Willa's clean-deck-by-default + Detox Project cert + USDA Organic stack is on the right side of every line."},
       {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority on a noisy topic) + Pattern 12 Carousel. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them posture). 6-card carousel format. Cert stack receipts at the end."},
       {type:"COMPETITOR",text:"Internal only — EWG state map is consumer-facing watchdog content (not trade press). Safe to reference EWG as shareable authority. Willa's cert stack (Detox Project + USDA Organic + WBENC + Yuka 100) is the structural advantage on the right side of every state's line."}
     ],
@@ -613,7 +485,7 @@ const BRIEFS = [
     intel:[
       {type:"COMPETITOR",text:"Engine context only — Elmhurst 1925 Clean Protein nationwide at Sprouts MAY 11-21 (C-5). Closest peer goes direct at Willa's positioning at primary retailer. NEVER name in consumer copy. Drives the 'show the cert moat' play this week."},
       {type:"AUDIENCE",text:"Pattern 06 Founder Humanization + Pattern 04 Taboo-as-Normal. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them confidence). Christina on-camera per reserved category. Calm-authority tone, no preach."},
-      {type:"PULSE",text:"Reinforces the 'four certs you can't fake' brand frame as competitive moat narrative — paired with Yuka 100/100 (CP-7) and EWG state map (T-5) as proof points landing this same week."}
+      {type:"PULSE",text:"Reinforces the 'four certs you can't fake' brand frame as competitive moat narrative — paired with Yuka 100/100 (CP-7) and the state-by-state food chemical regulation framing as proof points landing this same week."}
     ],
     hooks:[
       {text:"four certs that don't fit in a marketing line.",recommended:true},
@@ -640,7 +512,7 @@ const BRIEFS = [
     timing:"Thu May 28 · 12pm", priority:"HIGH",
     concept:"\"school lunch just got harder for everyone else. (willa's kids was built for the rules already.)\" — back-to-school parent-prep carousel",
     intel:[
-      {type:"TREND",text:"Arizona's Healthy School Act kicks in AUG 2026 — UPF-in-schools ban (T-11). Combined with California's similar law (effective 2027), Florida bread testing, and WV HB 2354 (synthetic dyes, Jan 2028), state-by-state pressure on kids' food is structural. Pre-back-to-school content window opens now."},
+      {type:"TREND",text:"State-by-state pressure on what kids eat at school is structural now — Arizona's Healthy School Act (UPF-in-schools ban) takes effect AUG 2026, joining California's similar law (effective 2027), Florida bread testing, and WV HB 2354 (synthetic dyes, Jan 2028). Pre-back-to-school content window opens now."},
       {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority) + Pattern 12 Carousel. Partake Foods muse (parent-first warmth) + Lovebird (activist parent-lane). Real toddler lunchbox staging — passes 'would a parent screenshot this and feel yes that's a lunch' real-life test (POV Discipline #8)."},
       {type:"COMPETITOR",text:"Internal only — no other kids RTD oat milk holds top-9 allergen-free + 8g protein + DHA from algae oil + Yuka 100. Willa's Kids was structurally built for the rules states are now writing."}
     ],
@@ -742,7 +614,7 @@ const BRIEFS = [
     concept:"\"saw at sprouts: the whole willa's wall.\" — at-shelf-moment evergreen",
     intel:[
       {type:"AUDIENCE",text:"EVERGREEN — Sprouts at-shelf-spotting content (Willa's primary natural-channel retailer). Pattern 09 Aesthetic IRL Encounter. Ghia muse (aesthetic at-shelf). Real-shelf, no studio finish. Cinematic phone-pan across the 4 cartons."},
-      {type:"COMPETITOR",text:"Internal only — Sprouts is Willa's primary natural-channel retailer. Sprouts MAY-JUN rollout context (T-10) supports — Wellness Bowls + Sweet Heat line + vegan muffins. Willa's gets the at-shelf moment without name-checking competitors."},
+      {type:"COMPETITOR",text:"Internal only — Sprouts is Willa's primary natural-channel retailer. The at-shelf moment plays evergreen — Willa's lives on the wall whether or not Sprouts has a new launch this week."},
       {type:"PULSE",text:"Evergreen — at-shelf-spotting content compounds organically. Pairs with Sprouts MAY-JUN rollout context as background."}
     ],
     hooks:[
@@ -940,24 +812,24 @@ const AGENT_BY_ID = Object.fromEntries(AGENTS.map(a=>[a.id,a]));
 // ─── Brief ↔ source links (the threading) ─────────────────
 const BRIEF_LINKS = {
   // BIG SWINGS
-  "MAY25-IG-R1": {trends:["T-9"],            pulse:["CP-7"],                 comps:[]},             // Yuka Kids 100/100
-  "MAY25-TT-1":  {trends:["T-2"],            pulse:["CP-4"],                 comps:["C-1"]},        // Tortilla cinnamon roll dairy-free swap
-  "MAY25-PIN-1": {trends:["T-7"],            pulse:["CP-2"],                 comps:[]},             // Sourdough rhubarb snack cake
+  "MAY25-IG-R1": {trends:["T-5"],            pulse:["CP-7"],                 comps:[]},             // Yuka Kids 100/100 (T-9→T-5)
+  "MAY25-TT-1":  {trends:[],                 pulse:["CP-4"],                 comps:["C-1"]},        // Tortilla cinnamon roll dairy-free swap (T-2 Oatly trend pulled — stale)
+  "MAY25-PIN-1": {trends:["T-4"],            pulse:["CP-2"],                 comps:[]},             // Sourdough rhubarb snack cake (T-7→T-4)
   // HIGH PRIORITY
-  "MAY25-IG-R2": {trends:["T-4"],            pulse:["CP-9"],                 comps:[]},             // Seed-oil-free Christina moment
-  "MAY25-TT-2":  {trends:["T-7"],            pulse:["CP-1"],                 comps:[]},             // Shaved Fruit frozen strawberry sorbet
-  "MAY25-TT-3":  {trends:["T-2","T-8"],      pulse:["CP-5"],                 comps:["C-1"]},        // Will it survive Barista flip
+  "MAY25-IG-R2": {trends:["T-2"],            pulse:["CP-9"],                 comps:[]},             // Seed-oil-free Christina moment (T-4→T-2)
+  "MAY25-TT-2":  {trends:["T-4"],            pulse:["CP-1"],                 comps:[]},             // Shaved Fruit frozen strawberry sorbet (T-7→T-4)
+  "MAY25-TT-3":  {trends:[],                 pulse:["CP-5"],                 comps:["C-1"]},        // Will it survive Barista flip (T-2 Oatly + T-8 Pistachio pulled — stale)
   "MAY25-IG-R3": {trends:[],                 pulse:["CP-3"],                 comps:[]},             // Long-weekend pour (Bleachers audio bed)
   "MAY25-IG-R4": {trends:[],                 pulse:["CP-8"],                 comps:[]},             // Four Seasons S2 cultural-stitch
   "MAY25-TT-4":  {trends:[],                 pulse:["CP-6"],                 comps:[]},             // AI Food meme + real-food reveal
-  "MAY25-IG-F1": {trends:["T-5","T-12"],     pulse:[],                       comps:[]},             // EWG state map cert-stack carousel
-  "MAY25-IG-R5": {trends:["T-1","T-9"],      pulse:[],                       comps:["C-5"]},        // Cert moat Christina reveal (Elmhurst engine context)
-  "MAY25-IG-F2": {trends:["T-12","T-5"],     pulse:["CP-7"],                 comps:[]},             // Arizona school act back-to-school carousel
+  "MAY25-IG-F1": {trends:[],                 pulse:[],                       comps:[]},             // EWG state map cert-stack carousel (T-5 EWG pulled — stale source; brief evergreen-ifies as cert-stack carousel)
+  "MAY25-IG-R5": {trends:["T-1","T-5"],      pulse:[],                       comps:["C-5"]},        // Cert moat Christina reveal (T-1 Elmhurst + T-5 Yuka)
+  "MAY25-IG-F2": {trends:[],                 pulse:["CP-7"],                 comps:[]},             // Back-to-school parent-prep carousel (T-11 Arizona + T-5 EWG pulled — stale)
   // STANDARD / EVERGREEN — no signal anchor
   "MAY25-TT-5":  {trends:[],                 pulse:[],                       comps:[]},             // Chocolate evergreen (Good Food Awards heritage)
   "MAY25-PIN-2": {trends:[],                 pulse:[],                       comps:[]},             // Iced latte without the math (evergreen)
   "MAY25-PIN-3": {trends:[],                 pulse:[],                       comps:[]},             // Strawberry oat icebox cake (evergreen)
-  "MAY25-TT-6":  {trends:["T-10"],           pulse:[],                       comps:[]},             // Saw at Sprouts wall (at-shelf evergreen, ambient Sprouts context)
+  "MAY25-TT-6":  {trends:[],                 pulse:[],                       comps:[]},             // Saw at Sprouts wall (T-10 Sprouts pulled — stale)
   "MAY25-IG-F3": {trends:[],                 pulse:[],                       comps:[]},             // Heritage cert-stack carousel (evergreen)
   "MAY25-TT-7":  {trends:[],                 pulse:[],                       comps:[]}              // Kids crossover (evergreen)
 };
@@ -972,7 +844,7 @@ const AMPLIFY_PLANS = {
     testWindow:"5 days (Tue May 26 → Sat May 30)",
     objective:"Saves + Profile Visits",
     guardrail:"Auto-pause if CPM exceeds $9 or sentiment drops below 0.85",
-    why:"Yuka app went mainstream-viral in MAY 2026 (CP-7, T-9) — WCCB MAY 11 + WaPo + WWD + CBS Miami coverage. The CULTURAL MOMENT is the behavior: parents are now filming themselves doing scan-with-me grocery-aisle videos. Yuka-in-the-cart is normal mom behavior. This brief joins that content lane as the brand-direct find at the end of the video — 100/100 is the punchline, not the lead. Pattern 03 (Relatable Confession) + Pattern 09 (Aesthetic IRL Encounter) = mom-creator-native format.",
+    why:"Yuka's mainstream moment is being tested — The Grocery Cart MAY 19 reframe questions whether the app moralizes food (CP-7, T-5). Cultural shift: from 'Yuka is the verdict' to 'Yuka is one tool.' Willa's Kids 100/100 holds up regardless of which side parents land on — based on lowest sugar + highest plant protein + no isolates + cert stack. Scan-with-me mom-creator content is the format this brief joins; 100/100 is the punchline, not the lead.",
     placements:[
       {
         platform:"Meta",
@@ -1224,8 +1096,8 @@ const SHARE_OF_VOICE = [
 // counsel, not reporting — addresses the "advising, not reporting" rule added
 // 2026-04-17.
 const COMP_WEEKLY_POV = {
-  happened: "Two big competitor moves landed this week: Elmhurst took Clean Protein nationwide at Sprouts (4 SKUs, 27g plant protein, no gums/seed oils — the closest-clean peer going direct at Willa's positioning at our primary retailer), and Oatly took cold foam to Europe at London Coffee Festival (MAY 14-17 → EU rollout MAY 25+). Side context: Danone announced it's closing its 25-year-old Bridgeton plant-based facility (AUG 4) — the category is splintering into winners + losers, and Willa's lives on the winning side structurally.",
-  coming:   "Pinterest rhubarb +51% opens the heritage-kitchen window, pistachio iced-coffee surge is the cafe-format breakout, and the EWG state-regulation map released MAY 2026 makes parent-share-time content load up through summer. The Four Seasons S2 premieres Netflix THU MAY 28 (Tina Fey + Steve Carell adult-friendship summer comedy — Willa's-audience-coded). Bleachers self-titled album dropped MAY 22 (Jack Antonoff, Brooklyn-indie morning-ritual audio bed). The Bear S5 finale ramp continues toward JUN 25 (not riding this week — covered MAY 18, deliberate break).",
+  happened: "The big competitor move this week: Elmhurst took Clean Protein nationwide at Sprouts (4 SKUs, 27g plant protein, no gums/seed oils — closest-clean peer going direct at Willa's positioning at our primary natural-channel retailer). The cert gap is the Willa's moat: organic + Detox Project + WBENC + mother-founded — Elmhurst can't claim any of those.",
+  coming:   "Pinterest rhubarb +51% (MAY 22 weekly report) opens the heritage-kitchen window all summer. The Four Seasons S2 premieres Netflix THU MAY 28 (Tina Fey + Steve Carell adult-friendship summer comedy — Willa's-audience-coded). Bleachers self-titled album dropped MAY 22 (Jack Antonoff, Brooklyn-indie morning-ritual audio bed). Bobbie + The Breasties Capitol Hill MAY 20 lobbying for Connie's Bill is the mother-founded-brands-as-policy-force moment Willa's lives in tonally.",
   plays:    "18-brief slate this week — 3 BIG SWINGs (Yuka 100/100 Kids brand-direct receipt vs. Yuka's mainstream-viral moment; tortilla cinnamon rolls dairy-free swap; rhubarb heritage Pinterest pin). Press the moats Oatly + Califia + Elmhurst + Mooala CAN'T claim (WBENC + Detox Project + Yuka 100/100 Kids + mother-founded). DON'T chase Oatly's flavor pipeline or Elmhurst's protein-RTD lane. 6 evergreen briefs in the back half (Pinterest SEO + at-shelf + cert-stack heritage carousel)."
 };
 
@@ -1475,8 +1347,7 @@ const CULTURAL_PULSE = [
     willasPlay:"TikTok: ride the Shaved Fruit format with hands shaving a frozen strawberry into a bowl + Willa's Original cream pour on top. 'summer's first snack. dairy-free by accident.'",
     dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"SoYummy · Viral TikTok Food Hacks That Actually Work May 2026", url:"https://soyummy.com/uncategorized/viral-tiktok-food-hacks-that-actually-work-the-so-yummy-guide-to-kitchen-magic-in-2026/"},
-      {label:"TikTok · #shavedfruit hashtag page", url:"https://www.tiktok.com/tag/shavedfruit"}
+      {label:"TikTok · #shavedfruit hashtag page (live)", url:"https://www.tiktok.com/tag/shavedfruit"}
     ]
   },
   {
@@ -1519,8 +1390,7 @@ const CULTURAL_PULSE = [
     willasPlay:"TikTok: ride the tortilla cinnamon roll format, swap heavy cream for Willa's Barista + coconut cream. 'tiktok's viral cinnamon roll, dairy-free + cleaner.'",
     dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"Good Morning America · TikTok's latest viral recipe: Tortilla cinnamon rolls", url:"https://www.goodmorningamerica.com/food/story/tiktoks-latest-viral-recipe-tortilla-cinnamon-rolls-122429404"},
-      {label:"Parade · TikTok Cinnamon Rolls Recipe & Review", url:"https://parade.com/food/tortilla-cinnamon-rolls"}
+      {label:"TikTok · #tortillacinnamonrolls hashtag page (live)", url:"https://www.tiktok.com/tag/tortillacinnamonrolls"}
     ]
   },
   {
@@ -1534,7 +1404,7 @@ const CULTURAL_PULSE = [
     willasPlay:"TikTok: 'will it survive: iced coffee edition' — hands pour Willa's Barista cold foam at 8am, cut to 11am same glass holding shape. 'Willa's pours like it was built for the morning meeting.'",
     dnaMatch:"before-after-stitch",
     sources:[
-      {label:"SocialPilot · TikTok Trends May 2026", url:"https://www.socialpilot.co/blog/tiktok-trends"}
+      {label:"SocialPilot · TikTok Trends (May 20, 2026)", url:"https://www.socialpilot.co/blog/tiktok-trends"}
     ]
   },
   {
@@ -1548,22 +1418,21 @@ const CULTURAL_PULSE = [
     willasPlay:"TikTok: ride the AI Food burrito format, reveal hands pouring Willa's Original + real oat groat into bowl as the 'real food' punchline.",
     dnaMatch:"meme-payload",
     sources:[
-      {label:"Turrboo · TikTok's Biggest Trends May 2026", url:"https://turrboo.com/blog/latest-tiktok-trends"}
+      {label:"TikTok · #aifood hashtag page (live)", url:"https://www.tiktok.com/tag/aifood"}
     ]
   },
   {
     id:"CP-7",
     type:"NEWS CYCLE",
     typeColor:"#73B2C9",
-    hook:"Yuka app went mainstream-viral 📱 — and Willa's Kids holds the perfect 100/100 score the app rewards parents for finding",
-    detail:"Yuka app got explicit mainstream-press validation in MAY 2026 (WCCB MAY 11 + WaPo MAR 17 + WWD + CBS Miami). The app is #1 in US Health & Fitness category, ranking #60 overall. Per Yuka's own research: 94% of US users return a product to the shelf if it gets a 'bad' rating. The signal is that label-literacy is no longer a parent-niche behavior — it's a mass consumer norm enforced by a phone scan. Willa's Kids holds a perfect 100/100 Yuka score (Original + Chocolate both 94, Barista TBD). Different from APR 27's '80M scans' authority carousel — this is the BROADER CULTURAL MOMENT of Yuka being everywhere + the brand-direct receipt.",
+    hook:"The Yuka backlash arrived MAY 19 📱 — critics flag the app for moralizing food. Willa's Kids 100/100 holds up regardless.",
+    detail:"The Grocery Cart's MAY 19, 2026 piece marks the inflection point in Yuka's cultural arc — celebrated for transparency, now contested for over-simplifying and potentially driving restriction. The conversation is shifting from 'Yuka is the answer' to 'Yuka is one tool, not a moral verdict.' Willa's Kids 100/100 + Original 94 + Chocolate 94 are receipts that hold up regardless of which side of the debate parents land on — they're based on lowest sugar + highest plant protein + no isolates + cert stack. The play this week: lead with scan-then-pour authority, don't enter the debate.",
     velocity:"high",
     platform:"Consumer Tech Press + TikTok",
-    willasPlay:"IG Reel: phone-scan POV — hands pick up Willa's Kids carton, scan in Yuka app, reveal 100/100 score. Cut to morning pour.",
+    willasPlay:"IG Reel: phone-scan POV — hands pick up Willa's Kids carton, scan in Yuka app, reveal 100/100 score. Cut to morning pour. Don't reference the debate; let the score do the work.",
     dnaMatch:"on-pack-checklist",
     sources:[
-      {label:"WCCB Charlotte · What the Tech: Yuka (May 11, 2026)", url:"https://www.wccbcharlotte.com/2026/05/11/what-the-tech-app-of-the-day-yuka/"},
-      {label:"WWD · Yuka App food beauty viral coverage", url:"https://wwd.com/beauty-industry-news/beauty-features/yuka-app-food-beauty-viral-app-ingredients-clean-1236907300/"}
+      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
     ]
   },
   {
@@ -1577,8 +1446,8 @@ const CULTURAL_PULSE = [
     willasPlay:"IG Reel: 'summer dinner with the four people you actually want at the table.' Long-weekend dinner-prep scene + Willa's Original cream pour into the after-dinner coffee. Don't name the show — let the post-premiere audience make the connection.",
     dnaMatch:"kid-family-moment",
     sources:[
-      {label:"Netflix Tudum · The Four Seasons Season 2 release date", url:"https://www.netflix.com/tudum/articles/the-four-seasons-season-2-news-photos-release-date"},
-      {label:"Hollywood Reporter · The Four Seasons review (S1)", url:"https://www.hollywoodreporter.com/tv/tv-reviews/the-four-seasons-review-netflix-tina-fey-1236197935/"}
+      {label:"Just Jared · Tina Fey + Colman Domingo at The Four Seasons S2 Premiere (May 20, 2026)", url:"https://www.justjared.com/2026/05/20/tina-fey-colman-domingo-more-step-out-for-the-four-seasons-season-2-premiere-in-l-a/"},
+      {label:"Netflix Tudum · The Four Seasons Season 2 release date (durable brand page)", url:"https://www.netflix.com/tudum/articles/the-four-seasons-season-2-news-photos-release-date"}
     ]
   },
   {
@@ -1593,6 +1462,20 @@ const CULTURAL_PULSE = [
     dnaMatch:"mom-activist",
     sources:[
       {label:"STAT News · What the anti-seed oil movement gets wrong — and right (May 22, 2026) — engine context only", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
+    ]
+  },
+  {
+    id:"CP-10",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"Mother-founded brands took Capitol Hill MAY 20 💛 — Bobbie + Breasties lobbied for Connie's Bill, the lane Willa's quietly lives in",
+    detail:"Bobbie for Change (the social impact arm of mother-founded infant formula brand Bobbie) and The Breasties descended on Capitol Hill on MAY 20, 2026 to advocate for the Constance C. McDaniel Medically Necessary Infant Formula and Donor Milk Act ('Connie's Bill') — bipartisan legislation introduced by Reps. Wasserman Schultz + Hinson. The pattern: mother-founded CPG brands building real policy clout, not just brand affinity. This is the lane Willa's lives in — mother-founded + cert-stack credibility + the long-game policy work that turns brand into infrastructure. Don't speak to Connie's Bill directly; reinforce the cultural moment of mother-founded brands earning legislative voice.",
+    velocity:"medium",
+    platform:"Trade Press + Parenting + Policy",
+    willasPlay:"IG Reel: cofounder-sister talking to camera — 'mother-founded brands are showing up where it matters now. we'll keep showing up too.' Heritage carton frame at the end. Don't name Bobbie or Connie's Bill; let the moment land tonally.",
+    dnaMatch:"mom-activist",
+    sources:[
+      {label:"BusinessWire · Bobbie + Breasties Lobby for Connie's Bill on Capitol Hill (May 20, 2026)", url:"https://www.businesswire.com/news/home/20260520832058/en/Bobbie-for-Change-and-The-Breasties-Lobby-for-Introduction-of-Connies-Bill-on-Capitol-Hill-After-Five-Year-Partnership"}
     ]
   }
 ];
