@@ -1472,7 +1472,7 @@ const CULTURAL_PULSE = [
     detail:"'Shaved Fruit' is the breakout May 2026 healthy-snack trend (per SoYummy + TikTok creator search insights). Format: take a frozen strawberry, shave it on a microplane into a bowl — produces an instantly fluffy, ASMR-satisfying 'sorbet' with zero dairy, zero added sugar, just fruit. Visually mesmerizing, takes 30 seconds, lives in the summer-morning-kitchen aesthetic. Willa's connection: drizzle Willa's Original on top for a dairy-free cream pour that doesn't melt the snow-like texture — pairs naturally without overwhelming. Adjacent to strawberry season peak + Willa's grandma-kitchen voice.",
     velocity:"high",
     platform:"TikTok + IG Reels",
-    willasPlay:"TikTok WED MAY 27 9am: ride the Shaved Fruit format with hands shaving a frozen strawberry into a bowl + Willa's Original cream pour on top. Pattern 05 + Pattern 04. 'summer's first snack. dairy-free by accident.' (BS-1)",
+    willasPlay:"TikTok: ride the Shaved Fruit format with hands shaving a frozen strawberry into a bowl + Willa's Original cream pour on top. Pattern 05 + Pattern 04. 'summer's first snack. dairy-free by accident.' (BS-1)",
     dnaMatch:"viral-recipe-remix",
     sources:[
       {label:"SoYummy · Viral TikTok Food Hacks That Actually Work May 2026", url:"https://soyummy.com/uncategorized/viral-tiktok-food-hacks-that-actually-work-the-so-yummy-guide-to-kitchen-magic-in-2026/"},
@@ -1487,7 +1487,7 @@ const CULTURAL_PULSE = [
     detail:"Rhubarb is having a heritage-kitchen moment as summer opens — strawberry rhubarb crisp, sourdough rhubarb snack cake, rhubarb shrub. This is grandma food (Willa's grandma was 1921 — she would have made rhubarb pie), prebiotic-fiber-friendly, naturally tart. Pin format with type-led layout + Willa's Original in the cream pour. Pairs with the broader strawberry-season-peak energy (Shaved Fruit, strawberry rhubarb crisp) and the Pinterest planning audience that's 7-10 days ahead of execution.",
     velocity:"high",
     platform:"Pinterest + TikTok",
-    willasPlay:"Pinterest pin THU MAY 28: 'sourdough rhubarb snack cake — the heritage tart your grandmother would have made (with Willa's Original in the pour).' Type-led. Pattern 02 + 12. (BS-1)",
+    willasPlay:"Pinterest pin: 'sourdough rhubarb snack cake — the heritage tart your grandmother would have made (with Willa's Original in the pour).' Type-led. Pattern 02 + 12. (BS-1)",
     dnaMatch:"viral-recipe-remix",
     sources:[
       {label:"Pinterest Business Community · MAY 22 weekly trend report (engine context)", url:"https://community.pinterest.biz/t/the-weekly-pbc-trend-report-may-22-2026/45841"}
@@ -1501,7 +1501,7 @@ const CULTURAL_PULSE = [
     detail:"Bleachers (Jack Antonoff) released their self-titled album MAY 22, 2026 — NPR + Indy Review both flagged it as 'lyrically perceptive, musically bombastic rock n' roll.' Antonoff produced Lana Del Rey, Sabrina Carpenter, and Taylor Swift's biggest records; this is his own band's most accessible release. Tonal-match for Willa's morning-ritual lane (warm + indie + intentional). Use a track as the audio bed for a 'summer kitchen, week 1' Reel — don't stitch, just soundtrack.",
     velocity:"medium",
     platform:"Music + IG Reels + TikTok",
-    willasPlay:"IG Reel SAT MAY 30 11am: Bleachers MAY 22 track as audio bed for the summer-kitchen-open Reel. Don't name the album in copy — let the song do the work. Pattern 02.",
+    willasPlay:"IG Reel: Bleachers MAY 22 track as audio bed for the summer-kitchen-open Reel. Don't name the album in copy — let the song do the work. Pattern 02.",
     dnaMatch:"kid-family-moment",
     sources:[
       {label:"NPR · New Music Friday best albums May 22, 2026", url:"https://www.npr.org/2026/05/22/nx-s1-5830344/new-music-friday-best-albums-may-22-2026"},
@@ -1516,7 +1516,7 @@ const CULTURAL_PULSE = [
     detail:"GMA and ABC News both covered 'tortilla cinnamon rolls' as THE breakout viral TikTok recipe of MAY 2026 — millions of views. The recipe uses a burrito tortilla rolled with butter + brown sugar + cinnamon, baked with heavy cream poured over (the heavy cream is what creates the gooey-roll texture). Willa's plays the dairy-free swap per the No-Dairy rule: replace heavy cream with Willa's Barista + coconut cream blend. Pattern 04 (the unexpected ingredient is the dairy-free swap, calmly stated).",
     velocity:"high",
     platform:"TikTok + IG Reels",
-    willasPlay:"TikTok THU MAY 28 9am: ride the tortilla cinnamon roll format, swap heavy cream for Willa's Barista + coconut cream. 'tiktok's viral cinnamon roll, dairy-free + cleaner.' Pattern 04 + 05. (BS-2)",
+    willasPlay:"TikTok: ride the tortilla cinnamon roll format, swap heavy cream for Willa's Barista + coconut cream. 'tiktok's viral cinnamon roll, dairy-free + cleaner.' Pattern 04 + 05. (BS-2)",
     dnaMatch:"viral-recipe-remix",
     sources:[
       {label:"Good Morning America · TikTok's latest viral recipe: Tortilla cinnamon rolls", url:"https://www.goodmorningamerica.com/food/story/tiktoks-latest-viral-recipe-tortilla-cinnamon-rolls-122429404"},
@@ -1531,7 +1531,7 @@ const CULTURAL_PULSE = [
     detail:"TikTok format where creators apply full makeup at start of day, live 6-8 hours, return to camera with no touch-ups — rising sharply in MAY's second week as summer heat creates a 'will this survive today?' narrative. Adjacent / flippable for Willa's: 'will my iced coffee survive the morning meeting' — the no-curdle, no-separation, no-bitter-aftertaste cold-foam pour that Willa's Barista actually delivers. Pattern 03 (relatable confession) + Pattern 10 (wordplay). Hands + product, no on-camera face needed.",
     velocity:"medium",
     platform:"TikTok",
-    willasPlay:"TikTok TUE MAY 26 9am: 'will it survive: iced coffee edition' — hands pour Willa's Barista cold foam at 8am, cut to 11am same glass holding shape. Pattern 03 + 10. 'Willa's pours like it was built for the morning meeting.' (BS-2)",
+    willasPlay:"TikTok: 'will it survive: iced coffee edition' — hands pour Willa's Barista cold foam at 8am, cut to 11am same glass holding shape. Pattern 03 + 10. 'Willa's pours like it was built for the morning meeting.' (BS-2)",
     dnaMatch:"before-after-stitch",
     sources:[
       {label:"SocialPilot · TikTok Trends May 2026", url:"https://www.socialpilot.co/blog/tiktok-trends"}
@@ -1545,7 +1545,7 @@ const CULTURAL_PULSE = [
     detail:"'AI Food' TikTok meme features an animated burrito exploding its fillings onto a plate — described as 'equal parts absurd, chaotic, and visually hilarious' by Turrboo's MAY 2026 trend tracker. Format works as green-screen edit / reaction / payoff reveal. Willa's angle: subvert the AI-food gross-out by revealing a REAL kitchen pour (hands + Willa's Original + oat groat in a bowl) as the punchline answer. 'What food is supposed to look like.' Pattern 05 + Pattern 04 (real food as the unexpected answer).",
     velocity:"medium",
     platform:"TikTok",
-    willasPlay:"TikTok FRI MAY 29 7pm: ride the AI Food burrito format, reveal hands pouring Willa's Original + real oat groat into bowl as the 'real food' punchline. Pattern 05.",
+    willasPlay:"TikTok: ride the AI Food burrito format, reveal hands pouring Willa's Original + real oat groat into bowl as the 'real food' punchline. Pattern 05.",
     dnaMatch:"meme-payload",
     sources:[
       {label:"Turrboo · TikTok's Biggest Trends May 2026", url:"https://turrboo.com/blog/latest-tiktok-trends"}
@@ -1559,7 +1559,7 @@ const CULTURAL_PULSE = [
     detail:"Yuka app got explicit mainstream-press validation in MAY 2026 (WCCB MAY 11 + WaPo MAR 17 + WWD + CBS Miami). The app is #1 in US Health & Fitness category, ranking #60 overall. Per Yuka's own research: 94% of US users return a product to the shelf if it gets a 'bad' rating. The signal is that label-literacy is no longer a parent-niche behavior — it's a mass consumer norm enforced by a phone scan. Willa's Kids holds a perfect 100/100 Yuka score (Original + Chocolate both 94, Barista TBD). Different from APR 27's '80M scans' authority carousel — this is the BROADER CULTURAL MOMENT of Yuka being everywhere + the brand-direct receipt.",
     velocity:"high",
     platform:"Consumer Tech Press + TikTok",
-    willasPlay:"IG Reel TUE MAY 26 12pm: phone-scan POV — hands pick up Willa's Kids carton, scan in Yuka app, reveal 100/100 score. Cut to morning pour. Pattern 04. (BS-3)",
+    willasPlay:"IG Reel: phone-scan POV — hands pick up Willa's Kids carton, scan in Yuka app, reveal 100/100 score. Cut to morning pour. Pattern 04. (BS-3)",
     dnaMatch:"on-pack-checklist",
     sources:[
       {label:"WCCB Charlotte · What the Tech: Yuka (May 11, 2026)", url:"https://www.wccbcharlotte.com/2026/05/11/what-the-tech-app-of-the-day-yuka/"},
@@ -1574,7 +1574,7 @@ const CULTURAL_PULSE = [
     detail:"Netflix releases The Four Seasons Season 2 on THU MAY 28, 2026. Tina Fey leads the ensemble cast (Carell, Forte, Domingo, Henningsen, Kenney-Silver) in Alan Alda's 1981 romantic-comedy adaptation. S1 hit 78% on Rotten Tomatoes with critic-consensus calling it 'welcoming as a lakeside vista...witty and wise.' Adult-friendship-summer-vacation comedy is custom-built for Willa's parent-demo audience. The play this week: 'the four seasons of a kitchen' or 'what gets shared at a long-weekend dinner table' — heritage-kitchen content that lands the same week as the show drops, without name-checking. Friday MAY 29 Reel timing perfect (24 hrs after premiere).",
     velocity:"medium",
     platform:"TV + IG + Trade Press",
-    willasPlay:"IG Reel FRI MAY 29 6pm: 'summer dinner with the four people you actually want at the table.' Long-weekend dinner-prep scene + Willa's Original cream pour into the after-dinner coffee. Pattern 02 (cultural tie-in). Don't name the show — let the post-premiere audience make the connection.",
+    willasPlay:"IG Reel: 'summer dinner with the four people you actually want at the table.' Long-weekend dinner-prep scene + Willa's Original cream pour into the after-dinner coffee. Pattern 02 (cultural tie-in). Don't name the show — let the post-premiere audience make the connection.",
     dnaMatch:"kid-family-moment",
     sources:[
       {label:"Netflix Tudum · The Four Seasons Season 2 release date", url:"https://www.netflix.com/tudum/articles/the-four-seasons-season-2-news-photos-release-date"},
@@ -1589,7 +1589,7 @@ const CULTURAL_PULSE = [
     detail:"Mainstream press caught up to seed-oil discourse this week (STAT News MAY 22 fact-check; ongoing MAHA reformulation wave with PepsiCo phasing canola/soybean from Lay's, Kraft Heinz + General Mills + Nestlé following). Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower (structurally different from industrial seed oils). Engine context only: Jesse & Ben's seed-oil-free fries closed $10M Series A from Greycroft MAY 7 (investor framing, NOT for consumer copy). The consumer-side cultural conversation is 'what's in your cooking oil / what's in your milk' — Willa's plays the calm-authority receipt, not the trend-chase. Don't preach, don't panic, show the deck.",
     velocity:"medium",
     platform:"Trade Press → IG + TikTok",
-    willasPlay:"IG Reel THU MAY 28 6pm: 'the carton has read the same way the whole time.' Hands hold Willa's Original carton, slow ingredient-deck reveal (4 ingredients), cofounder voice-over: 'we never had to add what we never had.' NO mention of seed-oil discourse by name — let the visual + ingredient deck do the work. Pattern 04. (BS-3)",
+    willasPlay:"IG Reel: 'the carton has read the same way the whole time.' Hands hold Willa's Original carton, slow ingredient-deck reveal (4 ingredients), cofounder voice-over: 'we never had to add what we never had.' NO mention of seed-oil discourse by name — let the visual + ingredient deck do the work. Pattern 04. (BS-3)",
     dnaMatch:"mom-activist",
     sources:[
       {label:"STAT News · What the anti-seed oil movement gets wrong — and right (May 22, 2026) — engine context only", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
