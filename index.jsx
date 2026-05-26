@@ -5324,14 +5324,13 @@ const WELCOME_HIGHLIGHTS = [
     ]
   },
   {
-    stat:"94%",
-    label:"Yuka app went mainstream-viral in MAY 2026 — #1 in US Health & Fitness, 94% of users return a 'bad' scored product. Willa's Kids holds the perfect 100/100.",
-    detail:"WCCB Charlotte MAY 11 + Washington Post + WWD + CBS Miami all covered Yuka's rising consumer power. The app the audience is using on every grocery trip gave Willa's Kids the highest possible verdict. Different from APR 27's 80M-scans authority carousel — this is the BROADER CULTURAL MOMENT of Yuka being everywhere + the brand-direct receipt. Scan-then-pour proof.",
+    stat:"100/100",
+    label:"The Yuka backlash arrived MAY 19 — critics flagged the app for moralizing food choices and risking restriction. Willa's Kids still holds the perfect 100/100, the brand-direct receipt parents can scan for themselves.",
+    detail:"The Grocery Cart's MAY 19 piece is the cleanest read of Yuka's complicated cultural moment — celebrated for transparency, now contested for over-simplifying. Willa's Kids 100/100 + Original 94 + Chocolate 94 are the receipts that hold up regardless of the discourse. The play: lead with scan-then-pour authority, don't enter the debate.",
     color:"#75C596",
     icon:"📱",
     sources:[
-      {label:"WCCB Charlotte · What the Tech: App of the day Yuka (May 11, 2026)", url:"https://www.wccbcharlotte.com/2026/05/11/what-the-tech-app-of-the-day-yuka/"},
-      {label:"WWD · Yuka App food beauty viral coverage 2026", url:"https://wwd.com/beauty-industry-news/beauty-features/yuka-app-food-beauty-viral-app-ingredients-clean-1236907300/"}
+      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
     ]
   },
   {
@@ -5342,17 +5341,6 @@ const WELCOME_HIGHLIGHTS = [
     icon:"🔍",
     sources:[
       {label:"FoodNavigator USA · Not all UPFs are created equal (May 22, 2026)", url:"https://www.foodnavigator-usa.com/Article/2026/05/22/not-all-upfs-are-created-equal-and-a-new-expert-panel-says-federal-regulators-should-draw-a-clear-line-between-those-that-are-harmful-and-those-that-doctors-recommend/"}
-    ]
-  },
-  {
-    stat:"Big-CPG",
-    label:"PepsiCo phasing canola + soybean oils from Lay's + Tostitos. Kraft Heinz, General Mills, Nestlé reformulating. Jesse & Ben's seed-oil-free fry brand closed $10M from Greycroft.",
-    detail:"Category is moving to where Willa's started. Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower oil (structurally different from industrial seed oils). The reformulation wave validates Willa's clean-deck positioning regardless. Don't preach; the 4-ingredient deck IS the proof.",
-    color:"#9E652E",
-    icon:"🛡️",
-    sources:[
-      {label:"Food Dive · How MAHA transformed the food industry in 2025-2026", url:"https://www.fooddive.com/news/maha-food-ingredients-rfk-artificial-dyes/808286/"},
-      {label:"PR Newswire · Jesse & Ben's $10M Series A from Greycroft (May 7, 2026)", url:"https://www.prnewswire.com/news-releases/jesse--bens-closes-10m-series-a-led-by-greycroft-302764989.html"}
     ]
   },
   {
