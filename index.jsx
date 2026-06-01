@@ -4265,6 +4265,20 @@ function WillasPanel({brief}){
         <div className="px-4 py-2.5 rounded-md bg-[#FEE2E2] text-[12px] text-[#991B1B] leading-snug">⚠ {error} <button onClick={run} className="underline ml-1">retry</button></div>
       )}
 
+      {loading && (
+        <div className="flex items-center gap-3 p-4 rounded-lg border border-dashed mb-2.5 fade-in" style={{borderColor:"#E8E1C2", background:"#FFFEF7"}}>
+          <span className="inline-flex items-center gap-1 shrink-0">
+            {WILLAS_PANEL.map((p,i)=>(
+              <span key={p.id} className="text-[18px] animate-pulse" style={{animationDelay:(i*0.18)+"s"}}>{p.emoji}</span>
+            ))}
+          </span>
+          <div className="min-w-0">
+            <div className="text-[13.5px] text-[#202A44] font-medium leading-snug">The table is tasting this brief<span className="animate-pulse">…</span></div>
+            <div className="text-[12px] text-[var(--muted)] leading-snug">Maya, Jordan, Devon + Sam are scoring it — about 3–6 seconds.</div>
+          </div>
+        </div>
+      )}
+
       {(requested && !error) && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
           {WILLAS_PANEL.map(p=>{
@@ -5979,7 +5993,7 @@ function WelcomeGuide({open, onClose, onNavigate}){
   if(!open) return null;
   return (
     <div className="fixed inset-0 z-[80] fade-in flex items-start justify-center overflow-y-auto scrollbar px-4 py-6 md:py-10" style={{background:"rgba(15,23,42,0.6)", backdropFilter:"blur(4px)"}} onClick={onClose}>
-      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[780px] my-auto relative" style={{border:"1px solid var(--border)", overflow:"hidden"}} onClick={e=>e.stopPropagation()}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[880px] my-auto relative" style={{border:"1px solid var(--border)", overflow:"hidden"}} onClick={e=>e.stopPropagation()}>
 
         <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center bg-white/90 border border-[var(--border)] hover:bg-white transition" aria-label="Close">
           <span className="text-[18px] leading-none text-[#202A44]">×</span>
@@ -5997,7 +6011,7 @@ function WelcomeGuide({open, onClose, onNavigate}){
           {/* THE READ — Maazah model: the pullquote IS the read; the signals + moves carry the detail */}
           <div className="mb-7">
             <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// THE READ</div>
-            <p className="font-serif text-[16.5px] italic leading-snug text-[#202A44] pl-4 border-l-[3px] border-[#FACC15] whitespace-nowrap overflow-hidden text-ellipsis">"{WELCOME_READ.pullQuote}"</p>
+            <p className="font-serif text-[19px] italic leading-snug text-[#202A44] pl-4 border-l-[3px] border-[#FACC15] whitespace-nowrap overflow-hidden text-ellipsis">"{WELCOME_READ.pullQuote}"</p>
           </div>
 
           {/* 5 SIGNALS */}
@@ -6009,17 +6023,17 @@ function WelcomeGuide({open, onClose, onNavigate}){
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center text-[19px] shrink-0" style={{background:h.color+"14"}}>{h.glyph||h.icon}</div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="font-mono text-[8.5px] tracking-[0.16em] uppercase" style={{color:h.color}}>{h.kindLabel||"Signal"}</span>
-                      <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] shrink-0">{h.stat}</span>
+                      <span className="font-mono text-[9.5px] tracking-[0.16em] uppercase" style={{color:h.color}}>{h.kindLabel||"Signal"}</span>
+                      <span className="font-mono text-[9.5px] tracking-wider text-[var(--muted)] shrink-0">{h.stat}</span>
                     </div>
-                    <div className="mb-0.5">
-                      <span className="text-[13px] text-[#202A44] font-medium leading-snug">{h.label}</span>
+                    <div className="mb-1">
+                      <span className="text-[15.5px] text-[#202A44] font-semibold leading-snug">{h.label}</span>
                     </div>
-                    <p className="text-[11.5px] text-[var(--muted)] leading-relaxed">{h.detail}</p>
+                    <p className="text-[13.5px] text-[#3F4A5E] leading-relaxed">{h.detail}</p>
                     {h.sources && h.sources.length>0 && (
                       <div className="mt-1.5 flex flex-wrap gap-x-2">
                         {h.sources.map((s,k)=>(
-                          <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label} className="src-link font-mono text-[9px] tracking-wide">{sourceDomain(s.url)}</a>
+                          <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label} className="src-link font-mono text-[10px] tracking-wide">{sourceDomain(s.url)}</a>
                         ))}
                       </div>
                     )}
@@ -6040,8 +6054,8 @@ function WelcomeGuide({open, onClose, onNavigate}){
                   <div key={i} className="flex items-start gap-3.5 p-4 rounded-lg border bg-white" style={{borderColor:hold?"#E2DDCF":"#E8E1C2", borderLeftWidth:"4px", borderLeftColor:hold?"#64748B":"#4E8C63"}}>
                     <div className="shrink-0 font-serif text-[20px] leading-none mt-0.5" style={{color:hold?"#64748B":"#4E8C63"}}>{hold?"✋":String(i+1).padStart(2,"0")}</div>
                     <div className="min-w-0 flex-1">
-                      <div className="text-[14px] text-[#202A44] font-medium leading-snug mb-1">{(m&&m.verb)||m}</div>
-                      {m&&m.why && <p className="text-[12.5px] text-[var(--muted)] leading-relaxed">{m.why}</p>}
+                      <div className="text-[15.5px] text-[#202A44] font-semibold leading-snug mb-1">{(m&&m.verb)||m}</div>
+                      {m&&m.why && <p className="text-[13.5px] text-[#3F4A5E] leading-relaxed">{m.why}</p>}
                     </div>
                   </div>
                   );
