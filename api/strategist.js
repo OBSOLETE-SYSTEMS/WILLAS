@@ -1,25 +1,22 @@
 // ─────────────────────────────────────────────────────────────────────────
 // /api/strategist.js — Vercel Edge Function
-// Phase A: pure streaming proxy for the Anthropic Messages API.
 //
-// Holds Christina's API key server-side. Browser sends the same request
-// shape `streamStrategist` already builds locally; we forward to Anthropic
-// and pipe the SSE stream back without modification. Phase B layers
-// Supabase-backed conversation memory on top of this same surface.
+// Streaming proxy for the in-app Strategist + brief-riff chat. Runs on
+// GEMINI 2.5 FLASH (Alex 2026-05-31 — all Willa's API functions use the single
+// GEMINI_API_KEY in Vercel). Gemini's SSE is TRANSLATED into the Anthropic-style
+// {content_block_delta / text_delta} events the client (`streamStrategist`)
+// already parses — so the front-end needs zero changes. Supabase conversation
+// memory (Phase B) is preserved.
 //
-// Why Edge runtime: zero cold-start latency for streaming, native fetch
-// streaming support, regional deploys close to the user. Edge functions
-// don't support all Node APIs but we don't need any of them here.
+// thinkingBudget:0 keeps Flash fast for chat (per Willa's Gemini gotchas);
+// without it Flash stalls. google_search grounding gives the Strategist live
+// web answers on top of the injected week context.
 // ─────────────────────────────────────────────────────────────────────────
 
 export const config = { runtime: 'edge' };
 
-const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+const GEMINI_MODEL = 'gemini-2.5-flash';
 
-// CORS — same-origin in production (engine + proxy share the willas domain),
-// but development can run index.html from a file:// or localhost origin.
-// Allowing all origins is fine because the proxy only accepts POST + the
-// API key never leaves the server. No credentials cookie surface.
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -28,10 +25,14 @@ const CORS_HEADERS = {
   'Access-Control-Max-Age': '86400',
 };
 
-// ─── Phase B: Supabase persistence helpers ──────────────────────
-// We use the Supabase REST API directly (no npm dep) — simpler in Edge
-// runtime, no install/build step. Service-role key bypasses RLS so we
-// don't need any client-facing auth surface.
+function geminiKey() {
+  return process.env.GEMINI_API_KEY
+      || process.env.GOOGLE_API_KEY
+      || process.env.GOOGLE_GENERATIVE_AI_API_KEY
+      || process.env.GOOGLE_GENAI_API_KEY;
+}
+
+// ─── Supabase persistence helpers (unchanged) ──────────────────
 const SUPABASE_ENABLED = !!(process.env.SUPABASE_URL && process.env.SUPABASE_SECRET_KEY);
 
 async function supabaseInsert(table, row) {
@@ -47,16 +48,10 @@ async function supabaseInsert(table, row) {
       },
       body: JSON.stringify(row),
     });
-    if (!res.ok) {
-      console.error(`Supabase insert ${table} failed:`, res.status, await res.text());
-      return null;
-    }
+    if (!res.ok) { console.error(`Supabase insert ${table} failed:`, res.status, await res.text()); return null; }
     const data = await res.json();
     return Array.isArray(data) ? data[0] : data;
-  } catch (e) {
-    console.error(`Supabase insert ${table} threw:`, e);
-    return null;
-  }
+  } catch (e) { console.error(`Supabase insert ${table} threw:`, e); return null; }
 }
 
 async function supabasePatch(table, id, updates) {
@@ -71,209 +66,159 @@ async function supabasePatch(table, id, updates) {
       },
       body: JSON.stringify(updates),
     });
-  } catch (e) {
-    console.error(`Supabase patch ${table} threw:`, e);
+  } catch (e) { console.error(`Supabase patch ${table} threw:`, e); }
+}
+
+// Map the client's message content (string, or Anthropic-style content blocks
+// incl. vision) into Gemini `parts`.
+function toParts(content) {
+  if (typeof content === 'string') return [{ text: content }];
+  if (Array.isArray(content)) {
+    return content.map(c => {
+      if (!c) return null;
+      if (c.type === 'text' && c.text) return { text: c.text };
+      if (c.type === 'image' && c.source && c.source.data) {
+        return { inline_data: { mime_type: c.source.media_type || 'image/jpeg', data: c.source.data } };
+      }
+      return null;
+    }).filter(Boolean);
   }
+  return [{ text: String(content || '') }];
 }
 
 export default async function handler(req) {
-  // CORS preflight
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { status: 204, headers: CORS_HEADERS });
-  }
+  if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS_HEADERS });
+  if (req.method !== 'POST') return jsonError('Method not allowed. POST only.', 405);
 
-  if (req.method !== 'POST') {
-    return jsonError('Method not allowed. POST only.', 405);
-  }
+  const KEY = geminiKey();
+  if (!KEY) return jsonError('Server misconfigured — no Gemini API key (set GEMINI_API_KEY in Vercel).', 500);
 
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return jsonError('Server misconfigured — ANTHROPIC_API_KEY env var missing.', 500);
-  }
-
-  // Parse body
   let body;
-  try {
-    body = await req.json();
-  } catch (e) {
-    return jsonError('Invalid JSON in request body.', 400);
-  }
+  try { body = await req.json(); } catch (e) { return jsonError('Invalid JSON in request body.', 400); }
 
   const {
     messages,
     systemExtras,
-    model = 'claude-sonnet-4-6',
     maxTokens = 2000,
     enableWebSearch = true,
-    // Phase B fields — all optional; if present, the proxy persists turns
     clientId = 'willas',
-    agentType,            // 'strategist' | 'studio_riff' | 'brief_riff'
-    contextId,            // sticky_id / brief_id / null for global strategist
-    userLabel,            // user's name from getUserName() in the client
-    conversationId,       // null on first turn; server returns new ID via X-Conversation-Id
+    agentType,
+    contextId,
+    userLabel,
+    conversationId,
   } = body || {};
 
-  // Validate
   if (!Array.isArray(messages) || messages.length === 0) {
     return jsonError('`messages` must be a non-empty array of role/content turns.', 400);
   }
 
-  // Normalize system blocks. Client sends either an array of strings or
-  // an array of {type:"text", text:"...", cache_control?:{...}} blocks.
-  // We accept both, output the array-of-blocks form Anthropic expects,
-  // preserving cache_control on stable prompt blocks (the brand strategist
-  // prompt + this week's intel context) so Anthropic skips re-tokenizing
-  // them on subsequent turns — cuts cost ~5x on multi-turn conversations.
-  const systemBlocks = [];
+  // System blocks (strings or {type:text,text}) → one Gemini systemInstruction.
+  const sysText = [];
   if (Array.isArray(systemExtras)) {
     for (const block of systemExtras) {
-      if (typeof block === 'string' && block.trim()) {
-        systemBlocks.push({ type: 'text', text: block });
-      } else if (block && block.type === 'text' && block.text) {
-        const out = { type: 'text', text: block.text };
-        if (block.cache_control) out.cache_control = block.cache_control;
-        systemBlocks.push(out);
-      }
+      if (typeof block === 'string' && block.trim()) sysText.push(block);
+      else if (block && block.type === 'text' && block.text) sysText.push(block.text);
     }
   }
 
-  // Build the Anthropic request
-  const anthropicBody = {
-    model,
-    max_tokens: maxTokens,
-    messages,
-    stream: true,
-  };
-  if (systemBlocks.length > 0) {
-    anthropicBody.system = systemBlocks;
-  }
-  if (enableWebSearch) {
-    anthropicBody.tools = [
-      { type: 'web_search_20250305', name: 'web_search', max_uses: 5 },
-    ];
-  }
+  // Messages → Gemini contents (assistant → model).
+  const contents = messages.map(m => ({
+    role: m.role === 'assistant' ? 'model' : 'user',
+    parts: toParts(m.content),
+  }));
 
-  // ─── Phase B: resolve/create conversation + persist user turn ──
-  // Only runs if Supabase env vars are configured AND the client passed
-  // an agentType (so non-conversation calls — e.g., callClaude one-shots
-  // for sticky brief generation — can opt out by not sending agentType).
+  const geminiBody = {
+    contents,
+    generationConfig: {
+      temperature: 0.7,
+      maxOutputTokens: maxTokens,
+      thinkingConfig: { thinkingBudget: 0 }, // chat speed — Flash stalls without this
+    },
+  };
+  if (sysText.length) geminiBody.systemInstruction = { parts: [{ text: sysText.join('\n\n') }] };
+  if (enableWebSearch) geminiBody.tools = [{ google_search: {} }];
+
+  // ─── Supabase: resolve/create conversation + persist user turn ──
   let resolvedConversationId = conversationId || null;
   if (SUPABASE_ENABLED && agentType) {
     if (!resolvedConversationId) {
       const conv = await supabaseInsert('conversations', {
-        client_id: clientId,
-        agent_type: agentType,
-        context_id: contextId || null,
-        user_label: userLabel || null,
+        client_id: clientId, agent_type: agentType, context_id: contextId || null, user_label: userLabel || null,
       });
       if (conv && conv.id) resolvedConversationId = conv.id;
     }
-
-    // Persist the LATEST user message (last item in the messages array).
-    // We trust the client to send only the new user turn appended to its
-    // own history; persisting only the latest avoids duplicates on replay.
     const lastMsg = messages[messages.length - 1];
     if (resolvedConversationId && lastMsg && lastMsg.role === 'user') {
-      // Fire-and-forget — don't block the response on persistence
-      supabaseInsert('messages', {
-        conversation_id: resolvedConversationId,
-        role: 'user',
-        content: lastMsg.content,  // JSONB: string or array (vision)
-      });
+      supabaseInsert('messages', { conversation_id: resolvedConversationId, role: 'user', content: lastMsg.content });
     }
   }
 
-  // Forward to Anthropic
+  // Forward to Gemini (streaming SSE).
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:streamGenerateContent?alt=sse&key=${KEY}`;
   let upstream;
   try {
-    upstream = await fetch(ANTHROPIC_API_URL, {
+    upstream = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify(anthropicBody),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(geminiBody),
     });
   } catch (e) {
     return jsonError(`Upstream fetch failed: ${e.message || e}`, 502);
   }
 
-  // Bubble up non-200 upstream errors as JSON so the client can show them
   if (!upstream.ok) {
     const errText = await upstream.text();
     return new Response(errText, {
       status: upstream.status,
-      headers: {
-        'Content-Type': upstream.headers.get('content-type') || 'application/json',
-        ...CORS_HEADERS,
-      },
+      headers: { 'Content-Type': upstream.headers.get('content-type') || 'application/json', ...CORS_HEADERS },
     });
   }
 
-  // ─── Stream tee: pipe SSE to client + accumulate assistant text ──
-  // Phase B: we capture the assistant's full response as text chunks
-  // stream past, then persist to Supabase after the stream completes.
-  // The client doesn't notice — it gets the same SSE format it always did.
-  const shouldPersistAssistant = SUPABASE_ENABLED && resolvedConversationId;
+  // ─── Translate Gemini SSE → Anthropic-style SSE the client parses ──
+  const reader = upstream.body.getReader();
+  const decoder = new TextDecoder();
+  const encoder = new TextEncoder();
+  let buffer = '';
+  let accumulated = '';
 
-  let pipedStream = upstream.body;
-
-  if (shouldPersistAssistant) {
-    const reader = upstream.body.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '';
-    let accumulated = '';
-
-    pipedStream = new ReadableStream({
-      async start(controller) {
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            controller.enqueue(value);  // pass through to client
-
-            // Tee: extract text deltas for persistence
-            buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split('\n');
-            buffer = lines.pop() || '';
-            for (const line of lines) {
-              const l = line.trim();
-              if (!l.startsWith('data:')) continue;
-              const payload = l.slice(5).trim();
-              if (!payload || payload === '[DONE]') continue;
-              try {
-                const evt = JSON.parse(payload);
-                if (evt.type === 'content_block_delta' && evt.delta && evt.delta.type === 'text_delta') {
-                  accumulated += evt.delta.text;
-                }
-              } catch (e) { /* swallow partial frames */ }
-            }
-          }
-        } finally {
-          controller.close();
-
-          // Persist assistant response + update conversation timestamp.
-          // Fire-and-forget; don't await — the client has already received
-          // the stream by this point.
-          if (accumulated) {
-            supabaseInsert('messages', {
-              conversation_id: resolvedConversationId,
-              role: 'assistant',
-              content: accumulated,
-            });
-            supabasePatch('conversations', resolvedConversationId, {
-              last_message_at: new Date().toISOString(),
-            });
+  const out = new ReadableStream({
+    async start(controller) {
+      const emit = (text) => {
+        accumulated += text;
+        controller.enqueue(encoder.encode(
+          'data: ' + JSON.stringify({ type: 'content_block_delta', delta: { type: 'text_delta', text } }) + '\n\n'
+        ));
+      };
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+          for (const line of lines) {
+            const l = line.trim();
+            if (!l.startsWith('data:')) continue;
+            const payload = l.slice(5).trim();
+            if (!payload || payload === '[DONE]') continue;
+            try {
+              const evt = JSON.parse(payload);
+              const parts = (((evt.candidates || [])[0] || {}).content || {}).parts || [];
+              for (const p of parts) { if (p && p.text) emit(p.text); }
+            } catch (e) { /* swallow partial frames */ }
           }
         }
+      } finally {
+        controller.close();
+        if (SUPABASE_ENABLED && resolvedConversationId && accumulated) {
+          supabaseInsert('messages', { conversation_id: resolvedConversationId, role: 'assistant', content: accumulated });
+          supabasePatch('conversations', resolvedConversationId, { last_message_at: new Date().toISOString() });
+        }
       }
-    });
-  }
+    },
+  });
 
-  // Return the stream + send conversationId back via header so the client
-  // can stash it for subsequent turns. CORS expose-headers list allows it
-  // through the browser's same-origin filter.
-  return new Response(pipedStream, {
+  return new Response(out, {
     status: 200,
     headers: {
       'Content-Type': 'text/event-stream',
