@@ -14,15 +14,15 @@
 <style>
   :root{
     /* Surface tokens — referenced via var() everywhere so theme swap works */
-    --bg:#FAFAF7;
-    --bg-card:#FFFFFF;
-    --bg-warm:#FFFEF7;
-    --bg-soft:#F6F6F0;
-    --ink:#202A44;
-    --ink-soft:#475569;
-    --muted:#64748B;
-    --border:#D4CEC0;
-    --border-soft:#E8E2D3;
+    --bg:#FAF6EC;        /* warm oat cream (was cool #FAFAF7) */
+    --bg-card:#FFFDF6;   /* warm white card */
+    --bg-warm:#FFFCF2;
+    --bg-soft:#F3ECDD;   /* warm soft */
+    --ink:#202A44;       /* brand navy — kept as the structural anchor */
+    --ink-soft:#574E40;  /* warm espresso-taupe (was cool slate #475569) */
+    --muted:#7A6F5E;     /* warm stone (was cool slate #64748B) */
+    --border:#D9D0BD;    /* warm border */
+    --border-soft:#EAE2D0;
     /* Brand accents (stay constant across themes) */
     --blue:#73B2C9; --green:#75C596; --red:#DC2626; --amber:#9E652E; --purple:#A191B2; --gold:#FACC15;
     /* Text scale — driven by Settings tab */
@@ -51,6 +51,21 @@
   html[data-theme="dark"] .text-\[\#475569\]{color:var(--ink-soft)!important;}
   html[data-theme="dark"] .text-\[\#64748B\]{color:var(--muted)!important;}
   html[data-theme="dark"] .border-\[\#E8E2D3\]{border-color:var(--border-soft)!important;}
+  /* ─── Willa's warm palette (2026-05-31) ─────────────────────────────
+     Components hardcode cool slate greys (Tailwind arbitrary values) that
+     made the engine read like a generic SaaS dashboard. Remap them to warm
+     oat/taupe tones so the whole surface feels like Willa's — warm, heritage,
+     kitchen-table — without editing every component. Light mode only; the
+     dark-theme overrides above keep their own values via higher specificity. */
+  html:not([data-theme="dark"]) .text-\[\#475569\]{color:#574E40 !important;}
+  html:not([data-theme="dark"]) .text-\[\#334155\]{color:#433C2E !important;}
+  html:not([data-theme="dark"]) .text-\[\#64748B\]{color:#7A6F5E !important;}
+  html:not([data-theme="dark"]) .text-\[\#94A3B8\]{color:#9A8E7B !important;}
+  html:not([data-theme="dark"]) .text-\[\#3F4A5E\]{color:#524938 !important;}
+  html:not([data-theme="dark"]) .bg-\[\#F1F5F9\]{background:#F2ECDF !important;}
+  html:not([data-theme="dark"]) .border-\[\#E2E8F0\]{border-color:#E6DECC !important;}
+  html:not([data-theme="dark"]) .text-\[\#475569\] strong,
+  html:not([data-theme="dark"]) .text-\[\#334155\] strong{color:inherit;}
   /* Text size scale — multiplies the base font-size on body */
   html[data-text-size="sm"] body{font-size:13px;}
   html[data-text-size="lg"] body{font-size:15.5px;}

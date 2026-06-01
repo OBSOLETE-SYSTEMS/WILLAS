@@ -24,113 +24,149 @@ const PILLAR_COLORS = {
 
 const TRENDS = [
   {
-    trend:"Elmhurst 1925 just took Clean Protein nationwide at Sprouts 🥛 — 4 SKUs at $4.99, 27g plant protein, no gums or seed oils, NEXTY-Award Pistachio Crème",
-    detail:"Elmhurst 1925's Clean Protein line just went nationwide at Sprouts Farmers Market (BevNET MAY 18 + Dairy Foods MAY 21 coverage) — 4 SKUs at $4.99 (2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream). 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going direct at Willa's positioning AT WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds (not organic, not glyphosate-free, not WBENC-certified, not mother-founded) — that's the Willa's moat.",
-    platform:"Trade Press + Retail",
-    views:"Nationwide at Sprouts · 4 SKUs · $4.99",
+    trend:"the oat-milk label conversation flips from \"avoid this\" to \"what's actually in it\" 🏷️",
+    detail:"The oat-milk avoid-list went front-page this week — the discourse hit consumers everywhere. But the smarter read landed two days earlier: the clean-label conversation is maturing past \"avoid all processed\" toward \"what's IN it,\" where a short, real ingredient deck wins on its own merits, not on fear.",
+    platform:"Consumer Media + Trade Press",
+    views:"national reach (USA Today) + category analysis (FoodNavigator)",
     velocity:"high",
-    pillars:["REVIEWS/RECS","INGREDIENTS/RECIPES"],
-    angle:"Closest peer goes direct at Willa's positioning at Sprouts 🥛 — Willa's moat is the cert stack Elmhurst can't claim (organic + glyphosate-free + WBENC + mother-founded).",
-    urgency:"RIDE NOW",
-    sources:[
-      {label:"BevNET · Elmhurst 1925 Launches Clean Protein Nationwide at Sprouts (May 18, 2026)", url:"https://www.bevnet.com/pr/2026/05/18/elmhurst-1925-launches-awardwinning-clean-protein-line-nationwide-at-sprouts-farmers-market"},
-      {label:"Dairy Foods · Elmhurst Clean Protein debuts at Sprouts (May 21, 2026)", url:"https://www.dairyfoods.com/articles/99124-elmhurst-1925-clean-protein-line-debuts-at-sprouts"}
-    ]
-  },
-  {
-    trend:"MAHA reformulation wave keeps rippling 🛡️ — STAT MAY 22 fact-check refocuses the seed-oil discourse, Willa's Original already sits on the right side",
-    detail:"STAT News dropped a MAY 22 fact-check on the anti-seed-oil movement that recalibrates the wellness narrative — distinguishing industrial seed oils from structurally-different high-oleic variants. The piece arrives as Big-CPG continues phasing canola + soybean (PepsiCo, Kraft Heinz, General Mills, Nestlé). Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower oil — the structurally-different variant STAT specifically names. The reformulation wave validates clean-deck brands as category winners; the STAT piece is the calm-authority anchor parents can quote when the discourse heats up.",
-    platform:"Trade Press + Policy",
-    views:"STAT MAY 22 fact-check · reformulation wave context",
-    velocity:"medium",
-    pillars:["HEALTH/WELLNESS","REVIEWS/RECS"],
-    healthSubAngle:"HEART",
-    angle:"Seed-oil discourse just got a calm fact-check 🛡️ — Willa's Original is already on the right side. Lead with the 4-ingredient deck, let it do the work.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"STAT News · What the anti-seed-oil movement gets wrong — and right (May 22, 2026)", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
-    ]
-  },
-  {
-    trend:"'Not all UPFs are created equal' 🔍 — MAY 22 expert-panel reframe gives Willa's the calm authority lane",
-    detail:"A major piece dropped MAY 22, 2026 on the new Healthy Eating Research expert-panel framework arguing federal regulators should distinguish HARMFUL UPFs from doctor-recommended UPFs (yogurt, infant formula, fortified milks). The reframe is critical because it CONCEDES some 'ultraprocessed' food is health-positive — opening space for clean-deck oat milks like Willa's to live on the right side of the dividing line. Watch for the framework to land in regulatory + grocery discussions through summer.",
-    platform:"Trade Press + Policy",
-    views:"Expert-panel framework · May 22 reframe",
-    velocity:"medium",
-    pillars:["HEALTH/WELLNESS"],
+    pillars:[
+      "HEALTH/WELLNESS"
+    ],
     healthSubAngle:"GUT",
-    angle:"UPF discourse just got a 'not all of them' carve-out 🔍 — Willa's is the case-in-point: 4 ingredients, doctor-recommendable.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"FoodNavigator USA · Not all UPFs are created equal (May 22, 2026)", url:"https://www.foodnavigator-usa.com/Article/2026/05/22/not-all-upfs-are-created-equal-and-a-new-expert-panel-says-federal-regulators-should-draw-a-clear-line-between-those-that-are-harmful-and-those-that-doctors-recommend/"}
-    ]
-  },
-  {
-    trend:"Pinterest's MAY 22 weekly report — rhubarb recipes up 51% 🌿, summer-kitchen-open energy",
-    detail:"Pinterest's MAY 22, 2026 weekly trend report flagged 'school's almost out, summer's almost in' as the energy of the week — rhubarb recipes up 51% (desserts, jams, sourdough rhubarb snack cake, strawberry rhubarb crisp). Sustained: fermentation, high-fiber meals, swicy (sweet+spicy), cabbage. Pinterest is where Willa's audience plans recipes 7-10 days ahead — the rhubarb wave is a 2-3 week window for summer-kitchen-open content. Heritage-coded ingredient (rhubarb = grandma food) that Willa's grandma-kitchen voice owns. Pairs with strawberry season peaking same week.",
-    platform:"Pinterest + Trade Press",
-    views:"Pinterest weekly trend report May 22, 2026",
-    velocity:"high",
-    pillars:["INGREDIENTS/RECIPES","HEALTH/WELLNESS"],
-    angle:"Rhubarb season is peaking 🌿 — Willa's grandma-kitchen voice owns it. Drop a sourdough rhubarb snack cake pin with Willa's Original. (Pinterest stat is engine context, NOT for consumer copy.)",
+    angle:"Stop selling fear, start selling the short list. Show what a 4-ingredient oat milk lets you DO, not what others put in. Lead Original.",
     urgency:"RIDE NOW",
     sources:[
-      {label:"Pinterest Business Community · The Weekly PBC Trend Report May 22, 2026", url:"https://community.pinterest.biz/t/the-weekly-pbc-trend-report-may-22-2026/45841"}
-    ]
+      {label:"USA Today · The oat milk ingredients you want to avoid (May 28, 2026)", url:"https://news.google.com/rss/search?q=%22oat+milk%22+when:7d"},
+      {label:"FoodNavigator-USA · Processed foods still have a place — part of a balanced meal (May 26, 2026)", url:"https://www.foodnavigator-usa.com/Article/2026/05/26/processed-foods-still-have-a-place-theyre-part-of-a-balanced-meal/"}
+    ],
+    id:"T-1"
   },
   {
-    trend:"Yuka app's mainstream moment is being tested 📱 — The Grocery Cart MAY 19 questions whether the app moralizes food. Willa's Kids holds 100/100 regardless.",
-    detail:"The Grocery Cart published a MAY 19, 2026 piece on Yuka — celebrated for transparency, now contested for over-simplifying and potentially triggering food restriction. The cultural moment is shifting from 'Yuka is the answer' to 'Yuka is one tool, not a moral verdict.' Willa's Kids holds a perfect 100/100 Yuka score that DOESN'T depend on the debate — it's based on lowest sugar + highest plant protein + no isolates + cert stack. The play this week is to lead with scan-then-pour authority, not enter the debate.",
-    platform:"Consumer Tech Press + Trade",
-    views:"Grocery Cart MAY 19 reframe · debate enters cultural conversation",
+    trend:"\"clean label\" matures: the question is no longer processed-or-not, it's what's inside 🔍",
+    detail:"The better-for-you discourse is shifting away from a blanket \"avoid all processed\" toward \"processed foods have a place — it's about what's IN them and where they fit a balanced day.\" That reframe rewards a product with a short, legible ingredient deck instead of one selling on dread.",
+    platform:"Trade Press",
+    views:"category-defining analysis",
     velocity:"high",
-    pillars:["REVIEWS/RECS","PARENTING"],
-    angle:"Yuka discourse is shifting from 'verdict' to 'one tool' 📱 — Willa's Kids 100/100 holds up regardless. Scan-then-pour proof, don't enter the debate.",
+    pillars:[
+      "HEALTH/WELLNESS",
+      "INGREDIENTS/RECIPES"
+    ],
+    healthSubAngle:"GUT",
+    angle:"Reframe the whole shelf: it's not processed-vs-not, it's a 4-word list vs a paragraph. Make the short list feel like the grown-up choice.",
     urgency:"THIS WEEK",
     sources:[
-      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
-    ]
+      {label:"FoodNavigator-USA · Processed foods still have a place — part of a balanced meal (May 26, 2026)", url:"https://www.foodnavigator-usa.com/Article/2026/05/26/processed-foods-still-have-a-place-theyre-part-of-a-balanced-meal/"}
+    ],
+    id:"T-2"
+  },
+  {
+    trend:"\"is homemade oat milk worth the effort?\" — the DIY debate peaks in editorial 🥛",
+    detail:"The homemade-oat-milk effort debate is peaking — straining, gums to fix sliminess, short shelf life — and most readers land on \"it's a hassle.\" That's the opening for a clean store-bought that tastes homemade without the strain bag.",
+    platform:"Consumer Media + Search",
+    views:"evergreen high-intent search",
+    velocity:"medium",
+    pillars:[
+      "INGREDIENTS/RECIPES"
+    ],
+    angle:"Position Original as homemade-grade without the homework — 4 real ingredients, no gums, none of the labor. Film the side-by-side.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"Martha Stewart · Is Homemade Oat Milk Worth the Effort? (May 26, 2026)", url:"https://www.marthastewart.com/"}
+    ],
+    id:"T-3"
+  },
+  {
+    trend:"label-literacy parenting goes weekly-newsletter mainstream 📋",
+    detail:"Non-toxic-living parenting roundups have become a recurring weekly ritual — a lane built entirely on calm, ongoing ingredient literacy, not one-off scare posts. The audience is moms who keep auditing what's in their kids' food, week after week.",
+    platform:"Newsletter + Parenting Community",
+    views:"recurring subscriber audience",
+    velocity:"medium",
+    pillars:[
+      "PARENTING",
+      "HEALTH/WELLNESS"
+    ],
+    healthSubAngle:"IMMUNE",
+    angle:"Meet the weekly-audit mom as her standing reference, not a scare — give the Kids panel a seat in her ingredient ritual.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"We Are Girls Who Eat · Non-Toxic Living Weekly Roundup #42 (May 25, 2026)", url:"https://wearegirlswhoeat.substack.com/p/non-toxic-living-weekly-roundup-42"}
+    ],
+    id:"T-4"
+  },
+  {
+    trend:"cold-drink season opens for real — June is peak iced-beverage search ☀️",
+    detail:"With June arriving, iced drinks, smoothies and frozen treats become the dominant food conversation, and the seasonal search + shelf pivot to cold accelerates through the month. This is the forward-looking summer-beverage window — the whole season ahead, not a single holiday behind us.",
+    platform:"Seasonal + Retail Calendar",
+    views:"category-wide seasonal peak",
+    velocity:"high",
+    pillars:[
+      "INGREDIENTS/RECIPES"
+    ],
+    angle:"Own the cold-drink occasion all season on a Willa's base — smoothies, frozen treats, iced everything. Plant the summer flag for June, not a holiday.",
+    urgency:"RIDE NOW",
+    sources:[
+      {label:"Canadian Grocer · Most viral TikTok food trends of 2026 so far (May 28, 2026)", url:"https://canadiangrocer.com/most-viral-tiktok-food-trends-2026-so-far"}
+    ],
+    id:"T-5"
+  },
+  {
+    trend:"2026's viral food formats map out — frozen clusters, yogurt tiramisu, savoury-maxxing 📊",
+    detail:"The most viral food formats of 2026 so far are frozen-fruit \"clusters,\" yogurt tiramisu and savoury-maxxing — the formats actually moving product, clean-recipe adjacency that has nothing to do with matcha. TikTok is now a shopping-list signal.",
+    platform:"Trade Press + Platform Data",
+    views:"category trend analysis",
+    velocity:"high",
+    pillars:[
+      "INGREDIENTS/RECIPES"
+    ],
+    angle:"Ride the non-matcha viral wave — rebuild frozen clusters / yogurt tiramisu dairy-free on a Willa's base. Diversify off the matcha lane.",
+    urgency:"RIDE NOW",
+    sources:[
+      {label:"Canadian Grocer · Most viral TikTok food trends of 2026 so far (May 28, 2026)", url:"https://canadiangrocer.com/most-viral-tiktok-food-trends-2026-so-far"}
+    ],
+    id:"T-6"
   }
 ];
 
 
 
 const TICKER = [
-  {agent:"comp",     text:"Elmhurst's Clean Protein just went nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — 27g protein, 4 SKUs, no gums/seed oils · willa's cert-stack IG-R5 cert-moat Reel queued in response 🚨"},
-  {agent:"trend",    text:"Yuka app went mainstream-viral in MAY (94% of users return 'bad' scored products) — willa's Kids 100/100 is the brand-direct receipt · BIG SWING IG-R1 phone-scan reveal queued 📱"},
-  {agent:"pulse",    text:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News) — willa's plays the dairy-free swap with Barista + coconut cream · BIG SWING TT-1 queued 🌯"},
-  {agent:"pulse",    text:"Pinterest rhubarb +51% MAY 22 weekly report — sourdough rhubarb snack cake heritage pin (PIN-1) queued for THU MAY 28 · willa's grandma-kitchen voice owns the lane 🌿"},
-  {agent:"trend",    text:"Bobbie + The Breasties lobbied Capitol Hill MAY 20 for Connie's Bill — mother-founded brands building legislative voice · the lane Willa's quietly lives in 💛"},
-  {agent:"trend",    text:"STAT News MAY 22 fact-check refocused the seed-oil discourse — Willa's Original is already on the right side, the 4-ingredient deck does the work 🛡️"},
-  {agent:"pulse",    text:"The Four Seasons S2 premiered in LA MAY 20 (Tina Fey + Steve Carell + Colman Domingo) — Netflix drops THU MAY 28 · Willa's-audience-coded summer-comedy stitch queued R4 🌲"},
-  {agent:"pulse",    text:"Bleachers self-titled album dropped MAY 22 (Antonoff Brooklyn-indie) — audio bed for the long-weekend pour R3 Reel SAT MAY 30 11am 🎶"},
-  {agent:"pulse",    text:"The Four Seasons S2 (Tina Fey + Steve Carell) drops Netflix THU MAY 28 — tonal-stitch R4 Reel queued for FRI MAY 29 6pm (no name-check) 🌲"},
-  {agent:"pulse",    text:"Shaved Fruit (frozen strawberry on microplane) is taking over TikTok this month — willa's pours on top, dairy-free by accident · TT-2 queued WED MAY 27 🍓"},
-  {agent:"hook",     text:"drafted 18 on-brand captions × 3 voice variants · brand-voice default (not founder first-person) · Willa's capitalized in caption bodies"},
-  {agent:"composer", text:"queued 18 briefs for MAY 25-31 · 3 BIG SWINGs (Yuka Kids reveal · tortilla cinnamon dairy-free · sourdough rhubarb heritage pin) + 6 evergreens in the back half"},
-  {agent:"visual",   text:"footage inspo banks complete on all 18 briefs · 4 categories per brief (shoot/found/memes/archive) · F2 lunchbox specifies Violife or Good Plants dairy-free cheese (no-dairy rule)"},
-  {agent:"editor",   text:"caught + rewrote 5 phrase repeats from past 5 weeks (iced coffee that doesn't fight back · willa was a real woman · one carton two generations · saturday-morning carton · cert stack) · automated audit script now live as Step 7 #26"},
-  {agent:"paid",     text:"amplifying 3 BIG SWINGS only · Yuka R1 ($260 Meta Reels) + Tortilla TT-1 ($240 TikTok Spark) + Rhubarb PIN-1 ($180 Pinterest Promoted) · 15 briefs organic-first"}
+  {agent:"trend", text:"flagged the clean-label reckoning going national — USA Today avoid-list (May 28) routed straight into 'four ingredients. zero apologies.'"},
+  {agent:"comp", text:"logged a leader engineering fiber back in amid a ~9% Q1 slide — countered with 'we didn't add it back. it was never gone.'"},
+  {agent:"pulse", text:"surfaced strawberry cloud matcha as the summer's most save-worthy swap — fed the 'you genuinely cannot tell this cloud is dairy-free' pour."},
+  {agent:"pulse", text:"caught the Fishwife product-truth comedy format and handed it to the hot-car summer PSA — format borrowed, never the product."},
+  {agent:"hook", text:"wrote 'the smallest one eats first' against the #momtok snack-station pivot — Kids panel doing the talking, no fear-mongering."},
+  {agent:"composer", text:"built the kid-station Reel around 'the drink that buys you 10 minutes of quiet' — tiny hands assembling, Kids SKU vs dairy."},
+  {agent:"composer", text:"drafted 'four ingredients walk into a morning' on the Model Pose beat transition — 5am mom to oat-milk-matcha mom."},
+  {agent:"visual", text:"storyboarded the back-panel receipts read-out-loud — Original panel against the avoid-list, contrast carries, zero names."},
+  {agent:"visual", text:"set the frozen-fudge ASMR scrape for the freezer drop — real cacao, five ingredients, Chocolate SKU, format-only borrow."},
+  {agent:"editor", text:"killed fibermaxxing framing and the Dot Cakes candy subject — fresh angles only, DO-NOT-REPEAT list clean."},
+  {agent:"paid", text:"reallocated both Pinterest slots to the summer save-pins — 'walked into summer and won' + 'passed your most paranoid label-read.'"},
+  {agent:"editor", text:"swept all six surfaces on the skip-the-bag reveal — 'we already strained it. you're welcome.' locked across concept, hooks, caption, overlays."}
 ];
 
 
 const COMPETITORS = [
   {
-    name:"Elmhurst 1925",
-    status:"🚨 Elmhurst's Clean Protein line just went NATIONWIDE at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21 coverage) — 4 flavors at $4.99: 2026 NEXTY-Award-Winner Pistachio Crème, Sea Salt Chocolate, Vanilla, Strawberries and Cream. 27g complete plant protein, 190 calories, as few as 3g sugar per bottle, made WITHOUT gums, seed oils, artificial sweeteners, or artificial flavors. This is the closest-clean-positioned peer brand going DIRECT at Willa's positioning at WILLA'S PRIMARY NATURAL-CHANNEL RETAILER. The cert gap still holds though: Elmhurst is NOT organic, NOT glyphosate-free-certified by Detox Project, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice: don't punch, don't panic, just keep showing the cert-stack receipts.",
-    direction:"up",
-    opportunity:"🚨 Elmhurst goes direct at Willa's positioning at Sprouts — Willa's moat is the 4 certs Elmhurst can't claim (organic + Detox Project + WBENC + mother-founded). Show the credentials this week.",
+    name:"Oatly",
+    status:"Launched a high-fibre oat milk in China (7.5g fibre/250ml, beta-glucan, low-GI) — neutral category-fiber context, per Green Queen, May 26, 2026",
+    direction:"flat",
+    color:"#A191B2",
+    opportunity:"Fiber is back in the category conversation — answer at the panel, not the swipe. Note that whole oats carry fiber + protein together. Name no one.",
     sources:[
-      {label:"BevNET · Elmhurst 1925 Launches Clean Protein Nationwide at Sprouts (May 18, 2026)", url:"https://www.bevnet.com/pr/2026/05/18/elmhurst-1925-launches-awardwinning-clean-protein-line-nationwide-at-sprouts-farmers-market"},
-      {label:"Dairy Foods · Elmhurst 1925 Clean Protein debuts at Sprouts (May 21, 2026)", url:"https://www.dairyfoods.com/articles/99124-elmhurst-1925-clean-protein-line-debuts-at-sprouts"}
-    ]
+      {label:"Green Queen · Oatly launches high-fibre oat milk in China (May 26, 2026)", url:"https://www.greenqueen.com.hk/oatly-high-fibre-oat-milk-china-low-gi-cream-health-nutrition-sales/"}
+    ],
+    id:"C-1"
   },
   {
-    name:"Oatly · Califia · Planet Oat · Chobani · Mooala",
-    status:"Positioning context (no fresh moves to source this week): Oatly remains the category leader pushing foodservice + flavor maximalism. Califia keeps the Simple & Organic platform rolling alongside its UK matcha lane. Planet Oat carries the open vitamin-D class-action that keeps surfacing on parenting subreddits. Chobani Oat is quiet — La Colombe RTD integration keeps building. Mooala's clean-deck repackaging makes 'clean ingredient deck' category table stakes. The Willa's moat shifts accordingly: 'clean deck' is now the floor; the cert stack (organic + Detox Project + WBENC + Yuka 100) is the bar.",
+    name:"Average category oat milk",
+    status:"USA Today named the common avoid-list ingredients — canola/seed oils, added sugar, gums/stabilizers, carrageenan — May 28, 2026",
     direction:"flat",
-    opportunity:"Clean deck is the floor now — show the cert stack the peer set can't claim (organic + Detox Project + WBENC + Yuka 100 Kids). Don't name competitors.",
-    sources:[]
+    color:"#A191B2",
+    opportunity:"The category sells on a long list; Willa's sells on a short one. Let the four-ingredient contrast carry without naming anyone.",
+    sources:[
+      {label:"USA Today · The oat milk ingredients you want to avoid (May 28, 2026)", url:"https://news.google.com/rss/search?q=%22oat+milk%22+when:7d"}
+    ],
+    id:"C-2"
   }
 ];
 
@@ -197,497 +233,527 @@ const OUTREACH_PIPELINE = [
 
 const BRIEFS = [
   {
-    id:"MAY25-IG-R1",
-    platform:"IG Reel", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
-    timing:"Tue May 26 · 12pm", priority:"BIG SWING", rideNow:true,
-    concept:"\"scanned 12 kids drinks at sprouts. one of them was green.\" — at-shelf mom-creator scan-with-me confession",
+    id:"JUN01-IG-R1",
+    platform:"IG Reel",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Original",
+    dnaPattern:"on-pack-checklist",
+    timing:"Wed Jun 3 · 12pm",
+    priority:"BIG SWING",
+    rideNow:"true",
+    concept:"stop reading the scary list. start reading the short one. — four words, zero homework",
     intel:[
-      {type:"PULSE",text:"Yuka's cultural moment shifted MAY 19 (CP-7) — The Grocery Cart questioned whether the app moralizes food. Cultural moment is the BEHAVIOR: parents now filming themselves doing 'scan with me' grocery-aisle videos in the kids-drinks section. Yuka-in-the-cart is normal mom behavior; the 100/100 lands as a calm receipt, not a verdict."},
-      {type:"AUDIENCE",text:"Pattern 03 Relatable Confession + Pattern 09 Aesthetic IRL Encounter — root in the lived mom-creator behavior (scan-with-me content), not the brand claim. Partake Foods muse (parent-first warmth) + Ghia (aesthetic IRL). The 100/100 score is the PUNCHLINE at the end of the video, NOT the lead. Real-aisle, real-phone, real-find."},
-      {type:"COMPETITOR",text:"Internal only — Orgain Kids 9g cane sugar, Ripple Kids 5g cane sugar + not organic, Oatly Kids 7g oat syrup + 2g fiber, Kate Farms Kids 9g rice syrup/agave. None hit Yuka green. Willa's Kids 6g sugar + 3g fiber + DHA from algae oil + top-9 allergen-free is the structurally clean 100/100 in the category."}
+      {type:"TREND", text:"FoodNavigator-USA argued May 26, 2026 that the clean-label conversation is growing up — moving past \"avoid all processed\" toward \"what's actually IN it and where it fits a balanced day\" (ref T-2). USA Today's May 28 avoid-list put the topic on the front page; the smarter move is to stop selling dread and start selling what a short, real ingredient deck lets you DO."},
+      {type:"AUDIENCE", text:"This lands with the shopper who's tired of being scared in the aisle. She doesn't want a fourth post about what to avoid — she wants permission to feel good about a choice. Benefit-first: open on the freedom a four-word list buys (no overthinking, no panel-squinting), and let the absence of the bad stuff be the quiet payoff, not the lead. Brand 'we' voice, with-a-wink, never clinical. The reframe IS the gift: short list = grown-up choice."},
+      {type:"COMPETITOR", text:"Internal only: the category sells on a long ingredient deck; Willa's sells on a four-word one (ref C-2, flat). Do NOT name a single brand on camera — the contrast between a paragraph and four words carries itself. Anchor the framing on the maturing-discourse reframe, not on reciting an avoid-list, which has been over-run this month."}
     ],
     hooks:[
-      {text:"scanned 12 kids drinks at sprouts. one of them was green.",recommended:true},
-      {text:"the carton at the end of the scan-with-me video. (the one your phone said yes to.)",recommended:false},
-      {text:"i'm the mom in the aisle with the phone out. you know the one.",recommended:false}
+      {text:"four ingredients. the national avoid-list has zero of them. let's read the back.", recommended:true},
+      {text:"the oat-milk avoid-list just went front-page. our whole back panel is four words long.", recommended:false},
+      {text:"organic oats. water. vanilla. salt. that's the entire ingredient deck — flip it and see.", recommended:false}
     ],
-    caption:"scanned 12 kids drinks at sprouts. one of them was green. 💛\n\n(you know the kind of video this is. the phone in the cart, the yuka app open, the slow walk down the kids-aisle, the carton-by-carton verdict.)\n\nmost of what i scanned came back orange or red. high sugar. synthetic dyes. seed oils. carrageenan in the toddler ones. one carton came back 100/100 green.\n\nWilla's Kids:\n→ 100/100 yuka score (the only kids drink in the aisle that hit it)\n→ 8g protein, 3g fiber, DHA omega-3 from algae oil\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ no synthetic dyes, no rapeseed, no gums\n\nshhh… that's the one in the cart. 🌾",
-    hashtags:["#willaskids","#scanwithme","#yuka","#momtok","#kidsdrink","#cleanlabel","#allergenfree","#dhakids","#bobbyapproved","#grocerytok"],
-    visual:"Vertical phone-screen POV (9:16) at the Sprouts kids-drinks aisle. Phone scans carton after carton — each scan reveals an orange or red Yuka score (real mom-creator video feel, not branded). Quick cuts through 3-4 disappointing scans. Then the phone scans Willa's Kids carton — green 100/100 reveal. Carton goes into the cart. Cut to home kitchen: kid's hand pours from the Willa's Kids carton into a glass. Real-aisle, real-cart, real-kitchen. NO on-camera face.",
+    caption:"we read our own back panel out loud — and not one line on it is on the avoid-list that just went national. 🥛\n\nthe whole deck: organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's it. 1g sugar, 4g protein, Yuka 94, certified glyphosate-free. no rapeseed, no canola, no gums, no added sugar — nothing to scrape off.\n\nwe didn't reformulate to dodge a list. the whole oat already brings the fiber AND the protein, so there was never anything else to add. we just left the rest beautifully boring.\n\nflip the carton. it's the most honest thing in your fridge.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#cleanlabel",
+      "#readthelabel",
+      "#fouringredients",
+      "#norapeseed",
+      "#nocanola",
+      "#yuka",
+      "#ingredienttransparency"
+    ],
+    visual:"Vertical 9:16 phone-shot Reel, bright natural kitchen light, warm and unfussy. Hero: a single carton of Willa's Original held in-frame, then physically flipped to the back panel. The avoid-list (canola/rapeseed oils · added sugar · gums + stabilizers · carrageenan) appears as four crisp on-screen text lines, each getting a satisfying green check-OFF — i.e. a check meaning 'not in here' — as the hand points to the actual ingredient deck. Close-up macro of the four real ingredients listed on-pack. End on the carton standing on the counter beside a poured glass, text 'four ingredients. read it.' Keep it benefit-first: the clean panel is the hero, the absence of bad stuff is the proof. No competitor cartons in frame, ever.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"At-shelf POV. Phone scans first kids-drink carton — Yuka reveals red/orange score. Text overlay: 'scanned 12 kids drinks at sprouts.'"},
-      {scene:"BUILD",time:"3-9s",action:"Quick cuts through 3-4 more cartons being scanned, each revealing red/orange (no brand names visible — angle so labels are blurred). Text: 'high sugar. dyes. seed oils. carrageenan.'"},
-      {scene:"REVEAL",time:"9-12s",action:"Phone scans Willa's Kids carton. Yuka reveals green 100/100. Carton goes into the cart. Text: 'one of them was green.'"},
-      {scene:"END CARD",time:"12-15s",action:"Home kitchen. Kid's hand pours from the Willa's Kids carton into a glass. Stinger: 'shhh… 100/100. that's the one in the cart. 🌾' (BS-3)"}
+      {scene:"HOOK", time:"0-3s", action:"Hand holds Willa's Original carton, label forward. On-screen text: 'four ingredients. the national avoid-list has zero of them.' VO: 'four ingredients. the oat-milk avoid-list that just went national — zero of them are in ours.'"},
+      {scene:"BUILD", time:"3-9s", action:"Carton flips to the back panel. Four avoid-list items stack on-screen one at a time — 'canola/rapeseed oil' / 'added sugar' / 'gums + stabilizers' / 'carrageenan' — and as the finger scans the real ingredient deck, each gets a green check meaning NOT HERE. VO: 'rapeseed? no. added sugar? no. gums? carrageenan? none of it.'"},
+      {scene:"REVEAL", time:"9-13s", action:"Macro on the actual on-pack ingredient list. Text counts up: 'organic oats · filtered water · organic vanilla · sea salt = 4.' Small badge flashes: '1g sugar · 4g protein · Yuka 94.' VO: 'the whole list is four things. the whole oat already brings the fiber and protein — we just never added the rest.'"},
+      {scene:"END CARD", time:"13-15s", action:"Carton on counter beside a poured glass. Text: 'four ingredients. read it.' Wink VO: 'most honest thing in your fridge.'"}
     ],
-    audio:"Soft mom-creator-voice VO (cofounder-sister or ambient narration — NOT Christina per Christina-is-not-a-mom rule): 'scanned 12 kids drinks at sprouts. one of them was green.' Ambient grocery-aisle sound + light morning kitchen bed at the end.",
+    audio:"Trending-adjacent clean upbeat track, low-key and confident (not wellness-twinkly). Natural carton-flip and pour SFX kept audible under the VO for tactile on-pack realism.",
+    duration:"14-15 seconds",
+    cta:{soft:"flip the carton next time — it's a fast read.", medium:"check your oat milk against the avoid-list. then check ours.", strong:"grab Willa's Original and read the back panel before you pour."},
+    benefitShorthandId:"BS-3"
+  },
+  {
+    id:"JUN01-TT-1",
+    platform:"TikTok",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"viral-recipe-remix",
+    timing:"Wed Jun 3 · 9am",
+    priority:"BIG SWING",
+    rideNow:"true",
+    concept:"\"you genuinely cannot tell the cloud is dairy-free\" — hands-only pour reveal",
+    intel:[
+      {type:"PULSE", text:"The \"cloud float\" is the execution carrying iced drinks this summer — a frothy whipped-fruit cloud domed slow over the rim (ref CP-9). The novelty is the float itself, not the drink under it. Most viral versions build the cloud on cottage cheese; we rebuild it dairy-free on a coconut-cream + Forager yogurt base so it holds that frothy dome with nothing but real ingredients."},
+      {type:"AUDIENCE", text:"viral-recipe-remix muse logic: the audience comes for the cloud-float they've been screenshotting and stays because ours is the version that fits how they actually eat — dairy-free, real ingredients, June cold-drink season just opened. Benefit-first: the cloud looks identical and tastes like summer; the clean part is the quiet flex, not the lecture."},
+      {type:"COMPETITOR", text:"Internal only: the category sells on a long ingredient list; Willa's Original disappears into the drink on just four (ref C-2). The base adds no canola, gums, or sugar — never state competitor names on camera. The hero is the float execution, not a panel read."}
+    ],
+    hooks:[
+      {text:"let's make a Strawberry Cloud Matcha (dairy-free!)", recommended:true},
+      {text:"the prettiest iced drink of the summer — and the milk underneath is four ingredients.", recommended:false},
+      {text:"strawberry cloud matcha, but the cloud holds and there's not a drop of dairy in it.", recommended:false}
+    ],
+    caption:"The summer weather had us craving everything pink and frothy! 🍓☀️ This strawberry cloud matcha is the drink of the season, and you genuinely cannot tell the cloud is dairy-free.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 It disappears right into the matcha on just four ingredients.\n\nIngredients:\n- 1 cup Willa's Organic Oat Milk\n- 2 tsp matcha\n- splash of hot water (to whisk the matcha)\n- ice\n- 1 cup frozen strawberries\n- 3 tbsp coconut cream\n- 1 tsp maple syrup\n\nWhisk the matcha at the bottom of the glass, fill with ice, pour Willa's over slow for the ombré. Blend the strawberries, coconut cream, splash of Willa's and maple into a thick pink cloud, then spoon it on top and let it dome. Save this one for the weekend. 🍓",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#strawberrycloudmatcha",
+      "#matchatok",
+      "#dairyfree",
+      "#cleanlabel",
+      "#summerdrinks",
+      "#icedmatcha",
+      "#recipesoftiktok"
+    ],
+    visual:"Bright, sun-washed kitchen counter, morning light. Vertical 9:16. Hands-only, no talking head needed. The hero is the build and the pour: matcha whisked at the bottom of a clear glass, ice, slow stream of Willa's Original creating the layered ombré, then the pink whipped strawberry cloud spooned and floated on top so it sits proud above the rim. Quick cut to the carton label held to lens — the 4-ingredient panel readable for a beat. Final beauty shot: the finished drink, condensation, a strawberry on the rim, light hitting the cloud. Keep it glossy and screenshot-able — every frame should look like a saved Pin.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Tight on the finished strawberry cloud matcha on a sunlit counter, cloud wobbling, hand in frame. On-screen text: \"let's make a Strawberry Cloud Matcha (dairy-free!)\". Spoon taps the cloud to show it holds. Willa's Original carton visible at the edge of frame."},
+      {scene:"BUILD", time:"3-9s", action:"Fast hands-only build sequence: whisk matcha with a splash of hot water at glass bottom → fill with ice → pour Willa's Original in a slow stream to layer the ombré (lingering pour shot, carton readable). Cut to: whip frozen strawberries + a few spoons of coconut cream + a splash of Original until it's a thick pink cloud. Text: \"oat + coconut base — all real ingredients.\""},
+      {scene:"REVEAL", time:"9-13s", action:"Spoon the strawberry cloud on top, let it float and dome over the rim. Slow tilt of the glass. Carton held to lens for one beat — 4-ingredient panel visible. Text: \"4 ingredients in the milk. 1g sugar.\""},
+      {scene:"END CARD", time:"13-16s", action:"Final beauty shot, strawberry on rim, straw goes in, first sip pulls the cloud down. Text: \"Willa's. nourish the spark.\" Caption nudge: \"save it for the weekend.\""}
+    ],
+    audio:"Trending soft summer-pop / lo-fi matcha-tok audio at the moment of posting (mid-tempo, dreamy). Build pour synced to a satisfying beat; light ASMR of the whisk + pour mixed under the track.",
     duration:"14-16 seconds",
-    cta:{soft:"scan + share 📱",medium:"find Willa's Kids at Sprouts + Whole Foods",strong:"try Willa's Kids — the green one"},
-    benefitShorthandId:"BS-3"
+    cta:{soft:"save this for your next warm afternoon.", medium:"grab Original and make the cloud — tell us if anyone clocks it's dairy-free.", strong:"the cloud's a coconut + oat build — comment STRAWBERRY and we'll drop the exact amounts."},
+    benefitShorthandId:null
   },
   {
-    id:"MAY25-TT-1",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Barista",
-    timing:"Thu May 28 · 9am", priority:"BIG SWING", rideNow:true,
-    concept:"\"tiktok's viral cinnamon roll — but dairy-free. (yes the heavy cream swap still works.)\" — viral-recipe-remix",
+    id:"JUN02-TT-2",
+    platform:"TikTok",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Original",
+    dnaPattern:"meme-payload",
+    timing:"Thu Jun 4 · 9am",
+    priority:"HIGH",
+    rideNow:"true",
+    concept:"\"5am her vs. one beat later\" — Model Pose flip on the iced Original cold-brew",
     intel:[
-      {type:"PULSE",text:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (CP-4) — GMA + ABC News + Parade coverage, millions of TikTok views. Recipe uses heavy cream — Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream)."},
-      {type:"AUDIENCE",text:"Pattern 05 Format-as-Virality + Pattern 04 Taboo-as-Normal (the unexpected ingredient is the dairy-free swap, calmly stated). Poppi muse (viral short-form better-for-you). Lead-with-solution: dairy-free swap in beat 1, viral-recipe format as backdrop. Cloud-pour shot is the share engine."},
-      {type:"COMPETITOR",text:"Internal only — category-leader barista blends carry rapeseed, gums, stabilizers. Willa's Barista pours like dairy at home, no rapeseed, no gums. The heavy-cream-substitute use case is one where Willa's structurally outperforms peer barista oat milks."}
+      {type:"PULSE", text:"The 'Model Pose' TikTok transition (tired → confident on the beat, set to Slayyyter's 'DACE') is trending per Ramdam, May 26, 2026 (ref CP-5). It's a clean meme-payload shell for a before/after glow-up tied to a morning ritual — high velocity, low production lift. Payload stays OFF matcha: the drink is an iced Original cold-brew, keeping the matcha lane uncrowded this week."},
+      {type:"AUDIENCE", text:"Morning-mom audience lives the 5am-zombie-to-functional-human arc daily. The transition lets us hand them the universal 'I needed a second to become a person' truth — feel-good, never restriction. The payload (iced Original cold-brew) is the small, delicious reason the second self shows up. Self-deprecating warmth > earnest wellness."},
+      {type:"COMPETITOR", text:"Internal only: leans on Original's clean 4-ingredient panel as the implicit reason this iced coffee is the better ritual — but copy stays celebratory, not panel-preachy. Keeps the meme lane warm without naming anyone, and deliberately steers off matcha to diversify the week."}
     ],
     hooks:[
-      {text:"tiktok's viral cinnamon roll, dairy-free. (yes the heavy cream swap still works.)",recommended:true},
-      {text:"the tortilla cinnamon roll, but we swapped the heavy cream.",recommended:false},
-      {text:"viral recipe, dairy-free upgrade — 20 min, plant-based, gooey.",recommended:false}
+      {text:"the iced matcha that turns 5am you into a person. one beat. four ingredients.", recommended:true},
+      {text:"before the matcha. after the matcha. same woman, different timeline.", recommended:false},
+      {text:"pov: the oat-milk matcha hits and you become a person again", recommended:false}
     ],
-    caption:"tiktok's viral cinnamon roll — but dairy-free. 🌯\n\n(yes the heavy cream swap still works.)\n\nevery fyp this month: tortilla rolled with butter + cinnamon sugar, baked with heavy cream poured over to get the gooey-roll texture. we swapped the heavy cream for Willa's Barista + a splash of coconut cream.\n\n→ 1 burrito tortilla, room-temp butter, cinnamon sugar inside\n→ roll, slice into 1-inch pieces, place in baking dish\n→ pour ⅓ cup Willa's Barista + 2 tbsp coconut cream over the top\n→ bake 450°F for 8-10 min\n→ powdered sugar icing on top\n\nsame gooey, dairy-free pour. 4-ingredient Willa's Barista does the heavy lifting, no rapeseed, no gums to fight the cinnamon. 🌾\n\nshhh… you'd never know.",
-    hashtags:["#tortillacinnamonroll","#viralrecipe","#dairyfree","#willasbarista","#cleanlabel","#plantbased","#oatmilkrecipe","#foodtok","#easydessert","#weekenddinner"],
-    visual:"Overhead on wooden counter, morning daylight. Hands roll a burrito tortilla with butter + cinnamon sugar visible. Slice on cutting board, place in oven-safe dish. Willa's Barista carton + small bowl of coconut cream visible in frame. Cloud-pour: Willa's Barista poured over the rolls, swirl visible. Cut to oven door closing, then to the baked golden-brown rolls being lifted onto a plate. Icing drizzle finale. Cinematic depth-of-field on the pour shot. No on-camera face.",
+    caption:"5am her has seen things. she does not want to talk about them. then the iced matcha — built on Original, the one with literally four ingredients (organic oats, filtered water, organic vanilla, sea salt) — does its quiet little job, and look who walks back into frame. same woman. one beat later. fully operational. just oats that actually taste like something, doing exactly what they promised. the model pose was right there the whole time. she just needed her drink. 🤍",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#matcha",
+      "#icedmatcha",
+      "#momtok",
+      "#modelpose",
+      "#cleanlabel",
+      "#morningritual",
+      "#feelgood"
+    ],
+    visual:"Vertical 9:16, natural morning kitchen light. Single subject, one continuous setup so the 'Model Pose' transition reads clean. FIRST BEAT: 5am self — hair up/messy, oversized tee, slumped, dead-eyed, slow-blinking at the camera, total deadpan zombie energy. Hard cut ON THE BEAT (the 'DACE' drop) to: same person, same spot, now mid-confident model-pose flip — chin up, slow smirk, Original-based iced matcha in hand, condensation on the glass. Optional micro-insert: the pour of Willa's Original into the matcha as a 0.5s flash before the flip, so the carton reads. Keep it lo-fi and real, not polished — the humor lives in the contrast. End card holds on the confident self with the line over.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"Overhead: hands roll burrito tortilla with butter + cinnamon sugar. Text overlay: 'tiktok's viral cinnamon roll — but dairy-free.'"},
-      {scene:"PREP",time:"3-6s",action:"Slice tortilla, place in baking dish, Willa's Barista carton on counter beside. Text: 'we swapped the heavy cream.'"},
-      {scene:"POUR",time:"6-9s",action:"Slow Willa's Barista + coconut cream pour over the rolls — cloud-pour visible, swirl. Text: 'Willa's Barista + coconut cream.'"},
-      {scene:"BAKE-REVEAL",time:"9-13s",action:"Oven door closes, cut to golden-brown baked rolls being lifted out. Icing drizzle. Text: '8-10 min. 450°F. dairy-free.'"},
-      {scene:"END CARD",time:"13-16s",action:"Plate with one cinnamon roll, fork pulls a bite. Stinger: 'same gooey pour. no rapeseed. shhh… you'd never know. 🌾' (BS-2)"}
+      {scene:"HOOK", time:"0-2s", action:"5am self: slumped at the counter, messy hair, oversized tee, dead-eyed deadpan stare into camera. Text on screen: '5am me'. Audio building toward the beat."},
+      {scene:"BUILD", time:"2-3s", action:"Half-second flash insert: Willa's Original pouring into a glass of iced matcha, condensation, oat-milk swirl into green. Text: 'the only fix'."},
+      {scene:"REVEAL", time:"3-5s", action:"Hard cut ON THE DROP: same person, same spot, now in full confident 'Model Pose' flip — chin up, slow smirk, matcha in hand. Text: 'me after the matcha'."},
+      {scene:"END CARD", time:"5-7s", action:"Hold on confident self sipping. Willa's carton visible in frame. Text: 'four ingredients. one beat. fully operational. — Willa's Original'."}
     ],
-    audio:"Soft instrumental bed (lo-fi morning). Pour + sizzle ambient. Optional brand-voice VO: 'tortilla cinnamon rolls — but cleaner.'",
+    audio:"Slayyyter — 'DACE' (the 'Model Pose' transition audio trending per Ramdam, May 26, 2026). Cut the transition precisely on the beat drop.",
+    duration:"6-7 seconds",
+    cta:{soft:"tell me 5am you isn't this exact woman.", medium:"the matcha base that actually earns the glow-up: Willa's Original. link in bio.", strong:"build your 5am-to-human ritual on Original — grab a carton, save the slow blink for the weekend."},
+    benefitShorthandId:"null"
+  },
+  {
+    id:"JUN02-IG-R2",
+    platform:"IG Reel",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"before-after-stitch",
+    timing:"Thu Jun 4 · 12pm",
+    priority:"HIGH",
+    rideNow:"false",
+    concept:"\"we already strained it. you're welcome.\" — skip-the-bag reveal",
+    intel:[
+      {type:"TREND", text:"(T-3) Martha Stewart's May 26, 2026 piece on whether homemade oat milk is worth the effort crystallizes the store-bought vs homemade tension — the takeaway most readers land on is that it's a hassle (straining, gums to fix the sliminess, short shelf life). That's the opening for a clean store-bought that tastes homemade."},
+      {type:"AUDIENCE", text:"The homemade-oat-milk crowd is the ingredient-literate cook who started DIY-ing precisely because she didn't trust the panel — same muse as the label-auditing mom, but motivated by craft + control. She doesn't want to be told homemade is dumb; she wants permission to skip the strain bag without lowering her standard. Benefit-first hook earns the side-by-side."},
+      {type:"COMPETITOR", text:"Internal only: the gum that homemade recipes add to fix sliminess is the same gum the label-readers are avoiding (ref C-2). Original's 4-ingredient panel (no gums) is the quiet flex. Do NOT name any brand on camera; contrast is homemade-effort vs Original, not Willa's vs a competitor."}
+    ],
+    hooks:[
+      {text:"homemade-grade oat milk, none of the homework. the strain bag stays in the drawer.", recommended:true},
+      {text:"four ingredients, no gums, no strain bag — and it tastes like you made it. you're welcome.", recommended:false},
+      {text:"you do not need a nut-milk bag to have homemade-grade oat milk. promise.", recommended:false}
+    ],
+    caption:"here's the part nobody tells you about making oat milk at home: to fix the slime, most recipes have you add a gum. so you strain for 40 minutes... and end up with the exact thing you were trying to skip. 🥛\n\nwe skipped all of it. Original is four things — organic whole grain oats, filtered water, organic vanilla extract, sea salt. no gums, no rapeseed, no strain bag, no four-day fridge countdown. homemade-grade, none of the homework.\n\nkeep the bag in the drawer. we already strained it.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#cleanlabel",
+      "#homemadeoatmilk",
+      "#4ingredients",
+      "#readthelabel",
+      "#nogums",
+      "#plantmilk"
+    ],
+    visual:"Split-energy before/after stitch in one continuous Reel, shot vertical 9:16 in a bright real kitchen. BEFORE half (cool, slightly chaotic): blender whirring, the soaked-oat pour, a nut-milk strain bag being wrung out over a bowl — hands getting messy, a little slime drip, a phone timer ticking up, a tiny bottle labeled 'gum' getting tapped in (the gotcha). Quick on-screen text counts the friction: '40 min', 'strain', 'add gum to fix slime', 'use within 4 days'. Hard cut on the beat to AFTER half (warm, calm, slow-mo): a clean pour of Original from the carton into a clear glass over ice, light catching the milk, the carton panel held to camera so the 4 ingredients are legible. End on the carton + glass. Keep the contrast about EFFORT and the panel — never show or name another brand.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Tight on hands wringing out a slimy nut-milk strain bag over a bowl. Text: 'the strain bag stays in the drawer.' VO/caption beat: we already did the part you hate."},
+      {scene:"BUILD", time:"3-9s", action:"Fast-cut montage of the homemade hassle: blender, soak, strain, timer climbing to '40 min', then the reveal tap of a small 'gum' bottle into the bowl. Text stamps each friction: 'strain' · 'add gum to fix the slime' · 'use within 4 days'. The gum tap lands as the gotcha."},
+      {scene:"REVEAL", time:"9-13s", action:"Hard cut to slow-mo clean pour of Original over ice. Text: 'or—'. Carton panel turns to camera: organic oats · filtered water · organic vanilla · sea salt. Text: '4 ingredients. no gums. no strain bag.'"},
+      {scene:"END CARD", time:"13-16s", action:"Glass + carton resting together, condensation on the glass. Text: 'homemade-grade. hold the homework.' Soft logo lockup. Small line: 'we already strained it.'"}
+    ],
+    audio:"Upbeat-but-dry kitchen-DIY trending audio with a clear beat drop at the 9s cut so the homemade-hassle montage snaps into the clean Original pour on the beat. Keep VO minimal — let on-screen text + the cut carry it.",
     duration:"14-16 seconds",
-    cta:{soft:"save for the long weekend 📌",medium:"full recipe at willaskitchen.com",strong:"find Willa's Barista at Target"},
-    benefitShorthandId:"BS-2"
+    cta:{soft:"keep the strain bag in the drawer.", medium:"check your oat milk's panel — is there a gum in there?", strong:"grab Original and skip the homework — 4 ingredients, no strain bag."},
+    benefitShorthandId:"null"
   },
   {
-    id:"MAY25-PIN-1",
-    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
-    timing:"Thu May 28 · anytime", priority:"BIG SWING",
-    concept:"\"sourdough rhubarb snack cake — the heritage tart your grandmother would have made.\" — Pinterest rhubarb heritage pin",
+    id:"JUN03-IG-F1",
+    platform:"IG Feed",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Original",
+    dnaPattern:"at-shelf-moment",
+    timing:"Fri Jun 5 · 11am",
+    priority:"STANDARD",
+    rideNow:"false",
+    concept:"\"the question grew up. so did the answer.\" — four words on the back, nothing to defend",
     intel:[
-      {type:"PULSE",text:"Rhubarb is having a heritage moment as summer opens (CP-2) — Pinterest weekly trend report flagged rhubarb recipes peaking, sourdough rhubarb snack cake + strawberry rhubarb crisp circulating. Heritage-coded ingredient — grandma food (Willa's grandma was 1921). Prebiotic-fiber-friendly, naturally tart."},
-      {type:"AUDIENCE",text:"Pattern 12 Carousel/UGC + Pattern 10 Wordplay (header). Fishwife / Graza / Omsom muse (design-led ingredient personality). Pinterest planning audience is 7-10 days ahead of execution. Recipe pin with type-led layout, screenshot-friendly. Willa's Original in the cream pour."},
-      {type:"COMPETITOR",text:"Internal only — heritage-kitchen content is Willa's structural advantage. No venture-backed oat-milk brand has the multi-generation grandmother-cooking story. Willa was a real woman; the brand is named for her."}
+      {type:"TREND", text:"FoodNavigator-USA reported May 26, 2026 that the clean-label discourse is maturing from \"avoid all processed\" to \"what's actually IN it and where it fits a balanced day\" (ref T-2). The grown-up question isn't processed-or-not — it's how short and legible the ingredient deck is. Our move: show the four-word list as the answer to the better question."},
+      {type:"AUDIENCE", text:"Label-auditing health buyers who screenshot nutrition panels and read ingredient lists in the aisle. They're done being scared and ready to be reassured. Benefit-first hook (the short list is the grown-up choice) lands harder than a fear-based avoid-list rerun — and the FoodNavigator reframe gives them the smart-shopper framing to share."},
+      {type:"COMPETITOR", text:"Internal only: the category answers the old question (processed-or-not) with reformulations and add-backs; Willa's answers the new one (what's IN it) with a four-word deck that never needed editing (ref C-2). Original's WholePlant IP is the counter — whole oat, not oat syrup, so fiber AND protein ride along untouched. Name no one on a static surface."}
     ],
     hooks:[
-      {text:"sourdough rhubarb snack cake — the heritage tart your grandmother would have made.",recommended:true},
-      {text:"rhubarb season meets sourdough discard. (Willa's Original is the pour underneath.)",recommended:false},
-      {text:"the snack cake your grandmother knew before pinterest did.",recommended:false}
+      {text:"4 ingredients. 4g protein. nothing added back — because nothing was ever taken out.", recommended:true},
+      {text:"adding fiber back is a funny flex. it means it left. ours never did.", recommended:false},
+      {text:"whole oat = fiber AND protein, intact. no reformulation required.", recommended:false}
     ],
-    caption:"sourdough rhubarb snack cake. 🌿\n\nthe heritage tart your grandmother would have made — back when you used what was in season because that's what was there.\n\nthe recipe:\n→ 1½ cups flour, ¼ cup sourdough discard, ¼ cup Willa's Original\n→ ½ cup brown sugar, 1 egg, 1 tsp vanilla\n→ 1 tsp baking powder, pinch of salt\n→ 1½ cups fresh rhubarb, chopped + lightly tossed in 2 tbsp sugar\n→ ¼ cup demerara sugar on top for the crunch\n\nmix wet + dry, fold in rhubarb. pour into a buttered 8x8. bake 350°F for 35-40 min. cool. tea.\n\nWilla's Original in the batter: 4 ingredients, organic, the whole oat groat. (your grandmother had fewer ingredients than that.) 🌾\n\nshhh… save for the long weekend.",
-    hashtags:["#rhubarbrecipe","#sourdoughdiscard","#snackcake","#willaskitchen","#heritagebaking","#grandmaskitchen","#willasoriginal","#organicoats","#springbaking","#cleanlabel"],
-    visual:"Vertical Pinterest pin (2:3). Overhead wood counter, golden afternoon daylight. Sourdough rhubarb snack cake sliced into squares on a vintage plate. Willa's Original carton in corner (partly cropped). Sprigs of fresh rhubarb + a small bowl of demerara sugar arranged as cameo. Single oat groat + flaky salt sparkle. Serif typography header overlaid: 'sourdough rhubarb snack cake — the heritage your grandmother knew.' No on-camera face. Pinterest-native composition.",
+    caption:"some oat milks are quietly adding fiber back in right now. that's a little telling, isn't it — you only put something back if you took it out. if you stripped the oat down to syrup and called it a day. 🥛\n\nWilla's doesn't. WholePlant means whole oat, not oat syrup — so what the oat came with, the fiber AND the protein, you keep. 4 ingredients. 1g sugar. 4g protein. organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the whole list.\n\nwe didn't reformulate. we just never broke it in the first place.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#cleanlabel",
+      "#readthelabel",
+      "#wholeoats",
+      "#4ingredients",
+      "#nogums",
+      "#noseedoils"
+    ],
+    visual:"3-slide carousel (4:5 vertical, warm daylight, clean countertop). Slide 1: hero shot of the Original carton standing at-shelf/on-counter, big confident overlay text — \"4 ingredients. nothing added back.\" Subhead lower third: \"because nothing was ever taken out.\" Slide 2: tight macro of the actual back-of-pack nutrition + ingredient panel, finger pointing to the 4-ingredient list; circled callouts in the pillar blue (#73B2C9) on \"organic whole grain oats\" and \"4g protein\" with a hand-drawn note \"fiber AND protein — whole oat, not oat syrup.\" Slide 3: clean text slide on soft blue ground — \"4 ingredients. 1g sugar. 4g protein. nothing added back, because nothing was taken out.\" small Original carton in corner, sign-off line \"WholePlant — whole oat, not oat syrup.\" Keep type lowercase-leaning, generous whitespace, never clinical.",
     script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save the pin 📌",medium:"full recipe at willaskitchen.com",strong:"Willa's Original — at Target"},
-    benefitShorthandId:"BS-1"
+    audio:"null",
+    duration:"null",
+    cta:{soft:"give your own carton's panel a read — out loud. what's actually in it?", medium:"next aisle trip, flip the carton over before it goes in the cart.", strong:"grab Original and meet the only panel that never needed a redo."},
+    benefitShorthandId:"null"
   },
   {
-    id:"MAY25-IG-R2",
-    platform:"IG Reel", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
-    timing:"Thu May 28 · 6pm", priority:"HIGH", rideNow:true,
-    concept:"\"the carton has read the same way the whole time.\" — calm-authority seed-oil-free founder reveal",
+    id:"JUN03-TT-3",
+    platform:"TikTok",
+    pillar:"REVIEWS/RECS",
+    pillarColor:"#A191B2",
+    flavor:"Multi",
+    dnaPattern:"meme-payload",
+    timing:"Thu Jun 4 · 10am",
+    priority:"HIGH",
+    rideNow:"true",
+    concept:"\"oat milk + a hot car = a tragedy. don't do it to her.\" — deadpan summer PSA",
     intel:[
-      {type:"PULSE",text:"Seed-oil-free is officially winning at the shelf (CP-9) — STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative + distinguishes industrial seed oils from structurally-different high-oleic variants. Willa's Original is already seed-oil-free; Willa's Barista uses the structurally-different high-oleic variant."},
-      {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority on a noisy topic) + Pattern 06 Founder Humanization. Patagonia muse (activist gravity). Christina on-camera per Christina Rule reserved category (founder-POV activist stance — quiet authority register, NOT trend-chase). Lead-with-solution: 4 ingredients first, discourse context as backdrop."},
-      {type:"COMPETITOR",text:"Internal only — Big-CPG is reformulating to where Willa's started. Original was never going to have seed oils. The deck didn't change because nothing needed to. Don't name competitors; the calm-receipts position is the brand voice."}
+      {type:"PULSE", text:"Adapts the Fishwife format (CP-2): Salon covered May 28, 2026 how Fishwife pulled anchovies for the summer and announced it with a deadpan reality-TV \"relationship status\" parody. We borrow the FORMAT — a real product truth told as a tongue-in-cheek summer PSA — not the product."},
+      {type:"AUDIENCE", text:"REVIEWS/RECS lane skews to the screenshot-and-send crowd — people who tag a friend with \"this is literally you.\" A deadpan PSA reads as a meme, not an ad, so it travels in DMs. The with-a-wink voice does the work; the carton is the straight man."},
+      {type:"COMPETITOR", text:"Internal only: peer-brand humor is having a moment (Fishwife). We win by matching the wit without naming anyone — no category swipe, just a self-aware brand that can laugh at how seriously people guard their carton."}
     ],
     hooks:[
-      {text:"the carton has read the same way the whole time.",recommended:true},
-      {text:"we never had to add what we never had.",recommended:false},
-      {text:"organic. seed-oil-free. four ingredients. (the deck didn't change.)",recommended:false}
+      {text:"oat milk + a hot car = a tragedy. this is not a drill.", recommended:true},
+      {text:"she does not survive the summer in your back seat. a PSA from your oat milk.", recommended:false},
+      {text:"a public service announcement from the four-ingredient carton you love.", recommended:false}
     ],
-    caption:"the carton has read the same way the whole time. 🛡️\n\nwe built Willa's around what we WANTED to drink — for ourselves, for our families, for kids.\n\nso here's what's in Willa's Original:\n→ organic whole grain oats\n→ filtered water\n→ organic vanilla extract\n→ sea salt\n\nthat's the whole deck. no rapeseed, no canola, no gums, no stabilizers, no syrup. four ingredients you can read.\n\nthe conversation around what's in your milk + your oil + your kids' food is louder than ever this month. that's good. we built clean from day one because that's the brand we wanted to leave behind.\n\nshhh… nothing changed because nothing needed to. 💛",
-    hashtags:["#willasoatmilk","#cleanlabel","#seedoilfree","#organic","#fouringredients","#motherfounded","#wholeoat","#wholeplant","#cleaneating","#realfood"],
-    visual:"Warm-toned kitchen, soft afternoon daylight. Christina at the counter holding a Willa's Original carton, facing camera. Cuts to close-up of the carton's ingredient panel (4 ingredients visible). Hands turn the carton, slow ingredient reveal. Cut back to Christina — direct-to-camera, quiet authority, no preach. End on the carton sitting on the counter beside a glass of poured Willa's.",
+    caption:"a public service announcement from your oat milk. 🥛☀️\n\nit's officially hot-car season, and we've lost too many good cartons. she rode shotgun on the grocery run. she believed in you. then you stopped for one more errand and forgot she was back there, gently curdling in the 90-degree heat like a tragic figure in a summer drama.\n\nthis is not a drink-shaming post. it's a love letter with a warning label. four real ingredients deserve a clean ride home. fridge first, errands later — she'll keep, but only if you let her.\n\nconsider this your reminder to bring her in from the car. 💛",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#summerpsa",
+      "#cleanlabel",
+      "#oatmilklover",
+      "#groceryrun",
+      "#momtok",
+      "#foodtok"
+    ],
+    visual:"Deadpan PSA energy — think a parody of an old-school public-information film, but shot on a phone. Cold open on a Willa's carton sitting alone, slightly dramatically lit, in a sun-baked back seat (visible heat shimmer, dashboard glare). On-screen text mimics emergency-broadcast styling (monospace caps, a thin bar at top: \"A PUBLIC SERVICE ANNOUNCEMENT\"). Talent (brand voice, NOT Christina — any team member or hands-only) delivers lines totally straight, never winking at camera, which is what makes it funny. Cut between the abandoned carton baking in the car and the happy ending: the carton rescued, wiped down, placed lovingly in the fridge door next to the other flavors (Original, Kids, Chocolate visible for Multi-flavor cameo — Barista excluded; this is not a latte story). Warm grade on the fridge shots vs. harsh blown-out grade on the car shots. Keep it under 16s, tight cuts, payoff land on the fridge close.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"Christina at the counter holding Willa's Original carton. Text overlay: 'the carton has read the same way the whole time.'"},
-      {scene:"INGREDIENT REVEAL",time:"3-7s",action:"Close-up of carton ingredient panel (4 ingredients visible). Hand traces each: 'organic oats. filtered water. vanilla. sea salt.'"},
-      {scene:"FOUNDER POV",time:"7-12s",action:"Christina to camera: 'we built it around what we wanted to drink. for ourselves, for kids. nothing changed because nothing needed to.'"},
-      {scene:"END CARD",time:"12-15s",action:"Carton on counter beside a glass. Stinger: 'four ingredients. organic. seed-oil-free. shhh… 🌾' (BS-3)"}
+      {scene:"HOOK", time:"0-3s", action:"Tight on a lone Willa's Original carton in a hot, sun-glared back seat. Heat shimmer. Voiceover, dead serious: \"a public service announcement from your oat milk.\" Top-bar text: A PUBLIC SERVICE ANNOUNCEMENT."},
+      {scene:"BUILD", time:"3-9s", action:"Slow push-in on the carton. VO, somber documentary tone: \"she rode shotgun. she believed in you. then you ran one more errand.\" Cut to a thermometer-style overlay ticking up, dashboard reading hot. Beat of silence for the joke to land."},
+      {scene:"REVEAL", time:"9-13s", action:"Hands lift the carton from the car — rescue moment. Quick cut to fridge door opening, carton placed gently next to Original, Kids, and Chocolate (no Barista — not a latte story). VO: \"clean ingredients deserve a clean ride home. fridge first. errands later.\""},
+      {scene:"END CARD", time:"13-16s", action:"Carton settled in the cold fridge glow, condensation forming. On-screen text: \"bring her in from the car. 💛\" Small Willa's logo bug. VO, softer: \"this has been a message from Willa's.\""}
     ],
-    audio:"Founder voiceover (Christina on camera, so audio matches visible talent). Soft instrumental bed underneath. NO music swell — keep it quiet authority.",
+    audio:"Original audio (spoken-word PSA voiceover) over a low, deadpan public-information-film instrumental bed — think dramatic-newsreel strings used ironically, kept quiet under the VO. Subtle sound design: car-heat ambience (cicadas/hum) on the back-seat shots, satisfying fridge-door-and-cold whoosh on the rescue cut.",
+    duration:"15-16 seconds",
+    cta:{soft:"bring her in from the car. 💛", medium:"tag the person who leaves the carton in the back seat.", strong:"keep her cold, keep her clean — grab the 4-ingredient Original."},
+    benefitShorthandId:null
+  },
+  {
+    id:"JUN04-IG-R3",
+    platform:"IG Reel",
+    pillar:"PARENTING",
+    pillarColor:"#9E652E",
+    flavor:"Kids",
+    dnaPattern:"kid-family-moment",
+    timing:"Wed Jun 3 · 11am",
+    priority:"BIG SWING",
+    rideNow:false,
+    concept:"\"set it out once. they run it all afternoon.\" — the snack station that buys you quiet",
+    intel:[
+      {type:"PULSE", text:"Kids are home for summer and #momtok has pivoted hard to all-day grazing and build-your-own plates/stations (TikTok Discover, May 2026 — ref CP-6). Parents are hunting for low-effort wins that buy quiet. The build-your-own format is the exact shell that's peaking; the snack station puts Kids SKU at the center of it."},
+      {type:"AUDIENCE", text:"This is the summer-survival mom — kids underfoot, snack fatigue setting in by week two of break. She doesn't want a recipe, she wants a system she can set up once and walk away from. Speak to the win (10 quiet minutes), not the ingredient label. The reasoning that lands: hand her a station the kids run themselves, so she gets her hands back. Brand 'we' voice — this is not Christina on-camera."},
+      {type:"COMPETITOR", text:"Internal-only: category oat milks skew adult/barista in summer messaging; the kid-occasion + 8g protein / DHA / top-9 allergen-free Kids SKU is wide-open white space against the cookout-season noise. Not a named-brand attack — just an occasion nobody else owns."}
+    ],
+    hooks:[
+      {text:"let's make a build-your-own Willa's Kids snack station", recommended:true},
+      {text:"the summer snack station that runs itself — 8g protein, top-9 allergen-free, kid-approved.", recommended:false},
+      {text:"the drink that buys you ten minutes of quiet. here's the whole station.", recommended:false}
+    ],
+    caption:"The kids are home and the fridge already has a revolving door! 🥛☀️ So here's the move: a build-your-own Willa's Kids smoothie + snack station the little ones run themselves. Set it out once, they run it all afternoon, and you get ten quiet minutes back.\n\nWilla's Kids Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup — plus DHA and 8g protein, top-9 allergen-free, Yuka 100/100 (the clean-label app, if you scan). 🥛\n\nIngredients:\n- 1 carton Willa's Kids Organic Oat Milk (the base)\n- 1 bowl frozen berries\n- 1 bowl frozen mango\n- 1 tub dairy-free yogurt\n- paper cups + reusable straws\n- a small blender\n\nThey pour the Willa's, scoop the fruit, spoon the yogurt, drop in a straw. They're busy, you're breathing. What's living on YOUR snack station this summer? Drop it below 👇",
+    hashtags:[
+      "#willas",
+      "#willasoatmilk",
+      "#momtok",
+      "#summersnacks",
+      "#snackstation",
+      "#kidssnacks",
+      "#buildyourown",
+      "#allergenfriendly",
+      "#dairyfreekids",
+      "#summerwithkids"
+    ],
+    visual:"Fast, warm, real-kitchen energy — sunlit counter, summer-morning light. Open on a mom's POV hands setting out a low tray within kid-reach: a carton of Willa's Kids front-label visible, a bowl of frozen berries and mango, a tub of oat/coconut yogurt (clearly dairy-free, label or branded scoop), paper cups, reusable straws, a small blender. Cut to two kids (ages roughly 4-8) self-serving — pouring Willa's Kids, scooping fruit, the satisfying glug of the pour. The 'reveal' is the mom walking away with her coffee and visibly exhaling on the couch while the kids stay busy at the station. End on a clean carton-forward end card. Keep the kids in frame doing the work — the magic is that THEY run it. No founder/Christina on camera.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"POV mom hands sliding a tray onto a kid-height counter, summer morning light. On-screen text: \"let's make a build-your-own Willa's Kids snack station\". Quick glug of Willa's Kids pouring into a paper cup, carton label clearly in frame."},
+      {scene:"BUILD", time:"3-9s", action:"Rapid cuts of two kids self-serving: pour Willa's Kids base, scoop frozen berries, spoon of oat/coconut yogurt, drop in a straw. Hands-only and over-shoulder, clean-kitchen lofi. Small on-screen tags pop as each goes in: 'base: Willa's Kids' · 'frozen fruit' · 'dairy-free yogurt.'"},
+      {scene:"REVEAL", time:"9-13s", action:"Wide shot: kids happily building/sipping at the station, fully self-sufficient. Cut to mom backing away with her coffee, flopping onto the couch, eyes closed, audible exhale. Text: '8g protein · DHA · top-9 allergen-free.'"},
+      {scene:"END CARD", time:"13-15s", action:"Clean carton-forward frame, Willa's Kids centered. Text: 'the drink that buys you quiet. Willa's Kids.' Soft CTA line: 'what's on your station? 👇'"}
+    ],
+    audio:"Bright, sunny lo-fi summer track with a relaxed beat — light and unhurried, mirroring the 'walk away and breathe' payoff. Keep pour/scoop ASMR audible under the music in the BUILD section.",
     duration:"14-16 seconds",
-    cta:{soft:"read the carton 🌾",medium:"find Willa's Original at Target + Sprouts",strong:"shop Willa's — organic + seed-oil-free"},
-    benefitShorthandId:"BS-3"
+    cta:{soft:"what's living on your snack station this summer? 👇", medium:"build the station once — tell us what your kids actually keep coming back for.", strong:"grab Willa's Kids and set up the station that runs itself this week."},
+    benefitShorthandId:null
   },
   {
-    id:"MAY25-TT-2",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
-    timing:"Wed May 27 · 9am", priority:"HIGH", rideNow:true,
-    concept:"\"summer's first snack — shave a frozen strawberry. (dairy-free by accident.)\" — viral-recipe-remix shaved fruit",
+    id:"JUN04-TT-4",
+    platform:"TikTok",
+    pillar:"PARENTING",
+    pillarColor:"#9E652E",
+    flavor:"Kids",
+    dnaPattern:"kid-family-moment",
+    timing:"Sun Jun 7 · 10am",
+    priority:"STANDARD",
+    rideNow:false,
+    concept:"\"the smallest one eats first\" — tiny hands, quiet panel",
     intel:[
-      {type:"PULSE",text:"Shaved Fruit is the breakout MAY 2026 healthy-snack trend (CP-1) — frozen strawberry shaved on microplane = instant fluffy sorbet, dairy-free by design. Verified breakout per SoYummy + TikTok creator search insights. ASMR-satisfying, 30 seconds, summer-morning-kitchen aesthetic."},
-      {type:"AUDIENCE",text:"Pattern 05 Format-as-Virality + Pattern 04 Taboo-as-Normal (dairy-free by design, calmly stated). Fishwife muse (ingredient theater). Willa's connection: drizzle Willa's Original on top for dairy-free cream pour that doesn't melt the snow texture. Pairs naturally without overwhelming."},
-      {type:"COMPETITOR",text:"Internal only — strawberry season is peaking. Willa's grandma-kitchen voice owns the heritage-summer-fruit lane. The shaved-fruit format itself is wide open for any plant-milk brand; Willa's wins on the clean-pour-on-top execution."}
+      {type:"PULSE", text:"Grogu wholesome-family energy is the cultural moment of the week — \"The Mandalorian and Grogu\" topped the box office at ~$102M (ref CP-4). The whole internet is soft for a tiny creature being handed a snack. Borrow the FEELING, not the IP: a parent handing the littlest one their cup first."},
+      {type:"AUDIENCE", text:"Muse: the label-auditing mom in summer-survival mode. She doesn't want a lecture — she wants the soft, wordless win of taking care of the smallest person at the table. Kids SKU does the heavy lifting in the background (8g protein, DHA, top-9 allergen-free, Yuka 100) while the moment stays pure warmth. We speak in brand we / cofounder-sister, never Christina-as-mom."},
+      {type:"COMPETITOR", text:"Internal only: the flex here is emotional, not nutritional — we let the Kids panel sit quiet and let the moment carry. No named-brand contrast; the warmth IS the borrow."}
     ],
     hooks:[
-      {text:"summer's first snack — shave a frozen strawberry.",recommended:true},
-      {text:"the shaved-fruit trend is dairy-free by design. (Willa's pours on top.)",recommended:false},
-      {text:"frozen berry + microplane = sorbet in 30 seconds. no dairy.",recommended:false}
+      {text:"she just thinks it's hers because she got it first. it's also 8g protein, DHA, allergen-free.", recommended:true},
+      {text:"pov: you found the one summer drink the littlest will actually finish", recommended:false},
+      {text:"she has no idea it's the good stuff. that's the whole trick.", recommended:false}
     ],
-    caption:"summer's first snack — shave a frozen strawberry. 🍓\n\n(dairy-free by accident.)\n\nthe shaved-fruit trend is eating tiktok this month and it's the easiest summer flex on the internet:\n\n→ grab a frozen strawberry\n→ shave it on a microplane into a bowl\n→ instant fluffy sorbet, zero added sugar, zero dairy\n\nwe drizzle Willa's Original on top for a cream pour that doesn't melt the snow. 4 ingredients in the pour: organic whole oats, water, vanilla, sea salt. that's the whole deck.\n\nyour microbiome thanks you. your phone takes a satisfying video. 🌾\n\nshhh… the trend that's actually clean.",
-    hashtags:["#shavedfruit","#frozenstrawberry","#microplane","#dairyfree","#willasoriginal","#summersnack","#cleaneating","#organicoats","#viralrecipe","#wholeoat"],
-    visual:"Overhead on white counter, morning daylight. Hands grab a frozen strawberry, place it on a microplane over a small white bowl. ASMR-satisfying shaving motion produces snow-like sorbet. Pile of fluffy strawberry 'snow' accumulates. Willa's Original carton in frame (partly cropped). Cloud-pour: Willa's Original drizzled lightly on top — sorbet stays intact. End on close-up of the bowl with a spoon.",
+    caption:"house rule around here: the smallest one eats first. 🥛 she just knows the cup is hers, and she got it first — she has no idea it's also 8g protein, DHA, and a panel that's top-9 allergen-free. summer's long and loud over here, so we keep the wins simple: hand the little one her cup, watch the whole room go quiet for one good minute. (Yuka gave Kids a 100. she gave it a thumbs up. close enough.) what's the one thing your littlest will actually finish all summer? 👇 #willas",
+    hashtags:[
+      "#willas",
+      "#willasoatmilk",
+      "#kidsnacks",
+      "#momtok",
+      "#summersnacks",
+      "#allergenfriendly",
+      "#oatmilk",
+      "#snacktime"
+    ],
+    visual:"Warm, soft-light kitchen morning — summer sun through the window, the kind of golden hour that reads as family. We never show a face full-on; it's hands, a small cup, a tiny pair of hands reaching. Frame the Willa's Kids carton naturally on the counter (label readable but not hero-shot-staged). The emotional payload is the handoff: a parent's hand sliding the cup to the littlest one FIRST, before anyone else gets theirs. Keep it tender, slightly slow, very wordless. End on the small one holding the cup with both hands, satisfied. No IP, no costumes, no Grogu reference on screen — the warmth IS the borrow.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"Overhead: hand holding frozen strawberry + microplane. Text overlay: 'summer's first snack.'"},
-      {scene:"SHAVE",time:"3-7s",action:"ASMR shaving motion — strawberry 'snow' piles up in bowl. Text: 'shave a frozen strawberry.'"},
-      {scene:"POUR",time:"7-10s",action:"Willa's Original cloud-pour drizzled on top — sorbet holds shape. Text: 'Willa's Original on top. (dairy-free by accident.)'"},
-      {scene:"END CARD",time:"10-13s",action:"Spoon dips through. Stinger: '4 ingredients in the pour. shhh… 🌾' (BS-1)"}
+      {scene:"HOOK", time:"0-3s", action:"Close on a small Willa's Kids cup being poured, soft morning light. On-screen text: \"8g protein · DHA · top-9 allergen-free. she just thinks it's hers.\" Sound of the pour."},
+      {scene:"BUILD", time:"3-8s", action:"A parent's hand carries the cup past the older kids' reaching hands — playful denial — toward the high chair / the littlest at the table. Light, warm, a little funny. Text: \"she gets it first. every time.\""},
+      {scene:"REVEAL", time:"8-13s", action:"The little one takes the cup with both hands, immediately drinks. Quick, soft cut to the Kids carton on the counter, panel briefly in frame. Text: \"8g protein · DHA · top-9 allergen-free · Yuka 100.\" Keep it a glance, not a lecture."},
+      {scene:"END CARD", time:"13-16s", action:"Back to the little one, content, room gone quiet. Text: \"the one minute of quiet you earned. 🥛 Willa's Kids.\""}
     ],
-    audio:"ASMR shaving sound (real microplane scrape). Soft instrumental bed underneath. Optional brand-voice VO: 'summer's first snack.'",
-    duration:"12-14 seconds",
-    cta:{soft:"save the snack 🍓",medium:"share with your fyp",strong:"find Willa's Original at Target"},
-    benefitShorthandId:"BS-1"
-  },
-  {
-    id:"MAY25-TT-3",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Barista",
-    timing:"Tue May 26 · 9am", priority:"HIGH",
-    concept:"\"will it survive: iced coffee edition. (Willa's Barista pours like it was built for the morning meeting.)\" — before-after-stitch",
-    intel:[
-      {type:"PULSE",text:"'Will it survive' makeup-endurance format is rising on TikTok MAY 2026 (CP-5) — summer-heat narrative. Adjacent flippable for Willa's Barista: 'will my iced coffee survive the morning meeting' — no curdle, no separation, no bitter aftertaste."},
-      {type:"AUDIENCE",text:"Pattern 03 Relatable Confession + Pattern 10 Wordplay. Olipop muse (cheeky relatable wellness). Hands + product, no on-camera face. Before-after-stitch DNA. 8am pour → 11am same glass holds shape is the visual proof."},
-      {type:"COMPETITOR",text:"Internal only — most plant milks separate in cold espresso. Willa's Barista has no rapeseed, no gums, no stabilizers. The hold-its-shape demo is structurally Willa's-only in the cleanest-deck Barista category."}
-    ],
-    hooks:[
-      {text:"will it survive: iced coffee edition.",recommended:true},
-      {text:"the cold-foam pour at 8am. the same glass at 11. (no curdle, no separation.)",recommended:false},
-      {text:"Willa's Barista pours like it was built for the morning meeting.",recommended:false}
-    ],
-    caption:"will it survive: iced coffee edition. ☕\n\nthe cold-foam pour at 8am. the same glass at 11.\n\nmost plant milks separate. some curdle in cold espresso. some go bitter when they sit. this one doesn't.\n\nWilla's Barista — clean deck, no rapeseed, no gums, organic whole oats. it pours like dairy and holds its texture through the morning meeting.\n\n(the makeup trend gets the views. the carton does the work.) 🌾\n\nshhh… try it cold.",
-    hashtags:["#willasbarista","#icedcoffee","#coldfoam","#willitsurvive","#oatmilklatte","#plantbased","#cleanlabel","#norapeseed","#morningmeeting","#coffeetok"],
-    visual:"Split-screen / before-after. LEFT: 8am close-up of Willa's Barista poured over cold espresso + ice, cloud-foam forming, condensation on the glass. RIGHT: same glass at 11am — foam still intact, no separation, glass at counter beside a closed laptop. Soft window-light. No on-camera face. Pattern 10 wordplay header: 'will it survive: iced coffee edition.'",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"Cold espresso in glass. Willa's Barista pours in — cloud-foam forms. Text overlay: 'will it survive: iced coffee edition.'"},
-      {scene:"POUR",time:"3-6s",action:"Foam holds. Close-up of the glass on the counter. Text: '8am: poured.'"},
-      {scene:"TIME CUT",time:"6-10s",action:"Same glass at 11am — foam still intact, condensation, beside closed laptop. Text: '11am: still here.'"},
-      {scene:"END CARD",time:"10-13s",action:"Spoon dips in, foam still holds shape. Stinger: 'Willa's Barista — clean deck, no rapeseed, no gums. shhh… 🌾' (BS-2)"}
-    ],
-    audio:"TikTok-trending lo-fi morning bed. Optional ASMR pour + spoon sound. Brand-voice VO: 'will it survive: iced coffee edition.'",
-    duration:"12-14 seconds",
-    cta:{soft:"tag a coworker ☕",medium:"Willa's Barista — at Sprouts",strong:"shop Willa's Barista"},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"MAY25-IG-R3",
-    platform:"IG Reel", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
-    timing:"Sat May 30 · 11am", priority:"HIGH",
-    concept:"\"a long-weekend pour. no plan, no recipe, just hands.\" — Bleachers audio-bed heritage Reel",
-    intel:[
-      {type:"PULSE",text:"Bleachers self-titled album dropped MAY 22, 2026 (CP-3) — Jack Antonoff Brooklyn-indie warmest mode. NPR + Indy Review covered. Tonal-match for Willa's morning-ritual lane. Audio bed only — don't name the album in copy."},
-      {type:"AUDIENCE",text:"Pattern 02 World-Context Tie-In + Pattern 06 Founder Humanization (kitchen, family). Fishwife muse (ingredient theater) + Cup of Jo (mom-creator-adjacent). Letterboxed cinematic feel. No on-camera face — hands + product + kitchen."},
-      {type:"COMPETITOR",text:"Internal only — heritage-kitchen aesthetic with intentional indie soundtrack is Willa's tonal pocket. Antonoff's accessible Brooklyn-indie register matches the brand's slow-Saturday-coffee feel without needing name-check."}
-    ],
-    hooks:[
-      {text:"a long-weekend pour. no plan, no recipe, just hands.",recommended:true},
-      {text:"the kitchen on a tuesday-that-feels-like-sunday.",recommended:false},
-      {text:"the pour you don't need a recipe for. (the carton already knew.)",recommended:false}
-    ],
-    caption:"a long-weekend pour. 🌾\n\nno plan, no recipe, just hands.\n\n→ Willa's Original over ice + cold espresso\n→ a peach sliced thin on the side\n→ a piece of sourdough toast with butter + flaky salt\n\nthe kind of morning you don't post about because you're inside it.\n\nWilla's Original: organic whole oats, filtered water, vanilla, sea salt. 4 ingredients. (the carton already knew.) 💛\n\nshhh… the slow one.",
-    hashtags:["#willasoatmilk","#longweekend","#slowmorning","#morningroutine","#wholeoat","#organic","#cleanlabel","#breakfast","#icedcoffee","#realfood"],
-    visual:"Soft late-morning daylight (NOT specifically 'Saturday' — a Tuesday-that-feels-like-Sunday vibe). Hands pour Willa's Original over cold espresso + ice in a clear glass. Cut to a thin-sliced peach on the cutting board. Cut to sourdough toast with butter + flaky salt on a plate. Slow, intentional cuts — no rush. Carton sits on the counter throughout. End on hands wrapping around the iced glass on the counter. NO on-camera face. Letterboxed (cinematic feel).",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"Soft morning light on kitchen counter. Willa's Original carton beside the espresso machine. Text overlay: 'a long-weekend pour.'"},
-      {scene:"POUR",time:"3-7s",action:"Hands pour Willa's Original over cold espresso + ice in clear glass. Slow, intentional. Text: 'no plan.'"},
-      {scene:"BUILD",time:"7-12s",action:"Cut to peach slicing on cutting board, then sourdough toast with butter + flaky salt on plate. Text: 'no recipe. just hands.'"},
-      {scene:"END CARD",time:"12-16s",action:"Hands wrap around the iced glass on the counter. Stinger: 'Willa's Original. 4 ingredients. shhh… 🌾' (BS-1)"}
-    ],
-    audio:"Bleachers MAY 22 self-titled album track as audio bed (suggested: any mid-tempo track, soft-instrumental opening). Don't name the album in copy or hashtags. Pattern 02.",
+    audio:"Soft, warm, slightly nostalgic acoustic / lo-fi morning sound — low, family-kitchen ambient. Trending gentle audio is fine; keep it tender, not comedic. Natural pour + room tone layered under.",
     duration:"14-16 seconds",
-    cta:{soft:"save the morning 💛",medium:"find Willa's Original at Sprouts",strong:"shop Willa's Original"},
-    benefitShorthandId:"BS-1"
+    cta:{soft:"what's the one thing your littlest will actually finish all summer? 👇", medium:"the Kids carton lives in the fridge door now — grab it for the littlest one.", strong:"keep Willa's Kids stocked for summer — the cup they'll actually finish."},
+    benefitShorthandId:null
   },
   {
-    id:"MAY25-IG-R4",
-    platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Multi",
-    timing:"Fri May 29 · 6pm", priority:"HIGH",
-    concept:"\"summer dinner with the four people you actually want at the table.\" — Four Seasons S2 tonal-stitch (no show name-check)",
+    id:"JUN05-IG-R4",
+    platform:"IG Reel",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Kids",
+    dnaPattern:"mom-activist",
+    timing:"Fri Jun 5 · 12pm",
+    priority:"HIGH",
+    rideNow:"false",
+    concept:"\"the carton that passed your audit before you flipped it\" — the two-second clean panel",
     intel:[
-      {type:"PULSE",text:"The Four Seasons S2 premieres Netflix THU MAY 28 (CP-8) — Tina Fey + Steve Carell + Will Forte + Colman Domingo adult-friendship summer comedy. Audience-coded for Willa's parent demo. Friday MAY 29 evening = 24 hours after premiere, perfect social-cycle peak. Don't name the show — tonal stitch only."},
-      {type:"AUDIENCE",text:"Pattern 02 World-Context Tie-In. Partake Foods muse (parent-first warmth) + Cup of Jo. Twilight dinner-table staging, plates being cleared, hands on table — laughter implied, no faces. Pour Willa's Original into espresso as the after-dinner moment."},
-      {type:"COMPETITOR",text:"Internal only — adult-friendship dinner-party content is white space for plant milks. No competitor brand has linked Willa's-audience-coded streaming TV moments to dinner-table content. Patagonia + Partake gravity."}
+      {type:"TREND", text:"Label-literacy parenting has gone weekly-newsletter mainstream — We Are Girls Who Eat published its non-toxic living roundup #42 on May 25, 2026, a recurring ingredient-audit ritual moms subscribe to, not a one-off scare (ref T-4). The audience reads panels every week by habit — speak to the standing ritual, not the fear."},
+      {type:"AUDIENCE", text:"The weekly-audit mom muse: she already flips the carton before it hits the cart, every single trip. She doesn't want to be scared, she wants to be fast. The win is a panel she can clear in two seconds — top-9 allergen-free, Yuka 100, DHA — so the audit ends in a yes and earns a permanent seat on her list. Mom-activist DNA = we hand her the receipts and let her decide; brand 'we', never first-person mom."},
+      {type:"COMPETITOR", text:"Internal only: the category sells on a long deck (ref C-2) — the backdrop for why a fast clean scan matters. This brief stays on OUR Kids panel and never names or contrasts a competitor on camera."}
     ],
     hooks:[
-      {text:"summer dinner with the four people you actually want at the table.",recommended:true},
-      {text:"the long-weekend dinner. the after-dinner pour. the friends who showed up.",recommended:false},
-      {text:"four seasons, four ingredients, four real friends.",recommended:false}
+      {text:"the carton that passed your audit before you even flipped it. watch.", recommended:true},
+      {text:"Yuka 100. top-9 allergen-free. DHA. 8g protein. the flip takes two seconds — and it wins.", recommended:false},
+      {text:"some panels you squint at. this one you just nod at.", recommended:false}
     ],
-    caption:"summer dinner with the four people you actually want at the table. 🌲\n\nthe long-weekend dinner. the after-dinner coffee. the friends who showed up.\n\nafter-dinner pour:\n→ a small cup of espresso, hot\n→ Willa's Original drizzled in for cream\n→ no sugar needed (the oats handle the sweetness)\n\nWilla's Original: organic whole oats, filtered water, vanilla, sea salt. 4 ingredients. the same kind of small set of essentials that makes a dinner table work.\n\nshhh… the four that matter. 🌾",
-    hashtags:["#summerdinner","#afterhours","#willasoatmilk","#icedcoffee","#fouringredients","#wholeoat","#organic","#longweekend","#realfood","#willaskitchen"],
-    visual:"Twilight dinner table on a back patio or kitchen. Plates being cleared. Espresso machine running on the counter. Hands pour Willa's Original into a small cup of espresso (cream swirl visible). Cut to two pairs of hands on the table — laughter implied, no faces visible. Soft golden-hour light. End on the cup of coffee + the Willa's Original carton beside it. NO on-camera face.",
+    caption:"the read you already do in the aisle — finished before you reach checkout. the Willa's Kids panel, in full: top-9 allergen-free, Yuka 100, DHA for growing brains, 8g protein. no rapeseed, no gums, no mystery stabilizers. we built the panel so the answer is fast. 🥛",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#cleanlabel",
+      "#kidsnutrition",
+      "#allergenfriendly",
+      "#momsoftiktok",
+      "#dairyfreekids",
+      "#panelcheck"
+    ],
+    visual:"Vertical 9:16, bright clean kitchen-counter light. Open on a hand flipping a Willa's Kids carton to the back panel — the camera catches the panel and STAYS on it, no squinting needed because it's genuinely readable. Kinetic text counts '1...2...' as tap-highlights animate over each proof point (top-9 allergen-free → Yuka 100 → DHA → 8g protein → no seed oils / no gums). Energy is triumphant, not anxious — the punchline is that this panel WINS, not that others fail. Warm, with-a-wink tone throughout. End on the carton next to a poured glass, kid's hand reaching in frame (implied, no face needed). Brand 'we' voiceover — not first-person mom.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"Twilight on back-patio dinner table. Plates being cleared. Text overlay: 'summer dinner with the four people you actually want at the table.'"},
-      {scene:"POUR",time:"3-7s",action:"Espresso machine on the counter. Willa's Original drizzled into the espresso — cream swirl visible. Text: 'the after-dinner pour.'"},
-      {scene:"MOMENT",time:"7-11s",action:"Two pairs of hands on the dinner table, laughter implied. Carton + cup beside the plates. Text: '4 ingredients. 4 people. summer dinner.'"},
-      {scene:"END CARD",time:"11-15s",action:"Coffee cup on the table beside the carton, golden-hour light. Stinger: 'Willa's Original. 4 ingredients. shhh… 🌾' (BS-3)"}
+      {scene:"HOOK", time:"0-3s", action:"Hand flips Willa's Kids carton to the back panel. Camera holds steady on the panel — it's readable. VO/text: 'the carton that already passed your audit before you flipped it.'"},
+      {scene:"BUILD", time:"3-8s", action:"Kinetic text counts '1...2...' as tap-highlights pop over each line: top-9 allergen-free · Yuka 100 · DHA · 8g protein."},
+      {scene:"REVEAL", time:"8-13s", action:"Slow pan across the short, clean ingredient list. Text: 'no seed oils. no gums. no mystery stabilizers.' VO: 'the audit you already do in the aisle — already done.'"},
+      {scene:"END CARD", time:"13-15s", action:"Willa's Kids carton beside a poured glass, small hand reaching in. End text: 'the flip that wins.' Logo + Willa's Kids."}
     ],
-    audio:"Warm jazz instrumental bed (mid-tempo, summer-evening tone). Soft ambient dinner sounds (cutlery, faint laughter). No VO.",
+    audio:"Low-key upbeat lo-fi kitchen groove, soft and clean; satisfying UI 'tick' SFX synced to each panel tap-highlight to sell the two-second scan.",
     duration:"14-16 seconds",
-    cta:{soft:"save for the long weekend 🌲",medium:"shop Willa's Original",strong:"find Willa's at Sprouts + Whole Foods"},
-    benefitShorthandId:"BS-3"
+    cta:{soft:"flip the Willa's Kids carton — the panel reads fast on purpose.", medium:"next aisle trip, see how quickly this one clears your check.", strong:"grab Willa's Kids — the audit is already done."},
+    benefitShorthandId:"null"
   },
   {
-    id:"MAY25-TT-4",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
-    timing:"Fri May 29 · 7pm", priority:"HIGH",
-    concept:"\"what food is supposed to look like.\" — AI Food meme reveal with Willa's real-food payoff",
+    id:"JUN05-TT-5",
+    platform:"TikTok",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Chocolate",
+    dnaPattern:"viral-recipe-remix",
+    timing:"Sat Jun 6 · 10am",
+    priority:"STANDARD",
+    rideNow:"false",
+    concept:"\"the scrape heard round the freezer\" — real cacao, five ingredients, sound on",
     intel:[
-      {type:"PULSE",text:"'AI Food' exploding-burrito meme is the absurdist visual format eating TikTok MAY 2026 (CP-6) — per Turrboo trend tracker. Green-screen + reaction edit format. Willa's plays the real-food reveal as the punchline answer."},
-      {type:"AUDIENCE",text:"Pattern 05 Format-as-Virality + Pattern 04 Taboo-as-Normal (real food as the unexpected answer). Olipop + Omsom muse (cheeky design-wit). Hands + Willa's Original + oat groat as the calm-quiet reveal. Subvert the AI-food gross-out."},
-      {type:"COMPETITOR",text:"Internal only — meme-payload DNA is the biggest documented gap from past performance. Willa's needs ≥1 meme-payload per week per CLAUDE.md DNA distribution rule."}
+      {type:"PULSE", text:"Frozen-fruit \"clusters\" are the no-recipe recipe of the summer — Canadian Grocer's May 28, 2026 viral-trends roundup names them (and yogurt tiramisu) as the food formats actually moving on TikTok right now (ref CP-1, ref T-6). It's the clean, dairy-free-friendly, non-matcha recipe wave — and a Chocolate-oat-milk frozen treat slots straight into it with a satisfying scrape/snap."},
+      {type:"AUDIENCE", text:"This is the 'I want the satisfying dessert video AND a snack I'd actually give my kid' crowd — the muse who saves recipe ASMR and reads the panel before buying. The texture/sound earns the watch; '5 ingredients, real cacao' earns the save and the screenshot. Benefit-first: lead with the most satisfying frozen treat of the summer, let clean be the quiet flex."},
+      {type:"COMPETITOR", text:"Internal only: while the category debate this week is what to AVOID, Chocolate plays offense as the indulgent-remade-clean SKU. Keep this on the delicious beat — do not turn it into a transparency lecture; that's Original's job. No named-brand contrast."}
     ],
     hooks:[
-      {text:"what food is supposed to look like.",recommended:true},
-      {text:"the burrito exploded. the carton stayed clean.",recommended:false},
-      {text:"AI food is having a moment. real food is having a millennium.",recommended:false}
+      {text:"let's make Frozen Chocolate Fudge (dairy-free!)", recommended:true},
+      {text:"i'm not saying this scrape is the best sound of your summer. but i'm not NOT saying it.", recommended:false},
+      {text:"the frozen treat you'd let your kid lick the spoon of — and so would the panel.", recommended:false}
     ],
-    caption:"what food is supposed to look like. 🌯➡️🌾\n\n(the burrito exploded. the carton stayed clean.)\n\nthe AI food meme is everywhere — burritos exploding, sandwiches floating, salad bowls multiplying. funny. weird. fake.\n\nthen the real thing.\n\nWilla's Original — organic whole oats, filtered water, vanilla, sea salt. that's it. nothing engineered, nothing animated. just 4 ingredients you can grow.\n\nshhh… real food is the punchline. 💛",
-    hashtags:["#aifood","#realfood","#willasoatmilk","#fouringredients","#organic","#wholeoat","#cleanlabel","#plantbased","#foodtok","#willaskitchen"],
-    visual:"First 4-5 seconds: green-screen AI-Food exploding-burrito meme clip (chaos, animated fillings). Hard cut to clean overhead shot: hands pour Willa's Original into a glass + single whole oat groat lands beside it on the wood counter. Soft morning light. Real-food calm-quiet. NO on-camera face. Pattern 05 ride + Pattern 04 calm reveal.",
+    caption:"The heat had us craving chocolate that doesn't melt on you! 🍫☀️ This no-churn frozen fudge is the most satisfying treat of the summer, and the scrape alone is worth the post.\n\nWilla's Chocolate Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, creamy taste that's genuinely indulgent for being dairy-free — real cacao, coconut sugar, nothing mystery. 🥛 It's a Good Food Awards winner for a reason.\n\nIngredients:\n- 1 carton Willa's Chocolate Organic Oat Milk\n- 2 tbsp cacao powder\n- 1 pinch sea salt\n- 1 drizzle maple syrup\n- 1 spoonful coconut cream (to swirl)\n\nWhisk it all together, pour into a loaf pan, freeze, then scrape. That's the recipe. That's the post. Made for the spoon AND the spoon-licker. Save it for the next hot day — you'll be back. 🍫",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#frozentreat",
+      "#asmrfood",
+      "#chocolatelovers",
+      "#dairyfree",
+      "#cleanlabel",
+      "#summerdessert",
+      "#nochurn",
+      "#5ingredients"
+    ],
+    visual:"Tight, glossy overhead and macro food cinematography — the whole brief lives on texture and sound. Warm summer kitchen light, marble or light-wood surface, the Willa's Chocolate carton visible but never hero-blocking the bowl. Every pour, whisk, and freeze beat is shot close enough to hear. The payoff is the scrape: a spoon or scooper dragging across the set chocolate frozen fudge, curling a glossy ribbon up the edge of the loaf pan — that single shot is the reason this exists, so frame it like the money shot it is. Color graded rich and edible (deep cacao brown, the green Willa's accent), captions clean and lowercase-leaning on screen. No candy, no sprinkles-as-product — the format is borrowed, the treat is ours.",
     script:[
-      {scene:"HOOK",time:"0-3s",action:"AI Food exploding burrito meme green-screen (chaos, animated fillings flying). Text overlay: 'AI food is having a moment.'"},
-      {scene:"HARD CUT",time:"3-6s",action:"Clean overhead shot on wood counter — Willa's Original carton, glass, single whole oat groat. Text: 'real food is having a millennium.'"},
-      {scene:"POUR",time:"6-10s",action:"Hands pour Willa's Original into the glass. Soft swirl. Text: 'organic whole oats. filtered water. vanilla. sea salt.'"},
-      {scene:"END CARD",time:"10-13s",action:"Glass + carton + oat groat on counter. Stinger: 'what food is supposed to look like. shhh… 🌾' (BS-1)"}
+      {scene:"HOOK", time:"0-3s", action:"Macro of the spoon already mid-scrape, curling one glossy ribbon of frozen chocolate fudge — lead with the payoff. On-screen text: \"let's make Frozen Chocolate Fudge (dairy-free!)\". Willa's Chocolate carton visible at the edge of the warm, clean kitchen surface."},
+      {scene:"BUILD", time:"3-9s", action:"Quick satisfying ASMR sequence, hands in frame: pour Willa's Chocolate oat milk into the bowl (glug), spoon in cacao powder (soft tap), pinch of sea salt, maple drizzle (slow ribbon), whisk (whirr). Each ingredient flashes a tiny lowercase on-screen label as it lands. Pour into a loaf pan."},
+      {scene:"REVEAL", time:"9-13s", action:"Hard cut to the frozen, set fudge straight from the freezer. The big scrape: drag the scooper across the surface, curl a thick glossy ribbon. Hold the sound. On-screen text: 'real cacao. coconut sugar. that's it.'"},
+      {scene:"END CARD", time:"13-15s", action:"Scoop landing in a bowl, carton beside it. End card text: 'Willa's Chocolate — Good Food Awards winner. 5 ingredients. made for the spoon-licker.' Small CTA: 'save it for the next hot day.'"}
     ],
-    audio:"AI Food meme native audio (whatever's trending with the format). Transition to soft instrumental bed for the real-food cut. Brand-voice VO: 'real food is the punchline.'",
-    duration:"12-14 seconds",
-    cta:{soft:"tag a friend who needs real food 🌾",medium:"shop Willa's Original",strong:"find Willa's at Target"},
-    benefitShorthandId:"BS-1"
-  },
-  {
-    id:"MAY25-IG-F1",
-    platform:"IG Feed", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", flavor:"Original",
-    timing:"Tue May 26 · 6pm", priority:"HIGH",
-    concept:"\"the state-by-state food chemical map just dropped. willa's is the carton already on the right side.\" — label-literacy framework carousel",
-    intel:[
-      {type:"TREND",text:"State-by-state food chemical regulation is the parent-shareable framing this season — dyes, glyphosate, BVO, propylparaben, titanium dioxide all being legislated state-by-state. Willa's clean-deck-by-default + Detox Project cert + USDA Organic stack is on the right side of every line."},
-      {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority on a noisy topic) + Pattern 12 Carousel. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them posture). 6-card carousel format. Cert stack receipts at the end."},
-      {type:"COMPETITOR",text:"Internal only — state-by-state food chemical regulation is the parent-network conversation this season. Willa's cert stack (Detox Project + USDA Organic + WBENC + Yuka 100) is the structural advantage on the right side of every state's line."}
-    ],
-    hooks:[
-      {text:"the state-by-state food chemical map just dropped.",recommended:true},
-      {text:"50 states. one carton already on the right side.",recommended:false},
-      {text:"the receipts are now a map. willa's is on it.",recommended:false}
-    ],
-    caption:"the state-by-state food chemical map just dropped. 🗺️\n\n(Willa's is the carton already on the right side.)\n\na new interactive map this month shows which states have banned which food chemicals — dyes, glyphosate, BVO, propylparaben, titanium dioxide. parents are sharing it. school nurses are sharing it.\n\nhere's what's NOT in Willa's:\n→ no synthetic dyes (red 40, yellow 5, etc. — none)\n→ no glyphosate (certified glyphosate-free by The Detox Project, every lot)\n→ no BVO, no propylparaben, no titanium dioxide\n→ no rapeseed, no canola, no gums, no stabilizers, no syrup\n\nwhat IS in Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the whole carton.\n\nshhh… the receipts are now a map. 🌾",
-    hashtags:["#willasoatmilk","#cleanlabel","#organic","#glyphosatefree","#detoxproject","#nodyes","#realfood","#wholeoat","#motherfounded","#wbenc"],
-    visual:"6-card Instagram Feed carousel. Card 1: BOLD type-led card. 'state-by-state food chemical regulation is the new map.' Subline: 'Willa's is the carton already on the right side.' (no image, typography on cream background) | Card 2: Stylized US map (Willa's-branded) with states highlighted. Text: '5+ states have banned synthetic dyes. more are coming.' | Card 3: Willa's Original carton centered. Text: 'what's NOT in this carton: 0 synthetic dyes · 0 glyphosate · 0 BVO · 0 rapeseed · 0 gums · 0 syrup.' | Card 4: Close-up of back-of-pack ingredient list. Text: 'organic whole grain oats · filtered water · organic vanilla extract · sea salt.' | Card 5: Cert-stack visual — USDA Organic + Detox Project + Non-GMO + WBENC + Yuka 100/100 Kids + Bobby Approved + Good Food Awards. | Card 6: Stinger card. 'the receipts are the moat. shhh… 🌾'",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save the carousel 🗺️",medium:"read the label",strong:"shop Willa's Original"},
-    benefitShorthandId:"BS-3"
-  },
-  {
-    id:"MAY25-IG-R5",
-    platform:"IG Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
-    timing:"Wed May 27 · 12pm", priority:"HIGH",
-    concept:"\"four certs that don't fit in a marketing line.\" — Willa's-first cert reveal, founder authority",
-    intel:[
-      {type:"COMPETITOR",text:"Engine context only — Elmhurst 1925 Clean Protein just went nationwide at Sprouts (C-1, BevNET MAY 18 + Dairy Foods MAY 21). Closest peer goes direct at Willa's positioning at primary retailer. NEVER name in consumer copy. Drives the 'show the cert moat' play this week."},
-      {type:"AUDIENCE",text:"Pattern 06 Founder Humanization + Pattern 04 Taboo-as-Normal. Patagonia muse (activist gravity) + Kiki Milk (us-vs-them confidence). Christina on-camera per reserved category. Calm-authority tone, no preach."},
-      {type:"PULSE",text:"Reinforces the 'four certs you can't fake' brand frame as competitive moat narrative — paired with Yuka 100/100 (CP-7) and the state-by-state food chemical regulation framing as proof points landing this same week."}
-    ],
-    hooks:[
-      {text:"four certs that don't fit in a marketing line.",recommended:true},
-      {text:"organic + glyphosate-free + WBENC + mother-founded. (the four nobody can fake on a press release.)",recommended:false},
-      {text:"the back of the carton has more proof than the front.",recommended:false}
-    ],
-    caption:"four certs that don't fit in a marketing line. 🛡️\n\n(clean ingredient decks are now the floor. these four are the bar.)\n\nwhat's behind every Willa's carton:\n\n→ USDA Organic (every drop, every batch)\n→ Detox Project Glyphosate-Free (we test every lot)\n→ WBENC mother-founded (the kind of certification you earn before you launch)\n→ Yuka 100/100 Kids (the app the audience already uses)\n\nthe deck is on the carton. the certs are behind it. neither can be faked.\n\nshhh… the back panel does the talking. 💛",
-    hashtags:["#willasoatmilk","#cleanlabel","#organic","#glyphosatefree","#wbenc","#motherfounded","#yuka100","#detoxproject","#cleanstack","#motheroftiktok"],
-    visual:"Warm-toned kitchen, midday light. Christina at the counter holding Willa's Original carton. Cuts to close-up of each cert badge (USDA Organic + Detox Project + WBENC + Yuka 100 visible on carton or as overlay). Christina to camera, calm-authority tone. End on the carton on the counter beside a glass of poured Willa's.",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"Christina at the counter holding Willa's Original carton. Text overlay: 'four certs that don't fit in a marketing line.'"},
-      {scene:"CERT REVEAL",time:"3-8s",action:"Close-ups in succession of each cert badge — USDA Organic, Detox Project Glyphosate-Free, WBENC mother-founded, Yuka 100/100 Kids. Text overlay each: 'organic. glyphosate-free. WBENC. yuka 100.'"},
-      {scene:"FOUNDER POV",time:"8-12s",action:"Christina to camera: 'clean ingredient decks are the floor now. these four are the bar.'"},
-      {scene:"END CARD",time:"12-15s",action:"Carton on counter beside glass. Stinger: 'the back panel does the talking. shhh… 🌾' (BS-3)"}
-    ],
-    audio:"Founder voiceover (Christina on camera). Soft instrumental bed.",
+    audio:"Trending ASMR-forward food sound bed kept low so the real captured foley (pour, whisk, scrape) sits on top — the scrape is the hook, don't bury it under music. Avoid the Dot Cake's specific audio; use the format, not the track.",
     duration:"14-16 seconds",
-    cta:{soft:"save the certs 🛡️",medium:"read the back of the carton",strong:"shop Willa's Original at Sprouts"},
-    benefitShorthandId:"BS-3"
+    cta:{soft:"save this for the next hot day.", medium:"five ingredients — screenshot the recipe and make it this weekend.", strong:"grab a carton of Willa's Chocolate and make it before the heat wave hits."},
+    benefitShorthandId:"null"
   },
   {
-    id:"MAY25-IG-F2",
-    platform:"IG Feed", pillar:"PARENTING", pillarColor:"#9E652E", flavor:"Kids",
-    timing:"Thu May 28 · 12pm", priority:"HIGH",
-    concept:"\"school lunch just got harder for everyone else. (willa's kids was built for the rules already.)\" — back-to-school parent-prep carousel",
+    id:"JUN06-PIN-1",
+    platform:"Pinterest",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"viral-recipe-remix",
+    timing:"Sat Jun 6 · 12pm",
+    priority:"STANDARD",
+    rideNow:"false",
+    concept:"\"the cold drink as clean as it looks\" — four-ingredient iced matcha, save it",
     intel:[
-      {type:"TREND",text:"State-by-state pressure on what kids eat at school is structural now — multiple state legislatures have moved on UPF-in-schools bans, synthetic dye restrictions, and bread testing. Pre-back-to-school content window opens now. Willa's Kids was structurally built for the rules."},
-      {type:"AUDIENCE",text:"Pattern 04 Taboo-as-Normal (calm authority) + Pattern 12 Carousel. Partake Foods muse (parent-first warmth) + Lovebird (activist parent-lane). Real toddler lunchbox staging — passes 'would a parent screenshot this and feel yes that's a lunch' real-life test (POV Discipline #8)."},
-      {type:"COMPETITOR",text:"Internal only — no other kids RTD oat milk holds top-9 allergen-free + 8g protein + DHA from algae oil + Yuka 100. Willa's Kids was structurally built for the rules states are now writing."}
+      {type:"PULSE", text:"aespa's LEMONADE landed on New Music Friday May 29, 2026 (NPR), and 'lemonade' is the word doing the summer-beverage work right now (ref CP-3). We borrow the lemonade-of-summer energy as cold-drink adjacency — never a name-drop — and anchor it to a Willa's Original iced drink built to save and re-make all season, crowned with the viral dairy-free cloud float (ref CP-9)."},
+      {type:"AUDIENCE", text:"Pinterest's recipe-saver is in June summer-planning mode: she's screenshotting iced drinks she actually intends to make. The viral-recipe-remix DNA wins because the base is a clean plant-milk swap and Original's 4-ingredient, 1g-sugar panel means the drink tastes indulgent without the seed oils, gums, or added sugar she's started reading labels for. The pin is a keeper — exactly the save-and-make behavior Pinterest rewards."},
+      {type:"COMPETITOR", text:"Internal only: the category sells on a long deck (ref C-2 context) — Original is a quiet flex even in a delicious-first recipe pin; the four-ingredient base does the work without us saying a word. Do NOT name or contrast any brand on a recipe surface. Cloud float is built dairy-free (coconut cream + Forager yogurt), never cottage cheese or any dairy."}
     ],
     hooks:[
-      {text:"school lunch just got harder for everyone else.",recommended:true},
-      {text:"Willa's Kids was built for the school-lunch rules before they wrote them.",recommended:false},
-      {text:"yuka 100. 8g protein. no top-9 allergens. that's the lunchbox carton.",recommended:false}
+      {text:"let's make a Strawberry Cloud Iced Matcha (dairy-free!)", recommended:true},
+      {text:"summer's best iced matcha, on a base of four ingredients you can say out loud", recommended:false},
+      {text:"prettiest drink of the season, and the milk underneath is just four things", recommended:false}
     ],
-    caption:"school lunch just got harder for everyone else. 📚\n\n(Willa's Kids was built for the rules before they wrote them.)\n\nstates keep tightening the rules on what kids can eat at school — synthetic dye bans, UPF restrictions, allergen disclosures. the carton your school nurse already wants to see in the lunchbox:\n\n→ 100/100 yuka score (the only kids drink to hit it)\n→ 8g protein, 3g fiber, DHA omega-3 (from algae oil)\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ bobby approved\n→ no synthetic dyes (none. ever.)\n\nWilla's Kids is the lunchbox drink built before the school-lunch rules caught up.\n\nshhh… we built it because parents asked us to. 💛",
-    hashtags:["#willaskids","#schoollunch","#backtoschool","#yuka100","#allergenfree","#cleanlabel","#kidsdrink","#momtok","#healthykids","#nodyes"],
-    visual:"6-card Instagram Feed carousel. Card 1: BOLD type-led card on cream. 'school lunch just got harder for everyone else.' Subline: 'Willa's Kids was built for the rules before they wrote them.' | Card 2: Real lunchbox staged with realistic toddler lunch: half a sandwich (turkey + Violife provolone slice OR Good Plants dairy-free cheese), a clementine, baby carrots, a Willa's Kids carton in the side slot. Text: 'what a school-lunch-ready carton looks like.' | Card 3: Willa's Kids carton hero shot. Text: '100/100 yuka score. top-9 allergen-free. 8g protein. DHA. no synthetic dyes.' | Card 4: State-by-state visual showing which states have UPF-in-school restrictions kicking in (AZ, CA, FL referenced). Text: 'states keep tightening the rules. Willa's was already there.' | Card 5: Cert-stack visual specific to Kids — Yuka 100/100, Bobby Approved, Top-9 Allergen-Free, USDA Organic. | Card 6: Stinger card. 'we built it because parents asked us to. shhh… 🌾'",
+    caption:"Summer's whole job is one cold drink that actually delivers — and this is it! ☀️🍓 Iced matcha on a Willa's Original base with a frothy dairy-free strawberry cloud on top.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 The base is four ingredients and the whole panel fits in one breath.\n\nIngredients:\n- 1 cup Willa's Organic Oat Milk\n- 2 tsp matcha\n- splash of hot water (to whisk the matcha)\n- ice\n- 1 cup frozen strawberries\n- 1 tsp maple syrup\n\nWhisk the matcha, pour Willa's over ice, blend the cloud (frozen strawberries + a splash of Willa's + a touch of maple), spoon it on top. Save this one for the whole season. 🍓",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#icedmatcha",
+      "#strawberrymatcha",
+      "#cleanlabel",
+      "#summerdrinks",
+      "#matchaathome",
+      "#dairyfree",
+      "#1gsugar"
+    ],
+    visual:"Vertical pin (2:3), bright and airy summer-cafe styling with lots of natural light, condensation on the glass, a sprig of fresh strawberry as garnish. Top: a tall clear glass of vibrant green iced matcha over ice with a soft pink frothy strawberry cloud crowning the top — the hero shot, slightly overhead 3/4 angle. Bold serif/clean-sans overlay reading \"iced matcha worth the cafe trip — at home.\" Middle: the four real ingredients of Willa's Original laid out flat and labeled in small clean type (organic oats · filtered water · organic vanilla · sea salt) beside the carton, plus a tiny \"1g sugar\" chip in the #75C596 green. Bottom: the finished drink mid-pour or with the spoon dragging the strawberry cloud, and a small \"full recipe + dairy-free strawberry cloud below\" tag. Warm, screenshot-able, keeper energy — feels like a saved recipe, not an ad. Strawberry cloud is built on an oat/coconut base, never cottage cheese or any dairy.",
     script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save for back-to-school prep 📌",medium:"shop Willa's Kids",strong:"find Willa's Kids at Sprouts + Whole Foods"},
-    benefitShorthandId:"BS-3"
+    audio:"null",
+    duration:"null",
+    cta:{soft:"save this one for the whole season", medium:"tap for the full recipe + the dairy-free strawberry cloud", strong:"make it this weekend — Willa's Original is the base"},
+    benefitShorthandId:"null"
   },
   {
-    id:"MAY25-TT-5",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Chocolate",
-    timing:"Wed May 27 · 7pm", priority:"STANDARD",
-    concept:"\"the chocolate milk you wish you grew up on. (still 5 ingredients.)\" — chocolate evergreen indulgent-remade-clean",
+    id:"JUN07-PIN-2",
+    platform:"Pinterest",
+    pillar:"PARENTING",
+    pillarColor:"#9E652E",
+    flavor:"Kids",
+    dnaPattern:"on-pack-checklist",
+    timing:"Sun Jun 7 · 12pm",
+    priority:"STANDARD",
+    rideNow:"false",
+    concept:"\"the snack station that already passed the ingredient check\" — save-it panel cheat sheet",
     intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — Willa's Chocolate flavor-hero content. Pattern 10 Wordplay. Fishwife muse (design-wit) + Omsom (ingredient personality). Lead with the official Chocolate tagline (CLAUDE.md voice exemplar). Indulgent-remade-clean lane, Good Food Awards winner."},
-      {type:"COMPETITOR",text:"Internal only — Willa's Chocolate is the only oat-milk chocolate that's Good Food Awards Best Beverage winner. 11g sugar vs 24g+ in most kids' chocolate milks. Real cacao, not flavoring. Structural advantage in the indulgent-clean lane."},
-      {type:"PULSE",text:"Evergreen brief — no fresh-this-week signal anchor. Pinterest SEO + chocolate-content seasonality covers organic discovery. Pairs naturally with summer dessert content cycle."}
+      {type:"TREND", text:"Label-literacy parenting is now a weekly newsletter habit — We Are Girls Who Eat's non-toxic roundup #42 (May 25, 2026) is a recurring ingredient-audit ritual, not a scare post (ref T-4). The save-it Pinterest checklist is the static companion to that weekly habit — a panel cheat-sheet she pins once and re-uses all summer."},
+      {type:"AUDIENCE", text:"Label-auditing #momtok mom is home with kids for summer and pivoting to build-your-own snack stations. She wants the low-effort win that also passes her ingredient read. Pinterest is where she saves the station idea AND the panel cheat-sheet — one pin does both jobs and keeps working all season."},
+      {type:"COMPETITOR", text:"Internal-only: the category sells on a long ingredient deck (ref C-2); the Kids panel reads like the answer key. Pinterest's long shelf life means the checklist keeps working all summer; do not name brands — let the four-ingredient contrast carry it."}
     ],
     hooks:[
-      {text:"the chocolate milk you wish you grew up on.",recommended:true},
-      {text:"good food awards' best beverage. (the only chocolate milk we needed.)",recommended:false},
-      {text:"5 ingredients in the chocolate milk. (one of them is just cacao.)",recommended:false}
+      {text:"ten minutes of quiet, zero ingredient guilt — this is the snack station. save it.", recommended:true},
+      {text:"no rapeseed, no gums, no carrageenan — snack station: approved", recommended:false},
+      {text:"build the station, keep your sanity — the panel's already checked", recommended:false}
     ],
-    caption:"the chocolate milk you wish you grew up on. 🍫\n\n(still 5 ingredients. one of them is just cacao.)\n\nWilla's Chocolate is what happens when you make chocolate milk the way it should have been the whole time:\n\n→ filtered water\n→ organic whole grain oats\n→ organic coconut sugar\n→ organic cacao powder (real cacao, not flavoring)\n→ sea salt\n\nthat's the whole carton. 11g sugar (vs the 24g+ in most kids' chocolate milks). 5g protein. 3g fiber. Good Food Awards Best Beverage winner.\n\nshhh… your inner kid just got their carton back. 🌾",
-    hashtags:["#willaschocolate","#chocolatemilk","#goodfoodawards","#organic","#realcacao","#cleanlabel","#plantbased","#wholeoat","#realfood","#willaskitchen"],
-    visual:"Overhead on wood counter, warm afternoon light. Willa's Chocolate carton centered. Single ingredient visual: a small bowl of cacao powder, a single oat groat, a few flakes of sea salt staged beside the carton. Hands pour Willa's Chocolate into a clear glass — the deep-brown swirl visible. Letterboxed cinematic feel. NO on-camera face.",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"Overhead: Willa's Chocolate carton + ingredient cameo (cacao powder bowl, oat groat, sea salt). Text overlay: 'the chocolate milk you wish you grew up on.'"},
-      {scene:"INGREDIENT REVEAL",time:"3-7s",action:"Slow pan across each ingredient: 'filtered water. organic oats. organic coconut sugar. organic cacao. sea salt.'"},
-      {scene:"POUR",time:"7-10s",action:"Hands pour Willa's Chocolate into clear glass — deep-brown swirl. Text: '5 ingredients. 11g sugar. real cacao.'"},
-      {scene:"END CARD",time:"10-13s",action:"Glass + carton + Good Food Awards badge visible. Stinger: 'Good Food Awards best beverage. shhh… 🌾' (BS-4)"}
+    caption:"build-your-own Kids snack station, but make it actually clean. set out the bowls, pour the Willa's Kids, let them assemble — you already did the label-reading.\n\nhere's the two-second panel check we wish every carton passed:\n✓ no rapeseed, no canola\n✓ no gums or stabilizers\n✓ no carrageenan\n✓ no added sugar to chase flavor — just real ingredients\n✓ top-9 allergen-free + DHA + 8g protein, Yuka 100\n\nthe avoid-list making rounds this week? our Kids panel reads like the answer key. save this pin for the next \"what's actually in it\" deep-dive at the store. the drink that buys you ten minutes of quiet — and survives the ingredient audit. 🤍",
+    hashtags:[
+      "#willas",
+      "#willasoatmilk",
+      "#kidssnacks",
+      "#snackstation",
+      "#cleanlabel",
+      "#allergenfriendly",
+      "#momtok",
+      "#summersnacks",
+      "#readthelabel",
+      "#oatmilk"
     ],
-    audio:"Soft jazz-funk instrumental (warm + intentional). Brand-voice VO: 'the chocolate milk you wish you grew up on.'",
-    duration:"12-14 seconds",
-    cta:{soft:"save for the kids 🍫",medium:"shop Willa's Chocolate",strong:"find Willa's Chocolate at Whole Foods"},
-    benefitShorthandId:"BS-4"
-  },
-  {
-    id:"MAY25-PIN-2",
-    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Barista",
-    timing:"Tue May 26 · anytime", priority:"STANDARD",
-    concept:"\"iced latte without the math: just 3 things in the glass.\" — Barista evergreen Pinterest",
-    intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — iced coffee Pinterest SEO content. Pattern 10 Wordplay (text overlay). Graza muse (design-led). 3-ingredient simplicity is the share-engine. Willa's Barista cloud-pour visual is the hero shot."},
-      {type:"COMPETITOR",text:"Internal only — Pinterest SEO compounds organically on iced-coffee content. Willa's Barista clean-deck (no rapeseed, no gums) is the structural advantage. Cold-foam pour shot lives here all summer."},
-      {type:"PULSE",text:"Evergreen — no fresh signal anchor. Pinterest 'iced latte' search lane is durable + summer-seasonal."}
-    ],
-    hooks:[
-      {text:"iced latte without the math — 3 things in the glass.",recommended:true},
-      {text:"cold espresso. Willa's Barista. one ice cube. (the home-cafe edit.)",recommended:false},
-      {text:"the latte your local cafe charges $7 for. (in your kitchen, in 60 seconds.)",recommended:false}
-    ],
-    caption:"iced latte without the math. ☕\n\n3 things in the glass. 60 seconds.\n\n→ 1 shot espresso (or ½ cup strong cold brew), cold\n→ ½ cup Willa's Barista\n→ 1 large slow-melt ice cube\n\npour over the ice. let the foam settle. drink.\n\nWilla's Barista is built for this — organic whole oats, no rapeseed, no gums. pours like dairy, holds shape through the morning, no curdle, no bitter aftertaste.\n\nshhh… your local cafe charges $7. 🌾",
-    hashtags:["#willasbarista","#icedlatte","#homecafe","#icedcoffee","#oatmilkcoffee","#cleanlabel","#plantbased","#wholeoat","#summerdrink","#coffeetok"],
-    visual:"Vertical Pinterest pin (2:3). Overhead on white marble counter, soft window light. Tall clear glass with a single large ice cube + cold espresso poured. Willa's Barista pour mid-stream — cloud-foam swirl visible. Carton in corner (partly cropped). Type-led header overlaid: 'iced latte without the math: 3 things in the glass.' Pinterest-native composition.",
+    visual:"Vertical pin (2:3), warm earthy parenting palette anchored on #9E652E with cream background. Top third: a flat-lay snack-station scene — small bowls of berries, sliced fruit, oat clusters, and a glass of Willa's Kids being poured, kid-hands reaching in (implied, low-effort, lived-in kitchen). Middle: a clean white \"panel check\" card overlaid as a checklist with green checkmarks — \"no seed oils · no gums · no carrageenan · no added sugar to chase flavor · top-9 allergen-free · DHA · 8g protein · Yuka 100.\" Carton of Willa's Kids standing beside the checklist so the on-pack panel is legible. Bottom: headline text \"the snack station that already passed the ingredient check\" with a small \"save this pin\" cue. Keep type large and scannable for Pinterest crop; no competitor cartons in frame.",
     script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save the pour 📌",medium:"full recipe at willaskitchen.com",strong:"Willa's Barista — at Whole Foods"},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"MAY25-PIN-3",
-    platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Original",
-    timing:"Fri May 29 · anytime", priority:"STANDARD",
-    concept:"\"5-ingredient strawberry oat icebox cake — assemble, freeze, slice.\" — strawberry-season evergreen",
-    intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — strawberry-season-aligned Pinterest SEO content. Pattern 10 Wordplay (text-led). Fishwife muse (design-led personality). Different from past evergreen no-bake briefs (no-bake brownies were used MAY 18). Strawberry season is peaking, icebox cake format is fresh."},
-      {type:"COMPETITOR",text:"Internal only — strawberry season Pinterest SEO is durable summer lane. Willa's Original soaks the cracker layer cleanly (no separation, no gums to disrupt the layering)."},
-      {type:"PULSE",text:"Evergreen — pairs with strawberry-season peak (CP-1 Shaved Fruit, CP-2 rhubarb) without anchoring to a specific fresh signal."}
-    ],
-    hooks:[
-      {text:"5-ingredient strawberry oat icebox cake — assemble, freeze, slice.",recommended:true},
-      {text:"strawberry season meets oat cream. zero baking required.",recommended:false},
-      {text:"the dessert that does itself in the freezer overnight.",recommended:false}
-    ],
-    caption:"5-ingredient strawberry oat icebox cake. 🍓\n\n(assemble, freeze, slice. that's the whole recipe.)\n\nstrawberry season is peaking. this is the dessert your freezer makes overnight:\n\n→ 1 cup Willa's Original\n→ 1½ cups graham cracker crumbs (or oat-flour crumbs for gluten-free)\n→ ¼ cup maple syrup\n→ 2 cups fresh strawberries, sliced thin\n→ 1 cup whipped coconut cream (chilled)\n\nlayer in a loaf pan: cracker base soaked in Willa's Original + maple, then strawberries, then coconut cream. repeat 3 times. cover. freeze overnight. slice cold.\n\nWilla's Original in the layers: organic whole oats, filtered water, vanilla, sea salt. the icebox cake that tastes like summer and reads like a real-food recipe.\n\nshhh… save for sunday meal-prep. 🌾",
-    hashtags:["#willaskitchen","#strawberryseason","#iceboxcake","#willasoriginal","#organicoats","#summerdessert","#cleanlabel","#plantbased","#nobakedessert","#vegandessert"],
-    visual:"Vertical Pinterest pin (2:3). Overhead on white marble counter, golden daylight. Strawberry-and-cream-layered icebox cake sliced into 2-inch wedges, layers visible. Fresh strawberries scattered around the plate. Willa's Original carton + small bowl of coconut cream in corner (partly cropped). Serif typography header overlaid: '5-ingredient strawberry oat icebox cake — assemble, freeze, slice.' Pinterest-native composition.",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save the recipe 📌",medium:"full recipe at willaskitchen.com",strong:"Willa's Original — at Sprouts"},
-    benefitShorthandId:"BS-1"
-  },
-  {
-    id:"MAY25-TT-6",
-    platform:"TikTok", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Multi",
-    timing:"Sat May 30 · 10am", priority:"STANDARD",
-    concept:"\"saw at sprouts: the whole willa's wall.\" — at-shelf-moment evergreen",
-    intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — Sprouts at-shelf-spotting content (Willa's primary natural-channel retailer). Pattern 09 Aesthetic IRL Encounter. Ghia muse (aesthetic at-shelf). Real-shelf, no studio finish. Cinematic phone-pan across the 4 cartons."},
-      {type:"COMPETITOR",text:"Internal only — Sprouts is Willa's primary natural-channel retailer. The at-shelf moment plays evergreen — Willa's lives on the wall whether or not Sprouts has a new launch this week."},
-      {type:"PULSE",text:"Evergreen — at-shelf-spotting content compounds organically. Willa's lives on the wall whether or not there's a fresh retail news cycle."}
-    ],
-    hooks:[
-      {text:"saw at sprouts: the whole willa's wall.",recommended:true},
-      {text:"the natural-channel aisle where the carton already lives.",recommended:false},
-      {text:"4 flavors. one wall. real shelf, no studio.",recommended:false}
-    ],
-    caption:"saw at sprouts: the whole Willa's wall. 🛒\n\n(4 flavors. one shelf. real wall, no studio.)\n\nif you've been wondering where to find us — Willa's lives at Sprouts (most stores nationwide), Whole Foods, and Target.\n\nthe 4 cartons on the shelf:\n→ Willa's Original (the 4-ingredient classic)\n→ Willa's Barista (cold-foam pour, no rapeseed)\n→ Willa's Chocolate (Good Food Awards winner, real cacao)\n→ Willa's Kids (100/100 yuka, top-9 allergen-free)\n\nshhh… we'll keep showing up. 💛",
-    hashtags:["#willasoatmilk","#sprouts","#atshelf","#foundat","#motherfounded","#organic","#cleanlabel","#realfood","#plantbased","#grocerytok"],
-    visual:"Vertical TikTok (9:16). POV at Sprouts shelf — phone-held shot of the natural-milk aisle. Cinematic pan across the Willa's wall: Original, Barista, Chocolate, Kids cartons lined up. Hand reaches in, picks up one carton, turns it to show the back label. Real-shelf, no studio finish. Soft fluorescent grocery-aisle light. NO on-camera face.",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"POV at Sprouts shelf — phone pans across the Willa's wall. Text overlay: 'saw at sprouts.'"},
-      {scene:"PAN",time:"3-7s",action:"Slow pan across Original, Barista, Chocolate, Kids cartons. Text: 'the whole Willa's wall.'"},
-      {scene:"PICKUP",time:"7-10s",action:"Hand reaches in, picks up a carton, turns to show back label. Text: '4 flavors. one shelf.'"},
-      {scene:"END CARD",time:"10-13s",action:"Carton in hand + Sprouts shelf behind. Stinger: 'real shelf, no studio. shhh… 💛'"}
-    ],
-    audio:"Ambient grocery-aisle sound. Soft instrumental bed underneath. No VO.",
-    duration:"12-14 seconds",
-    cta:{soft:"tag your sprouts 🛒",medium:"find Willa's at sprouts.com",strong:"shop Willa's at Sprouts"},
-    benefitShorthandId:"BS-3"
-  },
-  {
-    id:"MAY25-IG-F3",
-    platform:"IG Feed", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", flavor:"Original",
-    timing:"Sat May 30 · 6pm", priority:"STANDARD",
-    concept:"\"before clean label was a category, willa was just cooking.\" — heritage cert-stack carousel evergreen",
-    intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — Willa's heritage + cert-stack receipts content. Pattern 12 Carousel + Pattern 06 Founder/Team Humanization. Patagonia (gravity) + Partake (warmth) muse. 6-card heritage carousel format. Don't repeat 'willa was a real woman' framing (used MAY 4)."},
-      {type:"COMPETITOR",text:"Internal only — heritage-grandmother content is structurally Willa's-only. Willa was born 1921; brand launched 2021. The 'has always been here' framing is uncopyable for venture-backed peers."},
-      {type:"PULSE",text:"Evergreen — heritage carousel as durable brand-asset content. Pairs naturally with cert-stack proof points (Yuka, USDA, Detox Project, WBENC)."}
-    ],
-    hooks:[
-      {text:"before clean label was a category, willa was just cooking.",recommended:true},
-      {text:"the only celebrity endorsement on this carton is a grandmother.",recommended:false},
-      {text:"4 ingredients. 4 certs. 1 century of doing it this way.",recommended:false}
-    ],
-    caption:"before clean label was a category, willa was just cooking. 🌾\n\nwilla was born 1921. she cooked with real food because that's what she had. she made oatmeal a hundred years before pinterest got around to it.\n\nWilla's launched 2021 — and the rule was simple: build it the way she would have.\n\nwhat's on the carton:\n→ organic whole grain oats\n→ filtered water\n→ organic vanilla extract\n→ sea salt\n\nwhat's behind the carton:\n→ USDA Organic\n→ Detox Project Glyphosate-Free (we test every lot)\n→ WBENC mother-founded\n→ Yuka 100/100 Kids\n\nshhh… 4 ingredients, 4 certs, 100 years of doing it this way. 💛",
-    hashtags:["#willasoatmilk","#motherfounded","#wbenc","#grandmotherwilla","#heritage","#organic","#glyphosatefree","#cleanlabel","#realfood","#fouringredients"],
-    visual:"6-card Instagram Feed carousel. Card 1: Vintage black-and-white photo of grandmother Willa (1921-era kitchen if available, or stylized period image). Text: 'before clean label was a category, willa was just cooking.' | Card 2: Modern Willa's Original carton on cream background. Text: 'the carton built the way she would have.' | Card 3: Ingredient panel close-up: '4 ingredients. organic whole grain oats. filtered water. organic vanilla extract. sea salt.' | Card 4: USDA Organic + Detox Project Glyphosate-Free badges. Text: 'organic. tested every lot.' | Card 5: WBENC mother-founded badge + Yuka 100/100 Kids badge. Text: 'mother-founded. yuka 100 on kids.' | Card 6: Closing card. '4 ingredients. 4 certs. 100 years of doing it this way. shhh… 🌾'",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save the receipts 🌾",medium:"read the carton",strong:"shop Willa's Original"},
-    benefitShorthandId:"BS-3"
-  },
-  {
-    id:"MAY25-TT-7",
-    platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", flavor:"Kids",
-    timing:"Sun May 31 · 10am", priority:"STANDARD",
-    concept:"\"the carton you bought for the kids. (and steal for your iced coffee.)\" — Kids crossover evergreen relatable-confession",
-    intel:[
-      {type:"AUDIENCE",text:"EVERGREEN — Willa's Kids adult-crossover (per CLAUDE.md: Kids 'oddly blends and creates the best swirls' for adults). Pattern 03 Relatable Confession. Partake Foods muse (parent-first warmth). Cofounder-sister voice (NOT Christina per Voice POV #5 — Christina is not a mom)."},
-      {type:"COMPETITOR",text:"Internal only — Kids-as-adult-crossover is structural Willa's edge. The 8g protein + creamier mouthfeel + DHA blend cleanly in cold espresso. Scenarios kids-rejected oat milks can't claim."},
-      {type:"PULSE",text:"Evergreen — Kids-crossover relatable-confession is durable content. Don't repeat 'one carton, two generations' framing (used MAY 18 + MAY 4)."}
-    ],
-    hooks:[
-      {text:"the carton you bought for the kids. (and steal for your iced coffee.)",recommended:true},
-      {text:"willa's kids blends weirdly well in cold espresso. you didn't hear it from us.",recommended:false},
-      {text:"the swirl in your morning coffee is the carton in the fridge door.",recommended:false}
-    ],
-    caption:"the carton you bought for the kids. (and steal for your iced coffee.) 👀\n\nconfession: Willa's Kids weirdly blends the best in cold espresso. the swirl is genuinely better than Original (which we still love).\n\nit's the 8g of protein. it's the slightly creamier mouthfeel. it's the DHA. but mostly, it's that mom can pour the same carton into the kid's glass + her own iced coffee + nobody's mad.\n\n→ Willa's Kids: 100/100 yuka, 8g protein, top-9 allergen-free, DHA from algae oil, bobby approved\n→ 50% less sugar than dairy\n→ the swirl in your iced coffee is hidden in the fridge door\n\nshhh… your iced coffee is in the door labeled \"kids.\" 💛",
-    hashtags:["#willaskids","#momtok","#icedcoffee","#stealfromthekids","#kidsdrink","#100yuka","#toptier","#plantbased","#cleanlabel","#onecartontwo"],
-    visual:"Vertical TikTok (9:16). Real kitchen, real Sunday morning. Cofounder-sister (NOT Christina — per Voice POV rule, parenting content attributed to cofounder-sister) at the counter. Pours Willa's Kids into a small glass for her kid (face out of frame). Looks at the carton. Pours the SAME carton into her own iced coffee — cloud-swirl visible. Smirk to camera. Soft confessional energy. Real-kitchen, no studio finish.",
-    script:[
-      {scene:"HOOK",time:"0-3s",action:"Cofounder-sister at counter, Willa's Kids carton in hand. Text overlay: 'confession.'"},
-      {scene:"KIDS POUR",time:"3-6s",action:"Pour Willa's Kids into a small glass for a kid (face out of frame). Text: 'the carton i bought for the kids.'"},
-      {scene:"STEAL",time:"6-10s",action:"Same carton, pour into her own iced coffee — cloud-swirl visible. Smirk. Text: '(and steal for my iced coffee.)'"},
-      {scene:"END CARD",time:"10-13s",action:"Two glasses side by side — kid's milk + mom's iced latte, same carton between. Stinger: 'your iced coffee is in the door labeled kids. shhh… 🌾' (BS-3)"}
-    ],
-    audio:"Soft confessional VO from cofounder-sister: 'the carton i bought for the kids. and steal for my iced coffee.' Pattern 03 relatable confession.",
-    duration:"12-14 seconds",
-    cta:{soft:"tag a mom 👀",medium:"shop Willa's Kids",strong:"find Willa's Kids at Sprouts + Whole Foods"},
-    benefitShorthandId:"BS-3"
+    audio:"null",
+    duration:"null",
+    cta:{soft:"save this for your next snack-station setup", medium:"check your own carton against the list — then come find ours", strong:"grab Willa's Kids for the station that passes the audit"},
+    benefitShorthandId:"null"
   }
 ];
 
@@ -771,17 +837,14 @@ const AGENT_DETAILS = {
 
 // ─── What the engine decided this week (visible autonomy) ─
 const DECISIONS = [
-  {icon:"↑",title:"Promoted Yuka Kids 100/100 phone-scan Reel to BIG SWING (Tue May 26 12pm)",reason:"The Grocery Cart MAY 19 marked the Yuka backlash inflection — critics flag the app for moralizing food. Willa's Kids 100/100 holds up regardless of which side parents land on. Phone-scan POV format is universal-readable. $260 Meta Reels Ad queued for 72-hr saves lift.",agent:"composer"},
-  {icon:"↑",title:"Promoted tortilla cinnamon roll dairy-free swap to BIG SWING (Thu May 28 9am)",reason:"Tortilla cinnamon rolls are THE breakout viral recipe of MAY 2026 (GMA + ABC News + Parade) — millions of views. Willa's plays the dairy-free swap per no-dairy rule (Willa's Barista + coconut cream replaces heavy cream). Cloud-pour visual is the share engine. $240 TikTok Spark Ad queued.",agent:"composer"},
-  {icon:"↑",title:"Promoted sourdough rhubarb snack cake heritage pin to BIG SWING (Thu May 28 anytime)",reason:"Pinterest rhubarb +51% MAY 22 weekly report — heritage-coded summer ingredient. Willa's grandma-kitchen voice owns the lane. Pinterest planning audience is 7-10 days ahead; extended 10-day test window matches. $180 Pinterest Promoted Pin queued.",agent:"composer"},
-  {icon:"⚡",title:"Queued seed-oil-free Christina founder Reel as cultural-conversation response (Thu May 28 6pm)",reason:"STAT News MAY 22 anti-seed-oil fact-check recalibrates the wellness narrative. Willa's Original is already on the right side — the 4-ingredient deck does the work. Calm-receipts response, founder reserved-category appearance.",agent:"composer"},
-  {icon:"⚡",title:"Queued cert moat Christina reveal in response to Elmhurst Clean Protein nationwide launch (Wed May 27 12pm)",reason:"Elmhurst Clean Protein just went nationwide at Sprouts (BevNET MAY 18 + Dairy Foods MAY 21) — closest peer goes direct at Willa's positioning at primary retailer. Engine-only context, never named in copy. Drives the 'four certs that don't fit in a marketing line' cert moat Reel. Willa's moat = certs Elmhurst can't claim (organic + Detox Project + WBENC + Yuka 100).",agent:"composer"},
-  {icon:"×",title:"Killed all 11 MAY 18 Pulse entries from this week's set (no-repeat rule)",reason:"Past-month no-repeat strict — fibermaxxing oversaturated (used MAY 18 + MAY 11 + APR 27 + APR 20), Kevin Morby past, Memorial Day Weekend behind ship date by MON MAY 25, Mary Neilis used MAY 18, Colbert finale + The Bear S5 used MAY 18, cottage cheese oats used MAY 18 + APR 20, Pinterest fermentation used MAY 18, cloud-textured matcha used MAY 18, grandfluencers used MAY 18. Fresh ground: Shaved Fruit + rhubarb season + Bleachers + Four Seasons S2 + tortilla cinnamon rolls + Will-it-survive + AI Food + Yuka virality + seed-oil-free moment + That Lady Anna (verified evergreen, used as background).",agent:"editor"},
-  {icon:"↑",title:"Locked Christina-on-camera count at 2 (Christina Rule cap = 3, well under)",reason:"R2 seed-oil-free moment (founder-POV activist stance — reserved category) + R5 cert moat reveal (founder-POV reserved category). All other 16 briefs use hands+product+kitchen+text overlays OR cofounder-sister voice (TT-7). Within cap.",agent:"editor"},
-  {icon:"×",title:"Cut Cassidy Anderson + That Lady Anna + banana bread latte from CULTURAL_PULSE (freshness failures)",reason:"Brutal-honesty pass caught 3 stale signals: Cassidy Anderson video verified from October 2024 (NOT fresh MAY 2026), That Lady Anna viral peak was June 2024-2025 (durable not fresh), banana bread latte originated summer 2025 with Starbucks adopting FEB 3 2026 (peak behind us). Replaced with Shaved Fruit (verified breakout) + reframed others. Quality > quantity per CLAUDE.md.",agent:"editor"},
-  {icon:"×",title:"Cut Nutraingredients Roquette prebiotic study from TRENDS (Sylvie POV #9 violation)",reason:"Study + trade press = exact audience-outsider violation Sylvie flagged in MAY 18 audit ('doesn't feel like something Willa's needs to post about / industry news, irrelevant to our customer'). Willa's 2g+ prebiotic fiber claim doesn't need trade-press authorization. CUT entirely.",agent:"editor"},
-  {icon:"+",title:"Locked automated brief-repeat audit script as Step 7 audit check #26 (CLAUDE.md)",reason:"Christina caught 'the iced coffee that doesn't fight you back' re-used verbatim from MAY 18 PIN-1 evergreen (plus 4 more phrase repeats). Built scripts/check-brief-repeats.sh — automated phrase-overlap check against past 5 brief-feedback CSVs + live TOP_PERFORMER_DNA exemplars. MUST run before every refresh ship. Codified permanently.",agent:"editor"},
-  {icon:"+",title:"Christina pipeline pitch doc drafted (multi-tenant Supabase signal pipeline now live for Willa's)",reason:"Migration 003 + 003b + 003c applied to production Supabase. Willa's pipeline expanded from 0 → ~95 sources, 8 source types. 343+ raw items pulled per ingestion cycle from 18 active feeds. Architecture story doc ready for Christina (~/Desktop/CODING/WILLAS/exports/refresh-may25-2026/05-christina-pipeline-pitch.md).",agent:"editor"}
+  {icon:"↑", title:"'four ingredients. zero apologies.' back-panel receipts leads the week on IG Jun 1 — the clean-label read-out-loud is the headline play.", reason:"USA Today's avoid-list (May 28) put the label conversation on the national front page; our untouched Original panel is the direct counter. RIDE NOW.", agent:"composer"},
+  {icon:"↑", title:"'we didn't add it back. it was never gone.' goes to IG feed Jun 3 as the fiber-reformulation counter.", reason:"Green Queen reported May 26 a leader engineered fiber back in amid a ~9% Q1 slide; whole oats already carry it — no reformulation needed.", agent:"composer"},
+  {icon:"↑", title:"'you genuinely cannot tell this cloud is dairy-free' strawberry-cloud matcha pour goes to TikTok Jun 1, cloud rebuilt off cottage cheese.", reason:"Jar of Lemons swap is the week's most save-worthy on-pillar recipe; no-dairy rule enforced — oat/coconut base, never cottage cheese.", agent:"composer"},
+  {icon:"⚡", title:"'oat milk + a hot car = a tragedy. don't do it to her.' summer PSA queued for TikTok Jun 3.", reason:"adapts the Fishwife product-truth comedy format (Salon, May 28) — format borrowed, not product; pure with-a-wink voice.", agent:"composer"},
+  {icon:"⚡", title:"'the drink that buys you 10 minutes of quiet' kid-station Reel queued for IG Jun 4, paired with 'the smallest one eats first' on TikTok.", reason:"#momtok summer-snack-station pivot (TikTok Discover, May) makes the Kids panel the audit-mom's low-effort win. THIS WEEK.", agent:"composer"},
+  {icon:"×", title:"killed any 'fibermaxxing' framing on the fiber-reformulation trend — angle reset to 'oats already carry it, no reformulation needed.'", reason:"engine already burned fibermaxxing in the last 5 weeks; DO-NOT-REPEAT enforced. fresh angle keeps the signal usable.", agent:"composer"},
+  {icon:"×", title:"killed the Dot Cakes candy product as a subject — borrowing the sprinkle-scrape ASMR format only for the Chocolate frozen-fudge scrape.", reason:"the candy product is off-pillar nutritionally; format-only borrow keeps us on-pillar. powers the Jun 5 'scrape heard round the freezer.'", agent:"composer"},
+  {icon:"+", title:"reallocated both Pinterest slots Jun 6-7 to the save-worthy summer pins — 'four ingredients walked into summer and won' + 'already passed your most paranoid label-read.'", reason:"Memorial Day fired the seasonal cold-drink gun (May 25/28); Pinterest is the save-and-return surface for the clean-panel + summer angle.", agent:"composer"}
 ];
 
 
@@ -811,27 +874,102 @@ const AGENT_BY_ID = Object.fromEntries(AGENTS.map(a=>[a.id,a]));
 
 // ─── Brief ↔ source links (the threading) ─────────────────
 const BRIEF_LINKS = {
-  // BIG SWINGS
-  "MAY25-IG-R1": {trends:["T-5"],            pulse:["CP-7"],                 comps:[]},             // Yuka Kids 100/100 (T-9→T-5)
-  "MAY25-TT-1":  {trends:[],                 pulse:["CP-4"],                 comps:["C-1"]},        // Tortilla cinnamon roll dairy-free swap (T-2 Oatly trend pulled — stale)
-  "MAY25-PIN-1": {trends:["T-4"],            pulse:["CP-2"],                 comps:[]},             // Sourdough rhubarb snack cake (T-7→T-4)
-  // HIGH PRIORITY
-  "MAY25-IG-R2": {trends:["T-2"],            pulse:["CP-9"],                 comps:[]},             // Seed-oil-free Christina moment (T-4→T-2)
-  "MAY25-TT-2":  {trends:["T-4"],            pulse:["CP-1"],                 comps:[]},             // Shaved Fruit frozen strawberry sorbet (T-7→T-4)
-  "MAY25-TT-3":  {trends:[],                 pulse:["CP-5"],                 comps:["C-1"]},        // Will it survive Barista flip (T-2 Oatly + T-8 Pistachio pulled — stale)
-  "MAY25-IG-R3": {trends:[],                 pulse:["CP-3"],                 comps:[]},             // Long-weekend pour (Bleachers audio bed)
-  "MAY25-IG-R4": {trends:[],                 pulse:["CP-8"],                 comps:[]},             // Four Seasons S2 cultural-stitch
-  "MAY25-TT-4":  {trends:[],                 pulse:["CP-6"],                 comps:[]},             // AI Food meme + real-food reveal
-  "MAY25-IG-F1": {trends:[],                 pulse:[],                       comps:[]},             // State-by-state cert-stack carousel (evergreen — no fresh-this-week trend anchor)
-  "MAY25-IG-R5": {trends:["T-1","T-5"],      pulse:[],                       comps:["C-5"]},        // Cert moat Christina reveal (T-1 Elmhurst + T-5 Yuka)
-  "MAY25-IG-F2": {trends:[],                 pulse:["CP-7"],                 comps:[]},             // Back-to-school parent-prep carousel (state-by-state regulation framing, evergreen)
-  // STANDARD / EVERGREEN — no signal anchor
-  "MAY25-TT-5":  {trends:[],                 pulse:[],                       comps:[]},             // Chocolate evergreen (Good Food Awards heritage)
-  "MAY25-PIN-2": {trends:[],                 pulse:[],                       comps:[]},             // Iced latte without the math (evergreen)
-  "MAY25-PIN-3": {trends:[],                 pulse:[],                       comps:[]},             // Strawberry oat icebox cake (evergreen)
-  "MAY25-TT-6":  {trends:[],                 pulse:[],                       comps:[]},             // Saw at Sprouts wall (T-10 Sprouts pulled — stale)
-  "MAY25-IG-F3": {trends:[],                 pulse:[],                       comps:[]},             // Heritage cert-stack carousel (evergreen)
-  "MAY25-TT-7":  {trends:[],                 pulse:[],                       comps:[]}              // Kids crossover (evergreen)
+  "JUN01-IG-R1":{
+    trends:[
+      "T-2",
+      "T-1"
+    ],
+    pulse:[],
+    comps:[]
+  },
+  "JUN01-TT-1":{
+    trends:[
+      "T-5"
+    ],
+    pulse:[
+      "CP-9"
+    ],
+    comps:[]
+  },
+  "JUN02-TT-2":{
+    trends:[],
+    pulse:[
+      "CP-5"
+    ],
+    comps:[]
+  },
+  "JUN02-IG-R2":{
+    trends:[
+      "T-3"
+    ],
+    pulse:[],
+    comps:[]
+  },
+  "JUN03-IG-F1":{
+    trends:[
+      "T-2"
+    ],
+    pulse:[],
+    comps:[
+      "C-2"
+    ]
+  },
+  "JUN03-TT-3":{
+    trends:[],
+    pulse:[
+      "CP-2"
+    ],
+    comps:[]
+  },
+  "JUN04-IG-R3":{
+    trends:[],
+    pulse:[
+      "CP-6"
+    ],
+    comps:[]
+  },
+  "JUN04-TT-4":{
+    trends:[],
+    pulse:[
+      "CP-4"
+    ],
+    comps:[]
+  },
+  "JUN05-IG-R4":{
+    trends:[
+      "T-4"
+    ],
+    pulse:[],
+    comps:[]
+  },
+  "JUN05-TT-5":{
+    trends:[
+      "T-6"
+    ],
+    pulse:[
+      "CP-1"
+    ],
+    comps:[]
+  },
+  "JUN06-PIN-1":{
+    trends:[
+      "T-5"
+    ],
+    pulse:[
+      "CP-3",
+      "CP-9"
+    ],
+    comps:[]
+  },
+  "JUN07-PIN-2":{
+    trends:[
+      "T-4"
+    ],
+    pulse:[],
+    comps:[
+      "C-2"
+    ]
+  }
 };
 
 
@@ -962,96 +1100,18 @@ const KILLED = [
 // (mom-activist + family-moment DNA); even then, captions lean third-person
 // so the post could be written by anyone on the team.
 const CAPTION_VARIANTS = {
-  "MAY25-IG-R1": {
-    direct:"scanned 12 kids drinks at sprouts. one of them was green. 💛\n\n(you know the kind of video this is. the phone in the cart, the yuka app open, the slow walk down the kids-aisle, the carton-by-carton verdict.)\n\nmost of what i scanned came back orange or red. high sugar. synthetic dyes. seed oils. carrageenan in the toddler ones. one carton came back 100/100 green.\n\nWilla's Kids:\n→ 100/100 yuka score (the only kids drink in the aisle that hit it)\n→ 8g protein, 3g fiber, DHA omega-3 from algae oil\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ no synthetic dyes, no rapeseed, no gums\n\nshhh… that's the one in the cart. 🌾",
-    warm:"scanned 12 kids drinks at sprouts. one came back green. (Willa's Kids — 100/100.) 💛",
-    punchy:"scanned 12 kids drinks. one was green. 💛"
-  },
-  "MAY25-TT-1": {
-    direct:"tiktok's viral cinnamon roll — but dairy-free. 🌯\n\n(yes the heavy cream swap still works.)\n\nevery fyp this month: tortilla rolled with butter + cinnamon sugar, baked with heavy cream poured over to get the gooey-roll texture. we swapped the heavy cream for Willa's Barista + a splash of coconut cream.\n\n→ 1 burrito tortilla, room-temp butter, cinnamon sugar inside\n→ roll, slice into 1-inch pieces, place in baking dish\n→ pour ⅓ cup Willa's Barista + 2 tbsp coconut cream over the top\n→ bake 450°F for 8-10 min\n→ powdered sugar icing on top\n\nsame gooey, dairy-free pour. 4-ingredient Willa's Barista does the heavy lifting, no rapeseed, no gums to fight the cinnamon. 🌾\n\nshhh… you'd never know.",
-    warm:"tiktok's viral cinnamon roll, dairy-free. (we swapped the heavy cream for Willa's Barista + coconut cream — same gooey pour.) 🌯",
-    punchy:"viral cinnamon roll — but dairy-free + cleaner. 🌯🌾"
-  },
-  "MAY25-PIN-1": {
-    direct:"sourdough rhubarb snack cake. 🌿\n\nthe heritage tart your grandmother would have made — back when you used what was in season because that's what was there.\n\nthe recipe:\n→ 1½ cups flour, ¼ cup sourdough discard, ¼ cup Willa's Original\n→ ½ cup brown sugar, 1 egg, 1 tsp vanilla\n→ 1 tsp baking powder, pinch of salt\n→ 1½ cups fresh rhubarb, chopped + lightly tossed in 2 tbsp sugar\n→ ¼ cup demerara sugar on top for the crunch\n\nmix wet + dry, fold in rhubarb. pour into a buttered 8x8. bake 350°F for 35-40 min. cool. tea.\n\nWilla's Original in the batter: 4 ingredients, organic, the whole oat groat. (your grandmother had fewer ingredients than that.) 🌾\n\nshhh… save for the long weekend.",
-    warm:"sourdough rhubarb snack cake — the heritage tart your grandmother knew before pinterest did. (Willa's Original in the pour.) 🌿",
-    punchy:"sourdough rhubarb snack cake. (the heritage your grandmother already knew.) 🌿"
-  },
-  "MAY25-IG-R2": {
-    direct:"the carton has read the same way the whole time. 🛡️\n\nwe built Willa's around what we WANTED to drink — for ourselves, for our families, for kids.\n\nso here's what's in Willa's Original:\n→ organic whole grain oats\n→ filtered water\n→ organic vanilla extract\n→ sea salt\n\nthat's the whole deck. no rapeseed, no canola, no gums, no stabilizers, no syrup. four ingredients you can read.\n\nthe conversation around what's in your milk + your oil + your kids' food is louder than ever this month. that's good. we built clean from day one because that's the brand we wanted to leave behind.\n\nshhh… nothing changed because nothing needed to. 💛",
-    warm:"the carton has read the same way the whole time. organic whole oats. filtered water. vanilla. sea salt. (we never had to add what we never had.) 💛",
-    punchy:"we never had to add what we never had. (the deck didn't change.) 🛡️"
-  },
-  "MAY25-TT-2": {
-    direct:"summer's first snack — shave a frozen strawberry. 🍓\n\n(dairy-free by accident.)\n\nthe shaved-fruit trend is eating tiktok this month and it's the easiest summer flex on the internet:\n\n→ grab a frozen strawberry\n→ shave it on a microplane into a bowl\n→ instant fluffy sorbet, zero added sugar, zero dairy\n\nwe drizzle Willa's Original on top for a cream pour that doesn't melt the snow. 4 ingredients in the pour: organic whole oats, water, vanilla, sea salt. that's the whole deck.\n\nyour microbiome thanks you. your phone takes a satisfying video. 🌾\n\nshhh… the trend that's actually clean.",
-    warm:"summer's first snack — shave a frozen strawberry, drizzle Willa's Original on top. dairy-free by accident. 🍓",
-    punchy:"shaved-fruit sorbet — dairy-free by design. 🍓🌾"
-  },
-  "MAY25-TT-3": {
-    direct:"will it survive: iced coffee edition. ☕\n\nthe cold-foam pour at 8am. the same glass at 11.\n\nmost plant milks separate. some curdle in cold espresso. some go bitter when they sit. this one doesn't.\n\nWilla's Barista — clean deck, no rapeseed, no gums, organic whole oats. it pours like dairy and holds its texture through the morning meeting.\n\n(the makeup trend gets the views. the carton does the work.) 🌾\n\nshhh… try it cold.",
-    warm:"will it survive: iced coffee edition. (cold-foam pour at 8am. same glass at 11. no curdle, no separation.) Willa's Barista. ☕",
-    punchy:"will my iced coffee survive the morning meeting? (this one does.) ☕🌾"
-  },
-  "MAY25-IG-R3": {
-    direct:"a long-weekend pour. 🌾\n\nno plan, no recipe, just hands.\n\n→ Willa's Original over ice + cold espresso\n→ a peach sliced thin on the side\n→ a piece of sourdough toast with butter + flaky salt\n\nthe kind of morning you don't post about because you're inside it.\n\nWilla's Original: organic whole oats, filtered water, vanilla, sea salt. 4 ingredients. (the carton already knew.) 💛\n\nshhh… the slow one.",
-    warm:"a long-weekend pour. no plan, no recipe, just hands. (Willa's Original. 4 ingredients.) 🌾",
-    punchy:"a long-weekend pour. no plan. no recipe. just hands. 🌾"
-  },
-  "MAY25-IG-R4": {
-    direct:"summer dinner with the four people you actually want at the table. 🌲\n\nthe long-weekend dinner. the after-dinner coffee. the friends who showed up.\n\nafter-dinner pour:\n→ a small cup of espresso, hot\n→ Willa's Original drizzled in for cream\n→ no sugar needed (the oats handle the sweetness)\n\nWilla's Original: organic whole oats, filtered water, vanilla, sea salt. 4 ingredients. the same kind of small set of essentials that makes a dinner table work.\n\nshhh… the four that matter. 🌾",
-    warm:"summer dinner with the four people you actually want at the table. (after-dinner pour: Willa's Original into the espresso. 4 ingredients.) 🌲",
-    punchy:"four seasons. four ingredients. four real friends. 🌲🌾"
-  },
-  "MAY25-TT-4": {
-    direct:"what food is supposed to look like. 🌯➡️🌾\n\n(the burrito exploded. the carton stayed clean.)\n\nthe AI food meme is everywhere — burritos exploding, sandwiches floating, salad bowls multiplying. funny. weird. fake.\n\nthen the real thing.\n\nWilla's Original — organic whole oats, filtered water, vanilla, sea salt. that's it. nothing engineered, nothing animated. just 4 ingredients you can grow.\n\nshhh… real food is the punchline. 💛",
-    warm:"the burrito exploded. the carton stayed clean. (real food as the punchline.) 🌾",
-    punchy:"AI food is having a moment. real food is having a millennium. 🌾"
-  },
-  "MAY25-IG-F1": {
-    direct:"the state-by-state food chemical map just dropped. 🗺️\n\n(Willa's is the carton already on the right side.)\n\na new interactive map this month shows which states have banned which food chemicals — dyes, glyphosate, BVO, propylparaben, titanium dioxide. parents are sharing it. school nurses are sharing it.\n\nhere's what's NOT in Willa's:\n→ no synthetic dyes (red 40, yellow 5, etc. — none)\n→ no glyphosate (certified glyphosate-free by The Detox Project, every lot)\n→ no BVO, no propylparaben, no titanium dioxide\n→ no rapeseed, no canola, no gums, no stabilizers, no syrup\n\nwhat IS in Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the whole carton.\n\nshhh… the receipts are now a map. 🌾",
-    warm:"the state-by-state food chemical map just dropped — Willa's is the carton already on the right side. (no synthetic dyes, no glyphosate, no BVO. 4 ingredients.) 🗺️",
-    punchy:"50 states. one carton already on the right side. 🌾🗺️"
-  },
-  "MAY25-IG-R5": {
-    direct:"four certs that don't fit in a marketing line. 🛡️\n\n(clean ingredient decks are now the floor. these four are the bar.)\n\nwhat's behind every Willa's carton:\n\n→ USDA Organic (every drop, every batch)\n→ Detox Project Glyphosate-Free (we test every lot)\n→ WBENC mother-founded (the kind of certification you earn before you launch)\n→ Yuka 100/100 Kids (the app the audience already uses)\n\nthe deck is on the carton. the certs are behind it. neither can be faked.\n\nshhh… the back panel does the talking. 💛",
-    warm:"four certs that don't fit in a marketing line — organic + glyphosate-free + WBENC + Yuka 100. (the back panel does the talking.) 🛡️",
-    punchy:"four certs that don't fit in a marketing line. 🛡️"
-  },
-  "MAY25-IG-F2": {
-    direct:"school lunch just got harder for everyone else. 📚\n\n(Willa's Kids was built for the rules before they wrote them.)\n\nstates keep tightening the rules on what kids can eat at school — synthetic dye bans, UPF restrictions, allergen disclosures. the carton your school nurse already wants to see in the lunchbox:\n\n→ 100/100 yuka score (the only kids drink to hit it)\n→ 8g protein, 3g fiber, DHA omega-3 (from algae oil)\n→ top-9 allergen-free (no nut, soy, gluten, dairy, sesame)\n→ 50% less sugar than dairy\n→ bobby approved\n→ no synthetic dyes (none. ever.)\n\nWilla's Kids is the lunchbox drink built before the school-lunch rules caught up.\n\nshhh… we built it because parents asked us to. 💛",
-    warm:"school lunch just got harder for everyone else. Willa's Kids was built for the rules before they wrote them — 100/100 yuka, top-9 allergen-free, 8g protein, no synthetic dyes. (the carton the school nurse already wants.) 📚",
-    punchy:"Willa's Kids: 100/100. school-lunch-ready. 📚"
-  },
-  "MAY25-TT-5": {
-    direct:"the chocolate milk you wish you grew up on. 🍫\n\n(still 5 ingredients. one of them is just cacao.)\n\nWilla's Chocolate is what happens when you make chocolate milk the way it should have been the whole time:\n\n→ filtered water\n→ organic whole grain oats\n→ organic coconut sugar\n→ organic cacao powder (real cacao, not flavoring)\n→ sea salt\n\nthat's the whole carton. 11g sugar (vs the 24g+ in most kids' chocolate milks). 5g protein. 3g fiber. Good Food Awards Best Beverage winner.\n\nshhh… your inner kid just got their carton back. 🌾",
-    warm:"the chocolate milk you wish you grew up on. (5 ingredients. real cacao. Good Food Awards winner.) 🍫",
-    punchy:"the chocolate milk you wish you grew up on. (5 ingredients.) 🍫"
-  },
-  "MAY25-PIN-2": {
-    direct:"iced latte without the math. ☕\n\n3 things in the glass. 60 seconds.\n\n→ 1 shot espresso (or ½ cup strong cold brew), cold\n→ ½ cup Willa's Barista\n→ 1 large slow-melt ice cube\n\npour over the ice. let the foam settle. drink.\n\nWilla's Barista is built for this — organic whole oats, no rapeseed, no gums. pours like dairy, holds shape through the morning, no curdle, no bitter aftertaste.\n\nshhh… your local cafe charges $7. 🌾",
-    warm:"iced latte without the math — 3 things in the glass, Willa's Barista pours like dairy. ☕",
-    punchy:"iced latte without the math. 3 things in the glass. ☕🌾"
-  },
-  "MAY25-PIN-3": {
-    direct:"5-ingredient strawberry oat icebox cake. 🍓\n\n(assemble, freeze, slice. that's the whole recipe.)\n\nstrawberry season is peaking. this is the dessert your freezer makes overnight:\n\n→ 1 cup Willa's Original\n→ 1½ cups graham cracker crumbs (or oat-flour crumbs for gluten-free)\n→ ¼ cup maple syrup\n→ 2 cups fresh strawberries, sliced thin\n→ 1 cup whipped coconut cream (chilled)\n\nlayer in a loaf pan: cracker base soaked in Willa's Original + maple, then strawberries, then coconut cream. repeat 3 times. cover. freeze overnight. slice cold.\n\nWilla's Original in the layers: organic whole oats, filtered water, vanilla, sea salt. the icebox cake that tastes like summer and reads like a real-food recipe.\n\nshhh… save for sunday meal-prep. 🌾",
-    warm:"5-ingredient strawberry oat icebox cake. (assemble, freeze, slice.) Willa's Original soaks the cracker layer. 🍓",
-    punchy:"strawberry oat icebox cake. (5 ingredients. freezer does the work.) 🍓"
-  },
-  "MAY25-TT-6": {
-    direct:"saw at sprouts: the whole Willa's wall. 🛒\n\n(4 flavors. one shelf. real wall, no studio.)\n\nif you've been wondering where to find us — Willa's lives at Sprouts (most stores nationwide), Whole Foods, and Target.\n\nthe 4 cartons on the shelf:\n→ Willa's Original (the 4-ingredient classic)\n→ Willa's Barista (cold-foam pour, no rapeseed)\n→ Willa's Chocolate (Good Food Awards winner, real cacao)\n→ Willa's Kids (100/100 yuka, top-9 allergen-free)\n\nshhh… we'll keep showing up. 💛",
-    warm:"saw at sprouts: the whole Willa's wall. (4 flavors. one shelf.) 🛒",
-    punchy:"saw at sprouts: the whole Willa's wall. 🛒💛"
-  },
-  "MAY25-IG-F3": {
-    direct:"before clean label was a category, willa was just cooking. 🌾\n\nwilla was born 1921. she cooked with real food because that's what she had. she made oatmeal a hundred years before pinterest got around to it.\n\nWilla's launched 2021 — and the rule was simple: build it the way she would have.\n\nwhat's on the carton:\n→ organic whole grain oats\n→ filtered water\n→ organic vanilla extract\n→ sea salt\n\nwhat's behind the carton:\n→ USDA Organic\n→ Detox Project Glyphosate-Free (we test every lot)\n→ WBENC mother-founded\n→ Yuka 100/100 Kids\n\nshhh… 4 ingredients, 4 certs, 100 years of doing it this way. 💛",
-    warm:"before clean label was a category, willa was just cooking. (4 ingredients, 4 certs, 1 century.) 🌾",
-    punchy:"before clean label was a category, willa was just cooking. 🌾"
-  },
-  "MAY25-TT-7": {
-    direct:"the carton you bought for the kids. (and steal for your iced coffee.) 👀\n\nconfession: Willa's Kids weirdly blends the best in cold espresso. the swirl is genuinely better than Original (which we still love).\n\nit's the 8g of protein. it's the slightly creamier mouthfeel. it's the DHA. but mostly, it's that mom can pour the same carton into the kid's glass + her own iced coffee + nobody's mad.\n\n→ Willa's Kids: 100/100 yuka, 8g protein, top-9 allergen-free, DHA from algae oil, bobby approved\n→ 50% less sugar than dairy\n→ the swirl in your iced coffee is hidden in the fridge door\n\nshhh… your iced coffee is in the door labeled \"kids.\" 💛",
-    warm:"the carton you bought for the kids. (and steal for your iced coffee.) Willa's Kids weirdly blends best in cold espresso. 👀",
-    punchy:"the carton you bought for the kids. (and steal for your iced coffee.) 👀"
-  }
+  "JUN01-IG-R1":{direct:"we read our own back panel out loud — and not one line on it is on the avoid-list that just went national. 🥛\n\nthe whole deck: organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's it. 1g sugar, 4g protein, Yuka 94, certified glyphosate-free. no rapeseed, no canola, no gums, no added sugar — nothing to scrape off.\n\nwe didn't reformulate to dodge a list. the whole oat already brings the fiber AND the protein, so there was never anything else to add. we just left the rest beautifully boring.\n\nflip the carton. it's the most honest thing in your fridge.", warm:"the most honest thing in your fridge reads in one breath: organic oats, filtered water, organic vanilla, sea salt. 🥛\n\nthe whole oat already carries the fiber and the protein, so there was never anything to add back — or scrape off. flip the carton sometime. we think you'll like how fast it goes.", punchy:"the oat-milk avoid-list went national. Willa's Original has zero of it.\n\noats. water. vanilla. salt. flip it. 🥛"},
+  "JUN01-TT-1":{direct:"The summer weather had us craving everything pink and frothy! 🍓☀️ This strawberry cloud matcha is the drink of the season, and you genuinely cannot tell the cloud is dairy-free.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 It disappears right into the matcha on just four ingredients.\n\nIngredients:\n- 1 cup Willa's Organic Oat Milk\n- 2 tsp matcha\n- splash of hot water (to whisk the matcha)\n- ice\n- 1 cup frozen strawberries\n- 3 tbsp coconut cream\n- 1 tsp maple syrup\n\nWhisk the matcha at the bottom of the glass, fill with ice, pour Willa's over slow for the ombré. Blend the strawberries, coconut cream, splash of Willa's and maple into a thick pink cloud, then spoon it on top and let it dome. Save this one for the weekend. 🍓", warm:"the strawberry cloud matcha everyone's making — but the cloud's dairy-free and you'd never guess. Willa's Original underneath (oats, water, vanilla, sea salt — that's it), a whipped strawberry cloud on coconut + oat, the prettiest pink float on top. tastes like the first real afternoon of summer. 🍓", punchy:"strawberry cloud matcha. dairy-free cloud. four-ingredient milk. you cannot tell. 🍓 save it."},
+  "JUN02-TT-2":{direct:"5am her has seen things. she does not want to talk about them. then the iced matcha — built on Original, the one with literally four ingredients (organic oats, filtered water, organic vanilla, sea salt) — does its quiet little job, and look who walks back into frame. same woman. one beat later. fully operational. just oats that actually taste like something, doing exactly what they promised. the model pose was right there the whole time. she just needed her drink. 🤍", warm:"5am her vs. her one beat after the matcha. same woman, fully operational. the trick is boring on purpose: Original, four real ingredients, oats that just taste like oats. the glow-up was always just a good drink. 🤍", punchy:"5am her 🥴 → her after the oat-milk matcha 💁 one beat. four ingredients. that's the whole trick."},
+  "JUN02-IG-R2":{direct:"here's the part nobody tells you about making oat milk at home: to fix the slime, most recipes have you add a gum. so you strain for 40 minutes... and end up with the exact thing you were trying to skip. 🥛\n\nwe skipped all of it. Original is four things — organic whole grain oats, filtered water, organic vanilla extract, sea salt. no gums, no rapeseed, no strain bag, no four-day fridge countdown. homemade-grade, none of the homework.\n\nkeep the bag in the drawer. we already strained it.", warm:"the homemade oat milk crowd has standards — we love that. but the slimy strain bag and the gum you add to fix it? you can skip both. Original is just organic oats, filtered water, organic vanilla, sea salt. homemade-grade, none of the homework. 🥛", punchy:"straining oat milk for 40 min just to add a gum is wild. Original = 4 ingredients, no gums, no bag. we already did it. 🥛"},
+  "JUN03-IG-F1":{direct:"some oat milks are quietly adding fiber back in right now. that's a little telling, isn't it — you only put something back if you took it out. if you stripped the oat down to syrup and called it a day. 🥛\n\nWilla's doesn't. WholePlant means whole oat, not oat syrup — so what the oat came with, the fiber AND the protein, you keep. 4 ingredients. 1g sugar. 4g protein. organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the whole list.\n\nwe didn't reformulate. we just never broke it in the first place.", warm:"adding fiber back to oat milk is a funny flex — it means it left in the first place. Willa's keeps the whole oat, not oat syrup, so the fiber AND protein never had to leave. organic whole grain oats, filtered water, organic vanilla extract, sea salt — the whole list. nothing added back, because nothing was taken out. 🥛", punchy:"adding fiber back? Willa's never took it out. whole oat, not oat syrup. 4 ingredients, 4g protein, done. 🥛"},
+  "JUN03-TT-3":{direct:"a public service announcement from your oat milk. 🥛☀️\n\nit's officially hot-car season, and we've lost too many good cartons. she rode shotgun on the grocery run. she believed in you. then you stopped for one more errand and forgot she was back there, gently curdling in the 90-degree heat like a tragic figure in a summer drama.\n\nthis is not a drink-shaming post. it's a love letter with a warning label. four real ingredients deserve a clean ride home. fridge first, errands later — she'll keep, but only if you let her.\n\nconsider this your reminder to bring her in from the car. 💛", warm:"a love letter with a warning label: she rode shotgun, she believed in you, then you ran one more errand. 🥛☀️ it's hot-car season — four real ingredients deserve a clean ride home. fridge first, errands later. bring her in. 💛", punchy:"oat milk + a hot car = a tragedy. don't do it to her. 🥛☀️ fridge first, errands later. this has been a PSA."},
+  "JUN04-IG-R3":{direct:"The kids are home and the fridge already has a revolving door! 🥛☀️ So here's the move: a build-your-own Willa's Kids smoothie + snack station the little ones run themselves. Set it out once, they run it all afternoon, and you get ten quiet minutes back.\n\nWilla's Kids Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup — plus DHA and 8g protein, top-9 allergen-free, Yuka 100/100 (the clean-label app, if you scan). 🥛\n\nIngredients:\n- 1 carton Willa's Kids Organic Oat Milk (the base)\n- 1 bowl frozen berries\n- 1 bowl frozen mango\n- 1 tub dairy-free yogurt\n- paper cups + reusable straws\n- a small blender\n\nThey pour the Willa's, scoop the fruit, spoon the yogurt, drop in a straw. They're busy, you're breathing. What's living on YOUR snack station this summer? Drop it below 👇", warm:"kids home, fridge open every nine minutes — we've all been there. so set the good stuff out once and let them build their own: Willa's Kids as the base, frozen fruit, dairy-free yogurt, a straw. they're busy, you're breathing. 8g protein and top-9 allergen-free, so it's an easy yes. what's on your station? 👇", punchy:"set it out once. they run it all afternoon. you get ten quiet minutes. the build-your-own Willa's Kids snack station is the summer cheat code. 🤫"},
+  "JUN04-TT-4":{direct:"house rule around here: the smallest one eats first. 🥛 she just knows the cup is hers, and she got it first — she has no idea it's also 8g protein, DHA, and a panel that's top-9 allergen-free. summer's long and loud over here, so we keep the wins simple: hand the little one her cup, watch the whole room go quiet for one good minute. (Yuka gave Kids a 100. she gave it a thumbs up. close enough.) what's the one thing your littlest will actually finish all summer? 👇 #willas", warm:"the smallest one eats first. it's the one house rule nobody argues with. 🥛 she just knows the cup is hers — we know it's 8g protein, DHA, and top-9 allergen-free. one good minute of quiet, earned. what's your littlest's summer go-to? 👇", punchy:"house rule: the littlest eats first. 🥛 she thinks it's just hers. it's also 8g protein, DHA, top-9 allergen-free, Yuka 100. one minute of quiet, earned."},
+  "JUN05-IG-R4":{direct:"the read you already do in the aisle — finished before you reach checkout. the Willa's Kids panel, in full: top-9 allergen-free, Yuka 100, DHA for growing brains, 8g protein. no rapeseed, no gums, no mystery stabilizers. we built the panel so the answer is fast. 🥛", warm:"you already flip the carton before it goes in the cart. we get it — so we made the win quick. Willa's Kids: top-9 allergen-free, Yuka 100, DHA, 8g protein. no rapeseed, no gums. the panel that just... passes. 🥛", punchy:"flip passed. Willa's Kids: top-9 allergen-free · Yuka 100 · DHA · no rapeseed, no gums. two seconds. done. ✅"},
+  "JUN05-TT-5":{direct:"The heat had us craving chocolate that doesn't melt on you! 🍫☀️ This no-churn frozen fudge is the most satisfying treat of the summer, and the scrape alone is worth the post.\n\nWilla's Chocolate Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, creamy taste that's genuinely indulgent for being dairy-free — real cacao, coconut sugar, nothing mystery. 🥛 It's a Good Food Awards winner for a reason.\n\nIngredients:\n- 1 carton Willa's Chocolate Organic Oat Milk\n- 2 tbsp cacao powder\n- 1 pinch sea salt\n- 1 drizzle maple syrup\n- 1 spoonful coconut cream (to swirl)\n\nWhisk it all together, pour into a loaf pan, freeze, then scrape. That's the recipe. That's the post. Made for the spoon AND the spoon-licker. Save it for the next hot day — you'll be back. 🍫", warm:"a chocolate frozen treat you make at home — five real ingredients, and a scrape you'll want to rewind. 🍫 Willa's Chocolate oat milk + cacao + sea salt + a little maple + coconut cream, frozen and scooped. real cacao, coconut sugar, nothing you can't pronounce. dessert for the spoon-licker. save it for the next hot day.", punchy:"5 ingredients. real cacao. one scrape. sound on. 🍫 frozen chocolate fudge from a carton of Willa's — save it for the heat wave."},
+  "JUN06-PIN-1":{direct:"Summer's whole job is one cold drink that actually delivers — and this is it! ☀️🍓 Iced matcha on a Willa's Original base with a frothy dairy-free strawberry cloud on top.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 The base is four ingredients and the whole panel fits in one breath.\n\nIngredients:\n- 1 cup Willa's Organic Oat Milk\n- 2 tsp matcha\n- splash of hot water (to whisk the matcha)\n- ice\n- 1 cup frozen strawberries\n- 1 tsp maple syrup\n\nWhisk the matcha, pour Willa's over ice, blend the cloud (frozen strawberries + a splash of Willa's + a touch of maple), spoon it on top. Save this one for the whole season. 🍓", warm:"the prettiest iced matcha — and the base earns it. Willa's Original over ice, a frothy dairy-free strawberry cloud on top. four ingredients. 1g sugar. as good as it looks. save it and make it all season. 🍓", punchy:"iced matcha + strawberry cloud, no dairy, 4-ingredient base. summer's cold drink, sorted. save it. ☀️"},
+  "JUN07-PIN-2":{direct:"build-your-own Kids snack station, but make it actually clean. set out the bowls, pour the Willa's Kids, let them assemble — you already did the label-reading.\n\nhere's the two-second panel check we wish every carton passed:\n✓ no rapeseed, no canola\n✓ no gums or stabilizers\n✓ no carrageenan\n✓ no added sugar to chase flavor — just real ingredients\n✓ top-9 allergen-free + DHA + 8g protein, Yuka 100\n\nthe avoid-list making rounds this week? our Kids panel reads like the answer key. save this pin for the next \"what's actually in it\" deep-dive at the store. the drink that buys you ten minutes of quiet — and survives the ingredient audit. 🤍", warm:"summer means kids home and snacks all day. so we built the station that buys you ten minutes of quiet — and a Kids panel you can scan in two seconds. no rapeseed, no gums, no carrageenan, top-9 allergen-free. save it for the next label deep-dive. 🤍", punchy:"snack station: built. ingredient audit: passed. no rapeseed, no gums, no carrageenan — just Willa's Kids. save the pin."}
 };
 
 const SCANNED_TOTAL = 312;
@@ -1252,6 +1312,152 @@ function fmtNum(n){
 }
 
 // ──────────────────────────────────────────────────────────
+// CONVICTION SCORE — the engine's one-number read on each brief
+// Ported from the Maazah / Lil Bucks engines (2026-05-31), rebuilt
+// in Willa's Tailwind idiom. Three NAMED scorers feed one score, so
+// the number is never a black box (per Alex's "name the scorers" rule):
+//   voice   = Voice Compass match — warm/wink/assertive/transparent fidelity (0-100)
+//   panel   = Synthetic Panel avg — the 4 Willa's readers' consensus (0-100)
+//   pulse   = Pulse fit — how hard the brief rides its driving signal (0-100)
+//   recency = fresh-signal bonus — decays-in-7-days urgency (0-15)
+// Score = round((voice + panel + pulse) / 3) + recency
+// Band:  HIGH 85+ · MEDIUM 70-84 · WATCH <70
+//
+// CONVICTION_INPUTS holds hand-authored numbers per brief (authored in the
+// weekly refresh alongside the briefs themselves). Any brief without an
+// explicit entry falls back to a derivation from its own fields so the chip
+// never disappears — but the weekly refresh should author real numbers for
+// every brief so the panel/voice/pulse reads are intentional.
+// ──────────────────────────────────────────────────────────
+const CONVICTION_INPUTS = {
+  "JUN01-IG-R1":{voice:92, panel:88, pulse:90, recency:14},
+  "JUN01-TT-1":{voice:90, panel:86, pulse:93, recency:42},
+  "JUN02-TT-2":{voice:92, panel:80, pulse:90, recency:13},
+  "JUN02-IG-R2":{voice:90, panel:82, pulse:74, recency:9},
+  "JUN03-IG-F1":{voice:90, panel:84, pulse:72, recency:9},
+  "JUN03-TT-3":{voice:94, panel:82, pulse:88, recency:78},
+  "JUN04-IG-R3":{voice:92, panel:85, pulse:88, recency:9},
+  "JUN04-TT-4":{voice:90, panel:83, pulse:78, recency:8},
+  "JUN05-IG-R4":{voice:93, panel:88, pulse:80, recency:9},
+  "JUN05-TT-5":{voice:88, panel:82, pulse:84, recency:8},
+  "JUN06-PIN-1":{voice:88, panel:82, pulse:80, recency:8},
+  "JUN07-PIN-2":{voice:88, panel:84, pulse:72, recency:8}
+};
+
+// ──────────────────────────────────────────────────────────
+// THE TASTING TABLE — Willa's synthetic consumer panel
+// Ported from Maazah / Lil Bucks (2026-05-31). Four readers calibrated to
+// Willa's real audience layers. They score every brief 1-10 live (via
+// /api/panel → Claude), and their consensus is the "Synthetic Panel" leg of
+// the conviction score. The roster is published on the engine (Meet the Table)
+// so the score is never anonymous — per Alex's "name the scorers" rule.
+// Keep this roster in sync with PANEL_SYSTEM in /api/panel.js.
+// ──────────────────────────────────────────────────────────
+const WILLAS_PANEL = [
+  {id:"maya", emoji:"🌿", name:"Maya", age:34, city:"Austin, TX", label:"CLEAN-LABEL MOM",
+   role:"reads every label · Yuka power-user · organic for the kids",
+   cares:"Ingredient transparency · the 4-ingredient panel · glyphosate-free + organic certs · no seed oils, gums, or dyes · allergen-free Kids.",
+   softOn:"Meme-chasing for its own sake · trade-press talk · marketing spin over substance."},
+  {id:"jordan", emoji:"🛒", name:"Jordan", age:39, city:"Minneapolis, MN", label:"SHELF CONVERT",
+   role:"found Willa's at Target · just switched from almond",
+   cares:"Taste + froth · at-shelf proof · where-to-buy · honest before/after switch stories · value · works-in-coffee.",
+   softOn:"Deep heritage/founder lore · insider category jargon · activist tone that assumes prior knowledge."},
+  {id:"devon", emoji:"🎨", name:"Devon", age:28, city:"Brooklyn, NY", label:"CATEGORY-CURIOUS FOODIE",
+   role:"follows Olipop, Graza, Fishwife · design-led · very online",
+   cares:"Clever wordplay + peer-brand humor · viral recipe remixes · meme-payloads that land · aesthetic/IRL beauty · a real POV.",
+   softOn:"Earnest wellness-mom register · plain checklist pins · anything try-hard or off-trend."},
+  {id:"sam", emoji:"🥣", name:"Sam", age:42, city:"Denver, CO", label:"KID-UTILITY PARENT",
+   role:"working parent of 2 · cares about format + taste, not origin",
+   cares:"Kids will actually drink it · protein + fiber · lunchbox + after-school use · fast recipes with a clear payoff · family warmth.",
+   softOn:"Category-fight/activist content · long heritage explainers · retail-milestone storytelling."}
+];
+
+function deriveConviction(b){
+  if(!b) return null;
+  const pri = b.priority || "STANDARD";
+  // Voice: strong baseline, nudged up by a locked DNA format + big-swing intent
+  let voice = 80;
+  if(b.dnaPattern) voice += 6;
+  if(pri === "BIG SWING") voice += 4; else if(pri === "HIGH") voice += 2;
+  // Panel: lean on the pillar's recent save-delta confidence (1-5 → ~70-92)
+  const pc = (typeof PILLAR_CONFIDENCE !== "undefined" && PILLAR_CONFIDENCE[b.pillar]) || 3;
+  let panel = 66 + pc * 5; // 3→81, 4→86, 5→91
+  // Pulse: how live is the driver
+  let pulse = b.rideNow ? 90 : pri === "BIG SWING" ? 84 : pri === "HIGH" ? 78 : 73;
+  // Recency: decays-in-7-days urgency
+  let recency = b.rideNow ? 13 : pri === "BIG SWING" ? 10 : pri === "HIGH" ? 7 : 4;
+  return {voice:Math.min(voice,100), panel:Math.min(panel,100), pulse:Math.min(pulse,100), recency};
+}
+
+function getConviction(b){
+  if(!b) return null;
+  const id = typeof b === "string" ? b : b.id;
+  const obj = typeof b === "string" ? null : b;
+  const c = CONVICTION_INPUTS[id] || (obj ? deriveConviction(obj) : null);
+  if(!c) return null;
+  const base = Math.round((c.voice + c.panel + c.pulse) / 3);
+  const score = base + c.recency;
+  const band = score >= 85 ? "HIGH" : score >= 70 ? "MEDIUM" : "WATCH";
+  const derived = !CONVICTION_INPUTS[id];
+  return { ...c, base, score, band, rideNow: c.recency >= 12, derived };
+}
+
+const CONV_BAND_COLOR = { HIGH:"#4E8C63", MEDIUM:"#B8862F", WATCH:"#C2674A" };
+const CONV_BAND_FOOT  = {
+  HIGH:"Ship this first.",
+  MEDIUM:"Solid — slot it in normally.",
+  WATCH:"Needs sharpening — or skip it."
+};
+
+// Small horizontal scorer bar used inside the conviction tooltip.
+function ConvBar({label, val}){
+  return (
+    <div className="flex items-center gap-2">
+      <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] w-[92px] shrink-0">{label}</span>
+      <span className="flex-1 h-[5px] rounded-full bg-[#E8E2D3] overflow-hidden">
+        <span className="block h-full rounded-full" style={{width:val+"%", background:"#202A44"}}></span>
+      </span>
+      <span className="font-mono text-[9px] text-[#202A44] w-[20px] text-right shrink-0">{val}</span>
+    </div>
+  );
+}
+
+// ConvictionChip — the band + number pill, with a hover tooltip that shows the
+// full breakdown + the math. cursor-help signals "there's more here." Built on
+// group-hover so it works without JS state. `size="sm"` for dense grid cards.
+function ConvictionChip({conv, size}){
+  if(!conv) return null;
+  const color = CONV_BAND_COLOR[conv.band];
+  const sm = size === "sm";
+  return (
+    <span className="relative inline-flex items-center gap-1 group/conv cursor-help align-middle"
+      style={{border:"1.5px solid "+color, borderRadius:"999px", padding: sm?"1px 2px 1px 6px":"2px 3px 2px 8px"}}>
+      <span className="font-mono tracking-[0.12em] font-bold" style={{color, fontSize: sm?"7.5px":"8.5px"}}>{conv.band}</span>
+      <span className="font-serif text-white text-center"
+        style={{background:color, borderRadius:"999px", fontSize: sm?"11px":"12.5px", lineHeight:1, padding: sm?"3px 5px 2px":"3px 6px 2px", minWidth: sm?"20px":"23px"}}>{conv.score}</span>
+      {/* Tooltip */}
+      <span className="invisible opacity-0 group-hover/conv:visible group-hover/conv:opacity-100 transition-opacity duration-150 absolute z-[80] top-[calc(100%+8px)] left-0 w-[268px] card p-3.5 text-left shadow-2xl cursor-default"
+        style={{borderColor:color}}>
+        <span className="flex items-center justify-between mb-2.5">
+          <span className="font-mono text-[9px] tracking-[0.16em] font-bold" style={{color}}>{conv.band} CONVICTION</span>
+          <span className="font-serif text-[18px] leading-none" style={{color}}>{conv.score}</span>
+        </span>
+        <span className="grid gap-1.5 mb-2.5">
+          <ConvBar label="VOICE COMPASS" val={conv.voice}/>
+          <ConvBar label="SYNTHETIC PANEL" val={conv.panel}/>
+          <ConvBar label="PULSE FIT" val={conv.pulse}/>
+        </span>
+        <span className="block font-mono text-[9px] text-[var(--muted)] leading-relaxed border-t border-[var(--border)] pt-2">
+          ({conv.voice} + {conv.panel} + {conv.pulse}) ÷ 3 = <span className="text-[#202A44] font-semibold">{conv.base}</span> · recency <span className="text-[#202A44] font-semibold">+{conv.recency}</span> = <span className="text-[#202A44] font-semibold">{conv.score}</span>
+        </span>
+        <span className="block text-[10.5px] mt-2 leading-snug" style={{color}}>{CONV_BAND_FOOT[conv.band]}</span>
+        {conv.derived && <span className="block font-mono text-[8px] tracking-wider text-[var(--muted)] mt-1.5">⌁ estimated from brief signals — pending panel run</span>}
+      </span>
+    </span>
+  );
+}
+
+// ──────────────────────────────────────────────────────────
 // TOP-PERFORMER DNA LIBRARY
 // Codified from Christina's top-performing posts (PDF 2026-04-16).
 // Each brief gets tagged to one of these as a lightweight chip.
@@ -1340,142 +1546,117 @@ const CULTURAL_PULSE = [
     id:"CP-1",
     type:"VIRAL RECIPE",
     typeColor:"#75C596",
-    hook:"Shaved Fruit is taking over TikTok this month 🍓 — frozen strawberries + microplane = instant fluffy sorbet, dairy-free by design and built for the summer kitchen Willa's was made for",
-    detail:"'Shaved Fruit' is the breakout May 2026 healthy-snack trend (per SoYummy + TikTok creator search insights). Format: take a frozen strawberry, shave it on a microplane into a bowl — produces an instantly fluffy, ASMR-satisfying 'sorbet' with zero dairy, zero added sugar, just fruit. Visually mesmerizing, takes 30 seconds, lives in the summer-morning-kitchen aesthetic. Willa's connection: drizzle Willa's Original on top for a dairy-free cream pour that doesn't melt the snow-like texture — pairs naturally without overwhelming. Adjacent to strawberry season peak + Willa's grandma-kitchen voice.",
+    hook:"frozen fruit \"clusters\" are the no-recipe recipe of the summer 🫐",
+    detail:"Frozen-fruit \"clusters\" and yogurt tiramisu are the food formats actually moving on TikTok right now — dairy-free-friendly, zero-skill, screenshot-able. It's the clean non-matcha recipe wave, and the cluster base is a perfect dairy-free yogurt + Willa's build.",
     velocity:"high",
-    platform:"TikTok + IG Reels",
-    willasPlay:"TikTok: ride the Shaved Fruit format with hands shaving a frozen strawberry into a bowl + Willa's Original cream pour on top. 'summer's first snack. dairy-free by accident.'",
+    willasPlay:"Rebuild the frozen cluster dairy-free: Cocoyo or Forager yogurt thinned with Willa's, frozen berries, the satisfying crack. Film the snap, sound on.",
     dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"TikTok · #shavedfruit hashtag page (live)", url:"https://www.tiktok.com/tag/shavedfruit"}
+      {label:"Canadian Grocer · Most viral TikTok food trends of 2026 so far (May 28, 2026)", url:"https://canadiangrocer.com/most-viral-tiktok-food-trends-2026-so-far"}
     ]
   },
   {
     id:"CP-2",
-    type:"VIRAL RECIPE",
-    typeColor:"#75C596",
-    hook:"Rhubarb season is peaking 🌿 — the heritage-coded summer ingredient Willa's grandmother kitchen owns, and the recipe lane Pinterest is teeing up all week",
-    detail:"Rhubarb is having a heritage-kitchen moment as summer opens — strawberry rhubarb crisp, sourdough rhubarb snack cake, rhubarb shrub. This is grandma food (Willa's grandma was 1921 — she would have made rhubarb pie), prebiotic-fiber-friendly, naturally tart. Pin format with type-led layout + Willa's Original in the cream pour. Pairs with the broader strawberry-season-peak energy (Shaved Fruit, strawberry rhubarb crisp) and the Pinterest planning audience that's 7-10 days ahead of execution.",
-    velocity:"high",
-    platform:"Pinterest + TikTok",
-    willasPlay:"Pinterest pin: 'sourdough rhubarb snack cake — the heritage tart your grandmother would have made (with Willa's Original in the pour).'",
-    dnaMatch:"viral-recipe-remix",
+    type:"PEER BRAND",
+    typeColor:"#9E652E",
+    hook:"Fishwife gave its anchovies a summer break — and made it funny 🐟",
+    detail:"Fishwife pulled anchovies for the summer because shipping in heat hurts quality, announcing it with a tongue-in-cheek reality-TV \"relationship status\" parody. A peer brand turned a real product truth into a witty PSA — exactly our with-a-wink voice.",
+    velocity:"medium",
+    willasPlay:"Borrow the format, not the product: a deadpan summer PSA — \"oat milk + a hot car = a tragedy.\" Shoot it straight.",
+    dnaMatch:"meme-payload",
     sources:[
-      {label:"Pinterest Business Community · MAY 22 weekly trend report (engine context)", url:"https://community.pinterest.biz/t/the-weekly-pbc-trend-report-may-22-2026/45841"}
+      {label:"Salon · Fishwife's anchovies need a summer break too (May 28, 2026)", url:"https://www.salon.com/2026/05/28/fishwifes-anchovies-need-a-summer-break-too/"}
     ]
   },
   {
     id:"CP-3",
-    type:"ENTERTAINMENT MOMENT",
-    typeColor:"#A191B2",
-    hook:"Bleachers dropped self-titled MAY 22 🎶 — Jack Antonoff in his Brooklyn-indie warmest mode, the kind of album that scores a Sunday-morning kitchen",
-    detail:"Bleachers (Jack Antonoff) released their self-titled album MAY 22, 2026 — NPR + Indy Review both flagged it as 'lyrically perceptive, musically bombastic rock n' roll.' Antonoff produced Lana Del Rey, Sabrina Carpenter, and Taylor Swift's biggest records; this is his own band's most accessible release. Tonal-match for Willa's morning-ritual lane (warm + indie + intentional). Use a track as the audio bed for a 'summer kitchen, week 1' Reel — don't stitch, just soundtrack.",
-    velocity:"medium",
-    platform:"Music + IG Reels + TikTok",
-    willasPlay:"IG Reel: Bleachers MAY 22 track as audio bed for the summer-kitchen-open Reel. Don't name the album in copy — let the song do the work.",
-    dnaMatch:"kid-family-moment",
+    type:"ENTERTAINMENT",
+    typeColor:"#73B2C9",
+    hook:"aespa's LEMONADE drops huge — summer in a single word 🍋",
+    detail:"aespa's album LEMONADE landed on New Music Friday May 29, and \"lemonade\" is peak summer-beverage adjacency — a broadly loved pop moment a cold-drink brand can ride tonally as June opens, without ever name-dropping the artist.",
+    velocity:"high",
+    willasPlay:"Riff on the lemonade-of-summer energy with a Willa's iced-drink moment scored to the beat — adjacency, never a name-drop. Pour on the drop.",
+    dnaMatch:"at-shelf-moment",
     sources:[
-      {label:"NPR · New Music Friday best albums May 22, 2026", url:"https://www.npr.org/2026/05/22/nx-s1-5830344/new-music-friday-best-albums-may-22-2026"},
-      {label:"The Indy Review · New Music Friday May 22, 2026", url:"https://theindyreview.com/2026/05/22/new-music-friday-may-22-2026/"}
+      {label:"NPR · New Music Friday: best albums May 29 (May 29, 2026)", url:"https://www.npr.org/2026/05/29/nx-s1-5830351/new-music-friday-best-albums-may-29-2026"}
     ]
   },
   {
     id:"CP-4",
-    type:"VIRAL RECIPE",
-    typeColor:"#75C596",
-    hook:"Tortilla cinnamon rolls are the breakout viral recipe of MAY 2026 🌯 — GMA covered it, racking up millions of views, and Willa's plays the dairy-free heavy-cream swap",
-    detail:"GMA and ABC News both covered 'tortilla cinnamon rolls' as THE breakout viral TikTok recipe of MAY 2026 — millions of views. The recipe uses a burrito tortilla rolled with butter + brown sugar + cinnamon, baked with heavy cream poured over (the heavy cream is what creates the gooey-roll texture). Willa's plays the dairy-free swap per the No-Dairy rule: replace heavy cream with Willa's Barista + coconut cream blend. Pattern 04 (the unexpected ingredient is the dairy-free swap, calmly stated).",
-    velocity:"high",
-    platform:"TikTok + IG Reels",
-    willasPlay:"TikTok: ride the tortilla cinnamon roll format, swap heavy cream for Willa's Barista + coconut cream. 'tiktok's viral cinnamon roll, dairy-free + cleaner.'",
-    dnaMatch:"viral-recipe-remix",
+    type:"ENTERTAINMENT",
+    typeColor:"#73B2C9",
+    hook:"Grogu owns the box office — wholesome family energy 👶",
+    detail:"\"The Mandalorian and Grogu\" topped the late-May box office at ~$102M. Grogu is the most family-friendly, snackable cultural moment going — clean parent/kid adjacency for the Kids SKU without any licensing.",
+    velocity:"medium",
+    willasPlay:"Borrow the feeling, not the IP: a Kids \"the smallest one eats first\" moment with cuddly summer warmth. Keep it implied. Film the handoff.",
+    dnaMatch:"kid-family-moment",
     sources:[
-      {label:"TikTok · #tortillacinnamonrolls hashtag page (live)", url:"https://www.tiktok.com/tag/tortillacinnamonrolls"}
+      {label:"Variety · Mandalorian and Grogu owns the box office (May 25, 2026)", url:"https://variety.com/2026/film/box-office/mandalorian-and-grogu-box-office-opening-memorial-day-weekend-1236757827/"}
     ]
   },
   {
     id:"CP-5",
-    type:"MEME TEMPLATE",
-    typeColor:"#D97706",
-    hook:"'Will this survive today?' makeup-endurance format is rising 💄 — summer-heat narrative perfect for a 'will my iced coffee survive the morning meeting?' Willa's Barista flip",
-    detail:"TikTok format where creators apply full makeup at start of day, live 6-8 hours, return to camera with no touch-ups — rising sharply in MAY's second week as summer heat creates a 'will this survive today?' narrative. Adjacent / flippable for Willa's: 'will my iced coffee survive the morning meeting' — the no-curdle, no-separation, no-bitter-aftertaste cold-foam pour that Willa's Barista actually delivers. Pattern 03 (relatable confession) + Pattern 10 (wordplay). Hands + product, no on-camera face needed.",
-    velocity:"medium",
-    platform:"TikTok",
-    willasPlay:"TikTok: 'will it survive: iced coffee edition' — hands pour Willa's Barista cold foam at 8am, cut to 11am same glass holding shape. 'Willa's pours like it was built for the morning meeting.'",
-    dnaMatch:"before-after-stitch",
+    type:"MEME FORMAT",
+    typeColor:"#A191B2",
+    hook:"the \"Model Pose\" transition is everywhere 💁",
+    detail:"The \"Model Pose\" TikTok transition — tired to confident on the beat, set to Slayyyter's \"DACE\" — is trending. It's a clean meme-payload shell for a before/after glow-up gag tied to a morning ritual.",
+    velocity:"high",
+    willasPlay:"Drop the payload OFF matcha: \"5am her\" → \"her after the iced Original cold-brew\" on the beat. Shoot the flip before the format cools.",
+    dnaMatch:"meme-payload",
     sources:[
-      {label:"SocialPilot · TikTok Trends (May 20, 2026)", url:"https://www.socialpilot.co/blog/tiktok-trends"}
+      {label:"Ramdam · TikTok trends: Model Pose / DACE (May 26, 2026)", url:"https://www.ramd.am/blog/trends-tiktok"}
     ]
   },
   {
     id:"CP-6",
-    type:"MEME TEMPLATE",
-    typeColor:"#D97706",
-    hook:"'AI Food' exploding-burrito meme is the absurdist visual format eating TikTok 🌯 — green-screen + reaction edit, drop a Willa's hands+pour reveal into it",
-    detail:"'AI Food' TikTok meme features an animated burrito exploding its fillings onto a plate — described as 'equal parts absurd, chaotic, and visually hilarious' by Turrboo's MAY 2026 trend tracker. Format works as green-screen edit / reaction / payoff reveal. Willa's angle: subvert the AI-food gross-out by revealing a REAL kitchen pour (hands + Willa's Original + oat groat in a bowl) as the punchline answer. 'What food is supposed to look like.' Pattern 05 + Pattern 04 (real food as the unexpected answer).",
-    velocity:"medium",
-    platform:"TikTok",
-    willasPlay:"TikTok: ride the AI Food burrito format, reveal hands pouring Willa's Original + real oat groat into bowl as the 'real food' punchline.",
-    dnaMatch:"meme-payload",
+    type:"PARENTING",
+    typeColor:"#9E652E",
+    hook:"summer-snack survival mode: kids home, all-day grazing 🍓",
+    detail:"With kids home for summer, #momtok has pivoted to all-day snacking and build-your-own plates/stations. Parents need low-effort wins that buy quiet — squarely the Kids SKU's job.",
+    velocity:"high",
+    willasPlay:"Build a Willa's Kids snack station — \"the drink that buys you ten minutes of quiet.\" Film tiny hands assembling it, then the exhale.",
+    dnaMatch:"kid-family-moment",
     sources:[
-      {label:"TikTok · #aifood hashtag page (live)", url:"https://www.tiktok.com/tag/aifood"}
+      {label:"TikTok Discover · Kids home for summer snacks (May 2026)", url:"https://www.tiktok.com/discover/kids-home-for-summer-snacks"}
     ]
   },
   {
     id:"CP-7",
-    type:"NEWS CYCLE",
+    type:"ENTERTAINMENT",
     typeColor:"#73B2C9",
-    hook:"The Yuka backlash arrived MAY 19 📱 — critics flag the app for moralizing food. Willa's Kids 100/100 holds up regardless.",
-    detail:"The Grocery Cart's MAY 19, 2026 piece marks the inflection point in Yuka's cultural arc — celebrated for transparency, now contested for over-simplifying and potentially driving restriction. The conversation is shifting from 'Yuka is the answer' to 'Yuka is one tool, not a moral verdict.' Willa's Kids 100/100 + Original 94 + Chocolate 94 are receipts that hold up regardless of which side of the debate parents land on — they're based on lowest sugar + highest plant protein + no isolates + cert stack. The play this week: lead with scan-then-pour authority, don't enter the debate.",
-    velocity:"high",
-    platform:"Consumer Tech Press + TikTok",
-    willasPlay:"IG Reel: phone-scan POV — hands pick up Willa's Kids carton, scan in Yuka app, reveal 100/100 score. Cut to morning pour. Don't reference the debate; let the score do the work.",
-    dnaMatch:"on-pack-checklist",
+    hook:"New Music Friday stacked the morning-playlist deck 🎧",
+    detail:"May 29's New Music Friday was a big one — Labrinth, Kim Petras, Latto and an Ariana Grande single all dropped. It's the week everyone refreshes their summer-morning playlist, a tonally easy ride for a morning-ritual brand without naming a single artist.",
+    velocity:"medium",
+    willasPlay:"Hand the audience a \"what's pouring while the new releases play\" morning-ritual moment — Willa's iced drink, windows open. Riff the vibe, drop no names.",
+    dnaMatch:"at-shelf-moment",
     sources:[
-      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
+      {label:"NPR · New Music Friday: best albums May 29 (May 29, 2026)", url:"https://www.npr.org/2026/05/29/nx-s1-5830351/new-music-friday-best-albums-may-29-2026"}
     ]
   },
   {
     id:"CP-8",
-    type:"ENTERTAINMENT MOMENT",
-    typeColor:"#A191B2",
-    hook:"The Four Seasons S2 drops on Netflix THU MAY 28 🌲 — Tina Fey + Steve Carell + Will Forte + Colman Domingo in adult-friendship summer comedy mode, the Willa's-audience-coded show returning",
-    detail:"Netflix releases The Four Seasons Season 2 on THU MAY 28, 2026. Tina Fey leads the ensemble cast (Carell, Forte, Domingo, Henningsen, Kenney-Silver) in Alan Alda's 1981 romantic-comedy adaptation. S1 hit 78% on Rotten Tomatoes with critic-consensus calling it 'welcoming as a lakeside vista...witty and wise.' Adult-friendship-summer-vacation comedy is custom-built for Willa's parent-demo audience. The play this week: 'the four seasons of a kitchen' or 'what gets shared at a long-weekend dinner table' — heritage-kitchen content that lands the same week as the show drops, without name-checking. Friday MAY 29 Reel timing perfect (24 hrs after premiere).",
+    type:"ENTERTAINMENT",
+    typeColor:"#73B2C9",
+    hook:"finale week: Hacks signs off, the watch-party snack moment is wide open 📺",
+    detail:"TV finale + premiere week ran May 24-30 — the Hacks series finale aired May 28 alongside a Scream 7 release and the American Music Awards. End-of-an-era finales are a cozy-night, gather-the-snacks cultural moment Willa's can host tonally.",
     velocity:"medium",
-    platform:"TV + IG + Trade Press",
-    willasPlay:"IG Reel: 'summer dinner with the four people you actually want at the table.' Long-weekend dinner-prep scene + Willa's Original cream pour into the after-dinner coffee. Don't name the show — let the post-premiere audience make the connection.",
-    dnaMatch:"kid-family-moment",
+    willasPlay:"Own the cozy finale-night snack: a Willa's iced-cocoa for the couch — \"what's in the glass for the last episode.\" Film the pour.",
+    dnaMatch:"at-shelf-moment",
     sources:[
-      {label:"Just Jared · Tina Fey + Colman Domingo at The Four Seasons S2 Premiere (May 20, 2026)", url:"https://www.justjared.com/2026/05/20/tina-fey-colman-domingo-more-step-out-for-the-four-seasons-season-2-premiere-in-l-a/"},
-      {label:"Netflix Tudum · The Four Seasons Season 2 release date (durable brand page)", url:"https://www.netflix.com/tudum/articles/the-four-seasons-season-2-news-photos-release-date"}
+      {label:"TVLine · What to Watch: Week of May 24, 2026 (finales + premieres)", url:"https://www.tvline.com/2179542/what-to-watch-week-of-may-24-2026-tv-shows-movies/"}
     ]
   },
   {
     id:"CP-9",
-    type:"CULTURAL CONVERSATION",
-    typeColor:"#9E652E",
-    hook:"Seed-oil-free is officially winning at the shelf 🛡️ — Willa's Original deck has always read the same way, and this week is when 'calm receipts' works harder than the discourse",
-    detail:"STAT News dropped a MAY 22 fact-check on the anti-seed-oil movement that recalibrates the wellness narrative — distinguishing industrial seed oils from structurally-different high-oleic variants. Willa's Original is already seed-oil-free; Willa's Barista uses high-oleic sunflower (the structurally-different variant STAT specifically names). The consumer-side cultural conversation is 'what's in your cooking oil / what's in your milk' — Willa's plays the calm-authority receipt, not the trend-chase. Don't preach, don't panic, show the deck.",
-    velocity:"medium",
-    platform:"Trade Press → IG + TikTok",
-    willasPlay:"IG Reel: 'the carton has read the same way the whole time.' Hands hold Willa's Original carton, slow ingredient-deck reveal (4 ingredients), cofounder voice-over: 'we never had to add what we never had.' NO mention of seed-oil discourse by name — let the visual + ingredient deck do the work.",
-    dnaMatch:"mom-activist",
+    type:"VIRAL RECIPE",
+    typeColor:"#75C596",
+    hook:"the \"cloud float\" is the execution carrying iced drinks this summer ☁️",
+    detail:"The frothy whipped-fruit \"cloud\" floated on top of an iced drink is the screenshot move of the season — the novelty is entirely in the cloud-float execution (the slow dome over the rim), not the drink underneath. Most viral versions build the cloud on cottage cheese, which we rebuild dairy-free.",
+    velocity:"high",
+    willasPlay:"Lead on the execution: rebuild the cloud dairy-free (coconut cream + Forager yogurt) and float it on a Willa's iced drink. Film the slow dome.",
+    dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"STAT News · What the anti-seed oil movement gets wrong — and right (May 22, 2026) — engine context only", url:"https://www.statnews.com/2026/05/22/seed-oils-healthy-fats-tallow-fact-check-cardiac-health/"}
-    ]
-  },
-  {
-    id:"CP-10",
-    type:"CULTURAL CONVERSATION",
-    typeColor:"#9E652E",
-    hook:"Mother-founded brands took Capitol Hill MAY 20 💛 — Bobbie + Breasties lobbied for Connie's Bill, the lane Willa's quietly lives in",
-    detail:"Bobbie for Change (the social impact arm of mother-founded infant formula brand Bobbie) and The Breasties descended on Capitol Hill on MAY 20, 2026 to advocate for the Constance C. McDaniel Medically Necessary Infant Formula and Donor Milk Act ('Connie's Bill') — bipartisan legislation introduced by Reps. Wasserman Schultz + Hinson. The pattern: mother-founded CPG brands building real policy clout, not just brand affinity. This is the lane Willa's lives in — mother-founded + cert-stack credibility + the long-game policy work that turns brand into infrastructure. Don't speak to Connie's Bill directly; reinforce the cultural moment of mother-founded brands earning legislative voice.",
-    velocity:"medium",
-    platform:"Trade Press + Parenting + Policy",
-    willasPlay:"IG Reel: cofounder-sister talking to camera — 'mother-founded brands are showing up where it matters now. we'll keep showing up too.' Heritage carton frame at the end. Don't name Bobbie or Connie's Bill; let the moment land tonally.",
-    dnaMatch:"mom-activist",
-    sources:[
-      {label:"BusinessWire · Bobbie + Breasties Lobby for Connie's Bill on Capitol Hill (May 20, 2026)", url:"https://www.businesswire.com/news/home/20260520832058/en/Bobbie-for-Change-and-The-Breasties-Lobby-for-Introduction-of-Connies-Bill-on-Capitol-Hill-After-Five-Year-Partnership"}
+      {label:"Jar of Lemons · Strawberry Cloud (May 2026)", url:"https://www.jaroflemons.com/strawberry-cloud-matcha/"}
     ]
   }
 ];
@@ -1540,27 +1721,18 @@ const POSTING_LOGIC = {
 // BRIEF → DNA pattern mapping (applied to BRIEFS below)
 // ──────────────────────────────────────────────────────────
 const BRIEF_DNA = {
-  // BIG SWINGS
-  "MAY25-IG-R1":   "at-shelf-moment",        // Yuka scan-with-me mom-creator at-shelf confession
-  "MAY25-TT-1":    "viral-recipe-remix",     // Tortilla cinnamon roll dairy-free swap
-  "MAY25-PIN-1":   "viral-recipe-remix",     // Sourdough rhubarb snack cake heritage pin
-  // HIGH PRIORITY
-  "MAY25-IG-R2":   "mom-activist",           // Seed-oil-free Christina moment
-  "MAY25-TT-2":    "viral-recipe-remix",     // Shaved Fruit frozen strawberry sorbet
-  "MAY25-TT-3":    "before-after-stitch",    // Will it survive Barista flip
-  "MAY25-IG-R3":   "kid-family-moment",      // Long-weekend pour (Bleachers audio bed)
-  "MAY25-IG-R4":   "kid-family-moment",      // Four Seasons S2 cultural-stitch
-  "MAY25-TT-4":    "meme-payload",           // AI Food meme + real-food reveal
-  "MAY25-IG-F1":   "on-pack-checklist",      // State-by-state cert-stack carousel
-  "MAY25-IG-R5":   "mom-activist",           // Cert moat Christina reveal
-  "MAY25-IG-F2":   "on-pack-checklist",      // Arizona school act back-to-school carousel
-  // STANDARD / EVERGREEN
-  "MAY25-TT-5":    "viral-recipe-remix",     // Chocolate evergreen indulgent-remade-clean
-  "MAY25-PIN-2":   "viral-recipe-remix",     // Iced latte without the math (evergreen)
-  "MAY25-PIN-3":   "viral-recipe-remix",     // Strawberry oat icebox cake (evergreen)
-  "MAY25-TT-6":    "at-shelf-moment",        // Saw at Sprouts wall (evergreen)
-  "MAY25-IG-F3":   "on-pack-checklist",      // Heritage cert-stack carousel (evergreen)
-  "MAY25-TT-7":    "kid-family-moment"       // Kids crossover relatable-confession (evergreen)
+  "JUN01-IG-R1":"on-pack-checklist",
+  "JUN01-TT-1":"viral-recipe-remix",
+  "JUN02-TT-2":"meme-payload",
+  "JUN02-IG-R2":"before-after-stitch",
+  "JUN03-IG-F1":"at-shelf-moment",
+  "JUN03-TT-3":"meme-payload",
+  "JUN04-IG-R3":"kid-family-moment",
+  "JUN04-TT-4":"kid-family-moment",
+  "JUN05-IG-R4":"mom-activist",
+  "JUN05-TT-5":"viral-recipe-remix",
+  "JUN06-PIN-1":"viral-recipe-remix",
+  "JUN07-PIN-2":"on-pack-checklist"
 };
 
 BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
@@ -1573,113 +1745,229 @@ BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
 // pacing, this tells you where to source every shot.
 // ──────────────────────────────────────────────────────────
 const BRIEF_FOOTAGE_INSPO = {
-  "MAY25-IG-R1": {
-    shoot:["POV at the Sprouts kids-drinks aisle — phone-held shot scanning carton after carton in the kids-RTD section","Yuka app screen captures (multiple scans revealing red/orange scores, then one green 100/100 reveal on the Willa's Kids carton)","Carton-goes-into-the-cart shot","Home kitchen: kid's hand pours Willa's Kids into a glass (face out of frame)","Real-aisle / real-cart / real-kitchen aesthetic — NO studio finish"],
-    found:["Trend reference: TikTok 'scan with me' / #yuka grocery-aisle mom-creator videos (rising mom-creator format)","The Grocery Cart MAY 19 backlash piece — engine context for the cultural shift, don't cite in copy","Mom-creator scan-with-me hashtag landing pages (TikTok #scanwithme + #yukascan)"],
-    memes:["Pattern 03 Relatable Confession ('i'm the mom in the aisle with the phone out')","Pattern 09 Aesthetic IRL Encounter (real grocery aisle, real cart, real find)","'scanned X drinks at the store, only one was green' content lane"],
-    archive:["Willa's existing in-store / Sprouts visit footage if any","Willa's Kids carton + Yuka 100/100 badge cleared assets","Kid-pour b-roll for the end card"]
+  "JUN01-IG-R1":{
+    shoot:[
+      "Clean overhead + handheld of the Willa's Original carton being flipped front-to-back in good window light",
+      "Macro of the real on-pack ingredient deck (the four lines) and the nutrition box (1g sugar / 4g protein)",
+      "Finger-scan the panel with green 'not here' checks animated in post over the avoid-list items",
+      "Final beauty shot: carton + a poured glass on the counter for the end card"
+    ],
+    found:[
+      "USA Today buyer's guide framing of the oat-milk avoid-list (May 28, 2026) — for the on-screen list wording only, never shown as a logo or publication name on screen",
+      "Yuka 94 score reference for the badge flash"
+    ],
+    memes:[
+      "Skip overt meme audio — let the 'read it out loud' deadpan carry the wink"
+    ],
+    archive:[
+      "Existing Willa's carton b-roll and any prior 4-ingredient panel close-ups to intercut for pace"
+    ]
   },
-  "MAY25-TT-1": {
-    shoot:["Hands rolling burrito tortilla with butter+cinnamon sugar (overhead)","Willa's Barista pour shot (cloud-pour over the rolls)","Coconut cream small-bowl cameo","Oven-to-plate baked-roll lift","Icing drizzle finale"],
-    found:["Trend reference: @ashleymarkletreats viral tortilla cinnamon roll TikTok (verified MAY 2026 millions of views)","GMA / ABC News Lori Bergamotto piece on the trend (consumer media, safe to reference)","Parade tortilla cinnamon roll recipe + review coverage"],
-    memes:["TikTok-made-me-do-it format — already a viral framing","Dairy-free swap reveal as the calm-authority twist"],
-    archive:["Willa's existing Barista pour b-roll for the cloud-pour shot","Coconut cream + cinnamon sugar cleared product assets"]
+  "JUN01-TT-1":{
+    shoot:[
+      "Slow layered pour of Willa's Original over matcha + ice (the money shot — shoot 3-4 takes for the cleanest ombré)",
+      "Whipping the strawberry cloud: frozen strawberries + coconut cream + splash of Original, thick and pink",
+      "Cloud spooned and floating proud over the rim, gentle wobble",
+      "Carton + 4-ingredient panel held to lens, one clean beat",
+      "Final sip pulling the cloud down through the straw"
+    ],
+    found:[
+      "Jar of Lemons strawberry cloud matcha reference for the look (CP-1)",
+      "Matcha-tok pour/ASMR clips for pacing reference"
+    ],
+    memes:[
+      "Skip — this is a glossy recipe-remix, not a meme format"
+    ],
+    archive:[
+      "Prior Willa's iced-matcha / pour beauty shots if any match the lighting"
+    ]
   },
-  "MAY25-PIN-1": {
-    shoot:["Overhead pin shot: sourdough rhubarb snack cake on vintage plate, Willa's Original carton in corner","Rhubarb sprigs + demerara cameo","Wood counter, golden afternoon light","Single oat groat + flaky salt sparkle"],
-    found:["Trend reference: Pinterest rhubarb recipe search peaking MAY 2026 (engine context only — never quote stat in caption)","Sourdough rhubarb snack cake — multiple BookTok creator versions exist as visual reference","Pinterest weekly trend report MAY 22 (engine context)"],
-    memes:["Static pin → skip memes"],
-    archive:["Willa's existing kitchen-pour b-roll for ambient mood","Vintage plate + linen napkin styling references (heritage tier)"]
+  "JUN02-TT-2":{
+    shoot:[
+      "5am-self deadpan slump at the counter — messy hair, oversized tee, dead-eyed slow blink into camera",
+      "Confident 'Model Pose' flip in the same spot, matcha in hand, slow smirk on the beat",
+      "0.5s insert: Willa's Original pouring into iced matcha, oat swirl into green, condensation"
+    ],
+    found:[
+      "Ramdam 'Model Pose' / DACE transition reference clips for exact beat timing",
+      "Existing #momtok 5am-to-functional morning-arc TikToks for tone calibration"
+    ],
+    memes:[
+      "The 'before/after on the beat' Model Pose transition shell — tired→confident",
+      "'POV: you become a person again' morning-ritual gag format"
+    ],
+    archive:[
+      "Prior Willa's iced-matcha pour B-roll",
+      "Original carton beauty shots / panel close-up for end card"
+    ]
   },
-  "MAY25-IG-R2": {
-    shoot:["Christina at the counter holding Willa's Original — direct-to-camera moment","Close-up: hand traces ingredient panel","Pour shot: Willa's Original into a glass on the counter","Carton + glass final still"],
-    found:["Engine context only — STAT News MAY 22 anti-seed-oil fact-check (not quoted in copy)","MAHA reformulation wave coverage (engine context only)","Willa's seed-oil-free messaging archive"],
-    memes:["Founder-quiet-authority format — Patagonia-style activist content reference","Lead-with-solution structure (carton in beat 1, discourse as backdrop)"],
-    archive:["Willa's existing Christina-at-counter library if any clean takes available","Soft afternoon kitchen daylight b-roll"]
+  "JUN02-IG-R2":{
+    shoot:[
+      "Hands wringing a slimy nut-milk strain bag over a bowl, with a visible drip",
+      "The 'gotcha' tap of a small gum/stabilizer bottle into the homemade bowl",
+      "Slow-mo clean pour of Original over ice in a clear glass, side light",
+      "Carton panel turned to camera so all 4 ingredients are legible"
+    ],
+    found:[
+      "Trending kitchen-DIY audio with a sharp beat drop for the before→after cut",
+      "Reference clips of homemade-oat-milk straining tutorials for pacing (do not reuse footage)"
+    ],
+    memes:[
+      "'me vs the version of me with free time' before/after framing on the strain step"
+    ],
+    archive:[
+      "Existing Original pour b-roll",
+      "Prior 4-ingredient panel close-up shots"
+    ]
   },
-  "MAY25-TT-2": {
-    shoot:["Overhead frozen-strawberry-on-microplane shave shot (ASMR-quality)","Snow-like sorbet piling in white bowl","Willa's Original cloud-pour drizzle","Spoon-dip end-card close-up"],
-    found:["Trend reference: TikTok #shavedfruit (multiple creators May 2026)","SoYummy May 2026 viral-food-hacks roundup","Willa's clean-pour cloud-pour reference shots"],
-    memes:["Shaved-fruit format itself is the meme — ride directly","ASMR satisfying-shave format"],
-    archive:["Willa's existing white-counter pour b-roll for the cloud-pour shot","Frozen strawberry + microplane cleared product assets"]
+  "JUN03-IG-F1":{
+    shoot:[
+      "Macro of the Original back-panel ingredient list, finger tracing the 4 lines",
+      "Original carton standing on a sunlit counter, hand setting it down",
+      "Pour shot into a clear glass for the texture (creamy, no separation)"
+    ],
+    found:[
+      "Stock B-roll of oats being milled/whole vs. processed (for the 'whole oat not oat syrup' beat if needed)"
+    ],
+    memes:[
+      "Static carousel — skip memes"
+    ],
+    archive:[
+      "Past at-shelf Original carton hero stills",
+      "Existing WholePlant explainer graphic if on hand"
+    ]
   },
-  "MAY25-TT-3": {
-    shoot:["8am iced coffee pour shot — Willa's Barista cloud-foam forming over cold espresso","11am same-glass shot — foam intact, condensation","Counter staging with laptop in soft window light","Spoon-dip end-card close-up"],
-    found:["Trend reference: TikTok 'will it survive' makeup-endurance format (multiple creators May 2026)","SocialPilot May 2026 TikTok trends roundup"],
-    memes:["'Will it survive' format itself — direct ride","Pattern 03 relatable confession + Pattern 10 wordplay overlay"],
-    archive:["Willa's existing cold-foam pour library","Morning-meeting + laptop counter styling references"]
+  "JUN03-TT-3":{
+    shoot:[
+      "Lone Willa's carton in a sun-glared back seat, heat shimmer + dashboard glare",
+      "Slow push-in on the abandoned carton for the somber beat",
+      "Hands lifting the carton out of the hot car (the rescue)",
+      "Fridge door opening, carton placed next to Original, Kids, and Chocolate (no Barista — not a latte story)",
+      "End-card: carton in cold fridge glow with condensation forming"
+    ],
+    found:[
+      "Old-school public-service-announcement / emergency-broadcast title cards for the deadpan styling reference",
+      "Heat-shimmer-over-asphalt stock for the hot-car cutaway"
+    ],
+    memes:[
+      "Fishwife's reality-TV \"relationship status\" parody post as the tone reference (CP-2)",
+      "\"This has been a message from...\" deadpan PSA voiceover trend"
+    ],
+    archive:[
+      "Prior Willa's fridge-door / Original + Kids + Chocolate flavor-lineup b-roll if available for the Multi cameo"
+    ]
   },
-  "MAY25-IG-R3": {
-    shoot:["Soft late-morning kitchen counter establishing","Willa's Original over cold espresso + ice pour shot (slow)","Peach slicing on cutting board","Sourdough toast with butter + flaky salt","Hands wrapped around iced glass end-card"],
-    found:["Audio reference: Bleachers MAY 22 self-titled album (NPR + Indy Review confirmed)","Cup of Jo Saturday-morning aesthetic content as visual reference","Willa's morning-ritual b-roll archive"],
-    memes:["No meme format — letterboxed cinematic content, not meme-riffing","Slow, intentional cuts (no rush)"],
-    archive:["Willa's existing late-morning b-roll if any cinematic takes","Peach + sourdough + flaky salt styling references"]
+  "JUN04-IG-R3":{
+    shoot:[
+      "POV mom hands setting the tray onto a kid-height counter, carton front-label in frame",
+      "Pour ASMR: Willa's Kids glugging into a paper cup",
+      "Kids self-serving — scooping frozen fruit, spooning dairy-free yogurt, dropping in a straw",
+      "The exhale payoff: mom backing away with coffee, flopping on couch, eyes closed",
+      "Clean carton-forward end-card frame, Willa's Kids centered"
+    ],
+    found:[
+      "Trend reference (TikTok): https://www.tiktok.com/discover/kids-home-for-summer-snacks — May 2026 build-your-own plate/station cluster; use top videos for format reference + hook patterns",
+      "Summer-survival 'kids home all day' creator audio trends"
+    ],
+    memes:[
+      "'mom after she set up a station the kids run themselves' relief-flop format"
+    ],
+    archive:[
+      "Past Willa's Kids carton beauty shots",
+      "Any prior kid-family-moment kitchen B-roll with good summer light"
+    ]
   },
-  "MAY25-IG-R4": {
-    shoot:["Twilight back-patio dinner table establishing","Espresso pour + Willa's Original drizzle (cream swirl visible)","Two pairs of hands on table — laughter implied","Golden-hour end-card cup + carton"],
-    found:["Cultural reference: The Four Seasons S2 Netflix MAY 28 (do NOT name in copy — let the post-premiere audience make the connection)","Hollywood Reporter S1 review for tonal calibration","Cup of Jo dinner-party content aesthetic"],
-    memes:["No meme format — letterboxed editorial heritage content","Pattern 02 cultural tie-in (timing only — no name-check)"],
-    archive:["Willa's existing dinner-table or evening-pour b-roll if any","Golden-hour back-patio styling references"]
+  "JUN04-TT-4":{
+    shoot:[
+      "Golden-hour kitchen pour of Willa's Kids into a small cup, hands only",
+      "The handoff: parent's hand carrying the cup past older kids to the littlest one first",
+      "Little one taking the cup with both hands and immediately drinking, content",
+      "Quick glance-cut of the Kids carton on the counter, panel readable"
+    ],
+    found:[
+      "Soft warm-morning family-kitchen lo-fi audio trending on TikTok",
+      "Wholesome wordless 'taking care of the smallest one' family clips for tone reference"
+    ],
+    memes:[
+      "The broader 'protect the tiny one / smallest gets the good stuff' wholesome internet energy (CP-4 Grogu adjacency) — reference for tone only, never on screen"
+    ],
+    archive:[
+      "Past Willa's Kids family-moment morning footage",
+      "Existing Kids carton / panel b-roll"
+    ]
   },
-  "MAY25-TT-4": {
-    shoot:["Clean overhead wood counter — Willa's Original + glass + oat groat","Hands pour Willa's Original into glass (slow swirl)","Stinger end-card still"],
-    found:["Trend reference: AI Food exploding-burrito meme TikTok (multiple variants May 2026, per Turrboo trend report)","Search '#aifood' on TikTok for green-screen footage to stitch","Turrboo May 2026 trends roundup"],
-    memes:["AI Food meme is the format itself — direct stitch","Hard-cut chaos-to-calm transition"],
-    archive:["Willa's existing pour-and-oat-groat b-roll","Wood-counter morning-light reference"]
+  "JUN05-IG-R4":{
+    shoot:[
+      "Close hands flipping Willa's Kids carton to the back panel, held steady so panel text is genuinely readable on camera — triumphant, not squinting",
+      "Willa's Kids panel lit and framed so every proof point is legible",
+      "Pour into a glass + small hand reaching into frame (no face)"
+    ],
+    found:[
+      "B-roll of grocery-aisle plant-milk shelf for opening context",
+      "Generic UI tick/checkmark animation reference for the scan beat"
+    ],
+    memes:[
+      "The 'mom flips the carton, nods, it goes in the cart' satisfying beat — inverse of the squint-and-put-back"
+    ],
+    archive:[
+      "Prior Willa's Kids panel close-ups",
+      "Existing brand kitchen-counter lighting setups"
+    ]
   },
-  "MAY25-IG-F1": {
-    shoot:["Stylized US map graphic (Willa's-branded)","Willa's Original carton hero on cream background","Back-of-pack ingredient panel close-up","Cert-stack badge layout (Yuka 100, USDA, Detox Project, etc.)"],
-    found:["State-by-state food chemical regulation context (build Willa's-branded visual, don't reproduce others')","Consumer Reports state dye coverage (engine context)","Multi-state synthetic dye + glyphosate + UPF coverage (context)"],
-    memes:["Static carousel → skip memes"],
-    archive:["Willa's existing cert-stack badge library","Stylized US-map graphic templates"]
+  "JUN05-TT-5":{
+    shoot:[
+      "Macro scrape pulling a glossy chocolate ribbon up the loaf-pan edge — the money shot, get 6 takes",
+      "Overhead pour of Willa's Chocolate into the bowl with natural glug audio",
+      "Slow maple drizzle and whisk-whirr sequence with tiny lowercase ingredient labels",
+      "Final scoop landing in a bowl with the carton styled beside it for the end card"
+    ],
+    found:[
+      "Reference ASMR cadence/pacing from the Dot Cake / sprinkle-scrape format (format only, do NOT recreate the candy product)",
+      "Macro no-churn frozen-fudge texture references for the curl shape"
+    ],
+    memes:[
+      "Skip — this is a texture/ASMR brief, not a meme payload"
+    ],
+    archive:[
+      "Prior Willa's Chocolate carton beauty shots",
+      "Any past clean-kitchen B-roll with warm summer light for cutaways"
+    ]
   },
-  "MAY25-IG-R5": {
-    shoot:["Christina at the counter holding Willa's Original — direct-to-camera","Cert badge close-ups (USDA, Detox Project, WBENC, Yuka 100)","Carton + glass end-card still"],
-    found:["Engine context only — Elmhurst Clean Protein nationwide at Sprouts (do NOT name in copy)","BevNET + Dairy Foods Elmhurst coverage (engine reference)"],
-    memes:["Founder-authority format — Patagonia-style mission gravity","Pattern 06 founder humanization"],
-    archive:["Willa's existing cert-badge library + Christina-at-counter footage","USDA + Detox Project + WBENC + Yuka 100 cleared logo assets"]
+  "JUN06-PIN-1":{
+    shoot:[
+      "Overhead 3/4 hero of the finished iced matcha with strawberry cloud, condensation and natural light",
+      "Flat-lay of the four Original ingredients labeled beside the carton with a '1g sugar' chip",
+      "The strawberry-cloud spoon-drag / pour moment for the keeper recipe shot"
+    ],
+    found:[
+      "Jar of Lemons strawberry cloud matcha reference for styling the cloud (rebuild dairy-free)",
+      "General summer iced-matcha-at-home Pinterest styling refs for bright cafe aesthetic"
+    ],
+    memes:[
+      "Static pin — skip memes"
+    ],
+    archive:[
+      "Past Willa's Original carton + panel shots",
+      "Prior summer iced-drink recipe pins for consistent grid look"
+    ]
   },
-  "MAY25-IG-F2": {
-    shoot:["Real toddler lunchbox staging (turkey + Violife provolone slice OR Good Plants dairy-free cheese + clementine + baby carrots + Willa's Kids drink)","Willa's Kids carton hero on cream background","State-by-state stylized visual graphic","Kids-specific cert-stack badge layout"],
-    found:["Engine context only — state-by-state UPF-in-schools regulatory moves (don't quote trade-press sources in caption)","Multi-state school-lunch + ingredient legislation coverage (engine reference)"],
-    memes:["Static carousel → skip memes"],
-    archive:["Willa's existing Kids carton library + cert badges","Real-lunchbox staging references (parent-creator aesthetic)"]
-  },
-  "MAY25-TT-5": {
-    shoot:["Overhead: Willa's Chocolate carton + ingredient cameo (cacao powder bowl, oat groat, sea salt)","Slow pan across each ingredient","Willa's Chocolate pour shot into clear glass — deep-brown swirl","End card with Good Food Awards badge"],
-    found:["No external trend reference — evergreen flavor-hero content","Willa's Chocolate product photography + Good Food Awards badge"],
-    memes:["No meme format — letterboxed editorial heritage content"],
-    archive:["Willa's Chocolate existing pour-shot b-roll + Good Food Awards badge","Real-cacao + organic-oat ingredient styling references"]
-  },
-  "MAY25-PIN-2": {
-    shoot:["Overhead pin shot — clear glass + cold espresso + Willa's Barista pour shot","Cloud-foam swirl visible","Willa's Barista carton partly cropped in corner","Pinterest-native serif typography header overlay"],
-    found:["No external trend reference — evergreen iced-coffee Pinterest SEO content"],
-    memes:["Static pin → skip memes"],
-    archive:["Willa's existing iced-coffee pour b-roll","White marble counter styling references"]
-  },
-  "MAY25-PIN-3": {
-    shoot:["Overhead pin shot — strawberry-and-cream-layered icebox cake on cutting board, layers visible","Willa's Original carton + small bowl of coconut cream partly cropped in corner","Fresh strawberries scattered around plate","Serif typography header overlay"],
-    found:["No external trend reference — evergreen strawberry-season Pinterest SEO content"],
-    memes:["Static pin → skip memes"],
-    archive:["Willa's existing summer dessert library","Strawberry season styling references"]
-  },
-  "MAY25-TT-6": {
-    shoot:["POV at Sprouts shelf — phone-held shot of the natural-milk aisle (find a Sprouts location nearby)","Slow pan across the 4 Willa's cartons on the shelf","Hand pickup + back-label turn","Carton-in-hand end-card with shelf behind"],
-    found:["Willa's existing 'found at sprouts' UGC if available","Sprouts at-shelf context (Willa's primary natural-channel retailer — evergreen)"],
-    memes:["At-shelf POV format — Pattern 09 IRL aesthetic"],
-    archive:["Willa's previous in-store visit footage","Sprouts shelf-aesthetic references"]
-  },
-  "MAY25-IG-F3": {
-    shoot:["Vintage-style grandmother-era photo (1921 kitchen or stylized period image)","Modern Willa's Original carton on cream background","Ingredient panel close-up","Cert badge layout (USDA, Detox Project, WBENC, Yuka 100)"],
-    found:["Willa's existing grandmother Willa heritage photos (per CLAUDE.md, 'my grandmother was making oatmeal way before it was cool')","Library of Congress / Prelinger Archive for period 1921-era kitchen imagery"],
-    memes:["Static carousel → skip memes"],
-    archive:["Willa's full heritage photo + cert badge library","Period 1921-era kitchen photo references (Library of Congress)"]
-  },
-  "MAY25-TT-7": {
-    shoot:["Cofounder-sister at counter — direct-to-camera moment (NOT Christina)","Pour Willa's Kids into kid's glass (kid face out of frame)","Pour same carton into iced coffee — cloud-swirl visible","End card: two glasses side by side"],
-    found:["No external trend reference — evergreen Kids-crossover content per CLAUDE.md adult-crossover rule","Willa's Kids existing crossover content"],
-    memes:["Pattern 03 confessional format — universal relatability"],
-    archive:["Willa's existing cofounder-sister footage if available","Real-kitchen Sunday-morning aesthetic references"]
+  "JUN07-PIN-2":{
+    shoot:[
+      "Flat-lay snack station: bowls of fruit + oat clusters + a poured glass of Willa's Kids, kid-hands reaching in",
+      "Clean close-up of the Willa's Kids on-pack panel next to the white checklist card",
+      "Pour shot of Willa's Kids into a kid-sized glass on a lived-in counter"
+    ],
+    found:[
+      "USA Today avoid-list framing as background context only (do not screenshot competitor brands)",
+      "#momtok build-your-own snack-station reference setups for layout inspo"
+    ],
+    memes:[
+      "Static pin — skip memes"
+    ],
+    archive:[
+      "Prior Willa's Kids panel/checklist graphic for consistent checkmark styling",
+      "Existing snack-station or kid-moment photography from the brand library"
+    ]
   }
 };
 BRIEFS.forEach(b => { b.footageInspo = BRIEF_FOOTAGE_INSPO[b.id] || null; });
@@ -2661,7 +2949,7 @@ function CommandPalette({open, onClose, index, onSelect}){
   );
 }
 
-function HowItWorks({open, onClose}){
+function HowItWorks({open, onClose, onOpenReference}){
   const [selectedId,setSelectedId] = useState("trend");
   const intervalRef = React.useRef(null);
 
@@ -2704,7 +2992,14 @@ function HowItWorks({open, onClose}){
           <div>
             <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">HOW IT WORKS</div>
             <h2 className="font-serif text-[28px] leading-none tracking-tight">A self-driving social department. Not a dashboard.</h2>
-            <p className="text-[12px] text-[var(--muted)] mt-2 max-w-2xl">{AGENTS.length} specialized agents, 4 leads, 1 command layer. Click any agent to see what it scrapes, what it decides, and who it hands off to.</p>
+            <p className="text-[12px] text-[var(--muted)] mt-2 max-w-2xl">{AGENTS.length} specialized agents, 4 leads, 1 command layer. Click any agent to see what it scrapes, what it decides, and who it hands off to. Every brief now ships with a conviction score + a synthetic-panel read; the Monday Memo and Diagnostic Inbox keep you in the loop.</p>
+            <div className="flex flex-wrap items-center gap-1.5 mt-3">
+              <span className="font-mono text-[8.5px] tracking-[0.15em] text-[var(--muted)] mr-0.5">SURFACES:</span>
+              {["Conviction score","The Tasting Table","Monday Memo","Diagnostic Inbox"].map(s=>(
+                <span key={s} className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full" style={{background:"#FFFEF7",border:"1px solid #E8E1C2",color:"#9E652E"}}>{s}</span>
+              ))}
+              <button onClick={()=>{ if(onOpenReference) onOpenReference(); }} className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full border hover:bg-[#F6F6F0] transition" style={{borderColor:"#D9D0BD",color:"#202A44"}}>↗ Proven Formats · {TOP_PERFORMER_DNA.length} formats · {BENEFIT_SHORTHAND.length} stingers</button>
+            </div>
           </div>
           <button onClick={onClose} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)] px-3 py-2 border border-[var(--border)] rounded bg-white">CLOSE ✕</button>
         </div>
@@ -2843,10 +3138,7 @@ function CulturalPulseCard({p, nav}){
 
       {/* Willa's play — amber callout box (2026-05-17 visual upgrade per Christina:
           the action line should stand apart from the analytical detail.) */}
-      <div className="mt-4 p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
-        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S PLAY</div>
-        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{p.willasPlay}</p>
-      </div>
+      <ActionBox label="WILLA'S PLAY" content={p.willasPlay}/>
 
       {briefIds.length>0 && (
         <div className="mt-4 pt-3 border-t border-[var(--border)]">
@@ -2858,6 +3150,17 @@ function CulturalPulseCard({p, nav}){
       )}
 
       <Sources list={p.sources}/>
+    </div>
+  );
+}
+
+// Amber "here's the move" callout shared by Trend / Pulse / Competitor cards —
+// one source of truth so WILLA'S ANGLE / PLAY / OPPORTUNITY render identically.
+function ActionBox({label, content, className}){
+  return (
+    <div className={(className||"mt-4")+" p-3 rounded-md"} style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
+      <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ {label}</div>
+      <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{content}</p>
     </div>
   );
 }
@@ -3044,6 +3347,21 @@ function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}
         </button>
       </div>
 
+      {/* Diagnostic Inbox — its own standalone button (Maazah-style), the founder-input channel */}
+      <div className="px-3 pt-2">
+        <button onClick={()=>setSection("diagnostic")}
+          className={"w-full px-3 py-2.5 rounded-md border transition text-left flex items-center justify-between gap-2 "+(section==="diagnostic"?"":"hover:bg-[#FFFEF7]")}
+          style={{background: section==="diagnostic"?"#202A44":"#FFFFFF", borderColor: section==="diagnostic"?"#202A44":"#D9D0BD"}}>
+          <div className="min-w-0">
+            <div className={"font-mono text-[9px] tracking-wider flex items-center gap-1.5 "+(section==="diagnostic"?"text-white":"text-[var(--ink)]")}>
+              <span>📥</span> DIAGNOSTIC INBOX
+            </div>
+            <div className={"font-mono text-[8.5px] tracking-wider mt-0.5 "+(section==="diagnostic"?"text-white/70":"text-[var(--muted)]")}>tell the engine what it can't see</div>
+          </div>
+          <span className={"font-mono text-[11px] "+(section==="diagnostic"?"text-white":"text-[var(--ink)]")}>→</span>
+        </button>
+      </div>
+
       <nav className="p-2.5 flex flex-col gap-1 mt-2">
         {[
           {id:"intel",label:"Intelligence Brief", icon:"📡", sub:"What happened on the internet this week"},
@@ -3073,14 +3391,6 @@ function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}
 
       {/* Utility buttons — always available, regardless of which tab is active */}
       <div className="px-3 pb-3 grid gap-1.5">
-        <button onClick={onOpenReference}
-          className="w-full px-3 py-2 rounded-md border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-left flex items-center justify-between gap-2">
-          <div>
-            <div className="font-mono text-[9px] tracking-wider text-[var(--ink)]">PROVEN FORMATS</div>
-            <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-0.5">{TOP_PERFORMER_DNA.length} formats · {BENEFIT_SHORTHAND.length} stingers</div>
-          </div>
-          <span className="font-mono text-[10px] text-[var(--muted)]">↗</span>
-        </button>
         <button onClick={onHowItWorks}
           className="w-full px-3 py-2 rounded-md border border-[var(--border)] bg-white hover:bg-[#F6F6F0] transition text-left flex items-center justify-between gap-2">
           <div>
@@ -3163,10 +3473,7 @@ function TrendCard({t,focused,nav}){
       <p className="text-[12.5px] text-[#334155] leading-relaxed">{t.detail}</p>
 
       {/* Willa's angle — amber callout box (consistent with Pulse + Competitor cards) */}
-      <div className="mt-5 p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
-        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S ANGLE</div>
-        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{t.angle}</p>
-      </div>
+      <ActionBox label="WILLA'S ANGLE" content={t.angle} className="mt-5"/>
 
       {briefIds.length>0 && (
         <div className="mt-5 pt-4 border-t border-[var(--border)]">
@@ -3218,10 +3525,7 @@ function CompetitorCard({c,focused,nav}){
       <p className="text-[12px] text-[#334155] leading-relaxed mb-4">{c.status}</p>
 
       {/* Willa's opportunity — amber callout box (consistent with Pulse + Trend cards) */}
-      <div className="p-3 rounded-md" style={{background:"#FFFBEB", borderLeft:"3px solid var(--amber)"}}>
-        <div className="font-mono text-[9px] tracking-[0.18em] mb-1.5" style={{color:"var(--amber)"}}>★ WILLA'S OPPORTUNITY</div>
-        <p className="text-[12.5px] italic text-[#202A44] leading-relaxed">{c.opportunity}</p>
-      </div>
+      <ActionBox label="WILLA'S OPPORTUNITY" content={c.opportunity} className="mt-0"/>
 
       {briefIds.length>0 && (
         <div className="mt-4 pt-3 border-t border-[var(--border)]">
@@ -3318,7 +3622,7 @@ function CompSection({label, counter, lede, children}){
   return (
     <div className="mb-8 last:mb-0">
       <div className="flex items-center justify-between mb-2 pb-2 border-b border-[var(--border)]">
-        <div className="font-mono text-[11px] tracking-[0.22em] text-[#202A44]">{label}</div>
+        <div className="font-mono text-[10px] tracking-[0.18em] text-[#9E652E]">{label}</div>
         <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">{counter}</div>
       </div>
       {lede && (
@@ -3371,6 +3675,7 @@ function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
       <div className="flex-1 overflow-y-auto scrollbar px-8 py-4">
         {tab==="trends" && (
           <div className="max-w-[1400px]">
+            <p className="text-[12.5px] text-[#334155] leading-snug mb-4">Category, policy + trade signals shaping the conversation — each with the Willa's angle and real, dated sources.</p>
             {/* RIDE NOW section */}
             <div className="flex items-center justify-between mb-3">
               <div className="font-mono text-[10px] tracking-[0.18em] text-[var(--red)] flex items-center gap-2"><span className="pulse-dot"></span> RIDE NOW · ACT THIS WEEK</div>
@@ -3403,9 +3708,7 @@ function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
               <div className="font-mono text-[10px] tracking-[0.18em] text-[#9E652E] flex items-center gap-2 mb-1.5">
                 <span className="pulse-dot"></span> CULTURAL PULSE
               </div>
-              <p className="text-[12.5px] text-[#334155] leading-relaxed max-w-2xl">
-                Viral recipes, memes, celebrity moments, and misinformation Willa's can ride or rebut this week. Each hook comes with a Willa's Play you can turn into a brief fast.
-              </p>
+              <p className="text-[12.5px] text-[#334155] leading-snug">Viral, meme, entertainment + peer-brand moments Willa's can ride this week — each with a Play you can ship fast.</p>
             </div>
             <div className="xl:columns-2 gap-3 [column-fill:_balance] mb-6">
               {CULTURAL_PULSE.map(p => (
@@ -3418,6 +3721,7 @@ function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
         )}
         {tab==="comp" && (
           <div className="max-w-[1400px]">
+            <p className="text-[12.5px] text-[#334155] leading-snug mb-4">Where the category's moving and how Willa's responds — category-level reads, never a named attack.</p>
             {/* Section 1 — WILLA'S PLAYS: per-competitor response cards. Leads with ACTION.
                 Removed lede block 2026-05-18 per Christina — too text-heavy, stale fast. */}
             <CompSection
@@ -3496,6 +3800,7 @@ function BriefListItem({b,active,onClick,variant}){
   const driverColor = b.fromStudio ? "#9E652E" : drivenTrend ? "#73B2C9" : drivenPulse ? (drivenPulse.typeColor || "#9E652E") : drivenComp ? "#DC2626" : "#94A3B8";
   const driverType  = b.fromStudio ? "FROM THE STUDIO" : drivenTrend ? "CATEGORY TREND" : drivenPulse ? "CULTURAL PULSE" : drivenComp ? "COMPETITOR MOVE" : "ENGINE";
   const driverText  = b.fromStudio ? (b._drivenBy || "Your idea, riffed with the strategist") : drivenTrend ? drivenTrend.trend : drivenPulse ? drivenPulse.hook : drivenComp ? drivenComp.name : "Evergreen · brand pillar";
+  const conv = getConviction(b);
 
   const isHero    = variant === "hero";
   const isCompact = variant === "compact";
@@ -3506,14 +3811,17 @@ function BriefListItem({b,active,onClick,variant}){
   if (isCompact) {
     return (
       <button onClick={onClick}
-        className={"group text-left w-full card fade-in transition overflow-hidden p-3.5 flex flex-col gap-2 "+
+        className={"group text-left w-full card fade-in transition p-3.5 flex flex-col gap-2 "+
           (active ? "ring-2 ring-[#202A44] shadow-lg" : "hover:border-[#cfcfc8] hover:shadow-md")}>
         <div className="flex items-center justify-between gap-2">
           <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] flex items-center gap-1 min-w-0">
             <span className="text-[11px]">{PLATFORM_EMOJI[b.platform]||"•"}</span>
             <span className="truncate">{b.platform.toUpperCase()}{b.timing ? " · "+b.timing.split(" · ")[0].toUpperCase() : ""}</span>
           </span>
-          <PriorityBadge p={b.priority}/>
+          <span className="flex items-center gap-1.5 shrink-0">
+            {conv && <ConvictionChip conv={conv} size="sm"/>}
+            <PriorityBadge p={b.priority}/>
+          </span>
         </div>
         <p className="font-serif text-[13px] italic leading-snug text-[#202A44] line-clamp-4 flex-1">"{recHook}"</p>
         <div className="flex items-center justify-between gap-2 pt-2 border-t border-[var(--border)]">
@@ -3528,7 +3836,7 @@ function BriefListItem({b,active,onClick,variant}){
   // and bumps the hook text size; default is the existing compact-ish grid card.
   return (
     <button onClick={onClick}
-      className={"group text-left w-full card fade-in transition overflow-hidden "+
+      className={"group text-left w-full card fade-in transition "+
         (isHero ? "border-[1.5px] border-[#D4CEC0] " : "") +
         (active ? "ring-2 ring-[#202A44] shadow-lg" : "hover:border-[#cfcfc8] hover:shadow-md")}>
 
@@ -3539,7 +3847,10 @@ function BriefListItem({b,active,onClick,variant}){
             <span className="text-[13px]">{PLATFORM_EMOJI[b.platform]||"•"}</span>
             <span className="truncate">{b.platform.toUpperCase()}{isHero && b.timing ? " · "+b.timing.toUpperCase() : ""}</span>
           </span>
-          <PriorityBadge p={b.priority}/>
+          <span className="flex items-center gap-1.5 shrink-0">
+            {conv && <ConvictionChip conv={conv} size={isHero?undefined:"sm"}/>}
+            <PriorityBadge p={b.priority}/>
+          </span>
         </div>
 
         {/* Hero cards lead with the concept title (what the brief IS) above the hook (what it SAYS). */}
@@ -3556,7 +3867,7 @@ function BriefListItem({b,active,onClick,variant}){
       </div>
 
       {/* Driver section — made prominent per 2026-04-17 feedback. */}
-      <div className={"border-t border-[var(--border)] bg-[#FAFAF7] "+(isHero ? "px-5 py-4" : "px-4 py-3.5")}>
+      <div className={"border-t border-[var(--border)] bg-[#FAFAF7] rounded-b-[10px] "+(isHero ? "px-5 py-4" : "px-4 py-3.5")}>
         <div className="flex items-start gap-3">
           <div className="w-[3px] self-stretch rounded-full shrink-0" style={{background:driverColor}}></div>
           <div className="flex-1 min-w-0">
@@ -3885,6 +4196,163 @@ ${intelLines ? "**Why now / intel:** " + intelLines : ""}`;
   );
 }
 
+// PanelScore — the 1-10 reaction pill, color-banded like conviction.
+function PanelScore({score}){
+  const band = score>=8?"#4E8C63":score>=5?"#B8862F":"#C2674A";
+  const bg   = score>=8?"#EAF3EC":score>=5?"#F7EFD9":"#F7E3DD";
+  return (
+    <span className="inline-flex items-baseline gap-0.5 px-2 py-1 rounded-full shrink-0" style={{background:bg}}>
+      <span className="font-serif text-[16px] leading-none" style={{color:band}}>{score}</span>
+      <span className="font-mono text-[8px] tracking-wider" style={{color:band,opacity:0.78}}>/10</span>
+    </span>
+  );
+}
+
+// WillasPanel — the live synthetic-panel pre-test inside a brief. Click to run
+// it against /api/panel (Claude). Renders 4 persona cards with a 1-10 score, a
+// reaction quote, and an optional edit, plus the table's one-line read. Distinct
+// from the static conviction "panel" number — this is the live, on-demand read.
+function WillasPanel({brief}){
+  const [data,setData] = useState(null);
+  const [loading,setLoading] = useState(false);
+  const [requested,setRequested] = useState(false);
+  const [error,setError] = useState(null);
+  useEffect(()=>{ setData(null); setLoading(false); setRequested(false); setError(null); }, [brief && brief.id]);
+
+  async function run(){
+    if(loading) return;
+    setRequested(true); setLoading(true); setError(null);
+    try{
+      const res = await fetch("/api/panel", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({brief})});
+      if(!res.ok){ const t = await res.text(); throw new Error((t||"").slice(0,160) || ("HTTP "+res.status)); }
+      const d = await res.json();
+      if(!d || !d.reactions) throw new Error("Panel returned no reactions.");
+      setData(d);
+    }catch(e){ setError(e.message || "Panel run failed."); }
+    finally{ setLoading(false); }
+  }
+
+  const avg = data ? Math.round((data.reactions.reduce((a,r)=>a+(r.score||0),0)/data.reactions.length)*10)/10 : null;
+  const avgColor = avg==null?null:(avg>=8?"#4E8C63":avg>=5?"#B8862F":"#C2674A");
+
+  return (
+    <BriefBlock label="THE TASTING TABLE">
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <div className="min-w-0">
+          <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)]">// 4 SYNTHETIC CUSTOMERS · BRIEF PRE-TEST</div>
+          <div className="text-[13px] text-[#202A44] mt-0.5">How the table reads this before it ships</div>
+        </div>
+        {avg!=null && (
+          <span className="inline-flex items-baseline gap-1 px-2.5 py-1 rounded-full shrink-0" style={{border:"1.5px solid "+avgColor}}>
+            <span className="font-serif text-[18px] leading-none" style={{color:avgColor}}>{avg}</span>
+            <span className="font-mono text-[8.5px] tracking-wider" style={{color:avgColor}}>/10 avg</span>
+          </span>
+        )}
+      </div>
+
+      {!requested && (
+        <button onClick={run} className="w-full flex items-start gap-3 p-4 rounded-lg border border-dashed text-left transition hover:bg-[#FFFEF7]" style={{borderColor:"#D4CEC0", background:"#FAFAF7"}}>
+          <span className="text-[20px] shrink-0">👥</span>
+          <span>
+            <span className="block text-[13.5px] text-[#202A44] font-medium leading-snug">Pressure-test this brief against the 4-person table</span>
+            <span className="block text-[12px] text-[var(--muted)] leading-snug mt-1">Maya (clean-label mom) · Jordan (shelf convert) · Devon (category-curious foodie) · Sam (kid-utility parent). Each scores it 1-10 with a reaction + an edit. ~3-6 seconds.</span>
+            <span className="inline-block font-mono text-[9px] tracking-wider mt-2.5 px-2.5 py-1 rounded text-white" style={{background:"#202A44"}}>RUN THE PANEL →</span>
+          </span>
+        </button>
+      )}
+
+      {error && (
+        <div className="px-4 py-2.5 rounded-md bg-[#FEE2E2] text-[12px] text-[#991B1B] leading-snug">⚠ {error} <button onClick={run} className="underline ml-1">retry</button></div>
+      )}
+
+      {(requested && !error) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+          {WILLAS_PANEL.map(p=>{
+            const r = data && data.reactions.find(x=> (x.persona||"").toLowerCase()===p.name.toLowerCase());
+            return (
+              <div key={p.id} className="card p-3.5" style={{background:"#FFFEF7", borderColor:"#E8E1C2"}}>
+                <div className="flex items-center gap-2.5 mb-2">
+                  <span className="text-[20px] shrink-0">{p.emoji}</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-[13px] text-[#202A44] font-medium leading-none">{p.name} <span className="text-[var(--muted)] font-normal">· {p.age}</span></div>
+                    <div className="font-mono text-[8px] tracking-wider text-[var(--muted)] mt-1">{p.label} · {p.city}</div>
+                  </div>
+                  {r ? <PanelScore score={r.score}/> : loading ? <span className="font-mono text-[12px] text-[var(--muted)] shrink-0 animate-pulse">···</span> : null}
+                </div>
+                {r ? (
+                  <>
+                    <p className="font-serif italic text-[13px] text-[#202A44] leading-snug">"{r.reaction}"</p>
+                    {r.suggested_edit && r.suggested_edit!=="null" && r.suggested_edit!==null && (
+                      <p className="text-[11.5px] text-[#334155] leading-snug mt-2 pt-2 border-t border-[var(--border)]"><span className="font-mono text-[8.5px] tracking-wider text-[#9E652E] mr-1">+ EDIT</span>{r.suggested_edit}</p>
+                    )}
+                  </>
+                ) : loading ? (
+                  <div className="h-[38px] rounded bg-[#F1EFE7] animate-pulse"></div>
+                ) : null}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {data && data.headline_insight && (
+        <div className="mt-3 pl-3.5 border-l-[3px] text-[13px] text-[#202A44] leading-snug" style={{borderColor:"#9E652E"}}>
+          <span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] block mb-1">THE TABLE'S READ</span>
+          {data.headline_insight}
+        </div>
+      )}
+    </BriefBlock>
+  );
+}
+
+// MeetThePanel — the published roster. Names the scorers behind the "Synthetic
+// Panel" leg of every conviction score, with the panel→conviction math visible.
+function MeetThePanel(){
+  const [open,setOpen] = useState(false);
+  return (
+    <div className="card overflow-hidden mb-5">
+      <button onClick={()=>setOpen(o=>!o)} className="w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left hover:bg-[#FFFEF7] transition">
+        <div className="flex items-center gap-3 min-w-0">
+          <span className="text-[18px] shrink-0">👥</span>
+          <div className="min-w-0">
+            <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)]">THE TASTING TABLE · 4 SYNTHETIC CUSTOMERS</div>
+            <div className="text-[14px] text-[#202A44] leading-snug">Who reads every brief — before it ships</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="hidden md:flex items-center gap-1">{WILLAS_PANEL.map(p=><span key={p.id} className="text-[16px]">{p.emoji}</span>)}</span>
+          <span className="font-mono text-[10px] text-[var(--muted)]">{open?"▲ HIDE":"▼ MEET THEM"}</span>
+        </div>
+      </button>
+      {open && (
+        <div className="px-5 pb-5 pt-1 fade-in border-t border-[var(--border)]">
+          <p className="text-[12.5px] text-[var(--muted)] leading-relaxed my-3">Every brief is pressure-tested against four calibrated synthetic readers, each tuned to a different layer of Willa's audience. Their consensus rolls into the <span className="text-[#202A44] font-medium">Synthetic Panel</span> leg of the conviction score (alongside Voice Compass + Pulse fit). Open any brief and hit <span className="font-mono text-[10px] text-[#202A44]">RUN THE PANEL</span> to hear them live.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+            {WILLAS_PANEL.map(p=>(
+              <div key={p.id} className="rounded-md border border-[var(--border)] bg-[#FAFAF7] p-3.5">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <span className="text-[22px] shrink-0">{p.emoji}</span>
+                  <div className="min-w-0">
+                    <div className="text-[13.5px] text-[#202A44] font-medium leading-none">{p.name} <span className="text-[var(--muted)] font-normal">· {p.age} · {p.city}</span></div>
+                    <div className="font-mono text-[8.5px] tracking-wider text-[#9E652E] mt-1.5">{p.label}</div>
+                  </div>
+                </div>
+                <div className="text-[12px] text-[#475569] italic leading-snug mb-2">{p.role}</div>
+                <div className="text-[11.5px] text-[#202A44] leading-snug"><span className="font-mono text-[8px] tracking-wider text-[#4E8C63] mr-1">▲ CARES</span>{p.cares}</div>
+                <div className="text-[11.5px] text-[#64748B] leading-snug mt-1.5"><span className="font-mono text-[8px] tracking-wider text-[#C2674A] mr-1">▽ SOFT ON</span>{p.softOn}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 rounded-md bg-[#FFFEF7] border border-[#E8E1C2] px-4 py-3">
+            <div className="font-mono text-[8.5px] tracking-[0.16em] text-[var(--muted)] mb-1">PANEL → CONVICTION</div>
+            <div className="font-mono text-[11px] text-[#202A44] leading-relaxed">avg(4 readers, 1-10) → /100 → averaged with Voice Compass + Pulse fit → + recency bonus → <span className="font-semibold">conviction score</span></div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function BriefDetail({b,nav}){
   const [showAltHooks,setShowAltHooks] = useState(true);
   const [activeFrame,setActiveFrame] = useState(0);
@@ -3898,6 +4366,7 @@ function BriefDetail({b,nav}){
   const drivenComps = (links.comps ||[]).map(id=>COMP_BY_ID[id]).filter(Boolean);
   const recommendedHook = b.hooks.find(h=>h.recommended) || b.hooks[0];
   const altHooks = b.hooks.filter(h=>h!==recommendedHook);
+  const conv = getConviction(b);
 
   return (
     <div className="card p-7 fade-in" key={b.id}>
@@ -3924,6 +4393,7 @@ function BriefDetail({b,nav}){
               {b.pillar}
             </span>
             {b.dnaPattern && <DnaChip patternId={b.dnaPattern}/>}
+            {conv && <ConvictionChip conv={conv}/>}
           </div>
           <button
             onClick={()=> setRiffOpen(o => !o)}
@@ -4156,6 +4626,9 @@ function BriefDetail({b,nav}){
         )}
       </BriefBlock>
 
+      {/* THE TASTING TABLE — live synthetic-panel pre-test */}
+      <WillasPanel brief={b}/>
+
       {/* AMPLIFY */}
       {AMPLIFY_PLANS[b.id] && <AmplifyBlock plan={AMPLIFY_PLANS[b.id]}/>}
     </div>
@@ -4325,6 +4798,8 @@ function ContentBriefs({selectedId, briefModalOpen, openBrief, closeBrief, nav, 
       </div>
       <div className="flex-1 overflow-y-auto scrollbar px-8 py-6">
         <div className="max-w-[1400px]">
+          {/* The published synthetic-panel roster — names the scorers behind every conviction score */}
+          <MeetThePanel/>
 
           {/* Pillar bands — each pillar gets a color-chip header + card grid.
               Briefs within a pillar sort by priority (BIG SWING first), and the
@@ -5161,9 +5636,9 @@ function PasswordGate({onUnlock}){
 // Auto-opens on first visit of each week (keyed on the week-start date).
 // Persistent "This Week" button in the sidebar lets the team re-open it any time —
 // addresses the "can't access after first load" gap from Christina's 2026-04-17 feedback.
-const WELCOME_WEEK_KEY = "MAY-25-2026";
-const WELCOME_WEEK_RANGE = "MAY 25 – MAY 31, 2026";
-const WELCOME_REFRESHED = "MAY 24, 2026";
+const WELCOME_WEEK_KEY = "JUN-01-2026";
+const WELCOME_WEEK_RANGE = "JUN 1 – JUN 7, 2026";
+const WELCOME_REFRESHED = "MAY 31, 2026";
 
 // The strategist's read of the week. Written in advisor voice, addressed to the team.
 // Updated every refresh. This is the biggest difference between a dashboard and an
@@ -5178,124 +5653,436 @@ const WELCOME_REFRESHED = "MAY 24, 2026";
 // Pays off Principle 1 (humans in control — pre-mapped contingencies) + Principle
 // 2 (motivate next action — every play and watch ends with a verb).
 const WELCOME_READ = {
-  pullQuote: "fiber is the new TikTok trend. (oats invented it 10,000 years ago.)",
-  the_moves: [
-    "Drop the fibermaxxing founder-POV TT MON MAY 18 9am — Christina tier 2 (activist) reading the receipt: oats are the original protein-fiber-twofer. Lead with abundance, not restriction.",
-    "Anchor the Memorial Day Weekend (MAY 24-25) with the heritage pre-game MON MAY 18 12pm + the Saturday multi-generation pour MAY 23 11am. The family-kitchen anchor wins the 7-10 day Pinterest planning window.",
-    "Run the matcha quiet-confidence Barista response TUE MAY 19 9am — back panel only, no name, no recipe. Big oat milk just launched into matcha; Willa's already had the cleanest pour."
+  pullQuote:"four ingredients walked into summer and won — let's read the panel out loud.",
+  thesis:{happening:"the oat-milk label conversation just went front-page. USA Today ran a buyer's-guide May 28 naming the ingredients to avoid — seed oils, added sugar, gums, carrageenan — and the same week a category leader had to engineer fiber back into its formula in China to chase health credibility. the audit moms have been doing quietly is now national news.", edge:"we have nothing to add back and nothing to hide. four real ingredients in Original, a Kids panel that scans clean in two seconds, and proof we never reformulated to look healthy because we started there. when the whole category is defending its label, ours is the post.", job:"this week the engine reads our own panel out loud against the avoid-list, plants the summer cold-drink flag, and turns one real product truth into a deadpan PSA — all in our voice, never naming a soul."},
+  the_moves:[
+    {kind:"ship", verb:"Turn the avoid-list into a calm scan-your-own-panel Reel.", why:"The clean-label conversation hit consumer front pages this week. We don't name names — we read Willa's own 4-ingredient Original panel out loud: no seed oils, no gums, no added sugar. Ship Tue 12pm."},
+    {kind:"ship", verb:"Open summer with the iced-drink occasion.", why:"Memorial Day fired the summer-beverage starting gun. Strawberry cloud matcha on a Willa's base (cloud rebuilt dairy-free) plants the cold-drink flag before June. Reel + Pin."},
+    {kind:"ship", verb:"Ride the summer-snack pivot with a build-your-own Kids station.", why:"School's out; #momtok flipped from lunchbox to all-day snacking. Willa's Kids as the drink that buys 10 minutes of quiet — kid-utility, on-pillar. Drop midweek."},
+    {kind:"hold", verb:"Keep the fiber story a clean flex, not a reformulation play.", why:"A category leader just engineered fiber back in overseas — note that whole oats already carry fiber + protein, don't anchor the week on it. If a US fiber story breaks midweek, accelerate."}
   ],
-  the_windows: "Memorial Day Weekend MAY 24-25 (federal MON MAY 25) · World Bee Day WED MAY 20 · Cannes Palme d'Or closing SAT MAY 23 · Califia Blueberry Matcha launch MAY 18 (UK Tesco).",
-  the_watch: [
-    "If fibermaxxing breaks into mainstream press (NYT Well + WaPo) this week, the BIG SWING TT-1 amplification window extends — push the Spark Ad to $400 for the 96-hr lift.",
-    "If a Cannes Palme d'Or winner has a heritage or female-founder beat, queue a same-night-stitch Reel SAT MAY 23 evening (45-min framework already in the inspo bank).",
-    "If a major creator catches the cabbage / fermentation Pinterest wave before Wed, push the Pinterest fermentation pin (PIN-2) earlier in the week to ride the SEO compounding.",
-    "If Memorial Day weekend forecasts shift cooler in major metros, swap PIN-1 (overnight oats) into hot-brunch positioning — frame as 'the carton that warms you up too.'"
+  the_windows:"",
+  the_watch:[
+    "if the USA Today avoid-list keeps spreading across consumer outlets this week, queue a second back-panel read-out-loud for IG and let the contrast carry — no names, just our panel.",
+    "if the strawberry-cloud matcha keeps climbing, stitch our dairy-free version against a 'this is what's in the viral one' panel-read and push it to Pinterest as a save-worthy summer pin.",
+    "if Grogu's wholesome-family box-office moment stays in feeds, lean the Kids snack-station content into cuddly family-warmth energy — implied, never IP, never a name.",
+    "if the 'Model Pose' transition audio keeps trending, drop the '5am mom vs. mom after her oat-milk matcha' flip on the beat before the format cools."
   ]
 };
 
 
 const WELCOME_HIGHLIGHTS = [
   {
-    stat:"27g PROTEIN",
-    label:"Elmhurst's Clean Protein line just went nationwide at Sprouts — 4 SKUs at $4.99 (NEXTY-Award Pistachio Crème + Sea Salt Chocolate + Vanilla + Strawberries & Cream), no gums or seed oils. BevNET broke MAY 18 + Dairy Foods MAY 21.",
-    detail:"Closest clean-positioned peer brand went direct at Willa's positioning at our primary natural-channel retailer. The cert gap still holds though — Elmhurst is NOT organic, NOT glyphosate-free-certified, NOT WBENC, NOT mother-founded. That's the Willa's moat. Voice this week: show the cert stack, don't punch.",
-    color:"#DC2626",
-    icon:"🚨",
-    sources:[
-      {label:"BevNET · Elmhurst 1925 Launches Clean Protein Nationwide at Sprouts (May 18, 2026)", url:"https://www.bevnet.com/pr/2026/05/18/elmhurst-1925-launches-awardwinning-clean-protein-line-nationwide-at-sprouts-farmers-market"},
-      {label:"Dairy Foods · Elmhurst 1925 Clean Protein debuts at Sprouts (May 21, 2026)", url:"https://www.dairyfoods.com/articles/99124-elmhurst-1925-clean-protein-line-debuts-at-sprouts"}
-    ]
-  },
-  {
-    stat:"100/100",
-    label:"The Yuka backlash arrived MAY 19 — critics flagged the app for moralizing food choices and risking restriction. Willa's Kids still holds the perfect 100/100, the brand-direct receipt parents can scan for themselves.",
-    detail:"The Grocery Cart's MAY 19 piece is the cleanest read of Yuka's complicated cultural moment — celebrated for transparency, now contested for over-simplifying. Willa's Kids 100/100 + Original 94 + Chocolate 94 are the receipts that hold up regardless of the discourse. The play: lead with scan-then-pour authority, don't enter the debate.",
-    color:"#75C596",
-    icon:"📱",
-    sources:[
-      {label:"The Grocery Cart · More on the Yuka App — is it Yucky? Moralizing Food Choices (May 19, 2026)", url:"https://thegrocerycart.substack.com/p/51926-more-on-the-yuka-app-helpful"}
-    ]
-  },
-  {
-    stat:"Not all UPFs",
-    label:"FoodNavigator MAY 22 covered the new Healthy Eating Research expert-panel framework saying federal regulators should distinguish HARMFUL UPFs from doctor-recommended ones — Willa's lives on the right side",
-    detail:"The expert-panel reframe concedes some 'ultraprocessed' food is health-positive (yogurt, infant formula, fortified milks). That opens space for Willa's 4-ingredient, no-isolates, no-synthetic-dyes deck to live on the right side calmly. Authority-without-fearmongering window opens.",
+    stat:"national front-page",
+    label:"oat milk's clean-label reckoning hits mainstream press",
+    detail:"The avoid-list (seed oils, added sugar, gums, carrageenan) went mainstream this week, alongside a fresh \"is homemade even worth it?\" debate. our move: read our own 4-ingredient Original panel out loud against that list — no seed oils, no gums, no added sugar — and never name a competitor.",
     color:"#73B2C9",
-    icon:"🔍",
+    icon:"🏷️",
     sources:[
-      {label:"FoodNavigator USA · Not all UPFs are created equal (May 22, 2026)", url:"https://www.foodnavigator-usa.com/Article/2026/05/22/not-all-upfs-are-created-equal-and-a-new-expert-panel-says-federal-regulators-should-draw-a-clear-line-between-those-that-are-harmful-and-those-that-doctors-recommend/"}
-    ]
+      {label:"USA Today · The oat milk ingredients you want to avoid (May 28, 2026)", url:"https://news.google.com/rss/search?q=%22oat+milk%22+when:7d"},
+      {label:"Martha Stewart · Is Homemade Oat Milk Worth the Effort? (May 26, 2026)", url:"https://www.marthastewart.com/"}
+    ],
+    kindLabel:"Category Signal",
+    kind:"cat",
+    glyph:"🏷️"
   },
   {
-    stat:"+51%",
-    label:"Pinterest's MAY 22 weekly report flagged rhubarb recipes up 51% with 'summer's almost in' framing — the heritage-coded summer ingredient Willa's grandmother kitchen owns",
-    detail:"Pinterest planning audience is 7-10 days ahead of execution — the rhubarb wave gives Willa's a 2-3 week heritage-kitchen window. Pairs with strawberry season peaking same week. Rhubarb is grandma food. Willa's grandma was 1921.",
-    color:"#A191B2",
-    icon:"🌿",
+    stat:"~9% Q1 slide",
+    label:"a category leader engineered fiber back in",
+    detail:"A category leader launched a high-fibre oat milk in China (7.5g fibre/250ml) tied to a roughly 9% Q1 volume decline. our move: whole oats already carry fiber and protein — we never had to add it back. the 'we didn't add it back, it was never gone' post writes itself.",
+    color:"#73B2C9",
+    icon:"📉",
     sources:[
-      {label:"Pinterest Business Community · Weekly PBC Trend Report MAY 22, 2026", url:"https://community.pinterest.biz/t/the-weekly-pbc-trend-report-may-22-2026/45841"}
-    ]
+      {label:"Green Queen · Oatly launches high-fibre oat milk in China (May 26, 2026)", url:"https://www.greenqueen.com.hk/oatly-high-fibre-oat-milk-china-low-gi-cream-health-nutrition-sales/"}
+    ],
+    kindLabel:"Category Signal",
+    kind:"cat",
+    glyph:"📉"
+  },
+  {
+    stat:"viral iced drink",
+    label:"strawberry cloud matcha is the drink of the summer",
+    detail:"The frothy strawberry-cloud matcha is going viral — the most screenshot-able cold drink right now, and the matcha base is a clean swap. our move: build it on Original and rebuild the cloud on an oat/coconut base — never cottage cheese — then film the pour.",
+    color:"#75C596",
+    icon:"🍓",
+    sources:[
+      {label:"Jar of Lemons · Strawberry Cloud Matcha (May 2026)", url:"https://www.jaroflemons.com/strawberry-cloud-matcha/"}
+    ],
+    kindLabel:"Recipe Signal",
+    kind:"recipe",
+    glyph:"🍓"
+  },
+  {
+    stat:"kids home now",
+    label:"summer-snack survival mode kicks in for moms",
+    detail:"with kids home, #momtok pivoted to all-day grazing and build-your-own stations. parents need low-effort wins that buy quiet. our move: a Willa's Kids smoothie/snack station — 'the drink that buys you 10 minutes of quiet' — filmed with tiny hands assembling it.",
+    color:"#9E652E",
+    icon:"🍓",
+    sources:[
+      {label:"TikTok Discover · Kids home for summer snacks (May 2026)", url:"https://www.tiktok.com/discover/kids-home-for-summer-snacks"}
+    ],
+    kindLabel:"Parenting Signal",
+    kind:"parent",
+    glyph:"🍓"
+  },
+  {
+    stat:"with-a-wink PSA",
+    label:"a peer brand turned a product truth into comedy",
+    detail:"Fishwife pulled anchovies for summer because heat hurts quality — announced with a deadpan reality-TV parody. our move: borrow the format, not the product. 'oat milk + a hot car = a tragedy. don't do it to her.' a real summer PSA in our voice.",
+    color:"#9E652E",
+    icon:"🐟",
+    sources:[
+      {label:"Salon · Fishwife's anchovies need a summer break too (May 28, 2026)", url:"https://www.salon.com/2026/05/28/fishwifes-anchovies-need-a-summer-break-too/"}
+    ],
+    kindLabel:"Parenting Signal",
+    kind:"parent",
+    glyph:"🐟"
   }
 ];
 
 
-function WelcomeGuide({open, onClose}){
+// ── Diagnostic Inbox ─────────────────────────────────────────
+// The founder-input channel. Three questions the engine CANNOT scrape from
+// public signals + a free-form catch-all. Answers thread into next week's brief
+// mix. Ported from Maazah / Lil Bucks 2026-05-31. Tuned to Willa's reality (the
+// Christina on-camera cap, sister availability, retail doors, warm-vs-sharp
+// voice dial). Answers persist to localStorage keyed by the week.
+const DIAGNOSTIC_INBOX = [
+  {
+    id:"DQ-1", glyph:"📍", eyebrow:"ON-THE-GROUND",
+    question:"Anything on the ground next week — a sampling event, store demo, shoot day, or a founder/sister appearance?",
+    why:"The engine sees culture; it can't see your calendar. On-the-ground moments are the most authentic content we make — but only if we know they're happening.",
+    impact:"If yes, the engine slots an at-shelf or behind-the-scenes brief for that day — and reserves a Christina/sister on-camera slot (capped at 3/week, so timing matters).",
+    options:[
+      {label:"Store demo / sampling", value:"demo", needsDetail:true, placeholder:"Where + when? e.g. 'Sprouts demo Tue, Maple Grove' or 'Target endcap reset Wed'"},
+      {label:"Shoot day in the kitchen", value:"shoot", needsDetail:true, placeholder:"What + when? e.g. 'Wed AM — Kids smoothie-station Reel'"},
+      {label:"Founder / sister appearance", value:"appearance", needsDetail:true, placeholder:"What + when? e.g. 'sister free Thu for on-camera' or 'Christina at a market Sat'"},
+      {label:"Nothing next week", value:"none"}
+    ]
+  },
+  {
+    id:"DQ-2", glyph:"🎬", eyebrow:"WHO'S ON CAMERA",
+    question:"Who's free to be on camera next week — Christina, your sister, an ambassador, or hands + product only?",
+    why:"Willa's is mother-founded, but Christina isn't the mom — first-person parenting only rings true when your sister fronts it. And Christina on camera is capped at 3 a week, so who's available reshapes the whole mix.",
+    impact:"The engine routes mom-POV briefs to whoever's actually free, holds Christina to her 3-slot cap (saved for heritage + activist beats), and sends the rest to hands-on-product + voiceover.",
+    options:[
+      {label:"Christina — a few heritage/activist beats", value:"christina", needsDetail:true, placeholder:"Which days / how many? e.g. 'Tue + Thu, 2 max'"},
+      {label:"My sister — for mom-POV", value:"sister", needsDetail:true, placeholder:"Which days? e.g. 'free Wed for the Kids smoothie Reel'"},
+      {label:"An ambassador / creator", value:"ambassador", needsDetail:true, placeholder:"Who + what? e.g. 'Sylvie, at-shelf Sprouts'"},
+      {label:"Hands + product only next week", value:"handsonly"}
+    ]
+  },
+  {
+    id:"DQ-3", glyph:"🎚️", eyebrow:"VOICE TEMPERATURE",
+    question:"What's the dial for next week — warmer (sister-fronted, heritage, kitchen-table) or sharper (clean-label category POV)?",
+    why:"Same intel, different register. The engine ships in Willa's voice either way — you decide whether it leans grandmother-warm or assertive-activist this week.",
+    impact:"This temperatures every hook + caption + concept. Warm tilts the mix toward family-moment + recipe; sharp tilts toward the ingredient-transparency + category-POV lane.",
+    options:[
+      {label:"Warmer · heritage + family", value:"warm"},
+      {label:"Sharper · clean-label POV", value:"sharp"},
+      {label:"Hold it balanced", value:"balanced"}
+    ]
+  }
+];
+
+// DiagnosticInbox — the founder-input surface (renders as its own sidebar tab).
+function DiagnosticInbox(){
+  const STORAGE_KEY = "willas_diagnostic_"+WELCOME_WEEK_KEY;
+  const initial = (()=>{ try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}"); }catch(e){ return {}; } })();
+  const [answers, setAnswers] = useState(initial.answers || {});
+  const [drafts, setDrafts] = useState({});
+  const [openItem, setOpenItem] = useState(null);
+  const [freeForm, setFreeForm] = useState(initial.free || "");
+  const [freeFormLocked, setFreeFormLocked] = useState(!!initial.freeLocked);
+
+  function save(nextAnswers, nextFree, nextFreeLocked){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      answers: nextAnswers!==undefined?nextAnswers:answers,
+      free: nextFree!==undefined?nextFree:freeForm,
+      freeLocked: nextFreeLocked!==undefined?nextFreeLocked:freeFormLocked
+    })); }catch(e){}
+  }
+
+  const total = DIAGNOSTIC_INBOX.length;
+  const answeredCount = Object.values(answers).filter(a=>a&&a.locked).length;
+
+  function pick(qid, opt){
+    if(opt.needsDetail && opt.value!=="none"){
+      setDrafts(d=>({...d,[qid]:{value:opt.value,label:opt.label,note:(d[qid]&&d[qid].note)||(answers[qid]&&answers[qid].note)||""}}));
+    } else {
+      const next={...answers,[qid]:{value:opt.value,label:opt.label,note:"",locked:true}};
+      setAnswers(next); save(next); setOpenItem(null);
+    }
+  }
+  function setNote(qid, note){ setDrafts(d=>({...d,[qid]:{...(d[qid]||{}),note}})); }
+  function lockIn(qid){
+    const draft = drafts[qid] || answers[qid];
+    if(!draft || !draft.value) return;
+    const next={...answers,[qid]:{value:draft.value,label:draft.label,note:draft.note||"",locked:true}};
+    setAnswers(next); save(next); setOpenItem(null);
+  }
+  function reopen(qid){
+    setDrafts(d=>({...d,[qid]:{value:answers[qid].value,label:answers[qid].label,note:answers[qid].note||""}}));
+    const next={...answers}; delete next[qid];
+    setAnswers(next); save(next); setOpenItem(qid);
+  }
+  function submitFree(){ if(!freeForm.trim())return; setFreeFormLocked(true); save(undefined, freeForm, true); }
+  function editFree(){ setFreeFormLocked(false); save(undefined, freeForm, false); }
+
+  return (
+    <div className="fade-in max-w-[760px]">
+      <div className="flex items-end justify-between gap-4 mb-5 flex-wrap">
+        <div>
+          <div className="font-mono text-[9.5px] tracking-[0.2em] text-[var(--muted)] mb-1.5">// FROM THE ENGINE · {total} QUESTIONS ONLY YOU CAN ANSWER</div>
+          <h2 className="font-serif text-[26px] tracking-tight text-[#202A44]">Diagnostic Inbox</h2>
+          <p className="text-[13px] text-[var(--muted)] mt-1 max-w-[520px]">The engine sees culture; you see your calendar. A few taps tell us what we can't scrape — and it threads straight into next Monday's mix.</p>
+        </div>
+        <div className="text-right shrink-0">
+          <div className="font-serif text-[22px] text-[#202A44] leading-none">{answeredCount}<span className="text-[var(--muted)] text-[15px]">/{total}</span></div>
+          <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mt-1">ANSWERED</div>
+          <div className="mt-1.5 h-[5px] w-[90px] rounded-full bg-[#E8E2D3] overflow-hidden">
+            <div className="h-full rounded-full transition-all" style={{width:(answeredCount/total*100)+"%", background:"#4E8C63"}}></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid gap-3">
+        {DIAGNOSTIC_INBOX.map((q)=>{
+          const ans = answers[q.id];
+          const draft = drafts[q.id];
+          const isOpen = openItem===q.id;
+          const isLocked = !!(ans && ans.locked);
+          const selectedDetailOpt = draft ? q.options.find(o=>o.value===draft.value) : null;
+          return (
+            <div key={q.id} className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: isLocked?"#4E8C63":"#D4CEC0"}}>
+              <button onClick={()=>setOpenItem(isOpen?null:q.id)} className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-[#FAFAF7] transition">
+                <span className="text-[20px] shrink-0">{q.glyph}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="font-mono text-[8.5px] tracking-[0.18em] text-[#9E652E] mb-1">{q.eyebrow}</div>
+                  <div className="text-[14px] text-[#202A44] leading-snug">{q.question}</div>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  {isLocked
+                    ? <span className="font-mono text-[9px] tracking-wider px-2 py-1 rounded-full text-white" style={{background:"#4E8C63"}}>✓ {ans.label}</span>
+                    : <span className="font-mono text-[9px] tracking-wider text-[var(--muted)]">awaiting</span>}
+                  <span className="font-mono text-[10px] text-[var(--muted)]">{isOpen?"▲":"▾"}</span>
+                </div>
+              </button>
+
+              {isOpen && (
+                <div className="px-5 pb-5 pt-1 border-t border-[var(--border)] fade-in">
+                  <div className="rounded-md bg-[#FAFAF7] border border-[var(--border)] p-3.5 mb-3">
+                    <div className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mb-1">WHY THIS MATTERS</div>
+                    <p className="text-[12.5px] text-[#3F4A5E] leading-relaxed">{q.why}</p>
+                    <p className="text-[12px] text-[#202A44] leading-relaxed mt-2"><span className="text-[#9E652E] mr-1">↳</span><span className="font-medium">What changes when you answer:</span> {q.impact}</p>
+                  </div>
+
+                  {!isLocked && (
+                    <>
+                      <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-2">YOUR ANSWER</div>
+                      <div className="flex flex-wrap gap-2">
+                        {q.options.map(o=>(
+                          <button key={o.value} onClick={()=>pick(q.id,o)}
+                            className={"text-[12.5px] px-3 py-2 rounded-lg border transition "+((draft&&draft.value===o.value)?"bg-[#202A44] text-white border-[#202A44]":"bg-white text-[#202A44] border-[var(--border)] hover:border-[#202A44]")}>
+                            {(draft&&draft.value===o.value)?"✓ ":""}{o.label}
+                          </button>
+                        ))}
+                      </div>
+
+                      {draft && selectedDetailOpt && selectedDetailOpt.needsDetail && draft.value!=="none" && (
+                        <div className="mt-3 fade-in">
+                          <label className="font-mono text-[9px] tracking-wider text-[var(--muted)] block mb-1.5">QUICK DETAIL · so the engine knows what to build</label>
+                          <textarea value={draft.note||""} onChange={e=>setNote(q.id,e.target.value)} rows={2}
+                            placeholder={selectedDetailOpt.placeholder}
+                            className="w-full resize-none px-3 py-2 rounded-lg border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] leading-snug focus:outline-none focus:border-[#202A44]"/>
+                          <div className="flex items-center gap-2 mt-2">
+                            <button onClick={()=>lockIn(q.id)} className="font-mono text-[10px] tracking-wider px-3 py-1.5 rounded bg-[#202A44] text-white hover:bg-[#1E293B] transition">LOCK IT IN →</button>
+                            <button onClick={()=>lockIn(q.id)} className="font-mono text-[10px] tracking-wider px-3 py-1.5 rounded border border-[var(--border)] text-[var(--muted)] hover:bg-[#F6F6F0] transition">SKIP NOTE</button>
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                  {isLocked && (
+                    <div className="rounded-md border border-[#CDE5D2] bg-[#F0F7F1] px-4 py-3">
+                      <div className="font-mono text-[9px] tracking-wider mb-1" style={{color:"#3B6B2D"}}>✓ LOCKED IN — the engine reflects this in next Monday's mix</div>
+                      {ans.note && <div className="text-[12.5px] text-[#202A44] leading-snug mt-1.5"><span className="font-mono text-[8.5px] tracking-wider text-[var(--muted)] mr-1">YOUR NOTE</span>"{ans.note}"</div>}
+                      <button onClick={()=>reopen(q.id)} className="font-mono text-[9.5px] tracking-wider text-[var(--muted)] hover:text-[#202A44] mt-2">↺ change my answer</button>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {/* Free-form catch-all */}
+        <div className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: freeFormLocked?"#4E8C63":"#D4CEC0"}}>
+          <div className="flex items-center gap-3 px-5 py-4">
+            <span className="text-[20px] shrink-0">💭</span>
+            <div className="min-w-0 flex-1">
+              <div className="font-mono text-[8.5px] tracking-[0.18em] text-[#9E652E] mb-1">ANYTHING ELSE</div>
+              <div className="text-[14px] text-[#202A44] leading-snug">{freeFormLocked?"Got it — the engine has your note.":"On your mind but not in the three above?"}</div>
+            </div>
+            {freeFormLocked && <span className="font-mono text-[9px] tracking-wider px-2 py-1 rounded-full text-white shrink-0" style={{background:"#4E8C63"}}>✓ noted</span>}
+          </div>
+          <div className="px-5 pb-5 pt-1 border-t border-[var(--border)]">
+            {!freeFormLocked ? (
+              <>
+                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2.5">Inventory shifts, retailer convos, a brand decision you're weighing, Christina's on-camera availability, something you saw this week — anything you'd want a strategist to factor into next week's mix.</p>
+                <textarea value={freeForm} onChange={e=>setFreeForm(e.target.value)} rows={3}
+                  placeholder="e.g. 'Chocolate low at Whole Foods NE — don't push that SKU' · or 'sister's out the last week of June, taper on-camera briefs after the 20th'"
+                  className="w-full resize-none px-3 py-2 rounded-lg border border-[var(--border)] bg-[#FAFAF7] text-[13px] text-[#202A44] leading-snug focus:outline-none focus:border-[#202A44]"/>
+                <button onClick={submitFree} disabled={!freeForm.trim()}
+                  className="mt-2 font-mono text-[10px] tracking-wider px-3 py-1.5 rounded bg-[#202A44] text-white hover:bg-[#1E293B] transition disabled:opacity-40 disabled:cursor-not-allowed">SEND TO ENGINE →</button>
+              </>
+            ) : (
+              <div className="rounded-md border border-[#CDE5D2] bg-[#F0F7F1] px-4 py-3">
+                <div className="font-mono text-[9px] tracking-wider mb-1" style={{color:"#3B6B2D"}}>✓ NOTED — added to next Monday's context</div>
+                <div className="text-[12.5px] text-[#202A44] leading-snug mt-1">"{freeForm}"</div>
+                <button onClick={editFree} className="font-mono text-[9.5px] tracking-wider text-[var(--muted)] hover:text-[#202A44] mt-2">↺ edit</button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// The Monday Memo — the weekly briefing popup, restructured 2026-05-31 from the
+// 5-signal infographic into the operator-briefing format ported from the Maazah
+// / Lil Bucks engines. Threads Christina's 2026-05-17 note (popup shouldn't read
+// "moves-led / too tactical") by LEADING with THE READ + the 5 signals, then
+// putting the plays AFTER as advisory — not above the fold. Reads like a memo
+// from the Strategist: THE READ → 5 SIGNALS → WHAT WE'D DO → THE WATCH → the
+// calls we made.
+const DEC_TAG_COLOR = {
+  PROMOTED:"#4E8C63", KILLED:"#C2674A", QUEUED:"#B8862F", RALLOC:"#73B2C9", HOLD:"#64748B"
+};
+// DECISIONS use {icon,title,reason,agent}; derive a colored tag from the icon.
+const DEC_ICON_TAG = {
+  "↑":{tag:"PROMOTED", c:"#4E8C63"}, "×":{tag:"KILLED", c:"#C2674A"},
+  "⚡":{tag:"QUEUED", c:"#B8862F"}, "+":{tag:"ADDED", c:"#73B2C9"}
+};
+function WelcomeGuide({open, onClose, onNavigate}){
+  const [decisionsOpen, setDecisionsOpen] = useState(false);
+  useEffect(()=>{
+    if(!open) return;
+    const onKey = e=>{ if(e.key==="Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return ()=>{ window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  },[open,onClose]);
   if(!open) return null;
   return (
-    <div className="fixed inset-0 z-[60] fade-in flex items-center justify-center" style={{background:"rgba(15,23,42,0.45)", backdropFilter:"blur(3px)"}} onClick={onClose}>
-      <div className="bg-white rounded-xl shadow-2xl w-[580px] max-h-[90vh] overflow-y-auto scrollbar" style={{border:"1px solid var(--border)"}} onClick={e=>e.stopPropagation()}>
+    <div className="fixed inset-0 z-[80] fade-in flex items-start justify-center overflow-y-auto scrollbar px-4 py-6 md:py-10" style={{background:"rgba(15,23,42,0.6)", backdropFilter:"blur(4px)"}} onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-[780px] my-auto relative" style={{border:"1px solid var(--border)", overflow:"hidden"}} onClick={e=>e.stopPropagation()}>
 
-        <div className="px-7 pt-6 pb-4 border-b border-[var(--border)]">
-          <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--muted)] mb-1.5">{WELCOME_WEEK_RANGE}</div>
-          <h2 className="font-serif text-[26px] leading-tight tracking-tight">This week's highlights</h2>
+        <button onClick={onClose} className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center bg-white/90 border border-[var(--border)] hover:bg-white transition" aria-label="Close">
+          <span className="text-[18px] leading-none text-[#202A44]">×</span>
+        </button>
+
+        {/* Hero */}
+        <div className="px-7 pt-8 pb-7" style={{background:"linear-gradient(160deg,#FFFEF7 0%,#F6F6F0 100%)", borderBottom:"1px solid var(--border)"}}>
+          <div className="font-mono text-[10px] tracking-[0.3em] text-[var(--muted)] mb-2">{WELCOME_WEEK_RANGE}</div>
+          <h2 className="font-serif text-[36px] leading-[1.02] tracking-tight text-[#202A44]">The Monday Memo</h2>
+          <div className="font-mono text-[10.5px] tracking-[0.15em] text-[#9E652E] mt-2">— The Strategist</div>
         </div>
 
-        {/* REORDERED 2026-05-17 per Christina's flag that the prior MOVES-led
-            popup read too tactical. New structure: lead with the 5 signal stats
-            (infographic / magazine-cover feel), THEN the read this week (pull-
-            quote + tactical plays + windows + watch). Every signal carries
-            inline source chips so the team can click through to the trending
-            article / TikTok / report — the linking-out rule is enforced at the
-            data layer (every WELCOME_HIGHLIGHTS entry must have sources[]). */}
-        <div className="px-5 pt-5 pb-4">
-          <div className="font-mono text-[9px] tracking-[0.22em] px-3 mb-3" style={{color:"var(--amber)"}}>★ THIS WEEK'S 5 SIGNALS</div>
-          {WELCOME_HIGHLIGHTS.map((h,i)=>(
-            <div key={i} className={"flex items-start gap-4 px-3 py-3.5 "+(i<WELCOME_HIGHLIGHTS.length-1?"border-b border-[#E8E2D3]":"")}>
-              <div className="w-11 h-11 rounded-lg flex items-center justify-center text-[20px] shrink-0" style={{background:h.color+"14"}}>
-                {h.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-baseline gap-2.5 mb-0.5 flex-wrap">
-                  <span className="font-serif text-[22px] font-semibold tracking-tight leading-none" style={{color:h.color}}>{h.stat}</span>
-                  <span className="text-[12.5px] font-medium text-[var(--ink)] leading-tight">{h.label}</span>
-                </div>
-                <p className="text-[11px] text-[var(--muted)] leading-snug">{h.detail}</p>
-                {h.sources && h.sources.length>0 && (
-                  <div className="mt-1.5 flex flex-wrap gap-x-2">
-                    {h.sources.map((s,k)=>(
-                      <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label}
-                        className="src-link font-mono text-[9px] tracking-wide">{sourceDomain(s.url)}</a>
-                    ))}
+        <div className="px-7 py-6">
+
+          {/* THE READ — Maazah model: the pullquote IS the read; the signals + moves carry the detail */}
+          <div className="mb-7">
+            <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// THE READ</div>
+            <p className="font-serif text-[16.5px] italic leading-snug text-[#202A44] pl-4 border-l-[3px] border-[#FACC15] whitespace-nowrap overflow-hidden text-ellipsis">"{WELCOME_READ.pullQuote}"</p>
+          </div>
+
+          {/* 5 SIGNALS */}
+          <div className="mb-7">
+            <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// {WELCOME_HIGHLIGHTS.length} SIGNALS DRIVING THE WEEK</div>
+            <div className="grid gap-2.5">
+              {WELCOME_HIGHLIGHTS.map((h,i)=>(
+                <div key={i} className="flex items-start gap-3.5 p-4 rounded-lg border border-[var(--border)] bg-[#FAFAF7]">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center text-[19px] shrink-0" style={{background:h.color+"14"}}>{h.glyph||h.icon}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <span className="font-mono text-[8.5px] tracking-[0.16em] uppercase" style={{color:h.color}}>{h.kindLabel||"Signal"}</span>
+                      <span className="font-mono text-[9px] tracking-wider text-[var(--muted)] shrink-0">{h.stat}</span>
+                    </div>
+                    <div className="mb-0.5">
+                      <span className="text-[13px] text-[#202A44] font-medium leading-snug">{h.label}</span>
+                    </div>
+                    <p className="text-[11.5px] text-[var(--muted)] leading-relaxed">{h.detail}</p>
+                    {h.sources && h.sources.length>0 && (
+                      <div className="mt-1.5 flex flex-wrap gap-x-2">
+                        {h.sources.map((s,k)=>(
+                          <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label} className="src-link font-mono text-[9px] tracking-wide">{sourceDomain(s.url)}</a>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* WHAT WE'D DO THIS WEEK — verb-led plays (advisory, after the signals) */}
+          {WELCOME_READ.the_moves && WELCOME_READ.the_moves.length>0 && (
+            <div className="mb-7">
+              <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// WHAT WE'D DO THIS WEEK</div>
+              <div className="grid gap-2.5">
+                {WELCOME_READ.the_moves.map((m,i)=>{
+                  const hold = m && m.kind==="hold";
+                  return (
+                  <div key={i} className="flex items-start gap-3.5 p-4 rounded-lg border bg-white" style={{borderColor:hold?"#E2DDCF":"#E8E1C2", borderLeftWidth:"4px", borderLeftColor:hold?"#64748B":"#4E8C63"}}>
+                    <div className="shrink-0 font-serif text-[20px] leading-none mt-0.5" style={{color:hold?"#64748B":"#4E8C63"}}>{hold?"✋":String(i+1).padStart(2,"0")}</div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[14px] text-[#202A44] font-medium leading-snug mb-1">{(m&&m.verb)||m}</div>
+                      {m&&m.why && <p className="text-[12.5px] text-[var(--muted)] leading-relaxed">{m.why}</p>}
+                    </div>
+                  </div>
+                  );
+                })}
               </div>
             </div>
-          ))}
-        </div>
+          )}
 
-        {/* THE READ section removed 2026-05-17 per Christina — the popup
-            should be the 5-signal infographic, not a tactical brief. THE MOVES
-            + THE WINDOWS + THE WATCH live on the dashboard surfaces (Weekly
-            Playbook + Mission Board + Decisions), not above-the-fold on the
-            welcome popup. */}
 
-        <div className="px-7 py-4 border-t border-[var(--border)] flex items-center justify-between" style={{background:"var(--bg-warm)"}}>
-          <div className="font-mono text-[9px] tracking-wider text-[var(--muted)]">Re-open any time via the sidebar</div>
-          <button onClick={onClose}
-            className="font-mono text-[10px] tracking-wider px-5 py-2.5 rounded-md text-white transition-all hover:shadow-md"
-            style={{background:"var(--ink)"}}>
-            OPEN THIS WEEK'S PLAYBOOK →
-          </button>
+          {/* THE CALLS WE MADE — decisions log, collapsed */}
+          <div className="mb-6 rounded-lg border border-[var(--border)] overflow-hidden">
+            <button onClick={()=>setDecisionsOpen(o=>!o)} className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left hover:bg-[#FAFAF7] transition">
+              <span className="font-mono text-[9.5px] tracking-[0.18em] text-[var(--muted)]">{decisionsOpen?"▼":"▶"} THE CALLS WE MADE TO GET HERE</span>
+              <span className="font-mono text-[9.5px] tracking-wider text-[var(--muted)]">{DECISIONS.length} decisions · {decisionsOpen?"hide":"show"}</span>
+            </button>
+            {decisionsOpen && (
+              <div className="px-4 pb-4 pt-1 grid gap-2.5 fade-in border-t border-[var(--border)]">
+                {DECISIONS.map((d,i)=>{
+                  const t = DEC_ICON_TAG[d.icon] || {tag:"NOTE", c:"#64748B"};
+                  return (
+                  <div key={i} className="flex items-start gap-2.5">
+                    <span className="font-mono text-[8px] tracking-wider px-1.5 py-[3px] rounded text-white shrink-0 mt-0.5" style={{background:t.c}}>{t.tag}</span>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-[12.5px] text-[#202A44] leading-snug font-medium">{d.title}</div>
+                      <div className="text-[11px] text-[var(--muted)] leading-snug mt-0.5">{d.reason}</div>
+                    </div>
+                  </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Signature + action CTA */}
+          <p className="font-mono text-[10.5px] tracking-[0.04em] text-[var(--muted)] leading-relaxed mb-5">— Built for Christina + the Willa's team.<br/>The engine ran over the weekend so Monday starts with the moves, not the research.</p>
+          <div className="text-center">
+            <button onClick={()=>{ onClose(); if(onNavigate) onNavigate("intel"); }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#202A44] text-white font-mono text-[11px] tracking-[0.15em] hover:bg-[#1E293B] transition">
+              SEE THIS WEEK'S ENGINE →
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -7065,7 +7852,7 @@ function Dashboard(){
   const strategistChat = useStrategistChat();
   const topRight = <TabTopRight drawerOpen={engineDrawerOpen} onToggleDrawer={()=>setEngineDrawerOpen(o=>!o)}/>;
   const [welcomeOpen,setWelcomeOpen] = useState(()=>{
-    try{ return localStorage.getItem("willas-highlights-seen")!==WELCOME_WEEK_KEY; }catch(e){ return true; }
+    return true; /* Vercel behavior (Alex 2026-05-31): the Monday Memo opens on EVERY reload; closing it lands on the Intelligence Brief. */
   });
 
   // Settings — persisted to localStorage, applied to <html> via data-attributes
@@ -7196,8 +7983,8 @@ function Dashboard(){
     setTimeout(()=> setStudioFlash(null), 1800);
   }
   function closeWelcome(){
-    try{ localStorage.setItem("willas-highlights-seen", WELCOME_WEEK_KEY); }catch(e){}
     setWelcomeOpen(false);
+    setSection("intel"); // closing the Monday Memo always lands you on the Intelligence Brief
   }
   function openWelcome(){ setWelcomeOpen(true); }
 
@@ -7318,6 +8105,7 @@ function Dashboard(){
         {section==="intel" && <IntelligenceBrief tab={intelTab} setTab={setIntelTab} focusId={focusId} nav={nav} topRight={topRight}/>}
         {section==="playbook" && <WeeklyPlaybook nav={nav} topRight={topRight}/>}
         {section==="briefs" && <ContentBriefs selectedId={selectedBriefId} briefModalOpen={briefModalOpen} openBrief={openBrief} closeBrief={closeBrief} nav={nav} topRight={topRight} studioAdopted={studioAdoptedBriefs}/>}
+        {section==="diagnostic" && <div className="h-full overflow-y-auto scrollbar px-8 py-6"><DiagnosticInbox/></div>}
         {section==="studio" && <Studio
           stickies={studioState.stickies}
           briefs={studioState.briefs}
@@ -7334,9 +8122,9 @@ function Dashboard(){
         {section==="perf" && <Performance nav={nav} topRight={topRight}/>}
         {section==="settings" && <SettingsTab settings={settings} setSettings={setSettings} nav={nav} topRight={topRight}/>}
       </main>
-      <HowItWorks open={howItWorksOpen} onClose={()=>setHowItWorksOpen(false)}/>
+      <HowItWorks open={howItWorksOpen} onClose={()=>setHowItWorksOpen(false)} onOpenReference={()=>{ setHowItWorksOpen(false); setReferenceOpen(true); }}/>
       <ReferenceGuide open={referenceOpen} onClose={()=>setReferenceOpen(false)}/>
-      <WelcomeGuide open={welcomeOpen} onClose={closeWelcome}/>
+      <WelcomeGuide open={welcomeOpen} onClose={closeWelcome} onNavigate={setSection}/>
       <StudioApiKeyModal open={apiKeyModalOpen} current={studioApiKey} onSave={saveApiKey} onClose={()=>setApiKeyModalOpen(false)}/>
       <NamePromptModal open={!!namePromptStickyId} onSave={saveNameAndStampSticky} onSkip={()=>setNamePromptStickyId(null)}/>
       <EngineDrawer open={engineDrawerOpen} onClose={()=>setEngineDrawerOpen(false)}/>
