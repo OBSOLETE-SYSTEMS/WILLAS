@@ -5729,7 +5729,7 @@ const WELCOME_HIGHLIGHTS = [
     ],
     kindLabel:"Parenting Signal",
     kind:"parent",
-    glyph:"🍓"
+    glyph:"🧃"
   },
   {
     stat:"with-a-wink PSA",
