@@ -5668,19 +5668,11 @@ const WELCOME_REFRESHED = "MAY 31, 2026";
 // 2 (motivate next action — every play and watch ends with a verb).
 const WELCOME_READ = {
   pullQuote:"four ingredients walked into summer and won — let's read the label out loud.",
-  thesis:{happening:"the oat-milk label conversation just went front-page. USA Today ran a buyer's-guide May 28 naming the ingredients to avoid — seed oils, added sugar, gums, carrageenan — and the same week a category leader had to engineer fiber back into its formula in China to chase health credibility. the audit moms have been doing quietly is now national news.", edge:"we have nothing to add back and nothing to hide. four real ingredients in Original, a Kids label that scans clean in two seconds, and proof we never reformulated to look healthy because we started there. when the whole category is defending its label, ours is the post.", job:"this week the engine reads our own label out loud against the avoid-list, plants the summer cold-drink flag, and turns one real product truth into a deadpan PSA — all in our voice, never naming a soul."},
   the_moves:[
     {kind:"ship", verb:"Turn the avoid-list into a calm scan-your-own-label Reel.", why:"The clean-label conversation hit consumer front pages this week. We don't name names — we read Willa's own 4-ingredient Original label out loud: no seed oils, no gums, no added sugar. Ship Tue 12pm."},
     {kind:"ship", verb:"Open summer with the iced-drink occasion.", why:"Memorial Day fired the summer-beverage starting gun. Strawberry cloud matcha on a Willa's base (cloud rebuilt dairy-free) plants the cold-drink flag before June. Reel + Pin."},
     {kind:"ship", verb:"Ride the summer-snack pivot with a build-your-own Kids station.", why:"School's out; #momtok flipped from lunchbox to all-day snacking. Willa's Kids as the drink that buys 10 minutes of quiet — kid-utility, on-pillar. Drop midweek."},
     {kind:"hold", verb:"Keep the fiber story a clean flex, not a reformulation play.", why:"Oatly just engineered fiber back in overseas — note that whole oats already carry fiber + protein, don't anchor the week on it. If a US fiber story breaks midweek, accelerate."}
-  ],
-  the_windows:"",
-  the_watch:[
-    "if the USA Today avoid-list keeps spreading across consumer outlets this week, queue a second back-label read-out-loud for IG and let the contrast carry — no names, just our label.",
-    "if the strawberry-cloud matcha keeps climbing, stitch our dairy-free version against a 'this is what's in the viral one' label-read and push it to Pinterest as a save-worthy summer pin.",
-    "if Grogu's wholesome-family box-office moment stays in feeds, lean the Kids snack-station content into cuddly family-warmth energy — implied, never IP, never a name.",
-    "if the 'Model Pose' transition audio keeps trending, drop the '5am mom vs. mom after her oat-milk matcha' flip on the beat before the format cools."
   ]
 };
 
@@ -5970,11 +5962,7 @@ function DiagnosticInbox(){
 // / Lil Bucks engines. Threads Christina's 2026-05-17 note (popup shouldn't read
 // "moves-led / too tactical") by LEADING with THE READ + the 5 signals, then
 // putting the plays AFTER as advisory — not above the fold. Reads like a memo
-// from the Strategist: THE READ → 5 SIGNALS → WHAT WE'D DO → THE WATCH → the
-// calls we made.
-const DEC_TAG_COLOR = {
-  PROMOTED:"#4E8C63", KILLED:"#C2674A", QUEUED:"#B8862F", RALLOC:"#73B2C9", HOLD:"#64748B"
-};
+// from the Strategist: THE READ → 5 SIGNALS → WHAT WE'D DO → THE CALLS WE MADE.
 // DECISIONS use {icon,title,reason,agent}; derive a colored tag from the icon.
 const DEC_ICON_TAG = {
   "↑":{tag:"PROMOTED", c:"#4E8C63"}, "×":{tag:"KILLED", c:"#C2674A"},

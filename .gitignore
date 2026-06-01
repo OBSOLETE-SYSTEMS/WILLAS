@@ -30,6 +30,9 @@ scripts/
 # Each developer fetches their own (~10MB, platform-specific).
 tools/
 
+# ─── Local backups (scripts/apply-refresh.py writes index.jsx.bak) ─────
+*.bak
+
 # ─── Node / Vercel build artifacts ─────────────────────────────
 node_modules/
 .vercel/
