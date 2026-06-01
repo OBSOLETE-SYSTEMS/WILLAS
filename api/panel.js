@@ -7,15 +7,16 @@
 // score, a reaction quote, and an optional edit suggestion per persona, plus a
 // one-line headline insight.
 //
-// Model: Gemini 2.5 Flash — same key as the Strategist (per Alex 2026-05-31).
-// Uses JSON mode (responseMimeType) + thinkingBudget:0 + a generous
-// maxOutputTokens so the JSON never truncates mid-string (Willa's Gemini
-// gotchas). Non-streaming: we want one clean JSON object.
+// Model: Claude (Sonnet) via the engine's ANTHROPIC_API_KEY — same key as the
+// Strategist (Christina's billing). JSON is requested in the prompt and parsed
+// from the text response — NO assistant prefill (that errors with "model does
+// not support assistant message prefill" on this account).
 // ─────────────────────────────────────────────────────────────────────────
 
 export const config = { runtime: 'edge' };
 
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+const MODEL = 'claude-sonnet-4-6';
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -23,14 +24,6 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type',
   'Access-Control-Max-Age': '86400',
 };
-
-// Read whichever Gemini key the Strategist uses in Vercel.
-function geminiKey() {
-  return process.env.GEMINI_API_KEY
-      || process.env.GOOGLE_API_KEY
-      || process.env.GOOGLE_GENERATIVE_AI_API_KEY
-      || process.env.GOOGLE_GENAI_API_KEY;
-}
 
 // The panel calibration. Four readers tuned to Willa's real audience layers.
 // Their consensus is the "Synthetic Panel" leg of every brief's conviction score.
@@ -47,7 +40,7 @@ SCORING (1-10, honest — use the range; a brief that's wrong for a persona scor
 
 VOICE GUARDRAILS for any suggested_edit: Willa's voice is warm, with-a-wink, assertive + activist, transparent, witty. Never name competitors. No diet-culture/restriction framing. No business metrics in consumer copy. Keep edits concrete and short.
 
-Output a JSON object with EXACTLY this shape:
+Respond with ONLY a valid JSON object — no prose, no markdown fences — in EXACTLY this shape:
 {"reactions":[{"persona":"Maya","score":<1-10 integer>,"reaction":"<1-2 sentence first-person reaction in this persona's voice>","suggested_edit":"<one concrete tweak, or null>"},{"persona":"Jordan",...},{"persona":"Devon",...},{"persona":"Sam",...}],"headline_insight":"<one line: what this brief lands and what it misses across the table>"}`;
 
 function jsonError(message, status) {
@@ -74,34 +67,34 @@ function briefToPrompt(b) {
 export default async function handler(req) {
   if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS_HEADERS });
   if (req.method !== 'POST') return jsonError('Method not allowed. POST only.', 405);
-
-  const KEY = geminiKey();
-  if (!KEY) return jsonError('Server misconfigured — no Gemini API key (set GEMINI_API_KEY in Vercel, same as the Strategist).', 500);
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return jsonError('Server misconfigured — ANTHROPIC_API_KEY env var missing.', 500);
+  }
 
   let body;
   try { body = await req.json(); } catch (e) { return jsonError('Invalid JSON in request body.', 400); }
   const brief = body && body.brief;
   if (!brief) return jsonError('`brief` is required.', 400);
 
-  const geminiBody = {
-    systemInstruction: { parts: [{ text: PANEL_SYSTEM }] },
-    contents: [{ role: 'user', parts: [{ text: `Read this brief and give me the table's reactions as JSON.\n\n${briefToPrompt(brief)}` }] }],
-    generationConfig: {
-      responseMimeType: 'application/json',
-      temperature: 0.85,
-      maxOutputTokens: 4096,           // generous so the JSON never truncates mid-string
-      thinkingConfig: { thinkingBudget: 0 },  // CRITICAL: disables extended thinking — else Flash is slow + can truncate
-    },
+  const anthropicBody = {
+    model: MODEL,
+    max_tokens: 1600,
+    system: PANEL_SYSTEM,
+    messages: [
+      { role: 'user', content: `Read this brief and give me the table's reactions.\n\n${briefToPrompt(brief)}\n\nReturn ONLY the JSON object — no prose, no markdown.` },
+    ],
   };
-
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${KEY}`;
 
   let upstream;
   try {
-    upstream = await fetch(url, {
+    upstream = await fetch(ANTHROPIC_API_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(geminiBody),
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify(anthropicBody),
     });
   } catch (e) {
     return jsonError(`Upstream fetch failed: ${e.message || e}`, 502);
@@ -115,15 +108,14 @@ export default async function handler(req) {
   let data;
   try { data = await upstream.json(); } catch (e) { return jsonError('Could not parse upstream response.', 502); }
 
-  const text = ((((data.candidates || [])[0] || {}).content || {}).parts || [])
-    .map(p => p && p.text ? p.text : '').join('');
-  if (!text) return jsonError('Panel returned an empty response.', 502);
+  // Extract the text + strip any markdown fences, then parse the JSON.
+  let text = (data.content || []).filter(c => c.type === 'text').map(c => c.text).join('').trim();
+  text = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
 
   let parsed;
   try {
     parsed = JSON.parse(text);
   } catch (e) {
-    // Last-ditch: pull the outermost {...} in case anything wrapped it.
     try {
       const s = text.indexOf('{'), eIdx = text.lastIndexOf('}');
       parsed = JSON.parse(text.slice(s, eIdx + 1));
