@@ -7292,15 +7292,16 @@ function Studio({stickies, briefs, apiKey, onAddSticky, onDeleteSticky, onGenera
 
 const STRATEGIST_HISTORY_STORAGE = "willas-strategist-history";
 // Suggested prompts surfaced on the empty Ask the Strategist panel.
-// These should reflect THIS WEEK's actual cultural moments (CULTURAL_PULSE
-// hooks + Memorial Day-style calendar anchors) — not last-month leftovers.
-// Refreshed weekly. Long-term: generate dynamically from CULTURAL_PULSE
-// during the Sunday refresh, so the prompts always match the live data.
+// REFRESHED EVERY WEEK as part of the Step 6 cascade (see CLAUDE.md) — each
+// prompt anchors on a THIS-WEEK CULTURAL_PULSE / TRENDS signal, written as a
+// conversational strategist question (no signal IDs, no dates), spread across
+// different lanes (trend / recipe / parenting / humor-format). Stale prompts
+// here read as a stale engine the moment the chat opens.
 const STRATEGIST_SUGGESTED_PROMPTS = [
-  "Memorial Day Weekend is around the corner — what's the strongest play for the family-kitchen lane?",
-  "Cottage cheese oats are eating TikTok — how do we ride it without losing the brand voice?",
-  "Grandfluencers are having their moment — what's our Willa's-original-story angle here?",
-  "What's a diet-culture trend in our feed right now that Willa's should push back on?"
+  "The avoid-list conversation is everywhere — how hard should we lean into reading our label out loud?",
+  "Strawberry cloud matcha is the drink of the summer — what's the Willa's rebuild that owns it?",
+  "School's out and #momtok is in snack-survival mode — what's our Kids play for the all-day grazers?",
+  "Fishwife made anchovies funny — which Willa's product truth deserves the comedy treatment?"
 ];
 
 // Cap strategist chat history at 100 messages (50 user + 50 assistant turns)
