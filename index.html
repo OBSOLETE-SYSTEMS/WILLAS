@@ -7,23 +7,27 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BE%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <style>
   :root{
-    /* Surface tokens — referenced via var() everywhere so theme swap works */
-    --bg:#FAF6EC;        /* warm oat cream (was cool #FAFAF7) */
-    --bg-card:#FFFDF6;   /* warm white card */
-    --bg-warm:#FFFCF2;
-    --bg-soft:#F3ECDD;   /* warm soft */
-    --ink:#202A44;       /* brand navy — kept as the structural anchor */
-    --ink-soft:#574E40;  /* warm espresso-taupe (was cool slate #475569) */
-    --muted:#7A6F5E;     /* warm stone (was cool slate #64748B) */
-    --border:#D9D0BD;    /* warm border */
-    --border-soft:#EAE2D0;
-    /* Brand accents (stay constant across themes) */
+    /* Surface tokens — referenced via var() everywhere so theme swap works.
+       2026-06-04 carton-palette pass: surfaces moved from warm oat-cream to the
+       packaging light gray (the brand scheme's 6th primary) with white cards —
+       cartons-on-gray, like the brand photography. Navy stays the structural ink. */
+    --bg:#ECEEEB;        /* packaging light gray (brand scheme primary) */
+    --bg-card:#FFFFFF;   /* white card — the carton panel */
+    --bg-warm:#F7F8F6;
+    --bg-soft:#E3E6E2;
+    --ink:#202A44;       /* brand navy (Pantone 533C) — the structural anchor */
+    --ink-soft:#3E4763;  /* navy-soft (was warm espresso-taupe) */
+    --muted:#5E6780;     /* navy-gray (was warm stone) */
+    --border:#D6DAD7;    /* cool light border */
+    --border-soft:#E5E8E6;
+    /* Brand accents (stay constant across themes) — match the Pantone scheme:
+       7458C blue · 346C green · 730C brown (amber slot) · 666C purple */
     --blue:#73B2C9; --green:#75C596; --red:#DC2626; --amber:#9E652E; --purple:#A191B2; --gold:#FACC15;
     /* Text scale — driven by Settings tab */
     --text-base:14px;
@@ -51,21 +55,34 @@
   html[data-theme="dark"] .text-\[\#475569\]{color:var(--ink-soft)!important;}
   html[data-theme="dark"] .text-\[\#64748B\]{color:var(--muted)!important;}
   html[data-theme="dark"] .border-\[\#E8E2D3\]{border-color:var(--border-soft)!important;}
-  /* ─── Willa's warm palette (2026-05-31) ─────────────────────────────
-     Components hardcode cool slate greys (Tailwind arbitrary values) that
-     made the engine read like a generic SaaS dashboard. Remap them to warm
-     oat/taupe tones so the whole surface feels like Willa's — warm, heritage,
-     kitchen-table — without editing every component. Light mode only; the
-     dark-theme overrides above keep their own values via higher specificity. */
-  html:not([data-theme="dark"]) .text-\[\#475569\]{color:#574E40 !important;}
-  html:not([data-theme="dark"]) .text-\[\#334155\]{color:#433C2E !important;}
-  html:not([data-theme="dark"]) .text-\[\#64748B\]{color:#7A6F5E !important;}
-  html:not([data-theme="dark"]) .text-\[\#94A3B8\]{color:#9A8E7B !important;}
-  html:not([data-theme="dark"]) .text-\[\#3F4A5E\]{color:#524938 !important;}
-  html:not([data-theme="dark"]) .bg-\[\#F1F5F9\]{background:#F2ECDF !important;}
-  html:not([data-theme="dark"]) .border-\[\#E2E8F0\]{border-color:#E6DECC !important;}
+  /* ─── Willa's carton palette (2026-06-04, supersedes the 2026-05-31 warm pass) ───
+     Components hardcode cool slate greys + warm cream hexes (Tailwind arbitrary
+     values). Remap both families to the packaging palette — navy-tinted greys for
+     text, light-gray/white surfaces — without editing every component. Light mode
+     only; the dark-theme overrides above keep their own values via higher
+     specificity. */
+  html:not([data-theme="dark"]) .text-\[\#475569\]{color:#3E4763 !important;}
+  html:not([data-theme="dark"]) .text-\[\#334155\]{color:#2B3450 !important;}
+  html:not([data-theme="dark"]) .text-\[\#64748B\]{color:#5E6780 !important;}
+  html:not([data-theme="dark"]) .text-\[\#94A3B8\]{color:#959CB0 !important;}
+  html:not([data-theme="dark"]) .text-\[\#3F4A5E\]{color:#38425F !important;}
+  html:not([data-theme="dark"]) .bg-\[\#F1F5F9\]{background:#EEF1EF !important;}
+  html:not([data-theme="dark"]) .border-\[\#E2E8F0\]{border-color:#E0E4E2 !important;}
   html:not([data-theme="dark"]) .text-\[\#475569\] strong,
   html:not([data-theme="dark"]) .text-\[\#334155\] strong{color:inherit;}
+  /* Warm-cream surface classes from the retired warm theme → cool carton greys.
+     (The inline-styled "advisor gold" boxes — #FFFEF7 + #E8E1C2 + #FFFBEB — are
+     intentionally NOT remapped: that yellow/orange accent family is the Kids-carton
+     dot energy and pops correctly on the gray surfaces.) */
+  html:not([data-theme="dark"]) .bg-\[\#FAFAF7\]{background:#F4F5F3 !important;}
+  html:not([data-theme="dark"]) .hover\:bg-\[\#FAFAF7\]:hover{background:#F4F5F3 !important;}
+  html:not([data-theme="dark"]) .bg-\[\#FFFEF7\]{background:#FBFCFA !important;}
+  html:not([data-theme="dark"]) .hover\:bg-\[\#FFFEF7\]:hover{background:#F4F5F3 !important;}
+  html:not([data-theme="dark"]) .bg-\[\#F6F6F0\]{background:#EFF1EF !important;}
+  html:not([data-theme="dark"]) .hover\:bg-\[\#F6F6F0\]:hover{background:#EFF1EF !important;}
+  html:not([data-theme="dark"]) .bg-\[\#E8E2D3\]{background:#E3E6E2 !important;}
+  html:not([data-theme="dark"]) .bg-\[\#F8FAFC\]{background:#F7F8F7 !important;}
+  html:not([data-theme="dark"]) .border-\[\#D4CEC0\]{border-color:#D6DAD7 !important;}
   /* Text size scale — multiplies the base font-size on body */
   html[data-text-size="sm"] body{font-size:13px;}
   html[data-text-size="lg"] body{font-size:15.5px;}
@@ -81,6 +98,22 @@
   html,body{background:var(--bg); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; -webkit-font-smoothing:antialiased; font-size:var(--text-base);}
   .font-serif{font-family:'Fraunces',Georgia,serif; font-optical-sizing:auto;}
   .font-mono{font-family:'DM Mono',ui-monospace,monospace;}
+  /* ─── Packaging type system (2026-06-04) ─────────────────────────────
+     The cartons pair a BOLD geometric sans ("OAT MILK") with a serif/script
+     accent ("Original" · the Willa's wordmark). Mapped here:
+       · non-italic display type (headlines, card titles, stat numbers) →
+         Poppins bold — restyled globally via the :not(.italic) remap below,
+         same no-component-edits pattern as the palette remaps above
+       · italic editorial moments (hooks, ledes, quotes) → stay Fraunces
+       · .serif-keep opts a non-italic element back into Fraunces (wordmark)
+       · .font-display = the page-title voice: Poppins extra-bold uppercase */
+  .font-serif:not(.italic):not(.serif-keep){font-family:'Poppins','DM Sans',sans-serif; font-weight:700; letter-spacing:-0.01em;}
+  .serif-keep{font-family:'Fraunces',Georgia,serif; font-optical-sizing:auto;}
+  .font-display{font-family:'Poppins','DM Sans',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:0.015em;}
+  /* Kids-carton confetti — stars + dots + droplet in brand colors. Tiles as a
+     repeating background; designed for the navy bands (white/yellow pop) but
+     reads subtly on light surfaces too. */
+  .confetti{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Ccircle cx='18' cy='24' r='3' fill='%23F5C84C'/%3E%3Ccircle cx='88' cy='14' r='2.4' fill='%2375C596'/%3E%3Ccircle cx='132' cy='54' r='3' fill='%23E8804C'/%3E%3Ccircle cx='46' cy='88' r='2.5' fill='%2373B2C9'/%3E%3Ccircle cx='108' cy='106' r='3' fill='%23A191B2'/%3E%3Ccircle cx='14' cy='126' r='2.2' fill='%23E8804C'/%3E%3Ccircle cx='76' cy='130' r='2.4' fill='%2375C596'/%3E%3Cpath d='M66 32l2.1 5.6 5.6 2.1-5.6 2.1-2.1 5.6-2.1-5.6-5.6-2.1 5.6-2.1z' fill='%23F5C84C'/%3E%3Cpath d='M128 86l1.6 4.2 4.2 1.6-4.2 1.6-1.6 4.2-1.6-4.2-4.2-1.6 4.2-1.6z' fill='%23FFFFFF' opacity='.85'/%3E%3Cpath d='M32 56c0 0 4 5.4 4 8.1a4 4 0 1 1-8 0c0-2.7 4-8.1 4-8.1z' fill='%23FFFFFF' opacity='.9'/%3E%3C/svg%3E"); background-size:150px 150px;}
   .card{background:var(--bg-card); border:1px solid var(--border); border-radius:10px;}
   .pulse-dot{position:relative; display:inline-block; width:8px; height:8px; border-radius:999px; background:var(--red);}
   .pulse-dot::after{content:''; position:absolute; inset:-3px; border-radius:999px; border:1.5px solid var(--red); opacity:.6; animation:pulse 1.6s ease-out infinite;}
@@ -92,9 +125,9 @@
   .fade-in{animation:fade .22s ease-out;}
   @keyframes fade{from{opacity:0; transform:translateY(3px)}to{opacity:1; transform:none}}
   .scrollbar::-webkit-scrollbar{width:7px;height:7px}
-  .scrollbar::-webkit-scrollbar-thumb{background:#C8C2B4;border-radius:8px}
+  .scrollbar::-webkit-scrollbar-thumb{background:#C3C8C5;border-radius:8px}
   .nav-item{transition:all .12s ease;}
-  .nav-item:hover{background:#DCD6C8}
+  .nav-item:hover{background:#E2E5E2}
   .nav-item.active{background:#202A44; color:#fff;}
   html[data-theme="dark"] .nav-item:hover{background:var(--bg-soft);}
   html[data-theme="dark"] .nav-item.active{background:var(--ink); color:var(--bg);}

@@ -2455,7 +2455,7 @@ function EngineDrawer({open, onClose}){
           <div className="card p-3">
             <div className="flex flex-wrap items-center gap-2">
               {INTEGRATIONS.map((i,k)=>(
-                <div key={k} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded border border-[var(--border)]" style={i.status==="connected"?{background:"#F6FBF8"}:{background:"#FAFAF7"}} title={i.use}>
+                <div key={k} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded border border-[var(--border)]" style={i.status==="connected"?{background:"#F6FBF8"}:{background:"#F4F5F3"}} title={i.use}>
                   <span className="inline-block w-[6px] h-[6px] rounded-full" style={{background:i.status==="connected"?"#75C596":"#9E652E"}}></span>
                   <span className="font-mono text-[10px] tracking-wider text-[#202A44]">{i.name}</span>
                   <span className="font-mono text-[8.5px] tracking-wider uppercase" style={{color:i.status==="connected"?"#75C596":"#9E652E"}}>· {i.status}</span>
@@ -2936,7 +2936,7 @@ function CommandPalette({open, onClose, index, onSelect}){
         </div>
 
         {/* Footer hint */}
-        <div className="px-5 py-2.5 border-t border-[var(--border)] flex items-center justify-between text-[var(--muted)]" style={{background:"#FAFAF7"}}>
+        <div className="px-5 py-2.5 border-t border-[var(--border)] flex items-center justify-between text-[var(--muted)]" style={{background:"#F4F5F3"}}>
           <div className="font-mono text-[8.5px] tracking-wider flex items-center gap-3">
             <span>↑↓ NAVIGATE</span>
             <span>↵ OPEN</span>
@@ -2998,7 +2998,7 @@ function HowItWorks({open, onClose, onOpenReference}){
               {["Conviction score","The Tasting Table","Monday Memo","Diagnostic Inbox"].map(s=>(
                 <span key={s} className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full" style={{background:"#FFFEF7",border:"1px solid #E8E1C2",color:"#9E652E"}}>{s}</span>
               ))}
-              <button onClick={()=>{ if(onOpenReference) onOpenReference(); }} className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full border hover:bg-[#F6F6F0] transition" style={{borderColor:"#D9D0BD",color:"#202A44"}}>↗ Proven Formats · {TOP_PERFORMER_DNA.length} formats · {BENEFIT_SHORTHAND.length} stingers</button>
+              <button onClick={()=>{ if(onOpenReference) onOpenReference(); }} className="font-mono text-[8.5px] tracking-wider px-2 py-[3px] rounded-full border hover:bg-[#F6F6F0] transition" style={{borderColor:"var(--border)",color:"#202A44"}}>↗ Proven Formats · {TOP_PERFORMER_DNA.length} formats · {BENEFIT_SHORTHAND.length} stingers</button>
             </div>
           </div>
           <button onClick={onClose} className="font-mono text-[10px] tracking-wider text-[var(--muted)] hover:text-[var(--ink)] px-3 py-2 border border-[var(--border)] rounded bg-white">CLOSE ✕</button>
@@ -3325,9 +3325,12 @@ function Sources({list, label}){
 function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}){
   return (
     <aside className="w-[220px] shrink-0 border-r border-[var(--border)] bg-white flex flex-col">
-      <div className="px-5 pt-7 pb-5 border-b border-[var(--border)]">
-        <img src="https://i.postimg.cc/R0GsStL8/images.png" alt="Willa's" className="block" style={{maxWidth:"140px", height:"auto"}}/>
-        <div className="font-mono text-[9px] text-[var(--muted)] tracking-[0.18em] mt-2">SOCIAL CONTENT ENGINE</div>
+      {/* Carton-band header (2026-06-04) — the navy top band from the packaging,
+          wordmark typeset in Fraunces green like the Original carton. Confetti =
+          the Kids-carton sprinkle, kept subtle. */}
+      <div className="px-5 pt-6 pb-5 confetti" style={{background:"#202A44"}}>
+        <div className="serif-keep font-serif text-[30px] leading-none" style={{color:"#75C596", fontWeight:600}}>Willa's</div>
+        <div className="font-mono text-[9px] tracking-[0.18em] mt-2" style={{color:"rgba(255,255,255,0.65)"}}>SOCIAL CONTENT ENGINE</div>
       </div>
 
       {/* "This Week" reopen button — sits above main nav with a warm amber glow
@@ -3351,7 +3354,7 @@ function Sidebar({section,setSection,onHowItWorks,onOpenWelcome,onOpenReference}
       <div className="px-3 pt-2">
         <button onClick={()=>setSection("diagnostic")}
           className={"w-full px-3 py-2.5 rounded-md border transition text-left flex items-center justify-between gap-2 "+(section==="diagnostic"?"":"hover:bg-[#FFFEF7]")}
-          style={{background: section==="diagnostic"?"#202A44":"#FFFFFF", borderColor: section==="diagnostic"?"#202A44":"#D9D0BD"}}>
+          style={{background: section==="diagnostic"?"#202A44":"#FFFFFF", borderColor: section==="diagnostic"?"#202A44":"var(--border)"}}>
           <div className="min-w-0">
             <div className={"font-mono text-[9px] tracking-wider flex items-center gap-1.5 "+(section==="diagnostic"?"text-white":"text-[var(--ink)]")}>
               <span>📥</span> DIAGNOSTIC INBOX
@@ -3640,7 +3643,7 @@ function IntelligenceBrief({tab,setTab,focusId,nav,topRight}){
       <div className="px-8 pt-6 pb-3">
         <div className="flex items-end justify-between mb-4">
           <div>
-            <h1 className="font-serif text-[28px] leading-none tracking-tight">Intelligence Brief</h1>
+            <h1 className="font-display text-[26px] leading-none">Intelligence Brief</h1>
             <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mt-1">{WELCOME_WEEK_RANGE}</div>
           </div>
           {topRight}
@@ -3988,7 +3991,7 @@ function StaticVisualDirection({visual, pillarColor, platform}) {
         <div className="p-5">
           <div className="mx-auto rounded-md overflow-hidden border border-[var(--border)] bg-white" style={{maxWidth:"460px"}}>
             {zones.map((z, i) => (
-              <div key={i} className={"px-4 py-4 "+(i < zones.length - 1 ? "border-b border-[var(--border)]" : "")} style={{background:i % 2 === 0 ? "#FFFFFF" : "#FAFAF7"}}>
+              <div key={i} className={"px-4 py-4 "+(i < zones.length - 1 ? "border-b border-[var(--border)]" : "")} style={{background:i % 2 === 0 ? "#FFFFFF" : "#F4F5F3"}}>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="inline-block w-[4px] h-[14px] rounded-full" style={{background:pillarColor}}></span>
                   <span className="font-mono text-[9px] tracking-[0.2em]" style={{color:pillarColor}}>{z.name.toUpperCase()}</span>
@@ -4251,7 +4254,7 @@ function WillasPanel({brief}){
       </div>
 
       {!requested && (
-        <button onClick={run} className="w-full flex items-start gap-3 p-4 rounded-lg border border-dashed text-left transition hover:bg-[#FFFEF7]" style={{borderColor:"#D4CEC0", background:"#FAFAF7"}}>
+        <button onClick={run} className="w-full flex items-start gap-3 p-4 rounded-lg border border-dashed text-left transition hover:bg-[#FFFEF7]" style={{borderColor:"var(--border)", background:"#F4F5F3"}}>
           <span className="text-[20px] shrink-0">👥</span>
           <span>
             <span className="block text-[13.5px] text-[#202A44] font-medium leading-snug">Pressure-test this brief against the 4-person table</span>
@@ -4804,7 +4807,7 @@ function ContentBriefs({selectedId, briefModalOpen, openBrief, closeBrief, nav, 
             <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-1">
               {WELCOME_WEEK_RANGE} · {BRIEFS.length} BRIEFS{studioCount>0 ? " · "+studioCount+" STUDIO-ADOPTED" : ""}
             </div>
-            <h1 className="font-serif text-[28px] leading-none tracking-tight">Content Briefs</h1>
+            <h1 className="font-display text-[26px] leading-none">Content Briefs</h1>
             <p className="text-[12px] text-[var(--muted)] mt-1.5 max-w-2xl">{BRIEFS.length} briefs generated this week from {SCANNED_TOTAL} signals{studioCount>0 ? ", plus "+studioCount+" riffed in the Studio" : ""}. Organized by content pillar — so you can see at a glance where the week leans. Priority chip on each card tells you which to ship first. Click any brief to open its full detail.</p>
           </div>
           {topRight}
@@ -5236,7 +5239,7 @@ function WeeklyPlaybook({nav, topRight}){
           <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
             <div>
               <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-2">{WELCOME_WEEK_RANGE} · MISSION BOARD</div>
-              <h1 className="font-serif text-[28px] tracking-tight leading-none">Content Calendar</h1>
+              <h1 className="font-display text-[26px] leading-none">Content Calendar</h1>
             </div>
             <div className="flex items-center gap-2 flex-wrap">
               {/* Phase D — week-level strategist entry point. Opens the
@@ -5518,7 +5521,7 @@ function Performance({nav, topRight}){
         <div className="flex items-start justify-between gap-6">
           <div>
             <div className="font-mono text-[9px] tracking-wider text-[var(--muted)] mb-1">RESULTS · MAY 18 – MAY 24, 2026 · LAST WEEK</div>
-            <h1 className="font-serif text-[28px] leading-none tracking-tight">Performance</h1>
+            <h1 className="font-display text-[26px] leading-none">Performance</h1>
             <p className="text-[12px] text-[var(--muted)] mt-1.5 max-w-2xl">Last week's briefs, shipped and measured. The engine learns from every result and feeds it back into next week's briefs.</p>
           </div>
           {topRight}
@@ -5623,7 +5626,7 @@ function PasswordGate({onUnlock}){
   return (
     <div className="fixed inset-0 flex items-center justify-center" style={{background:"var(--bg)"}}>
       <div className="w-[420px] card p-8">
-        <div className="font-serif text-[28px] leading-none tracking-tight mb-1">Willa's</div>
+        <div className="serif-keep font-serif text-[30px] leading-none tracking-tight mb-1" style={{color:"#75C596", fontWeight:600}}>Willa's</div>
         <div className="font-mono text-[9px] tracking-[0.18em] text-[var(--muted)] mb-6">SOCIAL CONTENT ENGINE</div>
         <form onSubmit={submit}>
           <label className="font-mono text-[9px] tracking-wider text-[var(--muted)]">PASSWORD</label>
@@ -5860,7 +5863,7 @@ function DiagnosticInbox(){
           const isLocked = !!(ans && ans.locked);
           const selectedDetailOpt = draft ? q.options.find(o=>o.value===draft.value) : null;
           return (
-            <div key={q.id} className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: isLocked?"#4E8C63":"#D4CEC0"}}>
+            <div key={q.id} className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: isLocked?"#4E8C63":"var(--border)"}}>
               <button onClick={()=>setOpenItem(isOpen?null:q.id)} className="w-full flex items-center gap-3 px-5 py-4 text-left hover:bg-[#FAFAF7] transition">
                 <span className="text-[20px] shrink-0">{q.glyph}</span>
                 <div className="min-w-0 flex-1">
@@ -5924,7 +5927,7 @@ function DiagnosticInbox(){
         })}
 
         {/* Free-form catch-all */}
-        <div className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: freeFormLocked?"#4E8C63":"#D4CEC0"}}>
+        <div className="card overflow-hidden" style={{borderLeftWidth:"4px", borderLeftColor: freeFormLocked?"#4E8C63":"var(--border)"}}>
           <div className="flex items-center gap-3 px-5 py-4">
             <span className="text-[20px] shrink-0">💭</span>
             <div className="min-w-0 flex-1">
@@ -5987,11 +5990,12 @@ function WelcomeGuide({open, onClose, onNavigate}){
           <span className="text-[18px] leading-none text-[#202A44]">×</span>
         </button>
 
-        {/* Hero */}
-        <div className="px-7 pt-8 pb-7" style={{background:"linear-gradient(160deg,#FFFEF7 0%,#F6F6F0 100%)", borderBottom:"1px solid var(--border)"}}>
-          <div className="font-mono text-[10px] tracking-[0.3em] text-[var(--muted)] mb-2">{WELCOME_WEEK_RANGE}</div>
-          <h2 className="font-serif text-[36px] leading-[1.02] tracking-tight text-[#202A44]">The Monday Memo</h2>
-          <div className="font-mono text-[10.5px] tracking-[0.15em] text-[#9E652E] mt-2">— The Strategist</div>
+        {/* Hero — navy carton band (2026-06-04): packaging top-band treatment with
+            Kids-carton confetti, title in the bold display sans. */}
+        <div className="px-7 pt-8 pb-7 confetti" style={{background:"#202A44", borderBottom:"1px solid var(--border)"}}>
+          <div className="font-mono text-[10px] tracking-[0.3em] mb-2" style={{color:"#73B2C9"}}>{WELCOME_WEEK_RANGE}</div>
+          <h2 className="font-display text-[32px] leading-[1.02] text-white">The Monday Memo</h2>
+          <div className="font-mono text-[10.5px] tracking-[0.15em] mt-2" style={{color:"#75C596"}}>— The Strategist</div>
         </div>
 
         <div className="px-7 py-6">
@@ -7589,7 +7593,7 @@ function AskStrategist({ open, onClose, onRequestApiKey, chat }) {
         )}
 
         {/* Messages */}
-        <div ref={scrollRef} className="flex-1 overflow-y-auto scrollbar px-4 py-4" style={{background:"#FAFAF7"}}>
+        <div ref={scrollRef} className="flex-1 overflow-y-auto scrollbar px-4 py-4" style={{background:"#F4F5F3"}}>
           {chat.messages.length === 0 ? (
             <div className="h-full flex flex-col justify-center">
               <div className="text-center mb-5">
@@ -7737,7 +7741,7 @@ function SettingsTab({settings, setSettings, nav, topRight}){
         <div className="flex items-start justify-between gap-6">
           <div>
             <div className="font-mono text-[9px] tracking-wider mb-1" style={{color:"var(--muted)"}}>SETTINGS</div>
-            <h1 className="font-serif text-[28px] leading-none tracking-tight">Make it yours</h1>
+            <h1 className="font-display text-[26px] leading-none">Make it yours</h1>
             <p className="text-[12px] mt-1.5 max-w-2xl" style={{color:"var(--muted)"}}>Theme, text size, and accessibility. Saved to this browser — re-applies every time you load the dashboard.</p>
           </div>
           {topRight}
