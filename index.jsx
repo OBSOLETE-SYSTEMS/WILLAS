@@ -45,7 +45,7 @@ const TRENDS = [
   },
   {
     trend:"Dye-removal push jumps from food makers to grocers' private-label aisles 🛒",
-    detail:"Axios (Jun 4, 2026) reports the synthetic-dye removal wave has spread from food makers to retailers — Walmart, Target, Kroger and Albertsons are reformulating store brands ahead of their own 2026-2027 targets. Walmart is pulling synthetic dyes plus ~30 other ingredients from private label, and small clean-label brands rode the shift into tens of thousands of new doors.",
+    detail:"Axios (Jun 4, 2026) reports the synthetic-dye removal wave has jumped from food makers to retailers' private-label aisles. Walmart is pulling synthetic dyes plus ~30 other additives from its store brands (Great Value, bettergoods) by 2027, and the pressure is rippling across the major grocery chains — clean-label brands rode the shift into tens of thousands of new doors.",
     platform:"Trade + mainstream press",
     views:"Major-retailer-wide reformulation cycle",
     velocity:"high",
@@ -137,7 +137,7 @@ const TRENDS = [
 
 const TICKER = [
   {agent:"trend", text:"flagged a state AG turning the oat-category pesticide story legal — routed it straight into the \"We test every lot\" calm-authority founder Reel."},
-  {agent:"trend", text:"logged the dye-removal wave hitting private-label aisles at four major grocers — anchored the \"whole aisle is getting a shorter ingredient list\" checklist."},
+  {agent:"trend", text:"logged the dye-removal wave hitting private-label aisles as Walmart strips its store brands — anchored the \"whole aisle is getting a shorter ingredient list\" checklist."},
   {agent:"pulse", text:"surfaced the Kool-Aid pineapple sugar bomb at 30M+ views — answered with \"let the pineapple be the candy\" — real fruit on a 1g-sugar whole-oat base, abundance over a lecture."},
   {agent:"pulse", text:"caught the 7-second #summeranthem lip-sync as the lowest-lift viral entry — built \"the only summer anthem with 8g of protein\" around the beat-drop count."},
   {agent:"pulse", text:"rode the buzzy blue-coconut matcha launch into a Barista home rebuild — same tropical-creamy payoff, no chain sugar load."},
@@ -1107,7 +1107,7 @@ const RUN_LOG = [
   {date:"Sun Jun 7 · 21:30", agent:"hook", msg:"Caption variants drafted across the slate (direct / warm / punchy) · brand-voice default · Willa's capitalized in caption bodies · Christina on-camera reserved for the glyphosate founder Reel + the heritage pour, per the 3/week cap"},
   {date:"Sun Jun 7 · 16:40", agent:"trend", msg:"State AG issued civil investigative demands over glyphosate residue, flagging oat-based kids' foods (Daily Caller Jun 3 · FoodBev Jun 5) — first state to act · BIG SWING \"We test every lot\" founder Reel queued in response"},
   {date:"Sun Jun 7 · 14:08", agent:"pulse", msg:"Kool-Aid pineapple sugar bomb hit 30M+ views in three days (Dexerto Jun 1) — roughly 320g sugar a jar, wellness backlash forming · BIG SWING \"let the pineapple be the candy\" real-fruit smoothie queued — push back, don't ride"},
-  {date:"Sat Jun 6 · 18:22", agent:"trend", msg:"Dye-removal wave spread from food makers to private-label aisles at Walmart, Target, Kroger, Albertsons (Axios Jun 4) · \"the whole aisle is getting a shorter ingredient list\" checklist Reel queued, 4-ingredient label as the standard"},
+  {date:"Sat Jun 6 · 18:22", agent:"trend", msg:"Dye-removal wave spread from food makers to private-label aisles — Walmart pulling dyes + ~30 additives from its store brands, Albertsons (Axios Jun 4) · \"the whole aisle is getting a shorter ingredient list\" checklist Reel queued, 4-ingredient label as the standard"},
   {date:"Sat Jun 6 · 14:50", agent:"pulse", msg:"7-second 'Like a Prayer' #summeranthem lip-sync confirmed as the summer's lowest-lift viral entry (NewEngen) — small creators hitting millions first try · BIG SWING \"the only summer anthem with 8g of protein\" Kids-latte pour queued"},
   {date:"Sat Jun 6 · 11:18", agent:"comp", msg:"Category giant broke ground on a $567M expansion scaling dairy RTD lattes plus a 96,000-meal summer program (Brownfield + Capital Press Jun 1-2) · clean-by-design \"the cafe is the kitchen now\" Barista answer queued — no names"},
   {date:"Sat Jun 6 · 09:30", agent:"perf", msg:"Specialty Food Association announced the 2026 Good Food Awards Jun 2 — Kids Chocolate the only oat-milk winner, blind-tasted from 1,200+ entries · fan-voice medal carousel queued for the REVIEWS lane"},
@@ -5657,9 +5657,9 @@ const WELCOME_HIGHLIGHTS = [
     ]
   },
   {
-    stat:"four major grocers",
-    label:"the dye-removal wave hit private-label aisles",
-    detail:"The synthetic-dye purge spread from food makers to retailers — Walmart, Target, Kroger and Albertsons are reformulating store brands, and Walmart is pulling dyes plus ~30 other ingredients from private label. our move: a fast hand-flip checklist Reel anchoring the 4-ingredient label as the standard the whole shelf is now chasing.",
+    stat:"30+ additives",
+    label:"Walmart strips its store brands as the dye purge hits private label",
+    detail:"The synthetic-dye purge spread from food makers to the grocery aisle — Walmart is pulling dyes plus ~30 other additives from its private-label brands by 2027, and the pressure is spreading across the major chains. our move: a fast hand-flip checklist Reel anchoring the 4-ingredient label as the standard the whole shelf is now chasing.",
     color:"#75C596",
     icon:"🛒",
     glyph:"🛒",
