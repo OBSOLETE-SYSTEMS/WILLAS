@@ -136,18 +136,18 @@ const TRENDS = [
 
 
 const TICKER = [
-  "flagged a state AG turning the oat-category pesticide story legal — routed it straight into the \"We test every lot\" calm-authority founder Reel.",
-  "logged the dye-removal wave hitting private-label aisles at four major grocers — anchored the \"whole aisle is getting a shorter ingredient list\" checklist.",
-  "surfaced the Kool-Aid pineapple sugar bomb at 30M+ views — answered with \"let the pineapple be the candy\" — real fruit on a 1g-sugar whole-oat base, abundance over a lecture.",
-  "caught the 7-second #summeranthem lip-sync as the lowest-lift viral entry — built \"the only summer anthem with 8g of protein\" around the beat-drop count.",
-  "rode the buzzy blue-coconut matcha launch into a Barista home rebuild — same tropical-creamy payoff, no chain sugar load.",
-  "stitched the pink-drink summer wave into a Kids strawberry refresher made with real fruit, not syrup.",
-  "wrote \"the best recipes don't get invented — they get handed down\" against the 30-year-franchise heritage moment.",
-  "logged the category giant's dairy-latte spend — countered with \"the cafe is the kitchen now,\" the at-home oat latte that's clean by design, no names.",
-  "carried the blind-tasted Good Food medal into a fan-voice Chocolate carousel — buyer comments as the headlines.",
-  "tied the gut-health summer-spread surge to a \"the carton earned its spot on the spread\" Pinterest still — 2g+ prebiotic fiber, editorial, no overlay.",
-  "positioned 4g+ whole-oat protein with \"protein doesn't have to come in a shaker\" — nutrient-dense default, never a weight-loss message.",
-  "pinned Willa's Kids into the mother-founded clean-label wave parents already trust — WBENC, allergen-free, no name-drop."
+  {agent:"trend", text:"flagged a state AG turning the oat-category pesticide story legal — routed it straight into the \"We test every lot\" calm-authority founder Reel."},
+  {agent:"trend", text:"logged the dye-removal wave hitting private-label aisles at four major grocers — anchored the \"whole aisle is getting a shorter ingredient list\" checklist."},
+  {agent:"pulse", text:"surfaced the Kool-Aid pineapple sugar bomb at 30M+ views — answered with \"let the pineapple be the candy\" — real fruit on a 1g-sugar whole-oat base, abundance over a lecture."},
+  {agent:"pulse", text:"caught the 7-second #summeranthem lip-sync as the lowest-lift viral entry — built \"the only summer anthem with 8g of protein\" around the beat-drop count."},
+  {agent:"pulse", text:"rode the buzzy blue-coconut matcha launch into a Barista home rebuild — same tropical-creamy payoff, no chain sugar load."},
+  {agent:"pulse", text:"stitched the pink-drink summer wave into a Kids strawberry refresher made with real fruit, not syrup."},
+  {agent:"composer", text:"wrote \"the best recipes don't get invented — they get handed down\" against the 30-year-franchise heritage moment."},
+  {agent:"comp", text:"logged the category giant's dairy-latte spend — countered with \"the cafe is the kitchen now,\" the at-home oat latte that's clean by design, no names."},
+  {agent:"composer", text:"carried the blind-tasted Good Food medal into a fan-voice Chocolate carousel — buyer comments as the headlines."},
+  {agent:"trend", text:"tied the gut-health summer-spread surge to a \"the carton earned its spot on the spread\" Pinterest still — 2g+ prebiotic fiber, editorial, no overlay."},
+  {agent:"composer", text:"positioned 4g+ whole-oat protein with \"protein doesn't have to come in a shaker\" — nutrient-dense default, never a weight-loss message."},
+  {agent:"composer", text:"pinned Willa's Kids into the mother-founded clean-label wave parents already trust — WBENC, allergen-free, no name-drop."}
 ];
 
 
