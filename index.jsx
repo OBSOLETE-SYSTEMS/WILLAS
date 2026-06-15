@@ -196,7 +196,7 @@ const TICKER = [
   {agent:"composer", text:"named the fourth answer to the '90s mom quiz — the oat mom — real ingredients, zero restriction, embodied in brand 'we' voice, never satirizing the others."},
   {agent:"comp", text:"logged the legacy oat-milk giants restructuring and retreating — countered with \"the headlines keep changing, the back of this carton hasn't,\" trust the glass, no names."},
   {agent:"pulse", text:"rebuilt FoodTok's confetti 'dot cake' cold-foam latte dairy-free — same photogenic spoon-drag top on whole-oat Kids foam, minus the sugar-bomb creamer."},
-  {agent:"voice", text:"wabi-sabi'd the ingredient list — \"a little off-center, a lot less in it\" — the off-center charm is that it's only four things, warm and honest."}
+  {agent:"editor", text:"wabi-sabi'd the ingredient list — \"a little off-center, a lot less in it\" — the off-center charm is that it's only four things, warm and honest."}
 ];
 
 
@@ -1368,7 +1368,7 @@ const BRIEF_BY_ID = Object.fromEntries(BRIEFS.map(b=>[b.id,b]));
 // ─── Run Log ──────────────────────────────────────────────
 const RUN_LOG = [
   {date:"Sun Jun 14 · 22:10", agent:"composer", msg:"18 briefs delivered for the week of JUN 15-21 · 3 BIG SWINGs (GRAS-disclosure four-lines founder Reel · saxophone doom-meter format flip · Father's Day one-pour pancake morning) · 7 HIGH · category-POV + dairy-free remix spine"},
-  {date:"Sun Jun 14 · 21:30", agent:"voice", msg:"Caption variants drafted across the slate (direct / warm / punchy) · brand-voice default · Willa's capitalized in caption bodies · Christina on-camera reserved for the GRAS founder Reel + the Father's Day pancake morning, inside the 2-3/week cap"},
+  {date:"Sun Jun 14 · 21:30", agent:"editor", msg:"Caption variants drafted across the slate (direct / warm / punchy) · brand-voice default · Willa's capitalized in caption bodies · Christina on-camera reserved for the GRAS founder Reel + the Father's Day pancake morning, inside the 2-3/week cap"},
   {date:"Sun Jun 14 · 16:40", agent:"trend", msg:"New York GRAS-disclosure bill (AB 1556/SB 1239) on the Governor's desk — first state to force published safety reports on self-affirmed ingredients, passed Assembly 106-32 + Senate unanimously (Davis Wright Tremaine Jun 8) · BIG SWING \"four lines, no homework\" founder Reel queued"},
   {date:"Sun Jun 14 · 14:08", agent:"pulse", msg:"'Saxophones are getting louder' confirmed as one of June's most-used TikTok formats (New Engen · napoleoncat) — doom-meter swell-then-dread structure · BIG SWING format flip queued, aim the dread at the average carton, cut to silence on the 4-ingredient label"},
   {date:"Sat Jun 13 · 18:22", agent:"trend", msg:"Oat milk pegged the fastest-growing plant-milk lane — ~$3.67B (2025) to $10.68B by 2034, the 2026 story chasing 'whole ingredients + protein' (Food Institute · FoodNavigator) · category-POV carousel queued, market data stays internal"},
