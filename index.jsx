@@ -6060,7 +6060,7 @@ const WELCOME_REFRESHED = "JUN 14, 2026";
 // Pays off Principle 1 (humans in control — pre-mapped contingencies) + Principle
 // 2 (motivate next action — every play and watch ends with a verb).
 const WELCOME_READ = {
-  pullQuote:"the whole category just started chasing whole ingredients and more protein. that's been the back of our carton the entire time.",
+  pullQuote:"the shelf is being told to show its work — and the feed's finally tired of optimizing breakfast. good week to be four honest ingredients.",
   the_moves:[
     {kind:"ship", verb:"Open the week with the \"four lines, no homework\" calm-authority founder Reel.", why:"A state is moving to force the shelf to publish the safety report behind every self-affirmed ingredient. We don't react to the headline — we lead with the answer: four ingredients, nothing self-affirmed, nothing to file. Patagonia gravity, founder on camera, news as backdrop. Ship Wed Jun 17, 12pm."},
     {kind:"ship", verb:"Aim the doom-sax at the OTHER carton with the \"saxophones are for the other oat milk\" TikTok.", why:"June's most-used TikTok format is the swelling-saxophone doom meter. We point it at the average back label — gums, oils, oat syrup as the sax climbs — then cut the music dead on the calm 4-ingredient carton. The format carries the reach; the short list is the punchline. TikTok Wed Jun 17, 9am."},
@@ -6392,7 +6392,7 @@ function WelcomeGuide({open, onClose, onNavigate}){
           {/* THE READ — Maazah model: the pullquote IS the read; the signals + moves carry the detail */}
           <div className="mb-7">
             <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// THE READ</div>
-            <p className="font-serif text-[19px] italic leading-snug text-[#202A44] pl-4 border-l-[3px] border-[#FACC15] whitespace-nowrap overflow-hidden text-ellipsis">"{WELCOME_READ.pullQuote}"</p>
+            <p className="font-serif text-[19px] italic leading-snug text-[#202A44] pl-4 border-l-[3px] border-[#FACC15]">"{WELCOME_READ.pullQuote}"</p>
           </div>
 
           {/* 5 SIGNALS */}
