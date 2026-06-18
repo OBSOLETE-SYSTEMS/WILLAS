@@ -13,7 +13,13 @@
 // not support assistant message prefill" on this account).
 // ─────────────────────────────────────────────────────────────────────────
 
-export const config = { runtime: 'edge' };
+// regions: ['iad1'] — PIN TO US-EAST (added 2026-06-18). Same fix as
+// api/strategist.js: Edge functions run closest to the user, so the upstream
+// Anthropic call inherits the user's region. Anthropic geo-restricts to
+// supported countries — an unsupported region (e.g. Argentina) returns an
+// nginx "405 Not Allowed" page surfacing as API_405. Pin to US-East so the
+// Anthropic call always originates from a supported region.
+export const config = { runtime: 'edge', regions: ['iad1'] };
 
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-6';

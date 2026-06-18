@@ -10,9 +10,19 @@
 // Why Edge runtime: zero cold-start latency for streaming, native fetch
 // streaming support, regional deploys close to the user. Edge functions
 // don't support all Node APIs but we don't need any of them here.
+//
+// regions: ['iad1'] — PIN TO US-EAST (added 2026-06-18). Edge functions
+// otherwise execute in the Vercel region closest to the user, so the
+// upstream call to api.anthropic.com originates from THERE. Anthropic's API
+// is geo-restricted to supported countries; a request from an unsupported
+// region (e.g. Argentina) gets bounced with an nginx "405 Not Allowed" HTML
+// page, which surfaces in the Studio as `API_405`. Pinning execution to
+// US-East means the Anthropic call always originates from a supported region,
+// regardless of where the team member sits. Fixes the Studio "Riff with the
+// Strategist" error for international users (Guada/Argentina).
 // ─────────────────────────────────────────────────────────────────────────
 
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'edge', regions: ['iad1'] };
 
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 
