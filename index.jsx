@@ -1845,7 +1845,7 @@ const CULTURAL_PULSE = [
     type:"ENTERTAINMENT MOMENT",
     typeColor:"#A191B2",
     hook:"Allison Russell's 'In the Hour of Chaos' is a 28-collaborator, gather-the-table roots record 🎶",
-    detail:"Allison Russell released In the Hour of Chaos on Jul 10, 2026 — a 28-collaborator roots/folk/bluegrass album (Norah Jones, Brittney Spencer, Joy Oladokun) she calls a mixtape for community and resilience. Critics frame it as finding small joys through community amid chaos — a many-hands, kitchen-table record, exactly Willa's heritage-and-comfort tonal pocket.",
+    detail:"Allison Russell released In the Hour of Chaos on Jul 10, 2026 — a 28-collaborator roots/folk/bluegrass album (Norah Jones, Brittney Spencer, Sara Watkins) she calls a mixtape for community and resilience. Critics frame it as finding small joys through community amid chaos — a many-hands, kitchen-table record, exactly Willa's heritage-and-comfort tonal pocket.",
     velocity:"medium",
     platform:"IG Reels",
     willasPlay:"Reel: use a track as the audio bed for a slow morning-kitchen pour — many hands, one table, real food passed down.",
