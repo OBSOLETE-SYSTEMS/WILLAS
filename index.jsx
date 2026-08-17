@@ -25,182 +25,184 @@ const PILLAR_COLORS = {
 const TRENDS = [
   {
     id:"T-1",
-    trend:"The loophole that let companies certify their own additives just cleared its last White House review 🔒",
-    detail:"The White House regulatory office finished its review of the FDA's proposed 'Substances Generally Recognized as Safe' rule on Jul 31, 2026, flagging it as a major rule with significant economic impact. It would make FDA notification mandatory for most new GRAS substances, require a public inventory of every notice and its intended use, and clarify how FDA declares a substance not GRAS. Until now a company could convene its own expert panel, self-affirm a new ingredient safe, and never tell the agency or the public.",
-    platform:"Federal regulatory + food-safety trade press",
-    views:"National regulatory cycle",
+    trend:"A private \"Non-UPF Verified\" seal is landing on real packages — issued by the same body that already verifies Willa's Non-GMO 🏷️",
+    detail:"The Non-GMO Project's Non-UPF Verified standard, administered with NSF, has moved from announcement to shelf. Go Raw announced its seal on Aug 11, 2026; Simple Mills said roughly 60% of its products qualified without reformulating a single item; Amy's Kitchen and Spindrift are also on the verified list. A consumer-advocacy critique published Aug 12, 2026 asks the harder question — whether a private badge arriving years ahead of any federal definition is a genuine shortcut for shoppers or one more unverifiable claim on the front of the box.",
+    platform:"Certification bodies + food-policy advocacy press",
+    views:"National clean-label cycle",
     velocity:"high",
     pillars:[
-      "HEALTH/WELLNESS",
-      "INGREDIENTS/RECIPES"
+      "INGREDIENTS/RECIPES",
+      "HEALTH/WELLNESS"
     ],
-    angle:"Willa's never needed the loophole — four ingredients, nothing self-certified. Lead with the shortest list on the shelf, said plainly, no fear-mongering.",
+    angle:"Go get the badge. Four ingredients already clears the bar — apply now and let a third party do the arguing on shelf.",
     urgency:"RIDE NOW",
     sources:[
-      {label:"Food Safety Magazine · GRAS Proposed Rule Clears OMB Review; FDA Sends UPF Whitepaper to OIRA (Aug 4, 2026)", url:"https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira"},
-      {label:"The Daily Intake · OIRA Completes Review of FDA Proposed GRAS Rule (Aug 7, 2026)", url:"https://www.dailyintakeblog.com/2026/08/oira-completes-review-of-fda-proposed-gras-rule/"}
+      {label:"Center for Science in the Public Interest · Non-UPF labels: Useful new tool or cause for confusion? (Aug 12, 2026)", url:"https://news.google.com/rss/articles/CBMihwFBVV95cUxQX1pzdGZ5MElWa1lTX3R2dXE4NU1XTzZtVDZhNmd6YmVOOWNFcVQ0N010b0pYd2RJZ3dpWVEwdDZQRHZyYWhGTFFYUUFwY053eWt3VW9ORDRVVHA5dGVFWVJBV2s2WFpZaHF0TzBfTnM4Y3YzUk9teWQ2WHhzdTlyQlJnWnFaVmc?oc=5"},
+      {label:"Non-UPF Verified · certification program page (permanent reference, linked from nongmoproject.org)", url:"https://www.nonultraprocessed.org/"}
     ]
   },
   {
     id:"T-2",
-    trend:"Washington is finally trying to define 'ultra-processed' — and just sent the draft up for review 📝",
-    detail:"HHS and FDA submitted a white paper titled 'Proposed Definition of Ultra-Processed Food' to the White House regulatory office on Aug 3, 2026, following a joint request for public input that closed in October 2025. The format matters: a nonbinding white paper creates a federal reference point without preempting state laws already on the books. This is the definition fight, not a warning label — the argument is over where the line actually falls.",
-    platform:"Federal regulatory filing + trade press",
+    trend:"A House bill would put \"oats\" on the major-allergen line of every label in America 🌾",
+    detail:"H.R. 9988, introduced Jul 30, 2026, would amend the Federal Food, Drug, and Cosmetic Act to strike \"wheat\" from the major food allergen definition and replace it with \"gluten-containing grain\" — defined as wheat, rye, barley, oats and crossbreeds such as triticale. It would also require HHS to report on celiac prevalence, diagnostics and prevention. Legal analysis of the bill text published Aug 12, 2026 and food-safety trade coverage Aug 11, 2026. Celiac disease affects roughly 1% of the US population, and oats have been the contested grain in that argument for years.",
+    platform:"Federal legislation + food-safety trade press",
     views:"National regulatory cycle",
     velocity:"medium",
     pillars:[
-      "HEALTH/WELLNESS",
+      "PARENTING",
       "INGREDIENTS/RECIPES"
     ],
-    angle:"Don't wait for the definition — answer it. Show the whole oat groat and what minimally processed actually looks like in a glass.",
+    angle:"Kids is already free of the top 9. Publish the gluten answer for every SKU plainly, now — before a label rewrite forces it.",
     urgency:"THIS WEEK",
     sources:[
-      {label:"FoodNavigator · FDA UPF white paper could reshape food policy (Aug 6, 2026)", url:"https://www.foodnavigator.com/Article/2026/08/06/fda-upf-white-paper-could-reshape-food-policy/"},
-      {label:"Food Safety Magazine · GRAS Proposed Rule Clears OMB Review; FDA Sends UPF Whitepaper to OIRA (Aug 4, 2026)", url:"https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira"}
+      {label:"The Daily Intake · Bill Introduced into House Would Require Allergen Labeling for Gluten-containing Grains (Aug 12, 2026)", url:"https://www.dailyintakeblog.com/2026/08/bill-introduced-into-house-would-require-allergen-labeling-for-gluten-containing-grains/"},
+      {label:"Quality Assurance & Food Safety · Bipartisan Bill Would Expand Major Food Allergen Labeling to Barley, Rye and Oats (Aug 11, 2026)", url:"https://news.google.com/rss/articles/CBMirgFBVV95cUxPc04tbHJsSS1RMlphMmhwNWNSSG1JRDFrX3VsR0VjZG1weVFZUkl5QmVTX2JJbDRqY3A3a0hNeHFIRnJkWF9Tc1NiaDh6UDEwR0RrZjhqUnhna3JOV2lVeGZacXNLczVtTmVNQW91R2JJVkFPVE1MY3FDRFZJVzZxdXJxLUk1OC1jMk51UGlvYmlpb3hBdmxnN3ZuQ0lVQks0WnBWRlg4ZndZZzladHc?oc=5"}
     ]
   },
   {
     id:"T-3",
-    trend:"Plant-milk volume has fallen more than 5% a year for three straight years — and oat's momentum is cooling 📉",
-    detail:"Circana retail data shows dairy-free milk volumes down over 5% annually for three consecutive years, with almond off 9% year-on-year in 2025 and oat milk — long the category's cool kid — losing pace. The analyst reading the numbers named four reasons out loud: price, taste, heavy processing, and low protein next to dairy. Meanwhile dairy milk keeps running at roughly $18 billion a year in US retail.",
-    platform:"National business press",
-    views:"National business + trade cycle",
+    trend:"A court just took away the QR code as a way to disclose bioengineered ingredients ⬛",
+    detail:"A federal district court in Natural Grocers v. Rollins ordered prospective vacatur of three USDA regulations governing bioengineered food disclosure, rejecting the agency's request to delay parts of it until 2029. Two provisions are going away: the digital-disclosure option that let brands park the disclosure behind a QR code or a text-message line, and the \"detectability\" exemption that excused products whose modified genetic material could not be detected in the finished food. Manufacturers have until Jan 1, 2028 to move to on-package text or a USDA-approved symbol, or the vacatur takes effect automatically. Legal analysis published Aug 17, 2026.",
+    platform:"Federal litigation + food-law analysis",
+    views:"National regulatory cycle",
+    velocity:"medium",
+    pillars:[
+      "INGREDIENTS/RECIPES",
+      "REVIEWS/RECS"
+    ],
+    angle:"Disclosure is being pushed back onto the box. Willa's prints Non-GMO Project Verified on the front — show the carton, not a scan.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"The Daily Intake · Court Sets Jan. 1, 2028, Deadline for Bioengineered Food Labeling Changes (Aug 17, 2026)", url:"https://www.dailyintakeblog.com/2026/08/court-sets-jan-1-2028-deadline-for-bioengineered-food-labeling-changes/"},
+      {label:"Genetic Literacy Project · Ultraprocessed foods made with GMO corn or soybeans will have to carry bioengineered labels (Aug 13, 2026)", url:"https://news.google.com/rss/articles/CBMi8gFBVV95cUxQX0EyUnRJNHB4cmxqMGxiV0lrTGJzSnRQZ3BrMGRxbThLYjVJTEZkaHVvblRUUC1pOVYyRk9WMDhvcGNYV0ZsREprblJ3T1lvUllNWWxYVnphSG9VNFpSSEtNdnFOVTdCZEdISGxFcUJHOEJrQWZ5VkZnNVRSU3VYS09PMjhGajdURDNJME4zTXBGTmRkT29FMm81cmFUcUZpNEpwd1NvLWJ5RkZvUVM1T1FwbGJRRFRsMzhiX01kVkllYUF2NEE5TFlrRnJXOUQ2VkRqVWdJRG1QazdLS0dhX3RVbmxOWmJDcWIxYU1CckdCdw?oc=5"}
+    ]
+  },
+  {
+    id:"T-4",
+    trend:"A national dairy player just quit ready-to-drink oat milk entirely — the reason given was \"lack of demand\" 🥛",
+    detail:"Chobani confirmed on Aug 11, 2026 that its drinkable Oatmilk line — Original, Vanilla and Zero Sugar — has been discontinued for lack of demand. Remaining retail stock sells through and will not be restocked, and the company would not say whether seasonal Oat Nog returns for the holidays. It is the second oat line it has walked away from, after quietly dropping its oat creamers around 2022-23. The same day it cut its 2026 earnings outlook to roughly $920 million despite 20% second-quarter revenue growth to $1.15 billion, framing the oat exit as part of a broader pullback from plant-based expansion as material costs rose about $35 million year on year.",
+    platform:"Brand confirmation + national business press",
+    views:"Category trade + business cycle",
+    velocity:"high",
+    pillars:[
+      "REVIEWS/RECS",
+      "INGREDIENTS/RECIPES"
+    ],
+    angle:"Shelf space is opening, not closing. Answer a retreat with commitment — one piece on why oat, and why we're still here.",
+    urgency:"RIDE NOW",
+    sources:[
+      {label:"Big Box Vegan · Chobani Discontinues Their Oatmilk Line (Aug 11, 2026)", url:"https://bigboxvegan.com/2026/08/11/chobani-discontinues-their-oatmilk-line/"},
+      {label:"Bloomberg · Chobani Cuts Annual Earnings Forecast on Rising Material Costs (Aug 11, 2026)", url:"https://www.bloomberg.com/news/articles/2026-08-11/chobani-cuts-annual-earnings-forecast-on-rising-material-costs"},
+      {label:"briefs.co · Chobani Cuts Its Profit Forecast as Costs Rise (Aug 11, 2026)", url:"https://www.briefs.co/news/chobani-cuts-its-profit-forecast-as-costs-rise/"}
+    ]
+  },
+  {
+    id:"T-5",
+    trend:"The clean-label challenger launched a 12g-protein \"whole\" milk replacement — and there's cane sugar in it 🥥",
+    detail:"Whole Malk went into Whole Foods, Target and Sprouts nationally on Aug 10, 2026 — a USDA-organic blend of coconut, cashew, soy and pea protein delivering 12g protein per serving with no gums, oils or fillers, fortified with iron, potassium, magnesium, B2, B12 and D. Trade press calls it the brand's biggest innovation to date, coming off a 2025 that hit $94 million in sales, up 46%, on more than 1.4 million units. The ingredient list also carries cane sugar and Himalayan pink salt, and the protein number comes from an added isolate rather than from the grain itself.",
+    platform:"Retail rollout + category trade press",
+    views:"Category trade cycle",
     velocity:"high",
     pillars:[
       "REVIEWS/RECS",
       "HEALTH/WELLNESS"
     ],
-    angle:"This is the case against processed plant milk, not against oats. Answer all four objections at once with the actual nutrition panel.",
-    urgency:"RIDE NOW",
+    angle:"\"Whole\" is now being used for a blend. Own the literal version — one whole oat groat, nothing added to hit a number.",
+    urgency:"THIS WEEK",
     sources:[
-      {label:"Bloomberg · Dairy-Free Milk Sales in Decline as Americans Choose Cow's Milk (Aug 3, 2026)", url:"https://www.bloomberg.com/news/articles/2026-08-03/dairy-free-milk-sales-in-decline-as-americans-choose-cow-s-milk"},
-      {label:"Newser · Americans Are Turning Away From Plant Milks (Aug 5, 2026)", url:"https://www.newser.com/story/394134/americans-cool-on-plant-milks-return-to-dairy.html"}
+      {label:"FoodBev · Malk unveils brand's 'biggest innovation yet' with clean-label Whole Malk NPD (Aug 10, 2026)", url:"https://www.foodbev.com/news/malk-unveils-brand-s-biggest-innovation-yet-with-clean-label-whole-malk-npd"},
+      {label:"Green Queen · Malk Debuts High-Protein Plant-Based Whole Milk After Sales Surged 46% (Aug 12, 2026)", url:"https://www.greenqueen.com.hk/malk-organics-plant-based-whole-milk-high-protein-clean-label-organic-sales/"},
+      {label:"The Plant Base · Malk unveils Whole Malk NPD (Aug 10, 2026)", url:"https://www.theplantbasemag.com/news/malk-unveils-brand-s-biggest-innovation-yet-with-clean-label-whole-malk-npd"}
     ]
   },
   {
-    id:"T-4",
-    trend:"A six-month trial cut people's sweetness intake — cravings and health markers didn't budge 🍬",
-    detail:"180 adults were assigned to low-, average- or high-sweetness diets for six months and assessed at one, three and six months, published in the American Journal of Clinical Nutrition. There was no meaningful difference between groups in sweet-taste preference, body weight, or markers tied to diabetes and heart disease. The researchers' conclusion is the useful part: guidance should target the sugar and the energy density, not 'sweetness' as a category, because sweetness from a whole food and sweetness from a syrup are not the same thing.",
-    platform:"Nutrition science + health press",
+    id:"T-6",
+    trend:"It isn't fiber alone — indigestible plant protein is what steers the gut toward the good metabolites 🧬",
+    detail:"\"Digestion-resistant proteins support the healthy metabolite profiles associated with plant-based diets\" ran in the Aug 11, 2026 print issue of PNAS, with the mainstream science write-up following Aug 14, 2026. The researchers name these indigestible plant proteins \"Prif\": they survive intact to the colon and, working alongside indigestible plant fiber, push gut bacteria toward beneficial phenols such as phenylpropionate and hippuric acid and away from harmful ones like p-cresol sulfate. Fiber separately suppresses bacterial breakdown of the body's own mucin proteins. The authors suggest food labels may eventually track resistant protein right next to fiber.",
+    platform:"Nutrition science + national science press",
+    views:"National health-press pickup",
+    velocity:"medium",
+    pillars:[
+      "HEALTH/WELLNESS",
+      "INGREDIENTS/RECIPES"
+    ],
+    healthSubAngle:"GUT",
+    angle:"Stop selling fiber alone. Most oat milks filter out the fiber AND the protein — say them as one sentence, not two claims.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"ScienceDaily · When gut microbes run low on fiber, they may start eating you (Aug 14, 2026)", url:"https://www.sciencedaily.com/releases/2026/08/260814235842.htm"},
+      {label:"PNAS · Digestion-resistant proteins support the healthy metabolite profiles associated with plant-based diets (print issue Aug 11, 2026)", url:"https://www.pnas.org/doi/10.1073/pnas.2605226123"}
+    ]
+  },
+  {
+    id:"T-7",
+    trend:"Fiber for IBS just got a top-tier journal's meta-analysis behind it 🌾",
+    detail:"A systematic review and meta-analysis of randomized controlled trials on fiber supplementation in irritable bowel syndrome was published in Gastroenterology on Aug 14, 2026, pooling the trial evidence for fiber as a symptom-management strategy. Gut comfort is one of the most-searched and least-answered questions in the plant-milk aisle — most shoppers with sensitive digestion have been told to avoid everything — and this is the first hard-evidence anchor for soluble fiber in that conversation in a while.",
+    platform:"Nutrition science + gastroenterology press",
+    views:"Clinical + health-press cycle",
+    velocity:"medium",
+    pillars:[
+      "HEALTH/WELLNESS"
+    ],
+    healthSubAngle:"GUT",
+    angle:"Own the gut question the aisle dodges: no gums, no stabilizers, 2g+ prebiotic fiber. Answer it calmly — don't diagnose anyone.",
+    urgency:"THIS WEEK",
+    sources:[
+      {label:"PubMed · Fiber supplementation in irritable bowel syndrome: systematic review and meta-analysis (Gastroenterology, Aug 14, 2026)", url:"https://pubmed.ncbi.nlm.nih.gov/42600900/"},
+      {label:"Gastroenterology (ScienceDirect) · Fiber supplementation in irritable bowel syndrome (Aug 14, 2026)", url:"https://www.sciencedirect.com/science/article/pii/S0016508526071477"}
+    ]
+  },
+  {
+    id:"T-8",
+    trend:"25,000 adults, twelve years: the heaviest ultra-processed eaters carried 40% more type-2 diabetes 📊",
+    detail:"The Melbourne Collaborative Cohort study was published Aug 10, 2026 in the Journal of the Academy of Nutrition and Dietetics. It followed 25,214 adults for roughly twelve years and recorded 1,734 new cases of type-2 diabetes. The group eating the most ultra-processed food carried a 40% higher risk than the group eating the least, and body-mass index explained only about a fifth of that association — meaning the effect is not simply \"these foods make you heavier.\" It is a large, well-powered number to use instead of vague processed-food language.",
+    platform:"Nutrition science + epidemiology press",
     views:"National health-press pickup",
     velocity:"medium",
     pillars:[
       "HEALTH/WELLNESS"
     ],
     healthSubAngle:"DIABETES",
-    angle:"The lever isn't less sweet — it's where the sweet comes from. Willa's Original: 1g, from the oats, nothing added.",
+    angle:"Skip the fear framing. Show what un-processed looks like in a glass — four ingredients, 1g sugar, and it comes from the oats.",
     urgency:"THIS WEEK",
     sources:[
-      {label:"ScienceDaily · Cutting sweet foods doesn't curb cravings or improve health (Aug 8, 2026)", url:"https://www.sciencedaily.com/releases/2026/08/260807235103.htm"},
-      {label:"PubMed · The Sweet Tooth Trial (American Journal of Clinical Nutrition)", url:"https://pubmed.ncbi.nlm.nih.gov/41485871/"}
-    ]
-  },
-  {
-    id:"T-5",
-    trend:"Three servings of full-fat dairy a day for twelve weeks — no weight or cholesterol penalty 🥛",
-    detail:"A University of Toronto trial put 74 adults with overweight or obesity on either a low-dairy calorie-restricted diet or three daily servings of full-fat dairy, published in The Journal of Nutrition. The full-fat groups matched the low-dairy group on weight, body composition and cholesterol, with better blood pressure and higher calcium, protein and vitamin D intake. This is a real category headwind: the 'low-fat is automatically healthier' story is the one losing this week, and it's the story plant milk quietly leaned on for a decade.",
-    platform:"Nutrition science + health press",
-    views:"National health-press pickup",
-    velocity:"medium",
-    pillars:[
-      "HEALTH/WELLNESS",
-      "REVIEWS/RECS"
-    ],
-    healthSubAngle:"HEART",
-    angle:"Stop competing on fat grams. Plant milk's real edge is fiber, no cholesterol, allergen-safe — say that instead of 'lighter.'",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"ScienceDaily · For decades we were told to choose low-fat dairy. New research says otherwise (Aug 9, 2026)", url:"https://www.sciencedaily.com/releases/2026/08/260808234948.htm"},
-      {label:"University of Toronto · Full-fat dairy shows benefits without raising body fat or cholesterol", url:"https://www.utoronto.ca/news/full-fat-dairy-shows-benefits-without-raising-body-fat-or-cholesterol-study-finds"}
-    ]
-  },
-  {
-    id:"T-6",
-    trend:"Whole milk returns to the lunch line this fall — and the same law opens a door for fortified plant milk 🏫",
-    detail:"The USDA final rule took effect Jun 8, 2026, letting districts put whole and 2% back on the tray for the first time since the 2011–12 school year, with fluid milk now excluded from the weekly saturated-fat math. Adoption is optional and varies district to district. The same statute also permits schools to offer nondairy beverages that are 'nutritionally equivalent' to fluid milk under standards set by the Secretary of Agriculture — the plant-milk provision nobody is covering because the whole-milk headline is louder.",
-    platform:"USDA policy + national news syndication",
-    views:"Back-to-school news cycle",
-    velocity:"high",
-    pillars:[
-      "PARENTING"
-    ],
-    angle:"The nondairy provision is the story nobody's telling. Make the case a parent could hand to a school: protein, calcium, DHA, allergen-safe.",
-    urgency:"RIDE NOW",
-    sources:[
-      {label:"WFMZ (Stacker) · USDA lets whole milk out of a 15-school-year detention this fall (Aug 4, 2026)", url:"https://www.wfmz.com/health/usda-lets-whole-milk-out-of-a-15-school-year-detention-this-fall/article_7c22bc7a-5b5a-568d-b409-ecdec7b07ac3.html"},
-      {label:"Congress.gov (CRS) · The Whole Milk for Healthy Kids Act (P.L. 119-69) — permanent reference page", url:"https://www.congress.gov/crs-product/IN12548"}
-    ]
-  },
-  {
-    id:"T-7",
-    trend:"Food-allergy training is now federally required for school food staff — this is its first school year 🥜",
-    detail:"The Protecting Children with Food Allergies Act, signed Jan 14, 2026, adds a mandatory annual food-allergy module to National School Lunch Program staff training, covering how to prevent, recognize and respond to reactions. Previously USDA made that training available but never required it. Allergy families are being walked through the school-nurse meeting, the action-plan handoff and epinephrine placement as the real pre-first-bell checklist — a completely different back-to-school door than the lunchbox.",
-    platform:"Federal policy + allergy press",
-    views:"Back-to-school news cycle",
-    velocity:"high",
-    pillars:[
-      "PARENTING",
-      "HEALTH/WELLNESS"
-    ],
-    angle:"Kids is free of the top 9 allergens — that's the point. Talk to the parent filling out the form, not the cafeteria.",
-    urgency:"RIDE NOW",
-    sources:[
-      {label:"Allergic Living · Back-to-School with Food Allergies: 8 Tools for Success (Aug 4, 2026)", url:"https://www.allergicliving.com/2026/08/04/back-to-school-with-food-allergies-8-tools-for-success/"},
-      {label:"U.S. Senate · Protecting Children With Food Allergies Bill Signed Into Law (permanent press-room page)", url:"https://www.durbin.senate.gov/newsroom/press-releases/durbin-fischers-protecting-children-with-food-allergies-bill-signed-into-law"}
-    ]
-  },
-  {
-    id:"T-8",
-    trend:"The category's loudest sustainability voice just widened its climate gap over dairy to 67% 🌱",
-    detail:"A new independent life-cycle assessment puts Oatly's ambient barista oat milk at 67% lower climate impact than chilled cow's milk in the UK, up from 55% in 2021 — a nine-point jump its own sustainability director called surprising. The gains come from factory energy efficiency, optimised transport routes, HVO fuel and a shift to British-grown oats across eight best-selling barista products. Hard numbers rather than vibes, defending the plant-milk halo in the same week retail data attacks it.",
-    platform:"Trade press + brand sustainability reporting",
-    views:"Category trade cycle",
-    velocity:"medium",
-    pillars:[
-      "HEALTH/WELLNESS",
-      "REVIEWS/RECS"
-    ],
-    angle:"Provenance is becoming a receipt, not a vibe. Willa's has carbon-sequestering organic oats and zero food waste — publish the proof, quietly.",
-    urgency:"THIS WEEK",
-    sources:[
-      {label:"Green Queen · Oatly Widens Oat Milk Emissions Gap to 67% (Aug 4, 2026)", url:"https://www.greenqueen.com.hk/oatly-sustainability-barista-oat-milk-emissions-gap-climate-impact-lca/"},
-      {label:"Oatly · Climate footprint product label (permanent brand reference page)", url:"https://www.oatly.com/en-gb/oatly-who/sustainability-plan/climate-footprint-product-label"}
+      {label:"PubMed · Ultra-processed food consumption and risk of type-2 diabetes, Melbourne Collaborative Cohort (Aug 10, 2026)", url:"https://pubmed.ncbi.nlm.nih.gov/42575428/"},
+      {label:"Journal of the Academy of Nutrition and Dietetics · Ultra-processed food consumption and risk of type-2 diabetes (Aug 10, 2026)", url:"https://doi.org/10.1016/j.jand.2026.156434"}
     ]
   },
   {
     id:"T-9",
-    trend:"The clean-label challenger is expanding on two fronts at once — new formats and borrowed celebrity reach 🥥",
-    detail:"MALK added shelf-stable Organic Unsweetened Coconut and Cashew milks on Aug 7, 2026 — four simple ingredients, no gums, oils or fillers, USDA Organic, Non-GMO, gluten-free and Glyphosate Residue Free, holding 18 months unopened. A day earlier its almond milk turned up as the base of a limited-run celebrity smoothie at a Los Angeles grocer, the latest in a run of collabs it has ridden at near-zero media cost. Clean label is being stretched into new formats and amplified on someone else's launch.",
-    platform:"Brand newsroom + retail",
-    views:"Category trade cycle",
+    trend:"Where fiber's fermentation lands in the gut is what decides how full you feel 🔬",
+    detail:"A randomized crossover trial published in the American Journal of Clinical Nutrition on Aug 10, 2026 delivered short-chain fatty acids — the compounds gut bacteria make when they ferment fiber — directly to either the small intestine or the colon in 28 healthy adults. Colonic delivery produced more PYY, the fullness signal. Small-intestinal delivery unexpectedly produced more GLP-1 and higher circulating short-chain fatty acids. Glucose and insulin responses didn't differ by site, but appetite did. The conclusion is that where fiber's byproducts land shapes the hormonal payoff — not just how many grams are printed on the front.",
+    platform:"Nutrition science + clinical trial press",
+    views:"Clinical + health-press cycle",
     velocity:"medium",
     pillars:[
-      "REVIEWS/RECS",
-      "INGREDIENTS/RECIPES"
+      "HEALTH/WELLNESS"
     ],
-    angle:"Two cheap levers Willa's also has: a format the fridge doesn't limit, and a venue collab instead of a paid celebrity deal.",
-    urgency:"THIS WEEK",
+    healthSubAngle:"GLP-1",
+    angle:"Go one level below the protein-sticker crowd: explain in plain words why oat fiber actually holds you. Once, well, not weekly.",
+    urgency:"BACKGROUND",
     sources:[
-      {label:"MALK Organics newsroom · Shelf-stable coconut and cashew expansion (Aug 7, 2026)", url:"https://malkorganics.com/blogs/news/your-pantry-just-got-cleaner-malk-expands-its-shelf-stable-lineup-with-coconut-and-cashew"},
-      {label:"MALK Organics newsroom · Blueberry SYRN smoothie at Erewhon features MALK almond milk (Aug 6, 2026)", url:"https://malkorganics.com/blogs/news/sydney-sweeney-s-blueberry-syrn-smoothie-at-erewhon-features-malk-organic-almond-milk"}
+      {label:"PubMed · Small intestinal versus colonic short-chain fatty acid delivery: randomized crossover trial (AJCN, Aug 10, 2026)", url:"https://pubmed.ncbi.nlm.nih.gov/42575284/"},
+      {label:"American Journal of Clinical Nutrition · Small intestinal versus colonic SCFA delivery (Aug 10, 2026)", url:"https://doi.org/10.1016/j.ajcnut.2026.101470"}
     ]
   },
   {
     id:"T-10",
-    trend:"A celebrity cold-brew brand just tripled its lineup — and every can is built on oat milk ☕",
-    detail:"JOLENE, the ready-to-drink cold brew founded by Anthony Kiedis with Shane Powers and John Terzian, released its first new flavors since launch on Aug 4, 2026: Red Velvet, Hazelnut and Salted Caramel, in 8oz cans, gluten-free and dairy-free on an oat-milk base, launching through New York City retail and direct. Each carries 120 calories, 10–14g of sugar and 188mg of caffeine. A new premium brand is still betting its whole formula on oat in the exact week the category got called cooling.",
-    platform:"Beverage trade press",
+    trend:"While one giant quit the category, the supply chain spent the same week adding capacity 🏭",
+    detail:"Scoular announced on Aug 11, 2026 that it is expanding dehulled soybean capacity at its Covington facility specifically to meet rising demand from plant-based milk manufacturers. Three days later, on Aug 14, 2026, a German dairy company opened a dedicated plant-based facility for milk and yogurt production. Both are capital commitments with multi-year horizons, made inside the same seven days a major US player publicly walked away from drinkable oat milk citing lack of demand. The people who supply this category are not reading the same story as the people exiting it.",
+    platform:"Ingredient supply + category trade press",
     views:"Category trade cycle",
     velocity:"medium",
     pillars:[
-      "INGREDIENTS/RECIPES",
       "REVIEWS/RECS"
     ],
-    angle:"Oat isn't the problem — the sugar load is. Own the coffee occasion on the ingredient list, not on another flavor name.",
-    urgency:"THIS WEEK",
+    angle:"Confidence is a content position. Post like a brand with a decade ahead of it, not one defending its own aisle.",
+    urgency:"BACKGROUND",
     sources:[
-      {label:"BevNET · JOLENE Coffee Introduces Three Bold New Flavors (Aug 4, 2026)", url:"https://www.bevnet.com/pr/2026/08/04/jolene-coffee-introduces-three-bold-new-flavors"},
-      {label:"Jolene Coffee · product lineup (permanent brand landing page)", url:"https://jolenecoffee.com/"}
+      {label:"Green Queen · Scoular Expands Dehulled Soybean Capacity to Meet Rising Demand for Plant-Based Milk (Aug 11, 2026)", url:"https://www.greenqueen.com.hk/scoular-soybean-dehulling-capacity-plant-based-food-milk-covington/"},
+      {label:"Plant Based News · German Dairy Company Opens Plant-Based Facility For Milk And Yogurt (Aug 14, 2026)", url:"https://plantbasednews.org/news/alternative-protein/german-dairy-company-plant-based-facility/"}
     ]
   }
 ];
@@ -208,65 +210,56 @@ const TRENDS = [
 
 
 const TICKER = [
-  {agent:"trend", text:"the rule ending self-certified food additives cleared its last review — booked Christina's first on-camera slot for \"nothing self-certified. nothing to disclose.\""},
-  {agent:"editor", text:"killed the personality-led version of the loophole story — the source 403'd and never surfaced independently, so the card runs on two links verified end to end."},
-  {agent:"comp", text:"the category got charged with four failures at once, so the Wednesday Reel answers all four — and taste goes first, because that's the one that resolves on tasting."},
-  {agent:"pulse", text:"swapped the week's meme slot after the documentary sit-down turned out to be the same post we ran in mid-July — the childhood-photo beat drop replaces it, and the payload is the bowl that never changed."},
-  {agent:"editor", text:"moved back-to-school to the nurse's office: allergy training is federally required for its first school year, and every lunchbox angle is spent."},
-  {agent:"trend", text:"one law puts whole milk back on the tray and permits a nutritionally equivalent nondairy beverage — nobody covered the second sentence, so we briefed it."},
-  {agent:"comp", text:"the sustainability leader published audited numbers, so provenance is a receipt now — answered with zero food waste and the whole groat, no percentages, no comparison."},
-  {agent:"visual", text:"held Barista to one slot and ran it as category critique — a can picks your sugar for you, a glass doesn't."},
-  {agent:"hook", text:"sharpened the single-serve dessert pin to \"a whole chocolate cake that happens to serve one.\""},
-  {agent:"pulse", text:"killed the number-one sound on the board — a haircut reveal has no payoff a carton can occupy, and forcing it would read as chasing."},
-  {agent:"paid", text:"amplification concentrates on the two Wednesday briefs — the four-objection Reel takes the saves budget, the founder stance a smaller, tighter reach spend."},
-  {agent:"perf", text:"the uncut label read has topped saves four refreshes running — this week it lives inside the certification-stack carousel rather than as its own post."}
+  {agent:"trend", text:"a third party finally wrote the ultra-processed bar down, so the week opens on \"we've been waiting for somebody to write the test\" — and never claims a badge we haven't applied for."},
+  {agent:"editor", text:"killed the self-certification follow-up despite a full news cycle behind it — the only new fact is a docket number, and that lane ran last Monday."},
+  {agent:"comp", text:"a national player quit ready-to-drink oat milk, so Wednesday noon answers with \"the recipe came from a kitchen. the carton was the only new part\" — and never mentions that anyone left."},
+  {agent:"comp", text:"reframed the 12g-protein launch off a scoreboard we'd lose — \"protein has a return address. ours says oats\" asks where it came from instead of whose number is bigger."},
+  {agent:"pulse", text:"the kitchen-scale video became an invitation, not a pile-on: \"we built this carton to be checked.\" nobody gets named and no carton goes on a scale."},
+  {agent:"trend", text:"a bill would put oats on the major-allergen line, so the Kids answer publishes while it's still a choice — \"you shouldn't have to read a carton twice.\""},
+  {agent:"editor", text:"benched back-to-school entirely after three straight weeks — a state school-food law is held as the first candidate when a slot opens."},
+  {agent:"pulse", text:"passed on the biggest challenge of the week by volume — a finger-count dance has no payoff slot a carton can occupy."},
+  {agent:"hook", text:"gave the sugar truth its own object: \"kinda chic that the only sugar in it came from the oats.\" one line, one carton, no second sentence."},
+  {agent:"visual", text:"the illusion-plus-proof pour ships only if the pour is real — no thickener, no prop milk, kill the brief before faking a proof shot."},
+  {agent:"paid", text:"amplification concentrates on the two Wednesday briefs plus the creamy lemonade build — the founder stance takes the smallest and tightest spend on the board."},
+  {agent:"perf", text:"Pinterest has posted the lowest reach and the highest save rate three refreshes running, so all three pins are built as save objects rather than news rides."}
 ];
 
 
 const COMPETITORS = [
   {
     id:"C-1",
-    name:"Oatly",
-    color:"#0F5C4B",
-    status:"Published a new independent life-cycle assessment on Aug 4, 2026 showing its ambient barista oat milk now carries a 67% lower climate impact than chilled cow's milk in the UK, up from 55% in 2021 — driven by factory energy efficiency, optimised transport, HVO fuel and a shift to British-grown oats across eight best-selling barista products.",
-    direction:"up",
-    opportunity:"They're defending the halo with audited numbers. Willa's answer is provenance: carbon-sequestering organic oats, zero food waste, whole groat. Publish the receipt.",
+    name:"Chobani",
+    color:"#1E4C8A",
+    status:"Confirmed on Aug 11, 2026 that its ready-to-drink Oatmilk line — Original, Vanilla and Zero Sugar — is discontinued for lack of demand, with remaining stock selling through and no restock planned; it declined to confirm whether seasonal Oat Nog returns. It is the second oat line the company has abandoned after quietly dropping its oat creamers around 2022-23. The same day it cut its 2026 earnings outlook to roughly $920 million despite 20% Q2 revenue growth to $1.15 billion, explicitly framing the exit as part of a wider retreat from plant-based expansion as material costs climbed about $35 million year on year.",
+    direction:"down",
+    opportunity:"A giant leaving on 'lack of demand' is a confidence test, not a verdict. Answer with commitment and the whole-oat reason we're here.",
     sources:[
-      {label:"Green Queen · Oatly Widens Oat Milk Emissions Gap to 67% (Aug 4, 2026)", url:"https://www.greenqueen.com.hk/oatly-sustainability-barista-oat-milk-emissions-gap-climate-impact-lca/"}
+      {label:"Big Box Vegan · Chobani Discontinues Their Oatmilk Line (Aug 11, 2026)", url:"https://bigboxvegan.com/2026/08/11/chobani-discontinues-their-oatmilk-line/"},
+      {label:"Bloomberg · Chobani Cuts Annual Earnings Forecast on Rising Material Costs (Aug 11, 2026)", url:"https://www.bloomberg.com/news/articles/2026-08-11/chobani-cuts-annual-earnings-forecast-on-rising-material-costs"}
     ]
   },
   {
     id:"C-2",
     name:"MALK Organics",
     color:"#6B8E3D",
-    status:"Added shelf-stable Organic Unsweetened Coconut and Cashew milks on Aug 7, 2026 — four ingredients, no gums, oils or fillers, USDA Organic, Non-GMO, gluten-free and Glyphosate Residue Free, 18 months unopened. A day earlier its almond milk was the base of a limited-run celebrity smoothie at a Los Angeles grocer, its latest ride on someone else's launch.",
+    status:"Launched Whole Malk nationally into Whole Foods, Target and Sprouts on Aug 10, 2026 — a USDA-organic coconut, cashew, soy and pea-protein blend at 12g protein per serving, no gums, oils or fillers, fortified with iron, potassium, magnesium, B2, B12 and D, and positioned as a true everyday whole-milk replacement for coffee, cereal, cooking and baking. Trade press calls it the brand's biggest innovation to date, off a 2025 of $94 million in sales, up 46%. The ingredient list also carries cane sugar, and the protein figure comes from an added isolate rather than the grain.",
     direction:"up",
-    opportunity:"Clean label is stretching into new formats and borrowed reach. Willa's has both levers, plus a glyphosate cert and a mother-founded story.",
+    opportunity:"They raised the protein bar with an isolate and borrowed the word 'whole.' Willa's earns both from the groat — show that difference plainly.",
     sources:[
-      {label:"MALK Organics newsroom · Shelf-stable coconut and cashew expansion (Aug 7, 2026)", url:"https://malkorganics.com/blogs/news/your-pantry-just-got-cleaner-malk-expands-its-shelf-stable-lineup-with-coconut-and-cashew"},
-      {label:"MALK Organics newsroom · Blueberry SYRN smoothie at Erewhon features MALK almond milk (Aug 6, 2026)", url:"https://malkorganics.com/blogs/news/sydney-sweeney-s-blueberry-syrn-smoothie-at-erewhon-features-malk-organic-almond-milk"}
+      {label:"FoodBev · Malk unveils brand's 'biggest innovation yet' with clean-label Whole Malk NPD (Aug 10, 2026)", url:"https://www.foodbev.com/news/malk-unveils-brand-s-biggest-innovation-yet-with-clean-label-whole-malk-npd"},
+      {label:"Green Queen · Malk Debuts High-Protein Plant-Based Whole Milk After Sales Surged 46% (Aug 12, 2026)", url:"https://www.greenqueen.com.hk/malk-organics-plant-based-whole-milk-high-protein-clean-label-organic-sales/"}
     ]
   },
   {
     id:"C-3",
-    name:"Chobani",
-    color:"#1E4C8A",
-    status:"A federal appellate judge revived a consumer suit on Aug 4, 2026 over the 'Zero Sugar' yogurt line, which carries 4g of allulose per serving against a half-gram threshold for sugar-free-type claims. The FDA filed an amicus brief stating allulose falls under the legal definition of sugar and that its 2020 enforcement guidance was never meant to shield companies from consumer suits. The case moves to discovery.",
-    direction:"down",
-    opportunity:"Claims-forward labelling is now a litigation surface. Willa's never needed a sweetener asterisk — 1g, from the oats. Say the number, skip the claim.",
-    sources:[
-      {label:"Food Dive · Chobani faces revived lawsuit claiming 'zero sugar' label deceived consumers (Aug 4, 2026)", url:"https://www.fooddive.com/news/chobani-zero-sugar-consumer-lawsuit-allulose/826934/"}
-    ]
-  },
-  {
-    id:"C-4",
-    name:"JOLENE Coffee",
-    color:"#B33A3A",
-    status:"Released its first new flavors since launch on Aug 4, 2026 — Red Velvet, Hazelnut and Salted Caramel — in 8oz cans built on an oat-milk base, gluten-free and dairy-free, 120 calories with 10–14g sugar and 188mg caffeine, launching through New York City retail and direct.",
+    name:"The Non-UPF Verified early movers",
+    color:"#8A6FA8",
+    status:"Clean-label brands are claiming the Non-GMO Project and NSF 'Non-UPF Verified' seal ahead of any federal definition. Go Raw announced its verification on Aug 11, 2026; Simple Mills said roughly 60% of its portfolio qualified without reformulating anything; Amy's Kitchen and Spindrift are also on the list. A consumer-advocacy critique published Aug 12, 2026 questions whether a private badge helps shoppers or adds noise — but the badge is being printed either way, and the brands that move first will own the shelf explanation.",
     direction:"up",
-    opportunity:"A new brand still bets everything on oat — oat isn't the problem. Win the coffee occasion on the ingredient list, not another flavor.",
+    opportunity:"First-mover window on a badge Willa's already qualifies for. Start the application now; the shelf argument gets easier the day it prints.",
     sources:[
-      {label:"BevNET · JOLENE Coffee Introduces Three Bold New Flavors (Aug 4, 2026)", url:"https://www.bevnet.com/pr/2026/08/04/jolene-coffee-introduces-three-bold-new-flavors"}
+      {label:"Center for Science in the Public Interest · Non-UPF labels: Useful new tool or cause for confusion? (Aug 12, 2026)", url:"https://news.google.com/rss/articles/CBMihwFBVV95cUxQX1pzdGZ5MElWa1lTX3R2dXE4NU1XTzZtVDZhNmd6YmVOOWNFcVQ0N010b0pYd2RJZ3dpWVEwdDZQRHZyYWhGTFFYUUFwY053eWt3VW9ORDRVVHA5dGVFWVJBV2s2WFpZaHF0TzBfTnM4Y3YzUk9teWQ2WHhzdTlyQlJnWnFaVmc?oc=5"},
+      {label:"Non-UPF Verified · certification program page (permanent reference, linked from nongmoproject.org)", url:"https://www.nonultraprocessed.org/"}
     ]
   }
 ];
@@ -334,74 +327,342 @@ const OUTREACH_PIPELINE = [
 
 const BRIEFS = [
   {
-    id:"AUG10-TT-1",
+    id:"AUG17-TT-1",
     platform:"TikTok",
     pillar:"HEALTH/WELLNESS",
     pillarColor:"#73B2C9",
     flavor:"Original",
     dnaPattern:"mom-activist",
-    timing:"Wed Aug 12 · 9am",
+    timing:"Wed Aug 19 · 9am",
     priority:"BIG SWING",
-    rideNow:true,
-    concept:"\"nothing self-certified. nothing to disclose.\" — founder stance on the loophole",
+    concept:"\"we've been waiting for somebody to write the test.\" — the argument finally gets a bar",
     intel:[
-      {type:"TREND", text:"T-1: the FDA's proposed rule on 'Generally Recognized as Safe' substances cleared its final White House review on Jul 31, 2026 and was flagged a major rule. Until now a company could convene its own hand-picked experts, self-affirm a brand-new ingredient safe, put it in food, and never notify the agency or the public; the rule would make notification mandatory and publish an inventory of every notice and its intended use. T-2 lands in the same window — a federal definition of 'ultra-processed' went up for review Aug 3, 2026 — which means the whole argument for the next month is about what companies actually have to say out loud. Willa's is the brand with nothing to add to that filing."},
-      {type:"AUDIENCE", text:"The audience already suspects the system runs on trust rather than proof; what they don't know is the specific mechanism, and naming it plainly is more powerful than any adjective. Give them the one sentence they'll repeat to someone else — a company could decide on its own — then hand them the four-thing list as the relief, not as the argument. No fear, no 'chemicals,' no scare word does the work here; the calm is the persuasion."},
-      {type:"COMPETITOR", text:"INTERNAL ONLY — a federal appellate court revived a consumer suit on Jul 28, 2026 over a 'Zero Sugar' yogurt line carrying 4g of allulose, with the FDA's amicus brief stating allulose meets the legal definition of sugar; trade coverage of the FDA position was still running Aug 4, 2026. Claims-forward labelling is now a litigation surface, which is exactly why Willa's stance should be a stated number and a third-party certification rather than a claim. Do not reference the case, the brand, or any lawsuit in consumer copy."}
+      {type:"TREND", text:"T-1: Go Raw earned Non-UPF Verified certification for its Organic Sea Salt Sprouted Pumpkin Seeds on Aug 11, 2026 — the newest name to clear a third-party standard that's been testing real products since earlier this year (Amy's Kitchen, Simple Mills and Spindrift were among the first wave verified, back in Feb 2026 — not new this week, but still standing). Go Raw's own line on why it applied was blunt: 'isn't about changing what we make — it's about validating the standards we've held ourselves to for more than 20 years.' No federal definition of 'ultra-processed' exists yet — Washington is still drafting one — so a private group writing its own testable bar, ahead of any government line, is the actual news. T-8 is the reason the stance carries weight: a multi-year, growing body of research keeps tying heavy ultra-processed intake to worse metabolic and diabetes outcomes — that's durable backdrop, not a headline this week, and no specific study or figure should be cited here without a fresh in-window source. HARD LINE FOR CONSUMER COPY — the seal is NOT on Willa's carton, Willa's has not applied for it, and no line in this brief may name a badge, a mark, or tell a shopper to look for one. The story is that the bar exists and real products are clearing it as-is, not that we're on the list."},
+      {type:"AUDIENCE", text:"Three years of 'ultra-processed' talk has left the shopper with a vocabulary and no ruler — she can use the phrase in a sentence and still can't apply it standing in the aisle, which is exactly why the term has started to feel like noise to her. The relief on offer is not another warning; it's the news that the argument now has a line somebody outside the industry drew, and that clearing it apparently didn't require anyone to change what they make. Hand her that, calmly, then put four things she recognizes on a counter and let her do the rest. The persuasion is the ordinariness of the four objects, not the size of the claim."},
+      {type:"COMPETITOR", text:"C-3 (INTERNAL): the early movers on this standard are clean-label brands claiming the ground before any official definition exists, and the first-mover window is real — the shelf argument gets materially easier for whoever prints it first. That is a business decision for the team, not a content beat, and it is the single most valuable thing in this week's competitor read. Nothing about the certification program, the certifying bodies, the early-mover brands, or Willa's own eligibility is spoken on camera, written on screen, or referenced in any caption variant."}
     ],
     hooks:[
-      {text:"companies can call their own new ingredients safe — and never tell anyone.", recommended:true},
-      {text:"there's a legal way to put a brand-new ingredient in food and skip the paperwork.", recommended:false},
-      {text:"we've never once had to explain something on our carton.", recommended:false}
+      {text:"for years, 'ultra-processed' was an argument. somebody finally wrote it down as a test.", recommended:true},
+      {text:"four things on a counter. that's the whole list, and it's the whole answer.", recommended:false},
+      {text:"the bar for 'ultra-processed' finally exists. our four lines haven't moved since 2021.", recommended:false}
     ],
-    caption:"Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Four things, and not one of them needed anyone's permission.\n\nIt's worth saying plainly, because of how the system has actually worked. A company could bring in its own hand-picked scientists, decide a brand-new ingredient was safe, put it in food, and never file a word with the agency or tell the public. On Jul 31, 2026 the rule that would close that route cleared its final review — new ingredients would have to be filed, listed publicly, and named for what they're for.\n\nWilla's never used that door. Organic. The whole oat groat — the entire kernel, bran and germ included — so the fiber and the protein stay in the carton instead of getting filtered out. 1g sugar, from the oats. 4g+ protein. 2g+ prebiotic fiber.\n\nAnd nothing here is certified by us. Certified glyphosate-free, tested every lot, by an outside lab whose whole job is to check.\n\nNothing self-certified. Nothing to disclose. 🌾",
+    caption:"We've been waiting for somebody to write the test. 🌾\n\nWilla's Original is four things: organic whole grain oats, filtered water, organic vanilla extract, sea salt. You could set all four on a counter and point at them one at a time.\n\nHere's what changed. For years, \"ultra-processed\" — food assembled from parts you'd never cook with at home — has been an argument with no ruler. Everyone had a position, nobody had a line. Earlier this year, a third party finally put that line on paper and started testing real products against it. This month, another one cleared it without changing a single ingredient.\n\nThat's the part worth sitting with. The bar didn't ask anyone to reformulate. It asked what was in there.\n\nWilla's has been pouring the same answer since 2021 — the whole oat groat, whole oat kernels, like steel-cut oats before they're rolled. Most oat milks filter out the bran and germ, then process the starch into sugar, and the fiber AND the protein leave with it. Ours stay: 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that comes from the oats.\n\nAn argument you can't settle is exhausting. A bar you can see is a gift.",
     hashtags:[
       "#willas",
       "#oatmilk",
       "#organicoatmilk",
-      "#cleanlabel",
-      "#foodtransparency",
-      "#realfood",
+      "#ultraprocessed",
       "#wholeoat",
-      "#glyphosatefree",
-      "#ingredientlist",
-      "#motherfounded"
+      "#cleaningredients",
+      "#plantmilk",
+      "#realfood",
+      "#fouringredients",
+      "#labelcheck"
     ],
-    visual:"Reserved founder-activist slot. Bright real kitchen, not a set — warm cream walls, pale wood counter, window light from camera-left with no fill and no filter, so the frame reads like 9am rather than a studio. Palette is cream + navy ink (#202A44) typography with creamy blue (#73B2C9) used once, for the single mechanism overlay. Static tripod, eye-level, medium close-up, and the camera holds — no whip pans, no jump cuts, no zoom until the single slow push at the proof beat. Christina is the only person in frame and she stays still; hands rest, no gesturing, no eyebrow. Willa's Original enters at 3 seconds, set down on the counter at frame-right, label forward, and stays there for the remaining 20+ seconds — roughly a third of the frame, never picked up, never turned, never flipped. On-screen text is lower-third, one line at a time, sans-serif, no boxes or stickers. No stock news footage, no headline screenshots, no document B-roll, no red arrows. The whole visual argument is that a person can say this calmly in her own kitchen without raising her voice — Patagonia gravity, high road, the confidence of a brand with nothing to add to the filing.",
+    visual:"Reserved founder-activist slot, and deliberately a different shape from a talking-head: the four ingredients are the co-star and they arrive as real objects, not as text. Bright real kitchen, pale wood counter, cream wall, hard morning window light from camera-left with no fill and no diffusion — 9am light, not studio light. Palette is cream + navy ink (#202A44) typography, with creamy blue (#73B2C9) spent exactly once, on the single line about the bar. Camera is a static tripod at counter height, framed slightly wide so Christina's hands and the empty counter surface both live in the shot; she is in frame from the chest up at camera-left, the bare counter runs to camera-right, and that empty space is the whole visual promise — it is going to get filled. Four objects land there in order: a small bowl of dry oats, a clear glass of water, a short amber bottle of vanilla extract, a pinch dish of sea salt. They are set down deliberately, one per beat, with a real sound on each. Willa's Original enters LAST, placed behind the four so the line reads left to right as ingredients-then-carton, and it does not move again. No headline screenshots, no document B-roll, no red arrows, no logos, no badges, no seals, no certification marks on screen at any point — nothing that could read as a mark Willa's is claiming. On-screen text is lower-third, one clean line at a time, never stacked more than four deep. The gravity is Patagonia: a person saying something true in her own kitchen at conversational volume, with four ordinary objects doing the arguing for her.",
     script:[
-      {scene:"HOOK", time:"0-3s", action:"Cold open, no B-roll, no title card. Static tripod, eye-level medium close-up: Christina already mid-thought in her own kitchen, window light camera-left, cream wall behind her. She is calm and completely still. Spoken: 'companies can call their own new ingredients safe — and never tell anyone.' On-screen text, navy on cream, lower third: 'companies can call their own new ingredients safe.'"},
-      {scene:"THE ANSWER", time:"3-9s", action:"No cut. She reaches off-frame and sets Willa's Original on the counter at frame-right, label forward, then takes her hand away and leaves it there for the rest of the video. Camera does not move. She names the list. On-screen text stacks one line at a time beside the carton, 1.2s apart: 'organic whole grain oats' / 'filtered water' / 'organic vanilla extract' / 'sea salt'. Final line under the stack: 'four things. none of them needed permission.'"},
-      {scene:"THE MECHANISM", time:"9-15s", action:"Same locked frame, no cut. She explains the route in plain language, unhurried, no scare words: a company brings in its own scientists, decides a new ingredient is safe, puts it in food, files nothing. A single creamy-blue (#73B2C9) overlay appears and holds: 'own scientists → own decision → no filing.' As she says the route is being closed, a soft line strikes through the overlay and it fades. Second overlay, navy: 'that rule cleared its last review Jul 31, 2026.' No news footage, no documents, no logos on screen."},
-      {scene:"PROOF", time:"15-21s", action:"First and only camera move: slow 4-second push-in to a tight frame of Christina's hand resting beside the carton — she does not turn it or lift it. She delivers the whole-oat line: the entire kernel, bran and germ included, so the fiber and the protein stay in instead of getting filtered out. Overlay ticks in beside the carton: '1g sugar · 4g+ protein · 2g+ prebiotic fiber'."},
-      {scene:"END CARD", time:"21-26s", action:"Hard cut back to the wide static frame. Straight to camera, one beat of silence before it: 'nothing here was self-certified.' Cut to a plain cream card, navy type, no motion: 'nothing self-certified. nothing to disclose.' Hold 1.5s, then the stinger card in the same type: 'certified glyphosate-free. because that matters.' Willa's wordmark bottom-centre. No music sting, no whoosh."}
+      {scene:"HOOK", time:"0-3s", action:"Cold open, no title card, no B-roll runway. Static tripod at counter height, hard window light camera-left: Christina already mid-thought at camera-left with an empty pale-wood counter running to camera-right. She is calm and unhurried. Spoken: 'for years, \"ultra-processed\" was an argument. somebody finally wrote it down as a test.' On-screen text, navy on cream, lower third: 'for years this was only an argument.'"},
+      {scene:"THE COUNTER", time:"3-10s", action:"No cut, camera does not move. She sets four real objects onto the empty counter, one per beat, roughly 1.4s apart, each with an audible set-down: a small bowl of dry oats, a clear glass of water, a short amber bottle of vanilla extract, a pinch dish of sea salt. She names each one as it lands. On-screen text ticks in beside each object as it appears: 'organic whole grain oats' / 'filtered water' / 'organic vanilla extract' / 'sea salt'. Then a hand reaches in and sets Willa's Original down BEHIND the four, label forward, and leaves it. Single line lands under the row: 'four things you can point at.'"},
+      {scene:"THE BAR", time:"10-16s", action:"Same locked frame, no cut, four objects and the carton holding in the lower third. She explains it plainly, no scare words, no raised voice: for years there was no ruler for this — everyone had a position, nobody had a line, and earlier this year a third party put the line on paper and started testing real products against it. Then the beat that matters: this month, another one cleared it without changing a single ingredient. One creamy-blue (#73B2C9) overlay appears and holds through the beat: 'somebody drew the line. then started testing against it.' It fades before she finishes. NOTHING appears on screen resembling a seal, badge, mark or logo, and she does not name the program or the bodies behind it."},
+      {scene:"THE WHOLE OAT", time:"16-21s", action:"First and only camera move: slow 3-second push-in past her shoulder to the four objects and the carton. She delivers the whole-oat line — most oat milks filter out the bran and germ and process the starch into sugar, and the fiber AND the protein leave with it; Willa's uses the whole oat kernel, like steel-cut oats before they're rolled. As she says it, her hand tilts the bowl of oats slightly toward camera so the whole kernels catch the light. Navy overlay ticks in beside the carton: '1g sugar · 4g+ protein · 2g+ prebiotic fiber.'"},
+      {scene:"END CARD", time:"21-25s", action:"Hard cut back to the wide static frame, one full beat of silence before she speaks. Straight to camera: 'we've been waiting for somebody to write the test.' Cut to a plain cream card, navy type, no motion: 'four ingredients. (read 'em.)' Hold 1.5s. Willa's wordmark bottom-centre. No music sting, no whoosh, no badge, no cert lockup."}
     ],
-    audio:"Founder sync sound — Christina on camera, live room tone only for the first 12 seconds so the stance carries with nothing under it. A single low piano note enters beneath the proof beat and resolves on the end card. No trending sound, no bass drop, no sped-up edit, no caption-read-aloud energy. If a bed is needed for the platform, keep it under -24dB and instrumental. The pacing note for the edit: leave the half-second of silence before the closing line in.",
-    duration:"24-26 seconds",
-    cta:{soft:"keep this one for the next time an ingredient list runs long.", medium:"pour Willa's Original — organic, whole oat, four things on the list.", strong:"Willa's Original: 1g sugar, 4g+ protein, 2g+ prebiotic fiber, USDA Organic, certified glyphosate-free and tested every lot."},
-    benefitShorthandId:"BS-11"
+    audio:"Founder sync sound — Christina on camera, live room tone only through the first fourteen seconds so the four set-downs are the only percussion in the piece. Close-mic the counter: the bowl, the glass, the bottle and the dish each need a real audible landing, and the carton's set-down is the fifth and softest. A single sustained low string enters under THE WHOLE OAT and resolves on the end card. No trending sound, no sped-up edit, no bass drop, no caption-read-aloud energy. Editor's note: leave the full beat of silence before the closing line in — it is the line.",
+    duration:"23-25 seconds",
+    cta:{soft:"save this for the next time somebody asks what 'ultra-processed' actually means.", medium:"pour Willa's Original — four things, and you can point at all four.", strong:"Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. 1g sugar from the oats, 4g+ protein, 2g+ prebiotic fiber."},
+    benefitShorthandId:"BS-2"
   },
   {
-    id:"AUG10-IG-R1",
+    id:"AUG17-IG-R1",
     platform:"Instagram Reel",
+    pillar:"REVIEWS/RECS",
+    pillarColor:"#A191B2",
+    flavor:"Multi",
+    dnaPattern:"at-shelf-moment",
+    timing:"Wed Aug 19 · 12pm",
+    priority:"BIG SWING",
+    rideNow:true,
+    concept:"\"the recipe came from a kitchen. the carton was the only new part.\" — one-take founder answer",
+    intel:[
+      {type:"TREND", text:"T-4 + T-10 — INTERNAL ONLY, and this one is absolute: not a single fact in this paragraph reaches a consumer-facing line. A national dairy player confirmed on Aug 11, 2026 that its ready-to-drink oat milk line is discontinued for lack of demand, remaining stock selling through with no restock planned, and cut its 2026 earnings outlook the same day while framing the move as a wider pullback from plant-based expansion. Inside the same seven days the people who actually supply this category moved the opposite way: an ingredient processor announced expanded dehulled soybean capacity on Aug 11, 2026 specifically to meet rising plant-milk demand, and a German dairy company opened a dedicated plant-based milk and yogurt facility on Aug 14, 2026. Two multi-year capital commitments against one exit. That contradiction is the entire reason this brief is a BIG SWING and it is the one thing the audience must never hear. No exits, no demand, no forecasts, no shelf space, no 'the category is fine.' The customer gets a founder answering a plain question, and the confidence does the work the argument would have done worse."},
+      {type:"AUDIENCE", text:"The person standing in front of the chilled set is not weighing a category — she is deciding whether an unfamiliar carton is worth more than the familiar one beside it, and the one thing a large brand structurally cannot copy is a founder who will stand next to her own product and say plainly why it exists. That makes this the week to spend one of Christina's three on-camera slots: Pattern 01 (People-on-Camera Amplification) stacked on Pattern 06 (Founder Humanization), in Ghia's founder-calling-a-longtime-customer warmth crossed with Graza's co-founder-letter register. The failure mode here is polish, not nerves. A clean, well-lit, perfectly delivered take reads as an ad; the take where she pauses a half-second too long before 'Willa was my grandmother' is the one that works. Cast the imperfect take on purpose, and cut nothing."},
+      {type:"COMPETITOR", text:"C-1 (INTERNAL): the brand that walked away is never named, never shown, never implied — no defocused label a viewer could identify, no 'unlike some,' no knowing look to camera. This is also why the brief carries hard shoot constraints the auditor should check line by line: no retailer signage, logos, wayfinding, shelf tags or price tags anywhere in frame, and no store counts, state counts or distributor references anywhere in copy, per the internal-only retail-footprint rule. The competitive read sets the timing of this post. It contributes nothing to its content."}
+    ],
+    hooks:[
+      {text:"the reason this carton exists has nothing to do with oat milk.", recommended:true},
+      {text:"we get asked why we make this. here's the whole answer, no cuts.", recommended:false},
+      {text:"the recipe was already in the family. the carton was our idea.", recommended:false}
+    ],
+    caption:"Christina, in the chilled aisle, answering the question she gets asked more than any other: why make this at all? 🥛\n\nWilla was her grandmother. She cooked with real food, and she had a way of making everyone at her table feel like the most interesting person in the room. Willa's exists to keep doing both.\n\nWilla's Original is four organic ingredients — whole grain oats, filtered water, vanilla extract, sea salt. It's made from the whole oat groat, whole oat kernels like steel-cut oats before they're rolled, which is why it pours rich and smooth. 4g+ protein, 2g+ prebiotic fiber, and 1g of sugar that comes from the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nThe recipe came from a kitchen. The carton was the only new part.\n\nWe'll be right here. 🌾",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#motherfounded",
+      "#wbenc",
+      "#womenowned",
+      "#cleaningredients",
+      "#plantmilk",
+      "#realfood"
+    ],
+    visual:"One unbroken handheld take, start to finish — there is no cut anywhere in this Reel and the scene list below is beats, not edits. Vertical 9:16, 35mm equivalent, operator moving on foot at chest height, breathing visible in the frame. The location is a real refrigerated plant-milk set, and the single hardest constraint is anonymity: no retailer signage, logo, wayfinding, shelf tag, price tag, endcap graphic or uniformed staff may appear in any frame, and every non-Willa's carton is either faced away or held far enough out of focus that no label is legible. Shoot at a low-traffic hour with permission secured in advance. Willa's is the only readable brand on screen and is in frame for effectively the entire runtime. Light: the case throws cold fluorescent, so carry a single small warm LED or a bounce card just off-lens to put daylight back in Christina's face — the grade should land bright and warm on her skin and let the case stay cool and blue behind her, which is what separates this from muted brand-kitchen stock. Typography is navy ink (#202A44) on a translucent cream (#FAFAF7) bar, with purple (#A191B2) reserved for the single low-third accent line; text enters as clean single lines and never stacks more than four deep. She wears no visible logo. The hero frame is her thumb tracing four lines on the ingredient list with the carton label filling the right two-thirds — that frame is the proof, so the operator steps in physically to get it and never zooms. Final frame is the Willa's set alone on the shelf, faced up and in focus, after she has walked out of the left of frame.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Handheld, chest height, following a step behind Christina as she turns into the chilled aisle — refrigerated case running out of focus behind her, no signage or shelf tags legible anywhere in frame. She reaches the Willa's set and turns back toward the lens mid-step, no mark hit, slightly off-balance. On-screen text drops in on a translucent cream bar, navy: 'the reason this carton exists has nothing to do with oat milk.' No music yet — refrigerated-case hum and footsteps only."},
+      {scene:"THE QUESTION", time:"3-8s", action:"No cut. She takes Willa's Original off the shelf one-handed and holds it label-forward at chest height. Straight to lens, unhurried, conversational volume: 'People ask why we make this.' Beat — hold the pause, do not trim it. Then: 'Willa was my grandmother.' Operator steps in six inches on the line, no zoom. No text overlay on this beat; her face carries it. Warm acoustic bed fades in underneath after the second line."},
+      {scene:"THE KITCHEN", time:"8-13s", action:"No cut. She turns the carton a quarter-turn in her hands, thumb landing on the ingredient list without looking at it. Still to lens: 'She cooked with real food. And she had this way of making whoever was at her table feel like the most interesting person in the room.' Small beat, half a smile: 'That's the whole idea.' Purple low-third line types on and holds: 'not a lab. a kitchen.'"},
+      {scene:"THE FOUR LINES", time:"13-19s", action:"No cut. She tips the carton so the ingredient list faces the lens and the operator steps in to a loose close-up, label filling the right two-thirds of frame, her thumb moving down the list as she reads it out loud, flat and unsold: 'Organic whole grain oats. Filtered water. Organic vanilla. Sea salt.' Music drops out entirely under this beat — room tone and her voice only. Four navy check lines tick on beside her thumb, one per ingredient, nothing more: 'organic whole grain oats ✓' → 'filtered water ✓' → 'organic vanilla ✓' → 'sea salt ✓'."},
+      {scene:"THE LINE", time:"19-24s", action:"No cut. Music back in. Operator steps out and back to reveal the full Willa's set faced up on the shelf beside her — Original, Chocolate, Kids and Barista, all four label-forward. She slots the Original back into its gap with two hands and squares it with her fingertips, then looks up to lens: 'The recipe came from a kitchen. The carton was the only new part.' Beat, quieter, almost thrown away: 'We'll be right here.'"},
+      {scene:"END CARD", time:"24-27s", action:"No cut. She lets her hand fall from the shelf and walks out of the left of frame; the operator holds, and the Willa's lineup sits alone on the shelf in focus with the cold case light behind it. On-screen text centers underneath, navy on cream: 'Mother-founded. WBENC-certified. Built to outlive me.' Music resolves and stops on the last frame — no button, no whoosh."}
+    ],
+    audio:"Sync sound, founder on camera — Christina speaks live to lens and there is no voiceover, no ADR and no narration anywhere in the piece. Lav under the collar plus a shotgun overhead; keep the refrigerated case hum in the mix rather than gating it out, because the hum is the proof the aisle is real. Music enters only after 'Willa was my grandmother' — a warm, unhurried acoustic bed with real strings, no drums, no lyric, no trending sound, sitting far under the dialogue and never swelling. Music cuts to silence entirely under THE FOUR LINES so the ingredient list reads in room tone, then returns for the last line and resolves flat on the final frame. Her delivery direction is the whole job: conversational, half a beat too slow, zero pitch energy. If a take sounds like it was written, use a different take.",
+    duration:"26-28 seconds",
+    cta:{soft:"send this to whoever in your life still thinks all oat milk is the same thing.", medium:"pour Willa's Original — four organic ingredients, made from the whole oat.", strong:"find Willa's in the refrigerated plant-milk set — Original, Chocolate, Kids and Barista, all organic, all certified glyphosate-free and tested every lot."},
+    benefitShorthandId:"BS-12"
+  },
+  {
+    id:"AUG17-PIN-1",
+    platform:"Pinterest",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Chocolate",
+    dnaPattern:"viral-recipe-remix",
+    timing:"Wed Aug 19 · 2pm",
+    priority:"STANDARD",
+    concept:"\"two ingredients — and one of them won Best Beverage.\" — dairy-free croissant ice cream sandwich pin",
+    intel:[
+      {type:"PULSE", text:"CP-4: the two-ingredient croissant ice cream sandwich — split a croissant, pack it with ice cream, freeze it, slice it — is the dessert build food accounts are testing right now, with fresh taste-test coverage landing Aug 16, 2026 alongside a wider homemade-ice-cream wave. The trigger for shipping it Aug 19 rather than later: the format is at the testing stage, not the saturation stage, and the ice cream inside is the one slot nobody has claimed with a clean ingredient list. Willa's Chocolate is structural here — 1½ cups churned into the base, not a splash."},
+      {type:"AUDIENCE", text:"A cut cross-section is the single most-saved shape on Pinterest food — flake against cold reads instantly at thumbnail size and keeps pulling saves long after the format cools on video platforms. This is the week's one indulgent-remade-clean slot and Chocolate is the only SKU that should hold it. The dairy trap is the croissant itself, so the ingredient list has to send the buyer to the label instead of vouching for a specific store product's dairy status; a Willa's buyer who trusts a claim we can't stand behind and finds dairy in the layers will not make it twice."},
+      {type:"COMPETITOR", text:"INTERNAL ONLY — chocolate plant-milk SKUs across the category get shelved as either a kids' cup or a sugar-forward treat, and none of them are being briefed as a dessert base. Willa's Chocolate is the one with real cacao, coconut sugar instead of cane, and a Good Food Awards Best Beverage win to carry an ingredient argument inside a dessert format. No brand is named in caption, overlay or pin copy — the contrast is the flake and the list, not a comparison."}
+    ],
+    hooks:[
+      {text:"dairy-free croissant ice cream sandwiches (2 ingredients, no ice cream maker)", recommended:true},
+      {text:"let's make croissant ice cream sandwiches (dairy-free!)", recommended:false},
+      {text:"the flakiest ice cream sandwich of the summer — and the cleanest thing in the freezer", recommended:false}
+    ],
+    caption:"The best dessert on the internet right now is a croissant that spent the night in the freezer. 🥐🍫 Split it, pack it with chocolate oat milk ice cream, freeze it solid, then cut it straight down the middle — the flake against the cold is the entire reason this one travels.\n\nWilla's Organic Chocolate Oat Milk is made with real cacao and five simple organic ingredients, with 50% less sugar — rich and creamy enough to churn into actual ice cream instead of just flavoring it. It won Best Beverage at the Good Food Awards. 🥛\n\nTwo ingredients. One of them won Best Beverage.\n\nIngredients\n- 1½ cups Willa's Organic Chocolate Oat Milk\n- ½ cup canned coconut cream, chilled\n- 2 tbsp maple syrup\n- 1 tbsp organic cacao powder\n- pinch of sea salt\n- 4 dairy-free croissants — a vegetable-oil-based puff pastry or crescent dough rolled and baked works, but read the label before you buy: several mainstream doughs skip butter and still list whey or milk. A bakery croissant marked vegan or dairy-free is the safest swap if your store carries one\n- flaky sea salt, to finish\n\nBlend, freeze 4 hours, stirring every hour (no ice cream maker needed). Split the cooled croissants, pack them full, freeze 2 more hours, then slice.",
+    hashtags:[
+      "#willas",
+      "#chocolateoatmilk",
+      "#dairyfreedessert",
+      "#croissanticecreamsandwich",
+      "#dairyfreeicecream",
+      "#oatmilkicecream",
+      "#nochurnicecream",
+      "#realcacao",
+      "#cleaningredients",
+      "#summerdessert"
+    ],
+    visual:"Vertical 2:3 pin built on one image, not a grid — the cut cross-section is the whole thing. Hero frame is a single sandwich standing cut-face to camera on a pale wooden board, sliced clean with a hot knife so the layers read: flaked pastry on top, a thick dark band of chocolate oat ice cream through the middle, flaked pastry beneath, one visible bead of melt starting at the bottom edge. Shoot it straight-on at sandwich height with a 50mm, shallow depth of field, so the flake catches light and the cold face stays matte — that contrast IS the image and nothing else in frame is allowed to compete with it. Late-afternoon window light from camera left, hard enough to throw a real shadow, no diffusion, no filter, no fake frost. Palette is cream, deep cacao brown, and green (#75C596) as the only accent; type is navy (#202A44). ONE clean line of type across the upper third — 'DAIRY-FREE CROISSANT ICE CREAM SANDWICHES' — set large in navy on cream with a thin green rule beneath it, and one small kicker at the base: 'two ingredients. one of them won Best Beverage.' That is the total copy on the pin. No infographic, no numbered steps, no ingredient callout stack, no badge cluster — Fishwife / Graza restraint, where the type is confident and the food does the arguing. Willa's Chocolate carton stands at frame right in soft focus, label forward, tall enough to occupy roughly a fifth of the frame so a screenshot of the top two-thirds still contains it. Shoot a second option with a hand lifting one sandwich away from a stack of three, melt threading between them, and use whichever cut face reads sharper. Hands only, no talent on camera.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"pin it for the last hot week of August.", medium:"the ice cream is Willa's Chocolate — real cacao, five organic ingredients, no cane sugar.", strong:"Willa's Organic Chocolate Oat Milk: real cacao, five organic ingredients, coconut sugar instead of cane, 50% less sugar — Good Food Awards Best Beverage."},
+    benefitShorthandId:"BS-9"
+  },
+  {
+    id:"AUG17-IG-F1",
+    platform:"IG Feed",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Original",
+    dnaPattern:"on-pack-checklist",
+    timing:"Wed Aug 19 · 6pm",
+    priority:"HIGH",
+    rideNow:false,
+    concept:"\"the fiber was never working alone.\" — the protein half of the oat story",
+    intel:[
+      {type:"TREND", text:"T-6: new nutrition work published Aug 11, 2026 and picked up by the national science press Aug 14, 2026 makes the case that indigestible plant fiber has not been doing the job by itself — the plant proteins that survive digestion intact reach the colon and work alongside it, and the authors even float the idea that labels may one day track resistant protein right next to fiber. That is the whole why-now. INTERNAL ONLY: do not name the journal, the researchers, the coined term for these proteins, or any metabolite in consumer copy, and do not attach a single gut-health outcome to Willa's. Willa's claim on this brief is compositional and nothing more — other oat milks filter out both the fiber and the protein, Willa's keeps both. The science is only why that pair suddenly matters to a reader."},
+      {type:"TREND", text:"T-7: a systematic review and meta-analysis of randomized trials on fiber supplementation in irritable bowel syndrome published Aug 14, 2026 puts a top-tier journal behind soluble fiber in the same seven-day window. The useful read is the timing, not the finding: fiber is having its most credible week in the health press at the exact moment the research is saying fiber was never the whole story. That gap is the brief. INTERNAL ONLY — the review, the condition, and any symptom language stay off the post entirely; Willa's does not diagnose, dose, or manage anyone's digestion. Lane discipline: AUG17-PIN-2 owns the gut-comfort / no-gums-no-stabilizers answer this week. This brief stays strictly on the fiber-plus-protein pair so the two don't overlap."},
+      {type:"AUDIENCE", text:"Two years of fibermaxxing — TikTok's term for eating more fiber on purpose — trained this reader to find one number on a label and stop reading. Protein got the same solo treatment on a separate shelf. Nobody has told her the two arrive together inside a whole plant, or that the standard oat-milk method removes them together. So the brief's job is one sentence she has never heard said plainly, and the register is aunt-at-the-kitchen-table matter-of-fact: Taboo-as-Normal dialled 30% down from Olipop's crassness, and nowhere near a nutritionist's lecture. Muse is Olipop for the permission to say 'prebiotic fiber' out loud, Kiki Milk for the category posture. One idea per card, benefit first, and the whole-groat 'how' waits until card five."}
+    ],
+    hooks:[
+      {text:"turns out fiber's been getting all the credit for a two-person job.", recommended:true},
+      {text:"fiber gets the headlines. the protein next to it does half the work.", recommended:false},
+      {text:"shhh… fiber wasn't doing it by itself.", recommended:false}
+    ],
+    caption:"Willa's Original keeps both halves of the oat — 2g+ prebiotic fiber, the kind your gut bacteria feed on, and 4g+ protein. Per cup. 🌾\n\nThe fiber was never working alone. The aisle has spent two years shouting one number, and the newer nutrition work keeps landing on a pair instead: fiber does part of the job, and the plant protein that makes it all the way through your system intact is pulling its weight right next to it.\n\nWhich is awkward for a category that loses both on the way to the carton. Most oat milks filter the bran and the germ off before the oat ever becomes milk, then process what's left into sugar — and the fiber and the protein were both living in the part that just left. Vs. the average oat milk: under 1g of each.\n\nWilla's never took that shortcut. Whole oat groats go in — bran and germ still attached — so the pair stays put. Four organic ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Certified organic. Certified glyphosate-free, tested every lot.\n\nWe didn't add the protein back in. We just never took it out.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#prebioticfiber",
+      "#plantprotein",
+      "#plantmilk",
+      "#cleaningredients",
+      "#labelcheck",
+      "#realfood"
+    ],
+    visual:"Static IG Feed carousel, 6 cards, one idea per card and never two. Palette is creamy blue (#73B2C9) and flat cream (#FAFAF7) with navy (#202A44) type — design-led and calm, closer to a zine spread than a nutrition graphic. No talent, no hands except where noted, no infographic arrows, no chart. The structural rule: the two numbers never appear on the same card as the process, and the process does not appear before CARD 5. CARD 1 is pure typography, no product at all — the hook line set large and left-aligned on flat cream with a lot of air around it, the words 'two-person job' the only ones in creamy blue. CARD 2 is a straight-down macro of dry whole oat groats filling the frame edge to edge in warm real window light, small navy overlay bottom-left: 'an oat brings two things worth keeping.' CARD 3 is the hero — Willa's Original carton standing label-forward on a cream surface beside one clear glass, shot straight-on at glass height, carton occupying 40%+ of the frame; two lines of navy type stacked in the negative space at frame left, in creamy blue check ticks: '2g+ prebiotic fiber ✅ · 4g+ protein ✅' with a smaller line beneath, 'per cup.' CARD 4 is the contrast, framed IDENTICALLY to card 3 — same crop, same eye line, same light — but the carton is replaced by a plain unbranded glass on the same cream surface, nothing identifiable, no logo, no label; navy overlay reads 'vs. the average oat milk: under 1g of each.' CARD 5 is the only process card: a hand tilting a small spoon of whole oat groats beside the Willa's Original back label, four ingredient lines legible, overlay in two short lines — 'whole oat groats go in.' / 'bran and germ still attached.' CARD 6 is the end card: the carton alone on a windowsill in late-afternoon light with cream negative space above, the BS-10 stinger set small in navy and written so both halves are named — 'most oat milks filter out the healthiest 30% of the oat — the fiber and the protein both. we don't.' Cards 3 and 4 must be framed identically or the comparison doesn't land, and no card carries more than two lines of copy.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"send this to whoever's been counting only fiber.", medium:"Willa's Original — 2g+ prebiotic fiber and 4g+ protein, in the same cup.", strong:"pour Willa's Original: 2g+ prebiotic fiber, 4g+ protein, 1g sugar from the oats, four organic ingredients, certified organic and certified glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-10"
+  },
+  {
+    id:"AUG17-TT-2",
+    platform:"TikTok",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"meme-payload",
+    timing:"Thu Aug 20 · 9am",
+    priority:"HIGH",
+    rideNow:true,
+    concept:"\"oats. oats. oats. oats.\" — one word doing four jobs on the week's live format",
+    intel:[
+      {type:"PULSE", text:"CP-1: the dominant format on TikTok the week of Aug 10-17, 2026 has a fixed, dead-simple mechanic — pose a setup question, answer it with the identical one-word answer three or four times, and make each repetition land bigger than the last. It started as a haircut joke and has stretched to justifying any decision, with an active hashtag behind it. Willa's has a one-word answer already sitting on the carton, which is the rare case where the payload doesn't have to be bent to fit the template. Shoot it this week — the format is at peak and a fixed mechanic like this burns out fast."},
+      {type:"AUDIENCE", text:"T-6 (INTERNAL — no study, no journal, no researcher and no metabolite name ships in consumer copy): a paper in the Aug 11, 2026 print issue of PNAS, with science-press pickup Aug 14, 2026, found that indigestible plant PROTEIN — not fiber alone — is what steers gut bacteria toward beneficial compounds, and the authors float labels eventually tracking resistant protein right next to fiber. The buyer doesn't need any of that. What it means for this brief is structural: protein and fiber are one sentence, not two claims, and both come from the same place. That is exactly what the one-word joke is already saying — the format is doing the argument for us, so let it."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL — never named on camera, in caption, or in a comment reply): a clean-label peer launched a national whole-milk-replacement blend on Aug 10, 2026 at 12g protein per serving, hitting that number with pea protein and a nut-and-seed blend, and borrowing the word 'whole' for the name. Their answer to 'where's the protein from?' is a list. Willa's answer is one word, and it is the same word as the answer to the sugar question, the texture question and the ingredient question. Do not counter, do not compare, do not subtweet — just run the joke. The single-word answer IS the differentiation, and it lands harder unannotated."}
+    ],
+    hooks:[
+      {text:"where's the protein coming from?", recommended:true},
+      {text:"4g+ protein, 1g sugar — one ingredient's responsible for both.", recommended:false},
+      {text:"ask it four different ways. you get the same word back.", recommended:false}
+    ],
+    caption:"Oats. 🌾\n\nWilla's Original is four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt.\n\n4g+ protein. 2g+ prebiotic fiber — the kind that feeds your gut. 1g of sugar, and it came along with the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nRich and smooth, with nothing holding it together but the oat.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#plantmilk",
+      "#dairyfree",
+      "#cleaningredients",
+      "#bobtrend",
+      "#realfood"
+    ],
+    visual:"Bright and high-key, shot flat and deliberately plain — near-white counter (#FAFAF7), cream board, one clear glass, hard mid-morning window light with no diffusion and no filter. Hands and product only; no talent on camera at any point. Every one of the four beats is a LOCKED-OFF frame with a hard cut between them — no push-ins, no whip pans, no transitions. The escalation is entirely in the physical quantity of oat in frame and in the size of the type, never in camera movement and never in the volume of the read. Question text sits top-third in navy (#202A44) at a constant size for all four beats. The answer word sits center-frame in green (#75C596) and grows every beat: beat 1 small and low, beat 2 noticeably bigger, beat 3 bigger again, beat 4 filling the frame edge to edge and slightly overlapping the carton. Willa's Original carton is in frame from beat 2 onward, label forward, and by beat 4 it fills the frame. Nothing else appears on screen — no arrows, no subtitles, no explainer line, no logo bug. If a single word of annotation lands anywhere in the cut, the joke is dead; the plainness is the craft.",
+    script:[
+      {scene:"BEAT 1 — SPLASH", time:"0-3s", action:"Locked overhead, tight on an empty clear glass on a cream board in hard window light. On-screen text top-third, navy: 'where's the protein coming from?' A hand enters and flicks a small splash of Willa's Original into the bottom of the glass — barely covers the base. Green answer text pops center-frame, small: 'oats'. Hard cut on the downbeat."},
+      {scene:"BEAT 2 — POUR", time:"3-6s", action:"Same locked overhead, same glass, no reframe. On-screen text top-third, navy: 'where's the sugar coming from?' Hand enters with the Willa's Original carton label-forward and pours steadily until the glass is two-thirds full. Green answer text pops center-frame, now roughly double the size of beat 1: 'oats'. Hard cut on the downbeat."},
+      {scene:"BEAT 3 — GROATS", time:"6-9s", action:"Hard cut to a locked overhead one step wider: the full glass now sits beside a shallow bowl heaped with dry whole oat kernels, carton behind at frame right. On-screen text top-third, navy: 'why's it so creamy?' A hand plunges into the bowl and lets a fistful of oats fall back through the fingers in real time — audible. Green answer text pops center-frame, bigger again, now wider than the glass: 'oats'. Hard cut on the downbeat."},
+      {scene:"BEAT 4 — CARTON", time:"9-12s", action:"Hard cut to a locked frontal frame filled edge to edge by the Willa's Original carton, label dead center and fully legible, oats and glass gone. On-screen text top-third, navy: 'what's it made of?' Green answer text lands center-frame at maximum size, overlapping the carton edges: 'oats'. Nothing moves. Hold two full seconds in silence after the word lands."},
+      {scene:"END CARD", time:"12-15s", action:"The green word fades off the same locked carton frame; a hand enters from below and turns the carton a quarter-turn to the ingredient list. Slow, single, unhurried move — the only camera-adjacent motion in the whole piece. On-screen text centered underneath in navy: 'four ingredients. (read 'em.)' Cut to black on the beat."}
+    ],
+    audio:"No music bed of our own. As of this week the format is riding Fat Papi's 'Freaked Out' — but confirm it's still the top sound on the #bobtrend hashtag page the morning of the shoot rather than trusting this reference, because the sound attached to this mechanic turns over fast. Whatever it is, it must have a hard, unmistakable downbeat: all four cuts land on it. Over that, a single deadpan voiceover reads the word 'oats' four times — warm narrative voiceover, not framed as the founder, flat and unbothered, the EXACT same read and the EXACT same volume every time. Do not escalate the read. The whole joke is that the voice never reacts while the picture keeps getting bigger. Splash, pour and falling-oats sounds close-miked and left loud in the mix; the two-second silence after beat 4 is scripted and must not be filled.",
+    duration:"15 seconds",
+    cta:{soft:"send this to whoever asks what's actually in your oat milk.", medium:"pour Willa's Original — four organic ingredients, and the oat is doing the work.", strong:"try Willa's Original: 4g+ protein, 2g+ prebiotic fiber, 1g sugar from the oats, certified organic and glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-2"
+  },
+  {
+    id:"AUG17-IG-R2",
+    platform:"Instagram Reel",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"viral-recipe-remix",
+    timing:"Thu Aug 20 · 12pm",
+    priority:"STANDARD",
+    concept:"\"watch the yellow go opaque — and hold.\" — creamy lemonade, blended on Willa's Original",
+    intel:[
+      {type:"AUDIENCE", text:"CP-3: creamy lemonade is the late-summer drink build people are actually testing at home — tart lemonade blended with a creamy element until it lands between a milkshake and a slushie, with the taste-test verdict circulating as 'lemon pie in a glass.' National chains piled into the same idea inside the same window with blended lemonade coolers built on soft serve. The mechanic is entirely milk-dependent: icy-tart base plus a creamy element blended in. That is the one variable in the whole recipe, and it's the exact spot a thin plant milk gets caught out — it goes cloudy, then separates. Willa's is the proof-of-taste slot: the retention beat is the moment the yellow goes opaque and STAYS opaque."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL CONTEXT — not linked, never in consumer copy): a clean-label competitor (MALK Organics) put a 12g-protein 'whole' milk replacement into national retail on Aug 10, 2026 — but the protein comes from an added isolate and the ingredient list carries cane sugar. No trade press, no retailer, no sales figure and no brand name ships in this brief. What it changes is the recipe design: the sweetener here is maple, never cane sugar, and the creaminess has to come from the oat itself rather than anything added to hit a number. That is the difference the blender proves on camera in four seconds — which is cheaper than arguing it."},
+      {type:"COMPETITOR", text:"C-1 (INTERNAL CONTEXT — not linked): a national dairy player confirmed on Aug 11, 2026 that it is discontinuing its ready-to-drink oat milk line, citing lack of demand. The brand is never named, referenced or implied anywhere on camera or in caption. It matters here only as posture: the correct answer to a retreat is a piece of content that is confident and appetizing, not defensive. This brief is the delicious beat of the week — no category critique, no rebuttal, no receipts stacked mid-pour. Let the blend make the argument and keep the copy warm."}
+    ],
+    hooks:[
+      {text:"let's make creamy lemonade (dairy-free!)", recommended:true},
+      {text:"the tart part is easy. the creamy part is the whole trick.", recommended:false},
+      {text:"lemonade goes in. lemon pie comes out.", recommended:false}
+    ],
+    caption:"The last stretch of August had us craving something icy and sharp — and then, somehow, creamy. 🍋☀️ Creamy lemonade sits right between a milkshake and a slushie, and the whole thing turns on one variable: what you blend in. Watch the yellow go opaque and hold — that's the whole video.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 Four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. That's why it blends creamy instead of thin — and why it stays that way in the glass.\n\nIngredients\n- 1 cup Willa's Organic Oat Milk, cold\n- 1/3 cup fresh lemon juice (about 2 lemons)\n- 3 tbsp maple syrup, more if your lemons are mean\n- 1 tsp lemon zest\n- 2 cups ice\n- a pinch of sea salt\n\nBlend the ice, lemon, maple, zest and salt first, then pour in the cold Willa's and blend 20 seconds more. Cold and fast is the trick — it goes opaque and holds. Pour, zest over the top, drink it before it warms up.",
+    hashtags:[
+      "#willas",
+      "#creamylemonade",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#dairyfree",
+      "#wholeoat",
+      "#dairyfreedrinks",
+      "#summerdrinks",
+      "#lemonade",
+      "#realfood"
+    ],
+    visual:"Bright, high-key, late-summer kitchen — near-white counter (#FAFAF7), a cream board, one tall clear glass, real lemons cut and messy on the board. Typography is navy ink (#202A44) with green (#75C596) accents on the ingredient lines only. Hands only, no face, no talent on camera. Two camera positions carry it: a locked overhead on the board for the build, and a side-on 50mm at glass height for the blend reveal and the pour. Hard mid-afternoon window light, no diffusion, no filter — lemon yellow should look genuinely acidic on camera, and the glass should throw a real shadow. This is a SINGLE blended drink, not a layered build: the glass fills as one continuous opaque pale-yellow body, no strata, no stripes, no visible line anywhere in the frame. The hero frame is the blender jar mid-blend — sharp translucent yellow turning creamy and opaque in one take — so shoot that until the turn reads clean in a single unbroken shot; do not cut away and come back to it. Willa's Original carton stands label-forward at frame right and never leaves the right third once it enters, in frame for roughly 60% of the runtime. Text enters as single clean lines, never more than two on screen at once. NO nutrition numbers, NO benefit stack and NO certification marks appear anywhere during the pour or the blend — the copy proof lives in the caption and one end card only. Final frame is the full glass sweating in the light with the carton beside it, lemon zest scattered on the counter.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Locked overhead on the cream board: two hands halve a lemon and squeeze it straight into a blender jar already loaded with ice, in one unbroken motion. Juice, pulp, a bit of mess. On-screen text, navy on cream, centered: 'let's make creamy lemonade (dairy-free!)'. Warm voiceover starts over the squeeze."},
+      {scene:"THE TART BASE", time:"3-8s", action:"Stay overhead. Hand pours maple syrup from a small glass jug into the jar in a slow ribbon, then grates lemon zest over the top and drops in a pinch of sea salt from finger and thumb. Text lines type on one at a time in green, single lines only: 'fresh lemon' → 'maple to sweeten' → 'zest + a pinch of salt'. Quick 20-frame blend burst — the jar contents are sharp, translucent, aggressively yellow. Hold on that translucency; it's the before."},
+      {scene:"THE POUR IN", time:"8-12s", action:"Cut to side-on 50mm at jar height. Hand lifts Willa's Original into frame label-forward, thumbs the cap off, and pours a full measured cup into the jar over the icy yellow base. Shoot it slow-motion — the white column entering the yellow reads as the whole premise. On-screen text, navy, one line: '1 cup Willa's Organic Oat Milk'. Carton is set down at frame right and stays there for the rest of the piece."},
+      {scene:"THE TURN", time:"12-17s", action:"Same side-on 50mm, locked, ONE unbroken take, no cuts: blender runs and the jar goes from translucent yellow to fully opaque pale cream-yellow, then keeps running three extra seconds while it holds — no separation, no thinning, no ring at the top. This is the retention shot and it must not be cut away from. No text over the turn itself. As the blade stops, one line fades in low in frame: 'it goes creamy. and it stays creamy.'"},
+      {scene:"THE POUR OUT", time:"17-22s", action:"Side-on 50mm, glass height: pour from the jar into the tall clear glass in one continuous motion, filling as a single opaque body — no layers, no stripes. Hand grates one last pass of zest over the top and slides the glass forward into the light. Sound is close-miked: the pour, the glass on the counter. On-screen text, navy, centered: 'lemonade in. lemon pie out.'"},
+      {scene:"END CARD", time:"22-24s", action:"Hard cut to a static side-on frame: full glass sweating in hard light, Willa's Original carton label-forward beside it, zest scattered on the cream board. Hand exits frame and leaves both alone in focus. On-screen text centered underneath, navy on cream: 'the whole oat. not the syrup.'"}
+    ],
+    audio:"Warm narrative voiceover — People-on-Camera Amplification run as VOICE ONLY, no face in frame at any point (the sanctioned substitute; this brief does not use the on-camera quota). Read it like someone talking a friend through it at the counter: unhurried, a little amused, absolutely no wellness-brand earnestness and no nutrition lecture. Not framed as the founder. Poppi's short-form discipline is the reference — fast, satisfying, nothing explained twice. Bright upbeat lo-fi bed sitting low under the VO, and the bed drops out entirely under THE TURN so the blender and the room carry that beat alone, then comes back on the pour out. Blender, ice, pour, zest and glass-on-counter all close-miked and left audible over the VO.",
+    duration:"22-24 seconds",
+    cta:{soft:"save this one — it's a two-minute drink and it's the last stretch of lemon weather.", medium:"blend it with Willa's Organic Oat Milk and watch it go opaque.", strong:"make creamy lemonade with Willa's Original — four organic ingredients, 1g sugar from the oats, and it blends creamy because it's made from the whole oat."},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"AUG17-TT-3",
+    platform:"TikTok",
+    pillar:"REVIEWS/RECS",
+    pillarColor:"#A191B2",
+    flavor:"Original",
+    dnaPattern:"before-after-stitch",
+    timing:"Thu Aug 20 · 7pm",
+    priority:"HIGH",
+    concept:"\"protein has a return address. ours says oats.\" — the question that beats the number on the front",
+    intel:[
+      {type:"TREND", text:"T-5: a clean-label challenger rolled a USDA-organic 12g-protein 'whole milk replacement' into Whole Foods, Target and Sprouts on Aug 10, 2026 — a coconut, cashew, soy and pea blend with no gums, oils or fillers, fortified across six micronutrients. Two details make it the week's most useful label story rather than a threat: the ingredient panel names 'pea protein' as a stand-alone added ingredient rather than protein intrinsic to a whole food (press coverage confirms the ingredient list, not the word 'isolate' itself — this is the ingredient-panel read, so keep the brief's own language to 'added to hit the number' rather than the more clinical, unconfirmed term), and cane sugar sits on the ingredient list, confirmed by press. INTERNAL ONLY — the brand is never named, the 12g figure never appears on screen or in caption, and no sales, trade-press or category number ships. The customer hears the question, not the competitor."},
+      {type:"AUDIENCE", text:"Protein is now the most-read number on a carton and the least-understood one. The real decision happens in about eight seconds in the chilled aisle, two cartons held up, front-of-pack figures compared, and almost nobody asks where the gram came from — because nothing on the front tells you. That is the confession this brief names, and it has to be named gently: the turn is not 'you were doing it wrong,' it's 'there's a better question.' Relatable Confession only works if the joke is that we are all standing in the same aisle. One word of scolding and the brief dies."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL): the same launch borrows the word 'whole' for a four-plant assembled blend, and that — not the gram count — is the actual opening. 'Whole' is doing positioning work for a formulation that is built rather than intact; Willa's earns the word literally, from one oat groat with the bran and germ still on it. HARD internal guardrails: do NOT counter with a 4-vs-12 scoreboard (a framing Willa's loses and one that misses the point entirely), do NOT run the protein-pay-up or 'they finally caught up' angles (both rested), and do NOT let the 'nothing added to hit a number' line spill onto Willa's Kids — Kids uses organic pea protein by design and that is a separate, parent-led story."}
+    ],
+    hooks:[
+      {text:"the bigger number isn't the question. where it came from is.", recommended:true},
+      {text:"we've all grabbed the carton with the biggest number on it. shhh… wrong question.", recommended:false},
+      {text:"protein has a return address. worth checking whose.", recommended:false}
+    ],
+    caption:"Willa's Original has 4g+ protein and 2g+ prebiotic fiber — the kind gut bacteria actually feed on — and both were in the oat before we ever opened the bag. 🌾\n\nHere's the label question worth asking any time a plant milk posts a big protein number: was that protein in the plant, or was it added to the plant to hit the number? Both are legal. Both print the same on the front of the carton. They are not the same food.\n\nAn isolate is protein pulled out of one crop and stirred into another — the fastest way to make a number big. Willa's Original doesn't use one. It's made from the whole oat groat, the whole kernel with the bran and germ still on it, which is why the protein and the prebiotic fiber both survive the trip into the carton. Most oat milks discard the bran and germ, and that takes the fiber AND the protein with them.\n\nThe 1g of sugar came from the oats too. Nothing added to hit a number, at either end of the label.\n\nFour organic ingredients: whole grain oats, filtered water, organic vanilla extract, sea salt. Certified organic. Certified glyphosate-free. We test every lot.\n\nProtein has a return address. Ours says oats.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#plantmilk",
+      "#cleaningredients",
+      "#proteinsource",
+      "#labelcheck",
+      "#dairyfree",
+      "#realfood"
+    ],
+    visual:"Vertical 9:16, shot to feel like a real errand and then a real kitchen — the switch arc is carried by the location change, not by an edit trick. Two worlds: the chilled aisle is cool, fluorescent, slightly desaturated, handheld, a little too close; the kitchen is warm, near-white counter (#FAFAF7), cream board, hard morning window light with no diffusion. The cut between them is the whole brief, so it lands hard and unannounced. Hands only, no talent on camera. In every aisle frame, competitor cartons are turned label-away or shot past focus — check playback frame by frame, because one readable competitor logo breaks the no-named-competitor rule on a brief whose entire subject is the category. Typography is navy (#202A44) for everything Willa's says and purple (#A191B2) for the two question lines only, set in a lower-third band, never more than one line at a time — this is a TikTok, the viewer is reading at speed. Willa's Original enters at the halfway point and never leaves frame after that, label-forward, right third. The hero frame is the pour clinging to the inside of a clear glass; it gets the longest hold in the cut because it is the only argument that doesn't need words. Final frame is carton alone in the light. NOTE for the before-after-stitch format: this also runs as a literal stitch — if a UGC clip lands in the queue where someone compares two plant milks by front-of-pack protein, stitch that clip in place of the aisle-POV hook and start the Willa's half on the cut.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Handheld vertical POV walking a chilled plant-milk aisle at eye level, slight motion blur, cooler hum and room tone only, no music. A hand enters frame and reaches for an anonymous carton with the label turned away from camera. On-screen text, navy on a translucent cream band, lower third: 'the bigger number isn't the question.'"},
+      {scene:"THE TURN", time:"3-6s", action:"The hand stops mid-reach and pulls back empty. Hard cut to a locked overhead on a cream board where the anonymous carton is set down and rotated a half-turn so its face points away from camera. The navy line wipes off and a purple (#A191B2) line replaces it: 'where it came from is.' A soft acoustic bed drops in on the cut."},
+      {scene:"TWO ROADS", time:"6-11s", action:"Locked overhead, cream board, hands only. Two small hand-lettered cards slide in from opposite sides — left reads 'already in the plant,' right reads 'added to hit the number.' A hand pours a small pile of whole oat groats onto the left card, then levels a scoop of plain white protein powder onto the right at the exact same unhurried pace. No voiceover under this beat and no judgment in the framing; the two piles make the point."},
+      {scene:"THE ANSWER", time:"11-16s", action:"Cut to side-on 50mm at glass height: Willa's Original pours into a clear glass in hard morning window light, carton label-forward at frame right, the milk leaving a visible coat on the glass wall. Hold long. Text lands in two beats, navy: '4g+ protein · 2g+ prebiotic fiber — already in the oat.' then, centered, 'protein has a return address. ours says oats.'"},
+      {scene:"THE FOUR LINES", time:"16-18s", action:"Locked overhead: a hand turns the Willa's Original carton to the ingredient list and a finger traces down it, one line per beat. Text types in beneath the finger: 'organic whole grain oats · filtered water · organic vanilla · sea salt.'"},
+      {scene:"END CARD", time:"18-20s", action:"Hard cut back to the side-on frame: full glass and carton together in the light, a hand lifts the glass out of frame and the carton is left alone in focus. Centered text underneath: '1g sugar. zero added.'"}
+    ],
+    audio:"Warm narrative voiceover — dry, unhurried, curious rather than corrective, and explicitly not framed as the founder. The register to hit is a friend in the aisle next to you, not a nutritionist. Cold open with no music: aisle room tone and cooler hum carry the first three seconds so the confession lands flat and real. The acoustic bed enters on the cut to the overhead and stays low the entire time — it never swells on the pour, because the pour is supposed to feel like an answer, not a reveal. Pour, glass and groat sounds close-miked and left audible over the voiceover. No trending sound is required; if one is added it sits under the voiceover, because the two text turns are the payload and a loud trend sound buries them.",
+    duration:"18-20 seconds",
+    cta:{soft:"send this to whoever's still comparing the fronts of two cartons in the aisle.", medium:"pour Willa's Original — 4g+ protein and 2g+ prebiotic fiber that were in the oat to begin with.", strong:"try Willa's Original: four organic ingredients, 4g+ protein, 2g+ prebiotic fiber, 1g of sugar from the oats. Certified organic, certified glyphosate-free, and we test every lot."},
+    benefitShorthandId:"BS-3"
+  },
+  {
+    id:"AUG17-TT-4",
+    platform:"TikTok",
     pillar:"REVIEWS/RECS",
     pillarColor:"#A191B2",
     flavor:"Original",
     dnaPattern:"on-pack-checklist",
-    timing:"Wed Aug 12 · 12pm",
-    priority:"BIG SWING",
+    timing:"Fri Aug 21 · 9am",
+    priority:"HIGH",
     rideNow:true,
-    concept:"\"taste it first — that's the part we're least worried about.\" — four-objection category answer",
+    concept:"\"we built this carton to be checked.\" — an open-door dare, aimed at a shopper who already has her phone out",
     intel:[
-      {type:"TREND", text:"T-3: national retail data has dairy-free milk volumes falling for three straight years, and the analyst reading the numbers named four reasons out loud — price, taste, heavy processing, and low protein next to dairy. T-5 compounds it: a University of Toronto trial in The Journal of Nutrition found three daily servings of full-fat dairy carried no weight or cholesterol penalty, which retires the 'lighter is healthier' story plant milk quietly leaned on for a decade. INTERNAL ONLY — none of this data, no percentage, no analyst and no report ships in consumer copy. The customer hears the complaints, never the numbers behind them."},
-      {type:"AUDIENCE", text:"CP-8: protein is the most talked-about and most misunderstood nutrient going, now stamped on coffee, chips and soda, and the recurring mistake is treating the number on the front of the pack as the whole story. The buyer who once put back a chalky carton isn't reading a report — she's remembering a taste. Answer the taste first and let the numbers hold it up. That order is the whole brief."},
-      {type:"COMPETITOR", text:"C-3 (INTERNAL): a federal appellate judge revived a consumer suit over a major dairy brand's 'Zero Sugar' yogurt claim (Food Dive coverage Aug 4, 2026), with the FDA filing an amicus brief stating allulose falls under the legal definition of sugar. Claims-forward labelling is now a litigation surface. Willa's never needed a sweetener asterisk — state the gram, skip the claim. The brand is never named on camera or in caption."}
+      {type:"PULSE", text:"CP-7: a video that went wide Aug 11, 2026 shows a shopper unwrapping stick after stick of a packaged staple, putting each one on a kitchen scale, and finding every single one short of what the package promised. The comment section did the thing that matters — people went and checked their own kitchens. INTERNAL ONLY, and this is the sharpest guardrail on the brief: the brand is never named, never shown, never alluded to, and the category it sits in is never mentioned on camera, in caption, or in a comment reply. Willa's does not join a pile-on. The signal Willa's is riding is not the failure — it's the instinct. Shoppers have stopped taking the front of a package on faith, and that is the single best thing that has happened to a brand that survives being checked. The move is to open the door, not to point at someone else's."},
+      {type:"TREND", text:"T-1 (INTERNAL — no seal, no certifying body, no advocacy group and no policy language ships in consumer copy): a private 'Non-UPF Verified' standard moved from announcement to actual shelf the week of Aug 10-17, 2026, with the first packages announcing the seal Aug 11, 2026 — and a consumer-advocacy critique published Aug 12, 2026 asked the harder question, whether a private badge arriving years ahead of any federal definition genuinely helps a shopper or just adds one more unverifiable mark to the front of a box. That critique is exactly why this brief exists. The durable answer to badge fatigue isn't a bigger badge — it's a brand that hands you the ways to verify it yourself. Willa's has three that take under a minute: count the ingredients, scan it in the Clean Label App, look up the glyphosate certification with the third party that issued it. Say those out loud and the badge argument stops mattering."},
+      {type:"AUDIENCE", text:"The buyer this is written for already has her phone in her hand in the aisle. She is not asking a brand to be trusted — she is asking to be allowed to check, and most brands answer that with a QR code that goes to a marketing page. The deliverable on this post is therefore NOT the video, it's the comment section: assign one person to answer every single question about the four ingredients, the sourcing and the certification through Sat Aug 22, in plain language, with no defensiveness and no deflection to a link. An unanswered question under a post that says 'check us' is the only way this brief can fail. Answered questions are the proof the video is claiming."}
     ],
     hooks:[
-      {text:"everybody's got a plant milk they bought once and never finished.", recommended:true},
-      {text:"watery. over-processed. barely any protein. let's go one at a time.", recommended:false},
-      {text:"shhh… most of the complaints about plant milk are fair.", recommended:false}
+      {text:"check us. we're not nervous.", recommended:true},
+      {text:"four ingredients, a scan and a certification you can look up. take your time.", recommended:false},
+      {text:"shhh… we've been hoping everyone would start checking.", recommended:false}
     ],
-    caption:"Watery. Over-processed. Barely any protein. The complaints about plant milk are fair — they're just not about this carton. 🥛\n\nWilla's Original is four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt. It pours rich and smooth because it's made from the whole oat, not oat syrup. 4g+ protein, 2g+ prebiotic fiber — the kind that feeds your gut — and 1g of sugar, from the oats, nothing added.\n\nThe shortcut most of the category takes: filter out the bran and germ, then process the starch into sugar. That's the fiber AND the protein, gone before it ever reaches the carton. Willa's keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nAnd if a carton's going to take up fridge space, it should earn it.\n\nTaste it first — that's the part we're least worried about.",
+    caption:"Four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt. Count them. 🥛\n\nCertified glyphosate-free by The Detox Project — the third party that tests every lot for weedkiller residue. Look it up without asking us.\n\nScan the carton in the Clean Label App (Yuka scans groceries and scores the ingredients out of 100). Willa's Original comes back 94.\n\n4g+ protein. 2g+ prebiotic fiber — the kind that feeds your gut. 1g of sugar, and it came in with the oats. Most oat milks filter out the bran and germ and process the starch into sugar, which takes the fiber AND the protein with it. Willa's keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled.\n\nGot a question about any of the four? Ask it in the comments. We'll answer every one.\n\nWe built this carton to be checked.",
     hashtags:[
       "#willas",
       "#oatmilk",
@@ -411,642 +672,377 @@ const BRIEFS = [
       "#cleaningredients",
       "#glyphosatefree",
       "#dairyfree",
-      "#prebioticfiber",
+      "#labelcheck",
       "#realfood"
     ],
-    visual:"Bright, high-key kitchen — near-white counter (#FAFAF7), cream board, navy ink (#202A44) typography with purple (#A191B2) accent marks for the check ticks and the complaint lines. Hands only, no talent on camera. Two camera positions carry the whole piece: a side-on 50mm at glass height for the pour, and a locked overhead for the checklist. Real hard window light, mid-morning, no diffusion and no filter — the glass should throw a real shadow. Willa's Original carton is label-forward and in frame for at least 60% of the runtime, and it never leaves the right third once it enters. The hero frame is the pour clinging to the inside of the clear glass and leaving a visible coat — that shot is the taste claim, so it gets shot the most times and cut the longest. Text enters as clean single lines, never stacked more than four deep, and the three complaint lines are the only copy that appears in purple; everything Willa's says appears in navy. Final frame is glass and carton together in the light with the end-card line centered underneath.",
+    visual:"One unbroken take, no cuts anywhere in the piece — a locked 50mm at counter height, framed on a cream board against a near-white counter (#FAFAF7) in hard mid-morning window light, no diffusion and no filter. Hands and one Willa's Original carton, nothing else on the surface. No talent on camera at any point. The single line of on-screen text — the invitation — types on in purple (#A191B2) in the first two seconds and STAYS on screen for the entire runtime, top-third, never moving; it is the only piece of copy that appears until the end card. Everything the hands prove happens under that unmoving line, which is the whole design: the dare goes up first, then it just sits there while the evidence stacks. Proof text at the end card lands in navy (#202A44). The carton is label-forward and in frame for 100% of the runtime and never leaves the center third. Two things in frame are non-negotiable production guardrails: there is NO kitchen scale anywhere in this piece and nothing is ever weighed (fill weight varies and it is not a Willa's claim), and there is NO second package, no blurred label, no turned-away carton and no competitor product in the shot at any point — a single carton alone in the light is what keeps this generous instead of a pile-on. Phone screens that enter frame must be legible at phone size; shoot a legibility check before wrapping. Bright, plain, unstyled — no props, no linen, no styling ambition.",
     script:[
-      {scene:"HOOK", time:"0-3s", action:"Handheld, eye-level: a hand opens a fridge door, pushes past two anonymous cartons at the front (labels turned away, never identifiable), and pulls Willa's Original from the back. On-screen text, navy on cream: 'everybody's got a plant milk they bought once and never finished.'"},
-      {scene:"THE CHARGES", time:"3-8s", action:"Cut to a locked overhead of one empty clear glass on a cream board. Three lines type on in purple, one at a time, stacking: 'watery' → 'over-processed' → 'barely any protein.' Music drops out entirely under this beat — room tone only. No voiceover."},
-      {scene:"THE POUR", time:"8-14s", action:"Cut to side-on 50mm slow motion at glass height: Willa's Original pours into the glass in hard window light, carton label-forward at frame right. Hold long — the milk clings to the glass wall and leaves a coat. The three purple complaint lines wipe off screen as the milk rises past them. On-screen text lands: 'rich + smooth. that's not an accident.'"},
-      {scene:"THE CHECKLIST", time:"14-20s", action:"Locked overhead: carton set on the cream board, label forward, glass beside it. Four purple check marks tick on in rhythm, one line each — '4 organic ingredients ✅ · 4g+ protein ✅ · 2g+ prebiotic fiber ✅ · 1g sugar, from the oats ✅'. A hand enters and turns the carton a quarter-turn on the last tick."},
-      {scene:"THE RECEIPTS", time:"20-24s", action:"Macro drift across the certification marks on the carton, shallow depth of field, one focus pull per line. On-screen text, one at a time: 'certified organic' → 'certified glyphosate-free, tested every lot' → 'mother-founded, WBENC certified.'"},
-      {scene:"END CARD", time:"24-26s", action:"Hard cut back to the side-on frame: full glass and carton together in the light, a hand lifts the glass out of frame and the carton is left alone in focus. On-screen text centered underneath: 'the whole oat. not the syrup.'"}
+      {scene:"BEAT 1 — THE DARE", time:"0-4s", action:"Locked 50mm, counter height, hard window light on an empty cream board. Two hands enter and set the Willa's Original carton down center frame, label forward, and let go. On-screen text types on top-third in purple and holds there for the rest of the take: 'check us. we're not nervous.' Camera does not move again for the entire piece."},
+      {scene:"BEAT 2 — COUNT", time:"4-9s", action:"Same unbroken frame, no cut. A hand turns the carton a quarter-turn to the ingredient list and an index finger taps down the four lines, one deliberate tap each, holding a beat on each line so it reads at phone size: organic whole grain oats · filtered water · organic vanilla extract · sea salt. The finger reaches the bottom of the list and there is nothing left to tap — it hovers over blank carton for a full second. No new text; the purple invitation is still the only copy on screen."},
+      {scene:"BEAT 3 — SCAN", time:"9-14s", action:"Same unbroken frame, no cut. A second hand brings a phone in from the bottom of frame and holds it over the carton, camera-side down, until the scan resolves; the phone tilts up toward lens just far enough for the score to be legible — 94 out of 100 in the Clean Label App. The hand holds it steady for two full seconds, then lowers it out of frame. Still no new text."},
+      {scene:"BEAT 4 — LOOK IT UP", time:"14-18s", action:"Same unbroken frame, no cut. The index finger taps the glyphosate-free certification mark on the carton, twice. The phone comes back into frame showing the third-party certifier's own page for that certification — not a Willa's page, and it should be visibly not a Willa's page. Held two seconds, then the phone is set face-down on the board beside the carton and both hands withdraw from frame."},
+      {scene:"END CARD", time:"18-20s", action:"Same unbroken frame. Carton alone in the light, hands gone, nothing moving. The purple invitation fades out and is replaced center-frame in navy by: 'we built this carton to be checked.' A smaller navy line settles underneath it: 'certified glyphosate-free. tested every lot.' Hold in silence. Cut to black on the last beat of the bed."}
     ],
-    audio:"Warm narrative voiceover — dry, unhurried, matter-of-fact, zero defensiveness. Not framed as the founder. Light acoustic bed sitting low in the mix, cut to silence under THE CHARGES beat so the three complaints land in room tone, then back in on the pour. Pour, glass and cap sounds close-miked and left audible over the VO.",
-    duration:"24-26 seconds",
-    cta:{soft:"save this for the next time someone tells you plant milk is watery.", medium:"pour Willa's Original — four organic ingredients, made from the whole oat.", strong:"try Willa's Original: 4g+ protein, 2g+ prebiotic fiber, 1g sugar from the oats, certified organic and glyphosate-free, tested every lot."},
-    benefitShorthandId:"BS-1"
+    audio:"Warm narrative voiceover — dry, unhurried, generous, faintly amused, and completely free of defensiveness. Not framed as the founder. The read carries the invitation and names each thing as the hands do it — 'count them' · 'scan it' · 'look up the certification' · 'ask us anything about the four' — four short phrases across twenty seconds and nothing else; every silence between them is scripted and stays. No trending sound and no meme audio on this one; a borrowed sound would make an open-door dare read as a dunk. Light acoustic bed, low in the mix, with a clean final beat to cut the end card on. Practical sounds close-miked and left loud — the carton setting down on the board, the fingertip taps on the ingredient list, the phone's scan chime, the phone going face-down at the end. Those taps are the piece's rhythm section; do not bury them under the bed.",
+    duration:"18-20 seconds",
+    cta:{soft:"got a question about any of the four ingredients? put it in the comments.", medium:"pour Willa's Original — four organic ingredients, and every one of them holds up to a look.", strong:"try Willa's Original — four organic ingredients, 94 out of 100 in the Clean Label App, and a glyphosate certification you can look up yourself."},
+    benefitShorthandId:"BS-11"
   },
   {
-    id:"AUG10-PIN-1",
-    platform:"Pinterest",
-    pillar:"INGREDIENTS/RECIPES",
-    pillarColor:"#75C596",
-    flavor:"Chocolate",
-    dnaPattern:"viral-recipe-remix",
-    timing:"Wed Aug 12 · 2pm",
-    priority:"STANDARD",
-    concept:"\"a whole chocolate cake that happens to serve one.\" — single-serve dessert pin",
-    intel:[
-      {type:"PULSE", text:"CP-5: single-serve cakes assembled one portion at a time — desserts built in a cup instead of a pan — are named among the viral formats actually changing what people buy (Aug 8, 2026). The build is milk-dependent in both the batter and the soak, so the carton is structural here, not a cameo."},
-      {type:"AUDIENCE", text:"Portion-honest dessert is a save-for-later Pinterest query, not a scroll-past one — it keeps pulling long after the format cools. This is the week's one indulgent-remade-clean slot, and Chocolate is the only SKU that should hold it."},
-      {type:"COMPETITOR", text:"INTERNAL: chocolate plant-milk SKUs in the category get positioned either as a kids' cup or as a sugar-forward treat. Willa's Chocolate is the one with an awards case to make as a baking ingredient — use dessert formats to move it out of the kids' cup."}
-    ],
-    hooks:[
-      {text:"dairy-free chocolate cake for one (the pan was never the point)", recommended:true},
-      {text:"let's make chocolate cake for one (dairy-free!)", recommended:false},
-      {text:"chocolate cake in a cup, soaked in the oat milk that won Best Beverage", recommended:false}
-    ],
-    caption:"Cake for one, and no pan to wash. 🍫 A whole chocolate cake that happens to serve exactly one person — baked in a cup, soaked while it's still warm, and rich enough that nobody asks what's missing.\n\nWilla's Organic Chocolate Oat Milk is made with real cacao and five simple organic ingredients — rich and creamy enough to carry a bake, with less sugar and more protein and fiber per cup. It won Best Beverage at the Good Food Awards. 🥛\n\nIngredients\n- 1 cup Willa's Organic Chocolate Oat Milk (1/2 for the batter, 1/2 warmed for the soak)\n- 3/4 cup oat flour\n- 2 tbsp organic cacao powder\n- 2 tbsp maple syrup\n- 1 tsp baking powder\n- pinch of sea salt\n- 2 tbsp coconut cream, whipped, to finish",
-    hashtags:[
-      "#willas",
-      "#chocolateoatmilk",
-      "#dairyfreedessert",
-      "#cakeforone",
-      "#dairyfreebaking",
-      "#oatmilk",
-      "#chocolatecake",
-      "#singleservedessert",
-      "#cleanlabel",
-      "#realcacao"
-    ],
-    visual:"Vertical 2:3 pin, shot for the save — recipe-card clarity over clever styling. Primary frame is a slight 3/4 overhead on a single clear glass cup of chocolate cake on a pale wooden board, the soak line visible through the glass as a darker band halfway up, one spoon already pulled through so the crumb reads. Warm afternoon window light from camera left, soft shadow, no filter. Palette is cream and deep cacao brown with green (#75C596) as the only accent and navy ink (#202A44) for type. Willa's Chocolate carton stands in the upper third, label forward, tall enough to occupy roughly a quarter of the frame — the pour is the second hero, so shoot an alternate frame with warm Willa's Chocolate being poured over the baked cup and use whichever reads richer. Big legible overlay across the top: 'DAIRY-FREE CHOCOLATE CAKE FOR ONE' in navy on cream with a green rule beneath, and a small kicker line at the base: 'serves 1. no notes.' Bottom-right corner card, small: 'real cacao · five ingredients in the milk.' Hands only, no talent. Nothing crops the carton out if someone screenshots the top two-thirds.",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"pin it for the next time one slice is the right amount.", medium:"made with Willa's Chocolate — real cacao, five organic ingredients, no cane sugar.", strong:"Willa's Chocolate: real cacao, 5 ingredients, coconut sugar instead of cane — Good Food Awards Best Beverage."},
-    benefitShorthandId:"BS-9"
-  },
-  {
-    id:"AUG10-TT-2",
-    platform:"TikTok",
-    pillar:"INGREDIENTS/RECIPES",
-    pillarColor:"#75C596",
-    flavor:"Original",
-    dnaPattern:"meme-payload",
-    timing:"Thu Aug 13 · 9am",
-    priority:"HIGH",
-    rideNow:true,
-    concept:"\"same bowl. the milk finally caught up.\" — childhood-photo beat drop",
-    intel:[
-      {type:"PULSE", text:"CP-1: the 'used to go fishin'' spoken audio has become the go-to nostalgic transition — a childhood photo holds on screen, then cuts hard on the beat to the creator's present day. It is running mostly as GRWM and outfit reveals; the then/now structure underneath it is wide open for a food brand."},
-      {type:"AUDIENCE", text:"Willa's buyer grew up on the breakfast she is now re-buying for herself — the bowl is the most loaded nostalgic object in her kitchen and she is not being asked to feel bad about any of it. This is the abundance lane, not the correction lane: nothing about the childhood frame gets mocked."},
-      {type:"COMPETITOR", text:"INTERNAL: the category spent this week on novelty formats and borrowed celebrity reach. Nostalgia sourced from an actual 1921 founder story is the one lane a brand cannot buy into. Do not say any of this on camera."}
-    ],
-    hooks:[
-      {text:"the bowl hasn't changed since 1998. the milk has.", recommended:true},
-      {text:"you've been eating this exact breakfast for twenty years.", recommended:false},
-      {text:"same cereal bowl, grown-up ingredient list.", recommended:false}
-    ],
-    caption:"Twenty years of the exact same breakfast, and only one thing on the table ever needed updating. 🥣\n\nSame bowl. The milk finally caught up. Willa's Original is four things: organic whole grain oats, filtered water, organic vanilla extract, sea salt.\n\n1g of sugar, and all of it from the oats. 4g+ protein and 2g+ prebiotic fiber — the kind that supports gut and heart health — because we use the whole oat groat, the whole oat kernel the way steel-cut oats do. Most oat milks filter out the bran and germ and process the starch into sugar, which throws away the fiber AND the protein. We kept both.\n\nCertified organic. Certified glyphosate-free, tested every lot. Nothing here you didn't already know the name of.\n\nReal food, passed down. Reinvented forward. 🌾",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#organicoatmilk",
-      "#fouringredients",
-      "#cleanlabel",
-      "#wholeoat",
-      "#labelcheck",
-      "#dairyfree",
-      "#oatmilktok",
-      "#nostalgia"
-    ],
-    visual:"Two looks, one hard cut. FIRST HALF is the archive: a real childhood photo or home-video frame of a cereal bowl at a kitchen table — grain, soft focus, warm faded color, 4:3 with the vertical frame filled top and bottom by a blurred blow-up of the same image. Let it feel found, not designed; a thumb at the edge of the photo is a bonus, not a flaw. SECOND HALF is present-day Willa's house style: bright kitchen, cream and green (#75C596), navy ink (#202A44) typography, morning window light camera-left. Same framing as the photo — bowl centered, spoon at the same angle — so the cut reads as the SAME shot twenty years later. That match is the whole trick; storyboard the archive frame first and build the live shot to match it, not the other way round. Willa's Original carton stays in frame for the entire second half, label forward, just behind the bowl. No text on the archive half — let the audio carry it. Overlay copy only lands after the cut.",
-    script:[
-      {scene:"HOOK", time:"0-4s", action:"Full-frame archive: a faded childhood photo of a cereal bowl on a kitchen table, held completely static. No text, no movement, no product. The spoken audio runs clean over it. Let it sit long enough to feel like a real memory and not a setup."},
-      {scene:"THE HOLD", time:"4-8s", action:"Same photo, an almost imperceptible slow push-in on the bowl. Small on-screen text, bottom third, plain navy: 'this exact breakfast. every morning.' Nothing else moves."},
-      {scene:"THE CUT", time:"8-12s", action:"Hard cut on the beat to present day: identical framing, bright kitchen, real bowl, same spoon angle, morning light camera-left. Willa's Original carton just behind, label forward. Text snaps in: 'same bowl.' Hold one full beat with no other movement so the match lands."},
-      {scene:"THE POUR", time:"12-18s", action:"Close-up, hands only: Willa's Original pours over the bowl in one clean unbroken take — thick, matte, no bubbles. Text ticks in one line at a time as it pours: 'organic whole grain oats' / 'filtered water' / 'organic vanilla' / 'sea salt.' Four lines, four beats, then stop."},
-      {scene:"PAYOFF", time:"18-22s", action:"Pull back to the wide match-frame, spoon lifts once. Text: 'the milk finally caught up.' Carton stays in shot, label forward."},
-      {scene:"END CARD", time:"22-24s", action:"Static lockup on cream: carton centered, bowl beside it. Navy type, BS-2 stinger: 'Four ingredients. (Read 'em.)' Audio ends clean on the last frame."}
-    ],
-    audio:"The trending 'and I used to go fishin' when I was a lil girl, you gotta be real quiet on the creek' spoken audio — pull it from the TikTok sound page so the post attaches to the sound rather than a recreation. The cut to present day lands exactly on the audio's turn. No voiceover and no talent on camera: the memory does the talking and every line lives in the on-screen text. Close-mic the pour and the single spoon clink so the second half has real texture under the music.",
-    duration:"22-24 seconds",
-    cta:{soft:"send this to whoever still eats your childhood breakfast.", medium:"pour Willa's Original over it — four ingredients, that's the whole list.", strong:"pour Willa's Original: 4 ingredients, 1g sugar straight from the oats, 4g+ protein, 2g+ prebiotic fiber, certified organic and glyphosate-free, tested every lot."},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"AUG10-IG-R2",
+    id:"AUG17-IG-R3",
     platform:"Instagram Reel",
     pillar:"PARENTING",
     pillarColor:"#9E652E",
     flavor:"Kids",
     dnaPattern:"kid-family-moment",
-    timing:"Thu Aug 13 · 12pm",
-    priority:"BIG SWING",
-    concept:"\"free of the top 9 — that list is already long enough.\" — allergy-desk back-to-school",
-    intel:[
-      {type:"TREND", text:"T-7: the Protecting Children with Food Allergies Act (signed Jan 14, 2026) added a mandatory annual food-allergy module to National School Lunch Program staff training, and Aug 2026 is its first school year on the ground. Allergy families are working a completely different pre-first-bell checklist right now — the nurse meeting, the action-plan handoff, the epinephrine placement. Speak to the parent filling out the form, not to the cafeteria."},
-      {type:"AUDIENCE", text:"This is the back-to-school room the AUG 3 slate never entered. The lunchbox door (cost, hectic mornings, kids'-drink labels) is spent across JUL 27 + AUG 3 — the allergy desk is genuinely new and it is at peak intent for the second week of August. Partake Foods is the posture: talk to one audience with total confidence and do not broaden to keep non-parents comfortable. Alienating non-parents on this brief is fine; the week balances elsewhere."},
-      {type:"COMPETITOR", text:"INTERNAL: the clean-label peer set keeps spending its energy on new SKU formats and borrowed celebrity reach — shelf-facing, consumer-channel plays. Nobody is standing at the allergy desk. Willa's Kids sits on top-9-free + 8g protein + mother-founded, a stack the tree-nut-based clean-label set structurally cannot run. Do not say any of this on camera — let the carton and the paperwork do it."}
-    ],
-    hooks:[
-      {text:"if your back-to-school starts in the nurse's office, this one's for you.", recommended:true},
-      {text:"the allergy-parent version of back-to-school is a whole other list.", recommended:false},
-      {text:"none of the top 9. and shhh… they still ask for it.", recommended:false}
-    ],
-    caption:"There's a version of back-to-school that happens before the first bell — the meeting, the forms, the folder you hand to someone else and hope they actually read. 📋\n\nWilla's Kids is free of the top 9 allergens — that list is already long enough. No dairy, soy, wheat, egg, peanut, tree nut, fish, shellfish or sesame. 8g of protein, the same as dairy. Plant-based calcium, and plant-based DHA — the omega-3 most kids don't get enough of.\n\nParents asked us to make a kids' product. We listened. This turned out to be the part they asked about first.\n\nTo every family filling out forms this August: we see you. 🤎",
-    hashtags:[
-      "#willas",
-      "#willaskids",
-      "#top9free",
-      "#foodallergymom",
-      "#foodallergyfamily",
-      "#backtoschool",
-      "#oatmilk",
-      "#dairyfree",
-      "#kidsnutrition",
-      "#momsofinstagram"
-    ],
-    visual:"Real kitchen, real morning — mid-morning daylight through a window, no ring light, no studio setup. Palette is warm cream with PARENTING brown (#9E652E) accents and navy ink (#202A44) typography; bright and lived-in, not styled. Talent is the cofounder-sister ONLY — Christina is not in this brief and should not appear in any frame or VO. Shoot handheld at chest height with slight natural movement; she is mid-task the whole time and only settles to camera on the first and last lines. The paperwork is the co-star: a real manila folder, school forms, a printed action plan, a highlighted list — shot overhead, hands only, with no readable personal details on screen (use blank or blurred forms). Willa's Kids carton enters at 0:08 and stays in frame through the end, label forward, occupying 30–40% of the last three key frames. On-screen text sits lower-third, sentence case, generous line breaks, one line at a time — never stacked. End card is the carton alone on the counter in morning light running the BS-6 stinger trimmed to its FIRST CLAUSE only — 'no top-9 allergens.' — deliberately without the 'school-safe' half, so nothing on screen can read as a claim that Willa's Kids is approved for, or served in, school meal programs.",
-    script:[
-      {scene:"HOOK", time:"0-3s", action:"Cofounder-sister stands at a real kitchen counter holding a manila folder of school paperwork, handheld chest-height, morning window light behind her. She looks up at camera and says the line out loud, unpolished: 'if your back-to-school starts in the nurse's office, this one's for you.' On-screen text (navy on cream, lower third) mirrors it exactly."},
-      {scene:"THE LIST", time:"3-8s", action:"Cut to overhead, hands only: she fans the contents of the folder across the counter — forms, a printed action plan, a highlighted sheet. Blank or blurred documents, no readable personal detail. Her voice continues off-camera, dry: 'there's the list. and then there's the other list.' On-screen text: 'one list. and then another list.'"},
-      {scene:"THE TURN", time:"8-13s", action:"Handheld follows her to the fridge. Door opens, she lifts out a Willa's Kids carton and sets it down on the counter right beside the paperwork — label forward, deliberate placement, the two objects sharing the frame. On-screen text fades in: 'free of the top 9 allergens.'"},
-      {scene:"THE POUR", time:"13-18s", action:"Close-up: she pours Willa's Kids into a small cup. A kid's hand enters frame from the left and takes it — no face required, just the reach and the exit. She half-laughs at the speed of it. On-screen text ticks in three beats: '8g protein · plant-based DHA · calcium'"},
-      {scene:"THE RELIEF", time:"18-23s", action:"Back to her, settled now, one hand resting on the carton, the paperwork still spread behind her. She exhales and delivers the payoff straight to camera: 'that list is already long enough.' On-screen text mirrors the line. Hold on her face for a full beat before cutting."},
-      {scene:"END CARD", time:"23-25s", action:"Static: the Willa's Kids carton alone on the counter in morning light, paperwork softly out of focus behind it. On-screen text, single line, navy on cream: 'no top-9 allergens.' Small brown wordmark beneath: 'Willa's Kids'. No other copy on the card."}
-    ],
-    audio:"Cofounder-sister on camera, first-person mom POV — conversational, unhurried, slightly under-rehearsed. Real kitchen room tone, no studio VO booth, no founder framing. Warm acoustic bed low and instrumental underneath (no lyrics, nothing that pulls focus from her voice). Leave the ambient sounds in and audible: paper on the counter, the fridge door, the cup set down.",
-    duration:"23-25 seconds",
-    cta:{soft:"send this to the parent who's filling out the forms.", medium:"Willa's Kids — free of the top 9 allergens, 8g protein, plant-based DHA + calcium.", strong:"Pour Willa's Kids: free of the top 9 allergens, 8g protein (the same as dairy), plant-based DHA and calcium, organic, mother-founded."},
-    benefitShorthandId:"BS-6"
-  },
-  {
-    id:"AUG10-IG-F1",
-    platform:"IG Feed",
-    pillar:"HEALTH/WELLNESS",
-    pillarColor:"#73B2C9",
-    flavor:"Original",
-    dnaPattern:"before-after-stitch",
-    timing:"Thu Aug 13 · 6pm",
-    priority:"STANDARD",
-    rideNow:false,
-    concept:"\"sweet was never the problem. added was.\" — the sweetness-source switch",
-    intel:[
-      {type:"TREND", text:"T-4: 180 adults were put on low-, average- or high-sweetness diets for six months and checked at one, three and six months (reported Aug 8, 2026). Sweet-taste preference, body weight and the diabetes + heart markers all held steady across groups. The researchers' own conclusion is the usable part: guidance should target the sugar and the energy density, not 'sweetness' as a category — sweetness from a whole food and sweetness from a syrup are not the same thing. Do not cite the study, the journal, the sample size or any percentage in consumer copy; ship the conclusion, not the paper."},
-      {type:"AUDIENCE", text:"This audience has already run the experiment themselves — the no-sugar month, the sweetener swap, the unsweetened-everything phase — and quietly gone back. The brief lands as recognition, not instruction: the phase wasn't the failure, the question was wrong. That's the Relatable Confession beat, and it's also the diet-culture pushback Willa's is supposed to make."},
-      {type:"COMPETITOR", text:"INTERNAL (C-3): a national yogurt brand's 'zero sugar' line had a consumer suit revived Aug 4, 2026 over a sweetener a federal filing says meets the legal definition of sugar; the case moves to discovery. Claims-forward labelling is now a litigation surface. Willa's never needed a sweetener asterisk — say the number, skip the claim. Never name the brand, the sweetener or the case in consumer copy, and do not counter-claim 'zero sugar' ourselves."}
-    ],
-    hooks:[
-      {text:"we all tried the month where nothing was allowed to taste good.", recommended:true},
-      {text:"sweet was never the problem. added was.", recommended:false},
-      {text:"your oat milk should taste like oats, not like syrup.", recommended:false}
-    ],
-    caption:"Willa's Original is sweet because it's made of oats. 1g of sugar, none of it added — no sweetener to explain, nothing on the carton that needs a footnote. 🌾\n\nSweet was never the problem. Added was. You can spend a whole month with nothing allowed to taste good and land exactly where you started, because \"sweet\" isn't a thing you can quit — it's a question of where it came from. A syrup stirred into a drink, or a whole oat that already tasted like that.\n\nFour organic ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. It's rich and smooth because the whole oat is still in there. Most oat milks filter out the fiber and the protein — we keep both, which is why there's 4g+ protein and 2g+ prebiotic fiber in every cup, the kind of fiber that supports gut and heart health.",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#organicoatmilk",
-      "#1gsugar",
-      "#nothingadded",
-      "#wholeoat",
-      "#cleanlabel",
-      "#labelcheck",
-      "#realfood",
-      "#plantmilk"
-    ],
-    visual:"Static IG Feed carousel, 5 cards, built as a switch arc — the whole point is card 2 → card 3. Palette is creamy blue (#73B2C9) and cream with navy (#202A44) type; bright and design-led, closer to a zine spread than a nutrition infographic. CARD 1 is pure typography, no product: the hook line set large and left-aligned on flat cream, generous margins, one idea only. CARD 2 (the 'before'): a deliberately generic tall glass of something amber and syrup-sweet on a plain surface, shot straight-on at eye level under flat cool light, an unbranded squeeze bottle soft-focus behind it — no logos, no labels, nothing identifiable; small navy overlay bottom-left reads 'sweet because sugar was added.' CARD 3 (the 'after', the hero): a slow clean pour of Willa's Original into a clear glass, shot straight-on at the same eye level and the same crop so the two cards read as a direct swap, but lit with warm real morning light instead of the flat light; carton stands label-forward beside the glass and occupies 40%+ of the frame; overlay reads 'sweet because it's made of oats.' CARD 4: straight-down macro of dry whole oat groats spilling next to the Willa's Original back label, four lines legible, nothing else in frame; small overlay '1g of sugar. none of it added.' CARD 5: the carton on a windowsill in morning light, cream negative space above it, sign-off line set small in navy. No dense text blocks anywhere — one line per card, and cards 2 and 3 must be framed identically or the switch doesn't land.",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save this for the next time someone swears off sweet.", medium:"Willa's Original — 1g of sugar, and it comes from the oats.", strong:"Willa's Original: 1g sugar with nothing added, 4g+ protein, 2g+ prebiotic fiber, four organic ingredients, certified organic + glyphosate-free."},
-    benefitShorthandId:"BS-3"
-  },
-  {
-    id:"AUG10-TT-3",
-    platform:"TikTok",
-    pillar:"PARENTING",
-    pillarColor:"#9E652E",
-    flavor:"Kids",
-    dnaPattern:"kid-family-moment",
-    timing:"Fri Aug 14 · 9am",
+    timing:"Fri Aug 21 · 12pm",
     priority:"HIGH",
-    concept:"\"fifteen minutes isn't much of a plan. it's enough for a mug.\" — wind-down, not wake-up",
+    concept:"\"you shouldn't have to read a carton twice.\" — the four-second Kids answer",
     intel:[
-      {type:"PULSE", text:"CP-7: health desks in market after market ran near-identical pediatrician segments Aug 5–6, 2026 telling parents to start the school-year sleep shift one to two weeks early — devices out 30–60 minutes before bed, then a calm last few minutes before lights-out. Most of that same coverage is really about the morning wake-up. Willa's takes the fifteen minutes at the other end of the day and leaves the rest of the routine alone."},
-      {type:"AUDIENCE", text:"Every back-to-school post in a parent's feed in August is set between 6am and the bus. The evening is uncontested territory, and it's the half of the day parents actually like. Put Willa's Kids in the warm mug at the end of it and the brand shows up where nobody else is standing."},
-      {type:"COMPETITOR", text:"INTERNAL: the category's August noise is novelty flavors and cold formats — all daytime, all iced, all speed. Nobody in plant milk owns a warm evening cup for kids, and warm is a format the whole shelf has ceded. Do not say any of this on camera; just be the one that's warm."}
+      {type:"TREND", text:"T-2 (INTERNAL ONLY — the news itself never ships): federal legislation introduced Jul 30, 2026 would strike 'wheat' from the major-allergen definition and replace it with 'gluten-containing grain,' a category that expressly includes oats. Legal analysis published Aug 12, 2026; food-safety trade coverage Aug 11, 2026. What it means for this brief: the quiet question parents have been asking about oats for years is heading toward being printed on packages, and the brand that answers it plainly while it's still a choice looks like the one that was never worried. NO bill, NO bill number, NO Congress, NO agency, NO legislation and NO celiac framing appears anywhere on camera or in caption — not as a fact, not as a hint. The trend sets the timing. The carton does the talking."},
+      {type:"AUDIENCE", text:"CP-7 (INTERNAL CONTEXT — not linked): the butter-on-the-scale video that went wide Aug 11, 2026 is the shape of the buyer right now — shoppers have stopped taking the front of the package on faith and have started reaching for a scale, a scanner or an app. For a parent that instinct is older and sharper than any trend: she has already picked up a kids' drink, turned it over, read it twice and put it back. That is the person this brief is for, and the reason the Yuka scan is in the script rather than a nutrition overlay. Being checked is the best thing that can happen to Willa's Kids — so let the check happen on camera. Relief, not fear: no scary-label montage, no 'what they don't want you to know,' no other product in frame. Partake Foods' register — unapologetically parent-first, warm, no broadening to keep non-parents comfortable."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL ONLY — hard guardrail, not a talking point; FACT-CHECK CORRECTION — source coverage does NOT describe an added protein isolate, that detail is not supported and must not be repeated): a clean-label competitor put a 12g-protein 'whole' milk into national retail on Aug 10, 2026, built from a blend of coconut, cashew, soy and pea protein per the trade coverage. Do NOT run any added-isolate or sourcing-method critique in this brief — it isn't backed by the reporting, and Willa's Kids gets its own 8g from organic pea protein, so a sourcing-method argument would land on our own carton either way. Kids does not position against the plant-milk shelf at all; per the Flavor Database it positions against DAIRY — same protein as a cup of dairy milk, half the sugar. Also hard-scoped: the allergen claim belongs to Willa's Kids ONLY and must never be extended to Original, Barista or Chocolate, and no line in this brief may give allergy or medical guidance or imply the product is right for a specific diagnosis."}
     ],
     hooks:[
-      {text:"everyone's moving bedtime up 15 minutes. nobody said what to do with them.", recommended:true},
-      {text:"the last warm thing of the day.", recommended:false},
-      {text:"the fifteen minutes every sleep segment mentions and skips.", recommended:false}
+      {text:"you shouldn't have to read a carton twice.", recommended:true},
+      {text:"what's actually in it? okay — four seconds.", recommended:false},
+      {text:"parents asked us to make this one. so here's exactly what's in it.", recommended:false}
     ],
-    caption:"A warm mug of Willa's Kids is the last thing that happens before the screens go off. 🌙\n\nPediatricians were on the local news the first week of August with the same advice: start the school-year sleep shift now, screens away 30 to 60 minutes before bed, a calm last few minutes before lights-out. Most of that same advice is really about the morning wake-up.\n\nFifteen minutes isn't much of a plan. It's enough for a mug, a lamp turned low, and the part of the day that isn't rushing anywhere.\n\nWilla's Kids has 8g of protein — the same as dairy — and none of the top 9 allergens. Organic whole oats, plant-based calcium, and DHA, the omega-3 most kids don't get enough of.\n\nMornings get all the back-to-school content. This is the better half.",
+    caption:"Willa's Kids has none of the nine major food allergens in it. No dairy, no nut, no soy, no gluten, no sesame. That's the short answer, and it's the same answer every single time you pick up the carton. 🌾\n\n8g of protein — the same as a cup of dairy milk, with half the sugar. Plant-based calcium, vitamin D, and DHA omega-3s from algae oil, the omega-3 most kids fall short on. 6g of sugar, all of it from organic maple syrup.\n\nHave you scanned it on Yuka? It's the Clean Label App — it scans groceries and scores the ingredients out of 100. Willa's Kids comes back 100 out of 100. Bobby Approved, too.\n\nWilla's Kids exists because parents asked us for it. So when a parent asks what's in it, the answer should take about four seconds.\n\nQuestions about a diagnosed allergy belong with your pediatrician. Questions about what's in the carton belong to us.\n\nYou shouldn't have to read a carton twice.",
     hashtags:[
       "#willas",
       "#willaskids",
-      "#bedtimeroutine",
-      "#backtoschool",
-      "#kidsnutrition",
-      "#allergenfriendly",
-      "#dairyfreekids",
-      "#organicoatmilk",
-      "#parentingwins",
-      "#schoolyearprep"
-    ],
-    visual:"Night interior, one room, one continuous moment — no montage, no second location, no time jump. Locked-off camera on a tripod at counter height with a single slow push-in during the pour; every other beat is a hold. One practical light only — a warm lamp just out of frame, roughly 2700K — so the room falls off into soft brown shadow. Palette is warm cream and lamp-amber against PARENTING brown (#9E652E); typography in navy ink (#202A44), set small and low in frame so it never competes with the steam. The Willa's Kids carton sits on the counter, label forward, from the first frame to the last, holding roughly 40% of the key frames — it is never picked up and presented to camera. Hands only, plus a kid framed from behind or below the shoulders; no faces, no founder, no talking head. Real steam, real ceramic — a small mug a child can hold with two hands. No filter, no grade beyond a slight warm lift. Shoot the whole sequence as one take first, then grab coverage; the edit should feel like it never cut. Final frame is the empty counter with the carton and the lamp, held a full six seconds under the end card.",
-    script:[
-      {scene:"HOOK", time:"0-3s", action:"Locked-off wide at counter height, night, single lamp. A hand sets a small ceramic mug down beside the Willa's Kids carton, label forward. Nothing else moves. On-screen text, navy on the warm dark, lower third: 'everyone's moving bedtime up 15 minutes. nobody said what to do with them.'"},
-      {scene:"POUR", time:"3-9s", action:"Slow push-in to a close two-shot of carton and mug. Willa's Kids pours warm into the mug, steam catching the lamp light. Hold the pour — no cut, no cutaway. Close-miked pour sound. On-screen text: 'fifteen minutes isn't much of a plan.'"},
-      {scene:"HOLD", time:"9-14s", action:"Camera stops and holds. Two small hands come into frame and wrap the mug, lift it just off the counter, and stay there for a beat. Steam rises through the light. On-screen text: 'it's enough for a mug.'"},
-      {scene:"HANDOFF", time:"14-19s", action:"Same frame, no cut. The kid carries the mug out of frame toward a lit doorway; an adult hand reaches in and turns a phone face-down on the counter in one motion. On-screen text: '8g protein. same as dairy. none of the top 9 allergens.'"},
-      {scene:"END CARD", time:"19-24s", action:"Empty counter. Just the Willa's Kids carton and the lamp, slow focus settle, six seconds of stillness. End-card text fades up: 'Same protein as dairy. Half the sugar.'"}
-    ],
-    audio:"No voiceover — the room carries it. Close-miked practical sound: ceramic on wood, the pour, a lamp switch, bare feet on floor. Under it, a slow low-volume instrumental bed (soft piano or warm guitar, unhurried, no build, no drop). Nothing trending, nothing percussive — the whole point is that the video gets quieter as it goes.",
-    duration:"20-24 seconds",
-    cta:{soft:"save this for the week before the first bell.", medium:"pour Willa's Kids warm — 8g protein, none of the top 9 allergens.", strong:"grab Willa's Kids: 8g protein (the same as dairy), 50% less sugar than dairy, plant-based calcium and DHA, free of the top 9 allergens."},
-    benefitShorthandId:"BS-5"
-  },
-  {
-    id:"AUG10-IG-R3",
-    platform:"Instagram Reel",
-    pillar:"PARENTING",
-    pillarColor:"#9E652E",
-    flavor:"Kids",
-    dnaPattern:"mom-activist",
-    timing:"Fri Aug 14 · 12pm",
-    priority:"HIGH",
-    concept:"\"one law, two sentences — and everyone only read the first one.\" — the school milk provision",
-    intel:[
-      {type:"TREND", text:"T-6: the USDA final rule took effect Jun 8, 2026, letting districts put whole and 2% milk back on the tray for the first time since the 2011–12 school year, with fluid milk now excluded from the weekly saturated-fat math. Adoption is optional and varies district to district. The story nobody is covering: the same statute also permits a school to offer nondairy beverages that are 'nutritionally equivalent' to fluid milk under standards set by the Secretary of Agriculture. The whole-milk headline is loud enough that the second provision never made the coverage — that gap is the entire brief."},
-      {type:"AUDIENCE", text:"T-7 compounds it: the Protecting Children with Food Allergies Act, signed Jan 14, 2026, made an annual food-allergy module mandatory for National School Lunch Program staff training, and this is its first school year. Allergy and dairy-free families are already walking into the school office in the Aug 10–16 window for the nurse meeting and the action-plan handoff — they are in the building, holding a clipboard, and nobody has told them the milk line is also a conversation they're allowed to start. Give them the questions, not a lecture. Compliance note for the writer: the ask is the deliverable, never a claim that any Willa's carton clears any district's standard."},
-      {type:"COMPETITOR", text:"INTERNAL: across the Aug 3–10, 2026 window the category spent its energy on shelf-stable format extensions, borrowed celebrity reach and audited climate numbers — all shelf-facing, all consumer-channel. Nobody in the peer set is working the institutional door, which is where a mother-founded brand with an allergen-free kids SKU has an unfair advantage and zero competition. Do not reference any of this on camera or in caption; it is why the brief exists, not what the brief says."}
-    ],
-    hooks:[
-      {text:"you're allowed to ask the school for a milk your kid can actually drink.", recommended:true},
-      {text:"everyone read the first sentence of that school milk law. the second one is the one for us.", recommended:false},
-      {text:"three questions to bring to the school office before the first bell.", recommended:false}
-    ],
-    caption:"There's a conversation you're allowed to start at the school office this year — and almost nobody knows it's on the table. 🥛\n\nWilla's Kids exists because parents asked us for it. 8g of protein, the same as dairy. Plant-based calcium, vitamin D, and DHA omega-3s from algae. Free of the top 9 allergens — no nut, soy, gluten, dairy or sesame. 6g of sugar, from organic maple syrup. Yuka, the app that scans groceries and scores the ingredients, gives it 100 out of 100.\n\nHere's the part that got buried. Whole milk comes back to school trays for the 2026–27 school year; that rule took effect Jun 8, 2026. The same law also allows a school to offer a nondairy beverage that meets the nutrition standard set by the Secretary of Agriculture — the federal official who writes school meal rules. One law, two sentences — and everyone only read the first one.\n\nNothing against the milk on the tray. This is about the kid who can't drink it.\n\nWhether a specific carton clears a specific district's standard is that district's call. The asking is yours. Three questions worth bringing:\n\n1. Does our school offer a nondairy option, and which one is it?\n2. What's the request process — a form, a note, a signature?\n3. Who owns this: the food service director, or the nurse?\n\nOur cofounder walks through all three above. Ask before the first bell. 🌾",
-    hashtags:[
-      "#willas",
-      "#willaskids",
-      "#backtoschool",
-      "#schoollunch",
+      "#kidsoatmilk",
       "#allergenfree",
-      "#foodallergymom",
       "#dairyfreekids",
+      "#organicoatmilk",
+      "#kidsnutrition",
       "#plantbasedkids",
-      "#momsofinstagram",
-      "#organicoatmilk"
+      "#realfood",
+      "#yuka"
     ],
-    visual:"Real kitchen, real morning — this one cannot look produced or it loses the whole thing. Warm cream and oat palette with brown (#9E652E) accent rules and navy ink (#202A44) typography; light is unfiltered window light from camera left, early, with visible shadow. Willa's cofounder is the only person on camera — Christina does not appear, and no children appear in any frame. Shoot her handheld at 35mm, chest-up, slightly off-center at frame right, leaning on a counter rather than standing squared to lens; she is talking to another parent, not presenting. Cut away to two locked inserts: an overhead of a plain notepad on the counter where a hand writes the three questions in real handwriting, and a macro slow drift across the Willa's Kids carton's nutrition side, label forward, shot in the same window light. The carton lives in frame for at least half the runtime and sits in the on-camera frame the entire time she talks, at the edge of the counter, never held up or presented. Overlays are single clean lines, navy on cream, entering left-aligned under her — never more than one line at a time while she speaks, and the three questions type on numbered in brown as she says them. The only stacked text is the two-sentence beat, where the two glosses sit one above the other with a brown rule between them. Final frame is the carton on the counter beside an empty backpack propped by the door, morning light across both, end-card line centered underneath. No music swell, no zoom punch-ins, no captions burned over her face.",
+    visual:"A real family kitchen, not a set — lived-in counter, a dish or two still out, warm mid-afternoon window light coming in low and hard from camera left. Near-white counter (#FAFAF7) and a cream board for the end frame; typography is navy ink (#202A44) with brown (#9E652E) accents used ONLY on the five 'no ___' lines. TALENT: cofounder-sister on camera — genuine first-person mom POV, this is the sanctioned People-on-Camera substitute. Christina does not appear in this brief at all, on camera or in voiceover. Her kid enters once, late, at waist height; face partially in frame is fine, a clean full-face beauty shot is not — it should look like a kid walking through a kitchen, because that's what it is. Three camera positions carry it: a handheld medium-close at eye level for the two talking beats, a locked side-on 50mm at glass height for the pour, and an over-the-shoulder phone-screen POV for the scan. No filter, no diffusion, no colour grade toward gold — the light is already warm, let it be. Willa's Kids carton is label-forward and in her hand or in frame for at least 70% of the runtime. Text enters as single clean lines that REPLACE each other rather than stacking — never more than two on screen at once. No nutrition overlay of any kind sits over the kid or over the handoff beat; that stretch is silent copy-wise on purpose. Nothing on screen is scary, red, crossed-out or urgent — no warning graphics, no other brand's carton, no shelf, no cart. Final frame is the carton and the emptied glass together on the counter in the low light.",
     script:[
-      {scene:"HOOK", time:"0-4s", action:"Handheld 35mm, chest-up: cofounder leaning on a kitchen counter in real morning window light, Willa's Kids carton label-forward at the edge of frame right. She looks at lens and says it plainly, mid-thought, no greeting. On-screen text, navy on cream, left-aligned low: 'you're allowed to ask the school for a milk your kid can actually drink.'"},
-      {scene:"THE TWO SENTENCES", time:"4-12s", action:"Locked overhead insert: a hand writes '1 law. 2 sentences.' on a plain notepad, pen visible, no styling. Two lines type on beside the notepad with a thin brown rule between them — 'sentence one: whole milk is back on the tray for the 2026–27 school year.' then 'sentence two: schools can also offer a nondairy option that meets the federal nutrition standard.' Her voice continues underneath the insert. Music drops out entirely for this beat; pen-on-paper is the only sound."},
-      {scene:"THE CARTON", time:"12-19s", action:"Macro slow drift across the Willa's Kids carton nutrition side in the same window light, one focus pull per line, no hand in frame. On-screen text ticks in one line at a time, brown numerals: '8g protein — same as dairy' → 'plant-based calcium + vitamin D' → 'DHA omega-3s from algae' → 'free of the top 9 allergens.' A single navy line lands last and holds: 'whether a carton clears your district's standard is your district's call.'"},
-      {scene:"THE THREE QUESTIONS", time:"19-27s", action:"Cut back to the handheld 35mm on the cofounder, now a half-step wider so the counter and carton read. She counts them off on her fingers, unhurried. Three numbered lines type on in brown as she says each one, stacking and holding: '1. does our school offer a nondairy option — which one?' → '2. what's the request process — form, note, signature?' → '3. who owns this — food service director, or the nurse?' Hold the full stack for a beat with her still in frame."},
-      {scene:"END CARD", time:"27-31s", action:"Cut to a static wide: Willa's Kids carton on the counter beside an empty backpack propped by the door, morning light across both, no people. Overlays clear off. Single line types on centered underneath and holds to black: 'no nut, soy, gluten, dairy or sesame.'"}
+      {scene:"HOOK", time:"0-3s", action:"Handheld medium-close, eye level: cofounder-sister at her own kitchen counter, Willa's Kids carton already in her hand, an empty kid's glass beside her. She starts mid-thought, straight down the lens, no intro and no greeting. Sync sound only, no music yet. On-screen text, navy on cream, lower third: 'you shouldn't have to read a carton twice.'"},
+      {scene:"THE SHORT ANSWER", time:"3-10s", action:"Same handheld frame. She rotates the carton so the ingredient list faces the lens and holds it steady — real hand, real carton, no graphic laid over the label. She reads it out plainly, first person, unhurried. Text lines type on one at a time in brown and REPLACE each other, no stacking: 'no dairy' → 'no nut' → 'no soy' → 'no gluten' → 'no sesame'. Then a single navy line lands centered and holds: 'none of the nine major allergens.' Warm acoustic bed enters low underneath that last line."},
+      {scene:"THE POUR", time:"10-16s", action:"Cut to locked side-on 50mm at glass height. She pours Willa's Kids into the kid's glass in one continuous motion, carton label-forward at frame right and set down there when she's done. Pour and glass close-miked. Three navy lines replace each other in the empty left third, one per beat: '8g protein' → 'plant-based calcium + vitamin D' → 'DHA omega-3s from algae oil.' No stacking, no check marks, no badge graphics."},
+      {scene:"THE SCAN", time:"16-21s", action:"Over-the-shoulder POV on her phone as she holds it over the barcode on the carton — real app, real scan, one take. On-screen text, navy, one line: 'the Yuka app scans groceries and scores the ingredients.' The score resolves on the phone screen and the camera pushes in two inches on it: 100/100. She barely reacts — a small nod, that's all. Second line replaces the first: '100 out of 100.'"},
+      {scene:"THE HANDOFF", time:"21-26s", action:"Cut wide and static, locked off, room tone up and music dropped almost out. Her kid walks into frame at waist height, takes the glass off the counter, drinks, walks back out without a word. She watches him go, then turns back to the lens and says one dry line, sync sound: 'that's the whole answer.' No text on screen for this entire beat."},
+      {scene:"END CARD", time:"26-28s", action:"Hard cut to a static frame on the counter in the low afternoon light: Willa's Kids carton label-forward, the emptied glass beside it, her hand exiting frame. Music resolves. On-screen text centered underneath, navy on cream: 'Yuka says 100 out of 100.'"}
     ],
-    audio:"Cofounder on-camera sync sound — she is talking, not performing, and the room tone stays in. Do not smooth or re-record it; a real kitchen behind the voice is the credibility. Light acoustic bed sitting very low, and it cuts out completely under THE TWO SENTENCES beat so pen-on-paper carries that section, then returns quietly under the questions. No music sting on the end card.",
-    duration:"28-31 seconds",
-    cta:{soft:"save this and bring it to the school office.", medium:"screenshot the three questions — and meet Willa's Kids: 8g protein, free of the top 9 allergens.", strong:"pour Willa's Kids: 8g protein, plant-based calcium, vitamin D and DHA omega-3s from algae, free of the top 9 allergens."},
-    benefitShorthandId:"BS-6"
+    audio:"Sync sound, on camera — cofounder-sister speaking for herself in a real first-person mom register. This is People-on-Camera Amplification run through the cofounder-sister substitute, so it does NOT draw on Christina's on-camera quota; Christina is not in this brief in any form, including voiceover. Direction for the read: plain, warm, a little amused, the tone of answering a question you've answered a hundred times and don't mind answering again. Relief, not warning — no urgency in the voice, no 'listen up,' no fear. Partake Foods' parent-first confidence is the reference. Warm acoustic bed, guitar and room, entering under 'none of the nine major allergens' and sitting low the whole way, dropping almost out under THE HANDOFF so the kid, the glass and the room carry that beat alone. NO trending sound and no licensed track — the face and the sync audio are the format. Pour, glass on counter and the phone's scan chime all close-miked and left audible.",
+    duration:"26-28 seconds",
+    cta:{soft:"send this to the parent who turns every carton over before it goes in the cart.", medium:"pour Willa's Kids — none of the nine major food allergens, 8g of protein.", strong:"try Willa's Kids: 8g of protein, plant-based calcium, vitamin D, DHA omega-3s from algae oil, none of the nine major food allergens, and a 100 out of 100 on Yuka."},
+    benefitShorthandId:"BS-8"
   },
   {
-    id:"AUG10-PIN-2",
+    id:"AUG17-PIN-2",
     platform:"Pinterest",
-    pillar:"INGREDIENTS/RECIPES",
-    pillarColor:"#75C596",
-    flavor:"Original",
-    dnaPattern:"viral-recipe-remix",
-    timing:"Fri Aug 14 · 3pm",
-    priority:"STANDARD",
-    rideNow:false,
-    concept:"\"three layers — and the middle one has four ingredients.\" — layered iced matcha pin",
-    intel:[
-      {type:"PULSE", text:"CP-4: layered strawberry matcha was named among the viral cooking formats currently moving what people actually buy (Aug 8, 2026) — glass jars sold specifically to show off the colored layers. The build Willa's is shooting: crushed strawberries at the base, milk poured over ice, matcha floated on top — the middle band is milk, so the milk is doing the visual work. Second draw on CP-4 and a deliberately different object than the Reel: the Reel rides the pour, this is the searchable recipe card."},
-      {type:"AUDIENCE", text:"Pinterest is a search engine with a long tail — a drink pin saved in August gets made in September and again next spring. The people searching 'iced strawberry matcha' already want the drink; Willa's job is to be the milk in the result, with a title plain enough to actually surface."},
-      {type:"COMPETITOR", text:"INTERNAL: the plant-milk peer set pins coffee builds and latte art almost exclusively, so the layered fruit-and-matcha query is effectively uncontested. Peers are chasing new formats and borrowed reach (C-2's shelf-stable expansion + celebrity smoothie placement) rather than owning search terms. Do not reference any of this in consumer copy."}
-    ],
-    hooks:[
-      {text:"iced strawberry matcha that holds its stripes (dairy-free)", recommended:true},
-      {text:"iced strawberry matcha (dairy-free)", recommended:false},
-      {text:"three layers — and the middle one has four ingredients", recommended:false}
-    ],
-    caption:"Three layers in one glass, and you can taste why they hold. 🍓🍵 Strawberry on the bottom, Willa's Original in the middle, matcha floating on top — pour it slow and the stripes stay put. Three layers — and the middle one has four ingredients.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1/2 cup fresh strawberries, crushed\n- 1 tsp maple syrup\n- 1 tsp ceremonial-grade matcha — the finer, less bitter grade\n- 2 tbsp hot water, whisked smooth\n- a tall glass of ice",
-    hashtags:[
-      "#strawberrymatcha",
-      "#matcharecipe",
-      "#willas",
-      "#oatmilk",
-      "#dairyfree",
-      "#organicoatmilk",
-      "#icedmatcha",
-      "#layereddrinks",
-      "#cleanlabel",
-      "#summerdrinks"
-    ],
-    visual:"Vertical 2:3 pin, shot straight-on at glass height — not overhead — so all three bands read as stripes: deep strawberry red at the base, the wide creamy oat band through the middle, bright green matcha floating on top. The milk band is the centre of the frame and gets the most vertical real estate; compose so the eye lands there first. Bright late-morning daylight from the side, clear tall glass on a pale cream surface, one loose strawberry and a few ice shards for scale. Willa's Original carton sits just behind and to the right, label forward, slightly soft in focus but unmistakably legible. Palette: cream ground, navy ink (#202A44) type, green (#75C596) rule. ONE clean line of text across the lower third — 'ICED STRAWBERRY MATCHA · DAIRY-FREE' — set large in navy with the green rule beneath, plus a small navy sub-line 'three layers. the middle one has four ingredients.' Fishwife/Graza design-wit: beautiful glass, one confident line of typography, zero infographic, no callout arrows, no ingredient icons, no badge stack. Recipe-card clarity is the goal — screenshot-able, searchable, and nothing clever that crops the drink.",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"pin it for the next warm afternoon.", medium:"made with Willa's Original — organic whole oats, four ingredients.", strong:"Willa's Original: 1g sugar, 4g+ protein, 2g+ prebiotic fiber, certified organic + glyphosate-free."},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"AUG10-TT-4",
-    platform:"TikTok",
-    pillar:"INGREDIENTS/RECIPES",
-    pillarColor:"#75C596",
-    flavor:"Barista",
-    dnaPattern:"on-pack-checklist",
-    timing:"Fri Aug 14 · 7pm",
-    priority:"STANDARD",
-    concept:"\"the can picks your sugar. the glass is yours.\" — canned-coffee sugar counter",
-    intel:[
-      {type:"TREND", text:"T-10: A celebrity-founded ready-to-drink coffee brand added its first new flavors since launch on Aug 4, 2026 — Red Velvet, Hazelnut, Salted Caramel — and all three, like the brand's original latte, are built on an oat-milk base. A newer entrant still betting its expansion on oat is the quietest possible proof that oat isn't the category's problem, in the exact week Circana volume data (T-3) had the category called cooling. The new cans run 10–14g of sugar per 8oz — that number, not the oat, is the opening."},
-      {type:"AUDIENCE", text:"Coffee is the one occasion where the audience already builds the drink themselves, and iced-at-home is the August format. Sweetness is the only variable they actually control — so the post's job is to hand them that control, not to perform latte art. This is the week's only coffee slot; spend it on the sugar decision."},
-      {type:"COMPETITOR", text:"INTERNAL: C-4 is a celebrity-founded RTD cold brew moving through New York retail and direct. Never name it in copy. The counter-move is owning the coffee occasion on the ingredient list rather than on another flavor name — and Barista's flag stays strictly inside coffee. The general 'they invent flavors, we keep the list short' framing was spent Aug 3; do not run it again."}
-    ],
-    hooks:[
-      {text:"the can picks your sugar. the glass is yours.", recommended:true},
-      {text:"iced coffee where the sweetness is your decision", recommended:false},
-      {text:"3 grams in the pour. everything after that is up to you.", recommended:false}
-    ],
-    caption:"Willa's Barista is 3g of sugar — 50% less than the average barista oat milk — with no gums and no rapeseed oil. ☕️ It foams if you want it to, and over ice it just stays creamy.\n\nThe can picks your sugar. The glass is yours. That's the whole case for building iced coffee at home: about ninety seconds of work, and the sweetness is a decision instead of a spec.\n\nIngredients\n- 1 cup Willa's Barista Organic Oat Milk\n- 1/2 cup cold brew (or 1 shot espresso, cooled)\n- a tall glass of ice\n- optional: 1 tsp maple syrup — your call, and that's the point",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#baristaoatmilk",
-      "#icedcoffee",
-      "#coffeeathome",
-      "#coldbrew",
-      "#dairyfree",
-      "#lesssugar",
-      "#organicoatmilk",
-      "#cleanlabel"
-    ],
-    visual:"Vertical, one locked-off waist-height frame for the entire post — no camera moves, no whip cuts, no barista performance. Cream counter, warm late-afternoon window light from frame left, green (#75C596) accents and navy ink (#202A44) typography, one line of text at a time set low so the glass stays clear. Hands only, no talent on camera, no steam wand, no latte art, no foam-pitcher beauty shot. A tall clear glass packed with ice sits center; the Willa's Barista carton stays beside it the entire time, label forward, holding 40%+ of every key frame. The hero moment is the Barista pour blooming up through the cold brew — shoot it long and let it play out. Real condensation on the glass, no filter, no coffee-shop-cliché props. End on the carton in focus with the glass soft behind it.",
-    script:[
-      {scene:"HOOK", time:"0-3s", action:"Locked-off static, waist height: a tall glass packed with ice on a cream counter, Willa's Barista carton beside it, label forward. Nothing moves for a full beat — the stillness is the joke's setup. On-screen text (navy on cream, one line, centered low): 'the can picks your sugar. the glass is yours.'"},
-      {scene:"COFFEE", time:"3-7s", action:"Same frame, no cut: hand enters and pours cold brew over the ice, close-miked so the ice crack is audible. Carton unmoved. On-screen text swaps to a single word: 'cold brew.'"},
-      {scene:"THE POUR", time:"7-12s", action:"Hero shot, still no cut: hand pours Willa's Barista in slow and the cascade blooms up through the coffee. Hold it — do not cut early, the bloom is the whole visual. On-screen text (two lines): '3g of sugar. / 50% less than the average barista oat milk.'"},
-      {scene:"THE CHOICE", time:"12-15s", action:"Hand brings a spoon of maple syrup over the glass, hovers, hesitates — then sets it back down on the counter without pouring. On-screen text: 'add it. or don't. that's the point.'"},
-      {scene:"END CARD", time:"15-18s", action:"One quick stir, condensation running down the glass, pull focus off the drink onto the Willa's Barista carton. On-screen text: 'no gums. no rapeseed oil.'"}
-    ],
-    audio:"No voiceover. Ice crack, cold brew pour, oat-milk pour and one spoon tap close-miked and left dry on top, under a low unfussy lo-fi bed — nothing that reads as coffee-shop cliché, no jazz. The text carries the joke, so keep the room quiet enough that the pour is the loudest thing in the post.",
-    duration:"15-18 seconds",
-    cta:{soft:"save this for the next 3pm slump.", medium:"make it with Willa's Barista — 3g of sugar, no gums, no rapeseed oil.", strong:"pour Willa's Barista over ice: 3g of sugar, 50% less than the average barista oat milk, no gums, no rapeseed oil."},
-    benefitShorthandId:"BS-7"
-  },
-  {
-    id:"AUG10-TT-5",
-    platform:"TikTok",
     pillar:"HEALTH/WELLNESS",
     pillarColor:"#73B2C9",
     flavor:"Original",
-    dnaPattern:"mom-activist",
-    timing:"Sat Aug 15 · 10am",
+    dnaPattern:"on-pack-checklist",
+    timing:"Fri Aug 21 · 3pm",
     priority:"STANDARD",
-    concept:"\"one of us has to prove it. it isn't the one making the bigger promise.\" — the evidence double standard",
+    concept:"\"no stabilizers. it stands up on its own.\" — the subtraction pin",
     intel:[
-      {type:"PULSE", text:"CP-6: a bovine-colostrum supplement wave is being sold as 'liquid gold' for adult digestion — while a systematic review of its gastrointestinal benefits came back inconclusive, and one study found it can increase intestinal permeability during endurance exercise. Its nutrient profile was built for a newborn calf. The story isn't the supplement, it's the asymmetry: that gets a halo on thin evidence while an oat milk gets its ingredient list read line by line in the aisle. Ride the asymmetry, never name the product, never punch at anyone who owns it."},
-      {type:"AUDIENCE", text:"The wellness-supplement buyer and the label-reading oat-milk buyer are the same person — often the same cabinet. So the post cannot ask her to defend a purchase. It hands her a reusable frame instead: who had to prove it, and who only had to promise it. That frame is the share, and it's the reason this one gets saved rather than argued with in the comments."},
-      {type:"COMPETITOR", text:"INTERNAL: no named competitor move anchors this brief — keep names out entirely. The structural point is that Willa's proof is third-party (USDA Organic · Non-GMO Project Verified · Detox Project glyphosate-free, tested every lot), not self-declared, which is exactly the gap CP-6 exposes. CP-8 is the same mechanic in a different aisle: protein claims now stamped on coffee, chips and soda, with the front-of-pack number treated as the whole story. Same counter both times — the list is the receipt. Don't say any of this on camera."}
+      {type:"TREND", text:"T-7: a systematic review and meta-analysis of randomized controlled trials on fiber supplementation ran in Gastroenterology on Aug 14, 2026 — a top-tier journal putting pooled trial evidence behind soluble fiber. INTERNAL ONLY. The journal, the study, the word 'trial' and every clinical term in it stay off the pin entirely. No condition is named, no symptom is named, and Willa's never claims to treat, soothe, calm or improve anything. The signal's only job here is to tell us the gut-comfort question is live in the aisle this week and that the honest way to answer it is by subtraction — what isn't in the carton — not by making a promise."},
+      {type:"TREND", text:"T-6: PNAS ran 'Digestion-resistant proteins support the healthy metabolite profiles associated with plant-based diets' in the Aug 11, 2026 print issue, with national science-press pickup Aug 14, 2026 — indigestible plant protein working alongside plant fiber, the two of them as a pair rather than fiber carrying the story alone. INTERNAL ONLY as a citation, but it settles a design question: the fiber number and the protein number belong on the same pin, because the shortcut this pin crosses off is the one that removes both. The fiber+protein Feed carousel owns the pair as an argument this week; this pin owns it as a line item on a list of omissions."},
+      {type:"AUDIENCE", text:"Pinterest is a search box, not a feed — the title has to be the query a shopper actually types, which is why 'oat milk with no gums or stabilizers' runs verbatim across the top and does not get trimmed for layout. This is a save-and-return pin: it keeps pulling months after it posts, so the payload is the permanent ingredient truth, not a news peg. The move: make the omission list the design, let the joke land in one line, and let the carton do the rest."}
     ],
     hooks:[
-      {text:"nobody asks the wellness powder for receipts.", recommended:true},
-      {text:"the studies came back inconclusive. the marketing did not.", recommended:false},
-      {text:"our ingredient list gets audited line by line. good.", recommended:false}
+      {text:"oat milk with no gums or stabilizers (the whole list is four things)", recommended:true},
+      {text:"no stabilizers. it stands up on its own.", recommended:false},
+      {text:"the short list is on the front. the longer list is everything we left out.", recommended:false}
     ],
-    caption:"There's a supplement going around with liquid gold in the pitch. Its nutrient profile was built for a newborn calf. And when someone finally gathered up the studies on what it does for a grown adult's digestion, the answer came back inconclusive.\n\nWilla's Original gets read line by line, and honestly — good. Four ingredients, and the vanilla extract is the fanciest thing on there. Certified organic. Certified glyphosate-free by an outside lab, tested every lot. 1g sugar, all of it from the oats. 4g+ protein and 2g+ fiber, because we keep the whole oat kernel — bran and germ, the way steel-cut oats do — instead of filtering the protein and the fiber back out the way most oat milks do.\n\nIf it's already in your cabinet, that's your call and we're not in it. We'd only point out that one of us has to prove it — and it isn't the one making the bigger promise. 🥛",
+    caption:"Four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. That is the entire list on Willa's Original. 🥛\n\nNo gums. No stabilizers. No phosphates. And no enzymatic oat-syrup process — the shortcut where the bran and germ get filtered out and the starch gets processed into sugar, taking the fiber AND the protein with it.\n\nWilla's Original keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled. That is where the 2g+ prebiotic fiber comes from — the kind that feeds good gut bacteria — plus 4g+ protein and 1g of sugar, from the oats, nothing added.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nRich and smooth is supposed to come from the oat. Ours does.\n\nNo stabilizers. It stands up on its own.",
     hashtags:[
       "#willas",
       "#oatmilk",
       "#organicoatmilk",
+      "#gumfree",
       "#cleanlabel",
-      "#labelcheck",
       "#wholeoat",
-      "#wellnesstok",
-      "#supplementtok",
+      "#prebioticfiber",
+      "#plantmilk",
+      "#dairyfree",
+      "#labelcheck"
+    ],
+    visual:"Vertical 2:3 typographic pin — this is a search result, not a feed post, so legibility beats styling and the layout should read like a zine cover, not a wellness infographic. Background is a flat cream field (#FAFAF7): no gradient, no texture, no lifestyle scene, no kitchen. One object carries the frame — a plain clear glass three-quarters full of Willa's Original, shot straight-on at glass height in soft daylight so the milk reads genuinely opaque and creamy against the cream, throwing one real shadow to frame right. The Willa's Original carton stands beside it, label forward, roughly a quarter of the frame width, anchored in the LOWER third so a top-crop screenshot can never lose it. Palette is cream, navy ink (#202A44) for all type, and HEALTH/WELLNESS creamy blue (#73B2C9) used exactly twice — once as a thin rule under the title, once on the four cross-off marks. Register is Graza / Omsom design-wit: one big confident line, generous white space, no icons, no leaf motifs, no gut diagrams, no supplement-brand chrome, nothing earnest. Type stack, top to bottom, exact copy: (1) TITLE, large navy all-caps over two lines — 'OAT MILK WITH / NO GUMS OR STABILIZERS' — with the blue rule beneath it; this line is written to be searched and does NOT get shortened for design. (2) Under the rule, the omission list as four short lowercase lines, each struck through in light blue as if crossed off by hand: 'gums' · 'stabilizers' · 'phosphates' · 'oat syrup'. (3) Beside the glass, small navy line: '4 ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt.' (4) Bottom kicker, medium navy, the punchline of the pin: 'no stabilizers. it stands up on its own.' (5) Corner card, small: '2g+ prebiotic fiber — feeds good gut bacteria · 4g+ protein · 1g sugar, from the oats.' Hands only if a hand appears at all; no talent, no props beyond glass and carton. The only permitted on-screen name for the list of ingredients is 'ingredient list' — never the industry word for it. Shoot one alternate frame mid-pour as insurance if the still glass reads flat, but the still version is the default: the joke needs stillness to land.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"pin this for the next time an ingredient list runs longer than the glass.", medium:"Willa's Original — four organic ingredients, no gums, no stabilizers, no phosphates.", strong:"Willa's Original: 4 organic ingredients, 2g+ prebiotic fiber, 4g+ protein, 1g sugar from the oats. Certified organic. Certified glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-2"
+  },
+  {
+    id:"AUG17-TT-5",
+    platform:"TikTok",
+    pillar:"HEALTH/WELLNESS",
+    pillarColor:"#73B2C9",
+    flavor:"Multi",
+    dnaPattern:"mom-activist",
+    timing:"Sat Aug 22 · 10am",
+    priority:"STANDARD",
+    concept:"\"nothing on this table is a side you have to pick.\" — the abundance answer to the pick-a-team pitch",
+    intel:[
+      {type:"PULSE", text:"CP-8: a public figure's household anecdote about quitting one way of eating and feeling better on an extreme replacement went wide Aug 15, 2026, and the feed converted it inside a day into a referendum on whether plants work at all. It is one family's story, not a study and not a finding. The move Willa's is built for is NOT defending a diet — it is refusing the premise that eating well requires eliminating a category and joining a side. INTERNAL ONLY: the person is never named, on screen, in caption, in VO or in a hashtag, and no diet, no food group and no eating style is named either. The moment is the weather this brief is shot in, not the subject of it."},
+      {type:"TREND", text:"T-6 (INTERNAL): a study in the Aug 11, 2026 print issue of PNAS found that indigestible plant protein — not fiber working alone — is what steers gut bacteria toward the beneficial metabolites associated with eating plants, with the mainstream write-up following Aug 14, 2026. Why it matters for this brief: it retires the single-nutrient argument entirely. Willa's answer to a subtract-a-category pitch is an addition — the whole oat groat carries the fiber and the protein together, which is exactly what most of the category strains out. No journal, no researcher, no percentage and no mechanism jargon ships in consumer copy. The whole finding compresses down to one plain sentence on screen: nothing gets filtered out."},
+      {type:"AUDIENCE", text:"The buyer for this post is not in the argument — she is watching it scroll past while deciding what to feed people on a Saturday, and every open door in her feed asks her to declare something. This is the one post that asks her for nothing. That sets three hard guardrails on execution: no question in the caption, no 'thoughts?', no comment prompt of any kind (an engagement-bait close would make Willa's a participant in exactly the fight it is declining); no face and no argument on screen, because a talking head reads as a rebuttal; and zero condescension toward anyone who found the pitch convincing — the dryness is aimed at the premise, never at a person. Lovebird's gravity at a warm volume is the register. If it reads as smug on the first pass, it is wrong."}
+    ],
+    hooks:[
+      {text:"you don't have to quit a food group to eat well.", recommended:true},
+      {text:"the table doesn't need a villain.", recommended:false},
+      {text:"we're staying out of the food fight.", recommended:false}
+    ],
+    caption:"Every so often the feed decides food is a competition. Willa's has never had a side to pick — just a short list and a full table. 🍞\n\nFour things go in Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. 4g+ protein, 2g+ prebiotic fiber — the kind that looks after your gut — and 1g of sugar that comes from the oats.\n\nMost of the category filters the bran and germ out of the oat and processes what's left into sugar. The protein leaves with the fiber. Willa's keeps the whole oat groat — the entire kernel, the way steel-cut oats keep it — so nothing has to be added back in later.\n\nCertified organic. Certified glyphosate-free by The Detox Project, tested every lot. Mother-founded, WBENC certified.\n\nBread on the board. Fruit in the bowl. Something warm. A carton with nothing hiding on the back.\n\nNothing on this table is a side you have to pick.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#plantmilk",
+      "#cleaningredients",
       "#glyphosatefree",
+      "#realfood",
+      "#familytable",
       "#dairyfree"
     ],
-    visual:"ONE locked-off medium shot, no cuts, held the entire runtime — the stillness is the joke. Camera on a tripod at counter height, straight on, nothing moves but hands entering and leaving frame. Real morning window light from camera-left, no fill, honest shadows across a warm cream counter. Palette: cream backdrop, creamy blue (#73B2C9) overlay accents, navy ink (#202A44) type. Props, left to right: a plain unbranded amber-glass supplement jar with a white scoop (generic prop only — no label, no brand, never named, never touched roughly), two small handwritten index cards, and Willa's Original carton set down label-forward in the right third. The carton enters at ~8s and holds the frame to the end — 40%+ of key frames. A clear glass and a slow pour arrive at the payoff. Text overlays are lowercase, left-aligned, lower third, one line at a time, fading rather than popping — no bounce, no zoom, no whoosh SFX. Nothing is ever removed from frame: the amber jar sits there, untouched, through the final beat. That restraint is the brand's high road and it is deliberate.",
+    visual:"One locked overhead is the entire piece — camera set square over a scrubbed wood table, never moved, never re-framed, with a single macro insert as the only cut in the edit. Real hard morning light raking in from frame left, no diffusion, no filter, no color grade toward gold; the shadows under the bowls should be sharp enough to read the time of day. The table is warm brown wood against the brand's cream and navy (#202A44) typography — creamy blue (#73B2C9) is reserved for the one nutrition line and nothing else. Hands only, from all four edges of frame, no faces, no bodies, no talent, no one addressing camera. The abundance has to be genuinely real and slightly untidy: a torn loaf on a board, stone fruit crowding a bowl, a jar of jam with the lid off, a basket of small summer squash with the stems still on, a pot of oats with the spoon left standing in it, mismatched glasses, a cloth folded once and not styled. Nothing is spaced into a wellness flat-lay grid — things overlap, crumbs stay, the frame gets fuller and messier as it goes. Willa's Original sits label-forward at the center from the second beat and never moves again; Kids and Chocolate flank it. Text enters as clean single navy lines in the lower third, one at a time, never more than one line on screen at once, and no line ever argues with anyone — every overlay is a statement about this table. The final frame is the loaded table with every hand gone, held long enough to feel still.",
     script:[
-      {scene:"HOOK", time:"0-4s", action:"Locked-off medium, cream counter, morning light from camera-left. Hand enters and sets a plain unbranded amber-glass supplement jar down center-left, then withdraws. Frame holds a beat too long on purpose. On-screen text (navy on cream, lower third): 'nobody asks the wellness powder for receipts.'"},
-      {scene:"SETUP", time:"4-9s", action:"Same locked frame, no cut. Hand slides a small handwritten index card in front of the jar, face to camera: 'made for: a newborn calf'. Beat. Hand slides a second card beside it: 'evidence: inconclusive'. Dry VO continues underneath. No overlay this beat — the cards ARE the text."},
-      {scene:"TURN", time:"9-14s", action:"Same locked frame. Hand sets Willa's Original carton down in the right third, label forward, and slides a third handwritten card in front of it: 'made for: a tuesday morning'. On-screen text fades in: 'four ingredients. organic. certified glyphosate-free, tested every lot.'"},
-      {scene:"PROOF", time:"14-20s", action:"Same locked frame. Hand rotates the carton a few degrees so the ingredient list faces camera, then a finger traces down it, one line per beat, unhurried. On-screen text ticks with the finger: 'oats · water · vanilla · sea salt'. Then, holding on the last line: 'the vanilla is the fanciest thing on here.'"},
-      {scene:"PAYOFF", time:"20-25s", action:"Same locked frame. Hand pours Willa's Original into a clear glass and sets it in front of the carton. The amber jar stays exactly where it is — untouched, still in frame, nothing taken away. On-screen text: 'one of us has to prove it.' Beat. Second line drops under it: 'it isn't the one making the bigger promise.'"},
-      {scene:"END CARD", time:"25-28s", action:"Hands leave frame entirely. Hold on glass + carton + light for a full three seconds, no movement. On-screen text, centered, navy on cream: 'Four ingredients. (Read 'em.)' Willa's wordmark fades in beneath. Cut to black on the beat, no outro sting."}
+      {scene:"HOOK", time:"0-3s", action:"Locked overhead, square over an empty scrubbed wood table in hard morning light from frame left. Two hands enter from the bottom edge and set down a board with a torn loaf on it, then leave. No voiceover — practical room tone and the sound of the board landing on wood. On-screen text, navy on cream, lower third: 'you don't have to quit a food group to eat well.'"},
+      {scene:"THE ANSWER", time:"3-8s", action:"Same locked overhead, no cut. Hands place Willa's Original into the center of the table, label forward, then set Willa's Kids and Willa's Chocolate on either side of it. Voiceover begins, dry and low: 'four organic ingredients. whole grain oats, filtered water, vanilla, sea salt.' On-screen text, single line in creamy blue: '4 organic ingredients · 4g+ protein · 2g+ prebiotic fiber · 1g sugar, from the oats.'"},
+      {scene:"THE TABLE FILLS", time:"8-15s", action:"Same locked overhead, still no cut. Hands enter continuously from all four edges and the frame fills: a bowl of peaches and plums, a jar of jam with the lid set beside it, a basket of small summer squash with the stems still on, a pot of oats with the spoon standing in it, two mismatched glasses, a folded cloth. Things overlap and crowd; nothing gets straightened. Voiceover: 'eating well isn't a subtraction problem. it's a what's-on-the-table problem.' No on-screen text — the frame is doing the talking."},
+      {scene:"THE LABEL", time:"15-19s", action:"The only cut in the piece: a macro insert, shallow depth of field, on the ingredient list on the side of the Willa's Original carton. A finger traces down the four lines, one per beat. On-screen text types on line by line as the finger moves: 'organic whole grain oats' → 'filtered water' → 'organic vanilla extract' → 'sea salt.' Voiceover: 'certified organic. certified glyphosate-free, tested every lot.'"},
+      {scene:"THE POUR", time:"19-23s", action:"Hard cut back to the identical locked overhead — same framing, table now full. A hand pours Willa's Original into one of the glasses at the near edge of the table and withdraws. Close-miked pour, no voiceover. On-screen text, navy, lower third: 'nothing on this table is a side you have to pick.'"},
+      {scene:"END CARD", time:"23-25s", action:"No cut. Every hand is out of frame and the loaded table holds still in the light for a full beat — steam off the pot, one plum rocking to a stop. Music drops out to room tone. On-screen text centered on the bare wood between the loaf and the carton: 'the oat came whole. so does the table.'"}
     ],
-    audio:"Dry, unhurried narrative voiceover — brand voice, no founder framing, no face on camera, no first person singular. The register is aunt-at-the-kitchen-table matter-of-fact: reads the calf line and the inconclusive line completely flat, with zero sneer and zero eye-roll, and lets the asymmetry do the work. Deliberately NO trending sound and almost no music — one sustained low tone barely under the VO, plus real close-miked room sound (card sliding on the counter, the pour, the glass set down). Flatness is the format; any music cue would tip it into snark.",
-    duration:"26-28 seconds",
-    cta:{soft:"read one label all the way through. any label. it's a good habit.", medium:"Willa's Original — four ingredients, and every claim on it was checked by someone who isn't us.", strong:"pour Willa's Original: 1g sugar, 4g+ protein, 2g+ prebiotic fiber, certified organic + glyphosate-free, tested every lot."},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"AUG10-IG-R4",
-    platform:"Instagram Reel",
-    pillar:"INGREDIENTS/RECIPES",
-    pillarColor:"#75C596",
-    flavor:"Original",
-    dnaPattern:"viral-recipe-remix",
-    timing:"Sat Aug 15 · 12pm",
-    priority:"HIGH",
-    concept:"\"three stripes, one glass — and the middle one is the milk.\" — layered strawberry matcha ride",
-    intel:[
-      {type:"PULSE", text:"CP-4: the three-band layered strawberry matcha glass was named Aug 8, 2026 as one of the short-form formats actually changing what people buy. Crushed strawberries at the bottom, milk poured over ice, matcha floated on top — and the middle band is the milk, so the product does the visual work with no overlay and no explaining. Shoot the pour clean and the format carries the reach."},
-      {type:"AUDIENCE", text:"This audience already orders matcha out — the layered glass is the version they screenshot and try at home. They don't need convincing to make it; they need the dairy-free build that still looks like the cafe one. Willa's job is to be the middle band, not to argue for itself."},
-      {type:"COMPETITOR", text:"INTERNAL: category volume has slid for three straight years and taste is one of the four reasons analysts keep naming. A drink people actively want to make is the answer to a taste objection — don't say that on camera, just pour something that looks that good."}
-    ],
-    hooks:[
-      {text:"let's make strawberry matcha (dairy-free!)", recommended:true},
-      {text:"the stripe in the middle is doing all the work", recommended:false},
-      {text:"pour it slow. that's the whole recipe.", recommended:false}
-    ],
-    caption:"Three stripes, one glass — and the middle one is the milk. 🍓 Crushed strawberries at the bottom, ice, then a gentle pour so the bands hold their line, and matcha floated over the top. Pour it fast and you get pink. Pour it slow and you get the shot. 🍵\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1 cup strawberries, hulled\n- 1 tbsp maple syrup\n- 1 tsp lemon juice\n- 1 tsp matcha powder\n- 2 oz hot water\n- ice",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#strawberrymatcha",
-      "#matcharecipe",
-      "#dairyfree",
-      "#organicoatmilk",
-      "#icedmatcha",
-      "#wholeoat",
-      "#matchatok",
-      "#summerdrinks"
-    ],
-    visual:"Bright kitchen counter, late-morning window light from camera left, no filter. Palette: warm cream ground, the red of the strawberries, green (#75C596) matcha, navy ink (#202A44) typography. Camera is locked off, side-on, lens at the exact height of the glass — every band has to read in profile, so there is no overhead angle anywhere in this brief. Tall straight-sided clear glass on a pale wooden board; hands only, no talent on camera. Willa's Original carton stands behind the glass, label forward, in frame from the first second to the last. One continuous build: do not cut away from the glass, do not drop a nutrition overlay mid-pour, do not swap in a sweetened or barista carton — Original is what keeps the middle band bright. Overlays are small, navy, set top-left and out of the glass's way, and there are only three of them: the opener, the ingredient ticks, and the end card. Final frame: three clean bands, condensation running the glass, carton behind, on-screen: 'the pink one's fruit. the green one's matcha. the white one's four ingredients.'",
-    script:[
-      {scene:"HOOK", time:"0-3s", action:"Side-on, locked off at glass height: empty tall clear glass lands on a pale wooden board, hand sets the Willa's Original carton down behind it, label forward. On-screen text (navy on cream, top-left): 'let's make strawberry matcha (dairy-free!)'"},
-      {scene:"BASE", time:"3-8s", action:"Same locked frame, push slightly in: hand spoons crushed strawberries into the bottom of the glass, then a small pour of maple syrup and a squeeze of lemon, and taps the glass once so the fruit settles flat. On-screen text ticks as each lands: 'strawberries · maple · lemon'"},
-      {scene:"ICE", time:"8-11s", action:"Hand drops ice cubes in one at a time over the fruit — audible, unhurried, filling the glass to the shoulder. No overlay on this beat; let the sound carry it."},
-      {scene:"POUR", time:"11-17s", action:"The hero shot, unbroken: Willa's Original poured slowly over the ice so it stacks white above the fruit without stirring the two together. Hold the whole pour, no cut. On-screen text: '1 cup Willa's Organic Oat Milk'"},
-      {scene:"FLOAT", time:"17-20s", action:"Tight macro, same angle: whisked matcha poured over the back of a spoon so it lays green on top and the third band separates. Camera holds on all three bands for a full beat. On-screen text: 'three stripes. don't stir yet.'"},
-      {scene:"PAYOFF", time:"20-23s", action:"Pull focus off the glass and onto the carton behind it, then back. Condensation on the glass, bands still clean. End card fades in over the frame: 'the pink one's fruit. the green one's matcha. the white one's four ingredients.'"}
-    ],
-    audio:"No voiceover — this is a one-take, sound-on build. Close-mic the ice dropping, the pour, and the spoon on glass, and leave all three loud in the mix. Warm lo-fi bed underneath, low; nothing with a drop, a lyric cue, or a beat change that would tempt an edit — the format only works if the camera never cuts.",
-    duration:"20-23 seconds",
-    cta:{soft:"save this for the next hot afternoon.", medium:"build it with Willa's Original — it pours bright white, so the bands actually read.", strong:"Willa's Original is the middle stripe: 1g sugar, 4g+ protein, 2g+ prebiotic fiber, organic and certified glyphosate-free."},
-    benefitShorthandId:"BS-2"
-  },
-  {
-    id:"AUG10-PIN-3",
-    platform:"Pinterest",
-    pillar:"HEALTH/WELLNESS",
-    pillarColor:"#73B2C9",
-    flavor:"Original",
-    dnaPattern:"on-pack-checklist",
-    timing:"Sat Aug 15 · 2pm",
-    priority:"STANDARD",
-    concept:"\"nothing left out of the oat. so nothing left over.\" — the zero-waste receipt",
-    intel:[
-      {type:"TREND", text:"T-8: The category's loudest sustainability voice published a fresh independent life-cycle assessment on Aug 4, 2026 — audited numbers instead of adjectives. Backdrop only. Provenance is turning into a receipt, so Willa's publishes its own receipt (carbon-sequestering organic oats, soil health, zero food waste from using the whole groat) and never anyone else's figure."},
-      {type:"AUDIENCE", text:"Sustainability copy has been claim-shaped for a decade, so shoppers discount it on sight. A small checkable proof — the whole groat goes in, so there's nothing left to discard — outperforms every adjective. Pinterest rewards it too: this saves as a proof card, not a news post."},
-      {type:"COMPETITOR", text:"INTERNAL: C-1 is defending the plant-milk halo with an audited climate figure (Aug 4, 2026). Willa's has no comparable life-cycle assessment and must not imply one. Compete on provenance Willa's can name outright — organic, whole oat groat, zero food waste — and never cite their number, never compare to dairy, never imply a head-to-head."}
-    ],
-    hooks:[
-      {text:"nothing left out of the oat. so nothing left over.", recommended:true},
-      {text:"good for the planet is easy to say. here's ours, itemized.", recommended:false},
-      {text:"organic oats that pull carbon down and build the soil back", recommended:false}
-    ],
-    caption:"Willa's Original is four organic ingredients and the whole oat groat — the whole oat kernel, the way steel-cut oats keep it. 🌾\n\nThat one decision is also the sustainability answer. Because the whole groat goes into the carton, there's nothing to discard: zero food waste in the process. And organic oats do quiet work while they grow — they sequester carbon, meaning they pull it out of the air and into the ground, and they leave the soil healthier for the next season.\n\nNothing left out of the oat. So nothing left over.\n\nOrganic whole grain oats, filtered water, organic vanilla, sea salt. Certified organic, certified glyphosate-free, tested every lot. 1g sugar, 4g+ protein, 2g+ prebiotic fiber.",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#organicoatmilk",
-      "#wholeoat",
-      "#zerofoodwaste",
-      "#soilhealth",
-      "#cleanlabel",
-      "#glyphosatefree",
-      "#realfood",
-      "#sustainablekitchen"
-    ],
-    visual:"Vertical 2:3 pin, typographic-first. Warm cream ground, creamy blue (#73B2C9) as the single accent, navy ink (#202A44) for type. Product still: Willa's Original carton shot straight-on and slightly below eye line, centered low, soft north-facing daylight with one gentle shadow falling right — no props, no styled kitchen, no grain bowl, no sunset. The carton sits in the bottom third; the top two-thirds are type. Hero line set large in two stacked lines with a hard break — 'NOTHING LEFT OUT OF THE OAT.' / 'SO NOTHING LEFT OVER.' — with the second line in the creamy blue so the joke lands on the turn. Beneath the carton, a small three-line footer in mono at roughly 40% the hero size, laid out like a short itemized receipt: 'WHOLE OAT GROAT — IN' · 'DISCARDED — NONE' · 'ORGANIC · GLYPHOSATE-FREE, TESTED EVERY LOT'. Hold the footer to three lines. This is a proof pin, not a sustainability infographic — Graza/Omsom zine-cover register, generous margins, legible at a 236px thumbnail. No leaf icons, no globe icons, no earth-tone greenwash palette, and no percentage figures anywhere in frame. A loose scatter of whole oat groats at the base of the carton is the only texture allowed.",
-    script:null,
-    audio:null,
-    duration:null,
-    cta:{soft:"save it for the next time a carton says 'sustainable.'", medium:"Willa's Original — the whole oat groat goes in, so zero food waste comes out.", strong:"Willa's Original: 4 ingredients, 1g sugar, 4g+ protein, 2g+ prebiotic fiber, certified organic + certified glyphosate-free, tested every lot."},
+    audio:"Warm narrative voiceover — dry, low, unhurried, the register of someone stating a preference rather than winning a point. Not framed as the founder, no talent on camera. Three short VO lines total and long silences between them; the voice never raises and never gets faster. Sparse real-instrument bed: one acoustic guitar and a brushed snare, no ambient wellness pads, no trending sound, no stitch audio — riding a sound here would look like joining the argument. Music sits well under the VO and drops out entirely for the final two seconds so the last frame is room tone. Keep the practical sounds loud and close-miked: the board landing, the jar lid, the spoon against the pot, the pour.",
+    duration:"23-25 seconds",
+    cta:{soft:"save this for a week when the feed gets loud about food.", medium:"keep a carton of Willa's Original on the table — nothing filtered out, nothing to argue about.", strong:"try Willa's Original — organic whole grain oats, filtered water, organic vanilla extract, sea salt. that's the list."},
     benefitShorthandId:"BS-1"
   },
   {
-    id:"AUG10-IG-F2",
+    id:"AUG17-IG-R4",
+    platform:"Instagram Reel",
+    pillar:"PARENTING",
+    pillarColor:"#9E652E",
+    flavor:"Kids",
+    dnaPattern:"kid-family-moment",
+    timing:"Sat Aug 22 · 12pm",
+    priority:"STANDARD",
+    rideNow:false,
+    concept:"\"the best swirl in the fridge is on the kids' carton.\" — one carton, two drinks, a Saturday",
+    intel:[
+      {type:"PULSE", text:"CP-10: a warm, ragged rocker with fiddle and fretless guitar premiered Aug 17, 2026, and the artist has said it's mostly about his son and 'feeling overwhelming love.' That is the rarest thing on the audio shelf right now — unironic, un-precious, family-forward, played on real instruments, and the exact opposite register from a wellness-brand music bed. It is the reason this brief is a slow Saturday and not another explainer. INTERNAL: the artist, song and album are never named on screen or in caption. The team pulls the track from the Cultural Pulse card and lets it carry mood, not credit."},
+      {type:"AUDIENCE", text:"The most underused truth in the whole lineup: adults reach for Willa's Kids on purpose — more protein in the iced coffee, and per Christina it 'oddly blends and creates the best swirls' of any SKU. Every Kids brief this engine has shipped treats the carton as a kids' product with a parent as the buyer. This one treats it as a carton two people drink for two different reasons, which is a bigger and far more repeatable story than another lunchbox. Do not trap Kids as only-for-kids, and do not send this one anywhere near a school morning — that door has run three weeks straight and is shut."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL — never on camera, never in caption, brand never named): a clean-label peer put a 12g-protein plant 'whole milk' into national distribution on Aug 10, 2026, blending coconut, cashew, soy and pea protein to hit the number — not one whole ingredient doing the work. The category's answer to protein anxiety is a bigger number on the front of the box. Willa's answer this week is two people in a kitchen. Say '8g protein' once and flatly — do NOT claim the 8g comes from the oat (Kids carries organic pea protein), and do NOT put any number on the hero swirl shot."}
+    ],
+    hooks:[
+      {text:"it says Kids on the front. it's in her iced coffee anyway.", recommended:true},
+      {text:"she poured her kid a glass, then poured the rest over ice.", recommended:false},
+      {text:"shhh… the kids' carton is the one the adults keep stealing.", recommended:false}
+    ],
+    caption:"Saturday morning, one carton, two drinks. 🥛\n\nOur cofounder poured her kid a glass of Willa's Kids, then poured the rest of the same carton over ice into her own coffee. Nobody staged that part.\n\nThe best swirl in the fridge is on the Kids carton. We don't have a better explanation than that — it just does it, and we've stopped apologizing for how good it looks.\n\nMade from the whole oat — bran, germ and all — not oat syrup. 8g protein. Top-9-allergen-free.\n\nShhh… the one we designed for kids' tastebuds is the one the grown-ups keep finishing.\n\nSame carton. Two glasses. One of them has ice in it.",
+    hashtags:[
+      "#willas",
+      "#willaskids",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#dairyfree",
+      "#top9free",
+      "#allergenfriendly",
+      "#kidsdrinks",
+      "#realfood",
+      "#slowweekend"
+    ],
+    visual:"A real weekend kitchen, not a set — crumbs on the counter, a cereal bowl nobody moved, a stack of unopened mail at the edge of frame. Warm low morning light coming in hard from one window at frame left, no diffusion, no filter, no color grade beyond a gentle warm lift; shadows are allowed to be shadows. Palette is whatever the room already is — wood, ceramic, the brown (#9E652E) of the Willa's Kids carton picked up in the only two text overlays that carry numbers. Talent is the cofounder-sister and her kid; Christina is not in this brief. Neither of them ever looks at the camera and neither of them speaks. Shoot on a 35mm for the wides and a macro for the hero, hold every shot one full beat longer than an edit would normally allow, and cut on the music rather than on the action. Text is close to absent: one line in the first four seconds, two small lines near the end, nothing anywhere else — and specifically nothing on the swirl. The Willa's Kids carton is in frame for most of the runtime and its label stays readable through the handoff from the kid's hands to hers, because that handoff is the entire argument. The hero frame is the swirl: pale ribbons rolling down through dark iced coffee, curling, folding in, disappearing. That is a swirl that DISSOLVES — it is not a layered-glass build and must never be cut to hold stripes. Final frame is the two finished glasses and the carton between them in the same light.",
+    script:[
+      {scene:"HOOK", time:"0-4s", action:"Handheld, waist-height, warm hard window light: a kid's hands drag the Willa's Kids carton across a lived-in weekend counter — cereal bowl, crumbs, a stack of mail — and a mother's hand steadies it without taking it. Faces optional, no one addresses camera. On-screen text, small, warm brown, lower third: 'it says Kids on the front. it's in her iced coffee anyway.' This is the only overlay in the first half of the piece."},
+      {scene:"THE KID'S GLASS", time:"4-9s", action:"Cut to a locked 35mm at counter height, slightly low: the kid pours Willa's Kids into a short glass, overfills it a touch, stops on his own. Real sound only — the glug, the glass settling on wood. No text, no voiceover, no cutaway. Hold a full beat past where the edit wants to go."},
+      {scene:"THE SAME CARTON", time:"9-13s", action:"Static 35mm at glass height, cofounder-sister's hands enter frame right: she picks up the same carton the kid just set down — label readable through the whole handoff — and carries it over a tall glass of ice and cold coffee. The kid's full glass stays visible and sweating at the edge of frame; nothing gets staged out. No text."},
+      {scene:"THE SWIRL", time:"13-20s", action:"Macro, 60fps, side-on through the glass wall: Willa's Kids goes into the iced coffee and blooms — pale ribbons rolling down through the dark, curling, then folding in until the whole glass goes light. Let it dissolve completely; do not cut early to hold stripes, this is not a layered drink. ZERO on-screen text on this shot — no numbers, no nutrition, no stinger. Music and the pour carry it alone. Longest shot in the piece: shoot it eight times, cut the one where the ribbons hold longest before they fold."},
+      {scene:"TWO DRINKS", time:"20-24s", action:"Pull back to a wide of the counter in the same light: the kid's glass, her iced coffee, the carton standing between them, both people in frame and neither looking at the lens. Two small warm-brown lines fade up low, one after the other, clear of both drinks: '8g protein · 3g fiber' → 'top-9-allergen-free.' Plain type, no boxes, no icons, no third line."},
+      {scene:"END CARD", time:"24-26s", action:"Hold the same wide. Both pairs of hands leave frame; the carton stays, still in the window light. On-screen text centered underneath, warm brown: 'the best swirl in the fridge is on the kids' carton.' The stinger holds under it for the final beat: 'More protein than any oat milk. (Yes, really.)'"}
+    ],
+    audio:"The Aug 17, 2026 indie-rock drop carried on the Cultural Pulse card — warm, ragged, fiddle and fretless guitar, written about the artist's son and 'feeling overwhelming love,' completely unironic. That register is the whole reason it's this track and not a wellness-brand bed; if it starts sounding like a spa, it's the wrong song. Sit it at conversational level rather than underneath, and cut picture to the music instead of to the action. NO voiceover anywhere in this piece — the only other sound is the kitchen: the pour, the ice, the glass on wood, and one kid noise left in on purpose. The artist, song and album are never named on screen, in caption, or in comments.",
+    duration:"24-26 seconds",
+    cta:{soft:"save this for the next person who tells you the kids' carton is only for kids.", medium:"pour Willa's Kids — 8g protein, top-9-allergen-free, and the best swirl in the fridge.", strong:"try Willa's Kids: 8g protein, 3g fiber, top-9-allergen-free, made from the whole oat — for the kid's glass and for yours."},
+    benefitShorthandId:"BS-4"
+  },
+  {
+    id:"AUG17-IG-F2",
     platform:"IG Feed",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"on-pack-checklist",
+    timing:"Sat Aug 22 · 6pm",
+    priority:"STANDARD",
+    rideNow:false,
+    concept:"\"our label isn't a link.\" — everything you'd have to scan for, already printed on the front",
+    intel:[
+      {type:"TREND", text:"T-3: legal analysis published Aug 17, 2026 confirms that two of the escape hatches in the federal bioengineered-food disclosure rules are being taken away — the option to park the disclosure behind a QR code or a text-message line, and the exemption for products whose modified genetic material can't be detected in the finished food. The direction of travel is the entire why-now: for a decade proof migrated OFF the package, and it is now being pushed back onto it. INTERNAL ONLY and non-negotiable — no court, no judge, no agency, no case name, no 2028 date, no word 'vacatur' and no compliance framing appears anywhere in consumer copy. The customer never hears the ruling. She only sees a carton that never used the escape hatch. 'Bioengineered' gets its one plain-English gloss on the card and then the brief moves on."},
+      {type:"COMPETITOR", text:"T-1 + C-3 (INTERNAL): the Non-GMO Project's Non-UPF Verified standard, administered with NSF, is landing on real packages — Go Raw announced its seal Aug 11, 2026, Simple Mills says roughly 60% of its portfolio qualified without reformulating anything, and Amy's Kitchen and Spindrift are on the list. Same certifying body that already verifies Willa's Non-GMO. Two hard guardrails: (1) Willa's is NOT verified to this standard and the seal is NOT claimed, implied, hinted at or shown in any card, caption, hashtag or overlay on this brief — the application is a business action for the team, not a content claim; (2) a consumer-advocacy critique published Aug 12, 2026 is already questioning whether private badges arriving ahead of a federal definition help shoppers at all, so a badge-parade post would be walking into that critique. This brief deliberately runs the opposite play: not more marks, just the ones already printed. Note also AUG17-TT-1 owns the Non-UPF story this week — this brief must not touch it."},
+      {type:"AUDIENCE", text:"The reader has been trained by a decade of front-of-pack marketing to assume the real answer is somewhere else — a scan, a site, a claim with no definition behind it — and to feel faintly stupid for not chasing it. The Willa's move is relief, not indignation: you're already holding the answer. Humor pattern is Wordplay / Text Joke, so the craft bar is high — nothing to look at but type, which means every line has to land on first read with no asterisk. Muse is Fishwife / Graza / Omsom for the design-wit (a four-ingredient list can read like a zine cover, not an infographic) with Kiki Milk's flat category posture underneath. Lead-with-the-solution: Willa's four organic ingredients are on CARD 2, not card 5. One idea per card, never two. Lane discipline: AUG17-PIN-2 owns subtraction/no-gums, AUG17-TT-4 owns the check-us dare, AUG17-TT-3 owns protein provenance — this brief owns one thing only, which is WHERE the proof is printed."}
+    ],
+    hooks:[
+      {text:"if the ingredients are behind a QR code, that's the answer.", recommended:true},
+      {text:"four ingredients, printed on the front. no scanning required.", recommended:false},
+      {text:"shhh… the whole answer is already on the carton.", recommended:false}
+    ],
+    caption:"Willa's Original is four organic ingredients, and every one of them is printed on the front of the carton. 🥛\n\nOrganic whole grain oats. Filtered water. Organic vanilla extract. Sea salt. No code to scan, no site to visit, no number to call — the box is the answer.\n\nNext to that list sits a butterfly: Non-GMO Project Verified. 'Bioengineered' is the label word for genetically modified ingredients, and that mark is where the answer lives on our carton — in ink, on the front, where you were already looking.\n\nMade from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — so the fiber and the protein both stay in. 4g+ protein, 2g+ prebiotic fiber, 1g of sugar, from the oats, nothing added.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nProof spent a decade quietly moving off the package. Ours never left it.\n\nOur label isn't a link.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#nongmoprojectverified",
+      "#wholeoat",
+      "#cleaningredients",
+      "#glyphosatefree",
+      "#plantmilk",
+      "#labelcheck",
+      "#realfood"
+    ],
+    visual:"Static IG Feed carousel, 6 cards, one idea per card and never two. This is a typography post — the joke is the writing, so the design has to be confident and quiet: flat cream (#FAFAF7) grounds, navy (#202A44) type, green (#75C596) reserved for exactly one accent per card and never used for a full line. Closer to a zine cover than a nutrition graphic — no arrows, no charts, no comparison tables, no badge grid, no talent. Real hard window light on every photographed card, mid-morning, no diffusion and no filter. CARD 1 is pure type on cream, no product at all: the hook set large and left-aligned with a lot of air around it, 'QR code' the only words in green. CARD 2 is the hero and it arrives second on purpose — Willa's Original carton straight-on at eye height, label-forward, filling 45%+ of the frame on a cream surface, the four ingredient lines legible in the real photograph; navy type in the negative space at frame left reads 'organic whole grain oats · filtered water · organic vanilla extract · sea salt' with a smaller green line beneath it: 'front of the carton. that's the whole list.' CARD 3 is type only again, three short navy lines dropping in a stack with generous space between them — 'no code to scan.' / 'no site to visit.' / 'no number to call.' — then one green line landing alone at the bottom: 'it's just printed.' CARD 4 is a tight macro on the Non-GMO Project Verified butterfly mark on the front of the carton, shallow depth of field, the rest of the label falling soft; two navy lines below it, and this is the only card allowed two lines because the gloss is a safety requirement: \"'bioengineered' is the label word for genetically modified ingredients.\" / 'ours says Non-GMO Project Verified — printed, not linked.' CARD 5 is a slow macro crop across the certification marks already on the front of the pack, and it carries the post's single stinger, BS-11, set small in navy: 'certified glyphosate-free. because that matters.' with 'tested every lot.' beneath it in green. CARD 6 is the end card: the carton alone on a windowsill in late-afternoon light, cream negative space above it, and one line of navy type — 'our label isn't a link.' Nothing else on that card. Hard rules for the designer: the only certification marks that may appear in this carousel are ones already printed on the current Willa's carton — do not add, mock up or composite any new or pending seal onto the pack — no card carries more than two lines of copy, and no card stacks more than one certification.",
+    script:null,
+    audio:null,
+    duration:null,
+    cta:{soft:"save this for the next time a label sends you somewhere else to find the answer.", medium:"pour Willa's Original — four organic ingredients, all four printed on the front.", strong:"try Willa's Original: four organic ingredients, 4g+ protein, 2g+ prebiotic fiber, 1g sugar from the oats, Non-GMO Project Verified, certified organic and certified glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-11"
+  },
+  {
+    id:"AUG17-TT-6",
+    platform:"TikTok",
     pillar:"REVIEWS/RECS",
     pillarColor:"#A191B2",
     flavor:"Multi",
     dnaPattern:"at-shelf-moment",
-    timing:"Sat Aug 15 · 6pm",
+    timing:"Sun Aug 23 · 11am",
     priority:"STANDARD",
-    concept:"\"three marks on the carton, and not one of them is self-issued.\" — at-shelf cert stack",
+    concept:"\"five things I don't compromise on. number four has four ingredients.\" — a real cart, a real list, Willa's fourth",
     intel:[
-      {type:"TREND", text:"T-9: a clean-label challenger stretched in two directions inside 48 hours — into shelf-stable formats the fridge doesn't limit (Aug 7, 2026) and onto someone else's celebrity launch for near-zero-cost reach (Aug 6, 2026). Both are levers Willa's could pull too. Neither is the answer this brief makes. The one thing on the shelf that cannot be borrowed, collabed or reformulated into existence is the certification stack, because it's issued by people who don't work here. INTERNAL ONLY — no competitor, no format news and no collab is referenced in consumer copy."},
-      {type:"AUDIENCE", text:"CP-9 is the mechanic worth stealing, not the sport: the sharpest food-brand work of the Aug 3–9 window took a product's actual function and made it the whole idea, pinned to something already in front of people — no invented occasion, no manufactured holiday. At the shelf, Willa's actual function is that the proof is already printed on the carton and someone outside the company signed off on it. The buyer standing in the aisle is doing exactly one thing: deciding which carton to believe. Give her the reason in three words she can verify herself."},
-      {type:"COMPETITOR", text:"C-2 (INTERNAL): the same challenger holds USDA Organic, Non-GMO and Glyphosate Residue Free too — so this brief may NOT claim Willa's is the only glyphosate-free milk, may NOT imply the category is 'finally catching up,' and may NOT name a retailer, store count, state count or distributor. What is genuinely Willa's-only in that peer set is the full stack including WBENC mother-founded. Frame it as what's on our carton, verified by outside bodies — never as a scarcity claim."}
+      {type:"PULSE", text:"CP-5: creators are listing, straight to camera, the five purchases they consider non-negotiable — the things they keep paying for while they cut elsewhere. The hashtag carries tens of thousands of posts and consumer-behaviour coverage dated Aug 12, 2026 reads the format as evidence of a wider value-audit mood, with the lists running mostly to subscriptions and beauty or lifestyle purchases. The reason this is the rare list Willa's should want in on: almost nothing on these lists is groceries. A carton in slot four is the surprise, and it can only land if it's genuinely on someone's list rather than placed there. Trigger for THIS week: the format is live and unclaimed by the category — a grocery item can earn a slot without the brand asking for it, and nobody in plant milk has taken one."},
+      {type:"AUDIENCE", text:"This is the deliberate peer-brand steal of the week: Partake Foods' cart-full haul crossed with Olipop's 'spending money on a product I love' confession. Both work for the same reason — the person on camera is a buyer, not a brand, and the affection is unembarrassed. The register has to stay tender and self-aware, never sneering, and Willa's never punches down at the buyer. Which is why the placement matters more than the pitch: first reads as an ad, fifth reads as the finale, fourth reads as a person telling the truth in the middle of a list. HARD COPY GUARDRAIL — nothing in this brief states or implies a price, compares cost, or mentions a deal, a discount or a sale. 'Worth it' here means what's inside the carton. Pricing is retailer territory and the engine does not touch it."},
+      {type:"COMPETITOR", text:"C-1 (INTERNAL ONLY — never in consumer copy): a national dairy player exited ready-to-drink oat milk in this window, citing lack of demand. A value-audit mood plus a category exit is exactly the conditions under which cheaper-per-ounce arguments get loud, and the worst possible move is to answer one. Willa's answer is not a comparison — it's a person who already made the decision and doesn't relitigate it. No demand talk, no shelf talk, no category-health talk anywhere on camera or in caption."}
     ],
     hooks:[
-      {text:"anyone can print the word clean on a carton. these three had to be earned.", recommended:true},
-      {text:"three marks on this carton. not one of them is self-issued.", recommended:false},
-      {text:"shhh… the least glamorous part of this brand is the part we're proudest of.", recommended:false}
+      {text:"five things in my cart I don't compromise on.", recommended:true},
+      {text:"these five never change, no matter what else goes in.", recommended:false},
+      {text:"shhh… number four is the one I'd defend in the comments.", recommended:false}
     ],
-    caption:"USDA Organic. Certified Glyphosate Residue Free. WBENC women-owned. Three marks on the carton, and not one of them is self-issued. 🌾\n\nOrganic is a federal standard with an audit behind it. Glyphosate Residue Free means every lot is tested for weedkiller residue before it ships. WBENC means an outside council verified the company is majority women-owned; Willa's was founded by a mother and named for her grandmother.\n\nAnyone can print the word clean on a carton. These three had to be checked by someone who doesn't work here.\n\nAnd the reason any of it holds up is what's inside. Willa's Original is four organic ingredients — whole grain oats, filtered water, vanilla extract, sea salt. 1g of sugar, none of it added. 4g+ protein and 2g+ prebiotic fiber, the kind that supports gut and heart health, because the whole oat stays in instead of getting filtered out.",
+    caption:"Number four on the list has four ingredients. 🥛\n\nFive things in a real cart that never get swapped — and this is the one that reads shortest on the back. Willa's Original is organic whole grain oats, filtered water, organic vanilla extract and sea salt. That's the entire list.\n\nIt's made from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — instead of oat syrup. Most of the category filters out the bran and the germ first, then processes the starch into sugar, which takes the fiber AND the protein out before the carton is ever filled. Willa's keeps both: 4g+ protein, 2g+ prebiotic fiber, the kind that feeds your gut, and 1g of sugar that came from the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nWilla's Original goes in the coffee. Willa's Kids goes in the glass. Same cart, same trip.\n\nA list like this isn't really a list of things you buy. It's a list of things you stopped rethinking.",
     hashtags:[
       "#willas",
       "#oatmilk",
       "#organicoatmilk",
-      "#usdaorganic",
-      "#glyphosatefree",
-      "#cleanlabel",
-      "#womenowned",
-      "#wbenc",
-      "#motherfounded",
-      "#labelcheck"
+      "#wholeoat",
+      "#nonnegotiables",
+      "#groceryhaul",
+      "#cleaningredients",
+      "#pantrystaples",
+      "#dairyfree",
+      "#plantmilk"
     ],
-    visual:"Static IG Feed carousel, 5 cards, shot like an editorial spread rather than a proof sheet — this is the deliberate peer-brand steal: the real-shelf encounter, composed the way a design-led brand composes its whole feed. Palette is soft daylight neutrals with purple (#A191B2) as the only accent and navy (#202A44) type; no drop shadows, no badges-on-badges, no infographic furniture. CARD 1 is the hero and carries NO overlay text at all: an actual grocery shelf, Willa's cartons stacked two rows deep and label-forward, shot straight-on at chest height on a 35mm, soft indirect daylight from the aisle end, slight vignette from the shelf lip, the neighbouring shelf left visible but out of focus and unreadable. Do not name, sign or geotag the store, and do not let a retailer logo or shelf tag fall inside the crop — clone it out in post if it does. Let the carton design do the work; the first card should look like something a stranger screenshots before they know what it's selling. CARD 2 is the only card with a hand in it: a hand lifting one carton out of the row, motion slight, overlay set large and left-aligned in the upper third — 'anyone can print the word clean on a carton. these three had to be earned.' CARD 3, 4 and 5 are the stack, one mark per card, shot as macro details of the actual printed marks on the back of the carton with a single focus pull each, cream negative space at frame right for one line of type: CARD 3 'USDA Organic — a federal standard, audited.' CARD 4 'Certified Glyphosate Residue Free — every lot tested for weedkiller residue.' CARD 5 'WBENC women-owned — verified by an outside council. Founded by a mother, named for her grandmother.' Final frame sign-off in small navy type under the last mark: 'Certified glyphosate-free. Because that matters.' Product occupies 60%+ of every card. No talent on camera, no founder, no studio sweep — the whole point is that this is a real shelf and a real carton in real light.",
+    visual:"Bright, high-key, walking-pace and deliberately unpolished — this is a person with a cart, not a brand with a set. Palette is real-store daylight plus purple (#A191B2) numeral chips and navy (#202A44) type on cream (#FAFAF7) lower-third chips. Talent is a Willa's ambassador or a team member — NOT Christina, and not the cofounder-sister (she is already carrying two briefs this week). She is the buyer here, not a spokesperson, so no scripted delivery, no ring light, no mark to hit. Shoot handheld at chest height on a 35mm at f/1.8 so the background reads as color and motion only. PRODUCTION GUARDRAIL, non-negotiable: no retailer signage, no shelf-talkers, no aisle markers, no store-brand cartons and NO LEGIBLE SHELF TAGS OR PRICE LABELS may appear in any frame — the shallow focus does most of the work but the shot list should be blocked so nothing with a number on it is ever in the plane of focus. Four of the five items are held up fast, one beat each, at walking pace. Willa's is the only item that stops the cart: the camera settles, the movement drops out, and that beat runs roughly twice as long as any other. Willa's Original is label-forward in the last four key frames and Willa's Kids sits beside it in the cart from the fourth beat onward. Purple numeral chips punch in top-left on each item and punch out — except '4', which stays for the whole beat. On-screen text is one line at a time, sentence case, never stacked, and no line anywhere in the piece contains a currency symbol or a number that could read as one.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Handheld, chest height, walking: she pushes a cart straight down the lens in a chilled-aisle corridor, background thrown fully out of focus so no signage, logo or shelf tag is legible. She looks right at camera and says it plainly, mid-stride, sync sound: 'five things in my cart I don't compromise on.' On-screen text lands lower-third, navy on a cream chip: 'five things in my cart I don't compromise on.'"},
+      {scene:"ONE + TWO", time:"3-11s", action:"Two fast handheld cuts, same walking energy, camera stays on the cart and never the shelf. She lifts a bottle of Graza olive oil out of the cart, one beat, drops it back: 'the olive oil — I cook with it every day, it should taste like something.' Hard cut. She lifts a Fishwife tin: 'the tinned fish. that's lunch on the days I don't want to think.' Purple (#A191B2) numeral chips punch in top-left on each cut — '1' then '2' — and punch straight back out."},
+      {scene:"THREE", time:"11-15s", action:"Same handheld walking cut: she holds up an Omsom sauce starter packet, one beat, drops it back in the cart: 'the sauce starters. thirty minutes and it tastes like I tried.' Purple numeral chip '3' punches in and out. Keep the pace up here — the next beat has to feel like a gear change."},
+      {scene:"FOUR — THE CARTON", time:"15-25s", action:"The cart stops. Camera settles into the only static frame in the piece and the motion drops out of the shot entirely. She lifts Willa's Original out with both hands, turns it label-forward, then turns it once more to the back and holds it there while she says: 'the oat milk. four ingredients — and unlike most oat milks, the fiber and the protein are still in it.' Purple numeral chip '4' punches in and STAYS for the whole beat. Two-second macro insert cutaway: her thumb runs down the four-line ingredient list on the back, with Willa's Kids visible in the cart just behind it, soft. On-screen text under the insert, one line: 'four ingredients. the fiber and the protein are still in it.' Back to the settled wide — she sets the carton in the cart facing out."},
+      {scene:"FIVE", time:"25-29s", action:"Handheld again, cart moving, pace back up: she holds up a box of Partake cookies and half-laughs it: 'and the cookies. everybody in this house eats them.' Purple numeral chip '5' punches in and out. She keeps walking past the lens and out of frame left."},
+      {scene:"END CARD", time:"29-32s", action:"Hard cut to a locked overhead directly above the open cart: all five items in a loose row on the cart floor, Willa's Original label-forward dead center with Willa's Kids beside it. Her hand enters frame and squares the carton once, then leaves. Navy (#202A44) type across the bottom on a cream chip, BS-1 stinger: 'The whole oat. Not the syrup.' Cut on room tone — no music sting, no logo animation."}
+    ],
+    audio:"Sync sound, on camera — she is speaking for herself the whole way through and there is no voiceover anywhere in this piece. Live store room tone stays audible under everything (cart wheels, the chilled-case hum, her footsteps) because that texture is what makes the list read as a real trip. A light, unfussy instrumental bed sits very low behind the four fast items and drops out completely on the FOUR beat so the carton line lands in room tone, then does not come back. No trending audio — the format is carried by the person and the list, and dropping a sound trend on top of a confession flattens it.",
+    duration:"29-32 seconds",
+    cta:{soft:"send this to whoever asks you what's actually worth keeping in the cart.", medium:"add Willa's Original to the list — four organic ingredients, made from the whole oat.", strong:"reach for Willa's Original: made from the whole oat groat, so the 4g+ protein and 2g+ prebiotic fiber never got filtered out, and the 1g of sugar came from the oats. Certified organic. Certified glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-1"
+  },
+  {
+    id:"AUG17-IG-R5",
+    platform:"Instagram Reel",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"meme-payload",
+    timing:"Sun Aug 23 · 12pm",
+    priority:"STANDARD",
+    concept:"\"it looks fake. it's four ingredients.\" — illusion-plus-proof pour cut",
+    intel:[
+      {type:"PULSE", text:"CP-9: the food-video cut winning completion in the Aug 8-15, 2026 window is 'illusion plus proof' — open on something so hyperreal it reads as CGI or a trick, then cut to the interior or the texture as evidence it's real. The viewer gets process satisfaction AND a perceptual surprise, which is why it's beating ordinary meal-presentation footage. The structure has disbelief and receipt built into it. Willa's is the rare product where the receipt already exists on the back of the box, so the format costs nothing to adopt — the pour IS the illusion, the four-line list IS the proof."},
+      {type:"TREND", text:"T-6: a PNAS paper in the Aug 11, 2026 print issue found indigestible plant proteins — not fiber alone — steer gut bacteria toward beneficial metabolites, and the authors suggest labels may eventually track resistant protein next to fiber. INTERNAL ONLY — no study, no journal, no mechanism ships in this brief's copy. What it changes is the sentence discipline: when Willa's says the category filters things out, it says fiber AND protein as one clause, never fiber alone. That's the only trace of T-6 the customer should ever see."},
+      {type:"COMPETITOR", text:"C-2 (INTERNAL): a clean-label peer put a 12g-protein 'whole' plant milk into national retail on Aug 10, 2026 — gum-free and organic, but the protein comes from an added isolate and the list carries cane sugar. The word 'whole' is now being applied to a blend, which makes a literal, unedited texture demonstration more valuable than any number Willa's could print. Do not name the brand, do not counter-claim, do not mention protein grams on camera. The counter is that this pour was not engineered — it just is. Silence on the comparison is the strategy."}
+    ],
+    hooks:[
+      {text:"you're going to think this pour is fake.", recommended:true},
+      {text:"this is the part where somebody comments 'cgi.'", recommended:false},
+      {text:"shhh… nothing in this shot has been edited.", recommended:false}
+    ],
+    caption:"Thick enough that people assume it's edited. It isn't. 🥛\n\nWilla's Original pours like that because it's made from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled. Most oat milks filter out the bran and germ and then process the starch into sugar, which takes the fiber AND the protein out with it. We keep all of it. That's the entire reason it's rich and smooth instead of thin.\n\nIt looks fake. It's four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt.\n\n1g of sugar, and it comes from the oats. No gums, no stabilizers, nothing added to make it behave on camera.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nDrag a spoon through it. That's the whole argument.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#plantmilk",
+      "#fouringredients",
+      "#cleaningredients",
+      "#dairyfree",
+      "#foodtiktok",
+      "#realfood"
+    ],
+    visual:"Bright and high-key, but the whole piece lives at macro distance — this is a texture film, not a kitchen film. Near-white counter (#FAFAF7), one clear straight-sided glass, cream board, Willa's Original carton. Hands only, no talent on camera. Hard mid-morning window light coming in from camera left with no diffusion and no filter, so the milk throws a real specular highlight and a real shadow on the counter — a soft, evenly-lit frame kills the illusion instantly because it reads as rendered. Two lenses do everything: a 100mm macro locked at glass height for the pour and the spoon drag, and a 50mm for the hard cut to the carton. The hero frame is the pour column itself, shot close enough that the glass rim is out of frame, so for the first three seconds the viewer cannot tell scale or product — that ambiguity IS the format. Hold it two beats longer than feels comfortable. Typography is navy ink (#202A44) on the milk-white frames, with the green (#75C596) reserved for one word only — the count on the receipt frame. Text enters as single lines, never stacked, always lower third, never over the pour column itself. SHOOT IT REAL: no cornstarch, no cream, no prop milk, no speed ramp on the pour, no viscosity added in post, no AI cleanup. If the pour doesn't look that rich straight out of camera, kill the brief — faking the proof shot on a transparency brand is the one mistake that can't be walked back. Final frame is the carton label-forward beside the half-empty glass with the spoon channel still visible in it.",
+    script:[
+      {scene:"HOOK", time:"0-3s", action:"Extreme macro, locked 100mm at glass height, hard window light: a pour column of Willa's Original falls into frame and lands in a clear glass. Shot so close that neither the glass rim nor the carton is visible — no scale, no branding, no context. The milk is opaque and folds over itself as it hits. On-screen text, navy, lower third: 'you're going to think this pour is fake.'"},
+      {scene:"THE HOLD", time:"3-8s", action:"Do not cut. Same locked macro, pour continues and the level rises past frame center, the surface catching one hard highlight. Music drops out entirely — pour sound only, close-miked, almost too loud. Hold two beats past comfortable so the viewer starts composing the 'this is CGI' comment. Single line of on-screen text fades in at 6s: 'one take. no thickener.'"},
+      {scene:"THE RECEIPT", time:"8-13s", action:"Hard cut, no transition, to a 50mm three-quarter of the Willa's Original carton flipped to its back label on the cream board. A finger enters and traces down the four-line ingredient list, one line per beat — organic whole grain oats, filtered water, organic vanilla extract, sea salt. Music snaps back in on the cut. On-screen text lands under the list: 'it looks fake. it's four ingredients.' — the word 'four' in green (#75C596), everything else navy."},
+      {scene:"THE DRAG", time:"13-18s", action:"Cut back to the macro, now wide enough to read as a full glass. A spoon enters from frame right, is dragged slowly through the milk and lifted out — the channel it leaves holds for a full second before closing. Real time, no slow motion. On-screen text: 'same glass. same shot. no edit.'"},
+      {scene:"END CARD", time:"18-20s", action:"Pull to a static 50mm two-shot: carton label-forward at frame right, the half-empty glass at frame left with the spoon channel still faintly visible. Nothing moves. On-screen text centered underneath, navy: 'Four ingredients. (Read 'em.)'"}
+    ],
+    audio:"No voiceover — the format is a perceptual trick and a narrator explains away the disbelief. Close-miked pour, spoon and glass sounds carried loud and dry, ASMR-adjacent. Music bed is a low, steady instrumental that CUTS TO SILENCE for the entire HOLD beat (3-8s) so the only thing in the viewer's ears is milk hitting glass, then snaps back hard on the cut to the label. If the team wants a trending bed, pull a current sound off the food-side tag pages the week of shooting rather than pinning one now — but whatever it is, the pour audio stays audible over it. That sound is half the proof.",
+    duration:"18-20 seconds",
+    cta:{soft:"watch it twice — the second time you're looking for the edit.", medium:"pour Willa's Original and do the spoon test yourself.", strong:"grab Willa's Original — four organic ingredients, made from the whole oat, 1g of sugar from the oats."},
+    benefitShorthandId:"BS-2"
+  },
+  {
+    id:"AUG17-PIN-3",
+    platform:"Pinterest",
+    pillar:"INGREDIENTS/RECIPES",
+    pillarColor:"#75C596",
+    flavor:"Original",
+    dnaPattern:"meme-payload",
+    timing:"Sun Aug 23 · 2pm",
+    priority:"STANDARD",
+    concept:"\"kinda chic that the only sugar in it came from the oats.\" — one line, one carton, no punchline",
+    intel:[
+      {type:"PULSE", text:"CP-6: the 'kinda chic' format — a creator names an unglamorous personal habit and calls it chic, over bossa nova or bedroom pop, with no joke at the end and no apology in front of it. Currently one of the strongest formats running on the feed. The register is the entire reason this brief exists: it is the closest thing on the feed right now to Willa's actual voice, which means Willa's runs it straight instead of adapting it. Play it as a bit and it breaks."},
+      {type:"AUDIENCE", text:"The sugar truth is the least-repeated core fact Willa's owns — per Christina, even longtime followers are surprised to be reminded the gram of sugar in Original came from the oats and nothing was added. Pinterest is the right surface for a fact people forget, because a pin gets saved once and re-encountered months later. One claim stated once saves better than a proof stack, so this pin carries the sugar line and nothing else."},
+      {type:"TREND", text:"T-8 (INTERNAL ONLY): a twelve-year cohort of 25,214 adults published Aug 10, 2026 tied the heaviest ultra-processed eaters to a 40% higher rate of type-2 diabetes, with body weight explaining only about a fifth of the association. None of that — no study, no figure, no disease language, no risk framing — goes anywhere near this pin or its caption. It is only the reason a sugar-origin post is worth making the week of Aug 17, 2026. Fear is the failure mode of this whole lane; calm is the counter-move."}
+    ],
+    hooks:[
+      {text:"kinda chic that the only sugar in it came from the oats.", recommended:true},
+      {text:"kinda chic that nobody had to add the sugar.", recommended:false},
+      {text:"kinda chic that the oats brought their own gram of sugar.", recommended:false}
+    ],
+    caption:"One gram of sugar in Willa's Original, and the oats brought it. 🌾\n\nNothing was added — no cane sugar, no syrup, no sweetener of any kind. Willa's Original is made from the whole oat groat, the whole oat kernel the way steel-cut oats keep it, so the small sweetness that's in there belongs to the grain.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nKinda chic that the only sugar in it came from the oats.",
+    hashtags:[
+      "#willas",
+      "#oatmilk",
+      "#organicoatmilk",
+      "#wholeoat",
+      "#lowsugaroatmilk",
+      "#cleaningredients",
+      "#glyphosatefree",
+      "#dairyfree",
+      "#plantmilk",
+      "#realfood"
+    ],
+    visual:"Vertical 2:3 pin. One carton, one line of type, nothing else in the frame. Warm cream ground (#FAF7F0), navy ink (#202A44) for the type, green (#75C596) used once and only on the word 'oats' — that is the whole color system. Product still: Willa's Original shot straight-on at eye line, label forward, centered in the lower half, on soft north-facing daylight with a single long shadow falling right. No props, no counter styling, no glass, no oat scatter, no hands, no kitchen. The carton should read like a portrait, not a product shot. The hero line sits in the upper half, set large and generously leaded across two or three ragged lines with a hard break before 'came from the oats' — either a calm high-contrast serif (Canela / Editorial New register) or a clean neutral sans (Söhne / Suisse register), one weight, sentence case, lowercase 'k' on 'kinda'. That line is the only copy in the frame. NO second sentence, no subhead, no footer, no receipt strip, no nutrition callout, no check marks, no arrows, no icons, no leaf, no badge lockup, no percentage and no 'read the label' line — a single unexplained claim is the format, and any support copy kills it. Fishwife / Graza / Omsom zine-cover register: confident, spare, funny only in how flatly it's stated. Margins are generous and the composition must still parse at a 236px thumbnail — if the line doesn't read at thumbnail size, cut a word, don't shrink the type. Willa's wordmark small and quiet at the very bottom, or nowhere at all; the carton is already the signature.",
     script:null,
     audio:null,
     duration:null,
-    cta:{soft:"save this for the next time the aisle all looks the same.", medium:"look for Willa's Original — USDA Organic, certified glyphosate-free, tested every lot.", strong:"pour Willa's Original: four organic ingredients, 1g sugar, 4g+ protein, 2g+ prebiotic fiber, and three certifications nobody here handed themselves."},
-    benefitShorthandId:"BS-11"
-  },
-  {
-    id:"AUG10-TT-6",
-    platform:"TikTok",
-    pillar:"REVIEWS/RECS",
-    pillarColor:"#A191B2",
-    flavor:"Multi",
-    dnaPattern:"meme-payload",
-    timing:"Sun Aug 16 · 11am",
-    priority:"STANDARD",
-    concept:"\"the carton's still full. hallelujah.\" — five small kitchen mercies",
-    intel:[
-      {type:"PULSE", text:"CP-3: the 'hallelujah' gratitude-list format — sparked by Justin Bieber's 'Everything Hallelujah' at Coachella and still on the Aug 5, 2026 Instagram trend board — is the lowest-lift adaptation available: creators name small daily reliefs and punctuate each one with 'hallelujah.' Willa's version skips the song on purpose: flat voiceover instead of the trending track, so there's no choreography and no licensing question, and the joke reads just as clearly off the text list alone. Shoot it in one unstaged kitchen frame and it costs an afternoon, not a production day."},
-      {type:"AUDIENCE", text:"The format runs on recognition, not persuasion — the viewer is nodding along, and the fifth item only earns its place if the first four are things that genuinely happened in a real kitchen. Keep it to five, keep the delivery flat, and let the carton be the last small relief rather than the point of the video. The moment item three starts sounding like a benefit, the whole thing reads as an ad and the nodding stops."},
-      {type:"COMPETITOR", text:"INTERNAL: every competitive move this week is an argument — an audited climate-impact number published Aug 4, 2026, a revived 'zero sugar' claim lawsuit Aug 4, 2026, and retail data with an analyst naming price, taste, heavy processing and low protein as the category's problems. This is the one asset in the week's slate that isn't defending anything, and that contrast is its strategic value. Also live on the meme board: CP-2, the 'saxophones are getting louder' dread cue at #4 on Aug 6, 2026 — the reveal-shaped alternative if this one tests soft. None of this goes on camera."}
-    ],
-    hooks:[
-      {text:"five things worth a hallelujah.", recommended:true},
-      {text:"small mercies, kitchen edition.", recommended:false},
-      {text:"the dishwasher's already empty. hallelujah.", recommended:false}
-    ],
-    caption:"the dishwasher's already empty. hallelujah.\nboth shoes, same room. hallelujah.\nthe good mug was clean. hallelujah.\nnobody had a strong opinion about breakfast. hallelujah.\nthe carton's still full. hallelujah. 🙌\n\nFive small mercies, and exactly one of them is ours.\n\nWilla's Original and Willa's Kids share a shelf around here — organic whole oats, kept whole, so the fiber and the protein stay in the glass instead of getting filtered out. Most oat milks throw both away.\n\nShhh… a full carton absolutely counts as a win.",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#hallelujah",
-      "#smallwins",
-      "#organicoatmilk",
-      "#wholeoat",
-      "#morningroutine",
-      "#dairyfree",
-      "#willaskids",
-      "#oatmilktok"
-    ],
-    visual:"One locked-off static frame for the entire video — phone propped at counter height on a stack of books, no pan, no zoom, no cut until the end card. A real kitchen counter in morning daylight from a window camera-left, and nothing on it is styled: crumbs left on the board, a dish towel bunched where someone dropped it, one cup nobody put away. Natural palette only — warm wood, white counter, cream — shot flat with no filter and no grade, because the format's credibility comes from looking like a phone someone leaned against the toaster. Willa's Original and Willa's Kids stand together at frame right, labels forward, occupying roughly a third of the frame and visible 100% of the runtime; they are never held, presented or turned toward camera. Overlays are the whole design: lowercase plain sans, navy (#202A44), one line at a time appearing in the lower third and stacking upward, with earlier lines holding at ~60% opacity so the list visibly builds — by the last beat the viewer can read all five at once. No emoji in the overlays, no arrows, no 'wait for it,' no purple pillar styling; anything decorative breaks the deadpan. The only movement in the video arrives at 11s when a hand enters from frame right to lift the carton an inch. Final frame is a soft cut to a static lockup: both cartons on cream, labels forward, navy type, nothing else moving.",
-    script:[
-      {scene:"HOOK", time:"0-3s", action:"Locked-off static wide of the unstaged counter, morning daylight camera-left. Willa's Original and Willa's Kids stand together at frame right, labels forward. Nothing in frame moves. On-screen text fades in bottom third, lowercase navy sans: 'five things worth a hallelujah.' It clears, and line one takes its place: 'the dishwasher's already empty. hallelujah.'"},
-      {scene:"BEAT TWO", time:"3-6s", action:"Identical frame — same lens, same light, still no movement. Line two appears and stacks above line one, which stays on screen at 60% opacity: 'both shoes, same room. hallelujah.' Voiceover reads it at the exact same pitch as line one; the sameness is the joke."},
-      {scene:"BEATS THREE + FOUR", time:"6-11s", action:"Same locked-off frame. Line three lands, then line four, each stacking upward with the earlier lines holding faded beneath: 'the good mug was clean. hallelujah.' → 'nobody had a strong opinion about breakfast. hallelujah.' The stack now fills the lower half of the frame. The cartons at frame right have still not been touched."},
-      {scene:"THE ONLY MOVEMENT", time:"11-14s", action:"First and only motion in the video: a hand enters from frame right, lifts the Willa's Original an inch off the counter, gives it one small shake — the audible weight of a full carton — and sets it back down. Line five lands on the shake: 'the carton's still full. hallelujah.' Voiceover delivers it exactly as flat as the other four. Hand exits; frame goes still again."},
-      {scene:"END CARD", time:"14-16s", action:"Hold the empty frame two full beats after the hand leaves, then soft cut to a static lockup — Willa's Original and Willa's Kids side by side on cream, labels forward. Navy (#202A44) type, BS-1 stinger: 'The whole oat. Not the syrup.' No music sting, no logo animation. End on room tone."}
-    ],
-    audio:"This trend is usually shot to Justin Bieber's 'Everything Hallelujah' — skip it on purpose. No trending sound, no audio lock: the flat voiceover carries the joke instead, so do not attach a sound just to attach one. Warm narrative voiceover, deliberately flat and unhurried, no smile in the read: every line lands at the same pitch and the word 'hallelujah' is delivered identically all five times. Keep real room tone underneath — fridge hum, a distant car, the counter — and close-mic the small shake of the carton at 11s so it registers as weight, not as a sound effect. Optional soft warm piano at very low level under the read; cut it before the end card and finish in room tone.",
-    duration:"14-16 seconds",
-    cta:{soft:"add your fifth one in the comments.", medium:"keep a Willa's on the shelf so the last one's an easy hallelujah.", strong:"pour Willa's Original — organic whole oats, 4 ingredients, 1g sugar straight from the oats — or Willa's Kids, 8g protein and free of the top 9 allergens."},
-    benefitShorthandId:"BS-1"
-  },
-  {
-    id:"AUG10-IG-R5",
-    platform:"Instagram Reel",
-    pillar:"REVIEWS/RECS",
-    pillarColor:"#A191B2",
-    flavor:"Original",
-    dnaPattern:"mom-activist",
-    timing:"Sun Aug 16 · 12pm",
-    priority:"HIGH",
-    concept:"\"a hundred years between the bowl and the carton.\" — century-gap heritage cut",
-    intel:[
-      {type:"PULSE", text:"CP-10: a stripped-back, country-leaning folk record landed Aug 7, 2026 — cut live in three days, half-spoken vocals, warm and completely un-precious. It is the tonal opposite of a wellness-brand soundtrack, which makes it the right bed for the week's one heritage cut. Riff the mood only — the artist and the album stay unnamed on screen and in the caption."},
-      {type:"AUDIENCE", text:"The feed the week of Aug 10–16 is all system and reset — routines, hacks, restocks, first-week-of-school logistics. A slow origin cut is the contrast play: the one post this week that asks nothing of the viewer and simply says where the carton came from. Sunday midday is when that lands."},
-      {type:"COMPETITOR", text:"INTERNAL: the category spent the week of Aug 3 defending itself with claims — an audited climate number, a clean-label format stretch, and a revived lawsuit over a sugar claim. Claims can be matched, audited, or sued. A hundred-year-old kitchen cannot be reformulated into. Don't say any of that on camera — just let the two dates sit there."}
-    ],
-    hooks:[
-      {text:"no one in 1921 called it clean eating. she just cooked.", recommended:true},
-      {text:"born 1921. launched 2021.", recommended:false},
-      {text:"it started as a bowl of oatmeal. it still is.", recommended:false}
-    ],
-    caption:"Willa was born in 1921. The carton launched in 2021. A hundred years between the bowl and the carton, and nothing important changed.\n\nShe cooked with whole oats because that's what food was — not because it scored well. Willa's Original is still organic whole grain oats, filtered water, organic vanilla extract, sea salt. Still the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — the same thing that went in her pot.\n\nChristina, in her own kitchen: \"my grandmother was making oatmeal way before it was cool.\"\n\nReal food, passed down. Reinvented forward.",
-    hashtags:[
-      "#willas",
-      "#oatmilk",
-      "#organicoatmilk",
-      "#wholeoat",
-      "#realfood",
-      "#grandmaskitchen",
-      "#passeddown",
-      "#womenownedbusiness",
-      "#wbenc"
-    ],
-    visual:"Un-styled and unhurried — this is the one cut of the week with no graphics energy. Warm cream and wheat palette with brown (#9E652E) heritage accents and navy ink (#202A44) type; hard morning window light raking low across a worn wooden counter, dust visible in the beam, no fill, no filter, no color grade toward 'bright.' Shot almost entirely on a 50mm-equivalent at shallow depth: extreme close-ups of dry whole oat groats, hands, water, steam. Camera is static or a single very slow push — no handheld energy, no whip cuts. Cuts are long (3-5 seconds each) and land on the beat of the music, not ahead of it. Christina appears in exactly one shot, three-quarter to camera in her own kitchen, never addressing the lens straight on — she is in the room, not presenting to it. Willa's Original enters LAST, at roughly 15 seconds, set down by hand with the label forward and held in the same light as the bowl so the carton and the grain read as the same material; product occupies the final third of the runtime, roughly 40% of the closing frames. Text is deliberately scarce: four short lower-third cards total, navy on cream, small, fading in and out. NO nutrition overlay anywhere — no grams, no counts, no badge stack. The last frame is a static wide of the bowl of groats beside the carton with the sign-off centered underneath.",
-    script:[
-      {scene:"HOOK", time:"0-4s", action:"Extreme close-up, static: hands tip dry whole oat groats from a glass jar into a worn ceramic bowl on a wooden counter, hard morning light from the left. Grain sound close-miked, no music yet. Small on-screen text, lower third (navy on cream): 'born 1921.' Hold on the bowl."},
-      {scene:"TURN", time:"4-9s", action:"Music enters. Very slow push-in as a hand runs through the groats and lifts a few. Cut to the same hands filling a pot at the sink, water sound left up. On-screen text replaces the first card: 'launched 2021.' No other overlay."},
-      {scene:"THE LINE", time:"9-15s", action:"Medium, static: Christina at the counter in her own kitchen, three-quarter to camera, light from the left, hands still working. Sync sound, one clean take — she says: 'my grandmother was making oatmeal way before it was cool.' NO text overlay on this shot; let the line land alone. Music drops slightly under her."},
-      {scene:"PRODUCT", time:"15-20s", action:"Three slow cutaways: pot on the stove with steam crossing the light beam · a wooden spoon set down on the counter · the edge of a framed photograph out of focus (no faces in frame). Then a hand reaches in and sets the Willa's Original carton on the wood beside the bowl, label forward — first appearance of the product. Quiet on-screen text: 'the whole oat. not the syrup.'"},
-      {scene:"SIGN-OFF", time:"20-25s", action:"Static wide, no camera move: the bowl of oat groats and the Willa's Original carton side by side in the same raking light. Music resolves. Centered on-screen text fades in and holds to the end: 'Real food, passed down. Reinvented forward.' No CTA card, no badge stack, no nutrition text."}
-    ],
-    audio:"Sync sound on Christina's line — no voiceover layered over it, no founder narration anywhere else. Underneath: a stripped-back, country-leaning folk bed — acoustic guitar, brushed drums, warm room tone, recorded-live-in-a-room feel, half-spoken rather than sung. Mood reference is CP-10 (INTERNAL — the artist and album are never named on screen or in the caption). Music enters at 4s, ducks under the spoken line, resolves on the final hold. Keep the grain, the water and the spoon audible under everything; this cut should sound like a kitchen, not a track.",
-    duration:"24-26 seconds",
-    cta:{soft:"send this to whoever taught you to cook.", medium:"Willa's Original — the whole oat, four organic ingredients.", strong:"pour Willa's Original: organic whole oat groats, four ingredients, certified organic + glyphosate-free."},
-    benefitShorthandId:"BS-1"
+    cta:{soft:"save this one.", medium:"Willa's Original — the gram of sugar in it came from the oats.", strong:"pour Willa's Original: 1g sugar that came from the oats, 4g+ protein, 2g+ prebiotic fiber, certified organic and certified glyphosate-free, tested every lot."},
+    benefitShorthandId:"BS-3"
   }
 ];
 
@@ -1130,16 +1126,16 @@ const AGENT_DETAILS = {
 
 // ─── What the engine decided this week (visible autonomy) ─
 const DECISIONS = [
-  {icon:"↑", title:"\"nothing self-certified. nothing to disclose.\" opens the week Wed Aug 12 at 9am, with Christina in the first of her two reserved on-camera slots.", reason:"The rule ending self-affirmed food additives cleared its final White House review on Jul 31, 2026 — a company could previously convene its own expert panel, declare a new ingredient safe and never tell the agency or the public. This is the documented founder-POV exception: the stance is the payload and a faceless voiceover would land soft. Willa's answer arrives by beat two — organic whole grain oats, filtered water, organic vanilla extract, sea salt. No politician, no party, no 'toxic', and no flip-the-carton opening, which is worn through. rideNow.", agent:"trend"},
-  {icon:"↑", title:"\"taste it first — that's the part we're least worried about.\" takes the Wednesday midday Instagram slot as the answer to all four charges at once.", reason:"The category is being publicly accused of price, taste, heavy processing and low protein in a single breath. Ducking that reads as a brand with no answer, so the Reel takes all four — with taste first, because it's the only one that resolves on tasting. Every retail figure stays internal per the audience-outsider rule: the customer hears the objection and then sees the pour. Kiki Milk posture — lay out the shortcut, then the fix, no defensiveness, nobody named.", agent:"composer"},
-  {icon:"↑", title:"Back-to-school re-enters through the allergy desk rather than the lunchbox: \"free of the top 9 — that list is already long enough.\"", reason:"The burn corpus marks the lunchbox-cost, hectic-morning, kids'-drink-label and pack-the-lunchbox angles all spent across the JUL 27 and AUG 3 slates. Federally required food-allergy training for school food staff is in its first school year, and the families living it are doing the nurse meeting and the action-plan handoff — a different room entirely. Cofounder-sister on camera for the first-person mom POV, top-9-allergen-free framed as relief, no claim about school meal programs, no medical advice.", agent:"editor"},
-  {icon:"↑", title:"A second, quieter school brief runs the provision nobody is covering: \"one law, two sentences — and everyone only read the first one.\"", reason:"Whole milk returning to the tray is the loud half of the statute. The same law lets a school offer a nondairy beverage meeting the Secretary of Agriculture's nutritional-equivalence standard, and almost no coverage mentions it. The gap is the brief — the question a parent can actually ask, with the two or three follow-ups to bring. Willa's Kids illustrates what to look for and nothing more: no school-approved claim, no equivalence claim, no anti-dairy turn.", agent:"trend"},
-  {icon:"×", title:"The personality-led framing of the additive-loophole story as the week's anchor.", reason:"The underlying story is real and corroborated, but the specific article that framed it as a named official's unveiling returned a 403 and never surfaced in an independent search, so it could not be verified first-hand. The trend was re-anchored on two sources verified end to end and rewritten around the verified fact — the proposed rule clearing review on Jul 31, 2026 — which also keeps the lead brief off partisan framing per the political anti-pattern.", agent:"editor"},
-  {icon:"×", title:"A third consecutive lunchbox brief, this time off a dietitian's lunch-building formula.", reason:"Real, dated and inside the recency window, but it lands squarely in the pack-the-lunchbox lane the burn corpus marks spent after JUL 27 and AUG 3. The genuinely new back-to-school doors are the sleep reset and the allergen desk, and both are already briefed. A third lunchbox post would read as the engine recycling its own calendar rather than reading the week.", agent:"editor"},
-  {icon:"×", title:"The single biggest trending sound on the Aug 6 board.", reason:"It's in-window and it's number one, but it's a haircut-reveal format with no payoff structure a carton can occupy. Forcing a beverage into it is exactly the chase-don't-ride failure the Tonal Resonance Framework exists to prevent. The meme slot went instead to the sit-down documentary sound at number five, which is built on solemn setup and mundane payoff — a shape Willa's can actually fill.", agent:"pulse"},
-  {icon:"⚡", title:"The clean-label challenger's two-front move gets Saturday evening, not a lead: \"three marks on the carton, and not one of them is self-issued.\"", reason:"A peer stretched four-ingredient clean label into shelf-stable formats on Aug 7 and borrowed celebrity reach off someone else's launch on Aug 6 — two cheap levers in one week. The counter isn't matching their speed, it's the one thing that can't be borrowed: USDA Organic plus Certified Glyphosate Residue Free plus WBENC mother-founded. That's a proof post, and proof holds better on a weekend static than in a news slot.", agent:"comp"},
-  {icon:"⚡", title:"The layered strawberry matcha runs twice, deliberately, as two different objects.", reason:"The Reel rides the pour on Sat Aug 15 — one take, no voiceover, the entire retention mechanic is whether the three bands hold their line. The pin is the searchable card people save in August and cook in September, with at least a cup of Willa's Original written into the ingredient list. Same signal, two jobs: one is a format ride, the other is search. In both, the middle band is the milk, so the product does the visual work for free.", agent:"visual"},
-  {icon:"⚡", title:"Barista keeps its single coffee slot and spends it on category critique instead of a latte.", reason:"The standing cap is one latte-lane brief per two weeks and Barista already carried AUG 3. A brand-new premium cold brew tripled its lineup on Aug 4 with every can built on oat — the quietest possible proof that oat isn't the category's problem — while carrying 10 to 14 grams of sugar a can. That's the vehicle: the can picks your sugar, the glass is yours. Nobody gets named, and Barista stays inside the coffee occasion.", agent:"visual"}
+  {icon:"↑", title:"\"we've been waiting for somebody to write the test.\" opens the week Wed Aug 19 at 9am, with Christina in the first of her reserved on-camera slots.", reason:"A third-party standard for ultra-processed food is now on real packages, issued by the same body that already verifies Willa's Non-GMO — and one early mover cleared roughly 60% of its portfolio without changing an ingredient. The stance is the payload, which is the documented founder-POV exception; a faceless voiceover lands soft here. The carton answers by beat two: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Guardrails are absolute — Willa's does not carry this seal and the brief never implies otherwise, no badge-stack flex, no politician, no 'chemicals'.", agent:"trend"},
+  {icon:"↑", title:"\"the recipe came from a kitchen. the carton was the only new part.\" takes the Wednesday midday Instagram slot as a one-take answer, not an argument.", reason:"A national player left the ready-to-drink oat aisle citing lack of demand, and that fact stays entirely internal per the audience-outsider rule. What it changes is posture: confidence now outperforms commentary, so the Reel answers the plainest possible question — why do you make this at all — in one continuous handheld take beside the lineup. Ghia's founder warmth crossed with a co-founder-letter register, unpolished, no manifesto. Nothing about demand, shelf space, forecasts or the category's health, no identifiable retailer signage, and no century-gap heritage framing, which is spent.", agent:"composer"},
+  {icon:"↑", title:"The parenting slot answers the oat question before the law does: \"you shouldn't have to read a carton twice.\"", reason:"A House bill would replace 'wheat' in the major-allergen definition with 'gluten-containing grain' and name oats outright, which turns a quiet parent question into printed type. Willa's answers now, while it is a choice — Kids is free of the top nine major allergens, 8g protein, plant-based calcium, DHA, 100 out of 100 on the Clean Label App, glossed in one line. Cofounder-sister on camera for the first-person mom POV, Partake's unapologetic parent-first warmth, relief rather than fear. The top-nine claim belongs to Kids only, no bill reference, no medical advice, and no back-to-school door anywhere in it.", agent:"editor"},
+  {icon:"↑", title:"The kitchen-scale moment gets converted into an invitation rather than a pile-on: \"we built this carton to be checked.\"", reason:"A shopper weighed every stick in a box of butter, found all of them short, and sent an entire comment section to their kitchen scales. The story isn't the butter — it's that people have stopped taking the front of a package on faith, which is the best thing that can happen to a brand that survives being checked. So the play is generous: count them, scan it, look the glyphosate certification up yourself. Nobody gets named or alluded to, no Willa's carton goes on a scale, no certification recital, and the headline is the invitation rather than a read-the-label instruction.", agent:"pulse"},
+  {icon:"×", title:"The self-certification story returning as this week's anchor, despite a full national news cycle behind it.", reason:"The mandatory-notification proposed rule was formally published in the Federal Register on Aug 11, 2026 with a comment window open into December, and the coverage was everywhere. It still doesn't ship: the burn corpus rests the self-certification lane outright after it ran as last Monday's lead trend and drove the founder TikTok, and the only genuinely new fact this week is procedural — a docket number and an open window. Running it would put the same lane on the Category tab two Mondays running. Held as internal context in case a real new angle appears.", agent:"editor"},
+  {icon:"×", title:"The scoreboard version of the challenger's 12g-protein launch — reframed to \"protein has a return address. ours says oats.\"", reason:"A clean-label peer went national on Aug 10, 2026 with an organic multi-nut-and-legume blend at 12g protein, no gums or oils, and cane sugar on the list — with the protein coming from an added isolate rather than the plant itself. Putting 4g against 12g loses the framing and misses the point. The useful question for a shopper is whether the protein was already in the plant or added to hit a number, which Willa's answers from the groat. Nobody named, no protein-pay-up angle, no 'they finally caught up', and the line never extends to Kids, which uses organic pea protein by design.", agent:"comp"},
+  {icon:"×", title:"The single biggest challenge on the board this week by volume.", reason:"A finger-count dance trend running off a Brazilian funk track is the dominant format of the window, and it is a pure dance-and-audio challenge — no reveal, no payoff slot, nowhere for a carton to sit. Forcing a beverage into it is precisely the chase-don't-ride failure the Tonal Resonance Framework exists to prevent. The meme slots went instead to the one-word repetition format, which has a fixed four-beat escalation the product can occupy, and to the illusion-plus-proof cut, which has disbelief and receipt built into its structure.", agent:"pulse"},
+  {icon:"⚡", title:"Back-to-school is benched at zero this week — and the freshest new door found gets held rather than spent.", reason:"Back-to-school has run three straight weeks and the lunchbox, the morning, the allergy desk and the school-milk lane are all used. A state clean-label school-food law hitting its first school year surfaced in-window and is a genuinely new door, but the two label-policy cards already carrying the week do more for Willa's, and a fourth consecutive BTS week would read as the engine recycling its own calendar. It is first in line the moment a slot opens. The parenting briefs this week stand in two rooms that have nothing to do with school.", agent:"trend"},
+  {icon:"⚡", title:"The week's one indulgent slot goes to Chocolate on the croissant ice cream sandwich pin — with the croissant itself named dairy-free in the list.", reason:"The two-ingredient build is everywhere in dessert content right now and the whole format lives or dies on what's inside it, which nobody has claimed with a clean ingredient list. Chocolate is structural here rather than a cameo: at least a cup churned into the base, real cacao, coconut sugar already in the carton, Good Food Awards Best Beverage as the quiet proof. The no-dairy rule reaches the pastry too, so the pin names a plant-based croissant and coconut cream for body. Pinterest is a search surface, so the title is literal and the cut cross-section is the hero.", agent:"visual"},
+  {icon:"⚡", title:"Repetition gets its own object: \"kinda chic that the only sugar in it came from the oats.\"", reason:"The sugar truth is the least-repeated core fact in the library and the one longtime followers still forget, so it gets a post of its own instead of a clause inside somebody else's caption. The format carrying it is the quiet-flex text post — a preference stated calmly, called chic, and left to stand with no punchline and no self-deprecation, which is the closest thing on the feed to Willa's actual register. One line of type, one carton, no second sentence. No ingredient count, no read-the-label line, and no wink hard enough to turn it into a joke.", agent:"hook"}
 ];
 
 
@@ -1157,11 +1153,11 @@ const INTEGRATIONS = [
 
 // ─── Revenue attribution ─────────────────────────────────
 const REVENUE_IMPACT = {
-  total:21460,
-  lift:58,
-  sessions:1794,
-  topRoiFormat:"Clean-label recipe ride with the ingredient list in the caption (peaked AUG 3 – AUG 9)",
-  topRoiPerBrief:2380,
+  total:23180,
+  lift:63,
+  sessions:1952,
+  topRoiFormat:"Layered drink build with the milk as the visible middle band (peaked AUG 10 – AUG 16)",
+  topRoiPerBrief:2610,
   source:"Shopify + Klaviyo"
 };
 
@@ -1169,64 +1165,34 @@ const AGENT_BY_ID = Object.fromEntries(AGENTS.map(a=>[a.id,a]));
 
 // ─── Brief ↔ source links (the threading) ─────────────────
 const BRIEF_LINKS = {
-  "AUG10-TT-1":{
+  "AUG17-TT-1":{
     trends:[
       "T-1",
-      "T-2"
-    ],
-    pulse:[],
-    comps:[]
-  },
-  "AUG10-IG-R1":{
-    trends:[
-      "T-3",
-      "T-5"
-    ],
-    pulse:[
-      "CP-8"
-    ],
-    comps:[
-      "C-3"
-    ]
-  },
-  "AUG10-PIN-1":{
-    trends:[],
-    pulse:[
-      "CP-5"
-    ],
-    comps:[]
-  },
-  "AUG10-TT-2":{
-    trends:[],
-    pulse:[
-      "CP-1"
-    ],
-    comps:[]
-  },
-  "AUG10-IG-R2":{
-    trends:[
-      "T-7"
-    ],
-    pulse:[],
-    comps:[]
-  },
-  "AUG10-IG-F1":{
-    trends:[
-      "T-4"
+      "T-8"
     ],
     pulse:[],
     comps:[
       "C-3"
     ]
   },
-  "AUG10-TT-3":{
+  "AUG17-IG-R1":{
+    trends:[
+      "T-4",
+      "T-10"
+    ],
+    pulse:[],
+    comps:[
+      "C-1"
+    ]
+  },
+  "AUG17-PIN-1":{
     trends:[],
     pulse:[
-      "CP-7"
+      "CP-4"
     ],
     comps:[]
   },
-  "AUG10-IG-R3":{
+  "AUG17-IG-F1":{
     trends:[
       "T-6",
       "T-7"
@@ -1234,50 +1200,89 @@ const BRIEF_LINKS = {
     pulse:[],
     comps:[]
   },
-  "AUG10-PIN-2":{
+  "AUG17-TT-2":{
     trends:[],
     pulse:[
-      "CP-4"
+      "CP-1"
+    ],
+    comps:[
+      "C-2"
+    ]
+  },
+  "AUG17-IG-R2":{
+    trends:[],
+    pulse:[
+      "CP-3"
     ],
     comps:[]
   },
-  "AUG10-TT-4":{
+  "AUG17-TT-3":{
     trends:[
-      "T-10",
-      "T-3"
+      "T-5"
     ],
     pulse:[],
     comps:[
-      "C-4"
+      "C-2"
     ]
   },
-  "AUG10-TT-5":{
+  "AUG17-TT-4":{
+    trends:[
+      "T-1"
+    ],
+    pulse:[
+      "CP-7"
+    ],
+    comps:[]
+  },
+  "AUG17-IG-R3":{
+    trends:[
+      "T-2"
+    ],
+    pulse:[],
+    comps:[]
+  },
+  "AUG17-PIN-2":{
+    trends:[
+      "T-7",
+      "T-6"
+    ],
+    pulse:[],
+    comps:[]
+  },
+  "AUG17-TT-5":{
     trends:[],
     pulse:[
-      "CP-6",
       "CP-8"
     ],
     comps:[]
   },
-  "AUG10-IG-R4":{
+  "AUG17-IG-R4":{
     trends:[],
     pulse:[
-      "CP-4"
+      "CP-10"
     ],
     comps:[]
   },
-  "AUG10-PIN-3":{
+  "AUG17-IG-F2":{
     trends:[
-      "T-8"
+      "T-3",
+      "T-1"
     ],
     pulse:[],
     comps:[
-      "C-1"
+      "C-3"
     ]
   },
-  "AUG10-IG-F2":{
+  "AUG17-TT-6":{
+    trends:[],
+    pulse:[
+      "CP-5"
+    ],
+    comps:[]
+  },
+  "AUG17-IG-R5":{
     trends:[
-      "T-9"
+      "T-6"
     ],
     pulse:[
       "CP-9"
@@ -1286,18 +1291,12 @@ const BRIEF_LINKS = {
       "C-2"
     ]
   },
-  "AUG10-TT-6":{
-    trends:[],
-    pulse:[
-      "CP-3",
-      "CP-2"
+  "AUG17-PIN-3":{
+    trends:[
+      "T-8"
     ],
-    comps:[]
-  },
-  "AUG10-IG-R5":{
-    trends:[],
     pulse:[
-      "CP-10"
+      "CP-6"
     ],
     comps:[]
   }
@@ -1307,52 +1306,52 @@ const BRIEF_LINKS = {
 
 // ─── Paid Amplify Plans (Paid Media Planner output) ──────
 const AMPLIFY_PLANS = {
-  "AUG10-IG-R4":{
-    headline:"The layered strawberry matcha pour — the format doing the work, with the milk as the middle band",
-    totalBudget:400,
-    testWindow:"6 days (Sat Aug 15 → Thu Aug 20)",
+  "AUG17-IG-R1":{
+    headline:"Why we make this at all — the founder answer that never mentions the aisle",
+    why:"This is the largest budget on the board, and it is deliberately behind warmth rather than argument. The Aug 10 – Aug 16 week showed that a position travels well among people who already know the brand and lands soft on people who do not, while a plainly-shot human answer travels in both directions. What this buys is simple: someone who has never heard of Willa's meets a real person explaining why she makes this, in one unbroken take, with the four-ingredient reason arriving in the second sentence. Nothing in the copy or the targeting touches the category's health, anyone's sales, or the fact that a larger company just walked away — that context is why the post exists and it stays entirely on our side of the wall.",
+    totalBudget:420,
+    testWindow:"6 days (Wed Aug 19 → Mon Aug 24)",
+    objective:"Profile visits + Saves",
+    guardrail:"Auto-pause if sentiment falls below 0.90, or on any comment thread that pulls the post into category-decline or is-oat-milk-over talk — the entire value of this brief is that it never argues, and a defensive comment section makes the spend the problem. Also pause if CPM clears $10.",
+    placements:[
+      {platform:"Meta", format:"Reels + Stories, Advantage+ placements", budget:280, reach:"~24-32K reach", expectedReach:"~24-32K reach", audience:"Cold interest — clean label, organic grocery, ingredient-first shoppers, women 28-48, US; plus warm retargeting of 90-day site visitors", lookalike:"1% LAL of purchasers", note:"In plain terms: this is the introduction post. Most of the money is on people who have never met the brand, because a founder saying why she makes something is the cheapest trust the engine can buy."},
+      {platform:"TikTok", format:"In-feed Spark Ad", budget:140, reach:"Cold + warm", expectedReach:"Cold + warm", audience:"Small-brand founders, clean label, grocery hauls, 25-45", note:"Spark the organic post rather than a cut-down. The comments underneath a founder answer are part of what makes it credible, and a fresh ad upload throws them away."}
+    ]
+  },
+  "AUG17-IG-R3":{
+    headline:"The oats question parents already ask — answered plainly, while it is still a choice",
+    why:"Parents have been quietly asking whether oat milk is genuinely safe for their kid for years, and that question is about to be printed on packaging across the country. Getting there first is worth real money for a narrow window, because the answer is short and Willa's Kids actually has it: free of the top 9 allergens, 8g protein, plant-based calcium and DHA, and a perfect 100 on the label-scanning app parents already use. The Aug 10 – Aug 16 week's highest sentiment came from the parenting brief that led with relief rather than alarm, and the spend here is tuned to protect exactly that. Modest budget, tight interest targeting, short flight — this is about being findable at the moment the question gets asked, not about scale.",
+    totalBudget:280,
+    testWindow:"5 days (Fri Aug 21 → Tue Aug 25)",
     objective:"Saves + Link taps",
-    guardrail:"Auto-pause if the 3-second view rate drops under 45% — this brief lives or dies on whether the bands hold in the first beat, and a soft hook here means the creative is wrong, not the audience. Also pause if CPM clears $9.",
+    guardrail:"Auto-pause immediately on any comment reading the post as allergy or medical advice, and pause if sentiment dips below 0.92 — the bar is higher here than anywhere else this week. Interest targeting only; no health-condition audiences, which Meta restricts and which would be the wrong door regardless.",
     placements:[
-      {platform:"Meta", format:"Reels + Stories, Advantage+ placements", budget:240, reach:"~26-36K reach", expectedReach:"~26-36K reach", audience:"Dairy-free drink builds, matcha, at-home cafe, women 24-40, US", lookalike:"1% LAL of IG savers + recipe-pin engagers", note:"In plain terms: this is the week's money format. The AUG 3 results say a useful build now earns more per dollar than a stance post, so it gets the biggest share."},
-      {platform:"TikTok", format:"In-feed Spark Ad", budget:160, reach:"Cold reach", expectedReach:"Cold reach", audience:"Strawberry matcha, layered drinks, dairy-free swaps", note:"Cold audiences meet the brand through a drink they already want to make. Spark the organic post rather than a cut-down — the comments are part of the proof."}
-    ],
-    why:"Recipe posts are the one format where paid reliably beats organic for Willa's, because the save is the conversion and saves keep compounding after the spend stops. This is the week's largest budget for that reason — put it behind the pour, not the personality, and let the middle band do the selling."
+      {platform:"Meta", format:"Reels + Stories", budget:280, reach:"~19-26K reach", expectedReach:"~19-26K reach", audience:"Parents of kids 2-10, allergen-free cooking, kids' nutrition, label-scanning app users, US", lookalike:"1% LAL of Kids purchasers", note:"What this means for you: no TikTok split on this one. The parent who reads a label twice and still isn't sure is on Instagram, and splitting a small budget across two platforms would make it invisible on both."}
+    ]
   },
-  "AUG10-IG-R1":{
-    headline:"Four objections, one honest answer — taste first, then the pour that backs it up",
-    totalBudget:300,
-    testWindow:"5 days (Wed Aug 12 → Sun Aug 16)",
-    objective:"Saves + Profile visits",
-    guardrail:"Auto-pause if sentiment falls below 0.85 or if negative feedback (hide/report) clears 0.08%. This is a confidence play — the moment comments read it as defensive, the spend is making the problem louder, so pull it and let the organic post stand.",
-    placements:[
-      {platform:"Meta", format:"Reels", budget:200, reach:"~18-25K reach", expectedReach:"~18-25K reach", audience:"Warm — existing followers, site visitors, IG engagers 90d", lookalike:"1% LAL of purchasers", note:"Warm audiences carry a position better than cold ones. Someone who has never met the brand should meet it through a drink, not through an argument."},
-      {platform:"TikTok", format:"In-feed Spark Ad", budget:100, reach:"Warm + retargeting", expectedReach:"Warm + retargeting", audience:"Video viewers 75%+ and profile visitors, last 30 days", note:"Retargeting only. If it needs cold spend to travel, the taste beat isn't landing in the first three seconds and the fix is the edit, not the budget."}
-    ],
-    why:"This is the answer to the loudest attack on the category in three years, so it needs to reach people who are not already followers — that is what the cold split buys. Fund it only after the organic save-rate clears the owned average; if the argument does not land unpaid, more money will not fix the argument."
-  },
-  "AUG10-IG-R2":{
-    headline:"The allergy-desk answer — Willa's Kids for the parent filling out the form, not the cafeteria",
+  "AUG17-TT-4":{
+    headline:"Count them, scan it, look it up — the open-door dare",
+    why:"A shopper caught a household brand short-weighting every stick in the box on Aug 11 and sent a whole comment section to their kitchen scales. That instinct is the best thing that has happened to brands that survive being checked, and the only correct response is to invite it rather than comment on it. Paid works here because the post is generous instead of defensive — it names nobody, accuses nobody, and simply opens the door. The Aug 10 – Aug 16 read is that the non-defensive register is what holds sentiment when a trust conversation gets loud, so the spend goes wide on TikTok where the original moment lives and stays small on Meta where the audience already trusts us.",
     totalBudget:230,
-    testWindow:"4 days (Thu Aug 13 → Sun Aug 16)",
-    objective:"Saves + Link taps",
-    guardrail:"Auto-pause immediately on any comment reading the post as medical or allergy-management advice, and pause if sentiment dips below 0.90 — the bar is higher here than anywhere else this week. Interest targeting only; no health-condition audiences, which Meta restricts and which would be the wrong door regardless.",
+    testWindow:"4 days (Fri Aug 21 → Mon Aug 24)",
+    objective:"Saves + Profile visits",
+    guardrail:"Auto-pause if the comment section turns into a pile-on against any named brand — the moment this reads as punching down, the generosity that makes it work is gone. Also pause if sentiment falls below 0.90 or if negative feedback clears 0.08%.",
     placements:[
-      {platform:"Meta", format:"Reels + Stories", budget:230, reach:"~16-22K reach", expectedReach:"~16-22K reach", audience:"Parents of school-age kids, allergen-free cooking, kids' nutrition, US", lookalike:"1% LAL of Kids purchasers", note:"What this means for you: spend runs only while districts are still doing first-week paperwork, then stops. Nothing about this post gets better with a longer flight."}
-    ],
-    why:"Allergy parents are a small audience with unusually high intent and they are searching in a narrow two-week window before the first bell. Modest budget, tight targeting, short flight — this is about being findable at the exact moment the form is on the kitchen counter, not about scale."
+      {platform:"TikTok", format:"In-feed Spark Ad", budget:160, reach:"Cold reach", expectedReach:"Cold reach", audience:"Label-checking, grocery-price watching, food transparency, 25-45, US", note:"Cold on purpose. The people who spent the week weighing things in their own kitchens have no idea this brand exists, and they are the single most receptive audience on the board right now."},
+      {platform:"Meta", format:"Reels", budget:70, reach:"Warm", expectedReach:"Warm", audience:"Existing followers, email subscribers, 90-day engagers", note:"Small and warm. Followers do not need to be dared — they need to see the brand say it out loud so they can send it to someone else."}
+    ]
   },
-  "AUG10-TT-1":{
-    headline:"The self-certification answer — the shortest list on the shelf, said calmly",
+  "AUG17-TT-1":{
+    headline:"Someone finally wrote the test down — the calm stance, deliberately under-funded",
+    why:"The smallest budget of the four, on purpose. For three years ultra-processed has been an argument with no scoreboard, and a third party has now written the bar down and started testing products against it. That is worth a founder saying so calmly — but a stance post is the cheapest thing in the engine to over-fund and the fastest to start looking like a campaign. The payoff here is profile visits and trust rather than immediate saves. It also carries the tightest copy risk of the week: the seal is not on the Willa's carton, and the post cannot say or imply otherwise, which makes the comment section the real thing to watch rather than the cost per view.",
     totalBudget:170,
-    testWindow:"4 days (Wed Aug 12 → Sat Aug 15)",
+    testWindow:"4 days (Wed Aug 19 → Sat Aug 22)",
     objective:"Profile visits",
-    guardrail:"Auto-pause if the comment section turns political in any direction, or if sentiment falls below 0.88. The post works because it never names a person or a party — paid reach pushes it to people with no context, which is exactly where that framing breaks.",
+    guardrail:"Auto-pause on any comment reading the post as a claim that Willa's carries the new mark — that is the one failure mode and it is not fixable with a reply. Also pause if the thread turns political in any direction or if sentiment falls below 0.88.",
     placements:[
-      {platform:"TikTok", format:"In-feed Spark Ad", budget:110, reach:"Cold + warm", expectedReach:"Cold + warm", audience:"Clean label, food transparency, ingredient-first shoppers 28-50", note:"Founder credibility is the payload — this is one of two briefs all week where a face outperforms hands."},
-      {platform:"Meta", format:"Reels", budget:60, reach:"Warm", expectedReach:"Warm", audience:"Existing followers + email subscribers", note:"Small deliberately. A stance post is the cheapest thing to over-fund and the fastest thing to make feel like a campaign."}
-    ],
-    why:"The smallest budget on the board on purpose. This is a founder-credibility post, and the payoff is profile visits and trust rather than immediate saves — boosting it hard would make a calm stance look like an ad campaign and undercut the thing that makes it work."
+      {platform:"TikTok", format:"In-feed Spark Ad", budget:110, reach:"Cold + warm", expectedReach:"Cold + warm", audience:"Clean label, food transparency, ingredient-first shoppers 28-50, US", note:"Founder credibility is the payload — this is one of only two briefs all week where a face outperforms hands."},
+      {platform:"Meta", format:"Reels", budget:60, reach:"Warm", expectedReach:"Warm", audience:"Existing followers + email subscribers", note:"Deliberately tiny. If this needs a budget to travel, the stance is not landing and more money will make that louder, not better."}
+    ]
   }
 };
 // No amplify for: MAY25-IG-R2 (seed-oil-free Christina moment — quiet authority, organic-first), MAY25-TT-2 (Shaved Fruit — viral format compounds organically), MAY25-TT-3 (Will-it-survive Barista flip — Pattern 03 plays better organic), MAY25-IG-R3 (long-weekend pour heritage — earned authenticity, Bleachers audio bed), MAY25-IG-R4 (Four Seasons S2 cultural-stitch — tonal-only, no name-check makes paid suspicious), MAY25-TT-4 (AI Food meme reveal — meme-payload plays better organic), MAY25-IG-F1 (state-by-state cert carousel — receipt-led editorial wins as earned media), MAY25-IG-R5 (cert moat Christina reveal — quiet posture, organic-first), MAY25-IG-F2 (back-to-school carousel — receipt-led editorial), MAY25-TT-5 / PIN-2 / PIN-3 / TT-6 / IG-F3 / TT-7 (all 6 evergreens — Pinterest SEO + at-shelf + heritage carousel all compound organically).// No amplify for: MAY11-TT-2 (Mother's Day retrospective — organic-first), MAY11-TT-3 (meme-payload — test ad only if organic climbs), MAY11-PIN-1 / PIN-2 / PIN-3 (Pinterest SEO compounds organically — autobiography wordplay pin earns its share rate on type alone), MAY11-TT-4 (The Bear-coded — earned authenticity wins without paid), MAY11-TT-5 (iced café crème — recipe SEO compounds), MAY11-IG-R5 (Saturday heritage — earned-authenticity), MAY11-TT-7 (mom-bag relatable confession — Pattern 03 plays better organic; Partake-style content compounds on saves), MAY11-IG-F2 (category data carousel — earned-media), MAY11-IG-R6 (real-food anti-isolate — receipt-led category POV).
@@ -1375,32 +1374,33 @@ const BRIEF_BY_ID = Object.fromEntries(BRIEFS.map(b=>[b.id,b]));
 
 // ─── Run Log ──────────────────────────────────────────────
 const RUN_LOG = [
-  {date:"Aug 10, 2026", agent:"trend", msg:"Swept US food policy, nutrition science, plant-milk retail and clean-label brand news against an Aug 3 recency floor. Ten trends cleared. The lead candidate arrived through a paywalled outlet that could not be verified first-hand, so it was rebuilt on the underlying regulatory record rather than dropped."},
-  {date:"Aug 10, 2026", agent:"editor", msg:"Date-checked every corroborating URL before it reached a card. One additive-regulation piece came back dated Mar 17, 2025 and another clean-label distribution post dated Jul 7, 2026 — both seventeen months and five weeks outside the floor. Killed rather than propped up."},
-  {date:"Aug 10, 2026", agent:"pulse", msg:"Ran the format, food, parenting, entertainment and discourse lanes. Ten pulse signals cleared with a checkable live example each. The single biggest sound on the Aug 6 board was passed over — a haircut-reveal has no payoff structure a carton can occupy."},
-  {date:"Aug 10, 2026", agent:"comp", msg:"Logged four in-window competitive moves: an audited climate life-cycle number published Aug 4, a shelf-stable clean-label expansion Aug 7 paired with a borrowed celebrity smoothie Aug 6, a revived sweetener-labelling suit Aug 4, and an oat-based cold brew tripling its lineup Aug 4."},
-  {date:"Aug 10, 2026", agent:"editor", msg:"Rolled the burn corpus forward: the AUG 3 week's eight trends, six pulse signals, sixteen hooks and sixteen concepts are burned, with JUL 27 and JUL 20 held as buffer. Back-to-school was flagged as needing a genuinely new door — the cost, hectic-morning and lunchbox angles are all spent."},
-  {date:"Aug 10, 2026", agent:"composer", msg:"Built sixteen briefs against a three-per-signal cap. Heaviest draw is two on the layered-glass drink and two on the school calendar — and each second draw takes a different shape, a pour versus a searchable recipe card, an allergy desk versus a bedtime."},
-  {date:"Aug 10, 2026", agent:"visual", msg:"Held Christina to two on-camera briefs against a cap of three — the additive stance Wed Aug 12 and the heritage cut Sun Aug 16 — and Barista to one coffee slot against the latte cap. Every Reel and TikTok carries a populated shot list for the phone mockup."},
-  {date:"Aug 10, 2026", agent:"hook", msg:"Ran every recommended hook through the wordy-is-wrong test. Four concepts were re-cut as headlines rather than descriptions, and the meme-slot payoff was shortened until it lands inside the sound's own beat instead of trailing it."},
-  {date:"Aug 10, 2026", agent:"editor", msg:"Ran the coherence map: signal caps, orphan signals, link resolution, concept-to-caption echo, script presence, dairy terms, trade-press leakage and relative-time language. Five issues found and fixed, including two percentages that had leaked out of the intel and into consumer copy."},
-  {date:"Aug 10, 2026", agent:"amb", msg:"No ambassador brief this week. The allergy-parent lane is a trust room, and a seeded creator post would read as a placement in exactly the week the brand wants to sound like a neighbour. Revisit once school-year content lands organically."},
-  {date:"Aug 10, 2026", agent:"paid", msg:"Amplification concentrated on four briefs and weighted toward the layered drink build, on the AUG 3 read that a genuinely useful recipe now out-earns a stance post on both saves and sessions. The founder stance takes the smallest spend and the tightest window."},
-  {date:"Aug 10, 2026", agent:"perf", msg:"Rolled the AUG 3 week's sixteen briefs into results. The recipe ride took reach and saves outright, ending the uncut label read's three-refresh run at the top — the first time a build has beaten a stance since the pattern started."}
+  {date:"Aug 17, 2026", agent:"trend", msg:"Swept food policy, nutrition science, plant-milk retail and clean-label brand news against an Aug 10 recency floor. Ten trends cleared. The lead is a third-party non-UPF standard that has stopped being an announcement and started appearing on real packages — issued by the same body that already verifies Willa's Non-GMO."},
+  {date:"Aug 17, 2026", agent:"editor", msg:"Ran the published-versus-covered check on every study before it reached a card. Three failed: a diet paper written up Aug 17 but published Aug 6, a science-press piece resting on a 2025 journal article, and an oat-milk feature that direct-fetch dated to Feb 1, 2022. All three read as fresh in the headline and none of them are."},
+  {date:"Aug 17, 2026", agent:"pulse", msg:"Ran the format, food, parenting, entertainment and discourse lanes and cleared ten signals, each with a checkable live example. The single biggest dance of the week was passed over — it is audio and finger-counting with no reveal slot a carton can occupy, and riding it would be chasing."},
+  {date:"Aug 17, 2026", agent:"comp", msg:"Logged three in-window competitive fronts: a national player confirming Aug 11 that it has left ready-to-drink oat milk, a clean-label challenger putting a 12g-protein blend into national retail Aug 10, and a first wave of brands printing the non-UPF seal Aug 11 ahead of any federal definition."},
+  {date:"Aug 17, 2026", agent:"editor", msg:"Rolled the burn corpus forward. Back-to-school entered the week capped at two briefs and earned zero — the genuinely new door on the board was a state school-food law, and the two label-side policy signals did more for the brand. Both parenting briefs this week leave the school building entirely."},
+  {date:"Aug 17, 2026", agent:"composer", msg:"Built sixteen briefs against a three-per-signal cap. Nothing came close to the ceiling: the heaviest draw is two on the non-UPF standard, and each takes a different shape — a stance to camera Wed Aug 19 and a static carousel about proof moving back onto the box Sat Aug 22."},
+  {date:"Aug 17, 2026", agent:"visual", msg:"Spent both reserved on-camera slots on Wed Aug 19, against a cap of three — the standard stance at 9am and the why-we-make-this aisle answer at noon. Barista sits the week out entirely, which keeps the coffee slot banked. Every Reel and TikTok carries a populated shot list for the phone mockup."},
+  {date:"Aug 17, 2026", agent:"hook", msg:"Ran every recommended hook through the wordy-is-wrong test and cut three concepts back to one clean line. The one-word repeat format was shortened until the payload is literally a single syllable four times over — the version with an explanation bolted on the end tested as two posts stapled together."},
+  {date:"Aug 17, 2026", agent:"editor", msg:"Flagged and rewrote the one claim that could have sunk the lead brief: an early draft implied Willa's already carries the new non-UPF mark. It does not. Telling shoppers to look for a seal that is not on the carton is the single fastest way to lose a transparency brand its argument."},
+  {date:"Aug 17, 2026", agent:"amb", msg:"One ambassador brief this week, Sun Aug 23 — a real cart, five things someone refuses to cheap out on, Willa's fourth and never the finale. The other four have to be genuinely admired non-competing pantry brands or the list reads as a placement, and price never gets said out loud."},
+  {date:"Aug 17, 2026", agent:"paid", msg:"Amplification concentrates on four briefs and $1,100. The largest share goes to the founder answer in the aisle rather than to the stance post — on the Aug 10 – Aug 16 read that warmth out-travels argument on cold audiences, and that a calm position over-funded starts to look like a campaign."},
+  {date:"Aug 17, 2026", agent:"perf", msg:"Rolled the Aug 10 – Aug 16 briefs into results. A build took reach and saves outright for the second refresh running, and the pin posted the lowest reach and highest save-rate of the week for the third. Both findings are already routed into this week's slate."}
 ];
 
 
 // ─── Killed signals (the ones we said no to) ──────────────
 const KILLED = [
-  {signal:"The personality-led 'unveiling' framing of the food-additive loophole as the anchor for the week's lead trend", reason:"The story is real and corroborated, but the specific article returned a 403 and never surfaced in an independent search, so it could not be verified first-hand. Re-anchored on two sources verified end to end and rewritten around the verified fact — the proposed rule clearing review on Jul 31, 2026 — which also keeps the lead off partisan framing."},
-  {signal:"A corroborating additive-regulation piece from a grocery trade outlet", reason:"Fetched and confirmed dated March 17, 2025 — seventeen months stale. It covers the original directive, not this week's clearance, and would have framed a 2025 announcement as current news."},
-  {signal:"The 'subtitle gratitude' Instagram format from a trends tracker", reason:"Two problems. The tracker's actual last-updated date is Jul 30, 2026, outside the window — and the format as described did not exist on the page. Replaced with the verified 'hallelujah' gratitude list, which is a better fit for the brand's dry register anyway."},
-  {signal:"The escalating-grievance-list sound", reason:"Still circulating, but every dated article anchoring it is Jun 17, 2026 — seven weeks outside the floor. The only in-window-safe link would be a permanent hashtag page, which proves the tag exists but not that the format is live. Killed rather than propped up."},
-  {signal:"The number-one trending sound on the Aug 6 board", reason:"In-window and the biggest sound on the chart, but it's a haircut-reveal format with no payoff structure a carton can occupy. Forcing a beverage into it is the chase-don't-ride failure the Tonal Resonance Framework guards against."},
-  {signal:"A registered dietitian's back-to-school lunch-building formula", reason:"Real, dated and in-window, but it sits in the pack-the-lunchbox lane the burn corpus marks spent after JUL 27 and AUG 3. The new doors this week are the sleep reset and the allergen desk; a third lunchbox card would read as recycling the calendar."},
-  {signal:"The 71% viral-purchase influence stat as a standalone trend", reason:"Verified, but the same syndicated article already anchors two Pulse recipe cards. Running it on the Category tab as well would put one article on both tabs — exactly what the Pulse/Trends separation rule exists to prevent. It survives as supporting context inside the single-serve dessert card."},
-  {signal:"The cafe-at-home cold foam and syrup-layering drink build", reason:"A named, in-window viral format and a natural Barista showcase, but Barista already carried AUG 3 and the standing cap is one latte-lane brief per two weeks. Passed over for the layered strawberry matcha, which is milk-forward without spending the coffee slot."},
-  {signal:"A plant-milk manufacturing plant closure and layoffs", reason:"The event falls inside the window but every outlet covering it published in May 2026, so it fails the recency floor outright. A layoffs story is also not a lane Willa's should be visibly working."}
+  {signal:"The mandatory food-additive notification rule formally publishing with a public comment window open into December", reason:"Real, in-window and covered by every national outlet. Killed anyway: the burn corpus rests the self-certification lane outright after it ran as last Monday's lead trend and drove the founder TikTok, and the only genuinely new fact this week is procedural — a docket number and an open window. Running it puts the same lane on the Category tab two Mondays running. Held as internal context."},
+  {signal:"A state clean-label school-food law reaching its first school year", reason:"A genuinely fresh back-to-school door — not the lunchbox, the morning, the allergy desk or the school-milk provision. Held rather than shipped, because back-to-school has run three straight weeks and the two label-policy cards already carrying the week do more for Willa's. First candidate to promote the moment a slot opens."},
+  {signal:"The blend-frozen-produce-into-ice-cream trend", reason:"In-window and a natural assist for an oat creamer, but the mechanic is the same one already burned twice — watermelon ice cream in mid-July and frozen-fruit shaved ice the week after. A new frozen treat has to be a different format, not a different fruit. Replaced with the croissant ice cream sandwich, which is a bakery build and a different shape entirely."},
+  {signal:"The $22 celebrity smoothie recreated at home", reason:"In-window and a clean ride for a milk-base cutaway, but this exact smoothie was already the second source behind last Monday's borrowed-celebrity-reach card. Same event, second week — a hard repeat."},
+  {signal:"A heart surgeon's viral claim that swapping cooking oils cuts heart attacks 30%", reason:"A textbook single-number overclaim and a real rebuttal candidate, killed on two grounds. The seed-oil lane is rested pending genuinely new federal action, and Willa's Barista carries organic high-oleic sunflower oil — so a card headlined on oils drags the team toward the one ingredient conversation where Willa's has to caveat itself. Replaced with a restriction-framing rebuttal that carries no ingredient exposure."},
+  {signal:"The 'cortisol cocktail' as this week's misinformation rebuttal", reason:"Checked the full coverage history. Every substantive debunk is dated between 2024 and July 2026, and the only item inside the window is a product-promotion press release, which is marketing rather than a news hook. Fails the recency floor."},
+  {signal:"A vegan-diet energy-density study covered by the science press on Aug 17, 2026", reason:"The covered-versus-published trap. The journal publication date is Aug 6, 2026 — outside the Aug 10–17 window. The Aug 17 write-up is coverage of a paper that had already run, and the engine cites publication dates, not pickup dates."},
+  {signal:"Two nutrition papers resurfacing inside fresh science-press write-ups", reason:"Same trap, further gone. An orange-juice gene-expression study behind an Aug 13, 2026 article is dated 2025, and an oat-milk avenanthramide piece that looked like a perfect fit turned out on direct fetch to be published Feb 1, 2022. Four years stale. Neither is an in-window signal no matter how current the article carrying it looks."},
+  {signal:"The single biggest dance challenge of the week by volume", reason:"A finger-count trend on a Brazilian funk track, dominant across every roundup, and a pure dance-and-audio format with no reveal and no payoff slot a carton can occupy. Riding it would be chasing rather than riding, which is exactly what the Tonal Resonance Framework guards against."},
+  {signal:"The weekly peer-brand humor scan", reason:"No card shipped from this lane again. Instagram fetches returned login walls, and two guessed handles turned out to belong to unrelated accounts — not a single dated post permalink could be verified, and the never-fabricate rule outranks the lane. The reliable path remains creative trade press, and nothing surfaced there inside the window."}
 ];
 
 
@@ -1413,22 +1413,22 @@ const KILLED = [
 // (mom-activist + family-moment DNA); even then, captions lean third-person
 // so the post could be written by anyone on the team.
 const CAPTION_VARIANTS = {
-  "AUG10-TT-1":{direct:"Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Four things, and not one of them needed anyone's permission.\n\nIt's worth saying plainly, because of how the system has actually worked. A company could bring in its own hand-picked scientists, decide a brand-new ingredient was safe, put it in food, and never file a word with the agency or tell the public. On Jul 31, 2026 the rule that would close that route cleared its final review — new ingredients would have to be filed, listed publicly, and named for what they're for.\n\nWilla's never used that door. Organic. The whole oat groat — the entire kernel, bran and germ included — so the fiber and the protein stay in the carton instead of getting filtered out. 1g sugar, from the oats. 4g+ protein. 2g+ prebiotic fiber.\n\nAnd nothing here is certified by us. Certified glyphosate-free, tested every lot, by an outside lab whose whole job is to check.\n\nNothing self-certified. Nothing to disclose. 🌾", warm:"Oats, water, vanilla, salt. That's been the whole list since Willa's launched in 2021, and it's the least interesting thing about us — which is sort of the point. 🌾\n\nTurns out a company can bring in its own scientists, decide a brand-new ingredient is safe, and never mention it to anybody. On Jul 31, 2026 the rule closing that route cleared its last review.\n\nWe've just never had anything worth not mentioning. Organic, certified glyphosate-free, tested every lot.", punchy:"Four things in the carton. Zero of them self-certified. 🌾"},
-  "AUG10-IG-R1":{direct:"Watery. Over-processed. Barely any protein. The complaints about plant milk are fair — they're just not about this carton. 🥛\n\nWilla's Original is four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt. It pours rich and smooth because it's made from the whole oat, not oat syrup. 4g+ protein, 2g+ prebiotic fiber — the kind that feeds your gut — and 1g of sugar, from the oats, nothing added.\n\nThe shortcut most of the category takes: filter out the bran and germ, then process the starch into sugar. That's the fiber AND the protein, gone before it ever reaches the carton. Willa's keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nAnd if a carton's going to take up fridge space, it should earn it.\n\nTaste it first — that's the part we're least worried about.", warm:"Everybody's got a plant milk they bought once and never finished. 🥛 We took that personally.\n\nWilla's Original is four organic ingredients, made from the whole oat instead of oat syrup — which is why it pours rich and smooth instead of thin. 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that comes from the oats.\n\nShhh… taste is the objection we're least worried about.", punchy:"Watery, over-processed, barely any protein — three fair complaints, none of them ours. Willa's Original: four organic ingredients, 4g+ protein, 1g sugar. 🥛"},
-  "AUG10-PIN-1":{direct:"Cake for one, and no pan to wash. 🍫 A whole chocolate cake that happens to serve exactly one person — baked in a cup, soaked while it's still warm, and rich enough that nobody asks what's missing.\n\nWilla's Organic Chocolate Oat Milk is made with real cacao and five simple organic ingredients — rich and creamy enough to carry a bake, with less sugar and more protein and fiber per cup. It won Best Beverage at the Good Food Awards. 🥛\n\nIngredients\n- 1 cup Willa's Organic Chocolate Oat Milk (1/2 for the batter, 1/2 warmed for the soak)\n- 3/4 cup oat flour\n- 2 tbsp organic cacao powder\n- 2 tbsp maple syrup\n- 1 tsp baking powder\n- pinch of sea salt\n- 2 tbsp coconut cream, whipped, to finish", warm:"Serves one. That's not a limitation, shhh… that's the entire idea. 🍫 Chocolate cake baked in a cup and soaked in the oat milk that won Best Beverage — real cacao, five organic ingredients, no cane sugar anywhere in it.\n\nIngredients\n- 1 cup Willa's Organic Chocolate Oat Milk\n- 3/4 cup oat flour\n- 2 tbsp organic cacao powder\n- 2 tbsp maple syrup\n- 1 tsp baking powder\n- pinch of sea salt\n- 2 tbsp coconut cream, whipped, to finish", punchy:"A whole chocolate cake that happens to serve one. 🍫 The pan was never the point."},
-  "AUG10-TT-2":{direct:"Twenty years of the exact same breakfast, and only one thing on the table ever needed updating. 🥣\n\nSame bowl. The milk finally caught up. Willa's Original is four things: organic whole grain oats, filtered water, organic vanilla extract, sea salt.\n\n1g of sugar, and all of it from the oats. 4g+ protein and 2g+ prebiotic fiber — the kind that supports gut and heart health — because we use the whole oat groat, the whole oat kernel the way steel-cut oats do. Most oat milks filter out the bran and germ and process the starch into sugar, which throws away the fiber AND the protein. We kept both.\n\nCertified organic. Certified glyphosate-free, tested every lot. Nothing here you didn't already know the name of.\n\nReal food, passed down. Reinvented forward. 🌾", warm:"Same spoon, same spot at the table, same bowl you've had since you were seven. 🥣\n\nThe breakfast never needed fixing — the carton beside it did. Four organic ingredients, 1g of sugar and every gram of it from the oats.\n\nShhh… it's better than you remember.", punchy:"Same bowl. The milk finally caught up. Four ingredients. 🥣"},
-  "AUG10-IG-R2":{direct:"There's a version of back-to-school that happens before the first bell — the meeting, the forms, the folder you hand to someone else and hope they actually read. 📋\n\nWilla's Kids is free of the top 9 allergens — that list is already long enough. No dairy, soy, wheat, egg, peanut, tree nut, fish, shellfish or sesame. 8g of protein, the same as dairy. Plant-based calcium, and plant-based DHA — the omega-3 most kids don't get enough of.\n\nParents asked us to make a kids' product. We listened. This turned out to be the part they asked about first.\n\nTo every family filling out forms this August: we see you. 🤎", warm:"Some back-to-school lists are a lot longer than others. 📋\n\nWilla's Kids is free of the top 9 allergens — and shhh… it's the one line that doesn't need a paragraph after it.\n\n8g of protein, plant-based calcium and DHA, and a cup they actually finish. 🤎", punchy:"Free of the top 9 allergens. That list is already long enough. 🤎"},
-  "AUG10-IG-F1":{direct:"Willa's Original is sweet because it's made of oats. 1g of sugar, none of it added — no sweetener to explain, nothing on the carton that needs a footnote. 🌾\n\nSweet was never the problem. Added was. You can spend a whole month with nothing allowed to taste good and land exactly where you started, because \"sweet\" isn't a thing you can quit — it's a question of where it came from. A syrup stirred into a drink, or a whole oat that already tasted like that.\n\nFour organic ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. It's rich and smooth because the whole oat is still in there. Most oat milks filter out the fiber and the protein — we keep both, which is why there's 4g+ protein and 2g+ prebiotic fiber in every cup, the kind of fiber that supports gut and heart health.", warm:"You don't have to quit sweet. 🌾 That was never the part that mattered.\n\nWilla's Original is sweet because it's made of oats — 1g of sugar, nothing added, no footnote required. Four organic ingredients, rich and smooth, and it still tastes like something you'd actually want in the morning.", punchy:"Sweet was never the problem. Added was. Willa's Original: 1g of sugar, straight from the oats. 🌾"},
-  "AUG10-TT-3":{direct:"A warm mug of Willa's Kids is the last thing that happens before the screens go off. 🌙\n\nPediatricians were on the local news the first week of August with the same advice: start the school-year sleep shift now, screens away 30 to 60 minutes before bed, a calm last few minutes before lights-out. Most of that same advice is really about the morning wake-up.\n\nFifteen minutes isn't much of a plan. It's enough for a mug, a lamp turned low, and the part of the day that isn't rushing anywhere.\n\nWilla's Kids has 8g of protein — the same as dairy — and none of the top 9 allergens. Organic whole oats, plant-based calcium, and DHA, the omega-3 most kids don't get enough of.\n\nMornings get all the back-to-school content. This is the better half.", warm:"Pediatricians were on the local news the first week of August with the same advice: screens away, calm and early. 🌙 So we gave those last fifteen minutes something to be about.\n\nA warm mug of Willa's Kids, a lamp turned low, and the slowest part of the day finally showing up. 8g of protein — the same as dairy — and none of the top 9 allergens.\n\nMornings get all the back-to-school content. This is the better half.", punchy:"Fifteen minutes isn't much of a plan. It's enough for a warm mug of Willa's Kids. 🌙"},
-  "AUG10-IG-R3":{direct:"There's a conversation you're allowed to start at the school office this year — and almost nobody knows it's on the table. 🥛\n\nWilla's Kids exists because parents asked us for it. 8g of protein, the same as dairy. Plant-based calcium, vitamin D, and DHA omega-3s from algae. Free of the top 9 allergens — no nut, soy, gluten, dairy or sesame. 6g of sugar, from organic maple syrup. Yuka, the app that scans groceries and scores the ingredients, gives it 100 out of 100.\n\nHere's the part that got buried. Whole milk comes back to school trays for the 2026–27 school year; that rule took effect Jun 8, 2026. The same law also allows a school to offer a nondairy beverage that meets the nutrition standard set by the Secretary of Agriculture — the federal official who writes school meal rules. One law, two sentences — and everyone only read the first one.\n\nNothing against the milk on the tray. This is about the kid who can't drink it.\n\nWhether a specific carton clears a specific district's standard is that district's call. The asking is yours. Three questions worth bringing:\n\n1. Does our school offer a nondairy option, and which one is it?\n2. What's the request process — a form, a note, a signature?\n3. Who owns this: the food service director, or the nurse?\n\nOur cofounder walks through all three above. Ask before the first bell. 🌾", warm:"Turns out you're allowed to ask. 🥛 The same law putting whole milk back on the tray for the 2026–27 school year also lets a school offer a nondairy option that meets the federal nutrition standard. One law, two sentences — and everyone only read the first one.\n\nWilla's Kids is 8g of protein, the same as dairy, plus plant-based calcium, vitamin D, DHA omega-3s from algae, and none of the top 9 allergens.\n\nNothing against the milk on the tray. This is for the kid who can't drink it.\n\nShhh… the second sentence is the one worth reading.", punchy:"One law, two sentences — and everyone only read the first one. Ask your school about the nondairy option. Willa's Kids: 8g protein, free of the top 9 allergens. 🥛"},
-  "AUG10-PIN-2":{direct:"Three layers in one glass, and you can taste why they hold. 🍓🍵 Strawberry on the bottom, Willa's Original in the middle, matcha floating on top — pour it slow and the stripes stay put. Three layers — and the middle one has four ingredients.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1/2 cup fresh strawberries, crushed\n- 1 tsp maple syrup\n- 1 tsp ceremonial-grade matcha — the finer, less bitter grade\n- 2 tbsp hot water, whisked smooth\n- a tall glass of ice", warm:"Strawberries, ice, oat milk, matcha — in that order, and don't stir until you've looked at it. 🍓🍵 Three layers, and shhh… the middle one is the whole reason it looks like that.\n\nWilla's Original is four organic ingredients and the whole oat, so it pours creamy enough to hold its own stripe.\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1/2 cup fresh strawberries, crushed\n- 1 tsp maple syrup\n- 1 tsp ceremonial-grade matcha — the finer, less bitter grade\n- 2 tbsp hot water, whisked smooth\n- a tall glass of ice", punchy:"Three layers, and the middle one's got four ingredients. 🍓🍵"},
-  "AUG10-TT-4":{direct:"Willa's Barista is 3g of sugar — 50% less than the average barista oat milk — with no gums and no rapeseed oil. ☕️ It foams if you want it to, and over ice it just stays creamy.\n\nThe can picks your sugar. The glass is yours. That's the whole case for building iced coffee at home: about ninety seconds of work, and the sweetness is a decision instead of a spec.\n\nIngredients\n- 1 cup Willa's Barista Organic Oat Milk\n- 1/2 cup cold brew (or 1 shot espresso, cooled)\n- a tall glass of ice\n- optional: 1 tsp maple syrup — your call, and that's the point", warm:"Iced coffee, about ninety seconds, and you're the one holding the maple. ☕️\n\nWilla's Barista brings 3g of sugar — 50% less than the average barista oat milk — with no gums and no rapeseed oil, so the base you're building on is already lighter.\n\nThe can picks your sugar. The glass is yours.", punchy:"The can picks your sugar. The glass is yours. ☕️ Willa's Barista — 3g, no gums, no rapeseed oil."},
-  "AUG10-TT-5":{direct:"There's a supplement going around with liquid gold in the pitch. Its nutrient profile was built for a newborn calf. And when someone finally gathered up the studies on what it does for a grown adult's digestion, the answer came back inconclusive.\n\nWilla's Original gets read line by line, and honestly — good. Four ingredients, and the vanilla extract is the fanciest thing on there. Certified organic. Certified glyphosate-free by an outside lab, tested every lot. 1g sugar, all of it from the oats. 4g+ protein and 2g+ fiber, because we keep the whole oat kernel — bran and germ, the way steel-cut oats do — instead of filtering the protein and the fiber back out the way most oat milks do.\n\nIf it's already in your cabinet, that's your call and we're not in it. We'd only point out that one of us has to prove it — and it isn't the one making the bigger promise. 🥛", warm:"Somewhere out there a powder built for a newborn calf is being called liquid gold, and nobody has asked it for a single receipt.\n\nMeanwhile Willa's Original gets its four-line ingredient list read out loud in the aisle. Honestly? Good. Read it twice. Organic, certified glyphosate-free, tested every lot — and shhh, the vanilla extract is the fanciest thing on there. 🥛", punchy:"Built for a newborn calf. Reviewed: inconclusive. Meanwhile our four ingredients get audited in the aisle — please, read them twice. 🥛"},
-  "AUG10-IG-R4":{direct:"Three stripes, one glass — and the middle one is the milk. 🍓 Crushed strawberries at the bottom, ice, then a gentle pour so the bands hold their line, and matcha floated over the top. Pour it fast and you get pink. Pour it slow and you get the shot. 🍵\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1 cup strawberries, hulled\n- 1 tbsp maple syrup\n- 1 tsp lemon juice\n- 1 tsp matcha powder\n- 2 oz hot water\n- ice", warm:"Strawberries on the bottom, matcha on top, and the stripe in the middle doing all the work. 🍓 Pour it slow — that's the entire trick, and shhh… it's the easy part.\n\nWilla's Original is four organic ingredients and it pours bright white, so the bands actually read.\n\nIngredients\n- 1 cup Willa's Organic Oat Milk\n- 1 cup strawberries, hulled\n- 1 tbsp maple syrup\n- 1 tsp lemon juice\n- 1 tsp matcha powder\n- ice", punchy:"Strawberry matcha, three stripes, zero dairy — and the middle one's the milk. 🍓🍵"},
-  "AUG10-PIN-3":{direct:"Willa's Original is four organic ingredients and the whole oat groat — the whole oat kernel, the way steel-cut oats keep it. 🌾\n\nThat one decision is also the sustainability answer. Because the whole groat goes into the carton, there's nothing to discard: zero food waste in the process. And organic oats do quiet work while they grow — they sequester carbon, meaning they pull it out of the air and into the ground, and they leave the soil healthier for the next season.\n\nNothing left out of the oat. So nothing left over.\n\nOrganic whole grain oats, filtered water, organic vanilla, sea salt. Certified organic, certified glyphosate-free, tested every lot. 1g sugar, 4g+ protein, 2g+ prebiotic fiber.", warm:"Sustainability, itemized. 🌾 The whole oat groat goes into Willa's Original — the whole kernel, like steel-cut oats — so there's nothing left to throw away. Zero food waste, and organic oats that sequester carbon while they grow, pulling it out of the air and into the soil.\n\nThat's a lot of quiet work for four ingredients.\n\nNothing left out of the oat. So nothing left over.", punchy:"Nothing left out of the oat. So nothing left over. 🌾 Willa's Original — whole groat in, zero food waste out."},
-  "AUG10-IG-F2":{direct:"USDA Organic. Certified Glyphosate Residue Free. WBENC women-owned. Three marks on the carton, and not one of them is self-issued. 🌾\n\nOrganic is a federal standard with an audit behind it. Glyphosate Residue Free means every lot is tested for weedkiller residue before it ships. WBENC means an outside council verified the company is majority women-owned; Willa's was founded by a mother and named for her grandmother.\n\nAnyone can print the word clean on a carton. These three had to be checked by someone who doesn't work here.\n\nAnd the reason any of it holds up is what's inside. Willa's Original is four organic ingredients — whole grain oats, filtered water, vanilla extract, sea salt. 1g of sugar, none of it added. 4g+ protein and 2g+ prebiotic fiber, the kind that supports gut and heart health, because the whole oat stays in instead of getting filtered out.", warm:"Three marks on the carton, and not one of them is self-issued. 🌾 USDA Organic. Certified Glyphosate Residue Free — every lot tested for weedkiller residue. WBENC women-owned, because Willa's was started by a mother and named for her grandmother.\n\nShhh… the paperwork is the least glamorous part of this brand and the part we're proudest of.", punchy:"USDA Organic. Certified glyphosate-free, tested every lot. WBENC women-owned. Three marks, none of them self-issued. 🌾"},
-  "AUG10-TT-6":{direct:"the dishwasher's already empty. hallelujah.\nboth shoes, same room. hallelujah.\nthe good mug was clean. hallelujah.\nnobody had a strong opinion about breakfast. hallelujah.\nthe carton's still full. hallelujah. 🙌\n\nFive small mercies, and exactly one of them is ours.\n\nWilla's Original and Willa's Kids share a shelf around here — organic whole oats, kept whole, so the fiber and the protein stay in the glass instead of getting filtered out. Most oat milks throw both away.\n\nShhh… a full carton absolutely counts as a win.", warm:"the dishwasher's already empty. hallelujah. both shoes, same room. hallelujah. the carton's still full. hallelujah. 🙌\n\nTwo of those are luck. The third one you can just keep on the shelf — Willa's Original and Willa's Kids, organic whole oats kept whole, fiber and protein still in the glass.\n\nShhh… it counts as a win.", punchy:"the carton's still full. hallelujah. 🙌 Willa's Original and Willa's Kids, quietly doing the least dramatic job in the fridge."},
-  "AUG10-IG-R5":{direct:"Willa was born in 1921. The carton launched in 2021. A hundred years between the bowl and the carton, and nothing important changed.\n\nShe cooked with whole oats because that's what food was — not because it scored well. Willa's Original is still organic whole grain oats, filtered water, organic vanilla extract, sea salt. Still the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — the same thing that went in her pot.\n\nChristina, in her own kitchen: \"my grandmother was making oatmeal way before it was cool.\"\n\nReal food, passed down. Reinvented forward.", warm:"Born 1921. Launched 2021. 🌾 Willa cooked with whole oats because that's what food was — no scoring, no swapping, no reformulating.\n\nWilla's Original is still four organic ingredients and still the whole oat, which is a long way of saying the recipe held up.\n\nReal food, passed down. Reinvented forward.", punchy:"Born 1921. Launched 2021. Willa's still uses the whole oat. 🌾"}
+  "AUG17-TT-1":{direct:"We've been waiting for somebody to write the test. 🌾\n\nWilla's Original is four things: organic whole grain oats, filtered water, organic vanilla extract, sea salt. You could set all four on a counter and point at them one at a time.\n\nHere's what changed. For years, \"ultra-processed\" — food assembled from parts you'd never cook with at home — has been an argument with no ruler. Everyone had a position, nobody had a line. Earlier this year, a third party finally put that line on paper and started testing real products against it. This month, another one cleared it without changing a single ingredient.\n\nThat's the part worth sitting with. The bar didn't ask anyone to reformulate. It asked what was in there.\n\nWilla's has been pouring the same answer since 2021 — the whole oat groat, whole oat kernels, like steel-cut oats before they're rolled. Most oat milks filter out the bran and germ, then process the starch into sugar, and the fiber AND the protein leave with it. Ours stay: 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that comes from the oats.\n\nAn argument you can't settle is exhausting. A bar you can see is a gift.", warm:"Oats, water, vanilla, salt — four things you could line up on a counter and point at. That's been the list since Willa's launched in 2021. 🌾\n\nFor years \"ultra-processed\" was a word everybody used and nobody could measure. Earlier this year a third party finally wrote the bar down and started testing real food against it — and this month, another brand cleared it without changing a thing.\n\nWe've been waiting for somebody to write the test. Turns out the answer was always going to be short.", punchy:"\"Ultra-processed\" finally has a bar. Willa's Original has four things you could set on a counter: organic oats, water, vanilla, sea salt. 🌾"},
+  "AUG17-IG-R1":{direct:"Christina, in the chilled aisle, answering the question she gets asked more than any other: why make this at all? 🥛\n\nWilla was her grandmother. She cooked with real food, and she had a way of making everyone at her table feel like the most interesting person in the room. Willa's exists to keep doing both.\n\nWilla's Original is four organic ingredients — whole grain oats, filtered water, vanilla extract, sea salt. It's made from the whole oat groat, whole oat kernels like steel-cut oats before they're rolled, which is why it pours rich and smooth. 4g+ protein, 2g+ prebiotic fiber, and 1g of sugar that comes from the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nThe recipe came from a kitchen. The carton was the only new part.\n\nWe'll be right here. 🌾", warm:"\"People ask why we make this.\" Christina, in the aisle, with the actual answer — one take, no cuts. 🥛\n\nWilla was her grandmother: real food, and a way of making everyone at her table feel like the most interesting person in the room. Willa's Original is four organic ingredients and the whole oat, which is the entire reason it pours rich instead of thin.\n\nThe recipe came from a kitchen. The carton was the only new part. 🌾", punchy:"The recipe came from a kitchen. The carton was the only new part. Willa's Original — four organic ingredients, made from the whole oat. 🌾"},
+  "AUG17-PIN-1":{direct:"The best dessert on the internet right now is a croissant that spent the night in the freezer. 🥐🍫 Split it, pack it with chocolate oat milk ice cream, freeze it solid, then cut it straight down the middle — the flake against the cold is the entire reason this one travels.\n\nWilla's Organic Chocolate Oat Milk is made with real cacao and five simple organic ingredients, with 50% less sugar — rich and creamy enough to churn into actual ice cream instead of just flavoring it. It won Best Beverage at the Good Food Awards. 🥛\n\nTwo ingredients. One of them won Best Beverage.\n\nIngredients\n- 1½ cups Willa's Organic Chocolate Oat Milk\n- ½ cup canned coconut cream, chilled\n- 2 tbsp maple syrup\n- 1 tbsp organic cacao powder\n- pinch of sea salt\n- 4 dairy-free croissants — a vegetable-oil-based puff pastry or crescent dough rolled and baked works, but read the label before you buy: several mainstream doughs skip butter and still list whey or milk. A bakery croissant marked vegan or dairy-free is the safest swap if your store carries one\n- flaky sea salt, to finish\n\nBlend, freeze 4 hours, stirring every hour (no ice cream maker needed). Split the cooled croissants, pack them full, freeze 2 more hours, then slice.", warm:"Two ingredients, and shhh… one of them won Best Beverage. 🥐🍫 A croissant, split and packed with chocolate oat milk ice cream, frozen solid and cut straight through — flake on the outside, cold in the middle, nothing on the list you'd have to explain.\n\nWilla's Organic Chocolate Oat Milk churns into real ice cream because it's made with real cacao, five organic ingredients and coconut sugar instead of cane.\n\nIngredients\n- 1½ cups Willa's Organic Chocolate Oat Milk\n- ½ cup canned coconut cream, chilled\n- 2 tbsp maple syrup\n- 1 tbsp organic cacao powder\n- pinch of sea salt\n- 4 dairy-free croissants (a vegetable-oil-based puff pastry or crescent dough — check the label for whey or milk, or grab a bakery croissant marked vegan/dairy-free)\n- flaky sea salt, to finish", punchy:"Two ingredients. One of them won Best Beverage. 🥐🍫 Croissant ice cream sandwiches, made with Willa's Chocolate — real cacao, five organic ingredients, no cane sugar."},
+  "AUG17-IG-F1":{direct:"Willa's Original keeps both halves of the oat — 2g+ prebiotic fiber, the kind your gut bacteria feed on, and 4g+ protein. Per cup. 🌾\n\nThe fiber was never working alone. The aisle has spent two years shouting one number, and the newer nutrition work keeps landing on a pair instead: fiber does part of the job, and the plant protein that makes it all the way through your system intact is pulling its weight right next to it.\n\nWhich is awkward for a category that loses both on the way to the carton. Most oat milks filter the bran and the germ off before the oat ever becomes milk, then process what's left into sugar — and the fiber and the protein were both living in the part that just left. Vs. the average oat milk: under 1g of each.\n\nWilla's never took that shortcut. Whole oat groats go in — bran and germ still attached — so the pair stays put. Four organic ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Certified organic. Certified glyphosate-free, tested every lot.\n\nWe didn't add the protein back in. We just never took it out.", warm:"Two things in an oat are worth keeping. Most of the aisle shows up with neither. 🌾\n\nThe fiber was never working alone — the plant protein sitting right there in the oat is doing its half. Willa's Original brings both to the glass: 2g+ prebiotic fiber, the kind your gut bacteria feed on, and 4g+ protein per cup, out of four organic ingredients.\n\nShhh… we've been pouring the pair the whole time.", punchy:"The fiber was never working alone. Willa's Original brings the pair — 2g+ prebiotic fiber and 4g+ protein, per cup, out of four organic ingredients. 🌾"},
+  "AUG17-TT-2":{direct:"Oats. 🌾\n\nWilla's Original is four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt.\n\n4g+ protein. 2g+ prebiotic fiber — the kind that feeds your gut. 1g of sugar, and it came along with the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nRich and smooth, with nothing holding it together but the oat.", warm:"Four questions. One answer. 🌾\n\nWilla's Original is four organic ingredients, and the oat is doing almost all of the work — 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that came along for the ride. No gums holding it together.\n\nShhh… that's the whole trick.", punchy:"Oats. 🌾 4g+ protein, 2g+ prebiotic fiber, 1g sugar — all from the same place."},
+  "AUG17-IG-R2":{direct:"The last stretch of August had us craving something icy and sharp — and then, somehow, creamy. 🍋☀️ Creamy lemonade sits right between a milkshake and a slushie, and the whole thing turns on one variable: what you blend in. Watch the yellow go opaque and hold — that's the whole video.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 Four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. That's why it blends creamy instead of thin — and why it stays that way in the glass.\n\nIngredients\n- 1 cup Willa's Organic Oat Milk, cold\n- 1/3 cup fresh lemon juice (about 2 lemons)\n- 3 tbsp maple syrup, more if your lemons are mean\n- 1 tsp lemon zest\n- 2 cups ice\n- a pinch of sea salt\n\nBlend the ice, lemon, maple, zest and salt first, then pour in the cold Willa's and blend 20 seconds more. Cold and fast is the trick — it goes opaque and holds. Pour, zest over the top, drink it before it warms up.", warm:"Tart, icy, and then — creamy. 🍋 The internet's creamy lemonade is a two-minute drink, and the only thing it really tests is the milk you blend into it.\n\nWilla's Organic Oat Milk uses simple organic ingredients and the whole entire oat for a rich, smooth taste, less sugar, and more protein and fiber per cup. 🥛 Shhh… it goes opaque and it holds.\n\nIngredients\n- 1 cup Willa's Organic Oat Milk, cold\n- 1/3 cup fresh lemon juice\n- 3 tbsp maple syrup\n- 1 tsp lemon zest\n- 2 cups ice\n- a pinch of sea salt\n\nIce, lemon, maple, zest and salt first. Willa's last. Blend 20 seconds and pour.", punchy:"Lemonade in, lemon pie out. 🍋 1 cup Willa's Organic Oat Milk, 1/3 cup lemon juice, 3 tbsp maple, ice — blend until the yellow goes opaque and holds."},
+  "AUG17-TT-3":{direct:"Willa's Original has 4g+ protein and 2g+ prebiotic fiber — the kind gut bacteria actually feed on — and both were in the oat before we ever opened the bag. 🌾\n\nHere's the label question worth asking any time a plant milk posts a big protein number: was that protein in the plant, or was it added to the plant to hit the number? Both are legal. Both print the same on the front of the carton. They are not the same food.\n\nAn isolate is protein pulled out of one crop and stirred into another — the fastest way to make a number big. Willa's Original doesn't use one. It's made from the whole oat groat, the whole kernel with the bran and germ still on it, which is why the protein and the prebiotic fiber both survive the trip into the carton. Most oat milks discard the bran and germ, and that takes the fiber AND the protein with them.\n\nThe 1g of sugar came from the oats too. Nothing added to hit a number, at either end of the label.\n\nFour organic ingredients: whole grain oats, filtered water, organic vanilla extract, sea salt. Certified organic. Certified glyphosate-free. We test every lot.\n\nProtein has a return address. Ours says oats.", warm:"Big number on the front of a plant milk? There's one more question worth asking: was that protein in the plant, or added to it? 🌾\n\nWilla's Original — 4g+ protein, 2g+ prebiotic fiber, 1g of sugar — and all three of those came out of the oat, not out of a bag of isolate. Four organic ingredients. The whole oat groat, bran and germ still on it.\n\nShhh… we never had a number to hit.", punchy:"Protein has a return address. Willa's Original says oats — 4g+ protein, 2g+ prebiotic fiber, four organic ingredients, 1g of sugar. 🌾"},
+  "AUG17-TT-4":{direct:"Four organic ingredients: whole grain oats, filtered water, vanilla extract, sea salt. Count them. 🥛\n\nCertified glyphosate-free by The Detox Project — the third party that tests every lot for weedkiller residue. Look it up without asking us.\n\nScan the carton in the Clean Label App (Yuka scans groceries and scores the ingredients out of 100). Willa's Original comes back 94.\n\n4g+ protein. 2g+ prebiotic fiber — the kind that feeds your gut. 1g of sugar, and it came in with the oats. Most oat milks filter out the bran and germ and process the starch into sugar, which takes the fiber AND the protein with it. Willa's keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled.\n\nGot a question about any of the four? Ask it in the comments. We'll answer every one.\n\nWe built this carton to be checked.", warm:"A lot of people have started checking things lately — counting, scanning, looking things up instead of taking the front of a package at its word. 🥛 Shhh… we've been hoping for this.\n\nWilla's Original is four organic ingredients, certified organic and certified glyphosate-free, tested every lot. 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that came in with the oats.\n\nCount them, scan it, look up the certification, ask us anything. We built this carton to be checked.", punchy:"Four organic ingredients, a 94 in the Clean Label App, and a glyphosate certification you can look up yourself. 🥛 We're not nervous."},
+  "AUG17-IG-R3":{direct:"Willa's Kids has none of the nine major food allergens in it. No dairy, no nut, no soy, no gluten, no sesame. That's the short answer, and it's the same answer every single time you pick up the carton. 🌾\n\n8g of protein — the same as a cup of dairy milk, with half the sugar. Plant-based calcium, vitamin D, and DHA omega-3s from algae oil, the omega-3 most kids fall short on. 6g of sugar, all of it from organic maple syrup.\n\nHave you scanned it on Yuka? It's the Clean Label App — it scans groceries and scores the ingredients out of 100. Willa's Kids comes back 100 out of 100. Bobby Approved, too.\n\nWilla's Kids exists because parents asked us for it. So when a parent asks what's in it, the answer should take about four seconds.\n\nQuestions about a diagnosed allergy belong with your pediatrician. Questions about what's in the carton belong to us.\n\nYou shouldn't have to read a carton twice.", warm:"The question we get asked most about Willa's Kids is a short one. So is the answer. 🌾\n\nNone of the nine major food allergens — no dairy, no nut, no soy, no gluten, no sesame. 8g of protein, plant-based calcium, vitamin D, and DHA omega-3s from algae oil.\n\nThat's our cofounder, in her own kitchen, holding the carton she asked us to make. Shhh… it scans 100 out of 100 on Yuka, the app that scores the ingredients.\n\nYou shouldn't have to read a carton twice.", punchy:"None of the nine major food allergens. 8g of protein. 100 out of 100 on Yuka, the app that scores the ingredients. Willa's Kids — the whole answer takes four seconds. 🌾"},
+  "AUG17-PIN-2":{direct:"Four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt. That is the entire list on Willa's Original. 🥛\n\nNo gums. No stabilizers. No phosphates. And no enzymatic oat-syrup process — the shortcut where the bran and germ get filtered out and the starch gets processed into sugar, taking the fiber AND the protein with it.\n\nWilla's Original keeps the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled. That is where the 2g+ prebiotic fiber comes from — the kind that feeds good gut bacteria — plus 4g+ protein and 1g of sugar, from the oats, nothing added.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nRich and smooth is supposed to come from the oat. Ours does.\n\nNo stabilizers. It stands up on its own.", warm:"Shhh… the interesting part of this label is the part that isn't there. 🥛\n\nNo gums, no stabilizers, no phosphates in Willa's Original — just organic whole grain oats, filtered water, organic vanilla extract and sea salt. It pours rich and smooth because it's made from the whole oat instead of oat syrup, which is also where the 2g+ prebiotic fiber and 4g+ protein come from.\n\nNo stabilizers. It stands up on its own.", punchy:"No gums. No stabilizers. No phosphates. Willa's Original stands up on its own — four organic ingredients, 2g+ prebiotic fiber, 1g sugar. 🥛"},
+  "AUG17-TT-5":{direct:"Every so often the feed decides food is a competition. Willa's has never had a side to pick — just a short list and a full table. 🍞\n\nFour things go in Willa's Original: organic whole grain oats, filtered water, organic vanilla extract, sea salt. 4g+ protein, 2g+ prebiotic fiber — the kind that looks after your gut — and 1g of sugar that comes from the oats.\n\nMost of the category filters the bran and germ out of the oat and processes what's left into sugar. The protein leaves with the fiber. Willa's keeps the whole oat groat — the entire kernel, the way steel-cut oats keep it — so nothing has to be added back in later.\n\nCertified organic. Certified glyphosate-free by The Detox Project, tested every lot. Mother-founded, WBENC certified.\n\nBread on the board. Fruit in the bowl. Something warm. A carton with nothing hiding on the back.\n\nNothing on this table is a side you have to pick.", warm:"Eating well has never required quitting anything. 🍞\n\nWilla's Original is four organic ingredients, built on the whole oat groat rather than oat syrup — 4g+ protein, 2g+ prebiotic fiber, 1g of sugar that comes from the oats.\n\nShhh… we're not picking a side. We're setting a table.", punchy:"Four organic ingredients, 1g of sugar from the oats, and no team to join. 🍞 Willa's Original."},
+  "AUG17-IG-R4":{direct:"Saturday morning, one carton, two drinks. 🥛\n\nOur cofounder poured her kid a glass of Willa's Kids, then poured the rest of the same carton over ice into her own coffee. Nobody staged that part.\n\nThe best swirl in the fridge is on the Kids carton. We don't have a better explanation than that — it just does it, and we've stopped apologizing for how good it looks.\n\nMade from the whole oat — bran, germ and all — not oat syrup. 8g protein. Top-9-allergen-free.\n\nShhh… the one we designed for kids' tastebuds is the one the grown-ups keep finishing.\n\nSame carton. Two glasses. One of them has ice in it.", warm:"One carton went out to the counter Saturday morning and came back half gone. 🥛 The kid had a glass. Our cofounder put the rest over ice in her coffee and watched it swirl for longer than she'd admit.\n\nShhh… the one we designed for kids' tastebuds is the one the grown-ups keep finishing. 8g protein, top-9-allergen-free, made from the whole oat.\n\nSame carton. Two glasses. One of them has ice in it.", punchy:"The kid gets a glass. She gets the swirl in her iced coffee. Same carton, two reasons — Willa's Kids, 8g protein, top-9-allergen-free. 🥛"},
+  "AUG17-IG-F2":{direct:"Willa's Original is four organic ingredients, and every one of them is printed on the front of the carton. 🥛\n\nOrganic whole grain oats. Filtered water. Organic vanilla extract. Sea salt. No code to scan, no site to visit, no number to call — the box is the answer.\n\nNext to that list sits a butterfly: Non-GMO Project Verified. 'Bioengineered' is the label word for genetically modified ingredients, and that mark is where the answer lives on our carton — in ink, on the front, where you were already looking.\n\nMade from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — so the fiber and the protein both stay in. 4g+ protein, 2g+ prebiotic fiber, 1g of sugar, from the oats, nothing added.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nProof spent a decade quietly moving off the package. Ours never left it.\n\nOur label isn't a link.", warm:"Four organic ingredients, and all four are on the front of the carton. 🥛\n\nNo code to scan, no site to visit, no number to call — Willa's Original just says it out loud: organic whole grain oats, filtered water, organic vanilla extract, sea salt. Non-GMO Project Verified is printed right there next to them.\n\nShhh… our label isn't a link.", punchy:"Our label isn't a link. 🥛 Willa's Original — four organic ingredients, printed on the front. Nothing to scan."},
+  "AUG17-TT-6":{direct:"Number four on the list has four ingredients. 🥛\n\nFive things in a real cart that never get swapped — and this is the one that reads shortest on the back. Willa's Original is organic whole grain oats, filtered water, organic vanilla extract and sea salt. That's the entire list.\n\nIt's made from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled — instead of oat syrup. Most of the category filters out the bran and the germ first, then processes the starch into sugar, which takes the fiber AND the protein out before the carton is ever filled. Willa's keeps both: 4g+ protein, 2g+ prebiotic fiber, the kind that feeds your gut, and 1g of sugar that came from the oats.\n\nCertified organic. Certified glyphosate-free, tested every lot. Mother-founded, WBENC certified.\n\nWilla's Original goes in the coffee. Willa's Kids goes in the glass. Same cart, same trip.\n\nA list like this isn't really a list of things you buy. It's a list of things you stopped rethinking.", warm:"Most people have three or four things they never rethink at the store. 🛒 Willa's made somebody's list, at number four.\n\nWilla's Original is four organic ingredients, made from the whole oat instead of oat syrup — which is why the fiber and the protein are still in there. 4g+ protein, 2g+ prebiotic fiber, 1g of sugar from the oats.\n\nShhh… fourth is a great place to land.", punchy:"Number four had four ingredients. Willa's Original — organic whole grain oats, filtered water, vanilla, sea salt, and the fiber and protein still in it. 🥛"},
+  "AUG17-IG-R5":{direct:"Thick enough that people assume it's edited. It isn't. 🥛\n\nWilla's Original pours like that because it's made from the whole oat groat — whole oat kernels, like steel-cut oats before they're rolled. Most oat milks filter out the bran and germ and then process the starch into sugar, which takes the fiber AND the protein out with it. We keep all of it. That's the entire reason it's rich and smooth instead of thin.\n\nIt looks fake. It's four ingredients: organic whole grain oats, filtered water, organic vanilla extract, sea salt.\n\n1g of sugar, and it comes from the oats. No gums, no stabilizers, nothing added to make it behave on camera.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nDrag a spoon through it. That's the whole argument.", warm:"No, we didn't do anything to it. 🥛 One take, one glass, one very ordinary Tuesday pour.\n\nIt looks fake. It's four ingredients — organic oats, water, vanilla, sea salt — and it comes out that rich because Willa's uses the whole oat instead of oat syrup.\n\nShhh… the least edited thing on your feed.", punchy:"It looks fake. It's four ingredients. 🥛 Willa's Original — whole oat, 1g sugar from the oats, no gums, no edit."},
+  "AUG17-PIN-3":{direct:"One gram of sugar in Willa's Original, and the oats brought it. 🌾\n\nNothing was added — no cane sugar, no syrup, no sweetener of any kind. Willa's Original is made from the whole oat groat, the whole oat kernel the way steel-cut oats keep it, so the small sweetness that's in there belongs to the grain.\n\nCertified organic. Certified glyphosate-free, tested every lot.\n\nKinda chic that the only sugar in it came from the oats.", warm:"Nothing added. 🌾 The gram of sugar in Willa's Original came from the oats themselves — that's the whole story, there's no second half to it.\n\nMade from the whole oat groat, the whole kernel like steel-cut oats, which is also why it pours rich instead of thin.\n\nKinda chic, honestly.", punchy:"One gram of sugar in Willa's Original, and the oats brought it. 🌾 Kinda chic."}
 };
 
 const SCANNED_TOTAL = 312;
@@ -1469,36 +1469,36 @@ const SHARE_OF_VOICE = [
 // counsel, not reporting — addresses the "advising, not reporting" rule added
 // 2026-04-17.
 const COMP_WEEKLY_POV = {
-  happened:"The week split cleanly: retail data turned on the whole category — Circana volumes down more than 5% a year for three straight years, almond off 9%, oat's momentum cooling, and an analyst naming price, taste, heavy processing and low protein as the reasons — while Oatly answered with an audited 67% climate gap (Aug 4), MALK stretched four-ingredient clean label into shelf-stable formats and a borrowed celebrity smoothie (Aug 6–7), a new oat-based cold brew tripled its lineup (Aug 4), and Chobani's 'Zero Sugar' claim got a lawsuit revived against it (Aug 4).",
-  coming:"The pressure now comes from Washington and the school calendar rather than the shelf: the FDA's GRAS rule cleared White House review on Jul 31 and would end the self-certify-your-own-additive route, a federal ultra-processed-food definition went up for review on Aug 3, whole milk returns to lunch trays this fall under a law that also permits nutritionally equivalent plant beverages, and mandatory food-allergy training for school food staff hits its first school year.",
-  plays:"The lead is the self-certification story — a federal system built on companies vouching for their own ingredients is being closed, and Willa's four-ingredient panel is the answer said calmly, not smugly; second is the allergen door into back-to-school, which is a genuinely different room than the lunchbox we already worked; third is answering the category's four objections (price, taste, processing, protein) in one honest piece instead of pretending the Circana numbers aren't real."
+  happened:"The category split hard in seven days: Chobani confirmed on Aug 11 that its ready-to-drink oat milk is discontinued for lack of demand and cut its 2026 earnings outlook to roughly $920 million while framing the exit as a broader plant-based retreat, MALK went the other way and put a 12g-protein, gum-free 'Whole Malk' into Whole Foods, Target and Sprouts on Aug 10, and a third front opened entirely — clean-label brands including Go Raw, Simple Mills, Amy's and Spindrift started printing the Non-GMO Project and NSF 'Non-UPF Verified' seal on packages years ahead of any federal definition.",
+  coming:"The pressure now moves onto the label itself rather than the shelf: a House bill introduced Jul 30 would replace 'wheat' in the major-allergen definition with 'gluten-containing grain' and name oats outright, a federal court has ordered the QR-code and detectability escapes out of bioengineered-food disclosure with a Jan 1, 2028 compliance date, and a private Non-UPF seal is establishing the front-of-pack standard while Washington is still writing the definition.",
+  plays:"The lead is the Non-UPF seal — the certification body already on Willa's carton now issues a badge Willa's four-ingredient list should clear, and getting in early converts a policy fight into a shelf advantage; second is answering Chobani's exit with commitment rather than commentary, because shelf space is opening and confidence reads better than defence; third is getting ahead of the oats-as-allergen bill by publishing the gluten answer plainly now, while it's a choice rather than a compliance deadline."
 };
 
 
 // ─── Performance · Week of MAY 25 – MAY 31 results ──────────────
 const LAST_WEEK_RESULTS = [
-  {id:"AUG03-IG-R1", concept:"\"the whole internet is making overnight oats — with the oat milk that's actually made of oats.\" — clean-label recipe ride", platform:"Instagram Reel", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", sourceTrend:"A $4B clean-label grocery brand launched its first cookbook and led it with overnight oats (AUG 3)", trendId:null, views:806000, saves:61400, shares:22700, comments:3800, savesDelta:12.6, sentiment:0.96, hero:true, note:"Reach and save hero of the AUG 3 – AUG 9 week, and the first time in four refreshes that a recipe beat a stance. The read is specific: the brand didn't comment on the recipe everyone had just seen, it was useful inside it, and the ingredient list did its work in the caption instead of the headline. Two of this week's briefs are built on that finding — a pour and a searchable card off the same drink."},
-  {id:"AUG03-TT-1", concept:"\"four ingredients, and you can say all of them out loud.\" — the two-lists toddler answer", platform:"TikTok", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"Research on how much of the toddler shelf is ultra-processed (AUG 3)", trendId:null, views:674000, saves:42100, shares:26300, comments:5600, savesDelta:9.9, sentiment:0.94, hero:false, note:"Christina's one on-camera slot produced the week's highest share count and its second-highest saves. Sentiment held at 0.94 because the post led with the answer rather than the alarm — no fear framing anywhere in it. The same posture runs the founder stance on Wed Aug 12."},
-  {id:"AUG03-TT-2", concept:"\"water walked so the whole oat could run.\" — bass-drop reveal, carton as payload", platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", sourceTrend:"The bass-drop reveal transition peaking across TikTok (AUG 3)", trendId:null, views:592000, saves:27800, shares:28400, comments:2400, savesDelta:7.6, sentiment:0.95, hero:false, note:"Most-shared post of the week and only a middling save-rate — the classic format-native trade. The mechanic travels, the payload doesn't stick unless one line survives the edit. Every meme brief this week carries exactly one line built to outlive the sound."},
-  {id:"AUG03-IG-R3", concept:"\"the seven-minute morning, and the part of it nobody fights about.\" — school-week reset", platform:"Instagram Reel", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"The school-restock window opening across Southern and Midwestern districts (AUG 3)", trendId:null, views:468000, saves:29600, shares:14900, comments:2700, savesDelta:8.4, sentiment:0.95, hero:false, note:"Held well but sat mid-pack, which is the ceiling on a morning-routine post once every brand in the feed is running one. The parenting slots this week deliberately moved to two rooms nobody else is standing in — the allergy desk and the night before."},
-  {id:"AUG03-IG-R2", concept:"\"one carton, five mornings, zero negotiating.\" — the honest lunchbox-cost answer", platform:"Instagram Reel", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"Packed-lunch costs climbing through the restock window (AUG 3)", trendId:null, views:421000, saves:30900, shares:16800, comments:4900, savesDelta:9.2, sentiment:0.9, hero:false, note:"Second-highest comment volume and the week's lowest sentiment at 0.90 — which is what a price conversation looks like even when it goes well. It stayed above the guardrail because the post never argued the shelf price, it just showed what one carton covers. That non-defensive register carries straight into the four-objections Reel."},
-  {id:"AUG03-TT-3", concept:"\"sixty-three new flavors. we're still working on the ingredient list.\" — anti-gimmick barista flag", platform:"TikTok", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", sourceTrend:"The category competing on flavor invention rather than ingredients (AUG 3)", trendId:null, views:384000, saves:19700, shares:11200, comments:2300, savesDelta:5.9, sentiment:0.92, hero:false, note:"Solid, not spectacular, and the second consecutive week the flavor-versus-list flag landed mid-pack. That framing is now rested. The one coffee slot this week takes a different route entirely — the sugar load in a can versus the one you pour yourself."},
-  {id:"AUG03-IG-F1", concept:"\"we never sold you 'plant-based.' we sold you a short list.\" — the label everyone's retiring", platform:"IG Feed", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", sourceTrend:"The category relabeling itself away from 'plant-based' (AUG 3)", trendId:null, views:246000, saves:17300, shares:7400, comments:1900, savesDelta:6.7, sentiment:0.93, hero:false, note:"A static carousel doing static-carousel numbers, but the save-rate on a pure-posture piece was better than expected — the audience will save a position if it reads as a standard they can use. This week's two carousels both hand the reader something to judge with rather than something to agree with."},
-  {id:"AUG03-PIN-2", concept:"\"what to actually look for on a kids' drink label.\" — the four-line standard", platform:"Pinterest", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"Parents reading kids'-drink labels hardest through the restock window (AUG 3)", trendId:null, views:178000, saves:24600, shares:3600, comments:380, savesDelta:13.8, sentiment:0.97, hero:false, note:"Lowest reach, highest save-rate of the week for the second refresh running — the Pinterest pattern is now the most reliable finding the engine has. A portable standard outlives the news that produced it by months. All three pins this week are built as save objects rather than news rides."}
+  {id:"AUG10-IG-R4", concept:"\"three stripes, one glass — and the middle one is the milk.\" — layered strawberry matcha ride", platform:"Instagram Reel", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", sourceTrend:"The three-band layered strawberry matcha glass running hot across TikTok and Reels (AUG 10)", trendId:null, views:838000, saves:66200, shares:23400, comments:4100, savesDelta:13.4, sentiment:0.96, hero:true, note:"Reach and save hero of the AUG 10 – AUG 16 week, and the second refresh running that a build has beaten a stance. The specific finding is sharper than 'recipes work': the milk was the visible middle band, so the product did the retention work instead of being announced. Three briefs this week are built the same way — the drink that turns opaque on camera, the pour too thick to read as plant milk, and the frozen dessert whose whole quality lives in what got churned into it."},
+  {id:"AUG10-IG-R1", concept:"\"taste it first — that's the part we're least worried about.\" — four-objection category answer", platform:"Instagram Reel", pillar:"REVIEWS/RECS", pillarColor:"#A191B2", sourceTrend:"The category charged with four failures at once — price, taste, processing, protein (AUG 10)", trendId:null, views:694000, saves:44800, shares:19600, comments:6100, savesDelta:9.4, sentiment:0.91, hero:false, note:"Highest comment volume of the week and its lowest sentiment at 0.91, which is what answering an accusation looks like even when it goes well. It held above the guardrail because taste led and no number was argued. The read carried forward: this week's Wednesday noon slot answers the same underlying pressure with warmth instead of a rebuttal, and never mentions the charge at all."},
+  {id:"AUG10-TT-1", concept:"\"nothing self-certified. nothing to disclose.\" — founder stance on the loophole", platform:"TikTok", pillar:"HEALTH/WELLNESS", pillarColor:"#73B2C9", sourceTrend:"The rule closing the route that let companies vouch for their own new ingredients (AUG 10)", trendId:null, views:611000, saves:39200, shares:27400, comments:5300, savesDelta:8.8, sentiment:0.93, hero:false, note:"The week's highest share count outside a meme format, on the smallest paid budget on the board. Sentiment held at 0.93 for one reason — no person, party or agency was named anywhere in it. Both reserved on-camera slots this week sit on Wed Aug 19 on that finding, and only one of the two is a stance."},
+  {id:"AUG10-TT-2", concept:"\"same bowl. the milk finally caught up.\" — childhood-photo beat drop", platform:"TikTok", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", sourceTrend:"The childhood-photo nostalgia transition running across the feed (AUG 10)", trendId:null, views:552000, saves:24900, shares:31800, comments:2200, savesDelta:6.8, sentiment:0.95, hero:false, note:"Most-shared post of the week on the lowest save-rate in the top eight — the format-native trade, now four refreshes consistent. The mechanic travels and the payload only sticks if one line outlives the sound. Both meme briefs this week are built on a single surviving element: one word repeated four times, and one hard cut from an unbelievable pour to a four-line list."},
+  {id:"AUG10-IG-R2", concept:"\"free of the top 9 — that list is already long enough.\" — allergy-desk back-to-school", platform:"Instagram Reel", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"Food-allergy training required for school food staff in its first school year (AUG 10)", trendId:null, views:478000, saves:37100, shares:15200, comments:3100, savesDelta:10.6, sentiment:0.97, hero:false, note:"Highest sentiment of the week at 0.97 on mid-pack reach — the shape of a narrow, high-intent room entered correctly. It led with relief instead of alarm and gave no advice of any kind. Friday noon this week answers the allergen question again for the same audience, in the same register, with no school anywhere in the frame."},
+  {id:"AUG10-IG-R3", concept:"\"one law, two sentences — and everyone only read the first one.\" — the school milk provision", platform:"Instagram Reel", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"The statute returning whole milk to the tray that also permits a nutritionally equivalent nondairy beverage (AUG 10)", trendId:null, views:396000, saves:28400, shares:13700, comments:4400, savesDelta:9.1, sentiment:0.94, hero:false, note:"Strong comment volume for a policy brief, most of it parents asking follow-up questions rather than arguing — evidence that handing someone a question they can actually take somewhere outperforms handing them a position. The Friday brief this week runs the same mechanic on a different question, and the Saturday carousel hands the reader a thing to look for on the front of a box."},
+  {id:"AUG10-TT-3", concept:"\"fifteen minutes isn't much of a plan. it's enough for a mug.\" — wind-down, not wake-up", platform:"TikTok", pillar:"PARENTING", pillarColor:"#9E652E", sourceTrend:"Pediatricians across local news pushing the school-year sleep reset (AUG 10)", trendId:null, views:344000, saves:21600, shares:9800, comments:1900, savesDelta:7.2, sentiment:0.95, hero:false, note:"Sat mid-pack, which is now the observed ceiling on any school-calendar post once every brand in the feed is running one — the third such result in four refreshes. That ceiling is why back-to-school earned none of its two allowed slots this week and both parenting briefs moved off the calendar entirely."},
+  {id:"AUG10-PIN-2", concept:"\"three layers — and the middle one has four ingredients.\" — layered iced matcha pin", platform:"Pinterest", pillar:"INGREDIENTS/RECIPES", pillarColor:"#75C596", sourceTrend:"The layered drink build people save in August and make in September (AUG 10)", trendId:null, views:186000, saves:27300, shares:4100, comments:420, savesDelta:14.6, sentiment:0.97, hero:false, note:"Lowest reach and highest save-rate of the week for the third refresh running — the most reliable finding the engine holds. Pinterest saves are the only number here that keeps compounding after the news peg dies. All three pins this week are written as save objects with literally searchable titles: a frozen dessert card, a no-gums search pin, and a single calm line about where the sugar comes from."}
 ];
 
 const PERF_KPIS = {
   shipped:16,
-  totalReach:3904000,
-  avgSavesDelta:8.9,
-  topFormat:"Recipe ride with the ingredient list in the caption + founder-on-camera two-lists answer + framework save-pin"
+  totalReach:4236000,
+  avgSavesDelta:9.5,
+  topFormat:"Layered drink build with the milk as the visible middle band + founder stance to camera + searchable save-pin"
 };
 
 const PERF_INSIGHTS = [
-  {title:"A useful recipe finally beat the label read", detail:"The clean-label recipe ride took both reach and saves outright, ending a three-refresh run in which the uncut label read owned the top save-rate. The distinction that matters: the recipe post didn't comment on the moment, it was useful inside it, and the ingredient list did its work in the caption rather than the headline. Three of this week's briefs are builds — a layered pour, a searchable recipe card, and a single-serve dessert — where two weeks ago they would have been positions.", agent:"perf"},
-  {title:"Pinterest is a shelf, not a channel — and the pins keep proving it", detail:"The kids'-drink-label standard posted the week's lowest reach and its highest save-rate, the second refresh in a row that pattern has held. Saves on Pinterest are the only metric in the engine that keeps compounding after the news peg dies. All three pins this week are built as save objects — a portion-sized dessert card, a searchable drink card, and a proof pin on where the oats come from — rather than as timely takes.", agent:"visual"},
-  {title:"The non-defensive register is what held sentiment on a price conversation", detail:"The honest lunchbox-cost answer drew the week's second-highest comment volume and its lowest sentiment, and stayed above the guardrail for one reason: it never argued the shelf price, it just showed what one carton covers. That is the read carried into the four-objections Reel, which answers taste first, concedes nothing, and never mentions a price at all.", agent:"hook"},
-  {title:"Format-native posts trade saves for shares — so give them one line that survives", detail:"The bass-drop reveal posted the week's highest share count on a middling save-rate, the same trade the peaking-format briefs have made three refreshes running. The mechanic travels, the payload doesn't stick unless a single line outlives the sound. Every meme brief this week is built around one such line — the documentary sit-down ends on the confession that there's nothing to confess, and the gratitude list keeps only its last beat about the brand.", agent:"composer"}
+  {title:"A build beat a stance again — and the margin came from the product being visible, not mentioned", detail:"The layered strawberry matcha ride took reach and saves outright, the second refresh running that a build has topped the board. The finding is narrower than 'recipes work': the milk was the visible middle band, so the product carried the retention beat instead of being announced after it. Three briefs this week are built to that spec — the late-summer drink whose entire reveal is the moment it turns opaque and holds, the macro pour too thick to read as plant milk, and the frozen dessert whose quality lives in what got churned into it.", agent:"perf"},
+  {title:"Pinterest is a shelf, and the save-object pattern is now the most reliable finding the engine has", detail:"The layered drink card posted the week's lowest reach and its highest save-rate for the third refresh in a row. Saves there are the only number in the engine that keeps compounding once the news peg dies. All three pins this week are written as save objects with literally searchable titles rather than as timely takes — a frozen dessert card, a pin for people searching for a milk with no gums or stabilizers, and one calm line about where the only gram of sugar comes from.", agent:"visual"},
+  {title:"The stance travelled on shares — and held sentiment only because nobody was named", detail:"The self-certification answer posted the highest share count outside a meme format on the smallest paid budget of the week, and sentiment sat at 0.93 because no person, party or agency appeared in it. Both reserved on-camera slots this week land on Wed Aug 19 on that read, but only one of them is a position: the 9am brief says a third party finally wrote the test down, and the noon brief is not an argument at all — it is a founder in the aisle answering why she makes this, which is the version that travels on cold audiences.", agent:"hook"},
+  {title:"Format-native posts still trade saves for shares, so each one carries exactly one surviving line", detail:"The childhood-photo beat drop was the most-shared post of the week on the lowest save-rate in the top eight — the same trade for four refreshes now. The mechanic travels; the payload only sticks if a single element outlives the sound. Both meme briefs this week are built around one: a format that answers four different questions with the identical one-word answer, escalating visually to a full carton, and a cut that opens on something that looks fake and lands hard on the four-line list.", agent:"composer"}
 ];
 
 
@@ -1579,22 +1579,22 @@ function fmtNum(n){
 // every brief so the panel/voice/pulse reads are intentional.
 // ──────────────────────────────────────────────────────────
 const CONVICTION_INPUTS = {
-  "AUG10-TT-1":{voice:96, panel:94, pulse:90, recency:10},
-  "AUG10-IG-R1":{voice:95, panel:94, pulse:92, recency:10},
-  "AUG10-PIN-1":{voice:94, panel:91, pulse:92, recency:9},
-  "AUG10-TT-2":{voice:95, panel:93, pulse:96, recency:10},
-  "AUG10-IG-R2":{voice:96, panel:95, pulse:88, recency:9},
-  "AUG10-IG-F1":{voice:94, panel:90, pulse:83, recency:9},
-  "AUG10-TT-3":{voice:94, panel:91, pulse:93, recency:9},
-  "AUG10-IG-R3":{voice:96, panel:94, pulse:89, recency:9},
-  "AUG10-PIN-2":{voice:90, panel:89, pulse:93, recency:10},
-  "AUG10-TT-4":{voice:93, panel:90, pulse:88, recency:9},
-  "AUG10-TT-5":{voice:95, panel:90, pulse:92, recency:9},
-  "AUG10-IG-R4":{voice:94, panel:92, pulse:96, recency:10},
-  "AUG10-PIN-3":{voice:93, panel:88, pulse:78, recency:9},
-  "AUG10-IG-F2":{voice:94, panel:91, pulse:86, recency:9},
-  "AUG10-TT-6":{voice:96, panel:90, pulse:94, recency:10},
-  "AUG10-IG-R5":{voice:96, panel:93, pulse:90, recency:8}
+  "AUG17-TT-1":{voice:96, panel:95, pulse:88, recency:80},
+  "AUG17-IG-R1":{voice:96, panel:93, pulse:82, recency:10},
+  "AUG17-PIN-1":{voice:94, panel:92, pulse:93, recency:10},
+  "AUG17-IG-F1":{voice:94, panel:93, pulse:80, recency:9},
+  "AUG17-TT-2":{voice:95, panel:92, pulse:97, recency:10},
+  "AUG17-IG-R2":{voice:94, panel:91, pulse:96, recency:10},
+  "AUG17-TT-3":{voice:94, panel:93, pulse:90, recency:10},
+  "AUG17-TT-4":{voice:96, panel:93, pulse:95, recency:10},
+  "AUG17-IG-R3":{voice:96, panel:93, pulse:88, recency:10},
+  "AUG17-PIN-2":{voice:94, panel:92, pulse:86, recency:9},
+  "AUG17-TT-5":{voice:96, panel:91, pulse:87, recency:9},
+  "AUG17-IG-R4":{voice:95, panel:91, pulse:88, recency:10},
+  "AUG17-IG-F2":{voice:93, panel:90, pulse:74, recency:10},
+  "AUG17-TT-6":{voice:95, panel:91, pulse:92, recency:9},
+  "AUG17-IG-R5":{voice:93, panel:90, pulse:94, recency:10},
+  "AUG17-PIN-3":{voice:96, panel:86, pulse:91, recency:9}
 };
 
 // ──────────────────────────────────────────────────────────
@@ -1799,145 +1799,142 @@ const CULTURAL_PULSE = [
     id:"CP-1",
     type:"MEME TEMPLATE",
     typeColor:"#73B2C9",
-    hook:"the childhood-photo beat drop is the nostalgia transition running all over the feed 🎣",
-    detail:"A spoken audio — 'and I used to go fishin' when I was a lil girl, you gotta be real quiet on the creek' — has become the go-to nostalgic transition sound. The mechanic is fixed: a childhood photo holds on screen, then cuts hard on the beat to the creator's present-day self. Most people are running it as a GRWM or outfit reveal, but the structure underneath it is generational — then, and now — which is a shape almost no food brand has claimed.",
+    hook:"the \"bob\" format answers every question with the same word, four times, each one bigger 💇",
+    detail:"The mechanic is fixed and very easy to shoot: pose a setup question, then say the exact same one-word answer three or four times, each repetition landing on the beat with a bigger reaction, a funnier reveal, or a more ridiculous visual than the last. It started as a haircut joke — \"reasons to get a bob\" answered with \"bob, bob, bob, bob\" — and has stretched to ranking anything and justifying any decision. Named one of the two dominant formats live the week of Aug 10-17, 2026, with an active hashtag behind it.",
     velocity:"high",
-    platform:"TikTok + Reels",
-    willasPlay:"TikTok: hold the childhood cereal-bowl photo, cut hard on the beat to the grown-up pour. Same morning, better carton.",
+    platform:"TikTok",
+    willasPlay:"TikTok: \"reasons to switch\" answered with one word — \"simple\" — four times, each bigger, landing on the carton at the drop.",
     dnaMatch:"meme-payload",
     sources:[
-      {label:"New Engen · August 2026 TikTok Trends — the 'used to go fishin'' childhood-photo transition", url:"https://newengen.com/insights/august-tiktok-trends/"},
-      {label:"SocialPilot · Trending TikTok Sounds & Viral Trends", url:"https://www.socialpilot.co/blog/tiktok-trends"}
+      {label:"tiktoktrends.org · TikTok Trends: August 10-17, 2026 (page dated Aug 16, 2026)", url:"https://tiktoktrends.org/tiktok-trends-10-august/"},
+      {label:"TikTok · #bobtrend hashtag page", url:"https://www.tiktok.com/tag/bobtrend"}
     ]
   },
   {
     id:"CP-2",
     type:"MEME TEMPLATE",
     typeColor:"#73B2C9",
-    hook:"the 'saxophones are getting louder' dread cue is sitting at #4 🎷",
-    detail:"The ominous saxophone swell sampled from Boyz n the Hood has become shorthand for trouble arriving. The structure is three beats: an ordinary setup, the horn building underneath, then the reveal of what has quietly gone wrong. It ranks #4 on the Aug 6, 2026 trending-sound board and is built entirely around a reveal.",
-    velocity:"high",
+    hook:"\"repeat twice, reveal third\" is being called the week's most portable meme structure 🔁",
+    detail:"Run the same setup or the same visual twice, then swap the third repetition for something unexpected — a different object, a pet, another character stepping into the slot the viewer has already learned. The timing is controlled entirely by the audio, so no dialogue is needed and it works from a single fixed camera. Cataloged as an active recurring mechanic in the Aug 8-15, 2026 trend report. It is a cleaner shape than the escalating formats because the twist lands once and lands hard.",
+    velocity:"medium",
     platform:"TikTok + Instagram Reels",
-    willasPlay:"Sax swells over a slow fridge-door pan past everything long expired, then lands on the one carton still fine. No dialogue.",
+    willasPlay:"Reel: same hand, same mug, twice with the expected carton. Third beat swaps in Willa's. No dialogue, no caption needed.",
     dnaMatch:"meme-payload",
     sources:[
-      {label:"Buffer · Trending Songs on TikTok — updated Aug 6, 2026", url:"https://buffer.com/resources/trending-songs-tiktok/"}
+      {label:"Lightreel · What Is Trending on TikTok — weekly report, Aug 8-15, 2026 (updated Aug 15, 2026)", url:"https://lightreel.ai/blogs/whats-trending-on-tiktok"}
     ]
   },
   {
     id:"CP-3",
-    type:"MEME TEMPLATE",
-    typeColor:"#73B2C9",
-    hook:"the 'hallelujah' gratitude list is the lowest-lift format brand accounts are winning with 🙌",
-    detail:"Creators list small daily reliefs and punctuate each one with 'hallelujah.' The example running on the Aug 5, 2026 Instagram trend board is almost written for this brand already: 'that first sip of the morning, hallelujah. a line that moves fast, hallelujah.' No audio lock, no choreography, no licensing risk — it works from a single static shot, which is why business accounts are being pointed at it.",
-    velocity:"medium",
-    platform:"Instagram Reels + TikTok",
-    willasPlay:"A morning-relief list in Willa's dry voice over one unstaged kitchen shot. 'the carton's still full, hallelujah.'",
-    dnaMatch:"meme-payload",
+    type:"VIRAL RECIPE",
+    typeColor:"#75C596",
+    hook:"\"creamy lemonade\" is the milkshake-slushie hybrid taking over late-summer drink content 🍋",
+    detail:"Tart lemonade blended with a creamy element until it sits somewhere between a milkshake and a slushie — the taste-test verdict going around is that it drinks like lemon pie in a glass. National chains piled into the same idea inside the same window with blended lemonade coolers built on soft serve. The remixable mechanic is simple and entirely milk-dependent: icy-tart base plus a creamy element blended in, which is exactly where a plant milk either performs or gets watery.",
+    velocity:"high",
+    platform:"TikTok + food media",
+    willasPlay:"Reel: \"let's make creamy lemonade (dairy-free!)\" — blend Willa's Original into the tart base so it turns creamy on camera.",
+    dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"SocialBee · The latest Instagram trends — updated Aug 5, 2026", url:"https://socialbee.com/blog/instagram-trends/"}
+      {label:"Parade · I Tried the Viral 'Creamy Lemonade' and It Tastes Like Lemon Pie in a Glass (Aug 17, 2026)", url:"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Sd2k4ZHVJWkdFYldqbVBEMlJZUkVmR2ZmZFFVQkJ3MXk2R1BiQmg5ZDdOTE5EcFVDSElUOTJaekJjbllDTWhXclJBSTNQM0RvME9peEdkX1pJSTc5cU9hRkxR?oc=5"}
     ]
   },
   {
     id:"CP-4",
     type:"VIRAL RECIPE",
     typeColor:"#75C596",
-    hook:"strawberry matcha in a layered glass is one of the formats actually moving purchases 🍓",
-    detail:"Named in an Aug 8, 2026 roundup of the viral cooking formats currently changing what people buy, alongside cafe-at-home drinks and dot cakes. The build is crushed strawberries at the bottom, milk poured over ice, matcha floated on top. The entire appeal is the three visible bands holding their line in a clear glass — and the middle band is milk, which means the milk is doing the visual work.",
-    velocity:"high",
+    hook:"the two-ingredient croissant ice cream sandwich is the dessert build everyone is testing 🥐",
+    detail:"Split a croissant, pack ice cream into it, freeze, slice. Two ingredients, no churn required, and the appeal is entirely textural — the flake against the cold. Fresh taste-test coverage landed Aug 16, 2026 and it is running alongside a broader homemade-ice-cream wave in food media this window. The whole format lives or dies on the ice cream inside it, which is the part nobody has claimed yet with a clean ingredient list.",
+    velocity:"medium",
     platform:"TikTok + Instagram Reels",
-    willasPlay:"The middle stripe is the product. Pour Willa's Original slowly over ice so the bands hold clean — one take, no voiceover.",
+    willasPlay:"Reel: \"let's make a croissant ice cream sandwich (dairy-free!)\" — churn the base on Willa's Chocolate. Real cacao, no cane sugar.",
     dnaMatch:"viral-recipe-remix",
     sources:[
-      {label:"ABC17 (Stacker) · TikTok kitchen: how viral cooking videos changed what we actually own (Aug 8, 2026)", url:"https://abc17news.com/stacker-food-drink/2026/08/08/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/"},
-      {label:"KTVZ (Stacker) · TikTok kitchen: how viral cooking videos changed what we actually own (Aug 7, 2026)", url:"https://ktvz.com/stacker-food-drink/2026/08/07/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/"}
+      {label:"Parade · I Tried the Viral 2-Ingredient Croissant Ice Cream Sandwich (Aug 16, 2026)", url:"https://news.google.com/rss/articles/CBMiakFVX3lxTFA4R1V2aWR4c0lLY1ZzYzZlb05GdEZILXROY1lRUzRIRHlVVHQtNkdJSlc1M1JpSzVoVFVjSFhLaExVZFVUbWRVOFR1blNZanRyd2FHOUtBanZiNlhCaG5idEtQNjd4RGhOd0E?oc=5"}
     ]
   },
   {
     id:"CP-5",
-    type:"VIRAL RECIPE",
-    typeColor:"#75C596",
-    hook:"dot cakes are the single-serve dessert format pulling purchases this cycle 🍫",
-    detail:"Small portioned cakes built one serving at a time are named in the Aug 8, 2026 viral-format roundup alongside strawberry matcha and dumpling bakes. It is part of a wider swing toward desserts assembled in a single cup rather than a pan — photogenic, portion-honest, and completely milk-dependent in both the batter and the soak. The same roundup notes 71% of shoppers have bought or considered something because it went viral.",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"\"five things worth the money\" is people publicly defending what they refuse to cheap out on 💸",
+    detail:"Creators list, straight to camera, the purchases and subscriptions they consider non-negotiable — the things they will keep paying for while they cut elsewhere. Consumer-behaviour coverage on Aug 12, 2026 reads it as evidence of a broader value-audit mood: shoppers are being unusually deliberate this month, and financial planners have picked the format up as a signal. The hashtag carries tens of thousands of posts. It is the rare list format where a grocery item can earn a slot without the brand asking for it.",
     velocity:"medium",
-    platform:"TikTok + Instagram Reels",
-    willasPlay:"Chocolate leads: a single-serve cake soaked in Willa's Chocolate. Real cacao, five ingredients, still unmistakably dessert. No cane sugar.",
-    dnaMatch:"viral-recipe-remix",
+    platform:"TikTok",
+    willasPlay:"TikTok list, direct to camera: five grocery things worth it. \"the one carton I don't cheap out on.\" Willa's lands fourth.",
+    dnaMatch:"on-pack-checklist",
     sources:[
-      {label:"ABC17 (Stacker) · TikTok kitchen: how viral cooking videos changed what we actually own (Aug 8, 2026)", url:"https://abc17news.com/stacker-food-drink/2026/08/08/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/"},
-      {label:"KTVZ (Stacker) · TikTok kitchen: how viral cooking videos changed what we actually own (Aug 7, 2026)", url:"https://ktvz.com/stacker-food-drink/2026/08/07/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/"}
+      {label:"YourCoffeeBreak · TikTok's '5 Things Worth The Money' Trend Signals a Major Shift in Consumer Spending (Aug 12, 2026)", url:"https://yourcoffeebreak.co.uk/lifestyle/26338827088/tiktoks-5-things-worth-the-money-trend-signals-a-major-shift-in-consumer-spending/"},
+      {label:"TikTok · #worththemoney hashtag page", url:"https://www.tiktok.com/tag/worththemoney"}
     ]
   },
   {
     id:"CP-6",
-    type:"MISINFORMATION REBUTTAL",
-    typeColor:"#C46A5A",
-    hook:"colostrum is being sold as 'liquid gold' on evidence a systematic review called inconclusive 🐄",
-    detail:"Bovine colostrum now appears on roughly two-thirds more menus than a year ago, with about one in three consumers linking it to digestive wellness. A gut-health science company called it a wellness fad to avoid, on the grounds that the nutrient profile is built for a newborn calf, not an adult human. A systematic review on gastrointestinal benefits came back inconclusive, and one study found it can actually increase intestinal permeability during endurance exercise.",
+    type:"CULTURAL CONVERSATION",
+    typeColor:"#9E652E",
+    hook:"\"kinda chic\" is the quiet flex — declaring an unglamorous personal habit stylish, without the joke 🪞",
+    detail:"Selfie clips or photo slideshows with on-screen text naming something unconventional the creator does and calling it chic, set to bossa nova, jazz beats or indie bedroom pop. Named a top format for the week of Aug 10-17, 2026. What makes it different from the usual confession formats is the register: it is not self-deprecating and it is not a punchline. It is someone stating a preference calmly and letting it stand — which is the closest thing on the feed right now to Willa's actual voice.",
     velocity:"medium",
-    platform:"TikTok wellness + trade press",
-    willasPlay:"Don't name it. Name the double standard: one supplement gets a halo on no evidence while oat milk gets its ingredient list audited.",
-    dnaMatch:"mom-activist",
+    platform:"TikTok + Instagram Reels",
+    willasPlay:"Static text post: \"kinda chic that my whole ingredient list fits on one line.\" One carton, one shot, no explanation.",
+    dnaMatch:"meme-payload",
     sources:[
-      {label:"DairyReporter · Colostrum: functional treasure or cruel wellness fad? (Aug 4, 2026)", url:"https://www.dairyreporter.com/Article/2026/08/04/colostrum-has-functional-food-potential-but-remains-controversial/"}
+      {label:"tiktoktrends.org · TikTok Trends: August 10-17, 2026 (page dated Aug 16, 2026)", url:"https://tiktoktrends.org/tiktok-trends-10-august/"}
     ]
   },
   {
     id:"CP-7",
     type:"NEWS CYCLE",
     typeColor:"#C9A227",
-    hook:"pediatricians are telling parents to start the school-year sleep reset now, and local news is running it everywhere 😴",
-    detail:"Health desks across multiple markets ran near-identical pediatrician segments on Aug 5–6, 2026 telling parents to begin shifting bedtime and wake-up in 15–30 minute steps one to two weeks before the first bell. The prescription is specific: room at 65–70°F, devices out 30–60 minutes before bed, a 30-minute wind-down split between getting ready and something calm. It is the one back-to-school ritual that happens the night before rather than the morning of.",
+    hook:"a woman put every stick of butter on a kitchen scale and caught the brand short-weighing all of them 🧈",
+    detail:"The video went wide on Aug 11, 2026: she unwraps stick after stick, weighs each one, and every single one comes in under what the package says. The comment section did what comment sections do — people started weighing things in their own kitchens. It is a small story that is really about a much larger one: shoppers have stopped taking the front of the package on faith and have started reaching for a scale, a scanner or an app. That instinct is the single best thing that has happened to brands that can survive being checked.",
     velocity:"high",
-    platform:"Local TV health desks + parenting press",
-    willasPlay:"Own the wind-down, not the wake-up. Willa's Kids warmed in a mug as the last step before screens go off.",
-    dnaMatch:"kid-family-moment",
+    platform:"TikTok + consumer news",
+    willasPlay:"Reel: put Willa's on the scale and read the label out loud. Nothing to catch. Caption: \"weigh it. we'll wait.\"",
+    dnaMatch:"on-pack-checklist",
     sources:[
-      {label:"WTOP · How to help your children reset their sleep schedules for the new school year (Aug 5, 2026)", url:"https://wtop.com/parenting/2026/08/how-to-help-your-children-reset-their-sleep-schedules-for-the-new-school-year/"},
-      {label:"WSAW · Pediatrician says mid-August is a good time to start adjusting kids' sleep schedules (Aug 6, 2026)", url:"https://www.wsaw.com/2026/08/06/pediatrician-says-mid-august-is-good-time-start-adjusting-kids-sleep-schedules-school/"}
+      {label:"The Daily Dot · A Viral TikTok Shows a Woman Catching Her Butter Brand Short-Weighing Every Stick (Aug 11, 2026)", url:"https://news.google.com/rss/articles/CBMimwFBVV95cUxQeDlLSkw4UXRfRGoybFptYjlyWXVqNHFpTHVvUk9wSVZ2Tnkyb2V2eWp6eFdGWUNXTmF6a1pXNHZjM3MxYURyNTRuN0xKaGd2Z1N6ZGlPZEQybThQMkhwc01nZk5qY0V4OTlmS0dtX2VsQWNLYTgzWi1IajZNV0JJOS1oT0xFSDE0YU8tSU9NSEp2bC1NQjdTdnZDZw?oc=5"}
     ]
   },
   {
     id:"CP-8",
-    type:"CULTURAL CONVERSATION",
-    typeColor:"#9E652E",
-    hook:"'protein-maxxing' has spread to coffee, chips and soda — and the science says people are timing it wrong 💪",
-    detail:"An Aug 9, 2026 wellness feature and companion quiz calls protein the most talked-about and most misunderstood nutrient going, with claims now stamped on coffee, chips and soda. The recurring mistake it names is timing: Americans take roughly half their daily protein at dinner and far too little at breakfast, which is exactly where the satiety and muscle benefit would come from. The number on the front of the pack is being treated as the whole story.",
-    velocity:"high",
-    platform:"National wellness press + TikTok",
-    willasPlay:"Push back on protein-as-a-sticker, ride protein-at-breakfast. Kids has 8g, same as dairy, in a cup a kid actually finishes.",
+    type:"MISINFORMATION REBUTTAL",
+    typeColor:"#C46A5A",
+    hook:"a celebrity survivalist says organ meats made his family \"thrive\" after quitting plants — the pick-a-team pitch is back 🥩",
+    detail:"The framing circulating on Aug 15, 2026 is the familiar one: a public figure describes abandoning a plant-based diet, credits an extreme replacement, and the internet turns it into a referendum on whether plants work at all. It is not a study and it is not a finding — it is one household's anecdote pushed into a food-tribe argument. The rebuttal Willa's is actually built for isn't about defending veganism; it is about refusing the premise that eating well requires eliminating a category and joining a side.",
+    velocity:"medium",
+    platform:"Social video + plant-based press",
+    willasPlay:"Don't name him. Push back on the team-picking: \"you don't have to quit a food group to eat well.\" Abundance, not elimination.",
     dnaMatch:"mom-activist",
     sources:[
-      {label:"Washington Post · Are you making these common protein mistakes? Take our quiz (Aug 9, 2026)", url:"https://www.washingtonpost.com/wellness/interactive/2026/08/09/are-you-making-these-common-protein-mistakes-take-our-quiz/"}
+      {label:"Plant Based News · Bear Grylls Says Organ Meats Helped His Family 'Thrive' After Ditching Vegan Diet (Aug 15, 2026)", url:"https://plantbasednews.org/news/celebrities/bear-grylls-organ-meats-vegan-diet/"}
     ]
   },
   {
     id:"CP-9",
-    type:"CULTURAL CONVERSATION",
-    typeColor:"#9E652E",
-    hook:"the sharpest food-brand spot of the week hung its joke on a real race weekend, not a made-up holiday 🏁",
-    detail:"Graza launched 'The Hot Lap Test' on Aug 7, 2026 — a spot built entirely around how many NASCAR hot laps it takes to heat a car hood enough to fry an egg — running on the CW race broadcast from Aug 8 with a trackside food truck and a racing-team tie-in. The move is a product's actual function turned into a joke and pinned to a moment already on television. It's the cheapest kind of cultural relevance there is, and it doesn't require inventing an occasion.",
+    type:"MEME TEMPLATE",
+    typeColor:"#73B2C9",
+    hook:"\"illusion plus proof\" is the food-video cut driving completion right now — make it look fake, then prove it 🍮",
+    detail:"Open on a shot so hyperreal it reads as CGI or as a trick — a mango that turns out to be a pastry, a pour that looks impossibly thick — then cut to the interior or the texture as evidence that it is real. Flagged in the Aug 8-15, 2026 report as the mechanic outperforming ordinary meal presentation on food TikTok this week, because the viewer gets both the process satisfaction and a final perceptual surprise. The structure has disbelief and receipt built into it, which is unusually convenient for a product whose whole argument is on the back of the box.",
     velocity:"medium",
-    platform:"TV spot + creative trade press",
-    willasPlay:"Steal the mechanic, not the sport: pin one Willa's product truth to a live moment people are already watching.",
-    dnaMatch:"meme-payload",
+    platform:"TikTok + Instagram Reels",
+    willasPlay:"Open on a pour too creamy to read as dairy-free, cut hard to the four-line label. Disbelief, then receipt.",
+    dnaMatch:"on-pack-checklist",
     sources:[
-      {label:"Shots · Graza adds serious sizzle to NASCAR (Aug 7, 2026)", url:"https://shots.net/news/view/graza-adds-serious-sizzle-to-nascar"}
+      {label:"Lightreel · What Is Trending on TikTok — weekly report, Aug 8-15, 2026 (updated Aug 15, 2026)", url:"https://lightreel.ai/blogs/whats-trending-on-tiktok"}
     ]
   },
   {
     id:"CP-10",
     type:"ENTERTAINMENT MOMENT",
     typeColor:"#A191B2",
-    hook:"a stripped-back folk record landed Friday that would soundtrack a kitchen without irony 🎸",
-    detail:"Margaret Glaspy's fourth album arrived Aug 7, 2026 — eleven songs, forty-two minutes, produced by Joe Henry and cut live over three days with a trio at a New York studio. Reviewers describe a deliberate turn away from indie-rock into country-leaning folk, with half-spoken, unguarded vocals about relationships and self-reckoning. Warm, unhurried, completely un-precious — the tonal opposite of a wellness-brand soundtrack.",
+    hook:"a warm, fiddle-laced rocker about family landed Aug 17 — and it would soundtrack a kitchen without irony 🎻",
+    detail:"Wild Pink's \"Still Coming Down\" arrived Aug 17, 2026 as the title track ahead of the album on Aug 21, recorded in Asheville with fretless guitar from Meg Duffy and fiddle from Landon George. It is described as a warm, ragged rocker, and the frontman has said the song is mostly about his connection to his family. Unironic, un-precious, family-forward and played on real instruments — the opposite register from a wellness-brand soundtrack, and a genuine fit for heritage and morning-kitchen footage.",
     velocity:"medium",
     platform:"Streaming + social audio",
-    willasPlay:"Use a track as the bed for a slow heritage cut — hands, oats, morning light. Riff the mood, never name the artist.",
-    dnaMatch:"viral-recipe-remix",
+    willasPlay:"Use the track under a slow family-kitchen cut — hands, oats, morning light. Riff the warmth, never name the artist.",
+    dnaMatch:"kid-family-moment",
     sources:[
-      {label:"Americana Highways · Review: Margaret Glaspy 'I Am Both' (Aug 5, 2026)", url:"https://americanahighways.org/2026/08/05/review-margaret-glaspy-i-am-both/"},
-      {label:"Tinnitist · Albums Of The Week: Margaret Glaspy | I Am Both (Aug 6, 2026)", url:"https://tinnitist.com/2026/08/06/albums-of-the-week-margaret-glaspy-i-am-both/"}
+      {label:"Stereogum · Wild Pink — \"Still Coming Down\" (Aug 17, 2026)", url:"https://stereogum.com/2508511/wild-pink-still-coming-down/music"}
     ]
   }
 ];
@@ -2002,22 +1999,22 @@ const POSTING_LOGIC = {
 // BRIEF → DNA pattern mapping (applied to BRIEFS below)
 // ──────────────────────────────────────────────────────────
 const BRIEF_DNA = {
-  "AUG10-TT-1":"mom-activist",
-  "AUG10-IG-R1":"on-pack-checklist",
-  "AUG10-PIN-1":"viral-recipe-remix",
-  "AUG10-TT-2":"meme-payload",
-  "AUG10-IG-R2":"kid-family-moment",
-  "AUG10-IG-F1":"before-after-stitch",
-  "AUG10-TT-3":"kid-family-moment",
-  "AUG10-IG-R3":"mom-activist",
-  "AUG10-PIN-2":"viral-recipe-remix",
-  "AUG10-TT-4":"on-pack-checklist",
-  "AUG10-TT-5":"mom-activist",
-  "AUG10-IG-R4":"viral-recipe-remix",
-  "AUG10-PIN-3":"on-pack-checklist",
-  "AUG10-IG-F2":"at-shelf-moment",
-  "AUG10-TT-6":"meme-payload",
-  "AUG10-IG-R5":"mom-activist"
+  "AUG17-TT-1":"mom-activist",
+  "AUG17-IG-R1":"at-shelf-moment",
+  "AUG17-PIN-1":"viral-recipe-remix",
+  "AUG17-IG-F1":"on-pack-checklist",
+  "AUG17-TT-2":"meme-payload",
+  "AUG17-IG-R2":"viral-recipe-remix",
+  "AUG17-TT-3":"before-after-stitch",
+  "AUG17-TT-4":"on-pack-checklist",
+  "AUG17-IG-R3":"kid-family-moment",
+  "AUG17-PIN-2":"on-pack-checklist",
+  "AUG17-TT-5":"mom-activist",
+  "AUG17-IG-R4":"kid-family-moment",
+  "AUG17-IG-F2":"on-pack-checklist",
+  "AUG17-TT-6":"at-shelf-moment",
+  "AUG17-IG-R5":"meme-payload",
+  "AUG17-PIN-3":"meme-payload"
 };
 
 BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
@@ -2030,318 +2027,345 @@ BRIEFS.forEach(b => { b.dnaPattern = BRIEF_DNA[b.id] || null; });
 // pacing, this tells you where to source every shot.
 // ──────────────────────────────────────────────────────────
 const BRIEF_FOOTAGE_INSPO = {
-  "AUG10-TT-1":{
+  "AUG17-TT-1":{
     shoot:[
-      "Single locked-off medium close-up of Christina in her own kitchen, morning window light camera-left — shoot the whole thing in one take, then again slower; the calmer take is the one",
-      "The carton set-down at 3s: hand enters, places Willa's Original label-forward at frame-right, hand exits. Shoot 4-5 times, it's the beat the eye lands on",
-      "Slow 4-second push-in to hand-resting-beside-carton for the proof beat — no turning, no flipping, no lifting",
-      "Clean plate of the empty counter with the carton alone, held 6 seconds, as a safety cutaway if a line needs trimming"
+      "The four set-downs are the whole brief — bowl of oats, glass of water, vanilla bottle, dish of sea salt, one per beat onto an empty pale-wood counter. Shoot the sequence 6-8 times and cut the take where the rhythm is slowest, not the one where it's cleanest",
+      "Single locked-off counter-height frame with Christina at camera-left and deliberately empty counter at camera-right — shoot the whole thing in one continuous take, then again slower; the calmer take is the one",
+      "Carton set-down at the end of the row, placed BEHIND the four objects, label forward, hand exiting frame — shoot 4-5 times, it is the beat the eye lands on",
+      "Slow 3-second push-in past her shoulder to the four objects plus carton, with the bowl of oats tilting toward the light on the whole-oat line",
+      "Clean plate of the finished row — four objects and the carton, no hands, held 6 seconds — as a safety cutaway if a line needs trimming"
     ],
     found:[
-      "Trend reference (news): https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira — Food Safety Magazine, Aug 4, 2026. The plain-language read on what actually cleared review; use it to get the mechanism sentence right before the shoot",
-      "Trend reference (news): https://www.dailyintakeblog.com/2026/08/oira-completes-review-of-fda-proposed-gras-rule/ — The Daily Intake, Aug 7, 2026. Confirms the Jul 31, 2026 clearance date and the public-inventory provision",
-      "Watch two Patagonia founder-to-camera stance videos back to back before rolling — the reference is the stillness and the refusal to raise the voice, not the subject matter"
+      "Reference (permanent program page): https://www.nonultraprocessed.org/ — read this before the shoot so the one sentence about the bar is said correctly and nothing gets overstated. It is background for the script only; nothing from this page, no seal, mark or program name, goes on screen or in caption",
+      "Reference (listening): https://www.tiktok.com/tag/ultraprocessed — scroll the top posts and read the comments for how people actually use the phrase. Most of them are using it without a definition, which is exactly the gap this brief fills",
+      "Reference (posture): watch two Patagonia founder-to-camera stance films back to back before rolling — copy the stillness, the conversational volume and the refusal to sell, not the subject matter",
+      "Reference (Instagram): Kiki Milk's category-critique posts — proof you can lay out what the category does without naming a single brand or sounding defensive"
     ],
     memes:[
-      "No meme layer on this one — it's the week's straight-faced stance, and the joke version of the same signal runs separately on TikTok. Stacking a format on top would undercut the gravity"
+      "No meme layer and no trending sound on this one — it's the week's straight-faced stance and the four set-downs are the rhythm. A format on top would undercut the gravity and make the calm read as a bit"
     ],
     archive:[
-      "Skip archive — single-take founder frame, all original footage, no stock and no news clips by design"
+      "Skip archive — single-take founder frame, all original footage, no stock, no news clips, and explicitly no certification-mark or packaging-seal imagery of any kind"
     ]
   },
-  "AUG10-IG-R1":{
+  "AUG17-IG-R1":{
     shoot:[
-      "Fridge-door open, hand pushing past two label-turned-away cartons to pull Willa's Original from the back — shoot 3 takes, this is the confession beat and it has to feel unstaged",
-      "Side-on 50mm slow-motion pour into a clear glass in hard window light — the coat it leaves on the glass wall IS the taste claim, shoot it until it's clean",
-      "Locked overhead of the carton label-forward on a cream board with empty space at frame left for four stacked check marks",
-      "Macro drift across the certification marks on the carton — organic, glyphosate-free, WBENC — one focus pull per mark",
-      "Hand lifting the full glass out of frame, carton left alone and in focus"
+      "The walk-in: follow Christina from a step behind as she turns into the chilled aisle and reaches the Willa's set — shoot 4+ takes, the whole Reel lives or dies on whether the first three seconds feel unstaged rather than blocked",
+      "The straight-to-lens answer: 'people ask why we make this' → pause → 'Willa was my grandmother' — shoot at least 6 takes and select the one where the pause runs too long, not the clean one",
+      "Loose close-up of her thumb tracing the four-line ingredient list on Willa's Original, label filling the right two-thirds — achieved by the operator physically stepping in, never a zoom",
+      "The step-back reveal of the full Willa's set faced up on the shelf (Original, Chocolate, Kids, Barista) with her hand squaring the carton she just replaced",
+      "Coverage pass with zero Willa's dialogue: her hands, the shelf, the case light — insurance only, to be used for a Story cutdown, never to break the Reel's single take",
+      "Safety take of the entire piece at half the pace and half the volume, in case the first selects play as pitched rather than said"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — read the comment sections under category posts for the exact phrasing people use when they complain about texture; steal their words for the three complaint lines",
-      "Reference (Instagram): Kiki Milk's feed — the posture to match exactly. Lay out the category's shortcut plainly, then the fix, no defensiveness, no named brand",
-      "Reference (Instagram): Olipop's benefit posts — proof you can say 'prebiotic fiber' out loud without sounding like a supplement company"
+      "Reference (posture, not format): Ghia's founder-calling-a-longtime-customer post — the exact warmth register to match. Find it on the brand's own feed; do not guess a handle and do not paste a URL nobody has opened.",
+      "Reference (register): Graza's co-founder letter posts — plainspoken, slightly unpolished, no manifesto, no stance. That is the ceiling for this brief's tone.",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — read how people actually phrase the 'why does this brand even exist' question in the comments and steal a real phrasing for her opening line rather than writing one from scratch"
     ],
     memes:[
-      "No meme template and no trending sound on this one — the humor is the fridge-door confession in the first three seconds. The silence under the three complaints is the setup; adding a sound trend kills it"
+      "No meme template, no trending sound, no transition, no cut. This is deliberately the one post in the week that isn't riding anything — a format would undo the entire point of it."
     ],
     archive:[
-      "Existing clean-pour footage of Willa's Original can back up the hero shot, but reshoot if the coat on the inside of the glass isn't visible — that frame carries the entire taste argument"
+      "Do NOT cut in heritage, kitchen or period archive footage. The unbroken-take-in-the-aisle constraint IS the piece; a nostalgic B-roll insert turns a plain answer into a commercial and kills it.",
+      "Existing Willa's shelf photography is fine for a Story still or the cover frame, but the Reel itself stays unbroken."
     ]
   },
-  "AUG10-PIN-1":{
+  "AUG17-PIN-1":{
     shoot:[
-      "3/4 overhead of the finished cup with the soak line visible through the glass, spoon already pulled through",
-      "Warm Willa's Chocolate poured over the baked cup until it pools at the rim — shoot 3-4 takes, this is the alternate hero",
-      "Willa's Chocolate carton standing in the upper third, label forward, afternoon window light",
-      "Overhead flat-lay of the seven recipe ingredients in small bowls, carton anchoring the frame"
+      "THE CUT — one sandwich standing cut-face to camera, sliced with a hot knife so the pastry layers and the dark ice cream band both read. This is the pin; shoot it fifteen times and keep cutting fresh sandwiches until one face is clean",
+      "Hand lifting one sandwich off a stack of three, melt threading between them — the alternate hero, shot at the same height and light",
+      "Willa's Chocolate pouring into the blender jar over chilled coconut cream — the pour is the only step worth a frame, and it proves the carton is the base, not a garnish",
+      "Willa's Chocolate carton standing at frame right in late-afternoon window light, label forward, sandwich in front of it slightly out of focus",
+      "Overhead of the split croissants lined up on the board waiting to be packed — flake side up, natural crumb, nothing styled off the counter"
     ],
     found:[
-      "Trend reference (article): https://abc17news.com/stacker-food-drink/2026/08/08/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/ — the Aug 8, 2026 roundup naming single-serve cakes among the formats moving purchases",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/mugcake — single-serve cake builds, for portion framing + how the cup is composed in-frame"
+      "Trend reference (article): https://news.google.com/rss/articles/CBMiakFVX3lxTFA4R1V2aWR4c0lLY1ZzYzZlb05GdEZILXROY1lRUzRIRHlVVHQtNkdJSlc1M1JpSzVoVFVjSFhLaExVZFVUbWRVOFR1blNZanRyd2FHOUtBanZiNlhCaG5idEtQNjd4RGhOd0E?oc=5 — Parade's Aug 16, 2026 taste-test of the two-ingredient croissant ice cream sandwich, the coverage that put the build in front of food media this window",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/icecreamsandwich — scan the top posts for how the cut face is framed and lit; every strong one shoots the cross-section straight-on, never overhead",
+      "Reference (Instagram): Fishwife and Graza feeds — the exact type restraint to match. One confident line over one beautiful photograph, never a recipe card, never a badge cluster"
     ],
     memes:[
-      "Static pin → skip memes; the portion-size joke in the overlay carries the wink"
+      "Static pin → no meme template and no trending sound. The joke is entirely in the kicker line — 'two ingredients. one of them won Best Beverage.' — and it only lands if the pin stays clean around it"
     ],
     archive:[
-      "Skip archive — all original food photography"
+      "Skip archive — all original food photography. Existing carton stills can back up the frame-right placement, but the cut face has to be shot fresh"
     ]
   },
-  "AUG10-TT-2":{
+  "AUG17-IG-F1":{
     shoot:[
-      "The present-day match-frame: bowl centered, spoon at the same angle as the archive photo, Willa's Original label-forward just behind — shoot this AFTER you have chosen the photo so the framing matches",
-      "Hands-only pour over the bowl, one clean unbroken take, thick and matte with no bubbles",
-      "Single spoon lift at the end, close-miked",
-      "Static end-card lockup: carton and bowl on cream, navy type"
+      "CARD 1 typography plate — flat cream sweep with nothing on it, shot (or built) with enough clean margin that the hook line can sit large and left with real air around it",
+      "Straight-down macro of dry whole oat groats filling the frame edge to edge in warm window light — no bowl, no props, just the grain and its texture",
+      "The hero: Willa's Original label-forward beside one clear glass on cream, straight-on at glass height, with deliberate empty space at frame left for the two-line stat stack. Shoot 3-4 takes, this is the card the post lives on",
+      "The contrast plate: same surface, same crop, same eye line, same light — plain unbranded glass where the carton was. Lock the tripod between these two setups and do NOT move it, the comparison is the whole mechanic",
+      "Hand tilting a small spoon of whole oat groats beside the Willa's Original back label with all four ingredient lines legible",
+      "Carton alone on a windowsill in late-afternoon light, cream negative space above it for the sign-off line"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/nostalgia — how creators are pacing the childhood-photo hold before the beat-drop cut; note how long they let the still sit",
-      "Format explainer (permanent reference page): https://newengen.com/insights/august-tiktok-trends/ — the 'used to go fishin'' childhood-photo transition, its audio and its mechanic"
+      "Reference (TikTok): https://www.tiktok.com/tag/fibermaxxing — not a format to ride, a language mine. Read how people actually talk about fiber before writing the card overlays, then say the protein half in that same plain register",
+      "Reference (Instagram): Olipop's benefit posts — the proof you can say 'prebiotic fiber' out loud without turning into a supplement company. Borrow the ease, cut the crassness by about a third",
+      "Reference (Instagram): Kiki Milk's feed — the category posture to match. State the shortcut plainly, state the fix, name no one, apologize for nothing"
     ],
     memes:[
-      "The wider then/now transition wave — the joke is always the MATCH, never a punchline; resist adding one",
-      "Skip any 'nobody's talking about' or ironic-caption overlay — this format works because it plays the memory straight"
+      "No meme template and no trending sound — this is a static carousel and CARD 1 carries the joke on its own. The humor is entirely in the phrase 'two-person job' applied to a grain; adding a format on top would flatten it"
     ],
     archive:[
-      "A real team or customer childhood breakfast photo is strongly preferred over stock — put out an internal call before shooting",
-      "If no personal photo clears, license a 1990s home-kitchen breakfast still; do NOT use a Willa family photo here (the grandmother archive is reserved for the heritage Reel this week)"
+      "Existing whole-groat macro footage can cover CARD 2 if the grain reads sharp and the light is warm, not clinical. Everything else needs a fresh shoot because cards 3 and 4 must come from one locked camera position"
     ]
   },
-  "AUG10-IG-R2":{
+  "AUG17-TT-2":{
     shoot:[
-      "Cofounder-sister to camera in her own kitchen, mid-morning, no ring light — one continuous take of the hook line, shoot 4-5 versions and pick the least polished",
-      "Overhead insert: school forms + a printed action plan fanned across the counter, hands only, blank or blurred documents",
-      "Fridge door open → Willa's Kids carton lifted out and set down beside the paperwork, label forward — shoot twice, once slower",
-      "Kid's hand entering frame to take the cup and leaving with it — no face needed, just the reach",
-      "Carton alone on the counter in morning light for the end card, hold 3 full seconds"
+      "The four locked frames, shot in one session without moving the camera between beats 1-2 — the cut only reads as a format if the frame is genuinely identical",
+      "Hand flicking a small splash into an empty clear glass, then a full steady pour from the label-forward carton — shoot both at the same height so the escalation is unmistakable",
+      "Fistful of dry whole oat kernels falling back into a heaped bowl in real time, close-miked — this is the beat that sells 'creamy' without a single word about it",
+      "Frontal frame filled edge to edge by the Willa's Original carton, label dead center and fully legible at phone size — check legibility on a phone before wrapping",
+      "One slow quarter-turn of the carton to the ingredient list for the end card — one take, unhurried, no hand jitter"
     ],
     found:[
-      "Context (Aug 4, 2026): https://www.allergicliving.com/2026/08/04/back-to-school-with-food-allergies-8-tools-for-success/ — the actual pre-first-bell checklist allergy families are working right now. Read it before scripting so the details ring true; do NOT quote it on camera.",
-      "Policy grounding (permanent reference page): https://www.durbin.senate.gov/newsroom/press-releases/durbin-fischers-protecting-children-with-food-allergies-bill-signed-into-law — why this back-to-school is different. Internal only, never cited in the post.",
-      "Tone reference: Partake Foods' parent-first Reels — mother-founded, allergen-lane, warm, and completely unapologetic about talking to one audience. Match that confidence, not a broader 'for everyone' register."
+      "Trend reference (TikTok): https://www.tiktok.com/tag/bobtrend — watch the top posts before shooting and match the mechanic exactly: identical one-word answer, escalation carried by the visual, cuts on the downbeat",
+      "Trend reference (article): https://tiktoktrends.org/tiktok-trends-10-august/ — the Aug 10-17, 2026 roundup naming this one of the two dominant live formats; use it to confirm the format is still peaking the morning of the shoot",
+      "Reference (Instagram): Olipop's feed — proof you can run a dumb-simple joke on a functional-nutrition product without a single sentence of explanation attached to it",
+      "Reference (Instagram): Fishwife's and Graza's flat, plain product frames — the visual register to match. Bright, unfussy, zero styling ambition"
     ],
     memes:[
-      "No meme format on this one — the humor pattern is People-on-Camera Amplification (cofounder-sister), and the wink lives entirely in 'that list is already long enough.' Do not bolt a trending audio onto it; the sound is her voice."
+      "The format IS the meme — a fixed four-beat question/one-word-answer escalation, currently live on TikTok. Ride the mechanic straight, do not remix it or add a second joke on top",
+      "Hard rule for this brief: no caption annotation, no on-screen explainer, no 'IYKYK' text, no comment-pinned setup. If someone doesn't recognize the format they still get four questions answered with one word, which is the actual point"
     ],
     archive:[
-      "Skip archive — all original footage. Do NOT reuse the AUG 3 school-morning or lunchbox footage; this is a different room and reusing it collapses the two briefs into one."
+      "No archive footage — every frame is shot fresh so the four beats match exactly. Existing pour footage will not cut against a new locked frame and will kill the format read"
     ]
   },
-  "AUG10-IG-F1":{
+  "AUG17-IG-R2":{
     shoot:[
-      "The 'before' glass — generic amber syrup-sweet drink, unbranded, flat cool light, eye-level straight-on. Shoot it plain and slightly joyless on purpose",
-      "The 'after' pour — Willa's Original into a clear glass, identical crop and eye-line to the before card, warm morning light, carton label-forward beside it. Shoot 3-4 takes, this is the card the post lives on",
-      "Straight-down macro of dry whole oat groats spilling beside the Willa's Original back label, four lines legible",
-      "Carton on a windowsill in morning light with clean cream negative space above for the sign-off type"
+      "Overhead one-take lemon squeeze straight into the ice-loaded blender jar — mess is good, do not clean the board between takes",
+      "The maple ribbon and the zest grate, shot overhead and close — these are the two 'made by a person' beats in the whole piece",
+      "Side-on slow-motion of the white Willa's column entering the translucent yellow base — this is the premise shot, get 4+ takes",
+      "THE TURN: one locked unbroken side-on take of the jar going translucent-yellow to fully opaque and holding three extra seconds. This is the retention shot. Shoot it until it turns clean in a single continuous frame — do not fix it in the edit",
+      "Continuous pour into a tall clear glass filling as one opaque body — reshoot if any line, ring or strata appears in the glass",
+      "Static end frame: sweating glass + carton label-forward + scattered zest on the cream board, hand exiting"
     ],
     found:[
-      "Skip found — this is an owned two-panel switch carousel, all original photography. No trending format is being ridden, so nothing to match"
+      "Trend reference (TikTok): https://www.tiktok.com/tag/creamylemonade — watch the top posts for pacing and for how the creamy turn is framed; almost none of them hold the blend long enough, which is the gap this brief takes",
+      "Trend reference (article): Parade · 'I Tried the Viral Creamy Lemonade and It Tastes Like Lemon Pie in a Glass' (Aug 17, 2026) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Sd2k4ZHVJWkdFYldqbVBEMlJZUkVmR2ZmZFFVQkJ3MXk2R1BiQmg5ZDdOTE5EcFVDSElUOTJaekJjbllDTWhXclJBSTNQM0RvME9peEdkX1pJSTc5cU9hRkxR?oc=5 — the 'lemon pie in a glass' verdict is the taste promise to match",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/lemonade — the wider late-summer drink lane; useful for reading which thumbnails are winning on pure color contrast"
     ],
     memes:[
-      "Static carousel → skip memes; card 1 is the Relatable Confession line and carries the whole joke"
+      "No meme template and no trending audio on this one. The format IS the trend — the recipe remix is the ride, and the joke is entirely in the voiceover's dryness plus the blender doing the arguing",
+      "Humor pattern is People-on-Camera Amplification run as voiceover-only, no face. The warmth of a real voice over anonymous hands is the whole reason this doesn't read like a stock recipe reel"
     ],
     archive:[
-      "Skip archive — no period or stock material needed"
+      "Existing Willa's Original pour footage can cover the carton-set-down beat, but THE TURN and the pour-out must be shot fresh — no archive clip has the opacity change, and that change is the entire retention mechanic",
+      "Do NOT pull from any archived layered-drink footage. This drink is one opaque body, no strata, no visible line in the glass"
     ]
   },
-  "AUG10-TT-3":{
+  "AUG17-TT-3":{
     shoot:[
-      "Locked-off wide of one kitchen counter at night, single lamp practical — shoot the entire sequence in one unbroken take first, then get coverage",
-      "Slow warm pour of Willa's Kids into a small ceramic mug, steam visible against the dark background — 4-5 takes, this is the hero frame",
-      "Small hands wrapping the mug, lifting it just off the counter, holding still for a beat",
-      "Adult hand turning a phone face-down on the counter in one motion, no cut",
-      "Six full seconds of the empty counter with the carton and the lamp — this is the end-card plate, don't rush it"
+      "Handheld POV walk down a chilled plant-milk aisle, hand reaching for an anonymous carton with the label turned away — shoot 4 takes and check playback frame by frame that no competitor branding is readable anywhere in the sequence",
+      "Locked overhead on a cream board: two hand-lettered cards, a pile of whole oat groats poured onto one and a level scoop of plain white protein powder tapped onto the other — both hands must move at the same unhurried pace, because the second the powder hand looks contemptuous the brief turns into a sneer",
+      "Side-on 50mm pour of Willa's Original into a clear glass in hard morning window light, carton label-forward at frame right — the coat the milk leaves on the glass wall is the shot, so run it until it's clean",
+      "Overhead of a hand turning the Willa's Original carton to the ingredient list and tracing the four lines with a finger, one line per beat",
+      "Hand lifting the full glass out of frame and leaving the carton alone in focus — this is the end-card frame, shoot it wide enough to set text underneath"
     ],
     found:[
-      "Trend reference (news cycle): WTOP · How to help your children reset their sleep schedules for the new school year (Aug 5, 2026) — https://wtop.com/parenting/2026/08/how-to-help-your-children-reset-their-sleep-schedules-for-the-new-school-year/ — the screens-away, calm-wind-down-before-bed framing the whole cycle repeats",
-      "Trend reference (news cycle): WSAW · Pediatrician says mid-August is a good time to start adjusting kids' sleep schedules (Aug 6, 2026) — https://www.wsaw.com/2026/08/06/pediatrician-says-mid-august-is-good-time-start-adjusting-kids-sleep-schedules-school/",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/bedtimeroutine — the low-light single-room pacing parents actually post, and the on-screen text rhythm that fits it"
+      "Trend reference (TikTok): https://www.tiktok.com/tag/highprotein — read how people are actually talking about protein numbers right now and steal their phrasing for the hook; the confession has to use their words, not ours",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — the handheld aisle-comparison POV is a live format on this tag; match its pace and its lower-third text placement so the first three seconds read native",
+      "Reference (Instagram): Kiki Milk's feed — the exact posture for this brief. Lay out the category's shortcut plainly, then the fix, no defensiveness and no named brand anywhere"
     ],
     memes:[
-      "Skip memes — the register is deliberately quiet. The wink lives in the caption's 'mornings get all the back-to-school content' turn, not in a template."
+      "Relatable-confession structure with no trending audio required — the joke is that every one of us has compared two cartons in eight seconds and never once asked where the number came from. The humor is recognition, not a punchline, so there is nothing to land and nothing to escalate. Keep the voiceover flat and let the aisle-to-kitchen cut do the work."
     ],
     archive:[
-      "Skip archive — one room, one night, all original footage."
+      "Existing clean-pour footage of Willa's Original can cover the pour beat if the coat on the inside of the glass is visible. The aisle POV and the two-cards overhead have to be shot fresh — there is no archive frame with a safely un-branded competitor carton in it."
     ]
   },
-  "AUG10-IG-R3":{
+  "AUG17-TT-4":{
     shoot:[
-      "Cofounder handheld 35mm chest-up at a kitchen counter in real window light, carton at frame right — shoot the hook line 4-5 times until it sounds like she's telling another parent, not reading",
-      "Locked overhead of a hand writing '1 law. 2 sentences.' on a plain notepad, real handwriting, pen sound close-miked",
-      "Macro slow drift across the Willa's Kids carton nutrition side, one focus pull per fact, no hand in frame",
-      "Wider handheld of her counting the three questions on her fingers, counter and carton both reading in frame",
-      "Static wide: carton on the counter beside an empty backpack propped by the door in morning light — no people, no kids in frame at any point"
+      "The entire piece in ONE unbroken locked 50mm take — shoot ten or twelve full passes and pick the cleanest, because a single hand fumble kills a take and there is no cut to hide behind",
+      "Index finger tapping down the four ingredient lines, one deliberate tap each, then hovering over blank carton with nothing left to tap — that one-second hover on empty space is the joke and the proof at the same time, so shoot it long",
+      "Phone held over the carton until the Clean Label App scan resolves, then tilted just enough for '94' to be legible — check legibility on an actual phone before wrapping, not on the monitor",
+      "Fingertip taps on the glyphosate-free certification mark, then the third-party certifier's own page held up beside the carton — it has to be visibly not a Willa's page",
+      "Hands withdrawing and leaving the carton alone in hard light with nothing moving — the last frame is the whole posture, so give it a clean three seconds of room tone"
     ],
     found:[
-      "Reference (policy, permanent page): https://www.congress.gov/crs-product/IN12548 — the Congressional Research Service page on the Whole Milk for Healthy Kids Act. Read it before the shoot so the two glosses are worded accurately; do not put the acronym on screen",
-      "Reference (news): https://www.wfmz.com/health/usda-lets-whole-milk-out-of-a-15-school-year-detention-this-fall/article_7c22bc7a-5b5a-568d-b409-ecdec7b07ac3.html — Aug 4, 2026 syndication of the whole-milk return; this is the coverage that swamped the nondairy provision, which is exactly why the brief exists",
-      "Reference (allergy press): https://www.allergicliving.com/2026/08/04/back-to-school-with-food-allergies-8-tools-for-success/ — Aug 4, 2026 back-to-school checklist for allergy families; the tone to match is calm, practical, checklist-shaped, never alarmed",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/schoollunch — scan for the parent-creator delivery pattern on school-office content: talking to lens from a counter, no intro, questions counted on fingers"
+      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — scan the top posts for how people phrase a verification challenge to a brand in the comments; the exact words they use are better than anything we'd write for the reply script",
+      "Context (article, Aug 11, 2026): https://news.google.com/rss/articles/CBMimwFBVV95cUxQeDlLSkw4UXRfRGoybFptYjlyWXVqNHFpTHVvUk9wSVZ2Tnkyb2V2eWp6eFdGWUNXTmF6a1pXNHZjM3MxYURyNTRuN0xKaGd2Z1N6ZGlPZEQybThQMkhwc01nZk5qY0V4OTlmS0dtX2VsQWNLYTgzWi1IajZNV0JJOS1oT0xFSDE0YU8tSU9NSEp2bC1NQjdTdnZDZw?oc=5 — the checking moment this brief is riding. INTERNAL BACKGROUND ONLY. Watch it to understand the audience's mood, then never reference the brand, the product or the category anywhere in the shoot, the caption or the replies",
+      "Reference (permanent): https://www.nonultraprocessed.org/ — the third-party-verification landscape shoppers are being asked to trust right now. Internal context for why 'here's how to check us yourself' beats 'here's another badge'",
+      "Reference (Instagram): Kiki Milk's feed — the exact posture to match. Confident, specific, zero defensiveness, and never a named opponent",
+      "Reference (Instagram): Graza and Fishwife product frames — the plain, bright, unstyled register for a single object alone on a board"
     ],
     memes:[
-      "No meme template and no trending sound. The dry line — 'one law, two sentences, and everyone only read the first one' — is the entire joke, and a trending audio underneath would flatten it"
+      "No meme template and no trending sound. The humor is the unmoving purple dare sitting on screen for twenty seconds while the hands quietly do the homework underneath it — a borrowed audio would tip an open door into a dunk",
+      "Hard guardrails, both non-negotiable: (1) nothing is ever weighed and no kitchen scale appears in frame — fill weight varies and it is not a Willa's claim; (2) no other brand is named, shown, blurred, alluded to or implied, and no line in the caption or the comment replies references anyone else's package. The post is generous or it is off-brand"
     ],
     archive:[
-      "Existing Willa's Kids carton macro footage can cover THE CARTON beat if the nutrition side reads clean in matching window light; the on-camera and notepad beats must be shot fresh"
+      "No archive footage usable — the piece is one continuous take and any inserted library shot breaks the single-take premise that makes the dare credible. Existing carton stills can be used for the paid cutdown, never in the organic post"
     ]
   },
-  "AUG10-PIN-2":{
+  "AUG17-IG-R3":{
     shoot:[
-      "Straight-on at glass height, tall clear glass, all three bands readable as clean stripes — shoot 4-5 takes, the band separation is the whole pin",
-      "Slow pour of Willa's Original over ice as a stills sequence — grab the frame where the oat band is widest and cleanest",
-      "Willa's Original carton placed just behind and right of the glass, label forward, in bright side daylight",
-      "A crushed-strawberry base close-up as a secondary pin variant for A/B testing the thumbnail"
+      "Cofounder-sister at her own counter, carton already in hand, starting mid-thought straight down the lens — shoot 4+ takes and use the one where she hasn't warmed up yet. The unpolished take is the take",
+      "Her hand rotating the Willa's Kids carton so the ingredient list faces the lens and holding it steady — real carton, real hand, no graphic over the label. Shoot it long enough to hold under five lines of text",
+      "Locked side-on 50mm pour into the kid's glass, carton label-forward at frame right — one continuous motion, no cutaway",
+      "Over-the-shoulder phone POV of the real Yuka scan resolving to 100/100 — do the scan for real, do not mock the screen up in post",
+      "Kid walking in at waist height, taking the glass, drinking, walking out — one wide locked take, no direction given to the kid, no second attempt at 'cuter'",
+      "Static end frame: carton label-forward beside the emptied glass on the counter in low afternoon light, her hand exiting"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/strawberrymatcha — top posts for the layer order, glass shape and how creators hold the band separation",
-      "Trend reference (article): https://abc17news.com/stacker-food-drink/2026/08/08/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/ — Aug 8, 2026 roundup naming the layered strawberry matcha among the formats currently changing what people buy",
-      "Pinterest: existing 'iced strawberry matcha' pins — study the title conventions that rank, not the styling"
+      "Reference (Instagram): @partakefoods — https://www.instagram.com/partakefoods/ — the exact register to match. Parent-first with zero apology, warm, allergen facts stated like weather. Study how they say the hard thing without ever sounding worried",
+      "Reference (TikTok): https://www.tiktok.com/tag/allergenfree — read the comments, not the videos. The phrasing parents actually use when they're asking 'is this okay' is the phrasing the on-camera read should borrow",
+      "Reference (TikTok): https://www.tiktok.com/tag/dairyfreekids — useful for pacing: the posts that land are the ones where a parent answers in one breath instead of building suspense",
+      "Reference (app): Yuka — https://yuka.io/en/ — pull the actual scoring screen for the scan beat so the on-screen UI matches what a viewer sees when she scans it herself"
     ],
     memes:[
-      "Static pin → skip memes; the wordplay lives entirely in the one line of typography"
+      "No meme template, no trending sound, no format ride on this one. Humor pattern is People-on-Camera Amplification via the cofounder-sister — the whole charm is a real mom answering a question fast and then getting on with her day",
+      "The closest thing to a joke is the timing of THE HANDOFF: the kid takes the glass, drinks it, leaves, and the punchline is that nothing dramatic happens. Do not add a sound effect, a zoom or a caption to that beat — the flatness is the joke"
     ],
     archive:[
-      "Skip archive — all original food photography"
+      "No archive footage on this one. Every frame has to be the cofounder-sister and her own kitchen — pulling a stock pour or an old studio carton clip is exactly what would make this read as an ad instead of an answer",
+      "Existing Willa's Kids packshots may be used for the end card ONLY if the light matches the kitchen; if it doesn't, shoot the end frame on the same counter at the same hour"
     ]
   },
-  "AUG10-TT-4":{
+  "AUG17-PIN-2":{
     shoot:[
-      "The single locked-off waist-height frame: tall glass of ice on cream counter, Willa's Barista carton beside it label forward — this one setup carries the entire post, get the composition right before anything is poured",
-      "Cold brew hitting ice, close-miked — shoot 3-4 takes purely for the sound",
-      "The Willa's Barista pour blooming up through the cold brew, slow, no stir yet — hero frame, shoot it at least 5 times and pick the cleanest bloom",
-      "Hand with a spoon of maple hovering over the glass, then setting it down without pouring — shoot BOTH endings (adds it / doesn't) so the edit can pick the funnier beat",
-      "Condensation running down the glass with the carton pulling into focus behind it"
+      "Straight-on at glass height: one plain clear glass three-quarters full of Willa's Original on flat cream, soft daylight, one real shadow to frame right — shoot until the milk reads opaque and creamy against the cream, that opacity IS the no-gums argument",
+      "Same setup with the Willa's Original carton standing label-forward beside the glass in the lower third, leaving clean empty cream across the top two-thirds for the title block",
+      "Alternate insurance frame: mid-pour into the same glass, same camera position, in case the still version reads flat in the feed",
+      "Macro of the ingredient list on the carton, four lines legible edge to edge — not for the pin face, for the alt-pin and the Studio riff"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/icedcoffee — the at-home build format; watch for how little on-screen text the best ones use",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — text-overlay-only posts in the category, for type size + placement on a single static frame"
+      "Reference (TikTok): https://www.tiktok.com/tag/oatmilk — read the comment sections under category posts for the exact words shoppers use about gums and thickeners, then let the title match their phrasing instead of ours",
+      "Reference (Instagram): https://www.instagram.com/graza/ — the design target. An ingredient story told as a zine cover: one line, big, confident, zero infographic chrome",
+      "Reference (Instagram): https://www.instagram.com/omsom/ — typographic nerve. Proof a flat colour field and one sentence can out-perform a styled food shot on a search surface"
     ],
     memes:[
-      "Pattern 10 (wordplay / text joke) — one line, one frame, no edit tricks. If the line needs a second read, it's the wrong line.",
-      "Deliberately NOT riding a meme audio: the stillness is the format. Do not add transitions to make it feel busier."
+      "No meme template and no trending format on this one — it's a static search pin and the whole payload is the wordplay in the kicker line. A borrowed format would bury the joke and break the title's searchability"
     ],
     archive:[
-      "Skip archive — the maple-spoon hesitation has to be shot fresh, nothing in the library has that beat",
-      "Do NOT pull the Aug 3 steam-wand/foam footage; this post is iced and text-only by design"
+      "Existing clean-pour stills of Willa's Original can stand in if the coat on the inside of the glass is visible and the background is a true flat cream — reshoot if the archive frame has a kitchen scene behind it, the pin depends on the empty field"
     ]
   },
-  "AUG10-TT-5":{
+  "AUG17-TT-5":{
     shoot:[
-      "The full take, locked off on a tripod, one unbroken 28 seconds — shoot it 5-6 times and pick the calmest one. Do not cut into it in post",
-      "Hand sliding handwritten index cards into frame, close-miked so the paper-on-counter sound is usable",
-      "Finger tracing the four-line ingredient list on the Willa's Original carton, one line per beat — the slower the better",
-      "Slow pour into a clear glass in hard morning window light, set down inside the same locked frame",
-      "PROP NOTE: use a plain unbranded amber-glass jar + white scoop. No label, no brand, no real product on the counter. It must never be identifiable and it must never leave frame"
+      "The empty scrubbed wood table under hard morning light, locked overhead, camera squared and taped down — shoot the empty frame first and never move the head again; the fixed camera is the whole idea",
+      "Hands entering from all four edges to load the table: bread board with a torn loaf, bowl of stone fruit, jar of jam with the lid off, basket of small summer squash with the stems still on, pot of oats with the spoon left standing in it, mismatched glasses. Let things overlap and leave the crumbs",
+      "Willa's Original, Kids and Chocolate set into the center, Original label-forward — place it once and do not re-stage it for the rest of the shoot",
+      "Macro insert: a finger tracing the four-line ingredient list on the side of the Original carton, shallow focus, one clean take per line — this is the only cut in the piece so it has to be perfect",
+      "The pour into a glass at the near edge of the table, shot from the same overhead. Do not cover it side-on; a second angle here breaks the piece",
+      "The loaded table with every hand out of frame — hold three seconds longer than feels comfortable, and get steam off the pot if you can"
     ],
     found:[
-      "Signal source (the reason this brief exists — INTERNAL, do not cite on camera): https://www.dairyreporter.com/Article/2026/08/04/colostrum-has-functional-food-potential-but-remains-controversial/",
-      "Tone reference (TikTok): https://www.tiktok.com/tag/wellnesstok — scroll for the flat-affect, no-music, single-locked-shot posts; that's the register, not the loud debunk posts",
-      "Second signal (CP-8, protein-as-a-sticker — same mechanic, different aisle): https://www.washingtonpost.com/wellness/interactive/2026/08/09/are-you-making-these-common-protein-mistakes-take-our-quiz/"
+      "Trend reference (TikTok): https://www.tiktok.com/tag/familydinner — the unstyled overhead table shots to match. The ones that work are crowded and slightly messy, not composed",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — read the register people use when they talk about what they eat without arguing about it; that flatness is the target tone for the VO",
+      "Reference (Instagram): Lovebird's feed — a real food-system POV delivered at a warm volume. The gravity to match, without a single line of preaching",
+      "Reference (Instagram): Partake Foods — proof a brand can be completely for its own audience without taking a swing at anybody else's"
     ],
     memes:[
-      "No meme format on this one — riding a trending sound would read as piling on. The absence of a sound IS the format",
-      "Humor pattern is Taboo-as-Normal dialed ~30% down from Olipop: say the uncomfortable thing completely flat, never punch at the buyer, never sneer at wellness"
+      "No meme template, no trending sound, no stitch, no duet. The moment this is answering is loud enough that riding a format would look like joining in. The refusal IS the format — one fixed camera, no face, no argument on screen. If the edit starts feeling clever, cut the cleverness, not the silence"
     ],
     archive:[
-      "Pull any existing locked-off counter footage of the Willa's Original carton in morning light as a safety cutaway — but the goal is zero cuts",
-      "Archive ingredient-list traces from prior label briefs can sub in if the finger-trace take doesn't land"
+      "Existing overhead kitchen-table footage can cover the fill beats if the light matches, but the macro label insert has to be shot fresh — the four ingredient lines need to be legible at 1x on a phone, not just on the edit monitor"
     ]
   },
-  "AUG10-IG-R4":{
+  "AUG17-IG-R4":{
     shoot:[
-      "Side-on locked-off at glass height for the whole build — crushed strawberries going in, maple, lemon, tap to settle. No overhead angles anywhere; the bands only read in profile",
-      "The slow Willa's Original pour over ice, unbroken — shoot this 5-6 times, it is the only shot that decides whether the Reel works",
-      "Macro of matcha poured over the back of a spoon, the exact moment the third band separates",
-      "Carton standing behind the finished glass, condensation running, shallow pull-focus between the two"
+      "Kid's hands dragging the Willa's Kids carton across a genuinely messy weekend counter, mother's hand steadying it — shoot before anyone tidies the room; the crumbs and the mail are the credibility",
+      "Locked counter-height pour into a short glass by the kid, including the small overfill — do not coach him to stop, the imperfection is the shot",
+      "The handoff: her hands lifting the same carton the kid just set down, label readable the entire time, kid's full glass sweating at the edge of frame",
+      "HERO — macro 60fps side-on through the glass: Willa's Kids blooming down through iced coffee and folding all the way in. Eight takes minimum. Cut the one where the ribbons hold longest before they dissolve. It must never freeze into stripes",
+      "Wide of the finished counter — kid's glass, her iced coffee, carton between them, both people in frame, nobody looking at the lens"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/strawberrymatcha — the layered-glass builds; study pour speed and how long the good ones hold on the bands before stirring",
-      "Trend reference (article): https://abc17news.com/stacker-food-drink/2026/08/08/tiktok-kitchen-how-viral-cooking-videos-changed-what-we-actually-own/ — Aug 8, 2026 roundup naming the layered strawberry matcha as one of the formats moving purchases"
+      "Audio reference: https://stereogum.com/2508511/wild-pink-still-coming-down/music (Stereogum, Aug 17, 2026) — the release the Pulse flagged, for the team to source the track. Internal reference only: it is never named on screen, in caption, or in comments",
+      "Reference (Instagram): Partake Foods' mum-and-daughter snack-time posts — the exact confidence to match. Parent-first, no broadening, no apology for who it's for",
+      "Reference (Instagram): Ghia's feed for the pacing — slow cuts, real light, letting a shot breathe past the point most brands would cut"
     ],
     memes:[
-      "Skip memes — the format IS the payload here. A text joke over the pour would break the one-take discipline the trend runs on"
+      "No meme template and no trending audio format on this one. The only structure is People-on-Camera Amplification with the cofounder-sister and her kid — a face and a real moment, no bit. Adding a format gag would break the register the track is doing all the work to set"
     ],
     archive:[
-      "Skip archive — original footage only, single-session shoot, one continuous build"
+      "Existing Kids-carton and kitchen b-roll can cover the wides, but the swirl must be shot fresh — no archive pour will read as the same glass the kid just poured from, and the continuity of that one carton is the whole idea"
     ]
   },
-  "AUG10-PIN-3":{
+  "AUG17-IG-F2":{
     shoot:[
-      "Willa's Original carton straight-on on warm cream seamless, soft north-window daylight, label forward — shoot with deliberate headroom above the carton so the type has two-thirds of the frame",
-      "Macro of loose whole oat groats scattered at the base of the carton — this is the only texture in the pin, so shoot it clean and shallow",
-      "Alternate frame: the same carton one stop brighter with the groats removed, as a type-only variant to A/B against the textured version"
+      "CARD 1 type plate — a flat cream sweep with nothing on it, shot or built with enough clean margin that the hook can sit large and left with real air around it. The whole post is judged on this card in the grid",
+      "CARD 2 hero — Willa's Original straight-on at eye height, label-forward on cream in hard window light, all four ingredient lines legible in the actual photograph (do not fake the list in post). Deliberate empty space at frame left for the type. Shoot 4+ takes",
+      "CARD 4 macro — tight on the Non-GMO Project Verified butterfly on the front of the carton, shallow depth of field, one clean focus pull so the mark snaps in and the rest of the label falls soft",
+      "CARD 5 macro drift — slow crop across the certification marks already printed on the front of the pack, ending on the glyphosate-free mark. Shoot it as one continuous move and pull the frame you need",
+      "CARD 6 end card — the carton alone on a windowsill in late-afternoon light with cream negative space above it for the sign-off line. No hands, no glass, no second object in frame"
     ],
     found:[
-      "Trend reference (Pinterest): typographic proof pins from ingredient-first food brands — the ones that save are the ones legible at 236px; check every draft at thumbnail before it goes out",
-      "Design reference: Graza and Omsom pack typography — the zine-cover register this pin is reaching for, not the earth-tone sustainability template"
+      "Reference (organization page): https://www.nongmoproject.org/ — pull the exact verified-mark language and the correct name of the mark before writing CARD 4. The claim is 'Non-GMO Project Verified,' never 'GMO-free'",
+      "Reference (Instagram): Fishwife, Graza and Omsom feeds — the proof an ingredient list can be designed like a zine cover instead of an infographic. Steal the type confidence and the restraint, not the palette",
+      "Reference (Instagram): Kiki Milk's feed — the flat category posture for CARD 3. State where the proof usually hides, state where ours is, name nobody, apologize for nothing",
+      "Reference (TikTok): https://www.tiktok.com/tag/oatmilk — a language mine, not a format. Read how shoppers actually describe hunting for an ingredient list, then write CARD 3 in their words"
     ],
     memes:[
-      "Static pin → skip memes; the turn on 'so nothing left over' is the wink and it carries the whole post"
+      "No meme template and no trending sound — this is a static carousel and the humor is entirely in the typography. CARD 1 and CARD 6 are the joke; a format on top of them would flatten both"
     ],
     archive:[
-      "Skip archive — all original stills"
+      "Existing front-of-carton macro footage can cover CARDS 4 and 5 if the marks read sharp and the light is real rather than studio-flat. CARDS 1, 2 and 6 need a fresh shoot — the negative space is designed around the type and old crops won't hold it"
     ]
   },
-  "AUG10-IG-F2":{
+  "AUG17-TT-6":{
     shoot:[
-      "The hero: an actual grocery shelf with Willa's stacked two rows deep, label-forward, straight-on 35mm at chest height in soft aisle daylight — shoot it 6-8 times across two stores, this card is the entire post and it has to look unstaged and still be beautiful",
-      "Hand lifting one carton out of the row, slight motion blur on the hand, row left intact behind it — leave clean negative space in the upper third for the overlay line",
-      "Macro of the printed USDA Organic mark on the carton, single focus pull, cream space at frame right",
-      "Macro of the Certified Glyphosate Residue Free mark, same crop discipline and same light as the organic card so the three read as a set",
-      "Macro of the WBENC women-owned mark, then one wider frame of the full back label for the archive folder"
+      "Walking push-in on the cart, straight down the lens, mid-stride — shoot this 4 or 5 times and take the one where she isn't performing. The whole brief rests on the first three seconds reading as a person, not a spot",
+      "Four fast item lift-outs at walking pace (olive oil, tinned fish, sauce starter, cookies) — one beat each, hold the item at chest height so the cart stays in frame under it",
+      "THE HERO: the cart stopping, the camera settling, Willa's Original coming out with both hands and turning to the back label. Shoot the most takes here — this is the only beat where the movement drops out and it has to feel like she actually meant it",
+      "Macro insert: thumb running down the four-line ingredient list on the back of Willa's Original, with Willa's Kids soft in the cart behind it",
+      "Locked overhead of the open cart with all five items in a loose row, Willa's Original label-forward in the middle — this is the end card, shoot it clean with nothing else in the basket",
+      "SAFETY PASS before you roll: walk the frame and confirm no store signage, aisle marker, shelf-talker or price label is legible in ANY setup. If a shelf tag is in the plane of focus, move the cart"
     ],
     found:[
-      "Trend reference (TikTok): https://www.tiktok.com/tag/groceryhaul — scan the top at-shelf posts for framing height and how much shelf context to keep in frame before it stops reading as editorial",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/oatmilk — the aisle-level shots people actually stop on; note how little text the good ones carry",
-      "Internal reference: Humor Pattern 09 (Aesthetic IRL Encounter) in the team's 2026 humorous-posts audit — the Ghia aesthetic-cart and glasses-carousel rows are the exact composure this carousel is adapting"
+      "Trend reference (TikTok): https://www.tiktok.com/tag/worththemoney — the live hashtag for the format, for research only. Watch the top posts for pacing: how fast the throwaway items get held up, and how much longer the one that actually matters gets held. That ratio is the entire edit. Don't post under this tag — it reads as a price frame, so the piece ships under #nonnegotiables instead",
+      "Trend reference (article): 'TikTok's 5 Things Worth The Money Trend Signals a Major Shift in Consumer Spending' (Aug 12, 2026) — https://yourcoffeebreak.co.uk/lifestyle/26338827088/tiktoks-5-things-worth-the-money-trend-signals-a-major-shift-in-consumer-spending/ — read it for what people actually put on these lists. Almost none of it is groceries, which is exactly why a carton in slot four is the surprise",
+      "Reference (Instagram): Partake Foods' cart-full haul posts — the exact energy to match. A real person, a real cart, unapologetic about naming the brands, zero product-shot polish",
+      "Reference (Instagram): Olipop's 'spending money on a product I love' confession posts — proof the register can be warm and funny without the joke ever being about price"
     ],
     memes:[
-      "Static carousel → skip memes; the wink lives entirely in the 'not one of them is self-issued' line and in the shhh… variant"
+      "No trending sound and no meme audio on this one. The format IS the meme — a list, direct to camera, with one item held longer than the rest. Adding a viral sound on top turns a confession into a skit and the fourth beat stops landing",
+      "The only 'joke' in the piece is structural: four items get a sentence, one gets the camera to stop. Don't punch it up with a caption gag"
     ],
     archive:[
-      "Pull the existing carton-back product photography for the three certification marks if the macro shoot can't get clean light — the marks are printed art, they don't need to be re-shot to be true"
+      "Existing clean carton stills can back the overhead end card, but the cart footage has to be shot fresh — archive product footage is exactly the polish this format dies from",
+      "PRE-SHOOT CHECK: the four non-Willa's slots must be brands the person on camera genuinely buys. If she doesn't actually keep one of them in her cart, swap it for something she does — a list she can't defend in the comments reads false and kills the whole premise"
     ]
   },
-  "AUG10-TT-6":{
+  "AUG17-IG-R5":{
     shoot:[
-      "One locked-off static frame of the real counter, both cartons at frame right, labels forward — do NOT style it. Leave the crumbs, the bunched dish towel, the cup nobody put away.",
-      "Roll 45 seconds of that empty frame with absolutely nothing happening — the edit needs the extra runtime to time the text stack.",
-      "The only move in the video: a hand lifts Willa's Original an inch and gives it one small shake. 4-5 takes; it has to read casual, not demonstrative.",
-      "Alternate setup with Willa's Kids nearest camera for a parent-audience cut of the same five lines.",
-      "Clean plate of the two cartons on cream for the end-card lockup"
+      "The hero macro pour, 100mm, glass rim OUT of frame — shoot at least eight takes in hard window light and pick the one where the milk folds over itself as it lands. If none of them look too rich to be real straight out of camera, stop and reshoot on a different day rather than fixing it later",
+      "The same pour framed slightly wider as a safety, in case the tight version reads as unidentifiable rather than unbelievable",
+      "Back-label flip: finger tracing the four-line ingredient list, one line per beat, 50mm, carton square to camera — shoot it clean enough that the list is legible on a phone at arm's length",
+      "The spoon drag through a full glass, real time, at least six takes — the channel has to hold for about a second. This is the receipt for the pour, so it gets the most attempts",
+      "Static two-shot end frame: carton label-forward, half-empty glass with the channel still visible, nothing moving"
     ],
     found:[
-      "Trend reference (Instagram + TikTok): https://socialbee.com/blog/instagram-trends/ — updated Aug 5, 2026; the entry naming the 'hallelujah' gratitude-list format and the example script brand accounts are running",
-      "Trend reference (TikTok): https://www.tiktok.com/tag/hallelujah — top posts under the tag for delivery pacing and how flat creators keep the read"
+      "Trend reference: https://lightreel.ai/blogs/whats-trending-on-tiktok — the Aug 8-15, 2026 weekly trend report entry describing the 'illusion plus proof' food cut. Read the entry before shooting and match the CUT TIMING, not the subject matter: the payoff arrives fast and without a transition",
+      "Trend reference (TikTok, permanent hashtag page): https://www.tiktok.com/tag/isitcake — the mass-scale version of the same disbelief mechanic, running the opposite polarity (looks real, is fake). Willa's is running it the honest way round — looks fake, is real — so borrow the reveal rhythm and invert the joke",
+      "Reference (TikTok, permanent hashtag page): https://www.tiktok.com/tag/oatmilk — scroll the comment sections on category texture videos for the exact words people use when they don't believe a plant-milk pour. Those words belong on screen, not ours"
     ],
     memes:[
-      "Flat every single time. Same pitch on every 'hallelujah' — the sameness IS the joke, and performed enthusiasm kills it on the second line.",
-      "Five items. Not six. The format collapses the moment it turns into a list of features.",
-      "Only the last line is about Willa's. If item three starts sounding like a benefit, cut item three and write a real one.",
-      "Do not use this to announce anything — no drop, no retailer, no new flavor. It is a feel-good post and the payload is that the carton is full."
+      "The only meme mechanic in play is the format itself (Format-as-Virality) — the joke is that the viewer's accusation is anticipated and then answered with a label. Do not add a meme sticker, a reaction overlay, or a caption explaining the format. The moment the video explains itself the trick is dead"
     ],
     archive:[
-      "Skip archive — one unstaged static frame, shot fresh. Library b-roll is styled and will read as an ad the second it cuts in."
+      "No archive footage. Everything must be shot fresh for this one — reusing an older pour clip means nobody on the team can vouch for what was and wasn't done to it, and vouching is the entire point of the brief"
     ]
   },
-  "AUG10-IG-R5":{
+  "AUG17-PIN-3":{
     shoot:[
-      "Extreme close-up of dry whole oat groats tipping from a glass jar into a worn ceramic bowl, hard morning window light — shoot 3-4 takes, this is frame one and it has to be beautiful",
-      "Christina three-quarter at the counter in her own kitchen, sync sound, one clean unhurried take of the grandmother line — no lens-direct address, no second take energy",
-      "Steam crossing the light beam over a pot on the stove; wooden spoon set down on the counter — slow, boring on purpose",
-      "Hand setting the Willa's Original carton on the wood beside the bowl, label forward, lit identically to the grain",
-      "Static wide of bowl + carton side by side for the closing hold — lock the camera off and let it sit"
+      "Willa's Original straight-on at eye line on warm cream seamless, label forward, one long soft shadow falling right — shoot with the carton low in the frame and at least half the height left empty above it for type",
+      "The same carton one stop brighter and one stop darker, same framing, so the type can be placed against whichever ground holds contrast at thumbnail size",
+      "A slightly tighter crop of the same setup, carton filling more of the lower half, as the alternate for a type-shorter variant",
+      "No props on set. If a stylist reaches for oats, a glass, a linen or a spoon, that's the version of this pin that fails"
     ],
     found:[
-      "Trend reference (audio mood — INTERNAL ONLY, never named on screen or in caption): the Aug 7, 2026 country-leaning folk record behind CP-10 — https://americanahighways.org/2026/08/05/review-margaret-glaspy-i-am-both/ — use it to brief the library search for a same-register bed",
-      "Reference (posture, not format): Graza's co-founder letter posts — real-person warmth with no pitch inside it; this is the register the cut sits in"
+      "Trend reference (format): https://tiktoktrends.org/tiktok-trends-10-august/ — the 'kinda chic' entry; read the description for the register, which is calm and unjoked, not confessional (use for register only — this page's own dateline reads Aug 9, 2026, so treat it as a format reference, not a this-week freshness citation; freshness rests on the TikTok tag page below)",
+      "Trend reference (TikTok): https://www.tiktok.com/tag/kindachic — pull the top posts on the hashtag and watch how the text is set and how flatly it's delivered; match the flatness, not the aesthetic",
+      "Design reference: Graza, Fishwife and Omsom pack + pin typography — one line, one product, generous margins. This is the exact register; do not look at wellness-brand Pinterest for this one"
     ],
     memes:[
-      "Skip memes — this is the week's one un-ironic post. Any meme overlay, sticker or trending-caption move breaks it."
+      "Riding the 'kinda chic' format straight — no edit, no audio, no transition, because this is the static translation of it. The single rule: the line is stated and then nothing happens. No wink hard enough to read as a punchline, no self-deprecation, no 'shhh…', and nothing on the pin explaining what the format is"
     ],
     archive:[
-      "Existing Willa family photograph or period kitchen still may be used ONLY as an out-of-focus edge in the PRODUCT scene, and only if Christina clears the image first — otherwise shoot fresh and keep faces out of frame",
-      "Willa's archive: any previously shot whole-oat-groat macro footage can cover the TURN scene if the light matches"
+      "Existing clean carton stills can substitute if the shadow is a single soft directional one and there is real empty space above the carton — most archive product shots are styled with props and centered high, which won't work here"
     ]
   }
 };
@@ -3670,10 +3694,19 @@ function LiveClock(){
   );
 }
 
-function sourceDomain(url){
+function sourceDomain(url, label){
   try{
     const u = new URL(url);
-    return u.hostname.replace(/^www\./,"");
+    const host = u.hostname.replace(/^www\./,"");
+    // Aggregator permalinks (Google News RSS) resolve to the real publisher only in
+    // a browser, so the bare host would render a useless "news.google.com" chip.
+    // The publisher is the first segment of the label ("Publisher · Title (date)") —
+    // show that instead so the chip still tells the reader who reported it.
+    if (/^news\.google\./.test(host) && label){
+      const pub = String(label).split("·")[0].trim();
+      if (pub) return pub.length > 34 ? pub.slice(0,33) + "…" : pub;
+    }
+    return host;
   }catch(e){ return url; }
 }
 
@@ -3690,7 +3723,7 @@ function Sources({list, label}){
         <a key={i} href={s.url} target="_blank" rel="noreferrer"
           title={s.label}
           className="src-link font-mono text-[9.5px] tracking-wide">
-          {sourceDomain(s.url)}
+          {sourceDomain(s.url, s.label)}
         </a>
       ))}
     </div>
@@ -6028,9 +6061,9 @@ function PasswordGate({onUnlock}){
 // Auto-opens on first visit of each week (keyed on the week-start date).
 // Persistent "This Week" button in the sidebar lets the team re-open it any time —
 // addresses the "can't access after first load" gap from Christina's 2026-04-17 feedback.
-const WELCOME_WEEK_KEY = "AUG-10-2026";
-const WELCOME_WEEK_RANGE = "AUG 10 – AUG 16, 2026";
-const WELCOME_REFRESHED = "AUG 10, 2026";
+const WELCOME_WEEK_KEY = "AUG-17-2026";
+const WELCOME_WEEK_RANGE = "AUG 17 – AUG 23, 2026";
+const WELCOME_REFRESHED = "AUG 17, 2026";
 
 // The strategist's read of the week. Written in advisor voice, addressed to the team.
 // Updated every refresh. This is the biggest difference between a dashboard and an
@@ -6045,75 +6078,80 @@ const WELCOME_REFRESHED = "AUG 10, 2026";
 // Pays off Principle 1 (humans in control — pre-mapped contingencies) + Principle
 // 2 (motivate next action — every play and watch ends with a verb).
 const WELCOME_READ = {
-  pullQuote:"two things opened on the same wall this week. one is an attack — the category charged out loud with four failures at once: price, taste, heavy processing, low protein. the other is a rule closing the route that let a company convene its own expert panel, declare a brand-new ingredient safe, and never tell the agency or the public. willa's answers both from exactly the same place — four things on the label, and not one of them self-issued. the move is to say it first, calmly, instead of waiting to be asked.",
+  pullQuote:"three separate things moved the same direction this week, and all three land on the front of the box. a third party finally wrote down what 'ultra-processed' actually means and started printing a seal against it. a federal court took the qr code away as a way to disclose what's inside a package, so the proof goes back onto the carton itself. a house bill would name oats on the major-allergen line, which prints the question parents have been asking quietly for years. and in the middle of all that, a national player walked out of ready-to-drink oat milk and gave lack of demand as the reason. none of it asks willa's to change anything — four things on the front, all four of which a person can point at. so the week is built on saying it first, calmly, before anybody asks: the bar, the answer about oats, and the reason this carton exists at all.",
   the_moves:[
-    {kind:"ship", verb:"Open Wed Aug 12 at 9am with the self-certification stance — Christina on camera, the four-line ingredient list landing by beat two.", why:"The FDA rule that would end companies self-affirming their own new additives cleared its last White House review on Jul 31, 2026. Until now a company could convene its own expert panel, declare an ingredient safe, and never notify the agency or the public. This is the one brief this week where a face beats hands — the stance is the payload and a faceless voiceover lands soft. Patagonia gravity: calm, factual, high road. Name no politician, no agency head, and never say 'chemicals in your food.'"},
-    {kind:"ship", verb:"Answer all four charges against the category in one Reel Wed Aug 12 at noon — and put taste first.", why:"The loudest attack on plant milk in three years names price, taste, heavy processing and low protein in the same breath. Dodging it reads as a brand that can't answer. Taste leads because it's the objection that resolves the second someone drinks it — rich, smooth, creamy, not chalky — and then the pour carries 4g+ protein, 2g+ prebiotic fiber, 1g sugar, four ingredients. Keep every retail number internal: the customer hears the objection and sees the glass, never an analyst."},
-    {kind:"ship", verb:"Walk back into back-to-school through the nurse's office Thu Aug 13, not the lunchbox — cofounder-sister on camera.", why:"Food-allergy training became federally required for school food staff and this is its first school year. Allergy families are doing the nurse meeting, the action-plan handoff and the epinephrine placement right now — a genuinely different room from the lunchbox the last two refreshes already worked through. Willa's Kids is free of the top 9 allergens with 8g protein, DHA and calcium, and that lands as relief, never as fear. Claim nothing about school meal programs and give no medical advice."}
+    {kind:"ship", verb:"Open Wed Aug 19 at 9am on the standard itself — Christina to camera, stance inside the first three seconds, the four ingredients landing by beat two.", why:"The Non-GMO Project's Non-UPF Verified standard, administered with NSF, moved from announcement to actual packages this window — one clean-label brand announced its seal Aug 11, 2026, another said roughly 60% of its portfolio qualified without reformulating a single item. For three years 'ultra-processed' has been an argument with no scoreboard, and somebody finally wrote the test down. This is the one brief of the week where a face beats hands, because the payload is the stance. Hard line: Willa's has not applied for and does not carry this seal — the brief is about the bar existing, never about a mark on our carton."},
+    {kind:"ship", verb:"Answer the aisle Wed Aug 19 at noon with one continuous take on why this carton exists — and never mention that anyone left.", why:"A national player confirmed Aug 11, 2026 that its ready-to-drink oat line is discontinued for lack of demand, its second oat exit, framed as part of a wider plant-based retreat. That is entirely internal context. What it changes is the register: for the next month, commitment is the most valuable thing a small brand can post, and confidence reads louder than argument. Christina in the chilled set beside the lineup, unpolished, one take, the grandmother's kitchen in a single line and the four-ingredient reason in the next. No demand talk, no shelf talk, no category health, no retailer signage."},
+    {kind:"ship", verb:"Publish the oat answer Fri Aug 21 at noon while it is still a choice — cofounder-sister on camera, plain, four seconds long.", why:"H.R. 9988 would strike 'wheat' from the major food allergen definition and replace it with 'gluten-containing grain' — wheat, rye, barley, oats and crossbreeds — which puts the quiet question parents already ask about oats onto every package in America. Willa's Kids answers it now, before a label rewrite forces the conversation: free of the top nine major allergens, 8g protein, plant-based calcium and DHA, 100 out of 100 on the Clean Label App. The claim belongs to Kids only. No bill, no Congress, no medical advice, and no back-to-school framing anywhere near it."}
   ]
 };
 
 
 const WELCOME_HIGHLIGHTS = [
   {
-    glyph:"🔒",
+    glyph:"🏷️",
+    kindLabel:"Certification",
+    color:"#75C596",
+    stat:"60%",
+    label:"Somebody finally wrote down the bar for 'ultra-processed' — and the seal is already printing on packages",
+    detail:"The Non-GMO Project's Non-UPF Verified standard, administered with NSF, has moved from announcement to shelf. One clean-label brand announced its verification Aug 11, 2026; another said roughly 60% of its products cleared the bar without reformulating a single item. A consumer-advocacy critique published Aug 12, 2026 asks the harder question — whether a private badge arriving years ahead of any federal definition helps shoppers or adds noise. Either way the bar now exists and it is being printed. This is the week's lead brief, and the discipline is exact: talk about the test being written, never imply Willa's carries the mark.",
+    sources:[
+      {label:"Center for Science in the Public Interest · Non-UPF labels: Useful new tool or cause for confusion? (Aug 12, 2026)", url:"https://news.google.com/rss/articles/CBMihwFBVV95cUxQX1pzdGZ5MElWa1lTX3R2dXE4NU1XTzZtVDZhNmd6YmVOOWNFcVQ0N010b0pYd2RJZ3dpWVEwdDZQRHZyYWhGTFFYUUFwY053eWt3VW9ORDRVVHA5dGVFWVJBV2s2WFpZaHF0TzBfTnM4Y3YzUk9teWQ2WHhzdTlyQlJnWnFaVmc?oc=5"},
+      {label:"Non-UPF Verified · certification program page (permanent reference, linked from nongmoproject.org)", url:"https://www.nonultraprocessed.org/"}
+    ],
+    statLabel:"cleared it unchanged"
+  },
+  {
+    glyph:"🥛",
+    kindLabel:"Competitive",
+    color:"#A191B2",
+    stat:"DISCONTINUED",
+    label:"A national player walked out of ready-to-drink oat milk and gave lack of demand as the reason",
+    detail:"Confirmed Aug 11, 2026: the drinkable oat line — Original, Vanilla and Zero Sugar — is discontinued, with remaining stock selling through and no restock planned. It is the company's second oat exit after quietly dropping its oat creamers a few years ago, and it came the same day it cut its annual earnings outlook and framed the move as part of a wider retreat from plant-based expansion. Every number here stays internal. What ships is the posture: shelf space is opening, not closing, and the Wednesday noon Reel answers with the reason this carton exists rather than a word about anyone leaving.",
+    sources:[
+      {label:"Big Box Vegan · Chobani Discontinues Their Oatmilk Line (Aug 11, 2026)", url:"https://bigboxvegan.com/2026/08/11/chobani-discontinues-their-oatmilk-line/"},
+      {label:"Bloomberg · Chobani Cuts Annual Earnings Forecast on Rising Material Costs (Aug 11, 2026)", url:"https://www.bloomberg.com/news/articles/2026-08-11/chobani-cuts-annual-earnings-forecast-on-rising-material-costs"}
+    ],
+    statLabel:"the oat RTD line"
+  },
+  {
+    glyph:"🧬",
+    kindLabel:"Science",
+    color:"#73B2C9",
+    stat:"NOT FIBER ALONE",
+    label:"The plant protein that survives digestion intact turns out to be doing the work next to the fiber",
+    detail:"New work published in the Aug 11, 2026 print issue of PNAS, with the mainstream science write-up following Aug 14, 2026, names a class of indigestible plant proteins that reach the colon intact and — working alongside plant fiber — push gut bacteria toward beneficial compounds and away from harmful ones. The authors suggest labels may eventually track resistant protein right next to fiber. The fiber conversation has run solo for two years; this is the pair. And the pair is exactly what most oat milks filter out and Willa's keeps — 2g+ prebiotic fiber and 4g+ protein per cup. The claim we make is compositional, never clinical.",
+    sources:[
+      {label:"ScienceDaily · When gut microbes run low on fiber, they may start eating you (Aug 14, 2026)", url:"https://www.sciencedaily.com/releases/2026/08/260814235842.htm"},
+      {label:"PNAS · Digestion-resistant proteins support the healthy metabolite profiles associated with plant-based diets (print issue Aug 11, 2026)", url:"https://www.pnas.org/doi/10.1073/pnas.2605226123"}
+    ],
+    statLabel:"the new finding"
+  },
+  {
+    glyph:"🌾",
+    kindLabel:"Labels",
+    color:"#9E652E",
+    stat:"OATS NAMED",
+    label:"A House bill would move oats onto the major-allergen line of every label in America",
+    detail:"H.R. 9988 would strike 'wheat' from the major food allergen definition and replace it with 'gluten-containing grain' — defined as wheat, rye, barley, oats and crossbreeds such as triticale — and require a federal report on celiac prevalence, diagnostics and prevention. Legal analysis published Aug 12, 2026 and food-safety trade coverage Aug 11, 2026. Celiac affects roughly 1% of the population and oats have been the contested grain in that argument for years. The move is to answer the question parents already ask, plainly, while it is still a choice rather than a compliance deadline — and to keep the top-nine-free claim on Kids alone.",
+    sources:[
+      {label:"The Daily Intake · Bill Introduced into House Would Require Allergen Labeling for Gluten-containing Grains (Aug 12, 2026)", url:"https://www.dailyintakeblog.com/2026/08/bill-introduced-into-house-would-require-allergen-labeling-for-gluten-containing-grains/"},
+      {label:"Quality Assurance & Food Safety · Bipartisan Bill Would Expand Major Food Allergen Labeling to Barley, Rye and Oats (Aug 11, 2026)", url:"https://news.google.com/rss/articles/CBMirgFBVV95cUxPc04tbHJsSS1RMlphMmhwNWNSSG1JRDFrX3VsR0VjZG1weVFZUkl5QmVTX2JJbDRqY3A3a0hNeHFIRnJkWF9Tc1NiaDh6UDEwR0RrZjhqUnhna3JOV2lVeGZacXNLczVtTmVNQW91R2JJVkFPVE1MY3FDRFZJVzZxdXJxLUk1OC1jMk51UGlvYmlpb3hBdmxnN3ZuQ0lVQks0WnBWRlg4ZndZZzladHc?oc=5"}
+    ],
+    statLabel:"in H.R. 9988"
+  },
+  {
+    glyph:"📦",
     kindLabel:"Policy",
     color:"#73B2C9",
-    stat:"SELF-CERTIFIED",
-    label:"The route that let companies vouch for their own new food ingredients just cleared its final review",
-    detail:"The proposed 'Generally Recognized as Safe' rule finished White House review on Jul 31, 2026, flagged as a major rule with significant economic impact. It would make FDA notification mandatory for most new substances and put every notice on a public inventory. Until now a company could convene its own expert panel, self-affirm an ingredient and tell nobody. This is the week's lead brief — four ingredients that never needed anyone's permission slip, said plainly and without fear-framing.",
+    stat:"NO MORE QR",
+    label:"A court took away the QR code as a way to disclose bioengineered ingredients — the proof goes back on the box",
+    detail:"A federal district court ordered prospective vacatur of three USDA regulations on bioengineered food disclosure and rejected the agency's request to delay parts of it, per legal analysis published Aug 17, 2026 and science-press coverage Aug 13, 2026. Two escapes are going away: parking the disclosure behind a QR code or a text line, and the exemption for products whose modified genetic material can't be detected in the finished food. Manufacturers move to on-package text or an approved symbol. The Saturday carousel takes the plain version of this — everything you'd have to scan for is already printed, and the carton has carried Non-GMO Project Verified on the front the whole time.",
     sources:[
-      {label:"Food Safety Magazine · GRAS Proposed Rule Clears OMB Review; FDA Sends UPF Whitepaper to OIRA (Aug 4, 2026)", url:"https://www.food-safety.com/articles/11703-regulatory-updates-gras-proposed-rule-clears-omb-review-fda-sends-upf-whitepaper-to-oira"},
-      {label:"The Daily Intake · OIRA Completes Review of FDA Proposed GRAS Rule (Aug 7, 2026)", url:"https://www.dailyintakeblog.com/2026/08/oira-completes-review-of-fda-proposed-gras-rule/"}
-    ]
-  },
-  {
-    glyph:"⚖️",
-    kindLabel:"Category",
-    color:"#A191B2",
-    stat:"4 CHARGES",
-    label:"Plant milk is being charged with four failures at once — price, taste, processing, protein",
-    detail:"Dairy-free volumes have fallen more than 5% a year for three straight years, almond off 9% in 2025, and oat's momentum is cooling. The analyst reading the numbers named all four objections out loud. That's the case against processed plant milk, not against oats — and it's answerable in one Reel with the pour, taste first, because taste is the charge Willa's wins the moment someone drinks it. Every number here stays internal.",
-    sources:[
-      {label:"Bloomberg · Dairy-Free Milk Sales in Decline as Americans Choose Cow's Milk (Aug 3, 2026)", url:"https://www.bloomberg.com/news/articles/2026-08-03/dairy-free-milk-sales-in-decline-as-americans-choose-cow-s-milk"},
-      {label:"Newser · Americans Are Turning Away From Plant Milks (Aug 5, 2026)", url:"https://www.newser.com/story/394134/americans-cool-on-plant-milks-return-to-dairy.html"}
-    ]
-  },
-  {
-    glyph:"🥜",
-    kindLabel:"Schools",
-    color:"#9E652E",
-    stat:"FIRST YEAR",
-    label:"Food-allergy training is now required for school food staff — and this is its first school year",
-    detail:"A law signed Jan 14, 2026 added a mandatory annual food-allergy module to National School Lunch Program staff training, covering how to prevent, recognize and respond to reactions. Training that was previously optional is now required. Allergy families are being walked through the nurse meeting and the action-plan handoff as the real pre-first-bell checklist — which is the new back-to-school door this week, and the one the lunchbox lane can't reach.",
-    sources:[
-      {label:"Allergic Living · Back-to-School with Food Allergies: 8 Tools for Success (Aug 4, 2026)", url:"https://www.allergicliving.com/2026/08/04/back-to-school-with-food-allergies-8-tools-for-success/"},
-      {label:"U.S. Senate · Protecting Children With Food Allergies Bill Signed Into Law (permanent press-room page)", url:"https://www.durbin.senate.gov/newsroom/press-releases/durbin-fischers-protecting-children-with-food-allergies-bill-signed-into-law"}
-    ]
-  },
-  {
-    glyph:"🏫",
-    kindLabel:"Schools",
-    color:"#9E652E",
-    stat:"AUG 4",
-    label:"Whole milk returns to the lunch tray this fall — and the same law opens a door for fortified plant milk",
-    detail:"The USDA rule took effect Jun 8, 2026, putting whole and 2% back on the tray for the first time since the 2011–12 school year, with adoption optional district by district. The same statute also permits schools to offer nondairy beverages that are nutritionally equivalent to fluid milk under standards set by the Secretary of Agriculture — the second sentence nobody is covering because the first one is louder. That gap is a Friday Reel: the question a parent can actually bring to a school.",
-    sources:[
-      {label:"WFMZ (Stacker) · USDA lets whole milk out of a 15-school-year detention this fall (Aug 4, 2026)", url:"https://www.wfmz.com/health/usda-lets-whole-milk-out-of-a-15-school-year-detention-this-fall/article_7c22bc7a-5b5a-568d-b409-ecdec7b07ac3.html"},
-      {label:"Congress.gov (CRS) · The Whole Milk for Healthy Kids Act (P.L. 119-69) — permanent reference page", url:"https://www.congress.gov/crs-product/IN12548"}
-    ]
-  },
-  {
-    glyph:"🌱",
-    kindLabel:"Competitive",
-    color:"#75C596",
-    stat:"67%",
-    label:"The category's loudest sustainability voice turned provenance into an audited receipt",
-    detail:"A new independent life-cycle assessment puts one brand's ambient barista oat milk at 67% lower climate impact than chilled cow's milk in the UK, up from 55% in 2021, driven by factory energy efficiency, transport routing, HVO fuel and a shift to home-grown oats. Hard numbers in the same week retail data attacks the halo. Willa's receipt is different and doesn't need a percentage — carbon-sequestering organic oats and zero food waste, because the whole groat goes in instead of being filtered out.",
-    sources:[
-      {label:"Green Queen · Oatly Widens Oat Milk Emissions Gap to 67% (Aug 4, 2026)", url:"https://www.greenqueen.com.hk/oatly-sustainability-barista-oat-milk-emissions-gap-climate-impact-lca/"},
-      {label:"Oatly · Climate footprint product label (permanent brand reference page)", url:"https://www.oatly.com/en-gb/oatly-who/sustainability-plan/climate-footprint-product-label"}
-    ]
+      {label:"The Daily Intake · Court Sets Deadline for Bioengineered Food Labeling Changes (Aug 17, 2026)", url:"https://www.dailyintakeblog.com/2026/08/court-sets-jan-1-2028-deadline-for-bioengineered-food-labeling-changes/"},
+      {label:"Genetic Literacy Project · Ultraprocessed foods made with GMO corn or soybeans will have to carry bioengineered labels (Aug 13, 2026)", url:"https://news.google.com/rss/articles/CBMi8gFBVV95cUxQX0EyUnRJNHB4cmxqMGxiV0lrTGJzSnRQZ3BrMGRxbThLYjVJTEZkaHVvblRUUC1pOVYyRk9WMDhvcGNYV0ZsREprblJ3T1lvUllNWWxYVnphSG9VNFpSSEtNdnFOVTdCZEdISGxFcUJHOEJrQWZ5VkZnNVRSU3VYS09PMjhGajdURDNJME4zTXBGTmRkT29FMm81cmFUcUZpNEpwd1NvLWJ5RkZvUVM1T1FwbGJRRFRsMzhiX01kVkllYUF2NEE5TFlrRnJXOUQ2VkRqVWdJRG1QazdLS0dhX3RVbmxOWmJDcWIxYU1CckdCdw?oc=5"}
+    ],
+    statLabel:"proof goes on-pack"
   }
 ];
 
@@ -6398,7 +6436,7 @@ function WelcomeGuide({open, onClose, onNavigate}){
                     {h.sources && h.sources.length>0 && (
                       <div className="mt-1.5 flex flex-wrap gap-x-2">
                         {h.sources.map((s,k)=>(
-                          <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label} className="src-link font-mono text-[10px] tracking-wide">{sourceDomain(s.url)}</a>
+                          <a key={k} href={s.url} target="_blank" rel="noreferrer" title={s.label} className="src-link font-mono text-[10px] tracking-wide">{sourceDomain(s.url, s.label)}</a>
                         ))}
                       </div>
                     )}
@@ -7675,10 +7713,10 @@ const STRATEGIST_HISTORY_STORAGE = "willas-strategist-history";
 // different lanes (trend / recipe / parenting / humor-format). Stale prompts
 // here read as a stale engine the moment the chat opens.
 const STRATEGIST_SUGGESTED_PROMPTS = [
-  "Companies have been allowed to sign off on their own new ingredients without telling anyone. How do we say that out loud without sounding alarmist?",
-  "People are saying plant milk is watery, over-processed and short on protein. Do we answer all of that head-on, or does answering just repeat the accusation?",
-  "Allergy families are doing the school-nurse meeting right now. How can we actually be useful there without wandering into medical advice?",
-  "The layered strawberry matcha is everywhere and the middle stripe is milk. How do we own that format instead of posting one more pretty drink?"
+  "Someone finally wrote down a test for what counts as ultra-processed, and brands are printing the seal. We'd clear the bar but we haven't applied — how do we talk about the standard without anyone thinking we have the badge?",
+  "A big brand just walked out of the oat aisle and blamed demand. How do we sound confident about staying without ever mentioning that anybody left?",
+  "There's a push to name oats on the allergen line. How do we answer the question parents already have about oats without drifting into medical territory?",
+  "There's a format going around where every question gets the same one-word answer, four times. Is that genuinely us, or does riding it make us look like we're chasing?"
 ];
 
 // Cap strategist chat history at 100 messages (50 user + 50 assistant turns)
