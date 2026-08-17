@@ -12,6 +12,22 @@
 <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 <style>
+  /* Monday Memo — signal + move cards (visual pass 2026-08-17, ported from Compostic) */
+  .memo-card{opacity:0;transform:translateY(10px);animation:memoIn .5s cubic-bezier(.2,.7,.3,1) forwards;
+             transition:box-shadow .2s ease,transform .2s ease}
+  .memo-card:hover{box-shadow:0 6px 20px rgba(32,42,68,.10);transform:translateY(-2px)}
+  @keyframes memoIn{to{opacity:1;transform:none}}
+  .memo-live i{font-style:normal;display:inline-block;animation:memoPulse 1.6s ease-in-out infinite}
+  @keyframes memoPulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .memo-arrow{transition:transform .2s ease,opacity .2s ease;opacity:.3}
+  .memo-card:hover .memo-arrow{transform:translateX(4px);opacity:1}
+  @media (prefers-reduced-motion:reduce){
+    .memo-card{opacity:1;transform:none;animation:none}
+    .memo-card:hover{transform:none}
+    .memo-live i{animation:none}
+    .memo-card:hover .memo-arrow{transform:none}
+  }
+
   :root{
     /* Surface tokens — referenced via var() everywhere so theme swap works.
        2026-06-04 carton-palette pass: surfaces moved from warm oat-cream to the

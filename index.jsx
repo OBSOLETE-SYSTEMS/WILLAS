@@ -6379,12 +6379,17 @@ function WelcomeGuide({open, onClose, onNavigate}){
             <div className="font-mono text-[10px] tracking-[0.22em] text-[var(--muted)] mb-3">// {WELCOME_HIGHLIGHTS.length} SIGNALS DRIVING THE WEEK</div>
             <div className="grid gap-2.5">
               {WELCOME_HIGHLIGHTS.map((h,i)=>(
-                <div key={i} className="flex items-start gap-3.5 p-4 rounded-lg border border-[var(--border)] bg-[#FAFAF7]">
+                <div key={i} className="memo-card flex items-start gap-3.5 p-4 rounded-lg border border-[var(--border)] bg-[#FAFAF7]" style={{borderLeftWidth:"4px", borderLeftColor:h.color, animationDelay:(i*100)+"ms"}}>
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center text-[19px] shrink-0" style={{background:h.color+"14"}}>{h.glyph||h.icon}</div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="font-mono text-[9.5px] tracking-[0.16em] uppercase" style={{color:h.color}}>{h.kindLabel||"Signal"}</span>
-                      <span className="font-mono text-[9.5px] tracking-wider text-[var(--muted)] shrink-0">{h.stat}</span>
+                    <div className="flex items-start justify-between gap-3 mb-1.5">
+                      <span className="font-mono text-[9.5px] tracking-[0.16em] uppercase mt-1 px-2 py-[3px] rounded-full" style={{color:h.color, background:h.color+"14"}}>{h.kindLabel||"Signal"}</span>
+                      {h.stat && (
+                        <span className="shrink-0 text-right leading-none">
+                          <b className="block font-black tracking-tight" style={{color:h.color, fontSize:(String(h.stat).length<=7?"23px":"13px"), lineHeight:1}}>{h.stat}</b>
+                          {h.statLabel && <span className="block font-mono text-[8px] tracking-wider text-[var(--muted)] mt-1">{h.statLabel}</span>}
+                        </span>
+                      )}
                     </div>
                     <div className="mb-1">
                       <span className="text-[15.5px] text-[#202A44] font-semibold leading-snug">{h.label}</span>
@@ -6411,12 +6416,16 @@ function WelcomeGuide({open, onClose, onNavigate}){
                 {WELCOME_READ.the_moves.map((m,i)=>{
                   const hold = m && m.kind==="hold";
                   return (
-                  <div key={i} className="flex items-start gap-3.5 p-4 rounded-lg border bg-white" style={{borderColor:hold?"#E2DDCF":"#E8E1C2", borderLeftWidth:"4px", borderLeftColor:hold?"#64748B":"#4E8C63"}}>
-                    <div className="shrink-0 font-serif text-[20px] leading-none mt-0.5" style={{color:hold?"#64748B":"#4E8C63"}}>{hold?"✋":String(i+1).padStart(2,"0")}</div>
+                  <div key={i} className="memo-card flex items-start gap-3.5 p-4 rounded-lg border bg-white" style={{borderColor:hold?"#E2DDCF":"#E8E1C2", borderLeftWidth:"4px", borderLeftColor:hold?"#64748B":"#4E8C63", animationDelay:(500+i*100)+"ms"}}>
+                    <div className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-serif text-[15px] leading-none" style={{color:"#fff", background:hold?"#64748B":"#4E8C63"}}>{hold?"✋":String(i+1).padStart(2,"0")}</div>
                     <div className="min-w-0 flex-1">
-                      <div className="text-[15.5px] text-[#202A44] font-semibold leading-snug mb-1">{(m&&m.verb)||m}</div>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <span className="text-[15.5px] text-[#202A44] font-semibold leading-snug">{(m&&m.verb)||m}</span>
+                        <span className="font-mono text-[8px] tracking-[0.14em] font-bold px-2 py-[3px] rounded-full shrink-0" style={{color:hold?"#64748B":"#4E8C63", background:hold?"#64748B14":"#4E8C6314"}}>{hold?"HOLD":"SHIP THIS"}</span>
+                      </div>
                       {m&&m.why && <p className="text-[13.5px] text-[#3F4A5E] leading-relaxed">{m.why}</p>}
                     </div>
+                    <span className="memo-arrow shrink-0 text-[15px] self-center" style={{color:hold?"#64748B":"#4E8C63"}}>→</span>
                   </div>
                   );
                 })}
